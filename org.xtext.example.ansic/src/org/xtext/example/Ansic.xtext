@@ -18,9 +18,9 @@ postfix_expressionL
 	|   '(' ')' postfix_expressionL
 	| ( '(' argument_expression_list ')' postfix_expressionL )
 	|  '.' IDENTIFIER postfix_expressionL
-	|  PTR_OP IDENTIFIER postfix_expressionL
-	|  INC_OP postfix_expressionL
-	|  (DEC_OP postfix_expressionL)?
+	|  '->' IDENTIFIER postfix_expressionL
+	|  '++' postfix_expressionL
+	|  ('--' postfix_expressionL)?
 ;
 		
 postfix_expression
@@ -37,11 +37,11 @@ argument_expression_list
 
 unary_expression
 	: postfix_expression
-	| INC_OP unary_expression
-	| DEC_OP unary_expression
+	| '++' unary_expression
+	| '--' unary_expression
 	| unary_operator cast_expression
-	| SIZEOF unary_expression
-	| SIZEOF '(' type_name ')'
+	| 'sizeof' unary_expression
+	| 'sizeof' '(' type_name ')'
 	;
 	
 unary_operator
@@ -73,15 +73,15 @@ additive_expression
 	;
 	
 shift_expression
-	: additive_expression ((LEFT_OP|RIGHT_OP) additive_expression)*
+	: additive_expression (('<<'|'>>') additive_expression)*
 	;
 	
 relational_expression
-	: shift_expression (('<'|'>'|LE_OP|GE_OP) shift_expression)*
+	: shift_expression (('<'|'>'|'<='|'>=') shift_expression)*
 	;
 
 equality_expression
-	: relational_expression ((EQ_OP|NE_OP) relational_expression)*
+	: relational_expression (('=='|'!=') relational_expression)*
 	;
 
 and_expression
@@ -97,11 +97,11 @@ inclusive_or_expression
 	;
 
 logical_and_expression
-	: inclusive_or_expression (AND_OP inclusive_or_expression)*
+	: inclusive_or_expression ('&&' inclusive_or_expression)*
 	;
 
 logical_or_expression
-	: logical_and_expression (OR_OP logical_and_expression)*
+	: logical_and_expression ('||' logical_and_expression)*
 	;
 		
 conditional_expression
@@ -119,16 +119,16 @@ expression
 
 assignment_operator
 	: '='
-	| MUL_ASSIGN
-	| DIV_ASSIGN
-	| MOD_ASSIGN
-	| ADD_ASSIGN
-	| SUB_ASSIGN
-	| LEFT_ASSIGN
-	| RIGHT_ASSIGN
-	| AND_ASSIGN
-	| XOR_ASSIGN
-	| OR_ASSIGN
+	| '*='
+	| '/='
+	| '%='
+	| '+='
+	| '-='
+	| '<<='
+	| '>>='
+	| '&='
+	| '^='
+	| '|='
 	;
  
  constant_expression
@@ -154,26 +154,26 @@ init_declarator
 	;
 
 storage_class_specifier
-	: TYPEDEF
-	| EXTERN
-	| STATIC
-	| AUTO
-	| REGISTER
+	: 'typedef'
+	| 'extern'
+	| 'static'
+	| 'auto'
+	| 'register'
 	;
 
 type_specifier
-	: VOID
-	| 'charz'
-	| SHORT
-	| INT
-	| LONG
-	| FLOAT
-	| DOUBLE
-	| SIGNED
-	| UNSIGNED
+	: 'void'
+	| 'char'
+	| 'short'
+	| 'int'
+	| 'long'
+	| 'float'
+	| 'double'
+	| 'signed'
+	| 'unsigned'
 	| struct_or_union_specifier
 	| enum_specifier
-	| TYPE_NAMEE
+	| ID
 	;
 
 struct_or_union_specifier
@@ -183,8 +183,8 @@ struct_or_union_specifier
 	;
 
 struct_or_union
-	: STRUCT
-	| UNION
+	: 'struct'
+	| 'union'
 	;
 
 struct_declaration_list
@@ -213,9 +213,9 @@ struct_declarator
 	;
 
 enum_specifier
-	: ENUM '{' enumerator_list '}'
-	| ENUM IDENTIFIER '{' enumerator_list '}'
-	| ENUM IDENTIFIER
+	: 'enum' '{' enumerator_list '}'
+	| 'enum' IDENTIFIER '{' enumerator_list '}'
+	| 'enum' IDENTIFIER
 	;
 
 enumerator_list
@@ -228,8 +228,8 @@ enumerator
 	;
 
 type_qualifier
-	: CONST
-	| VOLATILE
+	: 'const'
+	| 'volatile'
 	;
 
 declarator
@@ -264,7 +264,7 @@ type_qualifier_list
 
 
 parameter_type_list
-	: parameter_list (',' ELLIPSIS)*
+	: parameter_list (',' '...')*
 	;
 
 parameter_list
@@ -326,8 +326,8 @@ statement
 
 labeled_statement
 	: IDENTIFIER ':' statement
-	| CASE constant_expression ':' statement
-	| DEFAULT ':' statement
+	| 'case' constant_expression ':' statement
+	| 'default' ':' statement
 	;
 
 compound_statement
@@ -351,24 +351,24 @@ expression_statement
 	;
 
 selection_statement
-	: IF '(' expression ')' statement
-	| IF '(' expression ')' statement ELSE statement
-	| SWITCH '(' expression ')' statement
+	: 'if' '(' expression ')' statement
+	| 'if' '(' expression ')' statement 'else' statement
+	| 'switch' '(' expression ')' statement
 	;
 
 iteration_statement
-	: WHILE '(' expression ')' statement
-	| DO statement WHILE '(' expression ')' ';'
-	| FOR '(' expression_statement expression_statement ')' statement
-	| FOR '(' expression_statement expression_statement expression ')' statement
+	: 'while' '(' expression ')' statement
+	| 'do' statement 'while' '(' expression ')' ';'
+	| 'for' '(' expression_statement expression_statement ')' statement
+	| 'for' '(' expression_statement expression_statement expression ')' statement
 	;
 
 jump_statement
-	: GOTO IDENTIFIER ';'
-	| CONTINUE ';'
-	| BREAK ';'
-	| RETURNO ';'
-	| RETURNO expression ';'
+	: 'goto' IDENTIFIER ';'
+	| 'continue' ';'
+	| 'break' ';'
+	| 'return' ';'
+	| 'return' expression ';'
 	;
 
 translation_unit
@@ -390,62 +390,8 @@ function_definition
  
 
 	//missing
-terminal AUTO : "auto";
-terminal BREAK : "break";
-terminal CASE : "case";
-terminal CHAR : "char";
-terminal CONST : "const";
-terminal CONTINUE : "continue";
-terminal DEFAULT : "default";
-terminal DO : "do";
-terminal DOUBLE : "double";
-terminal ELSE : "else";
-terminal ENUM : "enum";
-terminal EXTERN : "extern";
-terminal FLOAT : "float";		
-terminal FOR : "for";
-terminal GOTO : "goto";
-terminal IF : "if";
-terminal INTE : "int";
-terminal LONG : "long";
-terminal REGISTER : "register";
-terminal RETURNO : "return";
-terminal SHORT : "short";
-terminal SIGNED : "signed";
-terminal SIZEOF : "sizeof";
-terminal STATIC : "static";
-terminal STRUCT : "struct";
-terminal SWITCH : "switch";
-terminal TYPEDEF : "typedef";
-terminal UNION : "union";
-terminal UNSIGNED : "unsigned";
-terminal VOID : "void";
-terminal VOLATILE : "volatile";
-terminal WHILE : "while";
 //missing
 
-terminal ELLIPSIS : "..." ;
-terminal RIGHT_ASSIGN : ">>=";
-terminal LEFT_ASSIGN : "<<=";
-terminal ADD_ASSIGN : "+=";
-terminal SUB_ASSIGN : "-=";
-terminal MUL_ASSIGN : "*=";
-terminal DIV_ASSIGN : "/="; 
-terminal MOD_ASSIGN : "%=";
-terminal AND_ASSIGN : "&=";
-terminal XOR_ASSIGN : "^=";
-terminal OR_ASSIGN : "|=";
-terminal RIGHT_OP : ">>";
-terminal LEFT_OP : "<<";
-terminal INC_OP : "++";
-terminal DEC_OP : "--";
-terminal PTR_OP : "->";
-terminal AND_OP : "&&";
-terminal OR_OP : "||";
-terminal LE_OP : "<=";
-terminal GE_OP : ">=";
-terminal EQ_OP : "==";
-terminal NE_OP : "!=";
 
 
 IDENTIFIER :
