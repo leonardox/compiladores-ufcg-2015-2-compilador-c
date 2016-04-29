@@ -1,0 +1,473 @@
+grammar org.xtext.example.Ansic with org.eclipse.xtext.common.Terminals
+
+generate ansic "http://www.xtext.org/example/Ansic"
+
+DomainModel:
+	geetings+=translation_unit;
+
+primary_expression
+	: IDENTIFIER
+	| CONSTANT
+	| STRING_LITERAL
+	| '(' expression ')'
+	;
+
+
+postfix_expressionL
+	: ( '[' expression ']' postfix_expressionL )
+	|   '(' ')' postfix_expressionL
+	| ( '(' argument_expression_list ')' postfix_expressionL )
+	|  '.' IDENTIFIER postfix_expressionL
+	|  PTR_OP IDENTIFIER postfix_expressionL
+	|  INC_OP postfix_expressionL
+	|  (DEC_OP postfix_expressionL)?
+;
+		
+postfix_expression
+	: primary_expression postfix_expressionL
+	;
+		
+argument_expression_listI
+	: (',' assignment_expression argument_expression_listI)?
+	;
+	
+argument_expression_list
+	: assignment_expression argument_expression_listI
+	;
+
+unary_expression
+	: postfix_expression
+	| INC_OP unary_expression
+	| DEC_OP unary_expression
+	| unary_operator cast_expression
+	| SIZEOF unary_expression
+	| SIZEOF '(' type_name ')'
+	;
+	
+unary_operator
+	: '&'
+	| '*'
+	| '+'
+	| '-'
+	| '~'
+	| '!'
+	;
+	
+cast_expression
+	: unary_expression
+	| '(' type_name ')' cast_expression
+	;
+
+multiplicative_expressionI
+	: '*' cast_expression multiplicative_expressionI
+	| '/' cast_expression multiplicative_expressionI
+	| ('%' cast_expression multiplicative_expressionI)?
+;
+
+multiplicative_expression
+	: cast_expression multiplicative_expressionI
+	;
+	
+additive_expression
+	: multiplicative_expression (('+'|'-') multiplicative_expression)*
+	;
+	
+shift_expression
+	: additive_expression ((LEFT_OP|RIGHT_OP) additive_expression)*
+	;
+	
+relational_expression
+	: shift_expression (('<'|'>'|LE_OP|GE_OP) shift_expression)*
+	;
+
+equality_expression
+	: relational_expression ((EQ_OP|NE_OP) relational_expression)*
+	;
+
+and_expression
+	: equality_expression ('&' equality_expression)*
+	;
+
+exclusive_or_expression
+	: and_expression ('^' and_expression)*
+	;
+
+inclusive_or_expression
+	: exclusive_or_expression ('|' exclusive_or_expression)*
+	;
+
+logical_and_expression
+	: inclusive_or_expression (AND_OP inclusive_or_expression)*
+	;
+
+logical_or_expression
+	: logical_and_expression (OR_OP logical_and_expression)*
+	;
+		
+conditional_expression
+	: logical_or_expression ('?' expression ':' conditional_expression)?
+	;
+
+assignment_expression
+	: conditional_expression
+	| unary_expression assignment_operator assignment_expression
+	;
+
+expression
+	: assignment_expression (',' assignment_expression)*
+	;
+
+assignment_operator
+	: '='
+	| MUL_ASSIGN
+	| DIV_ASSIGN
+	| MOD_ASSIGN
+	| ADD_ASSIGN
+	| SUB_ASSIGN
+	| LEFT_ASSIGN
+	| RIGHT_ASSIGN
+	| AND_ASSIGN
+	| XOR_ASSIGN
+	| OR_ASSIGN
+	;
+ 
+ constant_expression
+	: conditional_expression
+	;
+
+declaration
+	: declaration_specifiers init_declarator_list? ';'
+	;
+
+declaration_specifiers
+	: storage_class_specifier declaration_specifiers?
+	| type_specifier declaration_specifiers?
+	| type_qualifier declaration_specifiers?
+	;
+
+init_declarator_list
+	: init_declarator (',' init_declarator)*
+	;
+
+init_declarator
+	: declarator ('=' initializer)*
+	;
+
+storage_class_specifier
+	: TYPEDEF
+	| EXTERN
+	| STATIC
+	| AUTO
+	| REGISTER
+	;
+
+type_specifier
+	: VOID
+	| 'charz'
+	| SHORT
+	| INT
+	| LONG
+	| FLOAT
+	| DOUBLE
+	| SIGNED
+	| UNSIGNED
+	| struct_or_union_specifier
+	| enum_specifier
+	| TYPE_NAMEE
+	;
+
+struct_or_union_specifier
+	: struct_or_union IDENTIFIER '{' struct_declaration_list '}'
+	| struct_or_union '{' struct_declaration_list '}'
+	| struct_or_union IDENTIFIER
+	;
+
+struct_or_union
+	: STRUCT
+	| UNION
+	;
+
+struct_declaration_list
+	: struct_declaration+
+	;
+
+struct_declaration
+	: specifier_qualifier_list struct_declarator_list ';'
+	;
+
+specifier_qualifier_list
+	: type_specifier specifier_qualifier_list
+	| type_specifier
+	| type_qualifier specifier_qualifier_list
+	| type_qualifier
+	;
+
+struct_declarator_list
+	: struct_declarator (',' struct_declarator)*
+	;
+
+struct_declarator
+	: declarator
+	| ':' constant_expression
+	| declarator ':' constant_expression
+	;
+
+enum_specifier
+	: ENUM '{' enumerator_list '}'
+	| ENUM IDENTIFIER '{' enumerator_list '}'
+	| ENUM IDENTIFIER
+	;
+
+enumerator_list
+	: enumerator (',' enumerator)*
+	;
+
+enumerator
+	: IDENTIFIER
+	| IDENTIFIER '=' constant_expression
+	;
+
+type_qualifier
+	: CONST
+	| VOLATILE
+	;
+
+declarator
+	: pointer direct_declarator
+	| direct_declarator
+	;
+
+direct_declarator
+	: IDENTIFIER direct_declaratorI
+	| '(' declarator ')' direct_declaratorI
+	
+	;
+
+direct_declaratorI
+	: '[' constant_expression ']' direct_declaratorI
+	| '[' ']' direct_declaratorI
+	| '(' parameter_type_list ')' direct_declaratorI
+	| '(' identifier_list ')' direct_declaratorI
+	| ('(' ')' direct_declaratorI)?
+	;
+
+pointer
+	: '*'
+	| '*' type_qualifier_list
+	| '*' pointer
+	| '*' type_qualifier_list pointer
+	;
+
+type_qualifier_list
+	: type_qualifier+
+	;
+
+
+parameter_type_list
+	: parameter_list (',' ELLIPSIS)*
+	;
+
+parameter_list
+	: parameter_declaration (',' parameter_declaration)*
+	;
+
+parameter_declaration
+	: declaration_specifiers declarator
+	| declaration_specifiers abstract_declarator
+	| declaration_specifiers
+	;
+
+identifier_list
+	: IDENTIFIER ( ',' IDENTIFIER)*
+	;
+
+type_name
+	:specifier_qualifier_list abstract_declarator?
+	;
+
+abstract_declarator
+	: direct_abstract_declarator
+	| pointer direct_abstract_declarator?
+	;
+
+direct_abstract_declarator
+	: '(' abstract_declarator ')' direct_abstract_declaratorI
+	| '[' ']' direct_abstract_declaratorI
+	| '[' constant_expression ']' direct_abstract_declaratorI
+	| '(' ')' direct_abstract_declaratorI
+	| '(' parameter_type_list ')' direct_abstract_declaratorI
+	
+	;
+
+direct_abstract_declaratorI
+	: '[' ']' direct_abstract_declaratorI
+	| '[' constant_expression ']' direct_abstract_declaratorI
+	| '(' ')' direct_abstract_declaratorI
+	| '(' parameter_type_list ')' direct_abstract_declaratorI
+	;
+initializer
+	: assignment_expression
+	| '{' initializer_list '}'
+	| '{' initializer_list ',' '}'
+	;
+
+initializer_list
+	: initializer (',' initializer)*
+	;
+
+statement
+	: labeled_statement
+	| compound_statement
+	| expression_statement
+	| selection_statement
+	| iteration_statement
+	| jump_statement
+	;
+
+labeled_statement
+	: IDENTIFIER ':' statement
+	| CASE constant_expression ':' statement
+	| DEFAULT ':' statement
+	;
+
+compound_statement
+	: '{' '}'
+	| '{' statement_list '}'
+	| '{' declaration_list '}'
+	| '{' declaration_list statement_list '}'
+	;
+
+declaration_list
+	: declaration+
+	;
+
+statement_list
+	: statement+
+	;
+
+expression_statement
+	: ';'
+	| expression ';'
+	;
+
+selection_statement
+	: IF '(' expression ')' statement
+	| IF '(' expression ')' statement ELSE statement
+	| SWITCH '(' expression ')' statement
+	;
+
+iteration_statement
+	: WHILE '(' expression ')' statement
+	| DO statement WHILE '(' expression ')' ';'
+	| FOR '(' expression_statement expression_statement ')' statement
+	| FOR '(' expression_statement expression_statement expression ')' statement
+	;
+
+jump_statement
+	: GOTO IDENTIFIER ';'
+	| CONTINUE ';'
+	| BREAK ';'
+	| RETURNO ';'
+	| RETURNO expression ';'
+	;
+
+translation_unit
+	: external_declaration+
+	;
+
+external_declaration
+	: function_definition
+	| declaration
+	;
+
+function_definition
+	: declaration_specifiers declarator declaration_list compound_statement
+	| declaration_specifiers declarator compound_statement
+	| declarator declaration_list compound_statement
+	| declarator compound_statement
+	;
+  
+ 
+
+	//missing
+terminal AUTO : "auto";
+terminal BREAK : "break";
+terminal CASE : "case";
+terminal CHAR : "char";
+terminal CONST : "const";
+terminal CONTINUE : "continue";
+terminal DEFAULT : "default";
+terminal DO : "do";
+terminal DOUBLE : "double";
+terminal ELSE : "else";
+terminal ENUM : "enum";
+terminal EXTERN : "extern";
+terminal FLOAT : "float";		
+terminal FOR : "for";
+terminal GOTO : "goto";
+terminal IF : "if";
+terminal INTE : "int";
+terminal LONG : "long";
+terminal REGISTER : "register";
+terminal RETURNO : "return";
+terminal SHORT : "short";
+terminal SIGNED : "signed";
+terminal SIZEOF : "sizeof";
+terminal STATIC : "static";
+terminal STRUCT : "struct";
+terminal SWITCH : "switch";
+terminal TYPEDEF : "typedef";
+terminal UNION : "union";
+terminal UNSIGNED : "unsigned";
+terminal VOID : "void";
+terminal VOLATILE : "volatile";
+terminal WHILE : "while";
+//missing
+
+terminal ELLIPSIS : "..." ;
+terminal RIGHT_ASSIGN : ">>=";
+terminal LEFT_ASSIGN : "<<=";
+terminal ADD_ASSIGN : "+=";
+terminal SUB_ASSIGN : "-=";
+terminal MUL_ASSIGN : "*=";
+terminal DIV_ASSIGN : "/="; 
+terminal MOD_ASSIGN : "%=";
+terminal AND_ASSIGN : "&=";
+terminal XOR_ASSIGN : "^=";
+terminal OR_ASSIGN : "|=";
+terminal RIGHT_OP : ">>";
+terminal LEFT_OP : "<<";
+terminal INC_OP : "++";
+terminal DEC_OP : "--";
+terminal PTR_OP : "->";
+terminal AND_OP : "&&";
+terminal OR_OP : "||";
+terminal LE_OP : "<=";
+terminal GE_OP : ">=";
+terminal EQ_OP : "==";
+terminal NE_OP : "!=";
+
+
+IDENTIFIER :
+	ID
+;
+
+TYPE_NAMEE :
+	ID
+;
+
+STRING_LITERAL :
+	STRING
+;
+
+
+terminal D : ('0'..'9');
+terminal L : ('a'..'z'|'A'..'Z');
+terminal E : ('E'|'e')('+'|'-')?D+;
+FS : ('f'|'F'|'l'|'L');
+IS : ('u'|'U'|'l'|'L')+;
+
+//0[xX]{H}+{IS}?	
+//L?'(\\.|[^\\'])+'
+CONSTANT:  D+(IS)? | D*'.'D+E?FS? | D+'.'E?FS?  ;
+//missing
