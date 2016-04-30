@@ -80,6 +80,1081 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case AnsicPackage.TRANSLATION_UNIT:
+      {
+        translation_unit translation_unit = (translation_unit)theEObject;
+        T result = casetranslation_unit(translation_unit);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXTERNAL_DECLARATION:
+      {
+        external_declaration external_declaration = (external_declaration)theEObject;
+        T result = caseexternal_declaration(external_declaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DECLARATION_SPECIFIERS:
+      {
+        declaration_specifiers declaration_specifiers = (declaration_specifiers)theEObject;
+        T result = casedeclaration_specifiers(declaration_specifiers);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ALIGNMENT_SPECIFIER:
+      {
+        alignment_specifier alignment_specifier = (alignment_specifier)theEObject;
+        T result = casealignment_specifier(alignment_specifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TYPE_SPECIFIER:
+      {
+        type_specifier type_specifier = (type_specifier)theEObject;
+        T result = casetype_specifier(type_specifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ENUM_SPECIFIER:
+      {
+        enum_specifier enum_specifier = (enum_specifier)theEObject;
+        T result = caseenum_specifier(enum_specifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ENUMERATOR_LIST:
+      {
+        enumerator_list enumerator_list = (enumerator_list)theEObject;
+        T result = caseenumerator_list(enumerator_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ENUMERATOR_LIST_LINHA:
+      {
+        enumerator_list_linha enumerator_list_linha = (enumerator_list_linha)theEObject;
+        T result = caseenumerator_list_linha(enumerator_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ENUMERATOR:
+      {
+        enumerator enumerator = (enumerator)theEObject;
+        T result = caseenumerator(enumerator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ATOMIC_TYPE_SPECIFIER:
+      {
+        atomic_type_specifier atomic_type_specifier = (atomic_type_specifier)theEObject;
+        T result = caseatomic_type_specifier(atomic_type_specifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_OR_UNION_SPECIFIER:
+      {
+        struct_or_union_specifier struct_or_union_specifier = (struct_or_union_specifier)theEObject;
+        T result = casestruct_or_union_specifier(struct_or_union_specifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_OR_UNION_SPECIFIER_COMPLEMENT:
+      {
+        struct_or_union_specifier_complement struct_or_union_specifier_complement = (struct_or_union_specifier_complement)theEObject;
+        T result = casestruct_or_union_specifier_complement(struct_or_union_specifier_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATION_LIST:
+      {
+        struct_declaration_list struct_declaration_list = (struct_declaration_list)theEObject;
+        T result = casestruct_declaration_list(struct_declaration_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATION_LIST_LINHA:
+      {
+        struct_declaration_list_linha struct_declaration_list_linha = (struct_declaration_list_linha)theEObject;
+        T result = casestruct_declaration_list_linha(struct_declaration_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATION:
+      {
+        struct_declaration struct_declaration = (struct_declaration)theEObject;
+        T result = casestruct_declaration(struct_declaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATOR_LIST:
+      {
+        struct_declarator_list struct_declarator_list = (struct_declarator_list)theEObject;
+        T result = casestruct_declarator_list(struct_declarator_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATOR_LIST_LINHA:
+      {
+        struct_declarator_list_linha struct_declarator_list_linha = (struct_declarator_list_linha)theEObject;
+        T result = casestruct_declarator_list_linha(struct_declarator_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATOR:
+      {
+        struct_declarator struct_declarator = (struct_declarator)theEObject;
+        T result = casestruct_declarator(struct_declarator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.SPECIFIER_QUALIFIER_LIST:
+      {
+        specifier_qualifier_list specifier_qualifier_list = (specifier_qualifier_list)theEObject;
+        T result = casespecifier_qualifier_list(specifier_qualifier_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DECLARATION:
+      {
+        declaration declaration = (declaration)theEObject;
+        T result = casedeclaration(declaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.FUNCTION_DEFINITION:
+      {
+        function_definition function_definition = (function_definition)theEObject;
+        T result = casefunction_definition(function_definition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DECLARATION_LIST:
+      {
+        declaration_list declaration_list = (declaration_list)theEObject;
+        T result = casedeclaration_list(declaration_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DECLARATION_LIST_LINHA:
+      {
+        declaration_list_linha declaration_list_linha = (declaration_list_linha)theEObject;
+        T result = casedeclaration_list_linha(declaration_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DECLARATOR:
+      {
+        declarator declarator = (declarator)theEObject;
+        T result = casedeclarator(declarator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POINTER:
+      {
+        pointer pointer = (pointer)theEObject;
+        T result = casepointer(pointer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TYPE_QUALIFIER_LIST:
+      {
+        type_qualifier_list type_qualifier_list = (type_qualifier_list)theEObject;
+        T result = casetype_qualifier_list(type_qualifier_list);
+        if (result == null) result = casedirect_abstract_declarator_complement(type_qualifier_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA:
+      {
+        type_qualifier_list_linha type_qualifier_list_linha = (type_qualifier_list_linha)theEObject;
+        T result = casetype_qualifier_list_linha(type_qualifier_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_DECLARATOR:
+      {
+        direct_declarator direct_declarator = (direct_declarator)theEObject;
+        T result = casedirect_declarator(direct_declarator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_DECLARATOR_LINHA:
+      {
+        direct_declarator_linha direct_declarator_linha = (direct_declarator_linha)theEObject;
+        T result = casedirect_declarator_linha(direct_declarator_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_DECLARATOR_COMPLEMENTO:
+      {
+        direct_declarator_complemento direct_declarator_complemento = (direct_declarator_complemento)theEObject;
+        T result = casedirect_declarator_complemento(direct_declarator_complemento);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.PARAMETER_TYPE_LIST:
+      {
+        parameter_type_list parameter_type_list = (parameter_type_list)theEObject;
+        T result = caseparameter_type_list(parameter_type_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.PARAMETER_LIST:
+      {
+        parameter_list parameter_list = (parameter_list)theEObject;
+        T result = caseparameter_list(parameter_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.PARAMETER_LIST_LINHA:
+      {
+        parameter_list_linha parameter_list_linha = (parameter_list_linha)theEObject;
+        T result = caseparameter_list_linha(parameter_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.PARAMETER_DECLARATION:
+      {
+        parameter_declaration parameter_declaration = (parameter_declaration)theEObject;
+        T result = caseparameter_declaration(parameter_declaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ABSTRACT_DECLARATOR:
+      {
+        abstract_declarator abstract_declarator = (abstract_declarator)theEObject;
+        T result = caseabstract_declarator(abstract_declarator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR:
+      {
+        direct_abstract_declarator direct_abstract_declarator = (direct_abstract_declarator)theEObject;
+        T result = casedirect_abstract_declarator(direct_abstract_declarator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INITIALIZER:
+      {
+        initializer initializer = (initializer)theEObject;
+        T result = caseinitializer(initializer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR_LINHA:
+      {
+        direct_abstract_declarator_linha direct_abstract_declarator_linha = (direct_abstract_declarator_linha)theEObject;
+        T result = casedirect_abstract_declarator_linha(direct_abstract_declarator_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT:
+      {
+        direct_abstract_declarator_complement direct_abstract_declarator_complement = (direct_abstract_declarator_complement)theEObject;
+        T result = casedirect_abstract_declarator_complement(direct_abstract_declarator_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.IDENTIFIER_LIST:
+      {
+        identifier_list identifier_list = (identifier_list)theEObject;
+        T result = caseidentifier_list(identifier_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.IDENTIFIER_LIST_LINHA:
+      {
+        identifier_list_linha identifier_list_linha = (identifier_list_linha)theEObject;
+        T result = caseidentifier_list_linha(identifier_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TRANSLATION_UNIT_LINHA:
+      {
+        translation_unit_linha translation_unit_linha = (translation_unit_linha)theEObject;
+        T result = casetranslation_unit_linha(translation_unit_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.PRIMARY_EXPRESSION:
+      {
+        primary_expression primary_expression = (primary_expression)theEObject;
+        T result = caseprimary_expression(primary_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ENUMERATION_CONSTANT:
+      {
+        enumeration_constant enumeration_constant = (enumeration_constant)theEObject;
+        T result = caseenumeration_constant(enumeration_constant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.GENERIC_SELECTION:
+      {
+        generic_selection generic_selection = (generic_selection)theEObject;
+        T result = casegeneric_selection(generic_selection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.GENERIC_ASSOC_LIST:
+      {
+        generic_assoc_list generic_assoc_list = (generic_assoc_list)theEObject;
+        T result = casegeneric_assoc_list(generic_assoc_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.GENERIC_ASSOC_LIST_LINHA:
+      {
+        generic_assoc_list_linha generic_assoc_list_linha = (generic_assoc_list_linha)theEObject;
+        T result = casegeneric_assoc_list_linha(generic_assoc_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.GENERIC_ASSOCIATION:
+      {
+        generic_association generic_association = (generic_association)theEObject;
+        T result = casegeneric_association(generic_association);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION:
+      {
+        postfix_expression postfix_expression = (postfix_expression)theEObject;
+        T result = casepostfix_expression(postfix_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_LINHA:
+      {
+        postfix_expression_linha postfix_expression_linha = (postfix_expression_linha)theEObject;
+        T result = casepostfix_expression_linha(postfix_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INITIALIZER_LIST:
+      {
+        initializer_list initializer_list = (initializer_list)theEObject;
+        T result = caseinitializer_list(initializer_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INITIALIZER_LIST_LINHA:
+      {
+        initializer_list_linha initializer_list_linha = (initializer_list_linha)theEObject;
+        T result = caseinitializer_list_linha(initializer_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INITIALIZER_LIST_COMPLEMENT:
+      {
+        initializer_list_complement initializer_list_complement = (initializer_list_complement)theEObject;
+        T result = caseinitializer_list_complement(initializer_list_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DESIGNATION:
+      {
+        designation designation = (designation)theEObject;
+        T result = casedesignation(designation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DESIGNATOR_LIST:
+      {
+        designator_list designator_list = (designator_list)theEObject;
+        T result = casedesignator_list(designator_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DESIGNATOR_LIST_LINHA:
+      {
+        designator_list_linha designator_list_linha = (designator_list_linha)theEObject;
+        T result = casedesignator_list_linha(designator_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DESIGNATOR:
+      {
+        designator designator = (designator)theEObject;
+        T result = casedesignator(designator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STATIC_ASSERT_DECLARATION:
+      {
+        static_assert_declaration static_assert_declaration = (static_assert_declaration)theEObject;
+        T result = casestatic_assert_declaration(static_assert_declaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT:
+      {
+        postfix_expression_complement postfix_expression_complement = (postfix_expression_complement)theEObject;
+        T result = casepostfix_expression_complement(postfix_expression_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST:
+      {
+        argument_expression_list argument_expression_list = (argument_expression_list)theEObject;
+        T result = caseargument_expression_list(argument_expression_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA:
+      {
+        argument_expression_list_linha argument_expression_list_linha = (argument_expression_list_linha)theEObject;
+        T result = caseargument_expression_list_linha(argument_expression_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.UNARY_EXPRESSION:
+      {
+        unary_expression unary_expression = (unary_expression)theEObject;
+        T result = caseunary_expression(unary_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.CAST_EXPRESSION:
+      {
+        cast_expression cast_expression = (cast_expression)theEObject;
+        T result = casecast_expression(cast_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION:
+      {
+        multiplicative_expression multiplicative_expression = (multiplicative_expression)theEObject;
+        T result = casemultiplicative_expression(multiplicative_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA:
+      {
+        multiplicative_expression_linha multiplicative_expression_linha = (multiplicative_expression_linha)theEObject;
+        T result = casemultiplicative_expression_linha(multiplicative_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION_COMPLEMENT:
+      {
+        multiplicative_expression_complement multiplicative_expression_complement = (multiplicative_expression_complement)theEObject;
+        T result = casemultiplicative_expression_complement(multiplicative_expression_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ADDITIVE_EXPRESSION:
+      {
+        additive_expression additive_expression = (additive_expression)theEObject;
+        T result = caseadditive_expression(additive_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ADDITIVE_EXPRESSION_LINHA:
+      {
+        additive_expression_linha additive_expression_linha = (additive_expression_linha)theEObject;
+        T result = caseadditive_expression_linha(additive_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT:
+      {
+        additive_expression_complement additive_expression_complement = (additive_expression_complement)theEObject;
+        T result = caseadditive_expression_complement(additive_expression_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.SHIFT_EXPRESSION:
+      {
+        shift_expression shift_expression = (shift_expression)theEObject;
+        T result = caseshift_expression(shift_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.SHIFT_EXPRESSION_LINHA:
+      {
+        shift_expression_linha shift_expression_linha = (shift_expression_linha)theEObject;
+        T result = caseshift_expression_linha(shift_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.SHIFT_EXPRESSION_COMPLEMENT:
+      {
+        shift_expression_complement shift_expression_complement = (shift_expression_complement)theEObject;
+        T result = caseshift_expression_complement(shift_expression_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.RELATIONAL_EXPRESSION:
+      {
+        relational_expression relational_expression = (relational_expression)theEObject;
+        T result = caserelational_expression(relational_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA:
+      {
+        relational_expression_linha relational_expression_linha = (relational_expression_linha)theEObject;
+        T result = caserelational_expression_linha(relational_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.RELATIONAL_EXPRESSION_COMPLEMENT:
+      {
+        relational_expression_complement relational_expression_complement = (relational_expression_complement)theEObject;
+        T result = caserelational_expression_complement(relational_expression_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EQUALITY_EXPRESSION:
+      {
+        equality_expression equality_expression = (equality_expression)theEObject;
+        T result = caseequality_expression(equality_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EQUALITY_EXPRESSION_LINHA:
+      {
+        equality_expression_linha equality_expression_linha = (equality_expression_linha)theEObject;
+        T result = caseequality_expression_linha(equality_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EQUALITY_EXPRESSION_COMPLEMENT:
+      {
+        equality_expression_complement equality_expression_complement = (equality_expression_complement)theEObject;
+        T result = caseequality_expression_complement(equality_expression_complement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STATEMENT:
+      {
+        statement statement = (statement)theEObject;
+        T result = casestatement(statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.JUMP_STATEMENT:
+      {
+        jump_statement jump_statement = (jump_statement)theEObject;
+        T result = casejump_statement(jump_statement);
+        if (result == null) result = casestatement(jump_statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ITERATION_STATEMENT:
+      {
+        iteration_statement iteration_statement = (iteration_statement)theEObject;
+        T result = caseiteration_statement(iteration_statement);
+        if (result == null) result = casestatement(iteration_statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.SELECTION_STATEMENT:
+      {
+        selection_statement selection_statement = (selection_statement)theEObject;
+        T result = caseselection_statement(selection_statement);
+        if (result == null) result = casestatement(selection_statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LABELED_STATEMENT:
+      {
+        labeled_statement labeled_statement = (labeled_statement)theEObject;
+        T result = caselabeled_statement(labeled_statement);
+        if (result == null) result = casestatement(labeled_statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.COMPOUND_STATEMENT:
+      {
+        compound_statement compound_statement = (compound_statement)theEObject;
+        T result = casecompound_statement(compound_statement);
+        if (result == null) result = casestatement(compound_statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.BLOCK_ITEM_LIST:
+      {
+        block_item_list block_item_list = (block_item_list)theEObject;
+        T result = caseblock_item_list(block_item_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.BLOCK_ITEM_LIST_LINHA:
+      {
+        block_item_list_linha block_item_list_linha = (block_item_list_linha)theEObject;
+        T result = caseblock_item_list_linha(block_item_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.BLOCK_ITEM:
+      {
+        block_item block_item = (block_item)theEObject;
+        T result = caseblock_item(block_item);
+        if (result == null) result = caseblock_item_list(block_item);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXPRESSION_STATEMENT:
+      {
+        expression_statement expression_statement = (expression_statement)theEObject;
+        T result = caseexpression_statement(expression_statement);
+        if (result == null) result = casestatement(expression_statement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.AND_EXPRESSION:
+      {
+        and_expression and_expression = (and_expression)theEObject;
+        T result = caseand_expression(and_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.AND_EXPRESSION_LINHA:
+      {
+        and_expression_linha and_expression_linha = (and_expression_linha)theEObject;
+        T result = caseand_expression_linha(and_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXCLUSIVE_OR_EXPRESSION:
+      {
+        exclusive_or_expression exclusive_or_expression = (exclusive_or_expression)theEObject;
+        T result = caseexclusive_or_expression(exclusive_or_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXCLUSIVE_OR_EXPRESSION_LINHA:
+      {
+        exclusive_or_expression_linha exclusive_or_expression_linha = (exclusive_or_expression_linha)theEObject;
+        T result = caseexclusive_or_expression_linha(exclusive_or_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INCLUSIVE_OR_EXPRESSION:
+      {
+        inclusive_or_expression inclusive_or_expression = (inclusive_or_expression)theEObject;
+        T result = caseinclusive_or_expression(inclusive_or_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INCLUSIVE_OR_EXPRESSION_LINHA:
+      {
+        inclusive_or_expression_linha inclusive_or_expression_linha = (inclusive_or_expression_linha)theEObject;
+        T result = caseinclusive_or_expression_linha(inclusive_or_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LOGICAL_AND_EXPRESSION:
+      {
+        logical_and_expression logical_and_expression = (logical_and_expression)theEObject;
+        T result = caselogical_and_expression(logical_and_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LOGICAL_AND_EXPRESSION_LINHA:
+      {
+        logical_and_expression_linha logical_and_expression_linha = (logical_and_expression_linha)theEObject;
+        T result = caselogical_and_expression_linha(logical_and_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LOGICAL_OR_EXPRESSION:
+      {
+        logical_or_expression logical_or_expression = (logical_or_expression)theEObject;
+        T result = caselogical_or_expression(logical_or_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LOGICAL_OR_EXPRESSION_LINHA:
+      {
+        logical_or_expression_linha logical_or_expression_linha = (logical_or_expression_linha)theEObject;
+        T result = caselogical_or_expression_linha(logical_or_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.CONDITIONAL_EXPRESSION:
+      {
+        conditional_expression conditional_expression = (conditional_expression)theEObject;
+        T result = caseconditional_expression(conditional_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.CONDITIONAL_EXPRESSION_LINHA:
+      {
+        conditional_expression_linha conditional_expression_linha = (conditional_expression_linha)theEObject;
+        T result = caseconditional_expression_linha(conditional_expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ASSIGNMENT_EXPRESSION:
+      {
+        assignment_expression assignment_expression = (assignment_expression)theEObject;
+        T result = caseassignment_expression(assignment_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TYPE_NAME:
+      {
+        type_name type_name = (type_name)theEObject;
+        T result = casetype_name(type_name);
+        if (result == null) result = casepostfix_expression(type_name);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXPRESSION:
+      {
+        expression expression = (expression)theEObject;
+        T result = caseexpression(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXPRESSION_LINHA:
+      {
+        expression_linha expression_linha = (expression_linha)theEObject;
+        T result = caseexpression_linha(expression_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.CONSTANT_EXPRESSION:
+      {
+        constant_expression constant_expression = (constant_expression)theEObject;
+        T result = caseconstant_expression(constant_expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INIT_DECLARATOR_LIST:
+      {
+        init_declarator_list init_declarator_list = (init_declarator_list)theEObject;
+        T result = caseinit_declarator_list(init_declarator_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INIT_DECLARATOR_LIST_LINHA:
+      {
+        init_declarator_list_linha init_declarator_list_linha = (init_declarator_list_linha)theEObject;
+        T result = caseinit_declarator_list_linha(init_declarator_list_linha);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INIT_DECLARATOR:
+      {
+        init_declarator init_declarator = (init_declarator)theEObject;
+        T result = caseinit_declarator(init_declarator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRING_UFCG:
+      {
+        string_ufcg string_ufcg = (string_ufcg)theEObject;
+        T result = casestring_ufcg(string_ufcg);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.CONSTANT:
+      {
+        constant constant = (constant)theEObject;
+        T result = caseconstant(constant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ENUMERATOR_LIST_LINHA_ACTION:
+      {
+        EnumeratorListLinhaAction enumeratorListLinhaAction = (EnumeratorListLinhaAction)theEObject;
+        T result = caseEnumeratorListLinhaAction(enumeratorListLinhaAction);
+        if (result == null) result = caseenumerator_list_linha(enumeratorListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION:
+      {
+        StructOrUnionSpecifierComplementAction structOrUnionSpecifierComplementAction = (StructOrUnionSpecifierComplementAction)theEObject;
+        T result = caseStructOrUnionSpecifierComplementAction(structOrUnionSpecifierComplementAction);
+        if (result == null) result = casestruct_or_union_specifier_complement(structOrUnionSpecifierComplementAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATION_LIST_LINHA_ACTION:
+      {
+        StructDeclarationListLinhaAction structDeclarationListLinhaAction = (StructDeclarationListLinhaAction)theEObject;
+        T result = caseStructDeclarationListLinhaAction(structDeclarationListLinhaAction);
+        if (result == null) result = casestruct_declaration_list_linha(structDeclarationListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.STRUCT_DECLARATOR_LIST_LINHA_ACTION:
+      {
+        StructDeclaratorListLinhaAction structDeclaratorListLinhaAction = (StructDeclaratorListLinhaAction)theEObject;
+        T result = caseStructDeclaratorListLinhaAction(structDeclaratorListLinhaAction);
+        if (result == null) result = casestruct_declarator_list_linha(structDeclaratorListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DECLARATION_LIST_LINHA_ACTION:
+      {
+        DeclarationListLinhaAction declarationListLinhaAction = (DeclarationListLinhaAction)theEObject;
+        T result = caseDeclarationListLinhaAction(declarationListLinhaAction);
+        if (result == null) result = casedeclaration_list_linha(declarationListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION:
+      {
+        TypeQualifierListLinhaAtion typeQualifierListLinhaAtion = (TypeQualifierListLinhaAtion)theEObject;
+        T result = caseTypeQualifierListLinhaAtion(typeQualifierListLinhaAtion);
+        if (result == null) result = casetype_qualifier_list_linha(typeQualifierListLinhaAtion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_DECLARATOR_LINHA_ACTION:
+      {
+        DirectDeclaratorLinhaAction directDeclaratorLinhaAction = (DirectDeclaratorLinhaAction)theEObject;
+        T result = caseDirectDeclaratorLinhaAction(directDeclaratorLinhaAction);
+        if (result == null) result = casedirect_declarator_linha(directDeclaratorLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.PARAMETER_LIST_LINHA_ACTION:
+      {
+        ParameterListLinhaAction parameterListLinhaAction = (ParameterListLinhaAction)theEObject;
+        T result = caseParameterListLinhaAction(parameterListLinhaAction);
+        if (result == null) result = caseparameter_list_linha(parameterListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION:
+      {
+        DirectAbstractDeclarratorLinhaAction directAbstractDeclarratorLinhaAction = (DirectAbstractDeclarratorLinhaAction)theEObject;
+        T result = caseDirectAbstractDeclarratorLinhaAction(directAbstractDeclarratorLinhaAction);
+        if (result == null) result = casedirect_abstract_declarator_linha(directAbstractDeclarratorLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.IDENTIFIER_LIST_LINHA_ACTION:
+      {
+        IdentifierListLinhaAction identifierListLinhaAction = (IdentifierListLinhaAction)theEObject;
+        T result = caseIdentifierListLinhaAction(identifierListLinhaAction);
+        if (result == null) result = caseidentifier_list_linha(identifierListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.TRANLATION_UNIT_LINHA_ACTION:
+      {
+        TranlationUnitLinhaAction tranlationUnitLinhaAction = (TranlationUnitLinhaAction)theEObject;
+        T result = caseTranlationUnitLinhaAction(tranlationUnitLinhaAction);
+        if (result == null) result = casetranslation_unit_linha(tranlationUnitLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.GENERIC_ASSOC_LIST_LINHA_ACTION:
+      {
+        GenericAssocListLinhaAction genericAssocListLinhaAction = (GenericAssocListLinhaAction)theEObject;
+        T result = caseGenericAssocListLinhaAction(genericAssocListLinhaAction);
+        if (result == null) result = casegeneric_assoc_list_linha(genericAssocListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_LINHA_ACTION:
+      {
+        PostfixExpressionLinhaAction postfixExpressionLinhaAction = (PostfixExpressionLinhaAction)theEObject;
+        T result = casePostfixExpressionLinhaAction(postfixExpressionLinhaAction);
+        if (result == null) result = casepostfix_expression_linha(postfixExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INITIALIZER_LIST_LINHA_ACTION:
+      {
+        InitializerListLinhaAction initializerListLinhaAction = (InitializerListLinhaAction)theEObject;
+        T result = caseInitializerListLinhaAction(initializerListLinhaAction);
+        if (result == null) result = caseinitializer_list_linha(initializerListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.DESIGNATOR_LIST_LINHA_ACTION:
+      {
+        DesignatorListLinhaAction designatorListLinhaAction = (DesignatorListLinhaAction)theEObject;
+        T result = caseDesignatorListLinhaAction(designatorListLinhaAction);
+        if (result == null) result = casedesignator_list_linha(designatorListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION:
+      {
+        PostfixExpressionComplementExpression postfixExpressionComplementExpression = (PostfixExpressionComplementExpression)theEObject;
+        T result = casePostfixExpressionComplementExpression(postfixExpressionComplementExpression);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY:
+      {
+        PostfixExpressionComplementEmpty postfixExpressionComplementEmpty = (PostfixExpressionComplementEmpty)theEObject;
+        T result = casePostfixExpressionComplementEmpty(postfixExpressionComplementEmpty);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementEmpty);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST:
+      {
+        PostfixExpressionComplementArgList postfixExpressionComplementArgList = (PostfixExpressionComplementArgList)theEObject;
+        T result = casePostfixExpressionComplementArgList(postfixExpressionComplementArgList);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementArgList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER:
+      {
+        PostfixExpressionComplementIdentifier postfixExpressionComplementIdentifier = (PostfixExpressionComplementIdentifier)theEObject;
+        T result = casePostfixExpressionComplementIdentifier(postfixExpressionComplementIdentifier);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementIdentifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_POINTER:
+      {
+        PostfixExpressionComplementPointer postfixExpressionComplementPointer = (PostfixExpressionComplementPointer)theEObject;
+        T result = casePostfixExpressionComplementPointer(postfixExpressionComplementPointer);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementPointer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT:
+      {
+        PostfixExpressionComplementIncrement postfixExpressionComplementIncrement = (PostfixExpressionComplementIncrement)theEObject;
+        T result = casePostfixExpressionComplementIncrement(postfixExpressionComplementIncrement);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementIncrement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT:
+      {
+        PostfixExpressionComplementDecrement postfixExpressionComplementDecrement = (PostfixExpressionComplementDecrement)theEObject;
+        T result = casePostfixExpressionComplementDecrement(postfixExpressionComplementDecrement);
+        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementDecrement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION:
+      {
+        ArgumentExpressionListLinhaAction argumentExpressionListLinhaAction = (ArgumentExpressionListLinhaAction)theEObject;
+        T result = caseArgumentExpressionListLinhaAction(argumentExpressionListLinhaAction);
+        if (result == null) result = caseargument_expression_list_linha(argumentExpressionListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION:
+      {
+        MultiplicativeExpressionLinhaAction multiplicativeExpressionLinhaAction = (MultiplicativeExpressionLinhaAction)theEObject;
+        T result = caseMultiplicativeExpressionLinhaAction(multiplicativeExpressionLinhaAction);
+        if (result == null) result = casemultiplicative_expression_linha(multiplicativeExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.ADDITIVE_EXPRESSION_LINHA_ACTION:
+      {
+        AdditiveExpressionLinhaAction additiveExpressionLinhaAction = (AdditiveExpressionLinhaAction)theEObject;
+        T result = caseAdditiveExpressionLinhaAction(additiveExpressionLinhaAction);
+        if (result == null) result = caseadditive_expression_linha(additiveExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.SHIFT_EXPRESSION_LINHA_ACTION:
+      {
+        ShiftExpressionLinhaAction shiftExpressionLinhaAction = (ShiftExpressionLinhaAction)theEObject;
+        T result = caseShiftExpressionLinhaAction(shiftExpressionLinhaAction);
+        if (result == null) result = caseshift_expression_linha(shiftExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA_ACTION:
+      {
+        RelationalExpressionLinhaAction relationalExpressionLinhaAction = (RelationalExpressionLinhaAction)theEObject;
+        T result = caseRelationalExpressionLinhaAction(relationalExpressionLinhaAction);
+        if (result == null) result = caserelational_expression_linha(relationalExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EQUALITY_EXPRESSION_LINHA_ACTION:
+      {
+        EqualityExpressionLinhaAction equalityExpressionLinhaAction = (EqualityExpressionLinhaAction)theEObject;
+        T result = caseEqualityExpressionLinhaAction(equalityExpressionLinhaAction);
+        if (result == null) result = caseequality_expression_linha(equalityExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.BLOCK_ITEM_LIST_LINHA_ACTION:
+      {
+        BlockItemListLinhaAction blockItemListLinhaAction = (BlockItemListLinhaAction)theEObject;
+        T result = caseBlockItemListLinhaAction(blockItemListLinhaAction);
+        if (result == null) result = caseblock_item_list_linha(blockItemListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.AND_EXPRESSION_LINHA_ACTION:
+      {
+        AndExpressionLinhaAction andExpressionLinhaAction = (AndExpressionLinhaAction)theEObject;
+        T result = caseAndExpressionLinhaAction(andExpressionLinhaAction);
+        if (result == null) result = caseand_expression_linha(andExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION:
+      {
+        ExclusiveOrExpressionLinhaAction exclusiveOrExpressionLinhaAction = (ExclusiveOrExpressionLinhaAction)theEObject;
+        T result = caseExclusiveOrExpressionLinhaAction(exclusiveOrExpressionLinhaAction);
+        if (result == null) result = caseexclusive_or_expression_linha(exclusiveOrExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INCLUSIVE_OR_EXPRESSION_LINHA_ACTION:
+      {
+        InclusiveOrExpressionLinhaAction inclusiveOrExpressionLinhaAction = (InclusiveOrExpressionLinhaAction)theEObject;
+        T result = caseInclusiveOrExpressionLinhaAction(inclusiveOrExpressionLinhaAction);
+        if (result == null) result = caseinclusive_or_expression_linha(inclusiveOrExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LOGICAL_AND_EXPRESSION_LINHA_ACTION:
+      {
+        LogicalAndExpressionLinhaAction logicalAndExpressionLinhaAction = (LogicalAndExpressionLinhaAction)theEObject;
+        T result = caseLogicalAndExpressionLinhaAction(logicalAndExpressionLinhaAction);
+        if (result == null) result = caselogical_and_expression_linha(logicalAndExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.LOGICAL_OR_EXPRESSION_LINHA_ACTION:
+      {
+        LogicalOrExpressionLinhaAction logicalOrExpressionLinhaAction = (LogicalOrExpressionLinhaAction)theEObject;
+        T result = caseLogicalOrExpressionLinhaAction(logicalOrExpressionLinhaAction);
+        if (result == null) result = caselogical_or_expression_linha(logicalOrExpressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.CONDITIONAL_EXPRESSION_LINHA_ACCTION:
+      {
+        ConditionalExpressionLinhaAcction conditionalExpressionLinhaAcction = (ConditionalExpressionLinhaAcction)theEObject;
+        T result = caseConditionalExpressionLinhaAcction(conditionalExpressionLinhaAcction);
+        if (result == null) result = caseconditional_expression_linha(conditionalExpressionLinhaAcction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.EXPRESSION_LINHA_ACTION:
+      {
+        ExpressionLinhaAction expressionLinhaAction = (ExpressionLinhaAction)theEObject;
+        T result = caseExpressionLinhaAction(expressionLinhaAction);
+        if (result == null) result = caseexpression_linha(expressionLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AnsicPackage.INIT_DECCLARATOR_LIST_LINHA_ACTION:
+      {
+        InitDecclaratorListLinhaAction initDecclaratorListLinhaAction = (InitDecclaratorListLinhaAction)theEObject;
+        T result = caseInitDecclaratorListLinhaAction(initDecclaratorListLinhaAction);
+        if (result == null) result = caseinit_declarator_list_linha(initDecclaratorListLinhaAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -96,6 +1171,2358 @@ public class AnsicSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDomainModel(DomainModel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>translation unit</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>translation unit</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetranslation_unit(translation_unit object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>external declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>external declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseexternal_declaration(external_declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>declaration specifiers</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>declaration specifiers</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedeclaration_specifiers(declaration_specifiers object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>alignment specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>alignment specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casealignment_specifier(alignment_specifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>type specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>type specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetype_specifier(type_specifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>enum specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>enum specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseenum_specifier(enum_specifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>enumerator list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>enumerator list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseenumerator_list(enumerator_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>enumerator list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>enumerator list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseenumerator_list_linha(enumerator_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>enumerator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>enumerator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseenumerator(enumerator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>atomic type specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>atomic type specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseatomic_type_specifier(atomic_type_specifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct or union specifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct or union specifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_or_union_specifier(struct_or_union_specifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct or union specifier complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct or union specifier complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_or_union_specifier_complement(struct_or_union_specifier_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct declaration list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct declaration list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_declaration_list(struct_declaration_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct declaration list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct declaration list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_declaration_list_linha(struct_declaration_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_declaration(struct_declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct declarator list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct declarator list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_declarator_list(struct_declarator_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct declarator list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct declarator list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_declarator_list_linha(struct_declarator_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>struct declarator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>struct declarator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestruct_declarator(struct_declarator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>specifier qualifier list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>specifier qualifier list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casespecifier_qualifier_list(specifier_qualifier_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedeclaration(declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>function definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>function definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casefunction_definition(function_definition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>declaration list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>declaration list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedeclaration_list(declaration_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>declaration list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>declaration list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedeclaration_list_linha(declaration_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>declarator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>declarator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedeclarator(declarator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>pointer</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>pointer</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepointer(pointer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>type qualifier list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>type qualifier list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetype_qualifier_list(type_qualifier_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>type qualifier list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>type qualifier list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetype_qualifier_list_linha(type_qualifier_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>direct declarator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>direct declarator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedirect_declarator(direct_declarator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>direct declarator linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>direct declarator linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedirect_declarator_linha(direct_declarator_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>direct declarator complemento</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>direct declarator complemento</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedirect_declarator_complemento(direct_declarator_complemento object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>parameter type list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>parameter type list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseparameter_type_list(parameter_type_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>parameter list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>parameter list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseparameter_list(parameter_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>parameter list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>parameter list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseparameter_list_linha(parameter_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>parameter declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>parameter declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseparameter_declaration(parameter_declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>abstract declarator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>abstract declarator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseabstract_declarator(abstract_declarator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>direct abstract declarator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>direct abstract declarator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedirect_abstract_declarator(direct_abstract_declarator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>initializer</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>initializer</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinitializer(initializer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>direct abstract declarator linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>direct abstract declarator linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedirect_abstract_declarator_linha(direct_abstract_declarator_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>direct abstract declarator complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>direct abstract declarator complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedirect_abstract_declarator_complement(direct_abstract_declarator_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>identifier list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>identifier list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseidentifier_list(identifier_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>identifier list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>identifier list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseidentifier_list_linha(identifier_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>translation unit linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>translation unit linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetranslation_unit_linha(translation_unit_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>primary expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>primary expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseprimary_expression(primary_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>enumeration constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>enumeration constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseenumeration_constant(enumeration_constant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>generic selection</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>generic selection</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casegeneric_selection(generic_selection object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>generic assoc list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>generic assoc list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casegeneric_assoc_list(generic_assoc_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>generic assoc list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>generic assoc list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casegeneric_assoc_list_linha(generic_assoc_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>generic association</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>generic association</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casegeneric_association(generic_association object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>postfix expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>postfix expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepostfix_expression(postfix_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>postfix expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>postfix expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepostfix_expression_linha(postfix_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>initializer list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>initializer list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinitializer_list(initializer_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>initializer list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>initializer list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinitializer_list_linha(initializer_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>initializer list complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>initializer list complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinitializer_list_complement(initializer_list_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>designation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>designation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedesignation(designation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>designator list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>designator list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedesignator_list(designator_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>designator list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>designator list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedesignator_list_linha(designator_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>designator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>designator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casedesignator(designator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>static assert declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>static assert declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestatic_assert_declaration(static_assert_declaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>postfix expression complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>postfix expression complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepostfix_expression_complement(postfix_expression_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>argument expression list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>argument expression list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseargument_expression_list(argument_expression_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>argument expression list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>argument expression list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseargument_expression_list_linha(argument_expression_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>unary expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>unary expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseunary_expression(unary_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>cast expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>cast expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casecast_expression(cast_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>multiplicative expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>multiplicative expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemultiplicative_expression(multiplicative_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>multiplicative expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>multiplicative expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemultiplicative_expression_linha(multiplicative_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>multiplicative expression complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>multiplicative expression complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemultiplicative_expression_complement(multiplicative_expression_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>additive expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>additive expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseadditive_expression(additive_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>additive expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>additive expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseadditive_expression_linha(additive_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>additive expression complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>additive expression complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseadditive_expression_complement(additive_expression_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>shift expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>shift expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseshift_expression(shift_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>shift expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>shift expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseshift_expression_linha(shift_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>shift expression complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>shift expression complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseshift_expression_complement(shift_expression_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>relational expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>relational expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caserelational_expression(relational_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>relational expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>relational expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caserelational_expression_linha(relational_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>relational expression complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>relational expression complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caserelational_expression_complement(relational_expression_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>equality expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>equality expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseequality_expression(equality_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>equality expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>equality expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseequality_expression_linha(equality_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>equality expression complement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>equality expression complement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseequality_expression_complement(equality_expression_complement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestatement(statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>jump statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>jump statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casejump_statement(jump_statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>iteration statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>iteration statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseiteration_statement(iteration_statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>selection statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>selection statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseselection_statement(selection_statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>labeled statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>labeled statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselabeled_statement(labeled_statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>compound statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>compound statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casecompound_statement(compound_statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>block item list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>block item list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseblock_item_list(block_item_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>block item list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>block item list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseblock_item_list_linha(block_item_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>block item</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>block item</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseblock_item(block_item object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>expression statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>expression statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseexpression_statement(expression_statement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>and expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>and expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseand_expression(and_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>and expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>and expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseand_expression_linha(and_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>exclusive or expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>exclusive or expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseexclusive_or_expression(exclusive_or_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>exclusive or expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>exclusive or expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseexclusive_or_expression_linha(exclusive_or_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>inclusive or expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>inclusive or expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinclusive_or_expression(inclusive_or_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>inclusive or expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>inclusive or expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinclusive_or_expression_linha(inclusive_or_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>logical and expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>logical and expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselogical_and_expression(logical_and_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>logical and expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>logical and expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselogical_and_expression_linha(logical_and_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>logical or expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>logical or expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselogical_or_expression(logical_or_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>logical or expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>logical or expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselogical_or_expression_linha(logical_or_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>conditional expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>conditional expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseconditional_expression(conditional_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>conditional expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>conditional expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseconditional_expression_linha(conditional_expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>assignment expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>assignment expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseassignment_expression(assignment_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>type name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>type name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetype_name(type_name object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseexpression(expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>expression linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>expression linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseexpression_linha(expression_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>constant expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>constant expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseconstant_expression(constant_expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>init declarator list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>init declarator list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinit_declarator_list(init_declarator_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>init declarator list linha</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>init declarator list linha</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinit_declarator_list_linha(init_declarator_list_linha object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>init declarator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>init declarator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinit_declarator(init_declarator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>string ufcg</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>string ufcg</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestring_ufcg(string_ufcg object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseconstant(constant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enumerator List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enumerator List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumeratorListLinhaAction(EnumeratorListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Struct Or Union Specifier Complement Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Struct Or Union Specifier Complement Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStructOrUnionSpecifierComplementAction(StructOrUnionSpecifierComplementAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Struct Declaration List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Struct Declaration List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStructDeclarationListLinhaAction(StructDeclarationListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Struct Declarator List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Struct Declarator List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStructDeclaratorListLinhaAction(StructDeclaratorListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Declaration List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Declaration List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeclarationListLinhaAction(DeclarationListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Qualifier List Linha Ation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Qualifier List Linha Ation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeQualifierListLinhaAtion(TypeQualifierListLinhaAtion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Direct Declarator Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Direct Declarator Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDirectDeclaratorLinhaAction(DirectDeclaratorLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parameter List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parameter List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParameterListLinhaAction(ParameterListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Direct Abstract Declarrator Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Direct Abstract Declarrator Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDirectAbstractDeclarratorLinhaAction(DirectAbstractDeclarratorLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Identifier List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Identifier List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIdentifierListLinhaAction(IdentifierListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tranlation Unit Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tranlation Unit Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTranlationUnitLinhaAction(TranlationUnitLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Generic Assoc List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Generic Assoc List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGenericAssocListLinhaAction(GenericAssocListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionLinhaAction(PostfixExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Initializer List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Initializer List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInitializerListLinhaAction(InitializerListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Designator List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Designator List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDesignatorListLinhaAction(DesignatorListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementExpression(PostfixExpressionComplementExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Empty</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Empty</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementEmpty(PostfixExpressionComplementEmpty object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Arg List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Arg List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementArgList(PostfixExpressionComplementArgList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Identifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Identifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementIdentifier(PostfixExpressionComplementIdentifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Pointer</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Pointer</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementPointer(PostfixExpressionComplementPointer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Increment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Increment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementIncrement(PostfixExpressionComplementIncrement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Decrement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Decrement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePostfixExpressionComplementDecrement(PostfixExpressionComplementDecrement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Argument Expression List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Argument Expression List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArgumentExpressionListLinhaAction(ArgumentExpressionListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multiplicative Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multiplicative Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiplicativeExpressionLinhaAction(MultiplicativeExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Additive Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Additive Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAdditiveExpressionLinhaAction(AdditiveExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Shift Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Shift Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseShiftExpressionLinhaAction(ShiftExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Relational Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Relational Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelationalExpressionLinhaAction(RelationalExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Equality Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Equality Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEqualityExpressionLinhaAction(EqualityExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Block Item List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Block Item List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBlockItemListLinhaAction(BlockItemListLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>And Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>And Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAndExpressionLinhaAction(AndExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exclusive Or Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exclusive Or Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExclusiveOrExpressionLinhaAction(ExclusiveOrExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Inclusive Or Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inclusive Or Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInclusiveOrExpressionLinhaAction(InclusiveOrExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical And Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical And Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalAndExpressionLinhaAction(LogicalAndExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Or Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Or Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalOrExpressionLinhaAction(LogicalOrExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Conditional Expression Linha Acction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Conditional Expression Linha Acction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConditionalExpressionLinhaAcction(ConditionalExpressionLinhaAcction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expression Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expression Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpressionLinhaAction(ExpressionLinhaAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Init Decclarator List Linha Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Init Decclarator List Linha Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInitDecclaratorListLinhaAction(InitDecclaratorListLinhaAction object)
   {
     return null;
   }

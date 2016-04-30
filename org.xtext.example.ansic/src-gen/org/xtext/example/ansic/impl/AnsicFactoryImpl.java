@@ -66,6 +66,153 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
     switch (eClass.getClassifierID())
     {
       case AnsicPackage.DOMAIN_MODEL: return createDomainModel();
+      case AnsicPackage.TRANSLATION_UNIT: return createtranslation_unit();
+      case AnsicPackage.EXTERNAL_DECLARATION: return createexternal_declaration();
+      case AnsicPackage.DECLARATION_SPECIFIERS: return createdeclaration_specifiers();
+      case AnsicPackage.ALIGNMENT_SPECIFIER: return createalignment_specifier();
+      case AnsicPackage.TYPE_SPECIFIER: return createtype_specifier();
+      case AnsicPackage.ENUM_SPECIFIER: return createenum_specifier();
+      case AnsicPackage.ENUMERATOR_LIST: return createenumerator_list();
+      case AnsicPackage.ENUMERATOR_LIST_LINHA: return createenumerator_list_linha();
+      case AnsicPackage.ENUMERATOR: return createenumerator();
+      case AnsicPackage.ATOMIC_TYPE_SPECIFIER: return createatomic_type_specifier();
+      case AnsicPackage.STRUCT_OR_UNION_SPECIFIER: return createstruct_or_union_specifier();
+      case AnsicPackage.STRUCT_OR_UNION_SPECIFIER_COMPLEMENT: return createstruct_or_union_specifier_complement();
+      case AnsicPackage.STRUCT_DECLARATION_LIST: return createstruct_declaration_list();
+      case AnsicPackage.STRUCT_DECLARATION_LIST_LINHA: return createstruct_declaration_list_linha();
+      case AnsicPackage.STRUCT_DECLARATION: return createstruct_declaration();
+      case AnsicPackage.STRUCT_DECLARATOR_LIST: return createstruct_declarator_list();
+      case AnsicPackage.STRUCT_DECLARATOR_LIST_LINHA: return createstruct_declarator_list_linha();
+      case AnsicPackage.STRUCT_DECLARATOR: return createstruct_declarator();
+      case AnsicPackage.SPECIFIER_QUALIFIER_LIST: return createspecifier_qualifier_list();
+      case AnsicPackage.DECLARATION: return createdeclaration();
+      case AnsicPackage.FUNCTION_DEFINITION: return createfunction_definition();
+      case AnsicPackage.DECLARATION_LIST: return createdeclaration_list();
+      case AnsicPackage.DECLARATION_LIST_LINHA: return createdeclaration_list_linha();
+      case AnsicPackage.DECLARATOR: return createdeclarator();
+      case AnsicPackage.POINTER: return createpointer();
+      case AnsicPackage.TYPE_QUALIFIER_LIST: return createtype_qualifier_list();
+      case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA: return createtype_qualifier_list_linha();
+      case AnsicPackage.DIRECT_DECLARATOR: return createdirect_declarator();
+      case AnsicPackage.DIRECT_DECLARATOR_LINHA: return createdirect_declarator_linha();
+      case AnsicPackage.DIRECT_DECLARATOR_COMPLEMENTO: return createdirect_declarator_complemento();
+      case AnsicPackage.PARAMETER_TYPE_LIST: return createparameter_type_list();
+      case AnsicPackage.PARAMETER_LIST: return createparameter_list();
+      case AnsicPackage.PARAMETER_LIST_LINHA: return createparameter_list_linha();
+      case AnsicPackage.PARAMETER_DECLARATION: return createparameter_declaration();
+      case AnsicPackage.ABSTRACT_DECLARATOR: return createabstract_declarator();
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR: return createdirect_abstract_declarator();
+      case AnsicPackage.INITIALIZER: return createinitializer();
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR_LINHA: return createdirect_abstract_declarator_linha();
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT: return createdirect_abstract_declarator_complement();
+      case AnsicPackage.IDENTIFIER_LIST: return createidentifier_list();
+      case AnsicPackage.IDENTIFIER_LIST_LINHA: return createidentifier_list_linha();
+      case AnsicPackage.TRANSLATION_UNIT_LINHA: return createtranslation_unit_linha();
+      case AnsicPackage.PRIMARY_EXPRESSION: return createprimary_expression();
+      case AnsicPackage.ENUMERATION_CONSTANT: return createenumeration_constant();
+      case AnsicPackage.GENERIC_SELECTION: return creategeneric_selection();
+      case AnsicPackage.GENERIC_ASSOC_LIST: return creategeneric_assoc_list();
+      case AnsicPackage.GENERIC_ASSOC_LIST_LINHA: return creategeneric_assoc_list_linha();
+      case AnsicPackage.GENERIC_ASSOCIATION: return creategeneric_association();
+      case AnsicPackage.POSTFIX_EXPRESSION: return createpostfix_expression();
+      case AnsicPackage.POSTFIX_EXPRESSION_LINHA: return createpostfix_expression_linha();
+      case AnsicPackage.INITIALIZER_LIST: return createinitializer_list();
+      case AnsicPackage.INITIALIZER_LIST_LINHA: return createinitializer_list_linha();
+      case AnsicPackage.INITIALIZER_LIST_COMPLEMENT: return createinitializer_list_complement();
+      case AnsicPackage.DESIGNATION: return createdesignation();
+      case AnsicPackage.DESIGNATOR_LIST: return createdesignator_list();
+      case AnsicPackage.DESIGNATOR_LIST_LINHA: return createdesignator_list_linha();
+      case AnsicPackage.DESIGNATOR: return createdesignator();
+      case AnsicPackage.STATIC_ASSERT_DECLARATION: return createstatic_assert_declaration();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT: return createpostfix_expression_complement();
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST: return createargument_expression_list();
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA: return createargument_expression_list_linha();
+      case AnsicPackage.UNARY_EXPRESSION: return createunary_expression();
+      case AnsicPackage.CAST_EXPRESSION: return createcast_expression();
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION: return createmultiplicative_expression();
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA: return createmultiplicative_expression_linha();
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION_COMPLEMENT: return createmultiplicative_expression_complement();
+      case AnsicPackage.ADDITIVE_EXPRESSION: return createadditive_expression();
+      case AnsicPackage.ADDITIVE_EXPRESSION_LINHA: return createadditive_expression_linha();
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT: return createadditive_expression_complement();
+      case AnsicPackage.SHIFT_EXPRESSION: return createshift_expression();
+      case AnsicPackage.SHIFT_EXPRESSION_LINHA: return createshift_expression_linha();
+      case AnsicPackage.SHIFT_EXPRESSION_COMPLEMENT: return createshift_expression_complement();
+      case AnsicPackage.RELATIONAL_EXPRESSION: return createrelational_expression();
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA: return createrelational_expression_linha();
+      case AnsicPackage.RELATIONAL_EXPRESSION_COMPLEMENT: return createrelational_expression_complement();
+      case AnsicPackage.EQUALITY_EXPRESSION: return createequality_expression();
+      case AnsicPackage.EQUALITY_EXPRESSION_LINHA: return createequality_expression_linha();
+      case AnsicPackage.EQUALITY_EXPRESSION_COMPLEMENT: return createequality_expression_complement();
+      case AnsicPackage.STATEMENT: return createstatement();
+      case AnsicPackage.JUMP_STATEMENT: return createjump_statement();
+      case AnsicPackage.ITERATION_STATEMENT: return createiteration_statement();
+      case AnsicPackage.SELECTION_STATEMENT: return createselection_statement();
+      case AnsicPackage.LABELED_STATEMENT: return createlabeled_statement();
+      case AnsicPackage.COMPOUND_STATEMENT: return createcompound_statement();
+      case AnsicPackage.BLOCK_ITEM_LIST: return createblock_item_list();
+      case AnsicPackage.BLOCK_ITEM_LIST_LINHA: return createblock_item_list_linha();
+      case AnsicPackage.BLOCK_ITEM: return createblock_item();
+      case AnsicPackage.EXPRESSION_STATEMENT: return createexpression_statement();
+      case AnsicPackage.AND_EXPRESSION: return createand_expression();
+      case AnsicPackage.AND_EXPRESSION_LINHA: return createand_expression_linha();
+      case AnsicPackage.EXCLUSIVE_OR_EXPRESSION: return createexclusive_or_expression();
+      case AnsicPackage.EXCLUSIVE_OR_EXPRESSION_LINHA: return createexclusive_or_expression_linha();
+      case AnsicPackage.INCLUSIVE_OR_EXPRESSION: return createinclusive_or_expression();
+      case AnsicPackage.INCLUSIVE_OR_EXPRESSION_LINHA: return createinclusive_or_expression_linha();
+      case AnsicPackage.LOGICAL_AND_EXPRESSION: return createlogical_and_expression();
+      case AnsicPackage.LOGICAL_AND_EXPRESSION_LINHA: return createlogical_and_expression_linha();
+      case AnsicPackage.LOGICAL_OR_EXPRESSION: return createlogical_or_expression();
+      case AnsicPackage.LOGICAL_OR_EXPRESSION_LINHA: return createlogical_or_expression_linha();
+      case AnsicPackage.CONDITIONAL_EXPRESSION: return createconditional_expression();
+      case AnsicPackage.CONDITIONAL_EXPRESSION_LINHA: return createconditional_expression_linha();
+      case AnsicPackage.ASSIGNMENT_EXPRESSION: return createassignment_expression();
+      case AnsicPackage.TYPE_NAME: return createtype_name();
+      case AnsicPackage.EXPRESSION: return createexpression();
+      case AnsicPackage.EXPRESSION_LINHA: return createexpression_linha();
+      case AnsicPackage.CONSTANT_EXPRESSION: return createconstant_expression();
+      case AnsicPackage.INIT_DECLARATOR_LIST: return createinit_declarator_list();
+      case AnsicPackage.INIT_DECLARATOR_LIST_LINHA: return createinit_declarator_list_linha();
+      case AnsicPackage.INIT_DECLARATOR: return createinit_declarator();
+      case AnsicPackage.STRING_UFCG: return createstring_ufcg();
+      case AnsicPackage.CONSTANT: return createconstant();
+      case AnsicPackage.ENUMERATOR_LIST_LINHA_ACTION: return createEnumeratorListLinhaAction();
+      case AnsicPackage.STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION: return createStructOrUnionSpecifierComplementAction();
+      case AnsicPackage.STRUCT_DECLARATION_LIST_LINHA_ACTION: return createStructDeclarationListLinhaAction();
+      case AnsicPackage.STRUCT_DECLARATOR_LIST_LINHA_ACTION: return createStructDeclaratorListLinhaAction();
+      case AnsicPackage.DECLARATION_LIST_LINHA_ACTION: return createDeclarationListLinhaAction();
+      case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION: return createTypeQualifierListLinhaAtion();
+      case AnsicPackage.DIRECT_DECLARATOR_LINHA_ACTION: return createDirectDeclaratorLinhaAction();
+      case AnsicPackage.PARAMETER_LIST_LINHA_ACTION: return createParameterListLinhaAction();
+      case AnsicPackage.DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION: return createDirectAbstractDeclarratorLinhaAction();
+      case AnsicPackage.IDENTIFIER_LIST_LINHA_ACTION: return createIdentifierListLinhaAction();
+      case AnsicPackage.TRANLATION_UNIT_LINHA_ACTION: return createTranlationUnitLinhaAction();
+      case AnsicPackage.GENERIC_ASSOC_LIST_LINHA_ACTION: return createGenericAssocListLinhaAction();
+      case AnsicPackage.POSTFIX_EXPRESSION_LINHA_ACTION: return createPostfixExpressionLinhaAction();
+      case AnsicPackage.INITIALIZER_LIST_LINHA_ACTION: return createInitializerListLinhaAction();
+      case AnsicPackage.DESIGNATOR_LIST_LINHA_ACTION: return createDesignatorListLinhaAction();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION: return createPostfixExpressionComplementExpression();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY: return createPostfixExpressionComplementEmpty();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST: return createPostfixExpressionComplementArgList();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER: return createPostfixExpressionComplementIdentifier();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_POINTER: return createPostfixExpressionComplementPointer();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT: return createPostfixExpressionComplementIncrement();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT: return createPostfixExpressionComplementDecrement();
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION: return createArgumentExpressionListLinhaAction();
+      case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION: return createMultiplicativeExpressionLinhaAction();
+      case AnsicPackage.ADDITIVE_EXPRESSION_LINHA_ACTION: return createAdditiveExpressionLinhaAction();
+      case AnsicPackage.SHIFT_EXPRESSION_LINHA_ACTION: return createShiftExpressionLinhaAction();
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA_ACTION: return createRelationalExpressionLinhaAction();
+      case AnsicPackage.EQUALITY_EXPRESSION_LINHA_ACTION: return createEqualityExpressionLinhaAction();
+      case AnsicPackage.BLOCK_ITEM_LIST_LINHA_ACTION: return createBlockItemListLinhaAction();
+      case AnsicPackage.AND_EXPRESSION_LINHA_ACTION: return createAndExpressionLinhaAction();
+      case AnsicPackage.EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION: return createExclusiveOrExpressionLinhaAction();
+      case AnsicPackage.INCLUSIVE_OR_EXPRESSION_LINHA_ACTION: return createInclusiveOrExpressionLinhaAction();
+      case AnsicPackage.LOGICAL_AND_EXPRESSION_LINHA_ACTION: return createLogicalAndExpressionLinhaAction();
+      case AnsicPackage.LOGICAL_OR_EXPRESSION_LINHA_ACTION: return createLogicalOrExpressionLinhaAction();
+      case AnsicPackage.CONDITIONAL_EXPRESSION_LINHA_ACCTION: return createConditionalExpressionLinhaAcction();
+      case AnsicPackage.EXPRESSION_LINHA_ACTION: return createExpressionLinhaAction();
+      case AnsicPackage.INIT_DECCLARATOR_LIST_LINHA_ACTION: return createInitDecclaratorListLinhaAction();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -80,6 +227,1623 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
   {
     DomainModelImpl domainModel = new DomainModelImpl();
     return domainModel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public translation_unit createtranslation_unit()
+  {
+    translation_unitImpl translation_unit = new translation_unitImpl();
+    return translation_unit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public external_declaration createexternal_declaration()
+  {
+    external_declarationImpl external_declaration = new external_declarationImpl();
+    return external_declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public declaration_specifiers createdeclaration_specifiers()
+  {
+    declaration_specifiersImpl declaration_specifiers = new declaration_specifiersImpl();
+    return declaration_specifiers;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public alignment_specifier createalignment_specifier()
+  {
+    alignment_specifierImpl alignment_specifier = new alignment_specifierImpl();
+    return alignment_specifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public type_specifier createtype_specifier()
+  {
+    type_specifierImpl type_specifier = new type_specifierImpl();
+    return type_specifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public enum_specifier createenum_specifier()
+  {
+    enum_specifierImpl enum_specifier = new enum_specifierImpl();
+    return enum_specifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public enumerator_list createenumerator_list()
+  {
+    enumerator_listImpl enumerator_list = new enumerator_listImpl();
+    return enumerator_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public enumerator_list_linha createenumerator_list_linha()
+  {
+    enumerator_list_linhaImpl enumerator_list_linha = new enumerator_list_linhaImpl();
+    return enumerator_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public enumerator createenumerator()
+  {
+    enumeratorImpl enumerator = new enumeratorImpl();
+    return enumerator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public atomic_type_specifier createatomic_type_specifier()
+  {
+    atomic_type_specifierImpl atomic_type_specifier = new atomic_type_specifierImpl();
+    return atomic_type_specifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_or_union_specifier createstruct_or_union_specifier()
+  {
+    struct_or_union_specifierImpl struct_or_union_specifier = new struct_or_union_specifierImpl();
+    return struct_or_union_specifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_or_union_specifier_complement createstruct_or_union_specifier_complement()
+  {
+    struct_or_union_specifier_complementImpl struct_or_union_specifier_complement = new struct_or_union_specifier_complementImpl();
+    return struct_or_union_specifier_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_declaration_list createstruct_declaration_list()
+  {
+    struct_declaration_listImpl struct_declaration_list = new struct_declaration_listImpl();
+    return struct_declaration_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_declaration_list_linha createstruct_declaration_list_linha()
+  {
+    struct_declaration_list_linhaImpl struct_declaration_list_linha = new struct_declaration_list_linhaImpl();
+    return struct_declaration_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_declaration createstruct_declaration()
+  {
+    struct_declarationImpl struct_declaration = new struct_declarationImpl();
+    return struct_declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_declarator_list createstruct_declarator_list()
+  {
+    struct_declarator_listImpl struct_declarator_list = new struct_declarator_listImpl();
+    return struct_declarator_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_declarator_list_linha createstruct_declarator_list_linha()
+  {
+    struct_declarator_list_linhaImpl struct_declarator_list_linha = new struct_declarator_list_linhaImpl();
+    return struct_declarator_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public struct_declarator createstruct_declarator()
+  {
+    struct_declaratorImpl struct_declarator = new struct_declaratorImpl();
+    return struct_declarator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public specifier_qualifier_list createspecifier_qualifier_list()
+  {
+    specifier_qualifier_listImpl specifier_qualifier_list = new specifier_qualifier_listImpl();
+    return specifier_qualifier_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public declaration createdeclaration()
+  {
+    declarationImpl declaration = new declarationImpl();
+    return declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public function_definition createfunction_definition()
+  {
+    function_definitionImpl function_definition = new function_definitionImpl();
+    return function_definition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public declaration_list createdeclaration_list()
+  {
+    declaration_listImpl declaration_list = new declaration_listImpl();
+    return declaration_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public declaration_list_linha createdeclaration_list_linha()
+  {
+    declaration_list_linhaImpl declaration_list_linha = new declaration_list_linhaImpl();
+    return declaration_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public declarator createdeclarator()
+  {
+    declaratorImpl declarator = new declaratorImpl();
+    return declarator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public pointer createpointer()
+  {
+    pointerImpl pointer = new pointerImpl();
+    return pointer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public type_qualifier_list createtype_qualifier_list()
+  {
+    type_qualifier_listImpl type_qualifier_list = new type_qualifier_listImpl();
+    return type_qualifier_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public type_qualifier_list_linha createtype_qualifier_list_linha()
+  {
+    type_qualifier_list_linhaImpl type_qualifier_list_linha = new type_qualifier_list_linhaImpl();
+    return type_qualifier_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public direct_declarator createdirect_declarator()
+  {
+    direct_declaratorImpl direct_declarator = new direct_declaratorImpl();
+    return direct_declarator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public direct_declarator_linha createdirect_declarator_linha()
+  {
+    direct_declarator_linhaImpl direct_declarator_linha = new direct_declarator_linhaImpl();
+    return direct_declarator_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public direct_declarator_complemento createdirect_declarator_complemento()
+  {
+    direct_declarator_complementoImpl direct_declarator_complemento = new direct_declarator_complementoImpl();
+    return direct_declarator_complemento;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public parameter_type_list createparameter_type_list()
+  {
+    parameter_type_listImpl parameter_type_list = new parameter_type_listImpl();
+    return parameter_type_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public parameter_list createparameter_list()
+  {
+    parameter_listImpl parameter_list = new parameter_listImpl();
+    return parameter_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public parameter_list_linha createparameter_list_linha()
+  {
+    parameter_list_linhaImpl parameter_list_linha = new parameter_list_linhaImpl();
+    return parameter_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public parameter_declaration createparameter_declaration()
+  {
+    parameter_declarationImpl parameter_declaration = new parameter_declarationImpl();
+    return parameter_declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public abstract_declarator createabstract_declarator()
+  {
+    abstract_declaratorImpl abstract_declarator = new abstract_declaratorImpl();
+    return abstract_declarator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public direct_abstract_declarator createdirect_abstract_declarator()
+  {
+    direct_abstract_declaratorImpl direct_abstract_declarator = new direct_abstract_declaratorImpl();
+    return direct_abstract_declarator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public initializer createinitializer()
+  {
+    initializerImpl initializer = new initializerImpl();
+    return initializer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public direct_abstract_declarator_linha createdirect_abstract_declarator_linha()
+  {
+    direct_abstract_declarator_linhaImpl direct_abstract_declarator_linha = new direct_abstract_declarator_linhaImpl();
+    return direct_abstract_declarator_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public direct_abstract_declarator_complement createdirect_abstract_declarator_complement()
+  {
+    direct_abstract_declarator_complementImpl direct_abstract_declarator_complement = new direct_abstract_declarator_complementImpl();
+    return direct_abstract_declarator_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public identifier_list createidentifier_list()
+  {
+    identifier_listImpl identifier_list = new identifier_listImpl();
+    return identifier_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public identifier_list_linha createidentifier_list_linha()
+  {
+    identifier_list_linhaImpl identifier_list_linha = new identifier_list_linhaImpl();
+    return identifier_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public translation_unit_linha createtranslation_unit_linha()
+  {
+    translation_unit_linhaImpl translation_unit_linha = new translation_unit_linhaImpl();
+    return translation_unit_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public primary_expression createprimary_expression()
+  {
+    primary_expressionImpl primary_expression = new primary_expressionImpl();
+    return primary_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public enumeration_constant createenumeration_constant()
+  {
+    enumeration_constantImpl enumeration_constant = new enumeration_constantImpl();
+    return enumeration_constant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public generic_selection creategeneric_selection()
+  {
+    generic_selectionImpl generic_selection = new generic_selectionImpl();
+    return generic_selection;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public generic_assoc_list creategeneric_assoc_list()
+  {
+    generic_assoc_listImpl generic_assoc_list = new generic_assoc_listImpl();
+    return generic_assoc_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public generic_assoc_list_linha creategeneric_assoc_list_linha()
+  {
+    generic_assoc_list_linhaImpl generic_assoc_list_linha = new generic_assoc_list_linhaImpl();
+    return generic_assoc_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public generic_association creategeneric_association()
+  {
+    generic_associationImpl generic_association = new generic_associationImpl();
+    return generic_association;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public postfix_expression createpostfix_expression()
+  {
+    postfix_expressionImpl postfix_expression = new postfix_expressionImpl();
+    return postfix_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public postfix_expression_linha createpostfix_expression_linha()
+  {
+    postfix_expression_linhaImpl postfix_expression_linha = new postfix_expression_linhaImpl();
+    return postfix_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public initializer_list createinitializer_list()
+  {
+    initializer_listImpl initializer_list = new initializer_listImpl();
+    return initializer_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public initializer_list_linha createinitializer_list_linha()
+  {
+    initializer_list_linhaImpl initializer_list_linha = new initializer_list_linhaImpl();
+    return initializer_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public initializer_list_complement createinitializer_list_complement()
+  {
+    initializer_list_complementImpl initializer_list_complement = new initializer_list_complementImpl();
+    return initializer_list_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public designation createdesignation()
+  {
+    designationImpl designation = new designationImpl();
+    return designation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public designator_list createdesignator_list()
+  {
+    designator_listImpl designator_list = new designator_listImpl();
+    return designator_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public designator_list_linha createdesignator_list_linha()
+  {
+    designator_list_linhaImpl designator_list_linha = new designator_list_linhaImpl();
+    return designator_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public designator createdesignator()
+  {
+    designatorImpl designator = new designatorImpl();
+    return designator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public static_assert_declaration createstatic_assert_declaration()
+  {
+    static_assert_declarationImpl static_assert_declaration = new static_assert_declarationImpl();
+    return static_assert_declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public postfix_expression_complement createpostfix_expression_complement()
+  {
+    postfix_expression_complementImpl postfix_expression_complement = new postfix_expression_complementImpl();
+    return postfix_expression_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public argument_expression_list createargument_expression_list()
+  {
+    argument_expression_listImpl argument_expression_list = new argument_expression_listImpl();
+    return argument_expression_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public argument_expression_list_linha createargument_expression_list_linha()
+  {
+    argument_expression_list_linhaImpl argument_expression_list_linha = new argument_expression_list_linhaImpl();
+    return argument_expression_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public unary_expression createunary_expression()
+  {
+    unary_expressionImpl unary_expression = new unary_expressionImpl();
+    return unary_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public cast_expression createcast_expression()
+  {
+    cast_expressionImpl cast_expression = new cast_expressionImpl();
+    return cast_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public multiplicative_expression createmultiplicative_expression()
+  {
+    multiplicative_expressionImpl multiplicative_expression = new multiplicative_expressionImpl();
+    return multiplicative_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public multiplicative_expression_linha createmultiplicative_expression_linha()
+  {
+    multiplicative_expression_linhaImpl multiplicative_expression_linha = new multiplicative_expression_linhaImpl();
+    return multiplicative_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public multiplicative_expression_complement createmultiplicative_expression_complement()
+  {
+    multiplicative_expression_complementImpl multiplicative_expression_complement = new multiplicative_expression_complementImpl();
+    return multiplicative_expression_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public additive_expression createadditive_expression()
+  {
+    additive_expressionImpl additive_expression = new additive_expressionImpl();
+    return additive_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public additive_expression_linha createadditive_expression_linha()
+  {
+    additive_expression_linhaImpl additive_expression_linha = new additive_expression_linhaImpl();
+    return additive_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public additive_expression_complement createadditive_expression_complement()
+  {
+    additive_expression_complementImpl additive_expression_complement = new additive_expression_complementImpl();
+    return additive_expression_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public shift_expression createshift_expression()
+  {
+    shift_expressionImpl shift_expression = new shift_expressionImpl();
+    return shift_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public shift_expression_linha createshift_expression_linha()
+  {
+    shift_expression_linhaImpl shift_expression_linha = new shift_expression_linhaImpl();
+    return shift_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public shift_expression_complement createshift_expression_complement()
+  {
+    shift_expression_complementImpl shift_expression_complement = new shift_expression_complementImpl();
+    return shift_expression_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public relational_expression createrelational_expression()
+  {
+    relational_expressionImpl relational_expression = new relational_expressionImpl();
+    return relational_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public relational_expression_linha createrelational_expression_linha()
+  {
+    relational_expression_linhaImpl relational_expression_linha = new relational_expression_linhaImpl();
+    return relational_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public relational_expression_complement createrelational_expression_complement()
+  {
+    relational_expression_complementImpl relational_expression_complement = new relational_expression_complementImpl();
+    return relational_expression_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public equality_expression createequality_expression()
+  {
+    equality_expressionImpl equality_expression = new equality_expressionImpl();
+    return equality_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public equality_expression_linha createequality_expression_linha()
+  {
+    equality_expression_linhaImpl equality_expression_linha = new equality_expression_linhaImpl();
+    return equality_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public equality_expression_complement createequality_expression_complement()
+  {
+    equality_expression_complementImpl equality_expression_complement = new equality_expression_complementImpl();
+    return equality_expression_complement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public statement createstatement()
+  {
+    statementImpl statement = new statementImpl();
+    return statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public jump_statement createjump_statement()
+  {
+    jump_statementImpl jump_statement = new jump_statementImpl();
+    return jump_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public iteration_statement createiteration_statement()
+  {
+    iteration_statementImpl iteration_statement = new iteration_statementImpl();
+    return iteration_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public selection_statement createselection_statement()
+  {
+    selection_statementImpl selection_statement = new selection_statementImpl();
+    return selection_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public labeled_statement createlabeled_statement()
+  {
+    labeled_statementImpl labeled_statement = new labeled_statementImpl();
+    return labeled_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public compound_statement createcompound_statement()
+  {
+    compound_statementImpl compound_statement = new compound_statementImpl();
+    return compound_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public block_item_list createblock_item_list()
+  {
+    block_item_listImpl block_item_list = new block_item_listImpl();
+    return block_item_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public block_item_list_linha createblock_item_list_linha()
+  {
+    block_item_list_linhaImpl block_item_list_linha = new block_item_list_linhaImpl();
+    return block_item_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public block_item createblock_item()
+  {
+    block_itemImpl block_item = new block_itemImpl();
+    return block_item;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public expression_statement createexpression_statement()
+  {
+    expression_statementImpl expression_statement = new expression_statementImpl();
+    return expression_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public and_expression createand_expression()
+  {
+    and_expressionImpl and_expression = new and_expressionImpl();
+    return and_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public and_expression_linha createand_expression_linha()
+  {
+    and_expression_linhaImpl and_expression_linha = new and_expression_linhaImpl();
+    return and_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public exclusive_or_expression createexclusive_or_expression()
+  {
+    exclusive_or_expressionImpl exclusive_or_expression = new exclusive_or_expressionImpl();
+    return exclusive_or_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public exclusive_or_expression_linha createexclusive_or_expression_linha()
+  {
+    exclusive_or_expression_linhaImpl exclusive_or_expression_linha = new exclusive_or_expression_linhaImpl();
+    return exclusive_or_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public inclusive_or_expression createinclusive_or_expression()
+  {
+    inclusive_or_expressionImpl inclusive_or_expression = new inclusive_or_expressionImpl();
+    return inclusive_or_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public inclusive_or_expression_linha createinclusive_or_expression_linha()
+  {
+    inclusive_or_expression_linhaImpl inclusive_or_expression_linha = new inclusive_or_expression_linhaImpl();
+    return inclusive_or_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public logical_and_expression createlogical_and_expression()
+  {
+    logical_and_expressionImpl logical_and_expression = new logical_and_expressionImpl();
+    return logical_and_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public logical_and_expression_linha createlogical_and_expression_linha()
+  {
+    logical_and_expression_linhaImpl logical_and_expression_linha = new logical_and_expression_linhaImpl();
+    return logical_and_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public logical_or_expression createlogical_or_expression()
+  {
+    logical_or_expressionImpl logical_or_expression = new logical_or_expressionImpl();
+    return logical_or_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public logical_or_expression_linha createlogical_or_expression_linha()
+  {
+    logical_or_expression_linhaImpl logical_or_expression_linha = new logical_or_expression_linhaImpl();
+    return logical_or_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public conditional_expression createconditional_expression()
+  {
+    conditional_expressionImpl conditional_expression = new conditional_expressionImpl();
+    return conditional_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public conditional_expression_linha createconditional_expression_linha()
+  {
+    conditional_expression_linhaImpl conditional_expression_linha = new conditional_expression_linhaImpl();
+    return conditional_expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public assignment_expression createassignment_expression()
+  {
+    assignment_expressionImpl assignment_expression = new assignment_expressionImpl();
+    return assignment_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public type_name createtype_name()
+  {
+    type_nameImpl type_name = new type_nameImpl();
+    return type_name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public expression createexpression()
+  {
+    expressionImpl expression = new expressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public expression_linha createexpression_linha()
+  {
+    expression_linhaImpl expression_linha = new expression_linhaImpl();
+    return expression_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public constant_expression createconstant_expression()
+  {
+    constant_expressionImpl constant_expression = new constant_expressionImpl();
+    return constant_expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public init_declarator_list createinit_declarator_list()
+  {
+    init_declarator_listImpl init_declarator_list = new init_declarator_listImpl();
+    return init_declarator_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public init_declarator_list_linha createinit_declarator_list_linha()
+  {
+    init_declarator_list_linhaImpl init_declarator_list_linha = new init_declarator_list_linhaImpl();
+    return init_declarator_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public init_declarator createinit_declarator()
+  {
+    init_declaratorImpl init_declarator = new init_declaratorImpl();
+    return init_declarator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public string_ufcg createstring_ufcg()
+  {
+    string_ufcgImpl string_ufcg = new string_ufcgImpl();
+    return string_ufcg;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public constant createconstant()
+  {
+    constantImpl constant = new constantImpl();
+    return constant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EnumeratorListLinhaAction createEnumeratorListLinhaAction()
+  {
+    EnumeratorListLinhaActionImpl enumeratorListLinhaAction = new EnumeratorListLinhaActionImpl();
+    return enumeratorListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StructOrUnionSpecifierComplementAction createStructOrUnionSpecifierComplementAction()
+  {
+    StructOrUnionSpecifierComplementActionImpl structOrUnionSpecifierComplementAction = new StructOrUnionSpecifierComplementActionImpl();
+    return structOrUnionSpecifierComplementAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StructDeclarationListLinhaAction createStructDeclarationListLinhaAction()
+  {
+    StructDeclarationListLinhaActionImpl structDeclarationListLinhaAction = new StructDeclarationListLinhaActionImpl();
+    return structDeclarationListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StructDeclaratorListLinhaAction createStructDeclaratorListLinhaAction()
+  {
+    StructDeclaratorListLinhaActionImpl structDeclaratorListLinhaAction = new StructDeclaratorListLinhaActionImpl();
+    return structDeclaratorListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeclarationListLinhaAction createDeclarationListLinhaAction()
+  {
+    DeclarationListLinhaActionImpl declarationListLinhaAction = new DeclarationListLinhaActionImpl();
+    return declarationListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeQualifierListLinhaAtion createTypeQualifierListLinhaAtion()
+  {
+    TypeQualifierListLinhaAtionImpl typeQualifierListLinhaAtion = new TypeQualifierListLinhaAtionImpl();
+    return typeQualifierListLinhaAtion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DirectDeclaratorLinhaAction createDirectDeclaratorLinhaAction()
+  {
+    DirectDeclaratorLinhaActionImpl directDeclaratorLinhaAction = new DirectDeclaratorLinhaActionImpl();
+    return directDeclaratorLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ParameterListLinhaAction createParameterListLinhaAction()
+  {
+    ParameterListLinhaActionImpl parameterListLinhaAction = new ParameterListLinhaActionImpl();
+    return parameterListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DirectAbstractDeclarratorLinhaAction createDirectAbstractDeclarratorLinhaAction()
+  {
+    DirectAbstractDeclarratorLinhaActionImpl directAbstractDeclarratorLinhaAction = new DirectAbstractDeclarratorLinhaActionImpl();
+    return directAbstractDeclarratorLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IdentifierListLinhaAction createIdentifierListLinhaAction()
+  {
+    IdentifierListLinhaActionImpl identifierListLinhaAction = new IdentifierListLinhaActionImpl();
+    return identifierListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TranlationUnitLinhaAction createTranlationUnitLinhaAction()
+  {
+    TranlationUnitLinhaActionImpl tranlationUnitLinhaAction = new TranlationUnitLinhaActionImpl();
+    return tranlationUnitLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GenericAssocListLinhaAction createGenericAssocListLinhaAction()
+  {
+    GenericAssocListLinhaActionImpl genericAssocListLinhaAction = new GenericAssocListLinhaActionImpl();
+    return genericAssocListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionLinhaAction createPostfixExpressionLinhaAction()
+  {
+    PostfixExpressionLinhaActionImpl postfixExpressionLinhaAction = new PostfixExpressionLinhaActionImpl();
+    return postfixExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InitializerListLinhaAction createInitializerListLinhaAction()
+  {
+    InitializerListLinhaActionImpl initializerListLinhaAction = new InitializerListLinhaActionImpl();
+    return initializerListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DesignatorListLinhaAction createDesignatorListLinhaAction()
+  {
+    DesignatorListLinhaActionImpl designatorListLinhaAction = new DesignatorListLinhaActionImpl();
+    return designatorListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementExpression createPostfixExpressionComplementExpression()
+  {
+    PostfixExpressionComplementExpressionImpl postfixExpressionComplementExpression = new PostfixExpressionComplementExpressionImpl();
+    return postfixExpressionComplementExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementEmpty createPostfixExpressionComplementEmpty()
+  {
+    PostfixExpressionComplementEmptyImpl postfixExpressionComplementEmpty = new PostfixExpressionComplementEmptyImpl();
+    return postfixExpressionComplementEmpty;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementArgList createPostfixExpressionComplementArgList()
+  {
+    PostfixExpressionComplementArgListImpl postfixExpressionComplementArgList = new PostfixExpressionComplementArgListImpl();
+    return postfixExpressionComplementArgList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementIdentifier createPostfixExpressionComplementIdentifier()
+  {
+    PostfixExpressionComplementIdentifierImpl postfixExpressionComplementIdentifier = new PostfixExpressionComplementIdentifierImpl();
+    return postfixExpressionComplementIdentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementPointer createPostfixExpressionComplementPointer()
+  {
+    PostfixExpressionComplementPointerImpl postfixExpressionComplementPointer = new PostfixExpressionComplementPointerImpl();
+    return postfixExpressionComplementPointer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementIncrement createPostfixExpressionComplementIncrement()
+  {
+    PostfixExpressionComplementIncrementImpl postfixExpressionComplementIncrement = new PostfixExpressionComplementIncrementImpl();
+    return postfixExpressionComplementIncrement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PostfixExpressionComplementDecrement createPostfixExpressionComplementDecrement()
+  {
+    PostfixExpressionComplementDecrementImpl postfixExpressionComplementDecrement = new PostfixExpressionComplementDecrementImpl();
+    return postfixExpressionComplementDecrement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ArgumentExpressionListLinhaAction createArgumentExpressionListLinhaAction()
+  {
+    ArgumentExpressionListLinhaActionImpl argumentExpressionListLinhaAction = new ArgumentExpressionListLinhaActionImpl();
+    return argumentExpressionListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MultiplicativeExpressionLinhaAction createMultiplicativeExpressionLinhaAction()
+  {
+    MultiplicativeExpressionLinhaActionImpl multiplicativeExpressionLinhaAction = new MultiplicativeExpressionLinhaActionImpl();
+    return multiplicativeExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AdditiveExpressionLinhaAction createAdditiveExpressionLinhaAction()
+  {
+    AdditiveExpressionLinhaActionImpl additiveExpressionLinhaAction = new AdditiveExpressionLinhaActionImpl();
+    return additiveExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ShiftExpressionLinhaAction createShiftExpressionLinhaAction()
+  {
+    ShiftExpressionLinhaActionImpl shiftExpressionLinhaAction = new ShiftExpressionLinhaActionImpl();
+    return shiftExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RelationalExpressionLinhaAction createRelationalExpressionLinhaAction()
+  {
+    RelationalExpressionLinhaActionImpl relationalExpressionLinhaAction = new RelationalExpressionLinhaActionImpl();
+    return relationalExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EqualityExpressionLinhaAction createEqualityExpressionLinhaAction()
+  {
+    EqualityExpressionLinhaActionImpl equalityExpressionLinhaAction = new EqualityExpressionLinhaActionImpl();
+    return equalityExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BlockItemListLinhaAction createBlockItemListLinhaAction()
+  {
+    BlockItemListLinhaActionImpl blockItemListLinhaAction = new BlockItemListLinhaActionImpl();
+    return blockItemListLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AndExpressionLinhaAction createAndExpressionLinhaAction()
+  {
+    AndExpressionLinhaActionImpl andExpressionLinhaAction = new AndExpressionLinhaActionImpl();
+    return andExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExclusiveOrExpressionLinhaAction createExclusiveOrExpressionLinhaAction()
+  {
+    ExclusiveOrExpressionLinhaActionImpl exclusiveOrExpressionLinhaAction = new ExclusiveOrExpressionLinhaActionImpl();
+    return exclusiveOrExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InclusiveOrExpressionLinhaAction createInclusiveOrExpressionLinhaAction()
+  {
+    InclusiveOrExpressionLinhaActionImpl inclusiveOrExpressionLinhaAction = new InclusiveOrExpressionLinhaActionImpl();
+    return inclusiveOrExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalAndExpressionLinhaAction createLogicalAndExpressionLinhaAction()
+  {
+    LogicalAndExpressionLinhaActionImpl logicalAndExpressionLinhaAction = new LogicalAndExpressionLinhaActionImpl();
+    return logicalAndExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalOrExpressionLinhaAction createLogicalOrExpressionLinhaAction()
+  {
+    LogicalOrExpressionLinhaActionImpl logicalOrExpressionLinhaAction = new LogicalOrExpressionLinhaActionImpl();
+    return logicalOrExpressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConditionalExpressionLinhaAcction createConditionalExpressionLinhaAcction()
+  {
+    ConditionalExpressionLinhaAcctionImpl conditionalExpressionLinhaAcction = new ConditionalExpressionLinhaAcctionImpl();
+    return conditionalExpressionLinhaAcction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExpressionLinhaAction createExpressionLinhaAction()
+  {
+    ExpressionLinhaActionImpl expressionLinhaAction = new ExpressionLinhaActionImpl();
+    return expressionLinhaAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InitDecclaratorListLinhaAction createInitDecclaratorListLinhaAction()
+  {
+    InitDecclaratorListLinhaActionImpl initDecclaratorListLinhaAction = new InitDecclaratorListLinhaActionImpl();
+    return initDecclaratorListLinhaAction;
   }
 
   /**

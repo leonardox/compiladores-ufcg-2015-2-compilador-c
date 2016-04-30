@@ -6,12 +6,160 @@ package org.xtext.example.ansic.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.example.ansic.AdditiveExpressionLinhaAction;
+import org.xtext.example.ansic.AndExpressionLinhaAction;
 import org.xtext.example.ansic.AnsicFactory;
 import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.ArgumentExpressionListLinhaAction;
+import org.xtext.example.ansic.BlockItemListLinhaAction;
+import org.xtext.example.ansic.ConditionalExpressionLinhaAcction;
+import org.xtext.example.ansic.DeclarationListLinhaAction;
+import org.xtext.example.ansic.DesignatorListLinhaAction;
+import org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction;
+import org.xtext.example.ansic.DirectDeclaratorLinhaAction;
 import org.xtext.example.ansic.DomainModel;
+import org.xtext.example.ansic.EnumeratorListLinhaAction;
+import org.xtext.example.ansic.EqualityExpressionLinhaAction;
+import org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction;
+import org.xtext.example.ansic.ExpressionLinhaAction;
+import org.xtext.example.ansic.GenericAssocListLinhaAction;
+import org.xtext.example.ansic.IdentifierListLinhaAction;
+import org.xtext.example.ansic.InclusiveOrExpressionLinhaAction;
+import org.xtext.example.ansic.InitDecclaratorListLinhaAction;
+import org.xtext.example.ansic.InitializerListLinhaAction;
+import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
+import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
+import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
+import org.xtext.example.ansic.ParameterListLinhaAction;
+import org.xtext.example.ansic.PostfixExpressionComplementArgList;
+import org.xtext.example.ansic.PostfixExpressionComplementDecrement;
+import org.xtext.example.ansic.PostfixExpressionComplementEmpty;
+import org.xtext.example.ansic.PostfixExpressionComplementExpression;
+import org.xtext.example.ansic.PostfixExpressionComplementIdentifier;
+import org.xtext.example.ansic.PostfixExpressionComplementIncrement;
+import org.xtext.example.ansic.PostfixExpressionComplementPointer;
+import org.xtext.example.ansic.PostfixExpressionLinhaAction;
+import org.xtext.example.ansic.RelationalExpressionLinhaAction;
+import org.xtext.example.ansic.ShiftExpressionLinhaAction;
+import org.xtext.example.ansic.StructDeclarationListLinhaAction;
+import org.xtext.example.ansic.StructDeclaratorListLinhaAction;
+import org.xtext.example.ansic.StructOrUnionSpecifierComplementAction;
+import org.xtext.example.ansic.TranlationUnitLinhaAction;
+import org.xtext.example.ansic.TypeQualifierListLinhaAtion;
+import org.xtext.example.ansic.abstract_declarator;
+import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.additive_expression_complement;
+import org.xtext.example.ansic.additive_expression_linha;
+import org.xtext.example.ansic.alignment_specifier;
+import org.xtext.example.ansic.and_expression;
+import org.xtext.example.ansic.and_expression_linha;
+import org.xtext.example.ansic.argument_expression_list;
+import org.xtext.example.ansic.argument_expression_list_linha;
+import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.atomic_type_specifier;
+import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.block_item_list;
+import org.xtext.example.ansic.block_item_list_linha;
+import org.xtext.example.ansic.cast_expression;
+import org.xtext.example.ansic.compound_statement;
+import org.xtext.example.ansic.conditional_expression;
+import org.xtext.example.ansic.conditional_expression_linha;
+import org.xtext.example.ansic.constant;
+import org.xtext.example.ansic.constant_expression;
+import org.xtext.example.ansic.declaration;
+import org.xtext.example.ansic.declaration_list;
+import org.xtext.example.ansic.declaration_list_linha;
+import org.xtext.example.ansic.declaration_specifiers;
+import org.xtext.example.ansic.declarator;
+import org.xtext.example.ansic.designation;
+import org.xtext.example.ansic.designator;
+import org.xtext.example.ansic.designator_list;
+import org.xtext.example.ansic.designator_list_linha;
+import org.xtext.example.ansic.direct_abstract_declarator;
+import org.xtext.example.ansic.direct_abstract_declarator_complement;
+import org.xtext.example.ansic.direct_abstract_declarator_linha;
+import org.xtext.example.ansic.direct_declarator;
+import org.xtext.example.ansic.direct_declarator_complemento;
+import org.xtext.example.ansic.direct_declarator_linha;
+import org.xtext.example.ansic.enum_specifier;
+import org.xtext.example.ansic.enumeration_constant;
+import org.xtext.example.ansic.enumerator;
+import org.xtext.example.ansic.enumerator_list;
+import org.xtext.example.ansic.enumerator_list_linha;
+import org.xtext.example.ansic.equality_expression;
+import org.xtext.example.ansic.equality_expression_complement;
+import org.xtext.example.ansic.equality_expression_linha;
+import org.xtext.example.ansic.exclusive_or_expression;
+import org.xtext.example.ansic.exclusive_or_expression_linha;
+import org.xtext.example.ansic.expression;
+import org.xtext.example.ansic.expression_linha;
+import org.xtext.example.ansic.expression_statement;
+import org.xtext.example.ansic.external_declaration;
+import org.xtext.example.ansic.function_definition;
+import org.xtext.example.ansic.generic_assoc_list;
+import org.xtext.example.ansic.generic_assoc_list_linha;
+import org.xtext.example.ansic.generic_association;
+import org.xtext.example.ansic.generic_selection;
+import org.xtext.example.ansic.identifier_list;
+import org.xtext.example.ansic.identifier_list_linha;
+import org.xtext.example.ansic.inclusive_or_expression;
+import org.xtext.example.ansic.inclusive_or_expression_linha;
+import org.xtext.example.ansic.init_declarator;
+import org.xtext.example.ansic.init_declarator_list;
+import org.xtext.example.ansic.init_declarator_list_linha;
+import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.initializer_list;
+import org.xtext.example.ansic.initializer_list_complement;
+import org.xtext.example.ansic.initializer_list_linha;
+import org.xtext.example.ansic.iteration_statement;
+import org.xtext.example.ansic.jump_statement;
+import org.xtext.example.ansic.labeled_statement;
+import org.xtext.example.ansic.logical_and_expression;
+import org.xtext.example.ansic.logical_and_expression_linha;
+import org.xtext.example.ansic.logical_or_expression;
+import org.xtext.example.ansic.logical_or_expression_linha;
+import org.xtext.example.ansic.multiplicative_expression;
+import org.xtext.example.ansic.multiplicative_expression_complement;
+import org.xtext.example.ansic.multiplicative_expression_linha;
+import org.xtext.example.ansic.parameter_declaration;
+import org.xtext.example.ansic.parameter_list;
+import org.xtext.example.ansic.parameter_list_linha;
+import org.xtext.example.ansic.parameter_type_list;
+import org.xtext.example.ansic.pointer;
+import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.postfix_expression_complement;
+import org.xtext.example.ansic.postfix_expression_linha;
+import org.xtext.example.ansic.primary_expression;
+import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.relational_expression_complement;
+import org.xtext.example.ansic.relational_expression_linha;
+import org.xtext.example.ansic.selection_statement;
+import org.xtext.example.ansic.shift_expression;
+import org.xtext.example.ansic.shift_expression_complement;
+import org.xtext.example.ansic.shift_expression_linha;
+import org.xtext.example.ansic.specifier_qualifier_list;
+import org.xtext.example.ansic.statement;
+import org.xtext.example.ansic.static_assert_declaration;
+import org.xtext.example.ansic.string_ufcg;
+import org.xtext.example.ansic.struct_declaration;
+import org.xtext.example.ansic.struct_declaration_list;
+import org.xtext.example.ansic.struct_declaration_list_linha;
+import org.xtext.example.ansic.struct_declarator;
+import org.xtext.example.ansic.struct_declarator_list;
+import org.xtext.example.ansic.struct_declarator_list_linha;
+import org.xtext.example.ansic.struct_or_union_specifier;
+import org.xtext.example.ansic.struct_or_union_specifier_complement;
+import org.xtext.example.ansic.translation_unit;
+import org.xtext.example.ansic.translation_unit_linha;
+import org.xtext.example.ansic.type_name;
+import org.xtext.example.ansic.type_qualifier_list;
+import org.xtext.example.ansic.type_qualifier_list_linha;
+import org.xtext.example.ansic.type_specifier;
+import org.xtext.example.ansic.unary_expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +175,1035 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * @generated
    */
   private EClass domainModelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass translation_unitEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass external_declarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declaration_specifiersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass alignment_specifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass type_specifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enum_specifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumerator_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumerator_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumeratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atomic_type_specifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_or_union_specifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_or_union_specifier_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_declaration_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_declaration_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_declarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_declarator_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_declarator_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass struct_declaratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass specifier_qualifier_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass function_definitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declaration_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declaration_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declaratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pointerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass type_qualifier_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass type_qualifier_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass direct_declaratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass direct_declarator_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass direct_declarator_complementoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parameter_type_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parameter_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parameter_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parameter_declarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass abstract_declaratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass direct_abstract_declaratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initializerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass direct_abstract_declarator_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass direct_abstract_declarator_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass identifier_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass identifier_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass translation_unit_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass primary_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumeration_constantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generic_selectionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generic_assoc_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generic_assoc_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generic_associationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfix_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfix_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initializer_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initializer_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initializer_list_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass designationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass designator_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass designator_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass designatorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass static_assert_declarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfix_expression_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass argument_expression_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass argument_expression_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass unary_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cast_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicative_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicative_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicative_expression_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass additive_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass additive_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass additive_expression_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass shift_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass shift_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass shift_expression_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relational_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relational_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relational_expression_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass equality_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass equality_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass equality_expression_complementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass jump_statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass iteration_statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass selection_statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass labeled_statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass compound_statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass block_item_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass block_item_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass block_itemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expression_statementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass and_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass and_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exclusive_or_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exclusive_or_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inclusive_or_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inclusive_or_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logical_and_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logical_and_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logical_or_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logical_or_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditional_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditional_expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass assignment_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass type_nameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expression_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass constant_expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass init_declarator_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass init_declarator_list_linhaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass init_declaratorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass string_ufcgEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass constantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumeratorListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass structOrUnionSpecifierComplementActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass structDeclarationListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass structDeclaratorListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declarationListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeQualifierListLinhaAtionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass directDeclaratorLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parameterListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass directAbstractDeclarratorLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass identifierListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tranlationUnitLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass genericAssocListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initializerListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass designatorListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementEmptyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementArgListEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementIdentifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementPointerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementIncrementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass postfixExpressionComplementDecrementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass argumentExpressionListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicativeExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass additiveExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass shiftExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relationalExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass equalityExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass blockItemListLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass andExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exclusiveOrExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inclusiveOrExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logicalAndExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logicalOrExpressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditionalExpressionLinhaAcctionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expressionLinhaActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initDecclaratorListLinhaActionEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -106,9 +1283,3929 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDomainModel_Geetings()
+  public EReference getDomainModel_Geetings()
   {
-    return (EAttribute)domainModelEClass.getEStructuralFeatures().get(0);
+    return (EReference)domainModelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass gettranslation_unit()
+  {
+    return translation_unitEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettranslation_unit_External_declaration()
+  {
+    return (EReference)translation_unitEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettranslation_unit_Translation_unit_linha()
+  {
+    return (EReference)translation_unitEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getexternal_declaration()
+  {
+    return external_declarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexternal_declaration_Function_definitio()
+  {
+    return (EReference)external_declarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexternal_declaration_Declaration()
+  {
+    return (EReference)external_declarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdeclaration_specifiers()
+  {
+    return declaration_specifiersEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getdeclaration_specifiers_Storage_class_specifier()
+  {
+    return (EAttribute)declaration_specifiersEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_specifiers_Declaration_specifiers()
+  {
+    return (EReference)declaration_specifiersEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_specifiers_Type_specifier()
+  {
+    return (EReference)declaration_specifiersEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getdeclaration_specifiers_Type_qualifier()
+  {
+    return (EAttribute)declaration_specifiersEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getdeclaration_specifiers_Function_specifier()
+  {
+    return (EAttribute)declaration_specifiersEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_specifiers_Alignment_specifier()
+  {
+    return (EReference)declaration_specifiersEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getalignment_specifier()
+  {
+    return alignment_specifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getalignment_specifier_Type_name()
+  {
+    return (EReference)alignment_specifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getalignment_specifier_Constant_expression()
+  {
+    return (EReference)alignment_specifierEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass gettype_specifier()
+  {
+    return type_specifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_specifier_Atomic_type_specifier()
+  {
+    return (EReference)type_specifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_specifier_Struct_or_union_specifier()
+  {
+    return (EReference)type_specifierEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_specifier_Enum_specifier()
+  {
+    return (EReference)type_specifierEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getenum_specifier()
+  {
+    return enum_specifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getenum_specifier_Enumerator_list()
+  {
+    return (EReference)enum_specifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getenum_specifier_Identifier()
+  {
+    return (EAttribute)enum_specifierEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getenumerator_list()
+  {
+    return enumerator_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getenumerator_list_Enumarator()
+  {
+    return (EReference)enumerator_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getenumerator_list_Enumerator_list_linha()
+  {
+    return (EReference)enumerator_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getenumerator_list_linha()
+  {
+    return enumerator_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getenumerator()
+  {
+    return enumeratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getenumerator_Enumeration_constant()
+  {
+    return (EReference)enumeratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getenumerator_Conditional_expression()
+  {
+    return (EReference)enumeratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getatomic_type_specifier()
+  {
+    return atomic_type_specifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getatomic_type_specifier_Type_name()
+  {
+    return (EReference)atomic_type_specifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_or_union_specifier()
+  {
+    return struct_or_union_specifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstruct_or_union_specifier_Struct_or_union()
+  {
+    return (EAttribute)struct_or_union_specifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_or_union_specifier_Struct_declaration_list()
+  {
+    return (EReference)struct_or_union_specifierEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstruct_or_union_specifier_Identifier()
+  {
+    return (EAttribute)struct_or_union_specifierEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_or_union_specifier_Struct_or_union_specifier_complement()
+  {
+    return (EReference)struct_or_union_specifierEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_or_union_specifier_complement()
+  {
+    return struct_or_union_specifier_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_declaration_list()
+  {
+    return struct_declaration_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declaration_list_Struct_declaration()
+  {
+    return (EReference)struct_declaration_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declaration_list_Struct_declaration_list_linha()
+  {
+    return (EReference)struct_declaration_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_declaration_list_linha()
+  {
+    return struct_declaration_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_declaration()
+  {
+    return struct_declarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declaration_Specifier_qualifier_list()
+  {
+    return (EReference)struct_declarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declaration_Struct_declarator_list()
+  {
+    return (EReference)struct_declarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declaration_Static_assert_declaration()
+  {
+    return (EReference)struct_declarationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_declarator_list()
+  {
+    return struct_declarator_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declarator_list_Struct_declarator()
+  {
+    return (EReference)struct_declarator_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declarator_list_Struct_declarator_list_linha()
+  {
+    return (EReference)struct_declarator_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_declarator_list_linha()
+  {
+    return struct_declarator_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstruct_declarator()
+  {
+    return struct_declaratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declarator_Constant_expression()
+  {
+    return (EReference)struct_declaratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstruct_declarator_Declarator()
+  {
+    return (EReference)struct_declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getspecifier_qualifier_list()
+  {
+    return specifier_qualifier_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getspecifier_qualifier_list_Type_specifier()
+  {
+    return (EReference)specifier_qualifier_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getspecifier_qualifier_list_Specifier_qualifier_list()
+  {
+    return (EReference)specifier_qualifier_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getspecifier_qualifier_list_Type_qualifier()
+  {
+    return (EAttribute)specifier_qualifier_listEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdeclaration()
+  {
+    return declarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_Declaration_specifiers()
+  {
+    return (EReference)declarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_Init_declarator_list()
+  {
+    return (EReference)declarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_Static_assert_declaration()
+  {
+    return (EReference)declarationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getfunction_definition()
+  {
+    return function_definitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getfunction_definition_Declaration_specifiers()
+  {
+    return (EReference)function_definitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getfunction_definition_Declarator()
+  {
+    return (EReference)function_definitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getfunction_definition_Declaration_list()
+  {
+    return (EReference)function_definitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getfunction_definition_Compound_statement()
+  {
+    return (EReference)function_definitionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdeclaration_list()
+  {
+    return declaration_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_list_Declaration()
+  {
+    return (EReference)declaration_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclaration_list_Declaration_list_linha()
+  {
+    return (EReference)declaration_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdeclaration_list_linha()
+  {
+    return declaration_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdeclarator()
+  {
+    return declaratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclarator_Pointer()
+  {
+    return (EReference)declaratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdeclarator_Direct_declarator()
+  {
+    return (EReference)declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpointer()
+  {
+    return pointerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpointer_Type_qualifier_list()
+  {
+    return (EReference)pointerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpointer_Pointer()
+  {
+    return (EReference)pointerEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass gettype_qualifier_list()
+  {
+    return type_qualifier_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute gettype_qualifier_list_Type_qualifier()
+  {
+    return (EAttribute)type_qualifier_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_qualifier_list_Type_qualifier_list_linha()
+  {
+    return (EReference)type_qualifier_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass gettype_qualifier_list_linha()
+  {
+    return type_qualifier_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdirect_declarator()
+  {
+    return direct_declaratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getdirect_declarator_Identifier()
+  {
+    return (EAttribute)direct_declaratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_declarator_Direct_declarator_linha()
+  {
+    return (EReference)direct_declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_declarator_Declarator()
+  {
+    return (EReference)direct_declaratorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdirect_declarator_linha()
+  {
+    return direct_declarator_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdirect_declarator_complemento()
+  {
+    return direct_declarator_complementoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_declarator_complemento_Type_qualifier_list()
+  {
+    return (EReference)direct_declarator_complementoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_declarator_complemento_Assignment_expression()
+  {
+    return (EReference)direct_declarator_complementoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_declarator_complemento_Parameter_type_list()
+  {
+    return (EReference)direct_declarator_complementoEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_declarator_complemento_Identifier_list()
+  {
+    return (EReference)direct_declarator_complementoEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getparameter_type_list()
+  {
+    return parameter_type_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getparameter_type_list_Parameter_list()
+  {
+    return (EReference)parameter_type_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getparameter_list()
+  {
+    return parameter_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getparameter_list_Parameter_declaration()
+  {
+    return (EReference)parameter_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getparameter_list_Parameter_list_linha()
+  {
+    return (EReference)parameter_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getparameter_list_linha()
+  {
+    return parameter_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getparameter_declaration()
+  {
+    return parameter_declarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getparameter_declaration_Declaration_specifiers()
+  {
+    return (EReference)parameter_declarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getparameter_declaration_Declarator()
+  {
+    return (EReference)parameter_declarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getparameter_declaration_Abstract_declarator()
+  {
+    return (EReference)parameter_declarationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getabstract_declarator()
+  {
+    return abstract_declaratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getabstract_declarator_Pointer()
+  {
+    return (EReference)abstract_declaratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getabstract_declarator_Direct_abstract_declarator()
+  {
+    return (EReference)abstract_declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdirect_abstract_declarator()
+  {
+    return direct_abstract_declaratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_Abstract_declarator()
+  {
+    return (EReference)direct_abstract_declaratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_Type_qualifier_list()
+  {
+    return (EReference)direct_abstract_declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_Assignment_expression()
+  {
+    return (EReference)direct_abstract_declaratorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_Parameter_type_list()
+  {
+    return (EReference)direct_abstract_declaratorEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_Direct_abstract_declarator_linha()
+  {
+    return (EReference)direct_abstract_declaratorEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinitializer()
+  {
+    return initializerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_Init_declarator_list()
+  {
+    return (EReference)initializerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_Assignment_expression()
+  {
+    return (EReference)initializerEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdirect_abstract_declarator_linha()
+  {
+    return direct_abstract_declarator_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdirect_abstract_declarator_complement()
+  {
+    return direct_abstract_declarator_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_complement_Assignment_expression()
+  {
+    return (EReference)direct_abstract_declarator_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_complement_Type_qualifier_list()
+  {
+    return (EReference)direct_abstract_declarator_complementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdirect_abstract_declarator_complement_Parameter_type_list()
+  {
+    return (EReference)direct_abstract_declarator_complementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getidentifier_list()
+  {
+    return identifier_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getidentifier_list_Identifier()
+  {
+    return (EAttribute)identifier_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getidentifier_list_Identifier_list_linha()
+  {
+    return (EReference)identifier_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getidentifier_list_linha()
+  {
+    return identifier_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass gettranslation_unit_linha()
+  {
+    return translation_unit_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getprimary_expression()
+  {
+    return primary_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getprimary_expression_Identifier()
+  {
+    return (EAttribute)primary_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getprimary_expression_Constant()
+  {
+    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getprimary_expression_String()
+  {
+    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getprimary_expression_Expression()
+  {
+    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getprimary_expression_Generic_selection()
+  {
+    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getenumeration_constant()
+  {
+    return enumeration_constantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getenumeration_constant_Identifier()
+  {
+    return (EAttribute)enumeration_constantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getgeneric_selection()
+  {
+    return generic_selectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getgeneric_selection__generic()
+  {
+    return (EAttribute)generic_selectionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgeneric_selection_Assignment_expression()
+  {
+    return (EReference)generic_selectionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgeneric_selection_Generic_assoc_list()
+  {
+    return (EReference)generic_selectionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getgeneric_assoc_list()
+  {
+    return generic_assoc_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgeneric_assoc_list_Generic_association()
+  {
+    return (EReference)generic_assoc_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgeneric_assoc_list_Generic_assoc_list_linha()
+  {
+    return (EReference)generic_assoc_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getgeneric_assoc_list_linha()
+  {
+    return generic_assoc_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getgeneric_association()
+  {
+    return generic_associationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgeneric_association_Type_name()
+  {
+    return (EReference)generic_associationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgeneric_association_Assignment_expression()
+  {
+    return (EReference)generic_associationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getgeneric_association_Default()
+  {
+    return (EAttribute)generic_associationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpostfix_expression()
+  {
+    return postfix_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpostfix_expression_Primary_expression()
+  {
+    return (EReference)postfix_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpostfix_expression_Postfix_expression_linha()
+  {
+    return (EReference)postfix_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpostfix_expression_linha()
+  {
+    return postfix_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinitializer_list()
+  {
+    return initializer_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_list_Designation()
+  {
+    return (EReference)initializer_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_list_Initializer()
+  {
+    return (EReference)initializer_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_list_Init_declarator_list_linha()
+  {
+    return (EReference)initializer_listEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinitializer_list_linha()
+  {
+    return initializer_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinitializer_list_complement()
+  {
+    return initializer_list_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_list_complement_Designation()
+  {
+    return (EReference)initializer_list_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinitializer_list_complement_Initializer()
+  {
+    return (EReference)initializer_list_complementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdesignation()
+  {
+    return designationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdesignation_Designator_list()
+  {
+    return (EReference)designationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdesignator_list()
+  {
+    return designator_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdesignator_list_Designator()
+  {
+    return (EReference)designator_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdesignator_list_Designator_list_linha()
+  {
+    return (EReference)designator_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdesignator_list_linha()
+  {
+    return designator_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getdesignator()
+  {
+    return designatorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getdesignator_Constant_expression()
+  {
+    return (EReference)designatorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getdesignator_Identifier()
+  {
+    return (EAttribute)designatorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstatic_assert_declaration()
+  {
+    return static_assert_declarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstatic_assert_declaration_Constant_expression()
+  {
+    return (EReference)static_assert_declarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpostfix_expression_complement()
+  {
+    return postfix_expression_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getargument_expression_list()
+  {
+    return argument_expression_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getargument_expression_list_Assignment_expression()
+  {
+    return (EReference)argument_expression_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getargument_expression_list_Argument_expression_list_linha()
+  {
+    return (EReference)argument_expression_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getargument_expression_list_linha()
+  {
+    return argument_expression_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getunary_expression()
+  {
+    return unary_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getunary_expression_Postfix_expression()
+  {
+    return (EReference)unary_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getunary_expression_Unary_expression()
+  {
+    return (EReference)unary_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getunary_expression_Unary_operator()
+  {
+    return (EAttribute)unary_expressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getunary_expression_Cast_expression()
+  {
+    return (EReference)unary_expressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getunary_expression_Type_name()
+  {
+    return (EReference)unary_expressionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getcast_expression()
+  {
+    return cast_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getcast_expression_Unary_expression()
+  {
+    return (EReference)cast_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getcast_expression_Type_name()
+  {
+    return (EReference)cast_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getcast_expression_Cast_expression()
+  {
+    return (EReference)cast_expressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getmultiplicative_expression()
+  {
+    return multiplicative_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmultiplicative_expression_Cast_expression()
+  {
+    return (EReference)multiplicative_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmultiplicative_expression_Multiplicative_expression_linha()
+  {
+    return (EReference)multiplicative_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getmultiplicative_expression_linha()
+  {
+    return multiplicative_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getmultiplicative_expression_complement()
+  {
+    return multiplicative_expression_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmultiplicative_expression_complement_Cast_expression()
+  {
+    return (EReference)multiplicative_expression_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getadditive_expression()
+  {
+    return additive_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getadditive_expression_Multiplicative_expression()
+  {
+    return (EReference)additive_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getadditive_expression_Additive_expression_linha()
+  {
+    return (EReference)additive_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getadditive_expression_linha()
+  {
+    return additive_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getadditive_expression_complement()
+  {
+    return additive_expression_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getadditive_expression_complement_Multiplicative_expression()
+  {
+    return (EReference)additive_expression_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getshift_expression()
+  {
+    return shift_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getshift_expression_Additive_expression()
+  {
+    return (EReference)shift_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getshift_expression_Shift_expression_linha()
+  {
+    return (EReference)shift_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getshift_expression_linha()
+  {
+    return shift_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getshift_expression_complement()
+  {
+    return shift_expression_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getshift_expression_complement_Additive_expression()
+  {
+    return (EReference)shift_expression_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getrelational_expression()
+  {
+    return relational_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getrelational_expression_Shift_expression()
+  {
+    return (EReference)relational_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getrelational_expression_Relational_expression_linha()
+  {
+    return (EReference)relational_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getrelational_expression_linha()
+  {
+    return relational_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getrelational_expression_complement()
+  {
+    return relational_expression_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getrelational_expression_complement_Shift_expression()
+  {
+    return (EReference)relational_expression_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getequality_expression()
+  {
+    return equality_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getequality_expression_Relational_expression()
+  {
+    return (EReference)equality_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getequality_expression_Equality_expression_linha()
+  {
+    return (EReference)equality_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getequality_expression_linha()
+  {
+    return equality_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getequality_expression_complement()
+  {
+    return equality_expression_complementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getequality_expression_complement_Relational_expression()
+  {
+    return (EReference)equality_expression_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstatement()
+  {
+    return statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getjump_statement()
+  {
+    return jump_statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getjump_statement_Identifier()
+  {
+    return (EAttribute)jump_statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getjump_statement_Expression()
+  {
+    return (EReference)jump_statementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getiteration_statement()
+  {
+    return iteration_statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getiteration_statement_Expression()
+  {
+    return (EReference)iteration_statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getiteration_statement_Statement()
+  {
+    return (EReference)iteration_statementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getiteration_statement_Expression_statement()
+  {
+    return (EReference)iteration_statementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getiteration_statement_Expression_statement2()
+  {
+    return (EReference)iteration_statementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getiteration_statement_Declaration()
+  {
+    return (EReference)iteration_statementEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getselection_statement()
+  {
+    return selection_statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getselection_statement_Expression()
+  {
+    return (EReference)selection_statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getselection_statement_Statement()
+  {
+    return (EReference)selection_statementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getselection_statement_Statement2()
+  {
+    return (EReference)selection_statementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getlabeled_statement()
+  {
+    return labeled_statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getlabeled_statement_Identifier()
+  {
+    return (EAttribute)labeled_statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlabeled_statement_Statement()
+  {
+    return (EReference)labeled_statementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlabeled_statement_Constant_expression()
+  {
+    return (EReference)labeled_statementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getcompound_statement()
+  {
+    return compound_statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getcompound_statement_Block_item_list()
+  {
+    return (EReference)compound_statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getblock_item_list()
+  {
+    return block_item_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getblock_item_list_linha()
+  {
+    return block_item_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getblock_item()
+  {
+    return block_itemEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getblock_item_Block_item_list_linha()
+  {
+    return (EReference)block_itemEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getblock_item_Declaration()
+  {
+    return (EReference)block_itemEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getblock_item_Statement()
+  {
+    return (EReference)block_itemEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getexpression_statement()
+  {
+    return expression_statementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexpression_statement_Expression()
+  {
+    return (EReference)expression_statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getand_expression()
+  {
+    return and_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getand_expression_Equality_expression()
+  {
+    return (EReference)and_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getand_expression_And_expression_linha()
+  {
+    return (EReference)and_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getand_expression_linha()
+  {
+    return and_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getexclusive_or_expression()
+  {
+    return exclusive_or_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexclusive_or_expression_And_expression()
+  {
+    return (EReference)exclusive_or_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexclusive_or_expression_Exclusive_or_expression_linha()
+  {
+    return (EReference)exclusive_or_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getexclusive_or_expression_linha()
+  {
+    return exclusive_or_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinclusive_or_expression()
+  {
+    return inclusive_or_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinclusive_or_expression_Exclusive_or_expression()
+  {
+    return (EReference)inclusive_or_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinclusive_or_expression_Inclusive_or_expression_linha()
+  {
+    return (EReference)inclusive_or_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinclusive_or_expression_linha()
+  {
+    return inclusive_or_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getlogical_and_expression()
+  {
+    return logical_and_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_and_expression_Inclusive_or_expression()
+  {
+    return (EReference)logical_and_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_and_expression_Logical_and_expression_linha()
+  {
+    return (EReference)logical_and_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getlogical_and_expression_linha()
+  {
+    return logical_and_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getlogical_or_expression()
+  {
+    return logical_or_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_or_expression_Logical_and_expression()
+  {
+    return (EReference)logical_or_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_or_expression_Logical_or_expression_linha()
+  {
+    return (EReference)logical_or_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getlogical_or_expression_linha()
+  {
+    return logical_or_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getconditional_expression()
+  {
+    return conditional_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getconditional_expression_Logical_or_expression()
+  {
+    return (EReference)conditional_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getconditional_expression_Conditional_expression_linha()
+  {
+    return (EReference)conditional_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getconditional_expression_linha()
+  {
+    return conditional_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getassignment_expression()
+  {
+    return assignment_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getassignment_expression_Conditional_expression()
+  {
+    return (EReference)assignment_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getassignment_expression_Unary_expression()
+  {
+    return (EReference)assignment_expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getassignment_expression_Assignment_operator()
+  {
+    return (EAttribute)assignment_expressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getassignment_expression_Assignment_expression()
+  {
+    return (EReference)assignment_expressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass gettype_name()
+  {
+    return type_nameEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_name_Initializer_list()
+  {
+    return (EReference)type_nameEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_name_Specifier_qualifier_list()
+  {
+    return (EReference)type_nameEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference gettype_name_Abstract_declarator()
+  {
+    return (EReference)type_nameEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getexpression()
+  {
+    return expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexpression_Assignment_expression()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexpression_Expression_linha()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getexpression_linha()
+  {
+    return expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getconstant_expression()
+  {
+    return constant_expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getconstant_expression_Conditional_expression()
+  {
+    return (EReference)constant_expressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinit_declarator_list()
+  {
+    return init_declarator_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_declarator_list_Init_declarator()
+  {
+    return (EReference)init_declarator_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_declarator_list_Init_declarator_list_linha()
+  {
+    return (EReference)init_declarator_listEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinit_declarator_list_linha()
+  {
+    return init_declarator_list_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinit_declarator()
+  {
+    return init_declaratorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_declarator_Declarator()
+  {
+    return (EReference)init_declaratorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_declarator_Initializer()
+  {
+    return (EReference)init_declaratorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstring_ufcg()
+  {
+    return string_ufcgEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstring_ufcg_String_literal()
+  {
+    return (EAttribute)string_ufcgEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstring_ufcg___func__()
+  {
+    return (EAttribute)string_ufcgEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getconstant()
+  {
+    return constantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getconstant_I_constant()
+  {
+    return (EAttribute)constantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getconstant_F_constant()
+  {
+    return (EAttribute)constantEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getconstant_Enumz()
+  {
+    return (EAttribute)constantEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumeratorListLinhaAction()
+  {
+    return enumeratorListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEnumeratorListLinhaAction_Enumerator()
+  {
+    return (EReference)enumeratorListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEnumeratorListLinhaAction_Enumerator_list_linha()
+  {
+    return (EReference)enumeratorListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStructOrUnionSpecifierComplementAction()
+  {
+    return structOrUnionSpecifierComplementActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStructOrUnionSpecifierComplementAction_Struct_declaration_list()
+  {
+    return (EReference)structOrUnionSpecifierComplementActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStructDeclarationListLinhaAction()
+  {
+    return structDeclarationListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStructDeclarationListLinhaAction_Struct_declaration()
+  {
+    return (EReference)structDeclarationListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStructDeclarationListLinhaAction_Struct_declaration_list_linha()
+  {
+    return (EReference)structDeclarationListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStructDeclaratorListLinhaAction()
+  {
+    return structDeclaratorListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStructDeclaratorListLinhaAction_Struct_declarator()
+  {
+    return (EReference)structDeclaratorListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStructDeclaratorListLinhaAction_Struct_declarator_list_linha()
+  {
+    return (EReference)structDeclaratorListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDeclarationListLinhaAction()
+  {
+    return declarationListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDeclarationListLinhaAction_Declaration()
+  {
+    return (EReference)declarationListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDeclarationListLinhaAction_Declaration_list_linha()
+  {
+    return (EReference)declarationListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypeQualifierListLinhaAtion()
+  {
+    return typeQualifierListLinhaAtionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTypeQualifierListLinhaAtion_Type_qualifier()
+  {
+    return (EAttribute)typeQualifierListLinhaAtionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTypeQualifierListLinhaAtion_Type_qualifier_list_linha()
+  {
+    return (EReference)typeQualifierListLinhaAtionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDirectDeclaratorLinhaAction()
+  {
+    return directDeclaratorLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDirectDeclaratorLinhaAction_Direct_declarator_complemento()
+  {
+    return (EReference)directDeclaratorLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDirectDeclaratorLinhaAction_Direct_declarator_linha()
+  {
+    return (EReference)directDeclaratorLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParameterListLinhaAction()
+  {
+    return parameterListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParameterListLinhaAction_Parameter_declaration()
+  {
+    return (EReference)parameterListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParameterListLinhaAction_Parameter_list_linha()
+  {
+    return (EReference)parameterListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDirectAbstractDeclarratorLinhaAction()
+  {
+    return directAbstractDeclarratorLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_complement()
+  {
+    return (EReference)directAbstractDeclarratorLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_linha()
+  {
+    return (EReference)directAbstractDeclarratorLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIdentifierListLinhaAction()
+  {
+    return identifierListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIdentifierListLinhaAction_Identifier()
+  {
+    return (EAttribute)identifierListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIdentifierListLinhaAction_Identifier_list_linha()
+  {
+    return (EReference)identifierListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTranlationUnitLinhaAction()
+  {
+    return tranlationUnitLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTranlationUnitLinhaAction_External_declaration()
+  {
+    return (EReference)tranlationUnitLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTranlationUnitLinhaAction_Translation_unit_linha()
+  {
+    return (EReference)tranlationUnitLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGenericAssocListLinhaAction()
+  {
+    return genericAssocListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGenericAssocListLinhaAction_Generic_association()
+  {
+    return (EReference)genericAssocListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGenericAssocListLinhaAction_Generic_assoc_list_linha()
+  {
+    return (EReference)genericAssocListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionLinhaAction()
+  {
+    return postfixExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPostfixExpressionLinhaAction_Postfix_expression_complement()
+  {
+    return (EReference)postfixExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPostfixExpressionLinhaAction_Postfix_expression_linha()
+  {
+    return (EReference)postfixExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInitializerListLinhaAction()
+  {
+    return initializerListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInitializerListLinhaAction_Initializer_list_complement()
+  {
+    return (EReference)initializerListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInitializerListLinhaAction_Init_declarator_list_linha()
+  {
+    return (EReference)initializerListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDesignatorListLinhaAction()
+  {
+    return designatorListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDesignatorListLinhaAction_Designator()
+  {
+    return (EReference)designatorListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDesignatorListLinhaAction_Designator_list_linha()
+  {
+    return (EReference)designatorListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementExpression()
+  {
+    return postfixExpressionComplementExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPostfixExpressionComplementExpression_Expression()
+  {
+    return (EReference)postfixExpressionComplementExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementEmpty()
+  {
+    return postfixExpressionComplementEmptyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementArgList()
+  {
+    return postfixExpressionComplementArgListEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPostfixExpressionComplementArgList_Argument_expression_list()
+  {
+    return (EReference)postfixExpressionComplementArgListEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementIdentifier()
+  {
+    return postfixExpressionComplementIdentifierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPostfixExpressionComplementIdentifier_Identifier()
+  {
+    return (EAttribute)postfixExpressionComplementIdentifierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementPointer()
+  {
+    return postfixExpressionComplementPointerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPostfixExpressionComplementPointer_Identifier()
+  {
+    return (EAttribute)postfixExpressionComplementPointerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementIncrement()
+  {
+    return postfixExpressionComplementIncrementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPostfixExpressionComplementDecrement()
+  {
+    return postfixExpressionComplementDecrementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getArgumentExpressionListLinhaAction()
+  {
+    return argumentExpressionListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArgumentExpressionListLinhaAction_Assignment_expression()
+  {
+    return (EReference)argumentExpressionListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArgumentExpressionListLinhaAction_Argument_expression_list_linha()
+  {
+    return (EReference)argumentExpressionListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMultiplicativeExpressionLinhaAction()
+  {
+    return multiplicativeExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement()
+  {
+    return (EReference)multiplicativeExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha()
+  {
+    return (EReference)multiplicativeExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAdditiveExpressionLinhaAction()
+  {
+    return additiveExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAdditiveExpressionLinhaAction_Additive_expression_complement()
+  {
+    return (EReference)additiveExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAdditiveExpressionLinhaAction_Additive_expression_linha()
+  {
+    return (EReference)additiveExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getShiftExpressionLinhaAction()
+  {
+    return shiftExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getShiftExpressionLinhaAction_Shift_expression_complement()
+  {
+    return (EReference)shiftExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getShiftExpressionLinhaAction_Shift_expression_linha()
+  {
+    return (EReference)shiftExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRelationalExpressionLinhaAction()
+  {
+    return relationalExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRelationalExpressionLinhaAction_Shift_expression_complement()
+  {
+    return (EReference)relationalExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRelationalExpressionLinhaAction_Relational_expression_linha()
+  {
+    return (EReference)relationalExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEqualityExpressionLinhaAction()
+  {
+    return equalityExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEqualityExpressionLinhaAction_Equality_expression_complement()
+  {
+    return (EReference)equalityExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEqualityExpressionLinhaAction_Equality_expression_linha()
+  {
+    return (EReference)equalityExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBlockItemListLinhaAction()
+  {
+    return blockItemListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBlockItemListLinhaAction_Block_item()
+  {
+    return (EReference)blockItemListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBlockItemListLinhaAction_Block_item_list_linha()
+  {
+    return (EReference)blockItemListLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAndExpressionLinhaAction()
+  {
+    return andExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAndExpressionLinhaAction_Equality_expression()
+  {
+    return (EReference)andExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAndExpressionLinhaAction_And_expression_linha()
+  {
+    return (EReference)andExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExclusiveOrExpressionLinhaAction()
+  {
+    return exclusiveOrExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExclusiveOrExpressionLinhaAction_And_expression()
+  {
+    return (EReference)exclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha()
+  {
+    return (EReference)exclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInclusiveOrExpressionLinhaAction()
+  {
+    return inclusiveOrExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInclusiveOrExpressionLinhaAction_Exclusive_or_expression()
+  {
+    return (EReference)inclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha()
+  {
+    return (EReference)inclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogicalAndExpressionLinhaAction()
+  {
+    return logicalAndExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAndExpressionLinhaAction_Inclusive_or_expression()
+  {
+    return (EReference)logicalAndExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalAndExpressionLinhaAction_Logical_and_expression_linha()
+  {
+    return (EReference)logicalAndExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogicalOrExpressionLinhaAction()
+  {
+    return logicalOrExpressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalOrExpressionLinhaAction_Logical_and_expression()
+  {
+    return (EReference)logicalOrExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalOrExpressionLinhaAction_Logical_or_expression_linha()
+  {
+    return (EReference)logicalOrExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConditionalExpressionLinhaAcction()
+  {
+    return conditionalExpressionLinhaAcctionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditionalExpressionLinhaAcction_Expression()
+  {
+    return (EReference)conditionalExpressionLinhaAcctionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditionalExpressionLinhaAcction_Conditional_expression()
+  {
+    return (EReference)conditionalExpressionLinhaAcctionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditionalExpressionLinhaAcction_Conditional_expression_linha()
+  {
+    return (EReference)conditionalExpressionLinhaAcctionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExpressionLinhaAction()
+  {
+    return expressionLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpressionLinhaAction_Assignment_expression()
+  {
+    return (EReference)expressionLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpressionLinhaAction_Expression_linha()
+  {
+    return (EReference)expressionLinhaActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInitDecclaratorListLinhaAction()
+  {
+    return initDecclaratorListLinhaActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInitDecclaratorListLinhaAction_Init_declarator()
+  {
+    return (EReference)initDecclaratorListLinhaActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInitDecclaratorListLinhaAction_Init_declarator_list_linha()
+  {
+    return (EReference)initDecclaratorListLinhaActionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -142,7 +5239,546 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
 
     // Create classes and their features
     domainModelEClass = createEClass(DOMAIN_MODEL);
-    createEAttribute(domainModelEClass, DOMAIN_MODEL__GEETINGS);
+    createEReference(domainModelEClass, DOMAIN_MODEL__GEETINGS);
+
+    translation_unitEClass = createEClass(TRANSLATION_UNIT);
+    createEReference(translation_unitEClass, TRANSLATION_UNIT__EXTERNAL_DECLARATION);
+    createEReference(translation_unitEClass, TRANSLATION_UNIT__TRANSLATION_UNIT_LINHA);
+
+    external_declarationEClass = createEClass(EXTERNAL_DECLARATION);
+    createEReference(external_declarationEClass, EXTERNAL_DECLARATION__FUNCTION_DEFINITIO);
+    createEReference(external_declarationEClass, EXTERNAL_DECLARATION__DECLARATION);
+
+    declaration_specifiersEClass = createEClass(DECLARATION_SPECIFIERS);
+    createEAttribute(declaration_specifiersEClass, DECLARATION_SPECIFIERS__STORAGE_CLASS_SPECIFIER);
+    createEReference(declaration_specifiersEClass, DECLARATION_SPECIFIERS__DECLARATION_SPECIFIERS);
+    createEReference(declaration_specifiersEClass, DECLARATION_SPECIFIERS__TYPE_SPECIFIER);
+    createEAttribute(declaration_specifiersEClass, DECLARATION_SPECIFIERS__TYPE_QUALIFIER);
+    createEAttribute(declaration_specifiersEClass, DECLARATION_SPECIFIERS__FUNCTION_SPECIFIER);
+    createEReference(declaration_specifiersEClass, DECLARATION_SPECIFIERS__ALIGNMENT_SPECIFIER);
+
+    alignment_specifierEClass = createEClass(ALIGNMENT_SPECIFIER);
+    createEReference(alignment_specifierEClass, ALIGNMENT_SPECIFIER__TYPE_NAME);
+    createEReference(alignment_specifierEClass, ALIGNMENT_SPECIFIER__CONSTANT_EXPRESSION);
+
+    type_specifierEClass = createEClass(TYPE_SPECIFIER);
+    createEReference(type_specifierEClass, TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER);
+    createEReference(type_specifierEClass, TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER);
+    createEReference(type_specifierEClass, TYPE_SPECIFIER__ENUM_SPECIFIER);
+
+    enum_specifierEClass = createEClass(ENUM_SPECIFIER);
+    createEReference(enum_specifierEClass, ENUM_SPECIFIER__ENUMERATOR_LIST);
+    createEAttribute(enum_specifierEClass, ENUM_SPECIFIER__IDENTIFIER);
+
+    enumerator_listEClass = createEClass(ENUMERATOR_LIST);
+    createEReference(enumerator_listEClass, ENUMERATOR_LIST__ENUMARATOR);
+    createEReference(enumerator_listEClass, ENUMERATOR_LIST__ENUMERATOR_LIST_LINHA);
+
+    enumerator_list_linhaEClass = createEClass(ENUMERATOR_LIST_LINHA);
+
+    enumeratorEClass = createEClass(ENUMERATOR);
+    createEReference(enumeratorEClass, ENUMERATOR__ENUMERATION_CONSTANT);
+    createEReference(enumeratorEClass, ENUMERATOR__CONDITIONAL_EXPRESSION);
+
+    atomic_type_specifierEClass = createEClass(ATOMIC_TYPE_SPECIFIER);
+    createEReference(atomic_type_specifierEClass, ATOMIC_TYPE_SPECIFIER__TYPE_NAME);
+
+    struct_or_union_specifierEClass = createEClass(STRUCT_OR_UNION_SPECIFIER);
+    createEAttribute(struct_or_union_specifierEClass, STRUCT_OR_UNION_SPECIFIER__STRUCT_OR_UNION);
+    createEReference(struct_or_union_specifierEClass, STRUCT_OR_UNION_SPECIFIER__STRUCT_DECLARATION_LIST);
+    createEAttribute(struct_or_union_specifierEClass, STRUCT_OR_UNION_SPECIFIER__IDENTIFIER);
+    createEReference(struct_or_union_specifierEClass, STRUCT_OR_UNION_SPECIFIER__STRUCT_OR_UNION_SPECIFIER_COMPLEMENT);
+
+    struct_or_union_specifier_complementEClass = createEClass(STRUCT_OR_UNION_SPECIFIER_COMPLEMENT);
+
+    struct_declaration_listEClass = createEClass(STRUCT_DECLARATION_LIST);
+    createEReference(struct_declaration_listEClass, STRUCT_DECLARATION_LIST__STRUCT_DECLARATION);
+    createEReference(struct_declaration_listEClass, STRUCT_DECLARATION_LIST__STRUCT_DECLARATION_LIST_LINHA);
+
+    struct_declaration_list_linhaEClass = createEClass(STRUCT_DECLARATION_LIST_LINHA);
+
+    struct_declarationEClass = createEClass(STRUCT_DECLARATION);
+    createEReference(struct_declarationEClass, STRUCT_DECLARATION__SPECIFIER_QUALIFIER_LIST);
+    createEReference(struct_declarationEClass, STRUCT_DECLARATION__STRUCT_DECLARATOR_LIST);
+    createEReference(struct_declarationEClass, STRUCT_DECLARATION__STATIC_ASSERT_DECLARATION);
+
+    struct_declarator_listEClass = createEClass(STRUCT_DECLARATOR_LIST);
+    createEReference(struct_declarator_listEClass, STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR);
+    createEReference(struct_declarator_listEClass, STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR_LIST_LINHA);
+
+    struct_declarator_list_linhaEClass = createEClass(STRUCT_DECLARATOR_LIST_LINHA);
+
+    struct_declaratorEClass = createEClass(STRUCT_DECLARATOR);
+    createEReference(struct_declaratorEClass, STRUCT_DECLARATOR__CONSTANT_EXPRESSION);
+    createEReference(struct_declaratorEClass, STRUCT_DECLARATOR__DECLARATOR);
+
+    specifier_qualifier_listEClass = createEClass(SPECIFIER_QUALIFIER_LIST);
+    createEReference(specifier_qualifier_listEClass, SPECIFIER_QUALIFIER_LIST__TYPE_SPECIFIER);
+    createEReference(specifier_qualifier_listEClass, SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST);
+    createEAttribute(specifier_qualifier_listEClass, SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER);
+
+    declarationEClass = createEClass(DECLARATION);
+    createEReference(declarationEClass, DECLARATION__DECLARATION_SPECIFIERS);
+    createEReference(declarationEClass, DECLARATION__INIT_DECLARATOR_LIST);
+    createEReference(declarationEClass, DECLARATION__STATIC_ASSERT_DECLARATION);
+
+    function_definitionEClass = createEClass(FUNCTION_DEFINITION);
+    createEReference(function_definitionEClass, FUNCTION_DEFINITION__DECLARATION_SPECIFIERS);
+    createEReference(function_definitionEClass, FUNCTION_DEFINITION__DECLARATOR);
+    createEReference(function_definitionEClass, FUNCTION_DEFINITION__DECLARATION_LIST);
+    createEReference(function_definitionEClass, FUNCTION_DEFINITION__COMPOUND_STATEMENT);
+
+    declaration_listEClass = createEClass(DECLARATION_LIST);
+    createEReference(declaration_listEClass, DECLARATION_LIST__DECLARATION);
+    createEReference(declaration_listEClass, DECLARATION_LIST__DECLARATION_LIST_LINHA);
+
+    declaration_list_linhaEClass = createEClass(DECLARATION_LIST_LINHA);
+
+    declaratorEClass = createEClass(DECLARATOR);
+    createEReference(declaratorEClass, DECLARATOR__POINTER);
+    createEReference(declaratorEClass, DECLARATOR__DIRECT_DECLARATOR);
+
+    pointerEClass = createEClass(POINTER);
+    createEReference(pointerEClass, POINTER__TYPE_QUALIFIER_LIST);
+    createEReference(pointerEClass, POINTER__POINTER);
+
+    type_qualifier_listEClass = createEClass(TYPE_QUALIFIER_LIST);
+    createEAttribute(type_qualifier_listEClass, TYPE_QUALIFIER_LIST__TYPE_QUALIFIER);
+    createEReference(type_qualifier_listEClass, TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA);
+
+    type_qualifier_list_linhaEClass = createEClass(TYPE_QUALIFIER_LIST_LINHA);
+
+    direct_declaratorEClass = createEClass(DIRECT_DECLARATOR);
+    createEAttribute(direct_declaratorEClass, DIRECT_DECLARATOR__IDENTIFIER);
+    createEReference(direct_declaratorEClass, DIRECT_DECLARATOR__DIRECT_DECLARATOR_LINHA);
+    createEReference(direct_declaratorEClass, DIRECT_DECLARATOR__DECLARATOR);
+
+    direct_declarator_linhaEClass = createEClass(DIRECT_DECLARATOR_LINHA);
+
+    direct_declarator_complementoEClass = createEClass(DIRECT_DECLARATOR_COMPLEMENTO);
+    createEReference(direct_declarator_complementoEClass, DIRECT_DECLARATOR_COMPLEMENTO__TYPE_QUALIFIER_LIST);
+    createEReference(direct_declarator_complementoEClass, DIRECT_DECLARATOR_COMPLEMENTO__ASSIGNMENT_EXPRESSION);
+    createEReference(direct_declarator_complementoEClass, DIRECT_DECLARATOR_COMPLEMENTO__PARAMETER_TYPE_LIST);
+    createEReference(direct_declarator_complementoEClass, DIRECT_DECLARATOR_COMPLEMENTO__IDENTIFIER_LIST);
+
+    parameter_type_listEClass = createEClass(PARAMETER_TYPE_LIST);
+    createEReference(parameter_type_listEClass, PARAMETER_TYPE_LIST__PARAMETER_LIST);
+
+    parameter_listEClass = createEClass(PARAMETER_LIST);
+    createEReference(parameter_listEClass, PARAMETER_LIST__PARAMETER_DECLARATION);
+    createEReference(parameter_listEClass, PARAMETER_LIST__PARAMETER_LIST_LINHA);
+
+    parameter_list_linhaEClass = createEClass(PARAMETER_LIST_LINHA);
+
+    parameter_declarationEClass = createEClass(PARAMETER_DECLARATION);
+    createEReference(parameter_declarationEClass, PARAMETER_DECLARATION__DECLARATION_SPECIFIERS);
+    createEReference(parameter_declarationEClass, PARAMETER_DECLARATION__DECLARATOR);
+    createEReference(parameter_declarationEClass, PARAMETER_DECLARATION__ABSTRACT_DECLARATOR);
+
+    abstract_declaratorEClass = createEClass(ABSTRACT_DECLARATOR);
+    createEReference(abstract_declaratorEClass, ABSTRACT_DECLARATOR__POINTER);
+    createEReference(abstract_declaratorEClass, ABSTRACT_DECLARATOR__DIRECT_ABSTRACT_DECLARATOR);
+
+    direct_abstract_declaratorEClass = createEClass(DIRECT_ABSTRACT_DECLARATOR);
+    createEReference(direct_abstract_declaratorEClass, DIRECT_ABSTRACT_DECLARATOR__ABSTRACT_DECLARATOR);
+    createEReference(direct_abstract_declaratorEClass, DIRECT_ABSTRACT_DECLARATOR__TYPE_QUALIFIER_LIST);
+    createEReference(direct_abstract_declaratorEClass, DIRECT_ABSTRACT_DECLARATOR__ASSIGNMENT_EXPRESSION);
+    createEReference(direct_abstract_declaratorEClass, DIRECT_ABSTRACT_DECLARATOR__PARAMETER_TYPE_LIST);
+    createEReference(direct_abstract_declaratorEClass, DIRECT_ABSTRACT_DECLARATOR__DIRECT_ABSTRACT_DECLARATOR_LINHA);
+
+    initializerEClass = createEClass(INITIALIZER);
+    createEReference(initializerEClass, INITIALIZER__INIT_DECLARATOR_LIST);
+    createEReference(initializerEClass, INITIALIZER__ASSIGNMENT_EXPRESSION);
+
+    direct_abstract_declarator_linhaEClass = createEClass(DIRECT_ABSTRACT_DECLARATOR_LINHA);
+
+    direct_abstract_declarator_complementEClass = createEClass(DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT);
+    createEReference(direct_abstract_declarator_complementEClass, DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__ASSIGNMENT_EXPRESSION);
+    createEReference(direct_abstract_declarator_complementEClass, DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__TYPE_QUALIFIER_LIST);
+    createEReference(direct_abstract_declarator_complementEClass, DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__PARAMETER_TYPE_LIST);
+
+    identifier_listEClass = createEClass(IDENTIFIER_LIST);
+    createEAttribute(identifier_listEClass, IDENTIFIER_LIST__IDENTIFIER);
+    createEReference(identifier_listEClass, IDENTIFIER_LIST__IDENTIFIER_LIST_LINHA);
+
+    identifier_list_linhaEClass = createEClass(IDENTIFIER_LIST_LINHA);
+
+    translation_unit_linhaEClass = createEClass(TRANSLATION_UNIT_LINHA);
+
+    primary_expressionEClass = createEClass(PRIMARY_EXPRESSION);
+    createEAttribute(primary_expressionEClass, PRIMARY_EXPRESSION__IDENTIFIER);
+    createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__CONSTANT);
+    createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__STRING);
+    createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__EXPRESSION);
+    createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__GENERIC_SELECTION);
+
+    enumeration_constantEClass = createEClass(ENUMERATION_CONSTANT);
+    createEAttribute(enumeration_constantEClass, ENUMERATION_CONSTANT__IDENTIFIER);
+
+    generic_selectionEClass = createEClass(GENERIC_SELECTION);
+    createEAttribute(generic_selectionEClass, GENERIC_SELECTION__GENERIC);
+    createEReference(generic_selectionEClass, GENERIC_SELECTION__ASSIGNMENT_EXPRESSION);
+    createEReference(generic_selectionEClass, GENERIC_SELECTION__GENERIC_ASSOC_LIST);
+
+    generic_assoc_listEClass = createEClass(GENERIC_ASSOC_LIST);
+    createEReference(generic_assoc_listEClass, GENERIC_ASSOC_LIST__GENERIC_ASSOCIATION);
+    createEReference(generic_assoc_listEClass, GENERIC_ASSOC_LIST__GENERIC_ASSOC_LIST_LINHA);
+
+    generic_assoc_list_linhaEClass = createEClass(GENERIC_ASSOC_LIST_LINHA);
+
+    generic_associationEClass = createEClass(GENERIC_ASSOCIATION);
+    createEReference(generic_associationEClass, GENERIC_ASSOCIATION__TYPE_NAME);
+    createEReference(generic_associationEClass, GENERIC_ASSOCIATION__ASSIGNMENT_EXPRESSION);
+    createEAttribute(generic_associationEClass, GENERIC_ASSOCIATION__DEFAULT);
+
+    postfix_expressionEClass = createEClass(POSTFIX_EXPRESSION);
+    createEReference(postfix_expressionEClass, POSTFIX_EXPRESSION__PRIMARY_EXPRESSION);
+    createEReference(postfix_expressionEClass, POSTFIX_EXPRESSION__POSTFIX_EXPRESSION_LINHA);
+
+    postfix_expression_linhaEClass = createEClass(POSTFIX_EXPRESSION_LINHA);
+
+    initializer_listEClass = createEClass(INITIALIZER_LIST);
+    createEReference(initializer_listEClass, INITIALIZER_LIST__DESIGNATION);
+    createEReference(initializer_listEClass, INITIALIZER_LIST__INITIALIZER);
+    createEReference(initializer_listEClass, INITIALIZER_LIST__INIT_DECLARATOR_LIST_LINHA);
+
+    initializer_list_linhaEClass = createEClass(INITIALIZER_LIST_LINHA);
+
+    initializer_list_complementEClass = createEClass(INITIALIZER_LIST_COMPLEMENT);
+    createEReference(initializer_list_complementEClass, INITIALIZER_LIST_COMPLEMENT__DESIGNATION);
+    createEReference(initializer_list_complementEClass, INITIALIZER_LIST_COMPLEMENT__INITIALIZER);
+
+    designationEClass = createEClass(DESIGNATION);
+    createEReference(designationEClass, DESIGNATION__DESIGNATOR_LIST);
+
+    designator_listEClass = createEClass(DESIGNATOR_LIST);
+    createEReference(designator_listEClass, DESIGNATOR_LIST__DESIGNATOR);
+    createEReference(designator_listEClass, DESIGNATOR_LIST__DESIGNATOR_LIST_LINHA);
+
+    designator_list_linhaEClass = createEClass(DESIGNATOR_LIST_LINHA);
+
+    designatorEClass = createEClass(DESIGNATOR);
+    createEReference(designatorEClass, DESIGNATOR__CONSTANT_EXPRESSION);
+    createEAttribute(designatorEClass, DESIGNATOR__IDENTIFIER);
+
+    static_assert_declarationEClass = createEClass(STATIC_ASSERT_DECLARATION);
+    createEReference(static_assert_declarationEClass, STATIC_ASSERT_DECLARATION__CONSTANT_EXPRESSION);
+
+    postfix_expression_complementEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT);
+
+    argument_expression_listEClass = createEClass(ARGUMENT_EXPRESSION_LIST);
+    createEReference(argument_expression_listEClass, ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION);
+    createEReference(argument_expression_listEClass, ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA);
+
+    argument_expression_list_linhaEClass = createEClass(ARGUMENT_EXPRESSION_LIST_LINHA);
+
+    unary_expressionEClass = createEClass(UNARY_EXPRESSION);
+    createEReference(unary_expressionEClass, UNARY_EXPRESSION__POSTFIX_EXPRESSION);
+    createEReference(unary_expressionEClass, UNARY_EXPRESSION__UNARY_EXPRESSION);
+    createEAttribute(unary_expressionEClass, UNARY_EXPRESSION__UNARY_OPERATOR);
+    createEReference(unary_expressionEClass, UNARY_EXPRESSION__CAST_EXPRESSION);
+    createEReference(unary_expressionEClass, UNARY_EXPRESSION__TYPE_NAME);
+
+    cast_expressionEClass = createEClass(CAST_EXPRESSION);
+    createEReference(cast_expressionEClass, CAST_EXPRESSION__UNARY_EXPRESSION);
+    createEReference(cast_expressionEClass, CAST_EXPRESSION__TYPE_NAME);
+    createEReference(cast_expressionEClass, CAST_EXPRESSION__CAST_EXPRESSION);
+
+    multiplicative_expressionEClass = createEClass(MULTIPLICATIVE_EXPRESSION);
+    createEReference(multiplicative_expressionEClass, MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION);
+    createEReference(multiplicative_expressionEClass, MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA);
+
+    multiplicative_expression_linhaEClass = createEClass(MULTIPLICATIVE_EXPRESSION_LINHA);
+
+    multiplicative_expression_complementEClass = createEClass(MULTIPLICATIVE_EXPRESSION_COMPLEMENT);
+    createEReference(multiplicative_expression_complementEClass, MULTIPLICATIVE_EXPRESSION_COMPLEMENT__CAST_EXPRESSION);
+
+    additive_expressionEClass = createEClass(ADDITIVE_EXPRESSION);
+    createEReference(additive_expressionEClass, ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
+    createEReference(additive_expressionEClass, ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
+
+    additive_expression_linhaEClass = createEClass(ADDITIVE_EXPRESSION_LINHA);
+
+    additive_expression_complementEClass = createEClass(ADDITIVE_EXPRESSION_COMPLEMENT);
+    createEReference(additive_expression_complementEClass, ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION);
+
+    shift_expressionEClass = createEClass(SHIFT_EXPRESSION);
+    createEReference(shift_expressionEClass, SHIFT_EXPRESSION__ADDITIVE_EXPRESSION);
+    createEReference(shift_expressionEClass, SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA);
+
+    shift_expression_linhaEClass = createEClass(SHIFT_EXPRESSION_LINHA);
+
+    shift_expression_complementEClass = createEClass(SHIFT_EXPRESSION_COMPLEMENT);
+    createEReference(shift_expression_complementEClass, SHIFT_EXPRESSION_COMPLEMENT__ADDITIVE_EXPRESSION);
+
+    relational_expressionEClass = createEClass(RELATIONAL_EXPRESSION);
+    createEReference(relational_expressionEClass, RELATIONAL_EXPRESSION__SHIFT_EXPRESSION);
+    createEReference(relational_expressionEClass, RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA);
+
+    relational_expression_linhaEClass = createEClass(RELATIONAL_EXPRESSION_LINHA);
+
+    relational_expression_complementEClass = createEClass(RELATIONAL_EXPRESSION_COMPLEMENT);
+    createEReference(relational_expression_complementEClass, RELATIONAL_EXPRESSION_COMPLEMENT__SHIFT_EXPRESSION);
+
+    equality_expressionEClass = createEClass(EQUALITY_EXPRESSION);
+    createEReference(equality_expressionEClass, EQUALITY_EXPRESSION__RELATIONAL_EXPRESSION);
+    createEReference(equality_expressionEClass, EQUALITY_EXPRESSION__EQUALITY_EXPRESSION_LINHA);
+
+    equality_expression_linhaEClass = createEClass(EQUALITY_EXPRESSION_LINHA);
+
+    equality_expression_complementEClass = createEClass(EQUALITY_EXPRESSION_COMPLEMENT);
+    createEReference(equality_expression_complementEClass, EQUALITY_EXPRESSION_COMPLEMENT__RELATIONAL_EXPRESSION);
+
+    statementEClass = createEClass(STATEMENT);
+
+    jump_statementEClass = createEClass(JUMP_STATEMENT);
+    createEAttribute(jump_statementEClass, JUMP_STATEMENT__IDENTIFIER);
+    createEReference(jump_statementEClass, JUMP_STATEMENT__EXPRESSION);
+
+    iteration_statementEClass = createEClass(ITERATION_STATEMENT);
+    createEReference(iteration_statementEClass, ITERATION_STATEMENT__EXPRESSION);
+    createEReference(iteration_statementEClass, ITERATION_STATEMENT__STATEMENT);
+    createEReference(iteration_statementEClass, ITERATION_STATEMENT__EXPRESSION_STATEMENT);
+    createEReference(iteration_statementEClass, ITERATION_STATEMENT__EXPRESSION_STATEMENT2);
+    createEReference(iteration_statementEClass, ITERATION_STATEMENT__DECLARATION);
+
+    selection_statementEClass = createEClass(SELECTION_STATEMENT);
+    createEReference(selection_statementEClass, SELECTION_STATEMENT__EXPRESSION);
+    createEReference(selection_statementEClass, SELECTION_STATEMENT__STATEMENT);
+    createEReference(selection_statementEClass, SELECTION_STATEMENT__STATEMENT2);
+
+    labeled_statementEClass = createEClass(LABELED_STATEMENT);
+    createEAttribute(labeled_statementEClass, LABELED_STATEMENT__IDENTIFIER);
+    createEReference(labeled_statementEClass, LABELED_STATEMENT__STATEMENT);
+    createEReference(labeled_statementEClass, LABELED_STATEMENT__CONSTANT_EXPRESSION);
+
+    compound_statementEClass = createEClass(COMPOUND_STATEMENT);
+    createEReference(compound_statementEClass, COMPOUND_STATEMENT__BLOCK_ITEM_LIST);
+
+    block_item_listEClass = createEClass(BLOCK_ITEM_LIST);
+
+    block_item_list_linhaEClass = createEClass(BLOCK_ITEM_LIST_LINHA);
+
+    block_itemEClass = createEClass(BLOCK_ITEM);
+    createEReference(block_itemEClass, BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA);
+    createEReference(block_itemEClass, BLOCK_ITEM__DECLARATION);
+    createEReference(block_itemEClass, BLOCK_ITEM__STATEMENT);
+
+    expression_statementEClass = createEClass(EXPRESSION_STATEMENT);
+    createEReference(expression_statementEClass, EXPRESSION_STATEMENT__EXPRESSION);
+
+    and_expressionEClass = createEClass(AND_EXPRESSION);
+    createEReference(and_expressionEClass, AND_EXPRESSION__EQUALITY_EXPRESSION);
+    createEReference(and_expressionEClass, AND_EXPRESSION__AND_EXPRESSION_LINHA);
+
+    and_expression_linhaEClass = createEClass(AND_EXPRESSION_LINHA);
+
+    exclusive_or_expressionEClass = createEClass(EXCLUSIVE_OR_EXPRESSION);
+    createEReference(exclusive_or_expressionEClass, EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION);
+    createEReference(exclusive_or_expressionEClass, EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA);
+
+    exclusive_or_expression_linhaEClass = createEClass(EXCLUSIVE_OR_EXPRESSION_LINHA);
+
+    inclusive_or_expressionEClass = createEClass(INCLUSIVE_OR_EXPRESSION);
+    createEReference(inclusive_or_expressionEClass, INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION);
+    createEReference(inclusive_or_expressionEClass, INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA);
+
+    inclusive_or_expression_linhaEClass = createEClass(INCLUSIVE_OR_EXPRESSION_LINHA);
+
+    logical_and_expressionEClass = createEClass(LOGICAL_AND_EXPRESSION);
+    createEReference(logical_and_expressionEClass, LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION);
+    createEReference(logical_and_expressionEClass, LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA);
+
+    logical_and_expression_linhaEClass = createEClass(LOGICAL_AND_EXPRESSION_LINHA);
+
+    logical_or_expressionEClass = createEClass(LOGICAL_OR_EXPRESSION);
+    createEReference(logical_or_expressionEClass, LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION);
+    createEReference(logical_or_expressionEClass, LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA);
+
+    logical_or_expression_linhaEClass = createEClass(LOGICAL_OR_EXPRESSION_LINHA);
+
+    conditional_expressionEClass = createEClass(CONDITIONAL_EXPRESSION);
+    createEReference(conditional_expressionEClass, CONDITIONAL_EXPRESSION__LOGICAL_OR_EXPRESSION);
+    createEReference(conditional_expressionEClass, CONDITIONAL_EXPRESSION__CONDITIONAL_EXPRESSION_LINHA);
+
+    conditional_expression_linhaEClass = createEClass(CONDITIONAL_EXPRESSION_LINHA);
+
+    assignment_expressionEClass = createEClass(ASSIGNMENT_EXPRESSION);
+    createEReference(assignment_expressionEClass, ASSIGNMENT_EXPRESSION__CONDITIONAL_EXPRESSION);
+    createEReference(assignment_expressionEClass, ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    createEAttribute(assignment_expressionEClass, ASSIGNMENT_EXPRESSION__ASSIGNMENT_OPERATOR);
+    createEReference(assignment_expressionEClass, ASSIGNMENT_EXPRESSION__ASSIGNMENT_EXPRESSION);
+
+    type_nameEClass = createEClass(TYPE_NAME);
+    createEReference(type_nameEClass, TYPE_NAME__INITIALIZER_LIST);
+    createEReference(type_nameEClass, TYPE_NAME__SPECIFIER_QUALIFIER_LIST);
+    createEReference(type_nameEClass, TYPE_NAME__ABSTRACT_DECLARATOR);
+
+    expressionEClass = createEClass(EXPRESSION);
+    createEReference(expressionEClass, EXPRESSION__ASSIGNMENT_EXPRESSION);
+    createEReference(expressionEClass, EXPRESSION__EXPRESSION_LINHA);
+
+    expression_linhaEClass = createEClass(EXPRESSION_LINHA);
+
+    constant_expressionEClass = createEClass(CONSTANT_EXPRESSION);
+    createEReference(constant_expressionEClass, CONSTANT_EXPRESSION__CONDITIONAL_EXPRESSION);
+
+    init_declarator_listEClass = createEClass(INIT_DECLARATOR_LIST);
+    createEReference(init_declarator_listEClass, INIT_DECLARATOR_LIST__INIT_DECLARATOR);
+    createEReference(init_declarator_listEClass, INIT_DECLARATOR_LIST__INIT_DECLARATOR_LIST_LINHA);
+
+    init_declarator_list_linhaEClass = createEClass(INIT_DECLARATOR_LIST_LINHA);
+
+    init_declaratorEClass = createEClass(INIT_DECLARATOR);
+    createEReference(init_declaratorEClass, INIT_DECLARATOR__DECLARATOR);
+    createEReference(init_declaratorEClass, INIT_DECLARATOR__INITIALIZER);
+
+    string_ufcgEClass = createEClass(STRING_UFCG);
+    createEAttribute(string_ufcgEClass, STRING_UFCG__STRING_LITERAL);
+    createEAttribute(string_ufcgEClass, STRING_UFCG__FUNC_);
+
+    constantEClass = createEClass(CONSTANT);
+    createEAttribute(constantEClass, CONSTANT__ICONSTANT);
+    createEAttribute(constantEClass, CONSTANT__FCONSTANT);
+    createEAttribute(constantEClass, CONSTANT__ENUMZ);
+
+    enumeratorListLinhaActionEClass = createEClass(ENUMERATOR_LIST_LINHA_ACTION);
+    createEReference(enumeratorListLinhaActionEClass, ENUMERATOR_LIST_LINHA_ACTION__ENUMERATOR);
+    createEReference(enumeratorListLinhaActionEClass, ENUMERATOR_LIST_LINHA_ACTION__ENUMERATOR_LIST_LINHA);
+
+    structOrUnionSpecifierComplementActionEClass = createEClass(STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION);
+    createEReference(structOrUnionSpecifierComplementActionEClass, STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION__STRUCT_DECLARATION_LIST);
+
+    structDeclarationListLinhaActionEClass = createEClass(STRUCT_DECLARATION_LIST_LINHA_ACTION);
+    createEReference(structDeclarationListLinhaActionEClass, STRUCT_DECLARATION_LIST_LINHA_ACTION__STRUCT_DECLARATION);
+    createEReference(structDeclarationListLinhaActionEClass, STRUCT_DECLARATION_LIST_LINHA_ACTION__STRUCT_DECLARATION_LIST_LINHA);
+
+    structDeclaratorListLinhaActionEClass = createEClass(STRUCT_DECLARATOR_LIST_LINHA_ACTION);
+    createEReference(structDeclaratorListLinhaActionEClass, STRUCT_DECLARATOR_LIST_LINHA_ACTION__STRUCT_DECLARATOR);
+    createEReference(structDeclaratorListLinhaActionEClass, STRUCT_DECLARATOR_LIST_LINHA_ACTION__STRUCT_DECLARATOR_LIST_LINHA);
+
+    declarationListLinhaActionEClass = createEClass(DECLARATION_LIST_LINHA_ACTION);
+    createEReference(declarationListLinhaActionEClass, DECLARATION_LIST_LINHA_ACTION__DECLARATION);
+    createEReference(declarationListLinhaActionEClass, DECLARATION_LIST_LINHA_ACTION__DECLARATION_LIST_LINHA);
+
+    typeQualifierListLinhaAtionEClass = createEClass(TYPE_QUALIFIER_LIST_LINHA_ATION);
+    createEAttribute(typeQualifierListLinhaAtionEClass, TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER);
+    createEReference(typeQualifierListLinhaAtionEClass, TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA);
+
+    directDeclaratorLinhaActionEClass = createEClass(DIRECT_DECLARATOR_LINHA_ACTION);
+    createEReference(directDeclaratorLinhaActionEClass, DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_COMPLEMENTO);
+    createEReference(directDeclaratorLinhaActionEClass, DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_LINHA);
+
+    parameterListLinhaActionEClass = createEClass(PARAMETER_LIST_LINHA_ACTION);
+    createEReference(parameterListLinhaActionEClass, PARAMETER_LIST_LINHA_ACTION__PARAMETER_DECLARATION);
+    createEReference(parameterListLinhaActionEClass, PARAMETER_LIST_LINHA_ACTION__PARAMETER_LIST_LINHA);
+
+    directAbstractDeclarratorLinhaActionEClass = createEClass(DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION);
+    createEReference(directAbstractDeclarratorLinhaActionEClass, DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION__DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT);
+    createEReference(directAbstractDeclarratorLinhaActionEClass, DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION__DIRECT_ABSTRACT_DECLARATOR_LINHA);
+
+    identifierListLinhaActionEClass = createEClass(IDENTIFIER_LIST_LINHA_ACTION);
+    createEAttribute(identifierListLinhaActionEClass, IDENTIFIER_LIST_LINHA_ACTION__IDENTIFIER);
+    createEReference(identifierListLinhaActionEClass, IDENTIFIER_LIST_LINHA_ACTION__IDENTIFIER_LIST_LINHA);
+
+    tranlationUnitLinhaActionEClass = createEClass(TRANLATION_UNIT_LINHA_ACTION);
+    createEReference(tranlationUnitLinhaActionEClass, TRANLATION_UNIT_LINHA_ACTION__EXTERNAL_DECLARATION);
+    createEReference(tranlationUnitLinhaActionEClass, TRANLATION_UNIT_LINHA_ACTION__TRANSLATION_UNIT_LINHA);
+
+    genericAssocListLinhaActionEClass = createEClass(GENERIC_ASSOC_LIST_LINHA_ACTION);
+    createEReference(genericAssocListLinhaActionEClass, GENERIC_ASSOC_LIST_LINHA_ACTION__GENERIC_ASSOCIATION);
+    createEReference(genericAssocListLinhaActionEClass, GENERIC_ASSOC_LIST_LINHA_ACTION__GENERIC_ASSOC_LIST_LINHA);
+
+    postfixExpressionLinhaActionEClass = createEClass(POSTFIX_EXPRESSION_LINHA_ACTION);
+    createEReference(postfixExpressionLinhaActionEClass, POSTFIX_EXPRESSION_LINHA_ACTION__POSTFIX_EXPRESSION_COMPLEMENT);
+    createEReference(postfixExpressionLinhaActionEClass, POSTFIX_EXPRESSION_LINHA_ACTION__POSTFIX_EXPRESSION_LINHA);
+
+    initializerListLinhaActionEClass = createEClass(INITIALIZER_LIST_LINHA_ACTION);
+    createEReference(initializerListLinhaActionEClass, INITIALIZER_LIST_LINHA_ACTION__INITIALIZER_LIST_COMPLEMENT);
+    createEReference(initializerListLinhaActionEClass, INITIALIZER_LIST_LINHA_ACTION__INIT_DECLARATOR_LIST_LINHA);
+
+    designatorListLinhaActionEClass = createEClass(DESIGNATOR_LIST_LINHA_ACTION);
+    createEReference(designatorListLinhaActionEClass, DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR);
+    createEReference(designatorListLinhaActionEClass, DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR_LIST_LINHA);
+
+    postfixExpressionComplementExpressionEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION);
+    createEReference(postfixExpressionComplementExpressionEClass, POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION);
+
+    postfixExpressionComplementEmptyEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_EMPTY);
+
+    postfixExpressionComplementArgListEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST);
+    createEReference(postfixExpressionComplementArgListEClass, POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST__ARGUMENT_EXPRESSION_LIST);
+
+    postfixExpressionComplementIdentifierEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER);
+    createEAttribute(postfixExpressionComplementIdentifierEClass, POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER);
+
+    postfixExpressionComplementPointerEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_POINTER);
+    createEAttribute(postfixExpressionComplementPointerEClass, POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER);
+
+    postfixExpressionComplementIncrementEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT);
+
+    postfixExpressionComplementDecrementEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT);
+
+    argumentExpressionListLinhaActionEClass = createEClass(ARGUMENT_EXPRESSION_LIST_LINHA_ACTION);
+    createEReference(argumentExpressionListLinhaActionEClass, ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ASSIGNMENT_EXPRESSION);
+    createEReference(argumentExpressionListLinhaActionEClass, ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ARGUMENT_EXPRESSION_LIST_LINHA);
+
+    multiplicativeExpressionLinhaActionEClass = createEClass(MULTIPLICATIVE_EXPRESSION_LINHA_ACTION);
+    createEReference(multiplicativeExpressionLinhaActionEClass, MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_COMPLEMENT);
+    createEReference(multiplicativeExpressionLinhaActionEClass, MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_LINHA);
+
+    additiveExpressionLinhaActionEClass = createEClass(ADDITIVE_EXPRESSION_LINHA_ACTION);
+    createEReference(additiveExpressionLinhaActionEClass, ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_COMPLEMENT);
+    createEReference(additiveExpressionLinhaActionEClass, ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_LINHA);
+
+    shiftExpressionLinhaActionEClass = createEClass(SHIFT_EXPRESSION_LINHA_ACTION);
+    createEReference(shiftExpressionLinhaActionEClass, SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT);
+    createEReference(shiftExpressionLinhaActionEClass, SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_LINHA);
+
+    relationalExpressionLinhaActionEClass = createEClass(RELATIONAL_EXPRESSION_LINHA_ACTION);
+    createEReference(relationalExpressionLinhaActionEClass, RELATIONAL_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT);
+    createEReference(relationalExpressionLinhaActionEClass, RELATIONAL_EXPRESSION_LINHA_ACTION__RELATIONAL_EXPRESSION_LINHA);
+
+    equalityExpressionLinhaActionEClass = createEClass(EQUALITY_EXPRESSION_LINHA_ACTION);
+    createEReference(equalityExpressionLinhaActionEClass, EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_COMPLEMENT);
+    createEReference(equalityExpressionLinhaActionEClass, EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA);
+
+    blockItemListLinhaActionEClass = createEClass(BLOCK_ITEM_LIST_LINHA_ACTION);
+    createEReference(blockItemListLinhaActionEClass, BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM);
+    createEReference(blockItemListLinhaActionEClass, BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM_LIST_LINHA);
+
+    andExpressionLinhaActionEClass = createEClass(AND_EXPRESSION_LINHA_ACTION);
+    createEReference(andExpressionLinhaActionEClass, AND_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION);
+    createEReference(andExpressionLinhaActionEClass, AND_EXPRESSION_LINHA_ACTION__AND_EXPRESSION_LINHA);
+
+    exclusiveOrExpressionLinhaActionEClass = createEClass(EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION);
+    createEReference(exclusiveOrExpressionLinhaActionEClass, EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__AND_EXPRESSION);
+    createEReference(exclusiveOrExpressionLinhaActionEClass, EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION_LINHA);
+
+    inclusiveOrExpressionLinhaActionEClass = createEClass(INCLUSIVE_OR_EXPRESSION_LINHA_ACTION);
+    createEReference(inclusiveOrExpressionLinhaActionEClass, INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION);
+    createEReference(inclusiveOrExpressionLinhaActionEClass, INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION_LINHA);
+
+    logicalAndExpressionLinhaActionEClass = createEClass(LOGICAL_AND_EXPRESSION_LINHA_ACTION);
+    createEReference(logicalAndExpressionLinhaActionEClass, LOGICAL_AND_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION);
+    createEReference(logicalAndExpressionLinhaActionEClass, LOGICAL_AND_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION_LINHA);
+
+    logicalOrExpressionLinhaActionEClass = createEClass(LOGICAL_OR_EXPRESSION_LINHA_ACTION);
+    createEReference(logicalOrExpressionLinhaActionEClass, LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION);
+    createEReference(logicalOrExpressionLinhaActionEClass, LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_OR_EXPRESSION_LINHA);
+
+    conditionalExpressionLinhaAcctionEClass = createEClass(CONDITIONAL_EXPRESSION_LINHA_ACCTION);
+    createEReference(conditionalExpressionLinhaAcctionEClass, CONDITIONAL_EXPRESSION_LINHA_ACCTION__EXPRESSION);
+    createEReference(conditionalExpressionLinhaAcctionEClass, CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION);
+    createEReference(conditionalExpressionLinhaAcctionEClass, CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION_LINHA);
+
+    expressionLinhaActionEClass = createEClass(EXPRESSION_LINHA_ACTION);
+    createEReference(expressionLinhaActionEClass, EXPRESSION_LINHA_ACTION__ASSIGNMENT_EXPRESSION);
+    createEReference(expressionLinhaActionEClass, EXPRESSION_LINHA_ACTION__EXPRESSION_LINHA);
+
+    initDecclaratorListLinhaActionEClass = createEClass(INIT_DECCLARATOR_LIST_LINHA_ACTION);
+    createEReference(initDecclaratorListLinhaActionEClass, INIT_DECCLARATOR_LIST_LINHA_ACTION__INIT_DECLARATOR);
+    createEReference(initDecclaratorListLinhaActionEClass, INIT_DECCLARATOR_LIST_LINHA_ACTION__INIT_DECLARATOR_LIST_LINHA);
   }
 
   /**
@@ -174,10 +5810,595 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    type_qualifier_listEClass.getESuperTypes().add(this.getdirect_abstract_declarator_complement());
+    jump_statementEClass.getESuperTypes().add(this.getstatement());
+    iteration_statementEClass.getESuperTypes().add(this.getstatement());
+    selection_statementEClass.getESuperTypes().add(this.getstatement());
+    labeled_statementEClass.getESuperTypes().add(this.getstatement());
+    compound_statementEClass.getESuperTypes().add(this.getstatement());
+    block_itemEClass.getESuperTypes().add(this.getblock_item_list());
+    expression_statementEClass.getESuperTypes().add(this.getstatement());
+    type_nameEClass.getESuperTypes().add(this.getpostfix_expression());
+    enumeratorListLinhaActionEClass.getESuperTypes().add(this.getenumerator_list_linha());
+    structOrUnionSpecifierComplementActionEClass.getESuperTypes().add(this.getstruct_or_union_specifier_complement());
+    structDeclarationListLinhaActionEClass.getESuperTypes().add(this.getstruct_declaration_list_linha());
+    structDeclaratorListLinhaActionEClass.getESuperTypes().add(this.getstruct_declarator_list_linha());
+    declarationListLinhaActionEClass.getESuperTypes().add(this.getdeclaration_list_linha());
+    typeQualifierListLinhaAtionEClass.getESuperTypes().add(this.gettype_qualifier_list_linha());
+    directDeclaratorLinhaActionEClass.getESuperTypes().add(this.getdirect_declarator_linha());
+    parameterListLinhaActionEClass.getESuperTypes().add(this.getparameter_list_linha());
+    directAbstractDeclarratorLinhaActionEClass.getESuperTypes().add(this.getdirect_abstract_declarator_linha());
+    identifierListLinhaActionEClass.getESuperTypes().add(this.getidentifier_list_linha());
+    tranlationUnitLinhaActionEClass.getESuperTypes().add(this.gettranslation_unit_linha());
+    genericAssocListLinhaActionEClass.getESuperTypes().add(this.getgeneric_assoc_list_linha());
+    postfixExpressionLinhaActionEClass.getESuperTypes().add(this.getpostfix_expression_linha());
+    initializerListLinhaActionEClass.getESuperTypes().add(this.getinitializer_list_linha());
+    designatorListLinhaActionEClass.getESuperTypes().add(this.getdesignator_list_linha());
+    postfixExpressionComplementExpressionEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    postfixExpressionComplementEmptyEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    postfixExpressionComplementArgListEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    postfixExpressionComplementIdentifierEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    postfixExpressionComplementPointerEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    postfixExpressionComplementIncrementEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    postfixExpressionComplementDecrementEClass.getESuperTypes().add(this.getpostfix_expression_complement());
+    argumentExpressionListLinhaActionEClass.getESuperTypes().add(this.getargument_expression_list_linha());
+    multiplicativeExpressionLinhaActionEClass.getESuperTypes().add(this.getmultiplicative_expression_linha());
+    additiveExpressionLinhaActionEClass.getESuperTypes().add(this.getadditive_expression_linha());
+    shiftExpressionLinhaActionEClass.getESuperTypes().add(this.getshift_expression_linha());
+    relationalExpressionLinhaActionEClass.getESuperTypes().add(this.getrelational_expression_linha());
+    equalityExpressionLinhaActionEClass.getESuperTypes().add(this.getequality_expression_linha());
+    blockItemListLinhaActionEClass.getESuperTypes().add(this.getblock_item_list_linha());
+    andExpressionLinhaActionEClass.getESuperTypes().add(this.getand_expression_linha());
+    exclusiveOrExpressionLinhaActionEClass.getESuperTypes().add(this.getexclusive_or_expression_linha());
+    inclusiveOrExpressionLinhaActionEClass.getESuperTypes().add(this.getinclusive_or_expression_linha());
+    logicalAndExpressionLinhaActionEClass.getESuperTypes().add(this.getlogical_and_expression_linha());
+    logicalOrExpressionLinhaActionEClass.getESuperTypes().add(this.getlogical_or_expression_linha());
+    conditionalExpressionLinhaAcctionEClass.getESuperTypes().add(this.getconditional_expression_linha());
+    expressionLinhaActionEClass.getESuperTypes().add(this.getexpression_linha());
+    initDecclaratorListLinhaActionEClass.getESuperTypes().add(this.getinit_declarator_list_linha());
 
     // Initialize classes and features; add operations and parameters
     initEClass(domainModelEClass, DomainModel.class, "DomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDomainModel_Geetings(), ecorePackage.getEString(), "geetings", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDomainModel_Geetings(), this.gettranslation_unit(), null, "geetings", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(translation_unitEClass, translation_unit.class, "translation_unit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(gettranslation_unit_External_declaration(), this.getexternal_declaration(), null, "external_declaration", null, 0, 1, translation_unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(gettranslation_unit_Translation_unit_linha(), this.gettranslation_unit_linha(), null, "translation_unit_linha", null, 0, 1, translation_unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(external_declarationEClass, external_declaration.class, "external_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getexternal_declaration_Function_definitio(), this.getfunction_definition(), null, "function_definitio", null, 0, 1, external_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexternal_declaration_Declaration(), this.getdeclaration(), null, "declaration", null, 0, 1, external_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(declaration_specifiersEClass, declaration_specifiers.class, "declaration_specifiers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getdeclaration_specifiers_Storage_class_specifier(), ecorePackage.getEString(), "storage_class_specifier", null, 0, 1, declaration_specifiers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclaration_specifiers_Declaration_specifiers(), this.getdeclaration_specifiers(), null, "declaration_specifiers", null, 0, -1, declaration_specifiers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclaration_specifiers_Type_specifier(), this.gettype_specifier(), null, "type_specifier", null, 0, 1, declaration_specifiers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getdeclaration_specifiers_Type_qualifier(), ecorePackage.getEString(), "type_qualifier", null, 0, 1, declaration_specifiers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getdeclaration_specifiers_Function_specifier(), ecorePackage.getEString(), "function_specifier", null, 0, 1, declaration_specifiers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclaration_specifiers_Alignment_specifier(), this.getalignment_specifier(), null, "alignment_specifier", null, 0, 1, declaration_specifiers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(alignment_specifierEClass, alignment_specifier.class, "alignment_specifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getalignment_specifier_Type_name(), this.gettype_name(), null, "type_name", null, 0, 1, alignment_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getalignment_specifier_Constant_expression(), this.getconstant_expression(), null, "constant_expression", null, 0, 1, alignment_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(type_specifierEClass, type_specifier.class, "type_specifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(gettype_specifier_Atomic_type_specifier(), this.getatomic_type_specifier(), null, "atomic_type_specifier", null, 0, 1, type_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(gettype_specifier_Struct_or_union_specifier(), this.getstruct_or_union_specifier(), null, "struct_or_union_specifier", null, 0, 1, type_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(gettype_specifier_Enum_specifier(), this.getenum_specifier(), null, "enum_specifier", null, 0, 1, type_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enum_specifierEClass, enum_specifier.class, "enum_specifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getenum_specifier_Enumerator_list(), this.getenumerator_list(), null, "enumerator_list", null, 0, 1, enum_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getenum_specifier_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, enum_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumerator_listEClass, enumerator_list.class, "enumerator_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getenumerator_list_Enumarator(), this.getenumerator(), null, "enumarator", null, 0, 1, enumerator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getenumerator_list_Enumerator_list_linha(), this.getenumerator_list_linha(), null, "enumerator_list_linha", null, 0, 1, enumerator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumerator_list_linhaEClass, enumerator_list_linha.class, "enumerator_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(enumeratorEClass, enumerator.class, "enumerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getenumerator_Enumeration_constant(), this.getenumeration_constant(), null, "enumeration_constant", null, 0, 1, enumerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getenumerator_Conditional_expression(), this.getconstant_expression(), null, "conditional_expression", null, 0, 1, enumerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atomic_type_specifierEClass, atomic_type_specifier.class, "atomic_type_specifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getatomic_type_specifier_Type_name(), this.gettype_name(), null, "type_name", null, 0, 1, atomic_type_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(struct_or_union_specifierEClass, struct_or_union_specifier.class, "struct_or_union_specifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getstruct_or_union_specifier_Struct_or_union(), ecorePackage.getEString(), "struct_or_union", null, 0, 1, struct_or_union_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_or_union_specifier_Struct_declaration_list(), this.getstruct_declaration_list(), null, "struct_declaration_list", null, 0, 1, struct_or_union_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getstruct_or_union_specifier_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, struct_or_union_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_or_union_specifier_Struct_or_union_specifier_complement(), this.getstruct_or_union_specifier_complement(), null, "struct_or_union_specifier_complement", null, 0, 1, struct_or_union_specifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(struct_or_union_specifier_complementEClass, struct_or_union_specifier_complement.class, "struct_or_union_specifier_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(struct_declaration_listEClass, struct_declaration_list.class, "struct_declaration_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstruct_declaration_list_Struct_declaration(), this.getstruct_declaration(), null, "struct_declaration", null, 0, 1, struct_declaration_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_declaration_list_Struct_declaration_list_linha(), this.getstruct_declaration_list_linha(), null, "struct_declaration_list_linha", null, 0, 1, struct_declaration_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(struct_declaration_list_linhaEClass, struct_declaration_list_linha.class, "struct_declaration_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(struct_declarationEClass, struct_declaration.class, "struct_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstruct_declaration_Specifier_qualifier_list(), this.getspecifier_qualifier_list(), null, "specifier_qualifier_list", null, 0, 1, struct_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_declaration_Struct_declarator_list(), this.getstruct_declarator_list(), null, "struct_declarator_list", null, 0, 1, struct_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_declaration_Static_assert_declaration(), this.getstatic_assert_declaration(), null, "static_assert_declaration", null, 0, 1, struct_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(struct_declarator_listEClass, struct_declarator_list.class, "struct_declarator_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstruct_declarator_list_Struct_declarator(), this.getstruct_declarator(), null, "struct_declarator", null, 0, 1, struct_declarator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_declarator_list_Struct_declarator_list_linha(), this.getstruct_declarator_list_linha(), null, "struct_declarator_list_linha", null, 0, 1, struct_declarator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(struct_declarator_list_linhaEClass, struct_declarator_list_linha.class, "struct_declarator_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(struct_declaratorEClass, struct_declarator.class, "struct_declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstruct_declarator_Constant_expression(), this.getconstant_expression(), null, "constant_expression", null, 0, 1, struct_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstruct_declarator_Declarator(), this.getdeclarator(), null, "declarator", null, 0, 1, struct_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(specifier_qualifier_listEClass, specifier_qualifier_list.class, "specifier_qualifier_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getspecifier_qualifier_list_Type_specifier(), this.gettype_specifier(), null, "type_specifier", null, 0, 1, specifier_qualifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getspecifier_qualifier_list_Specifier_qualifier_list(), this.getspecifier_qualifier_list(), null, "specifier_qualifier_list", null, 0, 1, specifier_qualifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getspecifier_qualifier_list_Type_qualifier(), ecorePackage.getEString(), "type_qualifier", null, 0, 1, specifier_qualifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(declarationEClass, declaration.class, "declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdeclaration_Declaration_specifiers(), this.getdeclaration_specifiers(), null, "declaration_specifiers", null, 0, -1, declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclaration_Init_declarator_list(), this.getinit_declarator_list(), null, "init_declarator_list", null, 0, -1, declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclaration_Static_assert_declaration(), this.getstatic_assert_declaration(), null, "static_assert_declaration", null, 0, 1, declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(function_definitionEClass, function_definition.class, "function_definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getfunction_definition_Declaration_specifiers(), this.getdeclaration_specifiers(), null, "declaration_specifiers", null, 0, -1, function_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getfunction_definition_Declarator(), this.getdeclarator(), null, "declarator", null, 0, 1, function_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getfunction_definition_Declaration_list(), this.getdeclaration_list(), null, "declaration_list", null, 0, -1, function_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getfunction_definition_Compound_statement(), this.getcompound_statement(), null, "compound_statement", null, 0, 1, function_definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(declaration_listEClass, declaration_list.class, "declaration_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdeclaration_list_Declaration(), this.getdeclaration(), null, "declaration", null, 0, 1, declaration_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclaration_list_Declaration_list_linha(), this.getdeclaration_list_linha(), null, "declaration_list_linha", null, 0, 1, declaration_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(declaration_list_linhaEClass, declaration_list_linha.class, "declaration_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(declaratorEClass, declarator.class, "declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdeclarator_Pointer(), this.getpointer(), null, "pointer", null, 0, 1, declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdeclarator_Direct_declarator(), this.getdirect_declarator(), null, "direct_declarator", null, 0, 1, declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pointerEClass, pointer.class, "pointer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getpointer_Type_qualifier_list(), this.gettype_qualifier_list(), null, "type_qualifier_list", null, 0, 1, pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpointer_Pointer(), this.getpointer(), null, "pointer", null, 0, 1, pointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(type_qualifier_listEClass, type_qualifier_list.class, "type_qualifier_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(gettype_qualifier_list_Type_qualifier(), ecorePackage.getEString(), "type_qualifier", null, 0, 1, type_qualifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(gettype_qualifier_list_Type_qualifier_list_linha(), this.gettype_qualifier_list_linha(), null, "type_qualifier_list_linha", null, 0, 1, type_qualifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(type_qualifier_list_linhaEClass, type_qualifier_list_linha.class, "type_qualifier_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(direct_declaratorEClass, direct_declarator.class, "direct_declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getdirect_declarator_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, direct_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_declarator_Direct_declarator_linha(), this.getdirect_declarator_linha(), null, "direct_declarator_linha", null, 0, 1, direct_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_declarator_Declarator(), this.getdeclarator(), null, "declarator", null, 0, 1, direct_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(direct_declarator_linhaEClass, direct_declarator_linha.class, "direct_declarator_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(direct_declarator_complementoEClass, direct_declarator_complemento.class, "direct_declarator_complemento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdirect_declarator_complemento_Type_qualifier_list(), this.gettype_qualifier_list(), null, "type_qualifier_list", null, 0, 1, direct_declarator_complemento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_declarator_complemento_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, direct_declarator_complemento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_declarator_complemento_Parameter_type_list(), this.getparameter_type_list(), null, "parameter_type_list", null, 0, 1, direct_declarator_complemento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_declarator_complemento_Identifier_list(), this.getidentifier_list(), null, "identifier_list", null, 0, 1, direct_declarator_complemento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parameter_type_listEClass, parameter_type_list.class, "parameter_type_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getparameter_type_list_Parameter_list(), this.getparameter_list(), null, "parameter_list", null, 0, 1, parameter_type_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parameter_listEClass, parameter_list.class, "parameter_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getparameter_list_Parameter_declaration(), this.getparameter_declaration(), null, "parameter_declaration", null, 0, 1, parameter_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getparameter_list_Parameter_list_linha(), this.getparameter_list_linha(), null, "parameter_list_linha", null, 0, 1, parameter_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parameter_list_linhaEClass, parameter_list_linha.class, "parameter_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(parameter_declarationEClass, parameter_declaration.class, "parameter_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getparameter_declaration_Declaration_specifiers(), this.getdeclaration_specifiers(), null, "declaration_specifiers", null, 0, 1, parameter_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getparameter_declaration_Declarator(), this.getdeclarator(), null, "declarator", null, 0, 1, parameter_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getparameter_declaration_Abstract_declarator(), this.getabstract_declarator(), null, "abstract_declarator", null, 0, 1, parameter_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(abstract_declaratorEClass, abstract_declarator.class, "abstract_declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getabstract_declarator_Pointer(), this.getpointer(), null, "pointer", null, 0, 1, abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getabstract_declarator_Direct_abstract_declarator(), this.getdirect_abstract_declarator(), null, "direct_abstract_declarator", null, 0, 1, abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(direct_abstract_declaratorEClass, direct_abstract_declarator.class, "direct_abstract_declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdirect_abstract_declarator_Abstract_declarator(), this.getabstract_declarator(), null, "abstract_declarator", null, 0, 1, direct_abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_abstract_declarator_Type_qualifier_list(), this.gettype_qualifier_list(), null, "type_qualifier_list", null, 0, 1, direct_abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_abstract_declarator_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, direct_abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_abstract_declarator_Parameter_type_list(), this.getparameter_type_list(), null, "parameter_type_list", null, 0, 1, direct_abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_abstract_declarator_Direct_abstract_declarator_linha(), this.getdirect_abstract_declarator_linha(), null, "direct_abstract_declarator_linha", null, 0, 1, direct_abstract_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initializerEClass, initializer.class, "initializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinitializer_Init_declarator_list(), this.getinitializer_list(), null, "init_declarator_list", null, 0, 1, initializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinitializer_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, initializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(direct_abstract_declarator_linhaEClass, direct_abstract_declarator_linha.class, "direct_abstract_declarator_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(direct_abstract_declarator_complementEClass, direct_abstract_declarator_complement.class, "direct_abstract_declarator_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdirect_abstract_declarator_complement_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, direct_abstract_declarator_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_abstract_declarator_complement_Type_qualifier_list(), this.gettype_qualifier_list(), null, "type_qualifier_list", null, 0, 1, direct_abstract_declarator_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdirect_abstract_declarator_complement_Parameter_type_list(), this.getparameter_type_list(), null, "parameter_type_list", null, 0, 1, direct_abstract_declarator_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(identifier_listEClass, identifier_list.class, "identifier_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getidentifier_list_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, identifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getidentifier_list_Identifier_list_linha(), this.getidentifier_list_linha(), null, "identifier_list_linha", null, 0, 1, identifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(identifier_list_linhaEClass, identifier_list_linha.class, "identifier_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(translation_unit_linhaEClass, translation_unit_linha.class, "translation_unit_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(primary_expressionEClass, primary_expression.class, "primary_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getprimary_expression_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getprimary_expression_Constant(), this.getconstant(), null, "constant", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getprimary_expression_String(), this.getstring_ufcg(), null, "string", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getprimary_expression_Expression(), this.getexpression(), null, "expression", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getprimary_expression_Generic_selection(), this.getgeneric_selection(), null, "generic_selection", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumeration_constantEClass, enumeration_constant.class, "enumeration_constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getenumeration_constant_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, enumeration_constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(generic_selectionEClass, generic_selection.class, "generic_selection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getgeneric_selection__generic(), ecorePackage.getEString(), "_generic", null, 0, 1, generic_selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgeneric_selection_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, generic_selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgeneric_selection_Generic_assoc_list(), this.getgeneric_assoc_list(), null, "generic_assoc_list", null, 0, -1, generic_selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(generic_assoc_listEClass, generic_assoc_list.class, "generic_assoc_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getgeneric_assoc_list_Generic_association(), this.getgeneric_association(), null, "generic_association", null, 0, 1, generic_assoc_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgeneric_assoc_list_Generic_assoc_list_linha(), this.getgeneric_assoc_list_linha(), null, "generic_assoc_list_linha", null, 0, 1, generic_assoc_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(generic_assoc_list_linhaEClass, generic_assoc_list_linha.class, "generic_assoc_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(generic_associationEClass, generic_association.class, "generic_association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getgeneric_association_Type_name(), this.gettype_name(), null, "type_name", null, 0, 1, generic_association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgeneric_association_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, generic_association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getgeneric_association_Default(), ecorePackage.getEString(), "default", null, 0, 1, generic_association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfix_expressionEClass, postfix_expression.class, "postfix_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getpostfix_expression_Primary_expression(), this.getprimary_expression(), null, "primary_expression", null, 0, 1, postfix_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpostfix_expression_Postfix_expression_linha(), this.getpostfix_expression_linha(), null, "postfix_expression_linha", null, 0, 1, postfix_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfix_expression_linhaEClass, postfix_expression_linha.class, "postfix_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(initializer_listEClass, initializer_list.class, "initializer_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinitializer_list_Designation(), this.getdesignation(), null, "designation", null, 0, 1, initializer_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinitializer_list_Initializer(), this.getinitializer(), null, "initializer", null, 0, 1, initializer_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinitializer_list_Init_declarator_list_linha(), this.getinit_declarator_list_linha(), null, "init_declarator_list_linha", null, 0, 1, initializer_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initializer_list_linhaEClass, initializer_list_linha.class, "initializer_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(initializer_list_complementEClass, initializer_list_complement.class, "initializer_list_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinitializer_list_complement_Designation(), this.getdesignation(), null, "designation", null, 0, 1, initializer_list_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinitializer_list_complement_Initializer(), this.getinitializer(), null, "initializer", null, 0, 1, initializer_list_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(designationEClass, designation.class, "designation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdesignation_Designator_list(), this.getdesignator_list(), null, "designator_list", null, 0, 1, designation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(designator_listEClass, designator_list.class, "designator_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdesignator_list_Designator(), this.getdesignator(), null, "designator", null, 0, 1, designator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getdesignator_list_Designator_list_linha(), this.getdesignator_list_linha(), null, "designator_list_linha", null, 0, 1, designator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(designator_list_linhaEClass, designator_list_linha.class, "designator_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(designatorEClass, designator.class, "designator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdesignator_Constant_expression(), this.getconditional_expression(), null, "constant_expression", null, 0, 1, designator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getdesignator_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, designator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(static_assert_declarationEClass, static_assert_declaration.class, "static_assert_declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstatic_assert_declaration_Constant_expression(), this.getconstant_expression(), null, "constant_expression", null, 0, 1, static_assert_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfix_expression_complementEClass, postfix_expression_complement.class, "postfix_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(argument_expression_listEClass, argument_expression_list.class, "argument_expression_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getargument_expression_list_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, argument_expression_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getargument_expression_list_Argument_expression_list_linha(), this.getargument_expression_list_linha(), null, "argument_expression_list_linha", null, 0, 1, argument_expression_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(argument_expression_list_linhaEClass, argument_expression_list_linha.class, "argument_expression_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(unary_expressionEClass, unary_expression.class, "unary_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getunary_expression_Postfix_expression(), this.getpostfix_expression(), null, "postfix_expression", null, 0, 1, unary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getunary_expression_Unary_expression(), this.getunary_expression(), null, "unary_expression", null, 0, 1, unary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getunary_expression_Unary_operator(), ecorePackage.getEString(), "unary_operator", null, 0, 1, unary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getunary_expression_Cast_expression(), this.getcast_expression(), null, "cast_expression", null, 0, 1, unary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getunary_expression_Type_name(), this.gettype_name(), null, "type_name", null, 0, 1, unary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cast_expressionEClass, cast_expression.class, "cast_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcast_expression_Unary_expression(), this.getunary_expression(), null, "unary_expression", null, 0, 1, cast_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcast_expression_Type_name(), this.gettype_name(), null, "type_name", null, 0, 1, cast_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcast_expression_Cast_expression(), this.getcast_expression(), null, "cast_expression", null, 0, 1, cast_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplicative_expressionEClass, multiplicative_expression.class, "multiplicative_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getmultiplicative_expression_Cast_expression(), this.getcast_expression(), null, "cast_expression", null, 0, 1, multiplicative_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmultiplicative_expression_Multiplicative_expression_linha(), this.getmultiplicative_expression_linha(), null, "multiplicative_expression_linha", null, 0, 1, multiplicative_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplicative_expression_linhaEClass, multiplicative_expression_linha.class, "multiplicative_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(multiplicative_expression_complementEClass, multiplicative_expression_complement.class, "multiplicative_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getmultiplicative_expression_complement_Cast_expression(), this.getcast_expression(), null, "cast_expression", null, 0, 1, multiplicative_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(additive_expressionEClass, additive_expression.class, "additive_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getadditive_expression_Multiplicative_expression(), this.getmultiplicative_expression(), null, "multiplicative_expression", null, 0, 1, additive_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getadditive_expression_Additive_expression_linha(), this.getadditive_expression_linha(), null, "additive_expression_linha", null, 0, 1, additive_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(additive_expression_linhaEClass, additive_expression_linha.class, "additive_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(additive_expression_complementEClass, additive_expression_complement.class, "additive_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getadditive_expression_complement_Multiplicative_expression(), this.getmultiplicative_expression(), null, "multiplicative_expression", null, 0, 1, additive_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(shift_expressionEClass, shift_expression.class, "shift_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getshift_expression_Additive_expression(), this.getadditive_expression(), null, "additive_expression", null, 0, 1, shift_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getshift_expression_Shift_expression_linha(), this.getshift_expression_linha(), null, "shift_expression_linha", null, 0, 1, shift_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(shift_expression_linhaEClass, shift_expression_linha.class, "shift_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(shift_expression_complementEClass, shift_expression_complement.class, "shift_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getshift_expression_complement_Additive_expression(), this.getadditive_expression(), null, "additive_expression", null, 0, 1, shift_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(relational_expressionEClass, relational_expression.class, "relational_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getrelational_expression_Shift_expression(), this.getshift_expression(), null, "shift_expression", null, 0, 1, relational_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrelational_expression_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, relational_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(relational_expression_linhaEClass, relational_expression_linha.class, "relational_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(relational_expression_complementEClass, relational_expression_complement.class, "relational_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getrelational_expression_complement_Shift_expression(), this.getshift_expression(), null, "shift_expression", null, 0, 1, relational_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(equality_expressionEClass, equality_expression.class, "equality_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getequality_expression_Relational_expression(), this.getrelational_expression(), null, "relational_expression", null, 0, 1, equality_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getequality_expression_Equality_expression_linha(), this.getequality_expression_linha(), null, "equality_expression_linha", null, 0, 1, equality_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(equality_expression_linhaEClass, equality_expression_linha.class, "equality_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(equality_expression_complementEClass, equality_expression_complement.class, "equality_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getequality_expression_complement_Relational_expression(), this.getrelational_expression(), null, "relational_expression", null, 0, 1, equality_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(statementEClass, statement.class, "statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(jump_statementEClass, jump_statement.class, "jump_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getjump_statement_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getjump_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(iteration_statementEClass, iteration_statement.class, "iteration_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getiteration_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, iteration_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getiteration_statement_Statement(), this.getstatement(), null, "statement", null, 0, 1, iteration_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getiteration_statement_Expression_statement(), this.getexpression_statement(), null, "expression_statement", null, 0, 1, iteration_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getiteration_statement_Expression_statement2(), this.getexpression_statement(), null, "expression_statement2", null, 0, 1, iteration_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getiteration_statement_Declaration(), this.getdeclaration(), null, "declaration", null, 0, 1, iteration_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(selection_statementEClass, selection_statement.class, "selection_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getselection_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, selection_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getselection_statement_Statement(), ecorePackage.getEObject(), null, "statement", null, 0, 1, selection_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getselection_statement_Statement2(), this.getstatement(), null, "statement2", null, 0, 1, selection_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(labeled_statementEClass, labeled_statement.class, "labeled_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getlabeled_statement_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, labeled_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlabeled_statement_Statement(), this.getstatement(), null, "statement", null, 0, 1, labeled_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlabeled_statement_Constant_expression(), this.getconditional_expression(), null, "constant_expression", null, 0, 1, labeled_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(compound_statementEClass, compound_statement.class, "compound_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcompound_statement_Block_item_list(), this.getblock_item_list(), null, "block_item_list", null, 0, 1, compound_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(block_item_listEClass, block_item_list.class, "block_item_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(block_item_list_linhaEClass, block_item_list_linha.class, "block_item_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(block_itemEClass, block_item.class, "block_item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getblock_item_Block_item_list_linha(), this.getblock_item_list_linha(), null, "block_item_list_linha", null, 0, 1, block_item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getblock_item_Declaration(), this.getdeclaration(), null, "declaration", null, 0, 1, block_item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getblock_item_Statement(), this.getstatement(), null, "statement", null, 0, 1, block_item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expression_statementEClass, expression_statement.class, "expression_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getexpression_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, expression_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(and_expressionEClass, and_expression.class, "and_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getand_expression_Equality_expression(), this.getequality_expression(), null, "equality_expression", null, 0, 1, and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getand_expression_And_expression_linha(), this.getand_expression_linha(), null, "and_expression_linha", null, 0, 1, and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(and_expression_linhaEClass, and_expression_linha.class, "and_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(exclusive_or_expressionEClass, exclusive_or_expression.class, "exclusive_or_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getexclusive_or_expression_And_expression(), this.getand_expression(), null, "and_expression", null, 0, 1, exclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexclusive_or_expression_Exclusive_or_expression_linha(), this.getexclusive_or_expression_linha(), null, "exclusive_or_expression_linha", null, 0, 1, exclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(exclusive_or_expression_linhaEClass, exclusive_or_expression_linha.class, "exclusive_or_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(inclusive_or_expressionEClass, inclusive_or_expression.class, "inclusive_or_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinclusive_or_expression_Exclusive_or_expression(), this.getexclusive_or_expression(), null, "exclusive_or_expression", null, 0, 1, inclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinclusive_or_expression_Inclusive_or_expression_linha(), this.getinclusive_or_expression_linha(), null, "inclusive_or_expression_linha", null, 0, 1, inclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(inclusive_or_expression_linhaEClass, inclusive_or_expression_linha.class, "inclusive_or_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(logical_and_expressionEClass, logical_and_expression.class, "logical_and_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getlogical_and_expression_Inclusive_or_expression(), this.getinclusive_or_expression(), null, "inclusive_or_expression", null, 0, 1, logical_and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlogical_and_expression_Logical_and_expression_linha(), this.getlogical_and_expression_linha(), null, "logical_and_expression_linha", null, 0, 1, logical_and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logical_and_expression_linhaEClass, logical_and_expression_linha.class, "logical_and_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(logical_or_expressionEClass, logical_or_expression.class, "logical_or_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getlogical_or_expression_Logical_and_expression(), this.getlogical_and_expression(), null, "logical_and_expression", null, 0, 1, logical_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlogical_or_expression_Logical_or_expression_linha(), this.getlogical_or_expression_linha(), null, "logical_or_expression_linha", null, 0, 1, logical_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logical_or_expression_linhaEClass, logical_or_expression_linha.class, "logical_or_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(conditional_expressionEClass, conditional_expression.class, "conditional_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getconditional_expression_Logical_or_expression(), this.getlogical_or_expression(), null, "logical_or_expression", null, 0, 1, conditional_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getconditional_expression_Conditional_expression_linha(), this.getconditional_expression_linha(), null, "conditional_expression_linha", null, 0, 1, conditional_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(conditional_expression_linhaEClass, conditional_expression_linha.class, "conditional_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(assignment_expressionEClass, assignment_expression.class, "assignment_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getassignment_expression_Conditional_expression(), this.getconditional_expression(), null, "conditional_expression", null, 0, 1, assignment_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getassignment_expression_Unary_expression(), this.getunary_expression(), null, "unary_expression", null, 0, 1, assignment_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getassignment_expression_Assignment_operator(), ecorePackage.getEString(), "assignment_operator", null, 0, 1, assignment_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getassignment_expression_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, assignment_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(type_nameEClass, type_name.class, "type_name", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(gettype_name_Initializer_list(), this.getinitializer_list(), null, "initializer_list", null, 0, 1, type_name.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(gettype_name_Specifier_qualifier_list(), this.getspecifier_qualifier_list(), null, "specifier_qualifier_list", null, 0, 1, type_name.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(gettype_name_Abstract_declarator(), this.getabstract_declarator(), null, "abstract_declarator", null, 0, 1, type_name.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expressionEClass, expression.class, "expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getexpression_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexpression_Expression_linha(), this.getexpression_linha(), null, "expression_linha", null, 0, 1, expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expression_linhaEClass, expression_linha.class, "expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(constant_expressionEClass, constant_expression.class, "constant_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getconstant_expression_Conditional_expression(), this.getconditional_expression(), null, "conditional_expression", null, 0, 1, constant_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(init_declarator_listEClass, init_declarator_list.class, "init_declarator_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinit_declarator_list_Init_declarator(), this.getinit_declarator(), null, "init_declarator", null, 0, 1, init_declarator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinit_declarator_list_Init_declarator_list_linha(), this.getinit_declarator_list_linha(), null, "init_declarator_list_linha", null, 0, 1, init_declarator_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(init_declarator_list_linhaEClass, init_declarator_list_linha.class, "init_declarator_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(init_declaratorEClass, init_declarator.class, "init_declarator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinit_declarator_Declarator(), this.getdeclarator(), null, "declarator", null, 0, 1, init_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinit_declarator_Initializer(), this.getinitializer(), null, "initializer", null, 0, 1, init_declarator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(string_ufcgEClass, string_ufcg.class, "string_ufcg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getstring_ufcg_String_literal(), ecorePackage.getEString(), "string_literal", null, 0, 1, string_ufcg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getstring_ufcg___func__(), ecorePackage.getEString(), "__func__", null, 0, 1, string_ufcg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(constantEClass, constant.class, "constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getconstant_I_constant(), ecorePackage.getEString(), "i_constant", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getconstant_F_constant(), ecorePackage.getEString(), "f_constant", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getconstant_Enumz(), ecorePackage.getEString(), "enumz", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumeratorListLinhaActionEClass, EnumeratorListLinhaAction.class, "EnumeratorListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEnumeratorListLinhaAction_Enumerator(), this.getenumerator(), null, "enumerator", null, 0, 1, EnumeratorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEnumeratorListLinhaAction_Enumerator_list_linha(), this.getenumerator_list_linha(), null, "enumerator_list_linha", null, 0, 1, EnumeratorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(structOrUnionSpecifierComplementActionEClass, StructOrUnionSpecifierComplementAction.class, "StructOrUnionSpecifierComplementAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStructOrUnionSpecifierComplementAction_Struct_declaration_list(), this.getstruct_declaration_list(), null, "struct_declaration_list", null, 0, 1, StructOrUnionSpecifierComplementAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(structDeclarationListLinhaActionEClass, StructDeclarationListLinhaAction.class, "StructDeclarationListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStructDeclarationListLinhaAction_Struct_declaration(), this.getstruct_declaration(), null, "struct_declaration", null, 0, 1, StructDeclarationListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStructDeclarationListLinhaAction_Struct_declaration_list_linha(), this.getstruct_declaration_list_linha(), null, "struct_declaration_list_linha", null, 0, 1, StructDeclarationListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(structDeclaratorListLinhaActionEClass, StructDeclaratorListLinhaAction.class, "StructDeclaratorListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStructDeclaratorListLinhaAction_Struct_declarator(), this.getstruct_declarator(), null, "struct_declarator", null, 0, 1, StructDeclaratorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStructDeclaratorListLinhaAction_Struct_declarator_list_linha(), this.getstruct_declarator_list_linha(), null, "struct_declarator_list_linha", null, 0, 1, StructDeclaratorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(declarationListLinhaActionEClass, DeclarationListLinhaAction.class, "DeclarationListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDeclarationListLinhaAction_Declaration(), this.getdeclaration(), null, "declaration", null, 0, 1, DeclarationListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDeclarationListLinhaAction_Declaration_list_linha(), this.getdeclaration_list_linha(), null, "declaration_list_linha", null, 0, 1, DeclarationListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeQualifierListLinhaAtionEClass, TypeQualifierListLinhaAtion.class, "TypeQualifierListLinhaAtion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypeQualifierListLinhaAtion_Type_qualifier(), ecorePackage.getEString(), "type_qualifier", null, 0, 1, TypeQualifierListLinhaAtion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTypeQualifierListLinhaAtion_Type_qualifier_list_linha(), this.gettype_qualifier_list_linha(), null, "type_qualifier_list_linha", null, 0, 1, TypeQualifierListLinhaAtion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(directDeclaratorLinhaActionEClass, DirectDeclaratorLinhaAction.class, "DirectDeclaratorLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDirectDeclaratorLinhaAction_Direct_declarator_complemento(), this.getdirect_declarator_complemento(), null, "direct_declarator_complemento", null, 0, 1, DirectDeclaratorLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDirectDeclaratorLinhaAction_Direct_declarator_linha(), this.getdirect_declarator_linha(), null, "direct_declarator_linha", null, 0, 1, DirectDeclaratorLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parameterListLinhaActionEClass, ParameterListLinhaAction.class, "ParameterListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParameterListLinhaAction_Parameter_declaration(), this.getparameter_declaration(), null, "parameter_declaration", null, 0, 1, ParameterListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParameterListLinhaAction_Parameter_list_linha(), this.getparameter_list_linha(), null, "parameter_list_linha", null, 0, 1, ParameterListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(directAbstractDeclarratorLinhaActionEClass, DirectAbstractDeclarratorLinhaAction.class, "DirectAbstractDeclarratorLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_complement(), this.getdirect_abstract_declarator_complement(), null, "direct_abstract_declarator_complement", null, 0, 1, DirectAbstractDeclarratorLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_linha(), this.getdirect_abstract_declarator_linha(), null, "direct_abstract_declarator_linha", null, 0, 1, DirectAbstractDeclarratorLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(identifierListLinhaActionEClass, IdentifierListLinhaAction.class, "IdentifierListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIdentifierListLinhaAction_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, IdentifierListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIdentifierListLinhaAction_Identifier_list_linha(), this.getidentifier_list_linha(), null, "identifier_list_linha", null, 0, 1, IdentifierListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tranlationUnitLinhaActionEClass, TranlationUnitLinhaAction.class, "TranlationUnitLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTranlationUnitLinhaAction_External_declaration(), this.getexternal_declaration(), null, "external_declaration", null, 0, 1, TranlationUnitLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTranlationUnitLinhaAction_Translation_unit_linha(), this.gettranslation_unit_linha(), null, "translation_unit_linha", null, 0, 1, TranlationUnitLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(genericAssocListLinhaActionEClass, GenericAssocListLinhaAction.class, "GenericAssocListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGenericAssocListLinhaAction_Generic_association(), this.getgeneric_association(), null, "generic_association", null, 0, 1, GenericAssocListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGenericAssocListLinhaAction_Generic_assoc_list_linha(), this.getgeneric_assoc_list_linha(), null, "generic_assoc_list_linha", null, 0, 1, GenericAssocListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfixExpressionLinhaActionEClass, PostfixExpressionLinhaAction.class, "PostfixExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPostfixExpressionLinhaAction_Postfix_expression_complement(), this.getpostfix_expression_complement(), null, "postfix_expression_complement", null, 0, 1, PostfixExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPostfixExpressionLinhaAction_Postfix_expression_linha(), this.getpostfix_expression_linha(), null, "postfix_expression_linha", null, 0, 1, PostfixExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initializerListLinhaActionEClass, InitializerListLinhaAction.class, "InitializerListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInitializerListLinhaAction_Initializer_list_complement(), this.getinitializer_list_complement(), null, "initializer_list_complement", null, 0, 1, InitializerListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInitializerListLinhaAction_Init_declarator_list_linha(), this.getinit_declarator_list_linha(), null, "init_declarator_list_linha", null, 0, 1, InitializerListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(designatorListLinhaActionEClass, DesignatorListLinhaAction.class, "DesignatorListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDesignatorListLinhaAction_Designator(), this.getdesignator(), null, "designator", null, 0, 1, DesignatorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDesignatorListLinhaAction_Designator_list_linha(), this.getdeclaration_list_linha(), null, "designator_list_linha", null, 0, 1, DesignatorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfixExpressionComplementExpressionEClass, PostfixExpressionComplementExpression.class, "PostfixExpressionComplementExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPostfixExpressionComplementExpression_Expression(), this.getexpression(), null, "expression", null, 0, 1, PostfixExpressionComplementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfixExpressionComplementEmptyEClass, PostfixExpressionComplementEmpty.class, "PostfixExpressionComplementEmpty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(postfixExpressionComplementArgListEClass, PostfixExpressionComplementArgList.class, "PostfixExpressionComplementArgList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPostfixExpressionComplementArgList_Argument_expression_list(), this.getargument_expression_list(), null, "argument_expression_list", null, 0, -1, PostfixExpressionComplementArgList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfixExpressionComplementIdentifierEClass, PostfixExpressionComplementIdentifier.class, "PostfixExpressionComplementIdentifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPostfixExpressionComplementIdentifier_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, PostfixExpressionComplementIdentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfixExpressionComplementPointerEClass, PostfixExpressionComplementPointer.class, "PostfixExpressionComplementPointer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPostfixExpressionComplementPointer_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, PostfixExpressionComplementPointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(postfixExpressionComplementIncrementEClass, PostfixExpressionComplementIncrement.class, "PostfixExpressionComplementIncrement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(postfixExpressionComplementDecrementEClass, PostfixExpressionComplementDecrement.class, "PostfixExpressionComplementDecrement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(argumentExpressionListLinhaActionEClass, ArgumentExpressionListLinhaAction.class, "ArgumentExpressionListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getArgumentExpressionListLinhaAction_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, ArgumentExpressionListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArgumentExpressionListLinhaAction_Argument_expression_list_linha(), this.getargument_expression_list_linha(), null, "argument_expression_list_linha", null, 0, 1, ArgumentExpressionListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplicativeExpressionLinhaActionEClass, MultiplicativeExpressionLinhaAction.class, "MultiplicativeExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement(), this.getmultiplicative_expression_complement(), null, "multiplicative_expression_complement", null, 0, 1, MultiplicativeExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha(), this.getmultiplicative_expression_linha(), null, "multiplicative_expression_linha", null, 0, 1, MultiplicativeExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(additiveExpressionLinhaActionEClass, AdditiveExpressionLinhaAction.class, "AdditiveExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAdditiveExpressionLinhaAction_Additive_expression_complement(), this.getadditive_expression_complement(), null, "additive_expression_complement", null, 0, 1, AdditiveExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAdditiveExpressionLinhaAction_Additive_expression_linha(), this.getadditive_expression_linha(), null, "additive_expression_linha", null, 0, 1, AdditiveExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(shiftExpressionLinhaActionEClass, ShiftExpressionLinhaAction.class, "ShiftExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getShiftExpressionLinhaAction_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, ShiftExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getShiftExpressionLinhaAction_Shift_expression_linha(), this.getshift_expression_linha(), null, "shift_expression_linha", null, 0, 1, ShiftExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(relationalExpressionLinhaActionEClass, RelationalExpressionLinhaAction.class, "RelationalExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRelationalExpressionLinhaAction_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, RelationalExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRelationalExpressionLinhaAction_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, RelationalExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(equalityExpressionLinhaActionEClass, EqualityExpressionLinhaAction.class, "EqualityExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEqualityExpressionLinhaAction_Equality_expression_complement(), this.getequality_expression_complement(), null, "equality_expression_complement", null, 0, 1, EqualityExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEqualityExpressionLinhaAction_Equality_expression_linha(), this.getequality_expression_linha(), null, "equality_expression_linha", null, 0, 1, EqualityExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(blockItemListLinhaActionEClass, BlockItemListLinhaAction.class, "BlockItemListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBlockItemListLinhaAction_Block_item(), this.getblock_item(), null, "block_item", null, 0, 1, BlockItemListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBlockItemListLinhaAction_Block_item_list_linha(), this.getblock_item_list_linha(), null, "block_item_list_linha", null, 0, 1, BlockItemListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(andExpressionLinhaActionEClass, AndExpressionLinhaAction.class, "AndExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAndExpressionLinhaAction_Equality_expression(), this.getequality_expression(), null, "equality_expression", null, 0, 1, AndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAndExpressionLinhaAction_And_expression_linha(), this.getand_expression_linha(), null, "and_expression_linha", null, 0, 1, AndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(exclusiveOrExpressionLinhaActionEClass, ExclusiveOrExpressionLinhaAction.class, "ExclusiveOrExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExclusiveOrExpressionLinhaAction_And_expression(), this.getand_expression(), null, "and_expression", null, 0, 1, ExclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha(), this.getexclusive_or_expression_linha(), null, "exclusive_or_expression_linha", null, 0, 1, ExclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(inclusiveOrExpressionLinhaActionEClass, InclusiveOrExpressionLinhaAction.class, "InclusiveOrExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInclusiveOrExpressionLinhaAction_Exclusive_or_expression(), this.getexclusive_or_expression(), null, "exclusive_or_expression", null, 0, 1, InclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha(), this.getinclusive_or_expression_linha(), null, "inclusive_or_expression_linha", null, 0, 1, InclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logicalAndExpressionLinhaActionEClass, LogicalAndExpressionLinhaAction.class, "LogicalAndExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLogicalAndExpressionLinhaAction_Inclusive_or_expression(), this.getinclusive_or_expression(), null, "inclusive_or_expression", null, 0, 1, LogicalAndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLogicalAndExpressionLinhaAction_Logical_and_expression_linha(), this.getlogical_and_expression_linha(), null, "logical_and_expression_linha", null, 0, 1, LogicalAndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logicalOrExpressionLinhaActionEClass, LogicalOrExpressionLinhaAction.class, "LogicalOrExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLogicalOrExpressionLinhaAction_Logical_and_expression(), this.getlogical_and_expression(), null, "logical_and_expression", null, 0, 1, LogicalOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLogicalOrExpressionLinhaAction_Logical_or_expression_linha(), this.getlogical_or_expression_linha(), null, "logical_or_expression_linha", null, 0, 1, LogicalOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(conditionalExpressionLinhaAcctionEClass, ConditionalExpressionLinhaAcction.class, "ConditionalExpressionLinhaAcction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConditionalExpressionLinhaAcction_Expression(), this.getexpression(), null, "expression", null, 0, 1, ConditionalExpressionLinhaAcction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditionalExpressionLinhaAcction_Conditional_expression(), this.getconditional_expression(), null, "conditional_expression", null, 0, 1, ConditionalExpressionLinhaAcction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditionalExpressionLinhaAcction_Conditional_expression_linha(), this.getconditional_expression_linha(), null, "conditional_expression_linha", null, 0, 1, ConditionalExpressionLinhaAcction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expressionLinhaActionEClass, ExpressionLinhaAction.class, "ExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExpressionLinhaAction_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, ExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpressionLinhaAction_Expression_linha(), this.getexpression_linha(), null, "expression_linha", null, 0, 1, ExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initDecclaratorListLinhaActionEClass, InitDecclaratorListLinhaAction.class, "InitDecclaratorListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInitDecclaratorListLinhaAction_Init_declarator(), this.getinit_declarator(), null, "init_declarator", null, 0, 1, InitDecclaratorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInitDecclaratorListLinhaAction_Init_declarator_list_linha(), this.getinit_declarator_list_linha(), null, "init_declarator_list_linha", null, 0, 1, InitDecclaratorListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

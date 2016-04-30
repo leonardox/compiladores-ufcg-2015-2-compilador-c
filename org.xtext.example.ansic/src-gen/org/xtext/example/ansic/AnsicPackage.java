@@ -6,6 +6,7 @@ package org.xtext.example.ansic;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +68,7 @@ public interface AnsicPackage extends EPackage
   int DOMAIN_MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Geetings</b></em>' attribute list.
+   * The feature id for the '<em><b>Geetings</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -84,6 +85,5049 @@ public interface AnsicPackage extends EPackage
    */
   int DOMAIN_MODEL_FEATURE_COUNT = 1;
 
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.translation_unitImpl <em>translation unit</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.translation_unitImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettranslation_unit()
+   * @generated
+   */
+  int TRANSLATION_UNIT = 1;
+
+  /**
+   * The feature id for the '<em><b>External declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSLATION_UNIT__EXTERNAL_DECLARATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Translation unit linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSLATION_UNIT__TRANSLATION_UNIT_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>translation unit</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSLATION_UNIT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.external_declarationImpl <em>external declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.external_declarationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexternal_declaration()
+   * @generated
+   */
+  int EXTERNAL_DECLARATION = 2;
+
+  /**
+   * The feature id for the '<em><b>Function definitio</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_DECLARATION__FUNCTION_DEFINITIO = 0;
+
+  /**
+   * The feature id for the '<em><b>Declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_DECLARATION__DECLARATION = 1;
+
+  /**
+   * The number of structural features of the '<em>external declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXTERNAL_DECLARATION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.declaration_specifiersImpl <em>declaration specifiers</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.declaration_specifiersImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_specifiers()
+   * @generated
+   */
+  int DECLARATION_SPECIFIERS = 3;
+
+  /**
+   * The feature id for the '<em><b>Storage class specifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS__STORAGE_CLASS_SPECIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS__DECLARATION_SPECIFIERS = 1;
+
+  /**
+   * The feature id for the '<em><b>Type specifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS__TYPE_SPECIFIER = 2;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS__TYPE_QUALIFIER = 3;
+
+  /**
+   * The feature id for the '<em><b>Function specifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS__FUNCTION_SPECIFIER = 4;
+
+  /**
+   * The feature id for the '<em><b>Alignment specifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS__ALIGNMENT_SPECIFIER = 5;
+
+  /**
+   * The number of structural features of the '<em>declaration specifiers</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_SPECIFIERS_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.alignment_specifierImpl <em>alignment specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.alignment_specifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getalignment_specifier()
+   * @generated
+   */
+  int ALIGNMENT_SPECIFIER = 4;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALIGNMENT_SPECIFIER__TYPE_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALIGNMENT_SPECIFIER__CONSTANT_EXPRESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>alignment specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALIGNMENT_SPECIFIER_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.type_specifierImpl <em>type specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.type_specifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_specifier()
+   * @generated
+   */
+  int TYPE_SPECIFIER = 5;
+
+  /**
+   * The feature id for the '<em><b>Atomic type specifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Struct or union specifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER = 1;
+
+  /**
+   * The feature id for the '<em><b>Enum specifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_SPECIFIER__ENUM_SPECIFIER = 2;
+
+  /**
+   * The number of structural features of the '<em>type specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_SPECIFIER_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.enum_specifierImpl <em>enum specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.enum_specifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenum_specifier()
+   * @generated
+   */
+  int ENUM_SPECIFIER = 6;
+
+  /**
+   * The feature id for the '<em><b>Enumerator list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_SPECIFIER__ENUMERATOR_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_SPECIFIER__IDENTIFIER = 1;
+
+  /**
+   * The number of structural features of the '<em>enum specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_SPECIFIER_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.enumerator_listImpl <em>enumerator list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.enumerator_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator_list()
+   * @generated
+   */
+  int ENUMERATOR_LIST = 7;
+
+  /**
+   * The feature id for the '<em><b>Enumarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST__ENUMARATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Enumerator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST__ENUMERATOR_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>enumerator list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.enumerator_list_linhaImpl <em>enumerator list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.enumerator_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator_list_linha()
+   * @generated
+   */
+  int ENUMERATOR_LIST_LINHA = 8;
+
+  /**
+   * The number of structural features of the '<em>enumerator list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.enumeratorImpl <em>enumerator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.enumeratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator()
+   * @generated
+   */
+  int ENUMERATOR = 9;
+
+  /**
+   * The feature id for the '<em><b>Enumeration constant</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR__ENUMERATION_CONSTANT = 0;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR__CONDITIONAL_EXPRESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>enumerator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.atomic_type_specifierImpl <em>atomic type specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.atomic_type_specifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getatomic_type_specifier()
+   * @generated
+   */
+  int ATOMIC_TYPE_SPECIFIER = 10;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATOMIC_TYPE_SPECIFIER__TYPE_NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>atomic type specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATOMIC_TYPE_SPECIFIER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_or_union_specifierImpl <em>struct or union specifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_or_union_specifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_or_union_specifier()
+   * @generated
+   */
+  int STRUCT_OR_UNION_SPECIFIER = 11;
+
+  /**
+   * The feature id for the '<em><b>Struct or union</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER__STRUCT_OR_UNION = 0;
+
+  /**
+   * The feature id for the '<em><b>Struct declaration list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER__STRUCT_DECLARATION_LIST = 1;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER__IDENTIFIER = 2;
+
+  /**
+   * The feature id for the '<em><b>Struct or union specifier complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER__STRUCT_OR_UNION_SPECIFIER_COMPLEMENT = 3;
+
+  /**
+   * The number of structural features of the '<em>struct or union specifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_or_union_specifier_complementImpl <em>struct or union specifier complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_or_union_specifier_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_or_union_specifier_complement()
+   * @generated
+   */
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT = 12;
+
+  /**
+   * The number of structural features of the '<em>struct or union specifier complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_declaration_listImpl <em>struct declaration list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_declaration_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration_list()
+   * @generated
+   */
+  int STRUCT_DECLARATION_LIST = 13;
+
+  /**
+   * The feature id for the '<em><b>Struct declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST__STRUCT_DECLARATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Struct declaration list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST__STRUCT_DECLARATION_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>struct declaration list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_declaration_list_linhaImpl <em>struct declaration list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_declaration_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration_list_linha()
+   * @generated
+   */
+  int STRUCT_DECLARATION_LIST_LINHA = 14;
+
+  /**
+   * The number of structural features of the '<em>struct declaration list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_declarationImpl <em>struct declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_declarationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration()
+   * @generated
+   */
+  int STRUCT_DECLARATION = 15;
+
+  /**
+   * The feature id for the '<em><b>Specifier qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION__SPECIFIER_QUALIFIER_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>Struct declarator list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION__STRUCT_DECLARATOR_LIST = 1;
+
+  /**
+   * The feature id for the '<em><b>Static assert declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION__STATIC_ASSERT_DECLARATION = 2;
+
+  /**
+   * The number of structural features of the '<em>struct declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_declarator_listImpl <em>struct declarator list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_declarator_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator_list()
+   * @generated
+   */
+  int STRUCT_DECLARATOR_LIST = 16;
+
+  /**
+   * The feature id for the '<em><b>Struct declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Struct declarator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>struct declarator list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_declarator_list_linhaImpl <em>struct declarator list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_declarator_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator_list_linha()
+   * @generated
+   */
+  int STRUCT_DECLARATOR_LIST_LINHA = 17;
+
+  /**
+   * The number of structural features of the '<em>struct declarator list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.struct_declaratorImpl <em>struct declarator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.struct_declaratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator()
+   * @generated
+   */
+  int STRUCT_DECLARATOR = 18;
+
+  /**
+   * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR__CONSTANT_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR__DECLARATOR = 1;
+
+  /**
+   * The number of structural features of the '<em>struct declarator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.specifier_qualifier_listImpl <em>specifier qualifier list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.specifier_qualifier_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getspecifier_qualifier_list()
+   * @generated
+   */
+  int SPECIFIER_QUALIFIER_LIST = 19;
+
+  /**
+   * The feature id for the '<em><b>Type specifier</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPECIFIER_QUALIFIER_LIST__TYPE_SPECIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Specifier qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST = 1;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER = 2;
+
+  /**
+   * The number of structural features of the '<em>specifier qualifier list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPECIFIER_QUALIFIER_LIST_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.declarationImpl <em>declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.declarationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration()
+   * @generated
+   */
+  int DECLARATION = 20;
+
+  /**
+   * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION__DECLARATION_SPECIFIERS = 0;
+
+  /**
+   * The feature id for the '<em><b>Init declarator list</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION__INIT_DECLARATOR_LIST = 1;
+
+  /**
+   * The feature id for the '<em><b>Static assert declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION__STATIC_ASSERT_DECLARATION = 2;
+
+  /**
+   * The number of structural features of the '<em>declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.function_definitionImpl <em>function definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.function_definitionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getfunction_definition()
+   * @generated
+   */
+  int FUNCTION_DEFINITION = 21;
+
+  /**
+   * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_DEFINITION__DECLARATION_SPECIFIERS = 0;
+
+  /**
+   * The feature id for the '<em><b>Declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_DEFINITION__DECLARATOR = 1;
+
+  /**
+   * The feature id for the '<em><b>Declaration list</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_DEFINITION__DECLARATION_LIST = 2;
+
+  /**
+   * The feature id for the '<em><b>Compound statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_DEFINITION__COMPOUND_STATEMENT = 3;
+
+  /**
+   * The number of structural features of the '<em>function definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_DEFINITION_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.declaration_listImpl <em>declaration list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.declaration_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_list()
+   * @generated
+   */
+  int DECLARATION_LIST = 22;
+
+  /**
+   * The feature id for the '<em><b>Declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST__DECLARATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Declaration list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST__DECLARATION_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>declaration list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.declaration_list_linhaImpl <em>declaration list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.declaration_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_list_linha()
+   * @generated
+   */
+  int DECLARATION_LIST_LINHA = 23;
+
+  /**
+   * The number of structural features of the '<em>declaration list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.declaratorImpl <em>declarator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.declaratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclarator()
+   * @generated
+   */
+  int DECLARATOR = 24;
+
+  /**
+   * The feature id for the '<em><b>Pointer</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATOR__POINTER = 0;
+
+  /**
+   * The feature id for the '<em><b>Direct declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATOR__DIRECT_DECLARATOR = 1;
+
+  /**
+   * The number of structural features of the '<em>declarator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATOR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.pointerImpl <em>pointer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.pointerImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpointer()
+   * @generated
+   */
+  int POINTER = 25;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINTER__TYPE_QUALIFIER_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>Pointer</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINTER__POINTER = 1;
+
+  /**
+   * The number of structural features of the '<em>pointer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINTER_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_abstract_declarator_complementImpl <em>direct abstract declarator complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.direct_abstract_declarator_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator_complement()
+   * @generated
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT = 39;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__ASSIGNMENT_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__TYPE_QUALIFIER_LIST = 1;
+
+  /**
+   * The feature id for the '<em><b>Parameter type list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__PARAMETER_TYPE_LIST = 2;
+
+  /**
+   * The number of structural features of the '<em>direct abstract declarator complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.type_qualifier_listImpl <em>type qualifier list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.type_qualifier_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier_list()
+   * @generated
+   */
+  int TYPE_QUALIFIER_LIST = 26;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST__ASSIGNMENT_EXPRESSION = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__ASSIGNMENT_EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__TYPE_QUALIFIER_LIST;
+
+  /**
+   * The feature id for the '<em><b>Parameter type list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST__PARAMETER_TYPE_LIST = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__PARAMETER_TYPE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST__TYPE_QUALIFIER = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>type qualifier list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST_FEATURE_COUNT = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.type_qualifier_list_linhaImpl <em>type qualifier list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.type_qualifier_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier_list_linha()
+   * @generated
+   */
+  int TYPE_QUALIFIER_LIST_LINHA = 27;
+
+  /**
+   * The number of structural features of the '<em>type qualifier list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_declaratorImpl <em>direct declarator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.direct_declaratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator()
+   * @generated
+   */
+  int DIRECT_DECLARATOR = 28;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR__IDENTIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Direct declarator linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR__DIRECT_DECLARATOR_LINHA = 1;
+
+  /**
+   * The feature id for the '<em><b>Declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR__DECLARATOR = 2;
+
+  /**
+   * The number of structural features of the '<em>direct declarator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_declarator_linhaImpl <em>direct declarator linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.direct_declarator_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator_linha()
+   * @generated
+   */
+  int DIRECT_DECLARATOR_LINHA = 29;
+
+  /**
+   * The number of structural features of the '<em>direct declarator linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_declarator_complementoImpl <em>direct declarator complemento</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.direct_declarator_complementoImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator_complemento()
+   * @generated
+   */
+  int DIRECT_DECLARATOR_COMPLEMENTO = 30;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_COMPLEMENTO__TYPE_QUALIFIER_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_COMPLEMENTO__ASSIGNMENT_EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Parameter type list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_COMPLEMENTO__PARAMETER_TYPE_LIST = 2;
+
+  /**
+   * The feature id for the '<em><b>Identifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_COMPLEMENTO__IDENTIFIER_LIST = 3;
+
+  /**
+   * The number of structural features of the '<em>direct declarator complemento</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_COMPLEMENTO_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_type_listImpl <em>parameter type list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.parameter_type_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_type_list()
+   * @generated
+   */
+  int PARAMETER_TYPE_LIST = 31;
+
+  /**
+   * The feature id for the '<em><b>Parameter list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_TYPE_LIST__PARAMETER_LIST = 0;
+
+  /**
+   * The number of structural features of the '<em>parameter type list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_TYPE_LIST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_listImpl <em>parameter list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.parameter_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list()
+   * @generated
+   */
+  int PARAMETER_LIST = 32;
+
+  /**
+   * The feature id for the '<em><b>Parameter declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST__PARAMETER_DECLARATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST__PARAMETER_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>parameter list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_list_linhaImpl <em>parameter list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.parameter_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list_linha()
+   * @generated
+   */
+  int PARAMETER_LIST_LINHA = 33;
+
+  /**
+   * The number of structural features of the '<em>parameter list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_declarationImpl <em>parameter declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.parameter_declarationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_declaration()
+   * @generated
+   */
+  int PARAMETER_DECLARATION = 34;
+
+  /**
+   * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_DECLARATION__DECLARATION_SPECIFIERS = 0;
+
+  /**
+   * The feature id for the '<em><b>Declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_DECLARATION__DECLARATOR = 1;
+
+  /**
+   * The feature id for the '<em><b>Abstract declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_DECLARATION__ABSTRACT_DECLARATOR = 2;
+
+  /**
+   * The number of structural features of the '<em>parameter declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_DECLARATION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.abstract_declaratorImpl <em>abstract declarator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.abstract_declaratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getabstract_declarator()
+   * @generated
+   */
+  int ABSTRACT_DECLARATOR = 35;
+
+  /**
+   * The feature id for the '<em><b>Pointer</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_DECLARATOR__POINTER = 0;
+
+  /**
+   * The feature id for the '<em><b>Direct abstract declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_DECLARATOR__DIRECT_ABSTRACT_DECLARATOR = 1;
+
+  /**
+   * The number of structural features of the '<em>abstract declarator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_DECLARATOR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_abstract_declaratorImpl <em>direct abstract declarator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.direct_abstract_declaratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator()
+   * @generated
+   */
+  int DIRECT_ABSTRACT_DECLARATOR = 36;
+
+  /**
+   * The feature id for the '<em><b>Abstract declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR__ABSTRACT_DECLARATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR__TYPE_QUALIFIER_LIST = 1;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR__ASSIGNMENT_EXPRESSION = 2;
+
+  /**
+   * The feature id for the '<em><b>Parameter type list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR__PARAMETER_TYPE_LIST = 3;
+
+  /**
+   * The feature id for the '<em><b>Direct abstract declarator linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR__DIRECT_ABSTRACT_DECLARATOR_LINHA = 4;
+
+  /**
+   * The number of structural features of the '<em>direct abstract declarator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.initializerImpl <em>initializer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.initializerImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer()
+   * @generated
+   */
+  int INITIALIZER = 37;
+
+  /**
+   * The feature id for the '<em><b>Init declarator list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER__INIT_DECLARATOR_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER__ASSIGNMENT_EXPRESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>initializer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_abstract_declarator_linhaImpl <em>direct abstract declarator linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.direct_abstract_declarator_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator_linha()
+   * @generated
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_LINHA = 38;
+
+  /**
+   * The number of structural features of the '<em>direct abstract declarator linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARATOR_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.identifier_listImpl <em>identifier list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.identifier_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getidentifier_list()
+   * @generated
+   */
+  int IDENTIFIER_LIST = 40;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST__IDENTIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Identifier list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST__IDENTIFIER_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>identifier list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.identifier_list_linhaImpl <em>identifier list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.identifier_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getidentifier_list_linha()
+   * @generated
+   */
+  int IDENTIFIER_LIST_LINHA = 41;
+
+  /**
+   * The number of structural features of the '<em>identifier list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.translation_unit_linhaImpl <em>translation unit linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.translation_unit_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettranslation_unit_linha()
+   * @generated
+   */
+  int TRANSLATION_UNIT_LINHA = 42;
+
+  /**
+   * The number of structural features of the '<em>translation unit linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSLATION_UNIT_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.primary_expressionImpl <em>primary expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.primary_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getprimary_expression()
+   * @generated
+   */
+  int PRIMARY_EXPRESSION = 43;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION__IDENTIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Constant</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION__CONSTANT = 1;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION__STRING = 2;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION__EXPRESSION = 3;
+
+  /**
+   * The feature id for the '<em><b>Generic selection</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION__GENERIC_SELECTION = 4;
+
+  /**
+   * The number of structural features of the '<em>primary expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.enumeration_constantImpl <em>enumeration constant</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.enumeration_constantImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumeration_constant()
+   * @generated
+   */
+  int ENUMERATION_CONSTANT = 44;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION_CONSTANT__IDENTIFIER = 0;
+
+  /**
+   * The number of structural features of the '<em>enumeration constant</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATION_CONSTANT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.generic_selectionImpl <em>generic selection</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.generic_selectionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_selection()
+   * @generated
+   */
+  int GENERIC_SELECTION = 45;
+
+  /**
+   * The feature id for the '<em><b>generic</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_SELECTION__GENERIC = 0;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_SELECTION__ASSIGNMENT_EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Generic assoc list</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_SELECTION__GENERIC_ASSOC_LIST = 2;
+
+  /**
+   * The number of structural features of the '<em>generic selection</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_SELECTION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.generic_assoc_listImpl <em>generic assoc list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.generic_assoc_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_assoc_list()
+   * @generated
+   */
+  int GENERIC_ASSOC_LIST = 46;
+
+  /**
+   * The feature id for the '<em><b>Generic association</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST__GENERIC_ASSOCIATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Generic assoc list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST__GENERIC_ASSOC_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>generic assoc list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.generic_assoc_list_linhaImpl <em>generic assoc list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.generic_assoc_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_assoc_list_linha()
+   * @generated
+   */
+  int GENERIC_ASSOC_LIST_LINHA = 47;
+
+  /**
+   * The number of structural features of the '<em>generic assoc list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.generic_associationImpl <em>generic association</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.generic_associationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_association()
+   * @generated
+   */
+  int GENERIC_ASSOCIATION = 48;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOCIATION__TYPE_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOCIATION__ASSIGNMENT_EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Default</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOCIATION__DEFAULT = 2;
+
+  /**
+   * The number of structural features of the '<em>generic association</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOCIATION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.postfix_expressionImpl <em>postfix expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.postfix_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION = 49;
+
+  /**
+   * The feature id for the '<em><b>Primary expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION__PRIMARY_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Postfix expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION__POSTFIX_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>postfix expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.postfix_expression_linhaImpl <em>postfix expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.postfix_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression_linha()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_LINHA = 50;
+
+  /**
+   * The number of structural features of the '<em>postfix expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.initializer_listImpl <em>initializer list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.initializer_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list()
+   * @generated
+   */
+  int INITIALIZER_LIST = 51;
+
+  /**
+   * The feature id for the '<em><b>Designation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST__DESIGNATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Initializer</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST__INITIALIZER = 1;
+
+  /**
+   * The feature id for the '<em><b>Init declarator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST__INIT_DECLARATOR_LIST_LINHA = 2;
+
+  /**
+   * The number of structural features of the '<em>initializer list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.initializer_list_linhaImpl <em>initializer list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.initializer_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list_linha()
+   * @generated
+   */
+  int INITIALIZER_LIST_LINHA = 52;
+
+  /**
+   * The number of structural features of the '<em>initializer list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.initializer_list_complementImpl <em>initializer list complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.initializer_list_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list_complement()
+   * @generated
+   */
+  int INITIALIZER_LIST_COMPLEMENT = 53;
+
+  /**
+   * The feature id for the '<em><b>Designation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_COMPLEMENT__DESIGNATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Initializer</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_COMPLEMENT__INITIALIZER = 1;
+
+  /**
+   * The number of structural features of the '<em>initializer list complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_COMPLEMENT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.designationImpl <em>designation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.designationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignation()
+   * @generated
+   */
+  int DESIGNATION = 54;
+
+  /**
+   * The feature id for the '<em><b>Designator list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATION__DESIGNATOR_LIST = 0;
+
+  /**
+   * The number of structural features of the '<em>designation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.designator_listImpl <em>designator list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.designator_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator_list()
+   * @generated
+   */
+  int DESIGNATOR_LIST = 55;
+
+  /**
+   * The feature id for the '<em><b>Designator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST__DESIGNATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Designator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST__DESIGNATOR_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>designator list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.designator_list_linhaImpl <em>designator list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.designator_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator_list_linha()
+   * @generated
+   */
+  int DESIGNATOR_LIST_LINHA = 56;
+
+  /**
+   * The number of structural features of the '<em>designator list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.designatorImpl <em>designator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.designatorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator()
+   * @generated
+   */
+  int DESIGNATOR = 57;
+
+  /**
+   * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR__CONSTANT_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR__IDENTIFIER = 1;
+
+  /**
+   * The number of structural features of the '<em>designator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.static_assert_declarationImpl <em>static assert declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.static_assert_declarationImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstatic_assert_declaration()
+   * @generated
+   */
+  int STATIC_ASSERT_DECLARATION = 58;
+
+  /**
+   * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATIC_ASSERT_DECLARATION__CONSTANT_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>static assert declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATIC_ASSERT_DECLARATION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.postfix_expression_complementImpl <em>postfix expression complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.postfix_expression_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression_complement()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT = 59;
+
+  /**
+   * The number of structural features of the '<em>postfix expression complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.argument_expression_listImpl <em>argument expression list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.argument_expression_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getargument_expression_list()
+   * @generated
+   */
+  int ARGUMENT_EXPRESSION_LIST = 60;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Argument expression list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>argument expression list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.argument_expression_list_linhaImpl <em>argument expression list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.argument_expression_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getargument_expression_list_linha()
+   * @generated
+   */
+  int ARGUMENT_EXPRESSION_LIST_LINHA = 61;
+
+  /**
+   * The number of structural features of the '<em>argument expression list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.unary_expressionImpl <em>unary expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.unary_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getunary_expression()
+   * @generated
+   */
+  int UNARY_EXPRESSION = 62;
+
+  /**
+   * The feature id for the '<em><b>Postfix expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXPRESSION__POSTFIX_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Unary expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXPRESSION__UNARY_EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Unary operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXPRESSION__UNARY_OPERATOR = 2;
+
+  /**
+   * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXPRESSION__CAST_EXPRESSION = 3;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXPRESSION__TYPE_NAME = 4;
+
+  /**
+   * The number of structural features of the '<em>unary expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXPRESSION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.cast_expressionImpl <em>cast expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.cast_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getcast_expression()
+   * @generated
+   */
+  int CAST_EXPRESSION = 63;
+
+  /**
+   * The feature id for the '<em><b>Unary expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAST_EXPRESSION__UNARY_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAST_EXPRESSION__TYPE_NAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAST_EXPRESSION__CAST_EXPRESSION = 2;
+
+  /**
+   * The number of structural features of the '<em>cast expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAST_EXPRESSION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.multiplicative_expressionImpl <em>multiplicative expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.multiplicative_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression()
+   * @generated
+   */
+  int MULTIPLICATIVE_EXPRESSION = 64;
+
+  /**
+   * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Multiplicative expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>multiplicative expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.multiplicative_expression_linhaImpl <em>multiplicative expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.multiplicative_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression_linha()
+   * @generated
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA = 65;
+
+  /**
+   * The number of structural features of the '<em>multiplicative expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.multiplicative_expression_complementImpl <em>multiplicative expression complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.multiplicative_expression_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression_complement()
+   * @generated
+   */
+  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT = 66;
+
+  /**
+   * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT__CAST_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>multiplicative expression complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.additive_expressionImpl <em>additive expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.additive_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression()
+   * @generated
+   */
+  int ADDITIVE_EXPRESSION = 67;
+
+  /**
+   * The feature id for the '<em><b>Multiplicative expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Additive expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>additive expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.additive_expression_linhaImpl <em>additive expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.additive_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression_linha()
+   * @generated
+   */
+  int ADDITIVE_EXPRESSION_LINHA = 68;
+
+  /**
+   * The number of structural features of the '<em>additive expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.additive_expression_complementImpl <em>additive expression complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.additive_expression_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression_complement()
+   * @generated
+   */
+  int ADDITIVE_EXPRESSION_COMPLEMENT = 69;
+
+  /**
+   * The feature id for the '<em><b>Multiplicative expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>additive expression complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.shift_expressionImpl <em>shift expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.shift_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression()
+   * @generated
+   */
+  int SHIFT_EXPRESSION = 70;
+
+  /**
+   * The feature id for the '<em><b>Additive expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION__ADDITIVE_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Shift expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>shift expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.shift_expression_linhaImpl <em>shift expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.shift_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression_linha()
+   * @generated
+   */
+  int SHIFT_EXPRESSION_LINHA = 71;
+
+  /**
+   * The number of structural features of the '<em>shift expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.shift_expression_complementImpl <em>shift expression complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.shift_expression_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression_complement()
+   * @generated
+   */
+  int SHIFT_EXPRESSION_COMPLEMENT = 72;
+
+  /**
+   * The feature id for the '<em><b>Additive expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_COMPLEMENT__ADDITIVE_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>shift expression complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.relational_expressionImpl <em>relational expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.relational_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression()
+   * @generated
+   */
+  int RELATIONAL_EXPRESSION = 73;
+
+  /**
+   * The feature id for the '<em><b>Shift expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION__SHIFT_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Relational expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>relational expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.relational_expression_linhaImpl <em>relational expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.relational_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression_linha()
+   * @generated
+   */
+  int RELATIONAL_EXPRESSION_LINHA = 74;
+
+  /**
+   * The number of structural features of the '<em>relational expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.relational_expression_complementImpl <em>relational expression complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.relational_expression_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression_complement()
+   * @generated
+   */
+  int RELATIONAL_EXPRESSION_COMPLEMENT = 75;
+
+  /**
+   * The feature id for the '<em><b>Shift expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_COMPLEMENT__SHIFT_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>relational expression complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.equality_expressionImpl <em>equality expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.equality_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression()
+   * @generated
+   */
+  int EQUALITY_EXPRESSION = 76;
+
+  /**
+   * The feature id for the '<em><b>Relational expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION__RELATIONAL_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Equality expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION__EQUALITY_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>equality expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.equality_expression_linhaImpl <em>equality expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.equality_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression_linha()
+   * @generated
+   */
+  int EQUALITY_EXPRESSION_LINHA = 77;
+
+  /**
+   * The number of structural features of the '<em>equality expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.equality_expression_complementImpl <em>equality expression complement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.equality_expression_complementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression_complement()
+   * @generated
+   */
+  int EQUALITY_EXPRESSION_COMPLEMENT = 78;
+
+  /**
+   * The feature id for the '<em><b>Relational expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_COMPLEMENT__RELATIONAL_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>equality expression complement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.statementImpl <em>statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstatement()
+   * @generated
+   */
+  int STATEMENT = 79;
+
+  /**
+   * The number of structural features of the '<em>statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.jump_statementImpl <em>jump statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.jump_statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getjump_statement()
+   * @generated
+   */
+  int JUMP_STATEMENT = 80;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_STATEMENT__IDENTIFIER = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>jump statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.iteration_statementImpl <em>iteration statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.iteration_statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getiteration_statement()
+   * @generated
+   */
+  int ITERATION_STATEMENT = 81;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITERATION_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITERATION_STATEMENT__STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Expression statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITERATION_STATEMENT__EXPRESSION_STATEMENT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Expression statement2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITERATION_STATEMENT__EXPRESSION_STATEMENT2 = STATEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITERATION_STATEMENT__DECLARATION = STATEMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>iteration statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITERATION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.selection_statementImpl <em>selection statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.selection_statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getselection_statement()
+   * @generated
+   */
+  int SELECTION_STATEMENT = 82;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTION_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTION_STATEMENT__STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Statement2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTION_STATEMENT__STATEMENT2 = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>selection statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.labeled_statementImpl <em>labeled statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.labeled_statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlabeled_statement()
+   * @generated
+   */
+  int LABELED_STATEMENT = 83;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABELED_STATEMENT__IDENTIFIER = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABELED_STATEMENT__STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABELED_STATEMENT__CONSTANT_EXPRESSION = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>labeled statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABELED_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.compound_statementImpl <em>compound statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.compound_statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getcompound_statement()
+   * @generated
+   */
+  int COMPOUND_STATEMENT = 84;
+
+  /**
+   * The feature id for the '<em><b>Block item list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOUND_STATEMENT__BLOCK_ITEM_LIST = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>compound statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPOUND_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.block_item_listImpl <em>block item list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.block_item_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item_list()
+   * @generated
+   */
+  int BLOCK_ITEM_LIST = 85;
+
+  /**
+   * The number of structural features of the '<em>block item list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.block_item_list_linhaImpl <em>block item list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.block_item_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item_list_linha()
+   * @generated
+   */
+  int BLOCK_ITEM_LIST_LINHA = 86;
+
+  /**
+   * The number of structural features of the '<em>block item list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.block_itemImpl <em>block item</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.block_itemImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item()
+   * @generated
+   */
+  int BLOCK_ITEM = 87;
+
+  /**
+   * The feature id for the '<em><b>Block item list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA = BLOCK_ITEM_LIST_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM__DECLARATION = BLOCK_ITEM_LIST_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM__STATEMENT = BLOCK_ITEM_LIST_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>block item</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_FEATURE_COUNT = BLOCK_ITEM_LIST_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.expression_statementImpl <em>expression statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.expression_statementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression_statement()
+   * @generated
+   */
+  int EXPRESSION_STATEMENT = 88;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>expression statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.and_expressionImpl <em>and expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.and_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getand_expression()
+   * @generated
+   */
+  int AND_EXPRESSION = 89;
+
+  /**
+   * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION__EQUALITY_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>And expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION__AND_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>and expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.and_expression_linhaImpl <em>and expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.and_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getand_expression_linha()
+   * @generated
+   */
+  int AND_EXPRESSION_LINHA = 90;
+
+  /**
+   * The number of structural features of the '<em>and expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.exclusive_or_expressionImpl <em>exclusive or expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.exclusive_or_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexclusive_or_expression()
+   * @generated
+   */
+  int EXCLUSIVE_OR_EXPRESSION = 91;
+
+  /**
+   * The feature id for the '<em><b>And expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Exclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>exclusive or expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.exclusive_or_expression_linhaImpl <em>exclusive or expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.exclusive_or_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexclusive_or_expression_linha()
+   * @generated
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA = 92;
+
+  /**
+   * The number of structural features of the '<em>exclusive or expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.inclusive_or_expressionImpl <em>inclusive or expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.inclusive_or_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinclusive_or_expression()
+   * @generated
+   */
+  int INCLUSIVE_OR_EXPRESSION = 93;
+
+  /**
+   * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Inclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>inclusive or expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.inclusive_or_expression_linhaImpl <em>inclusive or expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.inclusive_or_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinclusive_or_expression_linha()
+   * @generated
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA = 94;
+
+  /**
+   * The number of structural features of the '<em>inclusive or expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.logical_and_expressionImpl <em>logical and expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.logical_and_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_and_expression()
+   * @generated
+   */
+  int LOGICAL_AND_EXPRESSION = 95;
+
+  /**
+   * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Logical and expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>logical and expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.logical_and_expression_linhaImpl <em>logical and expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.logical_and_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_and_expression_linha()
+   * @generated
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA = 96;
+
+  /**
+   * The number of structural features of the '<em>logical and expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.logical_or_expressionImpl <em>logical or expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.logical_or_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_or_expression()
+   * @generated
+   */
+  int LOGICAL_OR_EXPRESSION = 97;
+
+  /**
+   * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Logical or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>logical or expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.logical_or_expression_linhaImpl <em>logical or expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.logical_or_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_or_expression_linha()
+   * @generated
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA = 98;
+
+  /**
+   * The number of structural features of the '<em>logical or expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.conditional_expressionImpl <em>conditional expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.conditional_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconditional_expression()
+   * @generated
+   */
+  int CONDITIONAL_EXPRESSION = 99;
+
+  /**
+   * The feature id for the '<em><b>Logical or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION__LOGICAL_OR_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION__CONDITIONAL_EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>conditional expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.conditional_expression_linhaImpl <em>conditional expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.conditional_expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconditional_expression_linha()
+   * @generated
+   */
+  int CONDITIONAL_EXPRESSION_LINHA = 100;
+
+  /**
+   * The number of structural features of the '<em>conditional expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.assignment_expressionImpl <em>assignment expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.assignment_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getassignment_expression()
+   * @generated
+   */
+  int ASSIGNMENT_EXPRESSION = 101;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION__CONDITIONAL_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Unary expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Assignment operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION__ASSIGNMENT_OPERATOR = 2;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION__ASSIGNMENT_EXPRESSION = 3;
+
+  /**
+   * The number of structural features of the '<em>assignment expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.type_nameImpl <em>type name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.type_nameImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_name()
+   * @generated
+   */
+  int TYPE_NAME = 102;
+
+  /**
+   * The feature id for the '<em><b>Primary expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_NAME__PRIMARY_EXPRESSION = POSTFIX_EXPRESSION__PRIMARY_EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Postfix expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_NAME__POSTFIX_EXPRESSION_LINHA = POSTFIX_EXPRESSION__POSTFIX_EXPRESSION_LINHA;
+
+  /**
+   * The feature id for the '<em><b>Initializer list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_NAME__INITIALIZER_LIST = POSTFIX_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Specifier qualifier list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_NAME__SPECIFIER_QUALIFIER_LIST = POSTFIX_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Abstract declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_NAME__ABSTRACT_DECLARATOR = POSTFIX_EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>type name</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_NAME_FEATURE_COUNT = POSTFIX_EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.expressionImpl <em>expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression()
+   * @generated
+   */
+  int EXPRESSION = 103;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__ASSIGNMENT_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__EXPRESSION_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.expression_linhaImpl <em>expression linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.expression_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression_linha()
+   * @generated
+   */
+  int EXPRESSION_LINHA = 104;
+
+  /**
+   * The number of structural features of the '<em>expression linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.constant_expressionImpl <em>constant expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.constant_expressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconstant_expression()
+   * @generated
+   */
+  int CONSTANT_EXPRESSION = 105;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT_EXPRESSION__CONDITIONAL_EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>constant expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT_EXPRESSION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.init_declarator_listImpl <em>init declarator list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.init_declarator_listImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator_list()
+   * @generated
+   */
+  int INIT_DECLARATOR_LIST = 106;
+
+  /**
+   * The feature id for the '<em><b>Init declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR_LIST__INIT_DECLARATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Init declarator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR_LIST__INIT_DECLARATOR_LIST_LINHA = 1;
+
+  /**
+   * The number of structural features of the '<em>init declarator list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR_LIST_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.init_declarator_list_linhaImpl <em>init declarator list linha</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.init_declarator_list_linhaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator_list_linha()
+   * @generated
+   */
+  int INIT_DECLARATOR_LIST_LINHA = 107;
+
+  /**
+   * The number of structural features of the '<em>init declarator list linha</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR_LIST_LINHA_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.init_declaratorImpl <em>init declarator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.init_declaratorImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator()
+   * @generated
+   */
+  int INIT_DECLARATOR = 108;
+
+  /**
+   * The feature id for the '<em><b>Declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR__DECLARATOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Initializer</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR__INITIALIZER = 1;
+
+  /**
+   * The number of structural features of the '<em>init declarator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECLARATOR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.string_ufcgImpl <em>string ufcg</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.string_ufcgImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstring_ufcg()
+   * @generated
+   */
+  int STRING_UFCG = 109;
+
+  /**
+   * The feature id for the '<em><b>String literal</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_UFCG__STRING_LITERAL = 0;
+
+  /**
+   * The feature id for the '<em><b>func </b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_UFCG__FUNC_ = 1;
+
+  /**
+   * The number of structural features of the '<em>string ufcg</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_UFCG_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.constantImpl <em>constant</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.constantImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconstant()
+   * @generated
+   */
+  int CONSTANT = 110;
+
+  /**
+   * The feature id for the '<em><b>Iconstant</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT__ICONSTANT = 0;
+
+  /**
+   * The feature id for the '<em><b>Fconstant</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT__FCONSTANT = 1;
+
+  /**
+   * The feature id for the '<em><b>Enumz</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT__ENUMZ = 2;
+
+  /**
+   * The number of structural features of the '<em>constant</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.EnumeratorListLinhaActionImpl <em>Enumerator List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.EnumeratorListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEnumeratorListLinhaAction()
+   * @generated
+   */
+  int ENUMERATOR_LIST_LINHA_ACTION = 111;
+
+  /**
+   * The feature id for the '<em><b>Enumerator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST_LINHA_ACTION__ENUMERATOR = ENUMERATOR_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Enumerator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST_LINHA_ACTION__ENUMERATOR_LIST_LINHA = ENUMERATOR_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Enumerator List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUMERATOR_LIST_LINHA_ACTION_FEATURE_COUNT = ENUMERATOR_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.StructOrUnionSpecifierComplementActionImpl <em>Struct Or Union Specifier Complement Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.StructOrUnionSpecifierComplementActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructOrUnionSpecifierComplementAction()
+   * @generated
+   */
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION = 112;
+
+  /**
+   * The feature id for the '<em><b>Struct declaration list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION__STRUCT_DECLARATION_LIST = STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Struct Or Union Specifier Complement Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION_FEATURE_COUNT = STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.StructDeclarationListLinhaActionImpl <em>Struct Declaration List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.StructDeclarationListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructDeclarationListLinhaAction()
+   * @generated
+   */
+  int STRUCT_DECLARATION_LIST_LINHA_ACTION = 113;
+
+  /**
+   * The feature id for the '<em><b>Struct declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST_LINHA_ACTION__STRUCT_DECLARATION = STRUCT_DECLARATION_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Struct declaration list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST_LINHA_ACTION__STRUCT_DECLARATION_LIST_LINHA = STRUCT_DECLARATION_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Struct Declaration List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATION_LIST_LINHA_ACTION_FEATURE_COUNT = STRUCT_DECLARATION_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.StructDeclaratorListLinhaActionImpl <em>Struct Declarator List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.StructDeclaratorListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructDeclaratorListLinhaAction()
+   * @generated
+   */
+  int STRUCT_DECLARATOR_LIST_LINHA_ACTION = 114;
+
+  /**
+   * The feature id for the '<em><b>Struct declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST_LINHA_ACTION__STRUCT_DECLARATOR = STRUCT_DECLARATOR_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Struct declarator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST_LINHA_ACTION__STRUCT_DECLARATOR_LIST_LINHA = STRUCT_DECLARATOR_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Struct Declarator List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_DECLARATOR_LIST_LINHA_ACTION_FEATURE_COUNT = STRUCT_DECLARATOR_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.DeclarationListLinhaActionImpl <em>Declaration List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.DeclarationListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDeclarationListLinhaAction()
+   * @generated
+   */
+  int DECLARATION_LIST_LINHA_ACTION = 115;
+
+  /**
+   * The feature id for the '<em><b>Declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST_LINHA_ACTION__DECLARATION = DECLARATION_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Declaration list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST_LINHA_ACTION__DECLARATION_LIST_LINHA = DECLARATION_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Declaration List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_LIST_LINHA_ACTION_FEATURE_COUNT = DECLARATION_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.TypeQualifierListLinhaAtionImpl <em>Type Qualifier List Linha Ation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.TypeQualifierListLinhaAtionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getTypeQualifierListLinhaAtion()
+   * @generated
+   */
+  int TYPE_QUALIFIER_LIST_LINHA_ATION = 116;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER = TYPE_QUALIFIER_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Type qualifier list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA = TYPE_QUALIFIER_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Type Qualifier List Linha Ation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_LIST_LINHA_ATION_FEATURE_COUNT = TYPE_QUALIFIER_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl <em>Direct Declarator Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectDeclaratorLinhaAction()
+   * @generated
+   */
+  int DIRECT_DECLARATOR_LINHA_ACTION = 117;
+
+  /**
+   * The feature id for the '<em><b>Direct declarator complemento</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_COMPLEMENTO = DIRECT_DECLARATOR_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Direct declarator linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_LINHA = DIRECT_DECLARATOR_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Direct Declarator Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_LINHA_ACTION_FEATURE_COUNT = DIRECT_DECLARATOR_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.ParameterListLinhaActionImpl <em>Parameter List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.ParameterListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getParameterListLinhaAction()
+   * @generated
+   */
+  int PARAMETER_LIST_LINHA_ACTION = 118;
+
+  /**
+   * The feature id for the '<em><b>Parameter declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_LINHA_ACTION__PARAMETER_DECLARATION = PARAMETER_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_LINHA_ACTION__PARAMETER_LIST_LINHA = PARAMETER_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Parameter List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_LINHA_ACTION_FEATURE_COUNT = PARAMETER_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.DirectAbstractDeclarratorLinhaActionImpl <em>Direct Abstract Declarrator Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.DirectAbstractDeclarratorLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectAbstractDeclarratorLinhaAction()
+   * @generated
+   */
+  int DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION = 119;
+
+  /**
+   * The feature id for the '<em><b>Direct abstract declarator complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION__DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT = DIRECT_ABSTRACT_DECLARATOR_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Direct abstract declarator linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION__DIRECT_ABSTRACT_DECLARATOR_LINHA = DIRECT_ABSTRACT_DECLARATOR_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Direct Abstract Declarrator Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION_FEATURE_COUNT = DIRECT_ABSTRACT_DECLARATOR_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.IdentifierListLinhaActionImpl <em>Identifier List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.IdentifierListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getIdentifierListLinhaAction()
+   * @generated
+   */
+  int IDENTIFIER_LIST_LINHA_ACTION = 120;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST_LINHA_ACTION__IDENTIFIER = IDENTIFIER_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Identifier list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST_LINHA_ACTION__IDENTIFIER_LIST_LINHA = IDENTIFIER_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Identifier List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER_LIST_LINHA_ACTION_FEATURE_COUNT = IDENTIFIER_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.TranlationUnitLinhaActionImpl <em>Tranlation Unit Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.TranlationUnitLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getTranlationUnitLinhaAction()
+   * @generated
+   */
+  int TRANLATION_UNIT_LINHA_ACTION = 121;
+
+  /**
+   * The feature id for the '<em><b>External declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANLATION_UNIT_LINHA_ACTION__EXTERNAL_DECLARATION = TRANSLATION_UNIT_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Translation unit linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANLATION_UNIT_LINHA_ACTION__TRANSLATION_UNIT_LINHA = TRANSLATION_UNIT_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Tranlation Unit Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANLATION_UNIT_LINHA_ACTION_FEATURE_COUNT = TRANSLATION_UNIT_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.GenericAssocListLinhaActionImpl <em>Generic Assoc List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.GenericAssocListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getGenericAssocListLinhaAction()
+   * @generated
+   */
+  int GENERIC_ASSOC_LIST_LINHA_ACTION = 122;
+
+  /**
+   * The feature id for the '<em><b>Generic association</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST_LINHA_ACTION__GENERIC_ASSOCIATION = GENERIC_ASSOC_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Generic assoc list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST_LINHA_ACTION__GENERIC_ASSOC_LIST_LINHA = GENERIC_ASSOC_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Generic Assoc List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_ASSOC_LIST_LINHA_ACTION_FEATURE_COUNT = GENERIC_ASSOC_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionLinhaActionImpl <em>Postfix Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionLinhaAction()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_LINHA_ACTION = 123;
+
+  /**
+   * The feature id for the '<em><b>Postfix expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_LINHA_ACTION__POSTFIX_EXPRESSION_COMPLEMENT = POSTFIX_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Postfix expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_LINHA_ACTION__POSTFIX_EXPRESSION_LINHA = POSTFIX_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = POSTFIX_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.InitializerListLinhaActionImpl <em>Initializer List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.InitializerListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitializerListLinhaAction()
+   * @generated
+   */
+  int INITIALIZER_LIST_LINHA_ACTION = 124;
+
+  /**
+   * The feature id for the '<em><b>Initializer list complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_LINHA_ACTION__INITIALIZER_LIST_COMPLEMENT = INITIALIZER_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Init declarator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_LINHA_ACTION__INIT_DECLARATOR_LIST_LINHA = INITIALIZER_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Initializer List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALIZER_LIST_LINHA_ACTION_FEATURE_COUNT = INITIALIZER_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.DesignatorListLinhaActionImpl <em>Designator List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.DesignatorListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDesignatorListLinhaAction()
+   * @generated
+   */
+  int DESIGNATOR_LIST_LINHA_ACTION = 125;
+
+  /**
+   * The feature id for the '<em><b>Designator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR = DESIGNATOR_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Designator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR_LIST_LINHA = DESIGNATOR_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Designator List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DESIGNATOR_LIST_LINHA_ACTION_FEATURE_COUNT = DESIGNATOR_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl <em>Postfix Expression Complement Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementExpression()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION = 126;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl <em>Postfix Expression Complement Empty</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementEmpty()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY = 127;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Empty</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementArgListImpl <em>Postfix Expression Complement Arg List</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementArgListImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementArgList()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST = 128;
+
+  /**
+   * The feature id for the '<em><b>Argument expression list</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST__ARGUMENT_EXPRESSION_LIST = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Arg List</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementIdentifierImpl <em>Postfix Expression Complement Identifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementIdentifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementIdentifier()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER = 129;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Identifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementPointerImpl <em>Postfix Expression Complement Pointer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementPointerImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementPointer()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_POINTER = 130;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Pointer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_POINTER_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementIncrementImpl <em>Postfix Expression Complement Increment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementIncrementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementIncrement()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT = 131;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Increment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementDecrementImpl <em>Postfix Expression Complement Decrement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementDecrementImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementDecrement()
+   * @generated
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT = 132;
+
+  /**
+   * The number of structural features of the '<em>Postfix Expression Complement Decrement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.ArgumentExpressionListLinhaActionImpl <em>Argument Expression List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.ArgumentExpressionListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getArgumentExpressionListLinhaAction()
+   * @generated
+   */
+  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION = 133;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ASSIGNMENT_EXPRESSION = ARGUMENT_EXPRESSION_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Argument expression list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ARGUMENT_EXPRESSION_LIST_LINHA = ARGUMENT_EXPRESSION_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Argument Expression List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION_FEATURE_COUNT = ARGUMENT_EXPRESSION_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl <em>Multiplicative Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getMultiplicativeExpressionLinhaAction()
+   * @generated
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION = 134;
+
+  /**
+   * The feature id for the '<em><b>Multiplicative expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_COMPLEMENT = MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Multiplicative expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_LINHA = MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Multiplicative Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl <em>Additive Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAdditiveExpressionLinhaAction()
+   * @generated
+   */
+  int ADDITIVE_EXPRESSION_LINHA_ACTION = 135;
+
+  /**
+   * The feature id for the '<em><b>Additive expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_COMPLEMENT = ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Additive expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_LINHA = ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Additive Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl <em>Shift Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getShiftExpressionLinhaAction()
+   * @generated
+   */
+  int SHIFT_EXPRESSION_LINHA_ACTION = 136;
+
+  /**
+   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = SHIFT_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Shift expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_LINHA = SHIFT_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Shift Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = SHIFT_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl <em>Relational Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getRelationalExpressionLinhaAction()
+   * @generated
+   */
+  int RELATIONAL_EXPRESSION_LINHA_ACTION = 137;
+
+  /**
+   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Relational expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_LINHA_ACTION__RELATIONAL_EXPRESSION_LINHA = RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Relational Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl <em>Equality Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEqualityExpressionLinhaAction()
+   * @generated
+   */
+  int EQUALITY_EXPRESSION_LINHA_ACTION = 138;
+
+  /**
+   * The feature id for the '<em><b>Equality expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_COMPLEMENT = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Equality expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Equality Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl <em>Block Item List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getBlockItemListLinhaAction()
+   * @generated
+   */
+  int BLOCK_ITEM_LIST_LINHA_ACTION = 139;
+
+  /**
+   * The feature id for the '<em><b>Block item</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM = BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Block item list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM_LIST_LINHA = BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Block Item List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_LINHA_ACTION_FEATURE_COUNT = BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl <em>And Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAndExpressionLinhaAction()
+   * @generated
+   */
+  int AND_EXPRESSION_LINHA_ACTION = 140;
+
+  /**
+   * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION = AND_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>And expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_LINHA_ACTION__AND_EXPRESSION_LINHA = AND_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>And Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = AND_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl <em>Exclusive Or Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExclusiveOrExpressionLinhaAction()
+   * @generated
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 141;
+
+  /**
+   * The feature id for the '<em><b>And expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__AND_EXPRESSION = EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Exclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION_LINHA = EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Exclusive Or Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl <em>Inclusive Or Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInclusiveOrExpressionLinhaAction()
+   * @generated
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 142;
+
+  /**
+   * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION = INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Inclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION_LINHA = INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Inclusive Or Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl <em>Logical And Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalAndExpressionLinhaAction()
+   * @generated
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA_ACTION = 143;
+
+  /**
+   * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION = LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Logical and expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION_LINHA = LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Logical And Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl <em>Logical Or Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalOrExpressionLinhaAction()
+   * @generated
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA_ACTION = 144;
+
+  /**
+   * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION = LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Logical or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_OR_EXPRESSION_LINHA = LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Logical Or Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl <em>Conditional Expression Linha Acction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getConditionalExpressionLinhaAcction()
+   * @generated
+   */
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION = 145;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION__EXPRESSION = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION_LINHA = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Conditional Expression Linha Acction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION_FEATURE_COUNT = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.ExpressionLinhaActionImpl <em>Expression Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.ExpressionLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExpressionLinhaAction()
+   * @generated
+   */
+  int EXPRESSION_LINHA_ACTION = 146;
+
+  /**
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_LINHA_ACTION__ASSIGNMENT_EXPRESSION = EXPRESSION_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_LINHA_ACTION__EXPRESSION_LINHA = EXPRESSION_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Expression Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_LINHA_ACTION_FEATURE_COUNT = EXPRESSION_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.InitDecclaratorListLinhaActionImpl <em>Init Decclarator List Linha Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.InitDecclaratorListLinhaActionImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitDecclaratorListLinhaAction()
+   * @generated
+   */
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 147;
+
+  /**
+   * The feature id for the '<em><b>Init declarator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION__INIT_DECLARATOR = INIT_DECLARATOR_LIST_LINHA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Init declarator list linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION__INIT_DECLARATOR_LIST_LINHA = INIT_DECLARATOR_LIST_LINHA_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Init Decclarator List Linha Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION_FEATURE_COUNT = INIT_DECLARATOR_LIST_LINHA_FEATURE_COUNT + 2;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.DomainModel <em>Domain Model</em>}'.
@@ -96,15 +5140,4180 @@ public interface AnsicPackage extends EPackage
   EClass getDomainModel();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.ansic.DomainModel#getGeetings <em>Geetings</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.DomainModel#getGeetings <em>Geetings</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Geetings</em>'.
+   * @return the meta object for the containment reference list '<em>Geetings</em>'.
    * @see org.xtext.example.ansic.DomainModel#getGeetings()
    * @see #getDomainModel()
    * @generated
    */
-  EAttribute getDomainModel_Geetings();
+  EReference getDomainModel_Geetings();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.translation_unit <em>translation unit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>translation unit</em>'.
+   * @see org.xtext.example.ansic.translation_unit
+   * @generated
+   */
+  EClass gettranslation_unit();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.translation_unit#getExternal_declaration <em>External declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>External declaration</em>'.
+   * @see org.xtext.example.ansic.translation_unit#getExternal_declaration()
+   * @see #gettranslation_unit()
+   * @generated
+   */
+  EReference gettranslation_unit_External_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.translation_unit#getTranslation_unit_linha <em>Translation unit linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Translation unit linha</em>'.
+   * @see org.xtext.example.ansic.translation_unit#getTranslation_unit_linha()
+   * @see #gettranslation_unit()
+   * @generated
+   */
+  EReference gettranslation_unit_Translation_unit_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.external_declaration <em>external declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>external declaration</em>'.
+   * @see org.xtext.example.ansic.external_declaration
+   * @generated
+   */
+  EClass getexternal_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.external_declaration#getFunction_definitio <em>Function definitio</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Function definitio</em>'.
+   * @see org.xtext.example.ansic.external_declaration#getFunction_definitio()
+   * @see #getexternal_declaration()
+   * @generated
+   */
+  EReference getexternal_declaration_Function_definitio();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.external_declaration#getDeclaration <em>Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration</em>'.
+   * @see org.xtext.example.ansic.external_declaration#getDeclaration()
+   * @see #getexternal_declaration()
+   * @generated
+   */
+  EReference getexternal_declaration_Declaration();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.declaration_specifiers <em>declaration specifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>declaration specifiers</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers
+   * @generated
+   */
+  EClass getdeclaration_specifiers();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.declaration_specifiers#getStorage_class_specifier <em>Storage class specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Storage class specifier</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers#getStorage_class_specifier()
+   * @see #getdeclaration_specifiers()
+   * @generated
+   */
+  EAttribute getdeclaration_specifiers_Storage_class_specifier();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.declaration_specifiers#getDeclaration_specifiers <em>Declaration specifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Declaration specifiers</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers#getDeclaration_specifiers()
+   * @see #getdeclaration_specifiers()
+   * @generated
+   */
+  EReference getdeclaration_specifiers_Declaration_specifiers();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declaration_specifiers#getType_specifier <em>Type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type specifier</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers#getType_specifier()
+   * @see #getdeclaration_specifiers()
+   * @generated
+   */
+  EReference getdeclaration_specifiers_Type_specifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.declaration_specifiers#getType_qualifier <em>Type qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers#getType_qualifier()
+   * @see #getdeclaration_specifiers()
+   * @generated
+   */
+  EAttribute getdeclaration_specifiers_Type_qualifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.declaration_specifiers#getFunction_specifier <em>Function specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Function specifier</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers#getFunction_specifier()
+   * @see #getdeclaration_specifiers()
+   * @generated
+   */
+  EAttribute getdeclaration_specifiers_Function_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declaration_specifiers#getAlignment_specifier <em>Alignment specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Alignment specifier</em>'.
+   * @see org.xtext.example.ansic.declaration_specifiers#getAlignment_specifier()
+   * @see #getdeclaration_specifiers()
+   * @generated
+   */
+  EReference getdeclaration_specifiers_Alignment_specifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.alignment_specifier <em>alignment specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>alignment specifier</em>'.
+   * @see org.xtext.example.ansic.alignment_specifier
+   * @generated
+   */
+  EClass getalignment_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.alignment_specifier#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type name</em>'.
+   * @see org.xtext.example.ansic.alignment_specifier#getType_name()
+   * @see #getalignment_specifier()
+   * @generated
+   */
+  EReference getalignment_specifier_Type_name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.alignment_specifier#getConstant_expression <em>Constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constant expression</em>'.
+   * @see org.xtext.example.ansic.alignment_specifier#getConstant_expression()
+   * @see #getalignment_specifier()
+   * @generated
+   */
+  EReference getalignment_specifier_Constant_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.type_specifier <em>type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>type specifier</em>'.
+   * @see org.xtext.example.ansic.type_specifier
+   * @generated
+   */
+  EClass gettype_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_specifier#getAtomic_type_specifier <em>Atomic type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Atomic type specifier</em>'.
+   * @see org.xtext.example.ansic.type_specifier#getAtomic_type_specifier()
+   * @see #gettype_specifier()
+   * @generated
+   */
+  EReference gettype_specifier_Atomic_type_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_specifier#getStruct_or_union_specifier <em>Struct or union specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct or union specifier</em>'.
+   * @see org.xtext.example.ansic.type_specifier#getStruct_or_union_specifier()
+   * @see #gettype_specifier()
+   * @generated
+   */
+  EReference gettype_specifier_Struct_or_union_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_specifier#getEnum_specifier <em>Enum specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enum specifier</em>'.
+   * @see org.xtext.example.ansic.type_specifier#getEnum_specifier()
+   * @see #gettype_specifier()
+   * @generated
+   */
+  EReference gettype_specifier_Enum_specifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.enum_specifier <em>enum specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>enum specifier</em>'.
+   * @see org.xtext.example.ansic.enum_specifier
+   * @generated
+   */
+  EClass getenum_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.enum_specifier#getEnumerator_list <em>Enumerator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumerator list</em>'.
+   * @see org.xtext.example.ansic.enum_specifier#getEnumerator_list()
+   * @see #getenum_specifier()
+   * @generated
+   */
+  EReference getenum_specifier_Enumerator_list();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.enum_specifier#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.enum_specifier#getIdentifier()
+   * @see #getenum_specifier()
+   * @generated
+   */
+  EAttribute getenum_specifier_Identifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.enumerator_list <em>enumerator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>enumerator list</em>'.
+   * @see org.xtext.example.ansic.enumerator_list
+   * @generated
+   */
+  EClass getenumerator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.enumerator_list#getEnumarator <em>Enumarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumarator</em>'.
+   * @see org.xtext.example.ansic.enumerator_list#getEnumarator()
+   * @see #getenumerator_list()
+   * @generated
+   */
+  EReference getenumerator_list_Enumarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.enumerator_list#getEnumerator_list_linha <em>Enumerator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumerator list linha</em>'.
+   * @see org.xtext.example.ansic.enumerator_list#getEnumerator_list_linha()
+   * @see #getenumerator_list()
+   * @generated
+   */
+  EReference getenumerator_list_Enumerator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.enumerator_list_linha <em>enumerator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>enumerator list linha</em>'.
+   * @see org.xtext.example.ansic.enumerator_list_linha
+   * @generated
+   */
+  EClass getenumerator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.enumerator <em>enumerator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>enumerator</em>'.
+   * @see org.xtext.example.ansic.enumerator
+   * @generated
+   */
+  EClass getenumerator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.enumerator#getEnumeration_constant <em>Enumeration constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumeration constant</em>'.
+   * @see org.xtext.example.ansic.enumerator#getEnumeration_constant()
+   * @see #getenumerator()
+   * @generated
+   */
+  EReference getenumerator_Enumeration_constant();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.enumerator#getConditional_expression <em>Conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
+   * @see org.xtext.example.ansic.enumerator#getConditional_expression()
+   * @see #getenumerator()
+   * @generated
+   */
+  EReference getenumerator_Conditional_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.atomic_type_specifier <em>atomic type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>atomic type specifier</em>'.
+   * @see org.xtext.example.ansic.atomic_type_specifier
+   * @generated
+   */
+  EClass getatomic_type_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.atomic_type_specifier#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type name</em>'.
+   * @see org.xtext.example.ansic.atomic_type_specifier#getType_name()
+   * @see #getatomic_type_specifier()
+   * @generated
+   */
+  EReference getatomic_type_specifier_Type_name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_or_union_specifier <em>struct or union specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct or union specifier</em>'.
+   * @see org.xtext.example.ansic.struct_or_union_specifier
+   * @generated
+   */
+  EClass getstruct_or_union_specifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.struct_or_union_specifier#getStruct_or_union <em>Struct or union</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Struct or union</em>'.
+   * @see org.xtext.example.ansic.struct_or_union_specifier#getStruct_or_union()
+   * @see #getstruct_or_union_specifier()
+   * @generated
+   */
+  EAttribute getstruct_or_union_specifier_Struct_or_union();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_or_union_specifier#getStruct_declaration_list <em>Struct declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declaration list</em>'.
+   * @see org.xtext.example.ansic.struct_or_union_specifier#getStruct_declaration_list()
+   * @see #getstruct_or_union_specifier()
+   * @generated
+   */
+  EReference getstruct_or_union_specifier_Struct_declaration_list();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.struct_or_union_specifier#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.struct_or_union_specifier#getIdentifier()
+   * @see #getstruct_or_union_specifier()
+   * @generated
+   */
+  EAttribute getstruct_or_union_specifier_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_or_union_specifier#getStruct_or_union_specifier_complement <em>Struct or union specifier complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct or union specifier complement</em>'.
+   * @see org.xtext.example.ansic.struct_or_union_specifier#getStruct_or_union_specifier_complement()
+   * @see #getstruct_or_union_specifier()
+   * @generated
+   */
+  EReference getstruct_or_union_specifier_Struct_or_union_specifier_complement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_or_union_specifier_complement <em>struct or union specifier complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct or union specifier complement</em>'.
+   * @see org.xtext.example.ansic.struct_or_union_specifier_complement
+   * @generated
+   */
+  EClass getstruct_or_union_specifier_complement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_declaration_list <em>struct declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct declaration list</em>'.
+   * @see org.xtext.example.ansic.struct_declaration_list
+   * @generated
+   */
+  EClass getstruct_declaration_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declaration_list#getStruct_declaration <em>Struct declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declaration</em>'.
+   * @see org.xtext.example.ansic.struct_declaration_list#getStruct_declaration()
+   * @see #getstruct_declaration_list()
+   * @generated
+   */
+  EReference getstruct_declaration_list_Struct_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declaration_list#getStruct_declaration_list_linha <em>Struct declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declaration list linha</em>'.
+   * @see org.xtext.example.ansic.struct_declaration_list#getStruct_declaration_list_linha()
+   * @see #getstruct_declaration_list()
+   * @generated
+   */
+  EReference getstruct_declaration_list_Struct_declaration_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_declaration_list_linha <em>struct declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct declaration list linha</em>'.
+   * @see org.xtext.example.ansic.struct_declaration_list_linha
+   * @generated
+   */
+  EClass getstruct_declaration_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_declaration <em>struct declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct declaration</em>'.
+   * @see org.xtext.example.ansic.struct_declaration
+   * @generated
+   */
+  EClass getstruct_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declaration#getSpecifier_qualifier_list <em>Specifier qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Specifier qualifier list</em>'.
+   * @see org.xtext.example.ansic.struct_declaration#getSpecifier_qualifier_list()
+   * @see #getstruct_declaration()
+   * @generated
+   */
+  EReference getstruct_declaration_Specifier_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declaration#getStruct_declarator_list <em>Struct declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declarator list</em>'.
+   * @see org.xtext.example.ansic.struct_declaration#getStruct_declarator_list()
+   * @see #getstruct_declaration()
+   * @generated
+   */
+  EReference getstruct_declaration_Struct_declarator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declaration#getStatic_assert_declaration <em>Static assert declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Static assert declaration</em>'.
+   * @see org.xtext.example.ansic.struct_declaration#getStatic_assert_declaration()
+   * @see #getstruct_declaration()
+   * @generated
+   */
+  EReference getstruct_declaration_Static_assert_declaration();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_declarator_list <em>struct declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct declarator list</em>'.
+   * @see org.xtext.example.ansic.struct_declarator_list
+   * @generated
+   */
+  EClass getstruct_declarator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declarator_list#getStruct_declarator <em>Struct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declarator</em>'.
+   * @see org.xtext.example.ansic.struct_declarator_list#getStruct_declarator()
+   * @see #getstruct_declarator_list()
+   * @generated
+   */
+  EReference getstruct_declarator_list_Struct_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declarator_list#getStruct_declarator_list_linha <em>Struct declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declarator list linha</em>'.
+   * @see org.xtext.example.ansic.struct_declarator_list#getStruct_declarator_list_linha()
+   * @see #getstruct_declarator_list()
+   * @generated
+   */
+  EReference getstruct_declarator_list_Struct_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_declarator_list_linha <em>struct declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct declarator list linha</em>'.
+   * @see org.xtext.example.ansic.struct_declarator_list_linha
+   * @generated
+   */
+  EClass getstruct_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.struct_declarator <em>struct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>struct declarator</em>'.
+   * @see org.xtext.example.ansic.struct_declarator
+   * @generated
+   */
+  EClass getstruct_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declarator#getConstant_expression <em>Constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constant expression</em>'.
+   * @see org.xtext.example.ansic.struct_declarator#getConstant_expression()
+   * @see #getstruct_declarator()
+   * @generated
+   */
+  EReference getstruct_declarator_Constant_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.struct_declarator#getDeclarator <em>Declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declarator</em>'.
+   * @see org.xtext.example.ansic.struct_declarator#getDeclarator()
+   * @see #getstruct_declarator()
+   * @generated
+   */
+  EReference getstruct_declarator_Declarator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.specifier_qualifier_list <em>specifier qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>specifier qualifier list</em>'.
+   * @see org.xtext.example.ansic.specifier_qualifier_list
+   * @generated
+   */
+  EClass getspecifier_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.specifier_qualifier_list#getType_specifier <em>Type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type specifier</em>'.
+   * @see org.xtext.example.ansic.specifier_qualifier_list#getType_specifier()
+   * @see #getspecifier_qualifier_list()
+   * @generated
+   */
+  EReference getspecifier_qualifier_list_Type_specifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.specifier_qualifier_list#getSpecifier_qualifier_list <em>Specifier qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Specifier qualifier list</em>'.
+   * @see org.xtext.example.ansic.specifier_qualifier_list#getSpecifier_qualifier_list()
+   * @see #getspecifier_qualifier_list()
+   * @generated
+   */
+  EReference getspecifier_qualifier_list_Specifier_qualifier_list();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.specifier_qualifier_list#getType_qualifier <em>Type qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @see org.xtext.example.ansic.specifier_qualifier_list#getType_qualifier()
+   * @see #getspecifier_qualifier_list()
+   * @generated
+   */
+  EAttribute getspecifier_qualifier_list_Type_qualifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.declaration <em>declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>declaration</em>'.
+   * @see org.xtext.example.ansic.declaration
+   * @generated
+   */
+  EClass getdeclaration();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.declaration#getDeclaration_specifiers <em>Declaration specifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Declaration specifiers</em>'.
+   * @see org.xtext.example.ansic.declaration#getDeclaration_specifiers()
+   * @see #getdeclaration()
+   * @generated
+   */
+  EReference getdeclaration_Declaration_specifiers();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.declaration#getInit_declarator_list <em>Init declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Init declarator list</em>'.
+   * @see org.xtext.example.ansic.declaration#getInit_declarator_list()
+   * @see #getdeclaration()
+   * @generated
+   */
+  EReference getdeclaration_Init_declarator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declaration#getStatic_assert_declaration <em>Static assert declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Static assert declaration</em>'.
+   * @see org.xtext.example.ansic.declaration#getStatic_assert_declaration()
+   * @see #getdeclaration()
+   * @generated
+   */
+  EReference getdeclaration_Static_assert_declaration();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.function_definition <em>function definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>function definition</em>'.
+   * @see org.xtext.example.ansic.function_definition
+   * @generated
+   */
+  EClass getfunction_definition();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.function_definition#getDeclaration_specifiers <em>Declaration specifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Declaration specifiers</em>'.
+   * @see org.xtext.example.ansic.function_definition#getDeclaration_specifiers()
+   * @see #getfunction_definition()
+   * @generated
+   */
+  EReference getfunction_definition_Declaration_specifiers();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.function_definition#getDeclarator <em>Declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declarator</em>'.
+   * @see org.xtext.example.ansic.function_definition#getDeclarator()
+   * @see #getfunction_definition()
+   * @generated
+   */
+  EReference getfunction_definition_Declarator();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.function_definition#getDeclaration_list <em>Declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Declaration list</em>'.
+   * @see org.xtext.example.ansic.function_definition#getDeclaration_list()
+   * @see #getfunction_definition()
+   * @generated
+   */
+  EReference getfunction_definition_Declaration_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.function_definition#getCompound_statement <em>Compound statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Compound statement</em>'.
+   * @see org.xtext.example.ansic.function_definition#getCompound_statement()
+   * @see #getfunction_definition()
+   * @generated
+   */
+  EReference getfunction_definition_Compound_statement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.declaration_list <em>declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>declaration list</em>'.
+   * @see org.xtext.example.ansic.declaration_list
+   * @generated
+   */
+  EClass getdeclaration_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declaration_list#getDeclaration <em>Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration</em>'.
+   * @see org.xtext.example.ansic.declaration_list#getDeclaration()
+   * @see #getdeclaration_list()
+   * @generated
+   */
+  EReference getdeclaration_list_Declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declaration_list#getDeclaration_list_linha <em>Declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration list linha</em>'.
+   * @see org.xtext.example.ansic.declaration_list#getDeclaration_list_linha()
+   * @see #getdeclaration_list()
+   * @generated
+   */
+  EReference getdeclaration_list_Declaration_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.declaration_list_linha <em>declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>declaration list linha</em>'.
+   * @see org.xtext.example.ansic.declaration_list_linha
+   * @generated
+   */
+  EClass getdeclaration_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.declarator <em>declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>declarator</em>'.
+   * @see org.xtext.example.ansic.declarator
+   * @generated
+   */
+  EClass getdeclarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declarator#getPointer <em>Pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pointer</em>'.
+   * @see org.xtext.example.ansic.declarator#getPointer()
+   * @see #getdeclarator()
+   * @generated
+   */
+  EReference getdeclarator_Pointer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declarator#getDirect_declarator <em>Direct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct declarator</em>'.
+   * @see org.xtext.example.ansic.declarator#getDirect_declarator()
+   * @see #getdeclarator()
+   * @generated
+   */
+  EReference getdeclarator_Direct_declarator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.pointer <em>pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>pointer</em>'.
+   * @see org.xtext.example.ansic.pointer
+   * @generated
+   */
+  EClass getpointer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.pointer#getType_qualifier_list <em>Type qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type qualifier list</em>'.
+   * @see org.xtext.example.ansic.pointer#getType_qualifier_list()
+   * @see #getpointer()
+   * @generated
+   */
+  EReference getpointer_Type_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.pointer#getPointer <em>Pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pointer</em>'.
+   * @see org.xtext.example.ansic.pointer#getPointer()
+   * @see #getpointer()
+   * @generated
+   */
+  EReference getpointer_Pointer();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.type_qualifier_list <em>type qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>type qualifier list</em>'.
+   * @see org.xtext.example.ansic.type_qualifier_list
+   * @generated
+   */
+  EClass gettype_qualifier_list();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.type_qualifier_list#getType_qualifier <em>Type qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @see org.xtext.example.ansic.type_qualifier_list#getType_qualifier()
+   * @see #gettype_qualifier_list()
+   * @generated
+   */
+  EAttribute gettype_qualifier_list_Type_qualifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_qualifier_list#getType_qualifier_list_linha <em>Type qualifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type qualifier list linha</em>'.
+   * @see org.xtext.example.ansic.type_qualifier_list#getType_qualifier_list_linha()
+   * @see #gettype_qualifier_list()
+   * @generated
+   */
+  EReference gettype_qualifier_list_Type_qualifier_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.type_qualifier_list_linha <em>type qualifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>type qualifier list linha</em>'.
+   * @see org.xtext.example.ansic.type_qualifier_list_linha
+   * @generated
+   */
+  EClass gettype_qualifier_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.direct_declarator <em>direct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>direct declarator</em>'.
+   * @see org.xtext.example.ansic.direct_declarator
+   * @generated
+   */
+  EClass getdirect_declarator();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.direct_declarator#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.direct_declarator#getIdentifier()
+   * @see #getdirect_declarator()
+   * @generated
+   */
+  EAttribute getdirect_declarator_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator#getDirect_declarator_linha <em>Direct declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct declarator linha</em>'.
+   * @see org.xtext.example.ansic.direct_declarator#getDirect_declarator_linha()
+   * @see #getdirect_declarator()
+   * @generated
+   */
+  EReference getdirect_declarator_Direct_declarator_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator#getDeclarator <em>Declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declarator</em>'.
+   * @see org.xtext.example.ansic.direct_declarator#getDeclarator()
+   * @see #getdirect_declarator()
+   * @generated
+   */
+  EReference getdirect_declarator_Declarator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.direct_declarator_linha <em>direct declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>direct declarator linha</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_linha
+   * @generated
+   */
+  EClass getdirect_declarator_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.direct_declarator_complemento <em>direct declarator complemento</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>direct declarator complemento</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_complemento
+   * @generated
+   */
+  EClass getdirect_declarator_complemento();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator_complemento#getType_qualifier_list <em>Type qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type qualifier list</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_complemento#getType_qualifier_list()
+   * @see #getdirect_declarator_complemento()
+   * @generated
+   */
+  EReference getdirect_declarator_complemento_Type_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator_complemento#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_complemento#getAssignment_expression()
+   * @see #getdirect_declarator_complemento()
+   * @generated
+   */
+  EReference getdirect_declarator_complemento_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator_complemento#getParameter_type_list <em>Parameter type list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter type list</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_complemento#getParameter_type_list()
+   * @see #getdirect_declarator_complemento()
+   * @generated
+   */
+  EReference getdirect_declarator_complemento_Parameter_type_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator_complemento#getIdentifier_list <em>Identifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Identifier list</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_complemento#getIdentifier_list()
+   * @see #getdirect_declarator_complemento()
+   * @generated
+   */
+  EReference getdirect_declarator_complemento_Identifier_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_type_list <em>parameter type list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>parameter type list</em>'.
+   * @see org.xtext.example.ansic.parameter_type_list
+   * @generated
+   */
+  EClass getparameter_type_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_type_list#getParameter_list <em>Parameter list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter list</em>'.
+   * @see org.xtext.example.ansic.parameter_type_list#getParameter_list()
+   * @see #getparameter_type_list()
+   * @generated
+   */
+  EReference getparameter_type_list_Parameter_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_list <em>parameter list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>parameter list</em>'.
+   * @see org.xtext.example.ansic.parameter_list
+   * @generated
+   */
+  EClass getparameter_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_list#getParameter_declaration <em>Parameter declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter declaration</em>'.
+   * @see org.xtext.example.ansic.parameter_list#getParameter_declaration()
+   * @see #getparameter_list()
+   * @generated
+   */
+  EReference getparameter_list_Parameter_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_list#getParameter_list_linha <em>Parameter list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter list linha</em>'.
+   * @see org.xtext.example.ansic.parameter_list#getParameter_list_linha()
+   * @see #getparameter_list()
+   * @generated
+   */
+  EReference getparameter_list_Parameter_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_list_linha <em>parameter list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>parameter list linha</em>'.
+   * @see org.xtext.example.ansic.parameter_list_linha
+   * @generated
+   */
+  EClass getparameter_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_declaration <em>parameter declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>parameter declaration</em>'.
+   * @see org.xtext.example.ansic.parameter_declaration
+   * @generated
+   */
+  EClass getparameter_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_declaration#getDeclaration_specifiers <em>Declaration specifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration specifiers</em>'.
+   * @see org.xtext.example.ansic.parameter_declaration#getDeclaration_specifiers()
+   * @see #getparameter_declaration()
+   * @generated
+   */
+  EReference getparameter_declaration_Declaration_specifiers();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_declaration#getDeclarator <em>Declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declarator</em>'.
+   * @see org.xtext.example.ansic.parameter_declaration#getDeclarator()
+   * @see #getparameter_declaration()
+   * @generated
+   */
+  EReference getparameter_declaration_Declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_declaration#getAbstract_declarator <em>Abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Abstract declarator</em>'.
+   * @see org.xtext.example.ansic.parameter_declaration#getAbstract_declarator()
+   * @see #getparameter_declaration()
+   * @generated
+   */
+  EReference getparameter_declaration_Abstract_declarator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.abstract_declarator <em>abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>abstract declarator</em>'.
+   * @see org.xtext.example.ansic.abstract_declarator
+   * @generated
+   */
+  EClass getabstract_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.abstract_declarator#getPointer <em>Pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pointer</em>'.
+   * @see org.xtext.example.ansic.abstract_declarator#getPointer()
+   * @see #getabstract_declarator()
+   * @generated
+   */
+  EReference getabstract_declarator_Pointer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.abstract_declarator#getDirect_abstract_declarator <em>Direct abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct abstract declarator</em>'.
+   * @see org.xtext.example.ansic.abstract_declarator#getDirect_abstract_declarator()
+   * @see #getabstract_declarator()
+   * @generated
+   */
+  EReference getabstract_declarator_Direct_abstract_declarator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.direct_abstract_declarator <em>direct abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>direct abstract declarator</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator
+   * @generated
+   */
+  EClass getdirect_abstract_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator#getAbstract_declarator <em>Abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Abstract declarator</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator#getAbstract_declarator()
+   * @see #getdirect_abstract_declarator()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_Abstract_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator#getType_qualifier_list <em>Type qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type qualifier list</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator#getType_qualifier_list()
+   * @see #getdirect_abstract_declarator()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_Type_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator#getAssignment_expression()
+   * @see #getdirect_abstract_declarator()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator#getParameter_type_list <em>Parameter type list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter type list</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator#getParameter_type_list()
+   * @see #getdirect_abstract_declarator()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_Parameter_type_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator#getDirect_abstract_declarator_linha <em>Direct abstract declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct abstract declarator linha</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator#getDirect_abstract_declarator_linha()
+   * @see #getdirect_abstract_declarator()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_Direct_abstract_declarator_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.initializer <em>initializer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>initializer</em>'.
+   * @see org.xtext.example.ansic.initializer
+   * @generated
+   */
+  EClass getinitializer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer#getInit_declarator_list <em>Init declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator list</em>'.
+   * @see org.xtext.example.ansic.initializer#getInit_declarator_list()
+   * @see #getinitializer()
+   * @generated
+   */
+  EReference getinitializer_Init_declarator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.initializer#getAssignment_expression()
+   * @see #getinitializer()
+   * @generated
+   */
+  EReference getinitializer_Assignment_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.direct_abstract_declarator_linha <em>direct abstract declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>direct abstract declarator linha</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_linha
+   * @generated
+   */
+  EClass getdirect_abstract_declarator_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.direct_abstract_declarator_complement <em>direct abstract declarator complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>direct abstract declarator complement</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_complement
+   * @generated
+   */
+  EClass getdirect_abstract_declarator_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator_complement#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_complement#getAssignment_expression()
+   * @see #getdirect_abstract_declarator_complement()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_complement_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator_complement#getType_qualifier_list <em>Type qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type qualifier list</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_complement#getType_qualifier_list()
+   * @see #getdirect_abstract_declarator_complement()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_complement_Type_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_abstract_declarator_complement#getParameter_type_list <em>Parameter type list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter type list</em>'.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_complement#getParameter_type_list()
+   * @see #getdirect_abstract_declarator_complement()
+   * @generated
+   */
+  EReference getdirect_abstract_declarator_complement_Parameter_type_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.identifier_list <em>identifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>identifier list</em>'.
+   * @see org.xtext.example.ansic.identifier_list
+   * @generated
+   */
+  EClass getidentifier_list();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.identifier_list#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.identifier_list#getIdentifier()
+   * @see #getidentifier_list()
+   * @generated
+   */
+  EAttribute getidentifier_list_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.identifier_list#getIdentifier_list_linha <em>Identifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Identifier list linha</em>'.
+   * @see org.xtext.example.ansic.identifier_list#getIdentifier_list_linha()
+   * @see #getidentifier_list()
+   * @generated
+   */
+  EReference getidentifier_list_Identifier_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.identifier_list_linha <em>identifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>identifier list linha</em>'.
+   * @see org.xtext.example.ansic.identifier_list_linha
+   * @generated
+   */
+  EClass getidentifier_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.translation_unit_linha <em>translation unit linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>translation unit linha</em>'.
+   * @see org.xtext.example.ansic.translation_unit_linha
+   * @generated
+   */
+  EClass gettranslation_unit_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.primary_expression <em>primary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>primary expression</em>'.
+   * @see org.xtext.example.ansic.primary_expression
+   * @generated
+   */
+  EClass getprimary_expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.primary_expression#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.primary_expression#getIdentifier()
+   * @see #getprimary_expression()
+   * @generated
+   */
+  EAttribute getprimary_expression_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.primary_expression#getConstant <em>Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constant</em>'.
+   * @see org.xtext.example.ansic.primary_expression#getConstant()
+   * @see #getprimary_expression()
+   * @generated
+   */
+  EReference getprimary_expression_Constant();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.primary_expression#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>String</em>'.
+   * @see org.xtext.example.ansic.primary_expression#getString()
+   * @see #getprimary_expression()
+   * @generated
+   */
+  EReference getprimary_expression_String();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.primary_expression#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.primary_expression#getExpression()
+   * @see #getprimary_expression()
+   * @generated
+   */
+  EReference getprimary_expression_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.primary_expression#getGeneric_selection <em>Generic selection</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Generic selection</em>'.
+   * @see org.xtext.example.ansic.primary_expression#getGeneric_selection()
+   * @see #getprimary_expression()
+   * @generated
+   */
+  EReference getprimary_expression_Generic_selection();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.enumeration_constant <em>enumeration constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>enumeration constant</em>'.
+   * @see org.xtext.example.ansic.enumeration_constant
+   * @generated
+   */
+  EClass getenumeration_constant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.enumeration_constant#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.enumeration_constant#getIdentifier()
+   * @see #getenumeration_constant()
+   * @generated
+   */
+  EAttribute getenumeration_constant_Identifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.generic_selection <em>generic selection</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>generic selection</em>'.
+   * @see org.xtext.example.ansic.generic_selection
+   * @generated
+   */
+  EClass getgeneric_selection();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.generic_selection#get_generic <em>generic</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>generic</em>'.
+   * @see org.xtext.example.ansic.generic_selection#get_generic()
+   * @see #getgeneric_selection()
+   * @generated
+   */
+  EAttribute getgeneric_selection__generic();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.generic_selection#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.generic_selection#getAssignment_expression()
+   * @see #getgeneric_selection()
+   * @generated
+   */
+  EReference getgeneric_selection_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.generic_selection#getGeneric_assoc_list <em>Generic assoc list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Generic assoc list</em>'.
+   * @see org.xtext.example.ansic.generic_selection#getGeneric_assoc_list()
+   * @see #getgeneric_selection()
+   * @generated
+   */
+  EReference getgeneric_selection_Generic_assoc_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.generic_assoc_list <em>generic assoc list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>generic assoc list</em>'.
+   * @see org.xtext.example.ansic.generic_assoc_list
+   * @generated
+   */
+  EClass getgeneric_assoc_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.generic_assoc_list#getGeneric_association <em>Generic association</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Generic association</em>'.
+   * @see org.xtext.example.ansic.generic_assoc_list#getGeneric_association()
+   * @see #getgeneric_assoc_list()
+   * @generated
+   */
+  EReference getgeneric_assoc_list_Generic_association();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.generic_assoc_list#getGeneric_assoc_list_linha <em>Generic assoc list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Generic assoc list linha</em>'.
+   * @see org.xtext.example.ansic.generic_assoc_list#getGeneric_assoc_list_linha()
+   * @see #getgeneric_assoc_list()
+   * @generated
+   */
+  EReference getgeneric_assoc_list_Generic_assoc_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.generic_assoc_list_linha <em>generic assoc list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>generic assoc list linha</em>'.
+   * @see org.xtext.example.ansic.generic_assoc_list_linha
+   * @generated
+   */
+  EClass getgeneric_assoc_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.generic_association <em>generic association</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>generic association</em>'.
+   * @see org.xtext.example.ansic.generic_association
+   * @generated
+   */
+  EClass getgeneric_association();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.generic_association#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type name</em>'.
+   * @see org.xtext.example.ansic.generic_association#getType_name()
+   * @see #getgeneric_association()
+   * @generated
+   */
+  EReference getgeneric_association_Type_name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.generic_association#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.generic_association#getAssignment_expression()
+   * @see #getgeneric_association()
+   * @generated
+   */
+  EReference getgeneric_association_Assignment_expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.generic_association#getDefault <em>Default</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Default</em>'.
+   * @see org.xtext.example.ansic.generic_association#getDefault()
+   * @see #getgeneric_association()
+   * @generated
+   */
+  EAttribute getgeneric_association_Default();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.postfix_expression <em>postfix expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>postfix expression</em>'.
+   * @see org.xtext.example.ansic.postfix_expression
+   * @generated
+   */
+  EClass getpostfix_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.postfix_expression#getPrimary_expression <em>Primary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Primary expression</em>'.
+   * @see org.xtext.example.ansic.postfix_expression#getPrimary_expression()
+   * @see #getpostfix_expression()
+   * @generated
+   */
+  EReference getpostfix_expression_Primary_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.postfix_expression#getPostfix_expression_linha <em>Postfix expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Postfix expression linha</em>'.
+   * @see org.xtext.example.ansic.postfix_expression#getPostfix_expression_linha()
+   * @see #getpostfix_expression()
+   * @generated
+   */
+  EReference getpostfix_expression_Postfix_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.postfix_expression_linha <em>postfix expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>postfix expression linha</em>'.
+   * @see org.xtext.example.ansic.postfix_expression_linha
+   * @generated
+   */
+  EClass getpostfix_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.initializer_list <em>initializer list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>initializer list</em>'.
+   * @see org.xtext.example.ansic.initializer_list
+   * @generated
+   */
+  EClass getinitializer_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer_list#getDesignation <em>Designation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designation</em>'.
+   * @see org.xtext.example.ansic.initializer_list#getDesignation()
+   * @see #getinitializer_list()
+   * @generated
+   */
+  EReference getinitializer_list_Designation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer_list#getInitializer <em>Initializer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initializer</em>'.
+   * @see org.xtext.example.ansic.initializer_list#getInitializer()
+   * @see #getinitializer_list()
+   * @generated
+   */
+  EReference getinitializer_list_Initializer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer_list#getInit_declarator_list_linha <em>Init declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator list linha</em>'.
+   * @see org.xtext.example.ansic.initializer_list#getInit_declarator_list_linha()
+   * @see #getinitializer_list()
+   * @generated
+   */
+  EReference getinitializer_list_Init_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.initializer_list_linha <em>initializer list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>initializer list linha</em>'.
+   * @see org.xtext.example.ansic.initializer_list_linha
+   * @generated
+   */
+  EClass getinitializer_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.initializer_list_complement <em>initializer list complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>initializer list complement</em>'.
+   * @see org.xtext.example.ansic.initializer_list_complement
+   * @generated
+   */
+  EClass getinitializer_list_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer_list_complement#getDesignation <em>Designation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designation</em>'.
+   * @see org.xtext.example.ansic.initializer_list_complement#getDesignation()
+   * @see #getinitializer_list_complement()
+   * @generated
+   */
+  EReference getinitializer_list_complement_Designation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.initializer_list_complement#getInitializer <em>Initializer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initializer</em>'.
+   * @see org.xtext.example.ansic.initializer_list_complement#getInitializer()
+   * @see #getinitializer_list_complement()
+   * @generated
+   */
+  EReference getinitializer_list_complement_Initializer();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.designation <em>designation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>designation</em>'.
+   * @see org.xtext.example.ansic.designation
+   * @generated
+   */
+  EClass getdesignation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.designation#getDesignator_list <em>Designator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designator list</em>'.
+   * @see org.xtext.example.ansic.designation#getDesignator_list()
+   * @see #getdesignation()
+   * @generated
+   */
+  EReference getdesignation_Designator_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.designator_list <em>designator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>designator list</em>'.
+   * @see org.xtext.example.ansic.designator_list
+   * @generated
+   */
+  EClass getdesignator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.designator_list#getDesignator <em>Designator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designator</em>'.
+   * @see org.xtext.example.ansic.designator_list#getDesignator()
+   * @see #getdesignator_list()
+   * @generated
+   */
+  EReference getdesignator_list_Designator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.designator_list#getDesignator_list_linha <em>Designator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designator list linha</em>'.
+   * @see org.xtext.example.ansic.designator_list#getDesignator_list_linha()
+   * @see #getdesignator_list()
+   * @generated
+   */
+  EReference getdesignator_list_Designator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.designator_list_linha <em>designator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>designator list linha</em>'.
+   * @see org.xtext.example.ansic.designator_list_linha
+   * @generated
+   */
+  EClass getdesignator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.designator <em>designator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>designator</em>'.
+   * @see org.xtext.example.ansic.designator
+   * @generated
+   */
+  EClass getdesignator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.designator#getConstant_expression <em>Constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constant expression</em>'.
+   * @see org.xtext.example.ansic.designator#getConstant_expression()
+   * @see #getdesignator()
+   * @generated
+   */
+  EReference getdesignator_Constant_expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.designator#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.designator#getIdentifier()
+   * @see #getdesignator()
+   * @generated
+   */
+  EAttribute getdesignator_Identifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.static_assert_declaration <em>static assert declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>static assert declaration</em>'.
+   * @see org.xtext.example.ansic.static_assert_declaration
+   * @generated
+   */
+  EClass getstatic_assert_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.static_assert_declaration#getConstant_expression <em>Constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constant expression</em>'.
+   * @see org.xtext.example.ansic.static_assert_declaration#getConstant_expression()
+   * @see #getstatic_assert_declaration()
+   * @generated
+   */
+  EReference getstatic_assert_declaration_Constant_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.postfix_expression_complement <em>postfix expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>postfix expression complement</em>'.
+   * @see org.xtext.example.ansic.postfix_expression_complement
+   * @generated
+   */
+  EClass getpostfix_expression_complement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.argument_expression_list <em>argument expression list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>argument expression list</em>'.
+   * @see org.xtext.example.ansic.argument_expression_list
+   * @generated
+   */
+  EClass getargument_expression_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.argument_expression_list#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.argument_expression_list#getAssignment_expression()
+   * @see #getargument_expression_list()
+   * @generated
+   */
+  EReference getargument_expression_list_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.argument_expression_list#getArgument_expression_list_linha <em>Argument expression list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Argument expression list linha</em>'.
+   * @see org.xtext.example.ansic.argument_expression_list#getArgument_expression_list_linha()
+   * @see #getargument_expression_list()
+   * @generated
+   */
+  EReference getargument_expression_list_Argument_expression_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.argument_expression_list_linha <em>argument expression list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>argument expression list linha</em>'.
+   * @see org.xtext.example.ansic.argument_expression_list_linha
+   * @generated
+   */
+  EClass getargument_expression_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.unary_expression <em>unary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>unary expression</em>'.
+   * @see org.xtext.example.ansic.unary_expression
+   * @generated
+   */
+  EClass getunary_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.unary_expression#getPostfix_expression <em>Postfix expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Postfix expression</em>'.
+   * @see org.xtext.example.ansic.unary_expression#getPostfix_expression()
+   * @see #getunary_expression()
+   * @generated
+   */
+  EReference getunary_expression_Postfix_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.unary_expression#getUnary_expression <em>Unary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary expression</em>'.
+   * @see org.xtext.example.ansic.unary_expression#getUnary_expression()
+   * @see #getunary_expression()
+   * @generated
+   */
+  EReference getunary_expression_Unary_expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.unary_expression#getUnary_operator <em>Unary operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Unary operator</em>'.
+   * @see org.xtext.example.ansic.unary_expression#getUnary_operator()
+   * @see #getunary_expression()
+   * @generated
+   */
+  EAttribute getunary_expression_Unary_operator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.unary_expression#getCast_expression <em>Cast expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cast expression</em>'.
+   * @see org.xtext.example.ansic.unary_expression#getCast_expression()
+   * @see #getunary_expression()
+   * @generated
+   */
+  EReference getunary_expression_Cast_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.unary_expression#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type name</em>'.
+   * @see org.xtext.example.ansic.unary_expression#getType_name()
+   * @see #getunary_expression()
+   * @generated
+   */
+  EReference getunary_expression_Type_name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.cast_expression <em>cast expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>cast expression</em>'.
+   * @see org.xtext.example.ansic.cast_expression
+   * @generated
+   */
+  EClass getcast_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.cast_expression#getUnary_expression <em>Unary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary expression</em>'.
+   * @see org.xtext.example.ansic.cast_expression#getUnary_expression()
+   * @see #getcast_expression()
+   * @generated
+   */
+  EReference getcast_expression_Unary_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.cast_expression#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type name</em>'.
+   * @see org.xtext.example.ansic.cast_expression#getType_name()
+   * @see #getcast_expression()
+   * @generated
+   */
+  EReference getcast_expression_Type_name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.cast_expression#getCast_expression <em>Cast expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cast expression</em>'.
+   * @see org.xtext.example.ansic.cast_expression#getCast_expression()
+   * @see #getcast_expression()
+   * @generated
+   */
+  EReference getcast_expression_Cast_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.multiplicative_expression <em>multiplicative expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>multiplicative expression</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression
+   * @generated
+   */
+  EClass getmultiplicative_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression#getCast_expression <em>Cast expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cast expression</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression#getCast_expression()
+   * @see #getmultiplicative_expression()
+   * @generated
+   */
+  EReference getmultiplicative_expression_Cast_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression#getMultiplicative_expression_linha <em>Multiplicative expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression linha</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression#getMultiplicative_expression_linha()
+   * @see #getmultiplicative_expression()
+   * @generated
+   */
+  EReference getmultiplicative_expression_Multiplicative_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.multiplicative_expression_linha <em>multiplicative expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>multiplicative expression linha</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression_linha
+   * @generated
+   */
+  EClass getmultiplicative_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.multiplicative_expression_complement <em>multiplicative expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>multiplicative expression complement</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression_complement
+   * @generated
+   */
+  EClass getmultiplicative_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression_complement#getCast_expression <em>Cast expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cast expression</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression_complement#getCast_expression()
+   * @see #getmultiplicative_expression_complement()
+   * @generated
+   */
+  EReference getmultiplicative_expression_complement_Cast_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.additive_expression <em>additive expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>additive expression</em>'.
+   * @see org.xtext.example.ansic.additive_expression
+   * @generated
+   */
+  EClass getadditive_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression#getMultiplicative_expression <em>Multiplicative expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression</em>'.
+   * @see org.xtext.example.ansic.additive_expression#getMultiplicative_expression()
+   * @see #getadditive_expression()
+   * @generated
+   */
+  EReference getadditive_expression_Multiplicative_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression#getAdditive_expression_linha <em>Additive expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression linha</em>'.
+   * @see org.xtext.example.ansic.additive_expression#getAdditive_expression_linha()
+   * @see #getadditive_expression()
+   * @generated
+   */
+  EReference getadditive_expression_Additive_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.additive_expression_linha <em>additive expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>additive expression linha</em>'.
+   * @see org.xtext.example.ansic.additive_expression_linha
+   * @generated
+   */
+  EClass getadditive_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.additive_expression_complement <em>additive expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>additive expression complement</em>'.
+   * @see org.xtext.example.ansic.additive_expression_complement
+   * @generated
+   */
+  EClass getadditive_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression_complement#getMultiplicative_expression <em>Multiplicative expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression</em>'.
+   * @see org.xtext.example.ansic.additive_expression_complement#getMultiplicative_expression()
+   * @see #getadditive_expression_complement()
+   * @generated
+   */
+  EReference getadditive_expression_complement_Multiplicative_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.shift_expression <em>shift expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>shift expression</em>'.
+   * @see org.xtext.example.ansic.shift_expression
+   * @generated
+   */
+  EClass getshift_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.shift_expression#getAdditive_expression <em>Additive expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression</em>'.
+   * @see org.xtext.example.ansic.shift_expression#getAdditive_expression()
+   * @see #getshift_expression()
+   * @generated
+   */
+  EReference getshift_expression_Additive_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.shift_expression#getShift_expression_linha <em>Shift expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression linha</em>'.
+   * @see org.xtext.example.ansic.shift_expression#getShift_expression_linha()
+   * @see #getshift_expression()
+   * @generated
+   */
+  EReference getshift_expression_Shift_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.shift_expression_linha <em>shift expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>shift expression linha</em>'.
+   * @see org.xtext.example.ansic.shift_expression_linha
+   * @generated
+   */
+  EClass getshift_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.shift_expression_complement <em>shift expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>shift expression complement</em>'.
+   * @see org.xtext.example.ansic.shift_expression_complement
+   * @generated
+   */
+  EClass getshift_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.shift_expression_complement#getAdditive_expression <em>Additive expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression</em>'.
+   * @see org.xtext.example.ansic.shift_expression_complement#getAdditive_expression()
+   * @see #getshift_expression_complement()
+   * @generated
+   */
+  EReference getshift_expression_complement_Additive_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.relational_expression <em>relational expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>relational expression</em>'.
+   * @see org.xtext.example.ansic.relational_expression
+   * @generated
+   */
+  EClass getrelational_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression#getShift_expression <em>Shift expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression</em>'.
+   * @see org.xtext.example.ansic.relational_expression#getShift_expression()
+   * @see #getrelational_expression()
+   * @generated
+   */
+  EReference getrelational_expression_Shift_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression#getRelational_expression_linha <em>Relational expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Relational expression linha</em>'.
+   * @see org.xtext.example.ansic.relational_expression#getRelational_expression_linha()
+   * @see #getrelational_expression()
+   * @generated
+   */
+  EReference getrelational_expression_Relational_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.relational_expression_linha <em>relational expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>relational expression linha</em>'.
+   * @see org.xtext.example.ansic.relational_expression_linha
+   * @generated
+   */
+  EClass getrelational_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.relational_expression_complement <em>relational expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>relational expression complement</em>'.
+   * @see org.xtext.example.ansic.relational_expression_complement
+   * @generated
+   */
+  EClass getrelational_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression_complement#getShift_expression <em>Shift expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression</em>'.
+   * @see org.xtext.example.ansic.relational_expression_complement#getShift_expression()
+   * @see #getrelational_expression_complement()
+   * @generated
+   */
+  EReference getrelational_expression_complement_Shift_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.equality_expression <em>equality expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>equality expression</em>'.
+   * @see org.xtext.example.ansic.equality_expression
+   * @generated
+   */
+  EClass getequality_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.equality_expression#getRelational_expression <em>Relational expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Relational expression</em>'.
+   * @see org.xtext.example.ansic.equality_expression#getRelational_expression()
+   * @see #getequality_expression()
+   * @generated
+   */
+  EReference getequality_expression_Relational_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.equality_expression#getEquality_expression_linha <em>Equality expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression linha</em>'.
+   * @see org.xtext.example.ansic.equality_expression#getEquality_expression_linha()
+   * @see #getequality_expression()
+   * @generated
+   */
+  EReference getequality_expression_Equality_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.equality_expression_linha <em>equality expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>equality expression linha</em>'.
+   * @see org.xtext.example.ansic.equality_expression_linha
+   * @generated
+   */
+  EClass getequality_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.equality_expression_complement <em>equality expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>equality expression complement</em>'.
+   * @see org.xtext.example.ansic.equality_expression_complement
+   * @generated
+   */
+  EClass getequality_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.equality_expression_complement#getRelational_expression <em>Relational expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Relational expression</em>'.
+   * @see org.xtext.example.ansic.equality_expression_complement#getRelational_expression()
+   * @see #getequality_expression_complement()
+   * @generated
+   */
+  EReference getequality_expression_complement_Relational_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.statement <em>statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>statement</em>'.
+   * @see org.xtext.example.ansic.statement
+   * @generated
+   */
+  EClass getstatement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.jump_statement <em>jump statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>jump statement</em>'.
+   * @see org.xtext.example.ansic.jump_statement
+   * @generated
+   */
+  EClass getjump_statement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.jump_statement#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.jump_statement#getIdentifier()
+   * @see #getjump_statement()
+   * @generated
+   */
+  EAttribute getjump_statement_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.jump_statement#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.jump_statement#getExpression()
+   * @see #getjump_statement()
+   * @generated
+   */
+  EReference getjump_statement_Expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.iteration_statement <em>iteration statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>iteration statement</em>'.
+   * @see org.xtext.example.ansic.iteration_statement
+   * @generated
+   */
+  EClass getiteration_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.iteration_statement#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.iteration_statement#getExpression()
+   * @see #getiteration_statement()
+   * @generated
+   */
+  EReference getiteration_statement_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.iteration_statement#getStatement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statement</em>'.
+   * @see org.xtext.example.ansic.iteration_statement#getStatement()
+   * @see #getiteration_statement()
+   * @generated
+   */
+  EReference getiteration_statement_Statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.iteration_statement#getExpression_statement <em>Expression statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression statement</em>'.
+   * @see org.xtext.example.ansic.iteration_statement#getExpression_statement()
+   * @see #getiteration_statement()
+   * @generated
+   */
+  EReference getiteration_statement_Expression_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.iteration_statement#getExpression_statement2 <em>Expression statement2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression statement2</em>'.
+   * @see org.xtext.example.ansic.iteration_statement#getExpression_statement2()
+   * @see #getiteration_statement()
+   * @generated
+   */
+  EReference getiteration_statement_Expression_statement2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.iteration_statement#getDeclaration <em>Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration</em>'.
+   * @see org.xtext.example.ansic.iteration_statement#getDeclaration()
+   * @see #getiteration_statement()
+   * @generated
+   */
+  EReference getiteration_statement_Declaration();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.selection_statement <em>selection statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>selection statement</em>'.
+   * @see org.xtext.example.ansic.selection_statement
+   * @generated
+   */
+  EClass getselection_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.selection_statement#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.selection_statement#getExpression()
+   * @see #getselection_statement()
+   * @generated
+   */
+  EReference getselection_statement_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.selection_statement#getStatement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statement</em>'.
+   * @see org.xtext.example.ansic.selection_statement#getStatement()
+   * @see #getselection_statement()
+   * @generated
+   */
+  EReference getselection_statement_Statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.selection_statement#getStatement2 <em>Statement2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statement2</em>'.
+   * @see org.xtext.example.ansic.selection_statement#getStatement2()
+   * @see #getselection_statement()
+   * @generated
+   */
+  EReference getselection_statement_Statement2();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.labeled_statement <em>labeled statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>labeled statement</em>'.
+   * @see org.xtext.example.ansic.labeled_statement
+   * @generated
+   */
+  EClass getlabeled_statement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.labeled_statement#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.labeled_statement#getIdentifier()
+   * @see #getlabeled_statement()
+   * @generated
+   */
+  EAttribute getlabeled_statement_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.labeled_statement#getStatement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statement</em>'.
+   * @see org.xtext.example.ansic.labeled_statement#getStatement()
+   * @see #getlabeled_statement()
+   * @generated
+   */
+  EReference getlabeled_statement_Statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.labeled_statement#getConstant_expression <em>Constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constant expression</em>'.
+   * @see org.xtext.example.ansic.labeled_statement#getConstant_expression()
+   * @see #getlabeled_statement()
+   * @generated
+   */
+  EReference getlabeled_statement_Constant_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.compound_statement <em>compound statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>compound statement</em>'.
+   * @see org.xtext.example.ansic.compound_statement
+   * @generated
+   */
+  EClass getcompound_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.compound_statement#getBlock_item_list <em>Block item list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Block item list</em>'.
+   * @see org.xtext.example.ansic.compound_statement#getBlock_item_list()
+   * @see #getcompound_statement()
+   * @generated
+   */
+  EReference getcompound_statement_Block_item_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.block_item_list <em>block item list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>block item list</em>'.
+   * @see org.xtext.example.ansic.block_item_list
+   * @generated
+   */
+  EClass getblock_item_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.block_item_list_linha <em>block item list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>block item list linha</em>'.
+   * @see org.xtext.example.ansic.block_item_list_linha
+   * @generated
+   */
+  EClass getblock_item_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.block_item <em>block item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>block item</em>'.
+   * @see org.xtext.example.ansic.block_item
+   * @generated
+   */
+  EClass getblock_item();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item#getBlock_item_list_linha <em>Block item list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Block item list linha</em>'.
+   * @see org.xtext.example.ansic.block_item#getBlock_item_list_linha()
+   * @see #getblock_item()
+   * @generated
+   */
+  EReference getblock_item_Block_item_list_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item#getDeclaration <em>Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration</em>'.
+   * @see org.xtext.example.ansic.block_item#getDeclaration()
+   * @see #getblock_item()
+   * @generated
+   */
+  EReference getblock_item_Declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item#getStatement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statement</em>'.
+   * @see org.xtext.example.ansic.block_item#getStatement()
+   * @see #getblock_item()
+   * @generated
+   */
+  EReference getblock_item_Statement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.expression_statement <em>expression statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>expression statement</em>'.
+   * @see org.xtext.example.ansic.expression_statement
+   * @generated
+   */
+  EClass getexpression_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.expression_statement#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.expression_statement#getExpression()
+   * @see #getexpression_statement()
+   * @generated
+   */
+  EReference getexpression_statement_Expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.and_expression <em>and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>and expression</em>'.
+   * @see org.xtext.example.ansic.and_expression
+   * @generated
+   */
+  EClass getand_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.and_expression#getEquality_expression <em>Equality expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression</em>'.
+   * @see org.xtext.example.ansic.and_expression#getEquality_expression()
+   * @see #getand_expression()
+   * @generated
+   */
+  EReference getand_expression_Equality_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.and_expression#getAnd_expression_linha <em>And expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And expression linha</em>'.
+   * @see org.xtext.example.ansic.and_expression#getAnd_expression_linha()
+   * @see #getand_expression()
+   * @generated
+   */
+  EReference getand_expression_And_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.and_expression_linha <em>and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>and expression linha</em>'.
+   * @see org.xtext.example.ansic.and_expression_linha
+   * @generated
+   */
+  EClass getand_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.exclusive_or_expression <em>exclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>exclusive or expression</em>'.
+   * @see org.xtext.example.ansic.exclusive_or_expression
+   * @generated
+   */
+  EClass getexclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.exclusive_or_expression#getAnd_expression <em>And expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And expression</em>'.
+   * @see org.xtext.example.ansic.exclusive_or_expression#getAnd_expression()
+   * @see #getexclusive_or_expression()
+   * @generated
+   */
+  EReference getexclusive_or_expression_And_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.exclusive_or_expression#getExclusive_or_expression_linha <em>Exclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.exclusive_or_expression#getExclusive_or_expression_linha()
+   * @see #getexclusive_or_expression()
+   * @generated
+   */
+  EReference getexclusive_or_expression_Exclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.exclusive_or_expression_linha <em>exclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>exclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.exclusive_or_expression_linha
+   * @generated
+   */
+  EClass getexclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.inclusive_or_expression <em>inclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>inclusive or expression</em>'.
+   * @see org.xtext.example.ansic.inclusive_or_expression
+   * @generated
+   */
+  EClass getinclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.inclusive_or_expression#getExclusive_or_expression <em>Exclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exclusive or expression</em>'.
+   * @see org.xtext.example.ansic.inclusive_or_expression#getExclusive_or_expression()
+   * @see #getinclusive_or_expression()
+   * @generated
+   */
+  EReference getinclusive_or_expression_Exclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.inclusive_or_expression#getInclusive_or_expression_linha <em>Inclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.inclusive_or_expression#getInclusive_or_expression_linha()
+   * @see #getinclusive_or_expression()
+   * @generated
+   */
+  EReference getinclusive_or_expression_Inclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.inclusive_or_expression_linha <em>inclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>inclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.inclusive_or_expression_linha
+   * @generated
+   */
+  EClass getinclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.logical_and_expression <em>logical and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>logical and expression</em>'.
+   * @see org.xtext.example.ansic.logical_and_expression
+   * @generated
+   */
+  EClass getlogical_and_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_and_expression#getInclusive_or_expression <em>Inclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inclusive or expression</em>'.
+   * @see org.xtext.example.ansic.logical_and_expression#getInclusive_or_expression()
+   * @see #getlogical_and_expression()
+   * @generated
+   */
+  EReference getlogical_and_expression_Inclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_and_expression#getLogical_and_expression_linha <em>Logical and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical and expression linha</em>'.
+   * @see org.xtext.example.ansic.logical_and_expression#getLogical_and_expression_linha()
+   * @see #getlogical_and_expression()
+   * @generated
+   */
+  EReference getlogical_and_expression_Logical_and_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.logical_and_expression_linha <em>logical and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>logical and expression linha</em>'.
+   * @see org.xtext.example.ansic.logical_and_expression_linha
+   * @generated
+   */
+  EClass getlogical_and_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.logical_or_expression <em>logical or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>logical or expression</em>'.
+   * @see org.xtext.example.ansic.logical_or_expression
+   * @generated
+   */
+  EClass getlogical_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_or_expression#getLogical_and_expression <em>Logical and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical and expression</em>'.
+   * @see org.xtext.example.ansic.logical_or_expression#getLogical_and_expression()
+   * @see #getlogical_or_expression()
+   * @generated
+   */
+  EReference getlogical_or_expression_Logical_and_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_or_expression#getLogical_or_expression_linha <em>Logical or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical or expression linha</em>'.
+   * @see org.xtext.example.ansic.logical_or_expression#getLogical_or_expression_linha()
+   * @see #getlogical_or_expression()
+   * @generated
+   */
+  EReference getlogical_or_expression_Logical_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.logical_or_expression_linha <em>logical or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>logical or expression linha</em>'.
+   * @see org.xtext.example.ansic.logical_or_expression_linha
+   * @generated
+   */
+  EClass getlogical_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.conditional_expression <em>conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>conditional expression</em>'.
+   * @see org.xtext.example.ansic.conditional_expression
+   * @generated
+   */
+  EClass getconditional_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.conditional_expression#getLogical_or_expression <em>Logical or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical or expression</em>'.
+   * @see org.xtext.example.ansic.conditional_expression#getLogical_or_expression()
+   * @see #getconditional_expression()
+   * @generated
+   */
+  EReference getconditional_expression_Logical_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.conditional_expression#getConditional_expression_linha <em>Conditional expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression linha</em>'.
+   * @see org.xtext.example.ansic.conditional_expression#getConditional_expression_linha()
+   * @see #getconditional_expression()
+   * @generated
+   */
+  EReference getconditional_expression_Conditional_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.conditional_expression_linha <em>conditional expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>conditional expression linha</em>'.
+   * @see org.xtext.example.ansic.conditional_expression_linha
+   * @generated
+   */
+  EClass getconditional_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.assignment_expression <em>assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>assignment expression</em>'.
+   * @see org.xtext.example.ansic.assignment_expression
+   * @generated
+   */
+  EClass getassignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.assignment_expression#getConditional_expression <em>Conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
+   * @see org.xtext.example.ansic.assignment_expression#getConditional_expression()
+   * @see #getassignment_expression()
+   * @generated
+   */
+  EReference getassignment_expression_Conditional_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.assignment_expression#getUnary_expression <em>Unary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary expression</em>'.
+   * @see org.xtext.example.ansic.assignment_expression#getUnary_expression()
+   * @see #getassignment_expression()
+   * @generated
+   */
+  EReference getassignment_expression_Unary_expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.assignment_expression#getAssignment_operator <em>Assignment operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Assignment operator</em>'.
+   * @see org.xtext.example.ansic.assignment_expression#getAssignment_operator()
+   * @see #getassignment_expression()
+   * @generated
+   */
+  EAttribute getassignment_expression_Assignment_operator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.assignment_expression#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.assignment_expression#getAssignment_expression()
+   * @see #getassignment_expression()
+   * @generated
+   */
+  EReference getassignment_expression_Assignment_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.type_name <em>type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>type name</em>'.
+   * @see org.xtext.example.ansic.type_name
+   * @generated
+   */
+  EClass gettype_name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_name#getInitializer_list <em>Initializer list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initializer list</em>'.
+   * @see org.xtext.example.ansic.type_name#getInitializer_list()
+   * @see #gettype_name()
+   * @generated
+   */
+  EReference gettype_name_Initializer_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_name#getSpecifier_qualifier_list <em>Specifier qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Specifier qualifier list</em>'.
+   * @see org.xtext.example.ansic.type_name#getSpecifier_qualifier_list()
+   * @see #gettype_name()
+   * @generated
+   */
+  EReference gettype_name_Specifier_qualifier_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_name#getAbstract_declarator <em>Abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Abstract declarator</em>'.
+   * @see org.xtext.example.ansic.type_name#getAbstract_declarator()
+   * @see #gettype_name()
+   * @generated
+   */
+  EReference gettype_name_Abstract_declarator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.expression <em>expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>expression</em>'.
+   * @see org.xtext.example.ansic.expression
+   * @generated
+   */
+  EClass getexpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.expression#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.expression#getAssignment_expression()
+   * @see #getexpression()
+   * @generated
+   */
+  EReference getexpression_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.expression#getExpression_linha <em>Expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression linha</em>'.
+   * @see org.xtext.example.ansic.expression#getExpression_linha()
+   * @see #getexpression()
+   * @generated
+   */
+  EReference getexpression_Expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.expression_linha <em>expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>expression linha</em>'.
+   * @see org.xtext.example.ansic.expression_linha
+   * @generated
+   */
+  EClass getexpression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.constant_expression <em>constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>constant expression</em>'.
+   * @see org.xtext.example.ansic.constant_expression
+   * @generated
+   */
+  EClass getconstant_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.constant_expression#getConditional_expression <em>Conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
+   * @see org.xtext.example.ansic.constant_expression#getConditional_expression()
+   * @see #getconstant_expression()
+   * @generated
+   */
+  EReference getconstant_expression_Conditional_expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.init_declarator_list <em>init declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>init declarator list</em>'.
+   * @see org.xtext.example.ansic.init_declarator_list
+   * @generated
+   */
+  EClass getinit_declarator_list();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.init_declarator_list#getInit_declarator <em>Init declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator</em>'.
+   * @see org.xtext.example.ansic.init_declarator_list#getInit_declarator()
+   * @see #getinit_declarator_list()
+   * @generated
+   */
+  EReference getinit_declarator_list_Init_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.init_declarator_list#getInit_declarator_list_linha <em>Init declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator list linha</em>'.
+   * @see org.xtext.example.ansic.init_declarator_list#getInit_declarator_list_linha()
+   * @see #getinit_declarator_list()
+   * @generated
+   */
+  EReference getinit_declarator_list_Init_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.init_declarator_list_linha <em>init declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>init declarator list linha</em>'.
+   * @see org.xtext.example.ansic.init_declarator_list_linha
+   * @generated
+   */
+  EClass getinit_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.init_declarator <em>init declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>init declarator</em>'.
+   * @see org.xtext.example.ansic.init_declarator
+   * @generated
+   */
+  EClass getinit_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.init_declarator#getDeclarator <em>Declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declarator</em>'.
+   * @see org.xtext.example.ansic.init_declarator#getDeclarator()
+   * @see #getinit_declarator()
+   * @generated
+   */
+  EReference getinit_declarator_Declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.init_declarator#getInitializer <em>Initializer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initializer</em>'.
+   * @see org.xtext.example.ansic.init_declarator#getInitializer()
+   * @see #getinit_declarator()
+   * @generated
+   */
+  EReference getinit_declarator_Initializer();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.string_ufcg <em>string ufcg</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>string ufcg</em>'.
+   * @see org.xtext.example.ansic.string_ufcg
+   * @generated
+   */
+  EClass getstring_ufcg();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.string_ufcg#getString_literal <em>String literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String literal</em>'.
+   * @see org.xtext.example.ansic.string_ufcg#getString_literal()
+   * @see #getstring_ufcg()
+   * @generated
+   */
+  EAttribute getstring_ufcg_String_literal();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.string_ufcg#get__func__ <em>func </em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>func </em>'.
+   * @see org.xtext.example.ansic.string_ufcg#get__func__()
+   * @see #getstring_ufcg()
+   * @generated
+   */
+  EAttribute getstring_ufcg___func__();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.constant <em>constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>constant</em>'.
+   * @see org.xtext.example.ansic.constant
+   * @generated
+   */
+  EClass getconstant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.constant#getI_constant <em>Iconstant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Iconstant</em>'.
+   * @see org.xtext.example.ansic.constant#getI_constant()
+   * @see #getconstant()
+   * @generated
+   */
+  EAttribute getconstant_I_constant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.constant#getF_constant <em>Fconstant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fconstant</em>'.
+   * @see org.xtext.example.ansic.constant#getF_constant()
+   * @see #getconstant()
+   * @generated
+   */
+  EAttribute getconstant_F_constant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.constant#getEnumz <em>Enumz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Enumz</em>'.
+   * @see org.xtext.example.ansic.constant#getEnumz()
+   * @see #getconstant()
+   * @generated
+   */
+  EAttribute getconstant_Enumz();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.EnumeratorListLinhaAction <em>Enumerator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enumerator List Linha Action</em>'.
+   * @see org.xtext.example.ansic.EnumeratorListLinhaAction
+   * @generated
+   */
+  EClass getEnumeratorListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.EnumeratorListLinhaAction#getEnumerator <em>Enumerator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumerator</em>'.
+   * @see org.xtext.example.ansic.EnumeratorListLinhaAction#getEnumerator()
+   * @see #getEnumeratorListLinhaAction()
+   * @generated
+   */
+  EReference getEnumeratorListLinhaAction_Enumerator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.EnumeratorListLinhaAction#getEnumerator_list_linha <em>Enumerator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumerator list linha</em>'.
+   * @see org.xtext.example.ansic.EnumeratorListLinhaAction#getEnumerator_list_linha()
+   * @see #getEnumeratorListLinhaAction()
+   * @generated
+   */
+  EReference getEnumeratorListLinhaAction_Enumerator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.StructOrUnionSpecifierComplementAction <em>Struct Or Union Specifier Complement Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Struct Or Union Specifier Complement Action</em>'.
+   * @see org.xtext.example.ansic.StructOrUnionSpecifierComplementAction
+   * @generated
+   */
+  EClass getStructOrUnionSpecifierComplementAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.StructOrUnionSpecifierComplementAction#getStruct_declaration_list <em>Struct declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declaration list</em>'.
+   * @see org.xtext.example.ansic.StructOrUnionSpecifierComplementAction#getStruct_declaration_list()
+   * @see #getStructOrUnionSpecifierComplementAction()
+   * @generated
+   */
+  EReference getStructOrUnionSpecifierComplementAction_Struct_declaration_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.StructDeclarationListLinhaAction <em>Struct Declaration List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Struct Declaration List Linha Action</em>'.
+   * @see org.xtext.example.ansic.StructDeclarationListLinhaAction
+   * @generated
+   */
+  EClass getStructDeclarationListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.StructDeclarationListLinhaAction#getStruct_declaration <em>Struct declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declaration</em>'.
+   * @see org.xtext.example.ansic.StructDeclarationListLinhaAction#getStruct_declaration()
+   * @see #getStructDeclarationListLinhaAction()
+   * @generated
+   */
+  EReference getStructDeclarationListLinhaAction_Struct_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.StructDeclarationListLinhaAction#getStruct_declaration_list_linha <em>Struct declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declaration list linha</em>'.
+   * @see org.xtext.example.ansic.StructDeclarationListLinhaAction#getStruct_declaration_list_linha()
+   * @see #getStructDeclarationListLinhaAction()
+   * @generated
+   */
+  EReference getStructDeclarationListLinhaAction_Struct_declaration_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.StructDeclaratorListLinhaAction <em>Struct Declarator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Struct Declarator List Linha Action</em>'.
+   * @see org.xtext.example.ansic.StructDeclaratorListLinhaAction
+   * @generated
+   */
+  EClass getStructDeclaratorListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.StructDeclaratorListLinhaAction#getStruct_declarator <em>Struct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declarator</em>'.
+   * @see org.xtext.example.ansic.StructDeclaratorListLinhaAction#getStruct_declarator()
+   * @see #getStructDeclaratorListLinhaAction()
+   * @generated
+   */
+  EReference getStructDeclaratorListLinhaAction_Struct_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.StructDeclaratorListLinhaAction#getStruct_declarator_list_linha <em>Struct declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct declarator list linha</em>'.
+   * @see org.xtext.example.ansic.StructDeclaratorListLinhaAction#getStruct_declarator_list_linha()
+   * @see #getStructDeclaratorListLinhaAction()
+   * @generated
+   */
+  EReference getStructDeclaratorListLinhaAction_Struct_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.DeclarationListLinhaAction <em>Declaration List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Declaration List Linha Action</em>'.
+   * @see org.xtext.example.ansic.DeclarationListLinhaAction
+   * @generated
+   */
+  EClass getDeclarationListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DeclarationListLinhaAction#getDeclaration <em>Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration</em>'.
+   * @see org.xtext.example.ansic.DeclarationListLinhaAction#getDeclaration()
+   * @see #getDeclarationListLinhaAction()
+   * @generated
+   */
+  EReference getDeclarationListLinhaAction_Declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DeclarationListLinhaAction#getDeclaration_list_linha <em>Declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Declaration list linha</em>'.
+   * @see org.xtext.example.ansic.DeclarationListLinhaAction#getDeclaration_list_linha()
+   * @see #getDeclarationListLinhaAction()
+   * @generated
+   */
+  EReference getDeclarationListLinhaAction_Declaration_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion <em>Type Qualifier List Linha Ation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Qualifier List Linha Ation</em>'.
+   * @see org.xtext.example.ansic.TypeQualifierListLinhaAtion
+   * @generated
+   */
+  EClass getTypeQualifierListLinhaAtion();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier <em>Type qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @see org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier()
+   * @see #getTypeQualifierListLinhaAtion()
+   * @generated
+   */
+  EAttribute getTypeQualifierListLinhaAtion_Type_qualifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier_list_linha <em>Type qualifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type qualifier list linha</em>'.
+   * @see org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier_list_linha()
+   * @see #getTypeQualifierListLinhaAtion()
+   * @generated
+   */
+  EReference getTypeQualifierListLinhaAtion_Type_qualifier_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction <em>Direct Declarator Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Direct Declarator Linha Action</em>'.
+   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction
+   * @generated
+   */
+  EClass getDirectDeclaratorLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_complemento <em>Direct declarator complemento</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct declarator complemento</em>'.
+   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_complemento()
+   * @see #getDirectDeclaratorLinhaAction()
+   * @generated
+   */
+  EReference getDirectDeclaratorLinhaAction_Direct_declarator_complemento();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_linha <em>Direct declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct declarator linha</em>'.
+   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_linha()
+   * @see #getDirectDeclaratorLinhaAction()
+   * @generated
+   */
+  EReference getDirectDeclaratorLinhaAction_Direct_declarator_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.ParameterListLinhaAction <em>Parameter List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parameter List Linha Action</em>'.
+   * @see org.xtext.example.ansic.ParameterListLinhaAction
+   * @generated
+   */
+  EClass getParameterListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ParameterListLinhaAction#getParameter_declaration <em>Parameter declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter declaration</em>'.
+   * @see org.xtext.example.ansic.ParameterListLinhaAction#getParameter_declaration()
+   * @see #getParameterListLinhaAction()
+   * @generated
+   */
+  EReference getParameterListLinhaAction_Parameter_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ParameterListLinhaAction#getParameter_list_linha <em>Parameter list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter list linha</em>'.
+   * @see org.xtext.example.ansic.ParameterListLinhaAction#getParameter_list_linha()
+   * @see #getParameterListLinhaAction()
+   * @generated
+   */
+  EReference getParameterListLinhaAction_Parameter_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction <em>Direct Abstract Declarrator Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Direct Abstract Declarrator Linha Action</em>'.
+   * @see org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction
+   * @generated
+   */
+  EClass getDirectAbstractDeclarratorLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction#getDirect_abstract_declarator_complement <em>Direct abstract declarator complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct abstract declarator complement</em>'.
+   * @see org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction#getDirect_abstract_declarator_complement()
+   * @see #getDirectAbstractDeclarratorLinhaAction()
+   * @generated
+   */
+  EReference getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction#getDirect_abstract_declarator_linha <em>Direct abstract declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct abstract declarator linha</em>'.
+   * @see org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction#getDirect_abstract_declarator_linha()
+   * @see #getDirectAbstractDeclarratorLinhaAction()
+   * @generated
+   */
+  EReference getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.IdentifierListLinhaAction <em>Identifier List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Identifier List Linha Action</em>'.
+   * @see org.xtext.example.ansic.IdentifierListLinhaAction
+   * @generated
+   */
+  EClass getIdentifierListLinhaAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.IdentifierListLinhaAction#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.IdentifierListLinhaAction#getIdentifier()
+   * @see #getIdentifierListLinhaAction()
+   * @generated
+   */
+  EAttribute getIdentifierListLinhaAction_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.IdentifierListLinhaAction#getIdentifier_list_linha <em>Identifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Identifier list linha</em>'.
+   * @see org.xtext.example.ansic.IdentifierListLinhaAction#getIdentifier_list_linha()
+   * @see #getIdentifierListLinhaAction()
+   * @generated
+   */
+  EReference getIdentifierListLinhaAction_Identifier_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.TranlationUnitLinhaAction <em>Tranlation Unit Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Tranlation Unit Linha Action</em>'.
+   * @see org.xtext.example.ansic.TranlationUnitLinhaAction
+   * @generated
+   */
+  EClass getTranlationUnitLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.TranlationUnitLinhaAction#getExternal_declaration <em>External declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>External declaration</em>'.
+   * @see org.xtext.example.ansic.TranlationUnitLinhaAction#getExternal_declaration()
+   * @see #getTranlationUnitLinhaAction()
+   * @generated
+   */
+  EReference getTranlationUnitLinhaAction_External_declaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.TranlationUnitLinhaAction#getTranslation_unit_linha <em>Translation unit linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Translation unit linha</em>'.
+   * @see org.xtext.example.ansic.TranlationUnitLinhaAction#getTranslation_unit_linha()
+   * @see #getTranlationUnitLinhaAction()
+   * @generated
+   */
+  EReference getTranlationUnitLinhaAction_Translation_unit_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.GenericAssocListLinhaAction <em>Generic Assoc List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Generic Assoc List Linha Action</em>'.
+   * @see org.xtext.example.ansic.GenericAssocListLinhaAction
+   * @generated
+   */
+  EClass getGenericAssocListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.GenericAssocListLinhaAction#getGeneric_association <em>Generic association</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Generic association</em>'.
+   * @see org.xtext.example.ansic.GenericAssocListLinhaAction#getGeneric_association()
+   * @see #getGenericAssocListLinhaAction()
+   * @generated
+   */
+  EReference getGenericAssocListLinhaAction_Generic_association();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.GenericAssocListLinhaAction#getGeneric_assoc_list_linha <em>Generic assoc list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Generic assoc list linha</em>'.
+   * @see org.xtext.example.ansic.GenericAssocListLinhaAction#getGeneric_assoc_list_linha()
+   * @see #getGenericAssocListLinhaAction()
+   * @generated
+   */
+  EReference getGenericAssocListLinhaAction_Generic_assoc_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionLinhaAction <em>Postfix Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionLinhaAction
+   * @generated
+   */
+  EClass getPostfixExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.PostfixExpressionLinhaAction#getPostfix_expression_complement <em>Postfix expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Postfix expression complement</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionLinhaAction#getPostfix_expression_complement()
+   * @see #getPostfixExpressionLinhaAction()
+   * @generated
+   */
+  EReference getPostfixExpressionLinhaAction_Postfix_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.PostfixExpressionLinhaAction#getPostfix_expression_linha <em>Postfix expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Postfix expression linha</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionLinhaAction#getPostfix_expression_linha()
+   * @see #getPostfixExpressionLinhaAction()
+   * @generated
+   */
+  EReference getPostfixExpressionLinhaAction_Postfix_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.InitializerListLinhaAction <em>Initializer List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Initializer List Linha Action</em>'.
+   * @see org.xtext.example.ansic.InitializerListLinhaAction
+   * @generated
+   */
+  EClass getInitializerListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InitializerListLinhaAction#getInitializer_list_complement <em>Initializer list complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initializer list complement</em>'.
+   * @see org.xtext.example.ansic.InitializerListLinhaAction#getInitializer_list_complement()
+   * @see #getInitializerListLinhaAction()
+   * @generated
+   */
+  EReference getInitializerListLinhaAction_Initializer_list_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InitializerListLinhaAction#getInit_declarator_list_linha <em>Init declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator list linha</em>'.
+   * @see org.xtext.example.ansic.InitializerListLinhaAction#getInit_declarator_list_linha()
+   * @see #getInitializerListLinhaAction()
+   * @generated
+   */
+  EReference getInitializerListLinhaAction_Init_declarator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.DesignatorListLinhaAction <em>Designator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Designator List Linha Action</em>'.
+   * @see org.xtext.example.ansic.DesignatorListLinhaAction
+   * @generated
+   */
+  EClass getDesignatorListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DesignatorListLinhaAction#getDesignator <em>Designator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designator</em>'.
+   * @see org.xtext.example.ansic.DesignatorListLinhaAction#getDesignator()
+   * @see #getDesignatorListLinhaAction()
+   * @generated
+   */
+  EReference getDesignatorListLinhaAction_Designator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DesignatorListLinhaAction#getDesignator_list_linha <em>Designator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Designator list linha</em>'.
+   * @see org.xtext.example.ansic.DesignatorListLinhaAction#getDesignator_list_linha()
+   * @see #getDesignatorListLinhaAction()
+   * @generated
+   */
+  EReference getDesignatorListLinhaAction_Designator_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementExpression <em>Postfix Expression Complement Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Expression</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementExpression
+   * @generated
+   */
+  EClass getPostfixExpressionComplementExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.PostfixExpressionComplementExpression#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementExpression#getExpression()
+   * @see #getPostfixExpressionComplementExpression()
+   * @generated
+   */
+  EReference getPostfixExpressionComplementExpression_Expression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementEmpty <em>Postfix Expression Complement Empty</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Empty</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementEmpty
+   * @generated
+   */
+  EClass getPostfixExpressionComplementEmpty();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementArgList <em>Postfix Expression Complement Arg List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Arg List</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementArgList
+   * @generated
+   */
+  EClass getPostfixExpressionComplementArgList();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.PostfixExpressionComplementArgList#getArgument_expression_list <em>Argument expression list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Argument expression list</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementArgList#getArgument_expression_list()
+   * @see #getPostfixExpressionComplementArgList()
+   * @generated
+   */
+  EReference getPostfixExpressionComplementArgList_Argument_expression_list();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementIdentifier <em>Postfix Expression Complement Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Identifier</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementIdentifier
+   * @generated
+   */
+  EClass getPostfixExpressionComplementIdentifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.PostfixExpressionComplementIdentifier#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementIdentifier#getIdentifier()
+   * @see #getPostfixExpressionComplementIdentifier()
+   * @generated
+   */
+  EAttribute getPostfixExpressionComplementIdentifier_Identifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementPointer <em>Postfix Expression Complement Pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Pointer</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementPointer
+   * @generated
+   */
+  EClass getPostfixExpressionComplementPointer();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.PostfixExpressionComplementPointer#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementPointer#getIdentifier()
+   * @see #getPostfixExpressionComplementPointer()
+   * @generated
+   */
+  EAttribute getPostfixExpressionComplementPointer_Identifier();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementIncrement <em>Postfix Expression Complement Increment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Increment</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementIncrement
+   * @generated
+   */
+  EClass getPostfixExpressionComplementIncrement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementDecrement <em>Postfix Expression Complement Decrement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Postfix Expression Complement Decrement</em>'.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementDecrement
+   * @generated
+   */
+  EClass getPostfixExpressionComplementDecrement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.ArgumentExpressionListLinhaAction <em>Argument Expression List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Argument Expression List Linha Action</em>'.
+   * @see org.xtext.example.ansic.ArgumentExpressionListLinhaAction
+   * @generated
+   */
+  EClass getArgumentExpressionListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ArgumentExpressionListLinhaAction#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.ArgumentExpressionListLinhaAction#getAssignment_expression()
+   * @see #getArgumentExpressionListLinhaAction()
+   * @generated
+   */
+  EReference getArgumentExpressionListLinhaAction_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ArgumentExpressionListLinhaAction#getArgument_expression_list_linha <em>Argument expression list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Argument expression list linha</em>'.
+   * @see org.xtext.example.ansic.ArgumentExpressionListLinhaAction#getArgument_expression_list_linha()
+   * @see #getArgumentExpressionListLinhaAction()
+   * @generated
+   */
+  EReference getArgumentExpressionListLinhaAction_Argument_expression_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction <em>Multiplicative Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Multiplicative Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction
+   * @generated
+   */
+  EClass getMultiplicativeExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_complement <em>Multiplicative expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression complement</em>'.
+   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_complement()
+   * @see #getMultiplicativeExpressionLinhaAction()
+   * @generated
+   */
+  EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_linha <em>Multiplicative expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression linha</em>'.
+   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_linha()
+   * @see #getMultiplicativeExpressionLinhaAction()
+   * @generated
+   */
+  EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction <em>Additive Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Additive Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction
+   * @generated
+   */
+  EClass getAdditiveExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_complement <em>Additive expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression complement</em>'.
+   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_complement()
+   * @see #getAdditiveExpressionLinhaAction()
+   * @generated
+   */
+  EReference getAdditiveExpressionLinhaAction_Additive_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_linha <em>Additive expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression linha</em>'.
+   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_linha()
+   * @see #getAdditiveExpressionLinhaAction()
+   * @generated
+   */
+  EReference getAdditiveExpressionLinhaAction_Additive_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction <em>Shift Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Shift Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction
+   * @generated
+   */
+  EClass getShiftExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_complement <em>Shift expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
+   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_complement()
+   * @see #getShiftExpressionLinhaAction()
+   * @generated
+   */
+  EReference getShiftExpressionLinhaAction_Shift_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_linha <em>Shift expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression linha</em>'.
+   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_linha()
+   * @see #getShiftExpressionLinhaAction()
+   * @generated
+   */
+  EReference getShiftExpressionLinhaAction_Shift_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction <em>Relational Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Relational Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction
+   * @generated
+   */
+  EClass getRelationalExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction#getShift_expression_complement <em>Shift expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
+   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction#getShift_expression_complement()
+   * @see #getRelationalExpressionLinhaAction()
+   * @generated
+   */
+  EReference getRelationalExpressionLinhaAction_Shift_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction#getRelational_expression_linha <em>Relational expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Relational expression linha</em>'.
+   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction#getRelational_expression_linha()
+   * @see #getRelationalExpressionLinhaAction()
+   * @generated
+   */
+  EReference getRelationalExpressionLinhaAction_Relational_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction <em>Equality Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Equality Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction
+   * @generated
+   */
+  EClass getEqualityExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_complement <em>Equality expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression complement</em>'.
+   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_complement()
+   * @see #getEqualityExpressionLinhaAction()
+   * @generated
+   */
+  EReference getEqualityExpressionLinhaAction_Equality_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_linha <em>Equality expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression linha</em>'.
+   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_linha()
+   * @see #getEqualityExpressionLinhaAction()
+   * @generated
+   */
+  EReference getEqualityExpressionLinhaAction_Equality_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.BlockItemListLinhaAction <em>Block Item List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Block Item List Linha Action</em>'.
+   * @see org.xtext.example.ansic.BlockItemListLinhaAction
+   * @generated
+   */
+  EClass getBlockItemListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item <em>Block item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Block item</em>'.
+   * @see org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item()
+   * @see #getBlockItemListLinhaAction()
+   * @generated
+   */
+  EReference getBlockItemListLinhaAction_Block_item();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item_list_linha <em>Block item list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Block item list linha</em>'.
+   * @see org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item_list_linha()
+   * @see #getBlockItemListLinhaAction()
+   * @generated
+   */
+  EReference getBlockItemListLinhaAction_Block_item_list_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.AndExpressionLinhaAction <em>And Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>And Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.AndExpressionLinhaAction
+   * @generated
+   */
+  EClass getAndExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AndExpressionLinhaAction#getEquality_expression <em>Equality expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression</em>'.
+   * @see org.xtext.example.ansic.AndExpressionLinhaAction#getEquality_expression()
+   * @see #getAndExpressionLinhaAction()
+   * @generated
+   */
+  EReference getAndExpressionLinhaAction_Equality_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AndExpressionLinhaAction#getAnd_expression_linha <em>And expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And expression linha</em>'.
+   * @see org.xtext.example.ansic.AndExpressionLinhaAction#getAnd_expression_linha()
+   * @see #getAndExpressionLinhaAction()
+   * @generated
+   */
+  EReference getAndExpressionLinhaAction_And_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction <em>Exclusive Or Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exclusive Or Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction
+   * @generated
+   */
+  EClass getExclusiveOrExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getAnd_expression <em>And expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And expression</em>'.
+   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getAnd_expression()
+   * @see #getExclusiveOrExpressionLinhaAction()
+   * @generated
+   */
+  EReference getExclusiveOrExpressionLinhaAction_And_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getExclusive_or_expression_linha <em>Exclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getExclusive_or_expression_linha()
+   * @see #getExclusiveOrExpressionLinhaAction()
+   * @generated
+   */
+  EReference getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction <em>Inclusive Or Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Inclusive Or Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction
+   * @generated
+   */
+  EClass getInclusiveOrExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getExclusive_or_expression <em>Exclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exclusive or expression</em>'.
+   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getExclusive_or_expression()
+   * @see #getInclusiveOrExpressionLinhaAction()
+   * @generated
+   */
+  EReference getInclusiveOrExpressionLinhaAction_Exclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getInclusive_or_expression_linha <em>Inclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getInclusive_or_expression_linha()
+   * @see #getInclusiveOrExpressionLinhaAction()
+   * @generated
+   */
+  EReference getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction <em>Logical And Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Logical And Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction
+   * @generated
+   */
+  EClass getLogicalAndExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getInclusive_or_expression <em>Inclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inclusive or expression</em>'.
+   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getInclusive_or_expression()
+   * @see #getLogicalAndExpressionLinhaAction()
+   * @generated
+   */
+  EReference getLogicalAndExpressionLinhaAction_Inclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getLogical_and_expression_linha <em>Logical and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical and expression linha</em>'.
+   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getLogical_and_expression_linha()
+   * @see #getLogicalAndExpressionLinhaAction()
+   * @generated
+   */
+  EReference getLogicalAndExpressionLinhaAction_Logical_and_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction <em>Logical Or Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Logical Or Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction
+   * @generated
+   */
+  EClass getLogicalOrExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_and_expression <em>Logical and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical and expression</em>'.
+   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_and_expression()
+   * @see #getLogicalOrExpressionLinhaAction()
+   * @generated
+   */
+  EReference getLogicalOrExpressionLinhaAction_Logical_and_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_or_expression_linha <em>Logical or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical or expression linha</em>'.
+   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_or_expression_linha()
+   * @see #getLogicalOrExpressionLinhaAction()
+   * @generated
+   */
+  EReference getLogicalOrExpressionLinhaAction_Logical_or_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction <em>Conditional Expression Linha Acction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Conditional Expression Linha Acction</em>'.
+   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction
+   * @generated
+   */
+  EClass getConditionalExpressionLinhaAcction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getExpression()
+   * @see #getConditionalExpressionLinhaAcction()
+   * @generated
+   */
+  EReference getConditionalExpressionLinhaAcction_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression <em>Conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
+   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression()
+   * @see #getConditionalExpressionLinhaAcction()
+   * @generated
+   */
+  EReference getConditionalExpressionLinhaAcction_Conditional_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression_linha <em>Conditional expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression linha</em>'.
+   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression_linha()
+   * @see #getConditionalExpressionLinhaAcction()
+   * @generated
+   */
+  EReference getConditionalExpressionLinhaAcction_Conditional_expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.ExpressionLinhaAction <em>Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Expression Linha Action</em>'.
+   * @see org.xtext.example.ansic.ExpressionLinhaAction
+   * @generated
+   */
+  EClass getExpressionLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ExpressionLinhaAction#getAssignment_expression <em>Assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.ExpressionLinhaAction#getAssignment_expression()
+   * @see #getExpressionLinhaAction()
+   * @generated
+   */
+  EReference getExpressionLinhaAction_Assignment_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ExpressionLinhaAction#getExpression_linha <em>Expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression linha</em>'.
+   * @see org.xtext.example.ansic.ExpressionLinhaAction#getExpression_linha()
+   * @see #getExpressionLinhaAction()
+   * @generated
+   */
+  EReference getExpressionLinhaAction_Expression_linha();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.InitDecclaratorListLinhaAction <em>Init Decclarator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Init Decclarator List Linha Action</em>'.
+   * @see org.xtext.example.ansic.InitDecclaratorListLinhaAction
+   * @generated
+   */
+  EClass getInitDecclaratorListLinhaAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InitDecclaratorListLinhaAction#getInit_declarator <em>Init declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator</em>'.
+   * @see org.xtext.example.ansic.InitDecclaratorListLinhaAction#getInit_declarator()
+   * @see #getInitDecclaratorListLinhaAction()
+   * @generated
+   */
+  EReference getInitDecclaratorListLinhaAction_Init_declarator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InitDecclaratorListLinhaAction#getInit_declarator_list_linha <em>Init declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Init declarator list linha</em>'.
+   * @see org.xtext.example.ansic.InitDecclaratorListLinhaAction#getInit_declarator_list_linha()
+   * @see #getInitDecclaratorListLinhaAction()
+   * @generated
+   */
+  EReference getInitDecclaratorListLinhaAction_Init_declarator_list_linha();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -140,12 +9349,3442 @@ public interface AnsicPackage extends EPackage
     EClass DOMAIN_MODEL = eINSTANCE.getDomainModel();
 
     /**
-     * The meta object literal for the '<em><b>Geetings</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Geetings</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DOMAIN_MODEL__GEETINGS = eINSTANCE.getDomainModel_Geetings();
+    EReference DOMAIN_MODEL__GEETINGS = eINSTANCE.getDomainModel_Geetings();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.translation_unitImpl <em>translation unit</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.translation_unitImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettranslation_unit()
+     * @generated
+     */
+    EClass TRANSLATION_UNIT = eINSTANCE.gettranslation_unit();
+
+    /**
+     * The meta object literal for the '<em><b>External declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSLATION_UNIT__EXTERNAL_DECLARATION = eINSTANCE.gettranslation_unit_External_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Translation unit linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSLATION_UNIT__TRANSLATION_UNIT_LINHA = eINSTANCE.gettranslation_unit_Translation_unit_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.external_declarationImpl <em>external declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.external_declarationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexternal_declaration()
+     * @generated
+     */
+    EClass EXTERNAL_DECLARATION = eINSTANCE.getexternal_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Function definitio</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXTERNAL_DECLARATION__FUNCTION_DEFINITIO = eINSTANCE.getexternal_declaration_Function_definitio();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXTERNAL_DECLARATION__DECLARATION = eINSTANCE.getexternal_declaration_Declaration();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.declaration_specifiersImpl <em>declaration specifiers</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.declaration_specifiersImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_specifiers()
+     * @generated
+     */
+    EClass DECLARATION_SPECIFIERS = eINSTANCE.getdeclaration_specifiers();
+
+    /**
+     * The meta object literal for the '<em><b>Storage class specifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DECLARATION_SPECIFIERS__STORAGE_CLASS_SPECIFIER = eINSTANCE.getdeclaration_specifiers_Storage_class_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration specifiers</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_SPECIFIERS__DECLARATION_SPECIFIERS = eINSTANCE.getdeclaration_specifiers_Declaration_specifiers();
+
+    /**
+     * The meta object literal for the '<em><b>Type specifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_SPECIFIERS__TYPE_SPECIFIER = eINSTANCE.getdeclaration_specifiers_Type_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DECLARATION_SPECIFIERS__TYPE_QUALIFIER = eINSTANCE.getdeclaration_specifiers_Type_qualifier();
+
+    /**
+     * The meta object literal for the '<em><b>Function specifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DECLARATION_SPECIFIERS__FUNCTION_SPECIFIER = eINSTANCE.getdeclaration_specifiers_Function_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Alignment specifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_SPECIFIERS__ALIGNMENT_SPECIFIER = eINSTANCE.getdeclaration_specifiers_Alignment_specifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.alignment_specifierImpl <em>alignment specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.alignment_specifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getalignment_specifier()
+     * @generated
+     */
+    EClass ALIGNMENT_SPECIFIER = eINSTANCE.getalignment_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ALIGNMENT_SPECIFIER__TYPE_NAME = eINSTANCE.getalignment_specifier_Type_name();
+
+    /**
+     * The meta object literal for the '<em><b>Constant expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ALIGNMENT_SPECIFIER__CONSTANT_EXPRESSION = eINSTANCE.getalignment_specifier_Constant_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.type_specifierImpl <em>type specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.type_specifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_specifier()
+     * @generated
+     */
+    EClass TYPE_SPECIFIER = eINSTANCE.gettype_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Atomic type specifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER = eINSTANCE.gettype_specifier_Atomic_type_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Struct or union specifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER = eINSTANCE.gettype_specifier_Struct_or_union_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Enum specifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_SPECIFIER__ENUM_SPECIFIER = eINSTANCE.gettype_specifier_Enum_specifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.enum_specifierImpl <em>enum specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.enum_specifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenum_specifier()
+     * @generated
+     */
+    EClass ENUM_SPECIFIER = eINSTANCE.getenum_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Enumerator list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUM_SPECIFIER__ENUMERATOR_LIST = eINSTANCE.getenum_specifier_Enumerator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUM_SPECIFIER__IDENTIFIER = eINSTANCE.getenum_specifier_Identifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.enumerator_listImpl <em>enumerator list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.enumerator_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator_list()
+     * @generated
+     */
+    EClass ENUMERATOR_LIST = eINSTANCE.getenumerator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Enumarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATOR_LIST__ENUMARATOR = eINSTANCE.getenumerator_list_Enumarator();
+
+    /**
+     * The meta object literal for the '<em><b>Enumerator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATOR_LIST__ENUMERATOR_LIST_LINHA = eINSTANCE.getenumerator_list_Enumerator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.enumerator_list_linhaImpl <em>enumerator list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.enumerator_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator_list_linha()
+     * @generated
+     */
+    EClass ENUMERATOR_LIST_LINHA = eINSTANCE.getenumerator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.enumeratorImpl <em>enumerator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.enumeratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator()
+     * @generated
+     */
+    EClass ENUMERATOR = eINSTANCE.getenumerator();
+
+    /**
+     * The meta object literal for the '<em><b>Enumeration constant</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATOR__ENUMERATION_CONSTANT = eINSTANCE.getenumerator_Enumeration_constant();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATOR__CONDITIONAL_EXPRESSION = eINSTANCE.getenumerator_Conditional_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.atomic_type_specifierImpl <em>atomic type specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.atomic_type_specifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getatomic_type_specifier()
+     * @generated
+     */
+    EClass ATOMIC_TYPE_SPECIFIER = eINSTANCE.getatomic_type_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ATOMIC_TYPE_SPECIFIER__TYPE_NAME = eINSTANCE.getatomic_type_specifier_Type_name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_or_union_specifierImpl <em>struct or union specifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_or_union_specifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_or_union_specifier()
+     * @generated
+     */
+    EClass STRUCT_OR_UNION_SPECIFIER = eINSTANCE.getstruct_or_union_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Struct or union</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRUCT_OR_UNION_SPECIFIER__STRUCT_OR_UNION = eINSTANCE.getstruct_or_union_specifier_Struct_or_union();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declaration list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_OR_UNION_SPECIFIER__STRUCT_DECLARATION_LIST = eINSTANCE.getstruct_or_union_specifier_Struct_declaration_list();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRUCT_OR_UNION_SPECIFIER__IDENTIFIER = eINSTANCE.getstruct_or_union_specifier_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Struct or union specifier complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_OR_UNION_SPECIFIER__STRUCT_OR_UNION_SPECIFIER_COMPLEMENT = eINSTANCE.getstruct_or_union_specifier_Struct_or_union_specifier_complement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_or_union_specifier_complementImpl <em>struct or union specifier complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_or_union_specifier_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_or_union_specifier_complement()
+     * @generated
+     */
+    EClass STRUCT_OR_UNION_SPECIFIER_COMPLEMENT = eINSTANCE.getstruct_or_union_specifier_complement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_declaration_listImpl <em>struct declaration list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_declaration_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration_list()
+     * @generated
+     */
+    EClass STRUCT_DECLARATION_LIST = eINSTANCE.getstruct_declaration_list();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION_LIST__STRUCT_DECLARATION = eINSTANCE.getstruct_declaration_list_Struct_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declaration list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION_LIST__STRUCT_DECLARATION_LIST_LINHA = eINSTANCE.getstruct_declaration_list_Struct_declaration_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_declaration_list_linhaImpl <em>struct declaration list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_declaration_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration_list_linha()
+     * @generated
+     */
+    EClass STRUCT_DECLARATION_LIST_LINHA = eINSTANCE.getstruct_declaration_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_declarationImpl <em>struct declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_declarationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration()
+     * @generated
+     */
+    EClass STRUCT_DECLARATION = eINSTANCE.getstruct_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Specifier qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION__SPECIFIER_QUALIFIER_LIST = eINSTANCE.getstruct_declaration_Specifier_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declarator list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION__STRUCT_DECLARATOR_LIST = eINSTANCE.getstruct_declaration_Struct_declarator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Static assert declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION__STATIC_ASSERT_DECLARATION = eINSTANCE.getstruct_declaration_Static_assert_declaration();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_declarator_listImpl <em>struct declarator list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_declarator_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator_list()
+     * @generated
+     */
+    EClass STRUCT_DECLARATOR_LIST = eINSTANCE.getstruct_declarator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR = eINSTANCE.getstruct_declarator_list_Struct_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declarator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR_LIST_LINHA = eINSTANCE.getstruct_declarator_list_Struct_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_declarator_list_linhaImpl <em>struct declarator list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_declarator_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator_list_linha()
+     * @generated
+     */
+    EClass STRUCT_DECLARATOR_LIST_LINHA = eINSTANCE.getstruct_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.struct_declaratorImpl <em>struct declarator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.struct_declaratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator()
+     * @generated
+     */
+    EClass STRUCT_DECLARATOR = eINSTANCE.getstruct_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Constant expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATOR__CONSTANT_EXPRESSION = eINSTANCE.getstruct_declarator_Constant_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATOR__DECLARATOR = eINSTANCE.getstruct_declarator_Declarator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.specifier_qualifier_listImpl <em>specifier qualifier list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.specifier_qualifier_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getspecifier_qualifier_list()
+     * @generated
+     */
+    EClass SPECIFIER_QUALIFIER_LIST = eINSTANCE.getspecifier_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Type specifier</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPECIFIER_QUALIFIER_LIST__TYPE_SPECIFIER = eINSTANCE.getspecifier_qualifier_list_Type_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Specifier qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST = eINSTANCE.getspecifier_qualifier_list_Specifier_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER = eINSTANCE.getspecifier_qualifier_list_Type_qualifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.declarationImpl <em>declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.declarationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration()
+     * @generated
+     */
+    EClass DECLARATION = eINSTANCE.getdeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration specifiers</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION__DECLARATION_SPECIFIERS = eINSTANCE.getdeclaration_Declaration_specifiers();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator list</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION__INIT_DECLARATOR_LIST = eINSTANCE.getdeclaration_Init_declarator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Static assert declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION__STATIC_ASSERT_DECLARATION = eINSTANCE.getdeclaration_Static_assert_declaration();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.function_definitionImpl <em>function definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.function_definitionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getfunction_definition()
+     * @generated
+     */
+    EClass FUNCTION_DEFINITION = eINSTANCE.getfunction_definition();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration specifiers</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_DEFINITION__DECLARATION_SPECIFIERS = eINSTANCE.getfunction_definition_Declaration_specifiers();
+
+    /**
+     * The meta object literal for the '<em><b>Declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_DEFINITION__DECLARATOR = eINSTANCE.getfunction_definition_Declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration list</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_DEFINITION__DECLARATION_LIST = eINSTANCE.getfunction_definition_Declaration_list();
+
+    /**
+     * The meta object literal for the '<em><b>Compound statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_DEFINITION__COMPOUND_STATEMENT = eINSTANCE.getfunction_definition_Compound_statement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.declaration_listImpl <em>declaration list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.declaration_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_list()
+     * @generated
+     */
+    EClass DECLARATION_LIST = eINSTANCE.getdeclaration_list();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_LIST__DECLARATION = eINSTANCE.getdeclaration_list_Declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_LIST__DECLARATION_LIST_LINHA = eINSTANCE.getdeclaration_list_Declaration_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.declaration_list_linhaImpl <em>declaration list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.declaration_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_list_linha()
+     * @generated
+     */
+    EClass DECLARATION_LIST_LINHA = eINSTANCE.getdeclaration_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.declaratorImpl <em>declarator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.declaratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclarator()
+     * @generated
+     */
+    EClass DECLARATOR = eINSTANCE.getdeclarator();
+
+    /**
+     * The meta object literal for the '<em><b>Pointer</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATOR__POINTER = eINSTANCE.getdeclarator_Pointer();
+
+    /**
+     * The meta object literal for the '<em><b>Direct declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATOR__DIRECT_DECLARATOR = eINSTANCE.getdeclarator_Direct_declarator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.pointerImpl <em>pointer</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.pointerImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpointer()
+     * @generated
+     */
+    EClass POINTER = eINSTANCE.getpointer();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POINTER__TYPE_QUALIFIER_LIST = eINSTANCE.getpointer_Type_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Pointer</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POINTER__POINTER = eINSTANCE.getpointer_Pointer();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.type_qualifier_listImpl <em>type qualifier list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.type_qualifier_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier_list()
+     * @generated
+     */
+    EClass TYPE_QUALIFIER_LIST = eINSTANCE.gettype_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_QUALIFIER_LIST__TYPE_QUALIFIER = eINSTANCE.gettype_qualifier_list_Type_qualifier();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA = eINSTANCE.gettype_qualifier_list_Type_qualifier_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.type_qualifier_list_linhaImpl <em>type qualifier list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.type_qualifier_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier_list_linha()
+     * @generated
+     */
+    EClass TYPE_QUALIFIER_LIST_LINHA = eINSTANCE.gettype_qualifier_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_declaratorImpl <em>direct declarator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.direct_declaratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator()
+     * @generated
+     */
+    EClass DIRECT_DECLARATOR = eINSTANCE.getdirect_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DIRECT_DECLARATOR__IDENTIFIER = eINSTANCE.getdirect_declarator_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Direct declarator linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR__DIRECT_DECLARATOR_LINHA = eINSTANCE.getdirect_declarator_Direct_declarator_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR__DECLARATOR = eINSTANCE.getdirect_declarator_Declarator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_declarator_linhaImpl <em>direct declarator linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.direct_declarator_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator_linha()
+     * @generated
+     */
+    EClass DIRECT_DECLARATOR_LINHA = eINSTANCE.getdirect_declarator_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_declarator_complementoImpl <em>direct declarator complemento</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.direct_declarator_complementoImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator_complemento()
+     * @generated
+     */
+    EClass DIRECT_DECLARATOR_COMPLEMENTO = eINSTANCE.getdirect_declarator_complemento();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_COMPLEMENTO__TYPE_QUALIFIER_LIST = eINSTANCE.getdirect_declarator_complemento_Type_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_COMPLEMENTO__ASSIGNMENT_EXPRESSION = eINSTANCE.getdirect_declarator_complemento_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter type list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_COMPLEMENTO__PARAMETER_TYPE_LIST = eINSTANCE.getdirect_declarator_complemento_Parameter_type_list();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_COMPLEMENTO__IDENTIFIER_LIST = eINSTANCE.getdirect_declarator_complemento_Identifier_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_type_listImpl <em>parameter type list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.parameter_type_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_type_list()
+     * @generated
+     */
+    EClass PARAMETER_TYPE_LIST = eINSTANCE.getparameter_type_list();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_TYPE_LIST__PARAMETER_LIST = eINSTANCE.getparameter_type_list_Parameter_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_listImpl <em>parameter list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.parameter_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list()
+     * @generated
+     */
+    EClass PARAMETER_LIST = eINSTANCE.getparameter_list();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_LIST__PARAMETER_DECLARATION = eINSTANCE.getparameter_list_Parameter_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_LIST__PARAMETER_LIST_LINHA = eINSTANCE.getparameter_list_Parameter_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_list_linhaImpl <em>parameter list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.parameter_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list_linha()
+     * @generated
+     */
+    EClass PARAMETER_LIST_LINHA = eINSTANCE.getparameter_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_declarationImpl <em>parameter declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.parameter_declarationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_declaration()
+     * @generated
+     */
+    EClass PARAMETER_DECLARATION = eINSTANCE.getparameter_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration specifiers</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_DECLARATION__DECLARATION_SPECIFIERS = eINSTANCE.getparameter_declaration_Declaration_specifiers();
+
+    /**
+     * The meta object literal for the '<em><b>Declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_DECLARATION__DECLARATOR = eINSTANCE.getparameter_declaration_Declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Abstract declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_DECLARATION__ABSTRACT_DECLARATOR = eINSTANCE.getparameter_declaration_Abstract_declarator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.abstract_declaratorImpl <em>abstract declarator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.abstract_declaratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getabstract_declarator()
+     * @generated
+     */
+    EClass ABSTRACT_DECLARATOR = eINSTANCE.getabstract_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Pointer</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ABSTRACT_DECLARATOR__POINTER = eINSTANCE.getabstract_declarator_Pointer();
+
+    /**
+     * The meta object literal for the '<em><b>Direct abstract declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ABSTRACT_DECLARATOR__DIRECT_ABSTRACT_DECLARATOR = eINSTANCE.getabstract_declarator_Direct_abstract_declarator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_abstract_declaratorImpl <em>direct abstract declarator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.direct_abstract_declaratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator()
+     * @generated
+     */
+    EClass DIRECT_ABSTRACT_DECLARATOR = eINSTANCE.getdirect_abstract_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Abstract declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR__ABSTRACT_DECLARATOR = eINSTANCE.getdirect_abstract_declarator_Abstract_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR__TYPE_QUALIFIER_LIST = eINSTANCE.getdirect_abstract_declarator_Type_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR__ASSIGNMENT_EXPRESSION = eINSTANCE.getdirect_abstract_declarator_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter type list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR__PARAMETER_TYPE_LIST = eINSTANCE.getdirect_abstract_declarator_Parameter_type_list();
+
+    /**
+     * The meta object literal for the '<em><b>Direct abstract declarator linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR__DIRECT_ABSTRACT_DECLARATOR_LINHA = eINSTANCE.getdirect_abstract_declarator_Direct_abstract_declarator_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.initializerImpl <em>initializer</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.initializerImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer()
+     * @generated
+     */
+    EClass INITIALIZER = eINSTANCE.getinitializer();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER__INIT_DECLARATOR_LIST = eINSTANCE.getinitializer_Init_declarator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER__ASSIGNMENT_EXPRESSION = eINSTANCE.getinitializer_Assignment_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_abstract_declarator_linhaImpl <em>direct abstract declarator linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.direct_abstract_declarator_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator_linha()
+     * @generated
+     */
+    EClass DIRECT_ABSTRACT_DECLARATOR_LINHA = eINSTANCE.getdirect_abstract_declarator_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_abstract_declarator_complementImpl <em>direct abstract declarator complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.direct_abstract_declarator_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator_complement()
+     * @generated
+     */
+    EClass DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT = eINSTANCE.getdirect_abstract_declarator_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__ASSIGNMENT_EXPRESSION = eINSTANCE.getdirect_abstract_declarator_complement_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__TYPE_QUALIFIER_LIST = eINSTANCE.getdirect_abstract_declarator_complement_Type_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter type list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__PARAMETER_TYPE_LIST = eINSTANCE.getdirect_abstract_declarator_complement_Parameter_type_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.identifier_listImpl <em>identifier list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.identifier_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getidentifier_list()
+     * @generated
+     */
+    EClass IDENTIFIER_LIST = eINSTANCE.getidentifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IDENTIFIER_LIST__IDENTIFIER = eINSTANCE.getidentifier_list_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IDENTIFIER_LIST__IDENTIFIER_LIST_LINHA = eINSTANCE.getidentifier_list_Identifier_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.identifier_list_linhaImpl <em>identifier list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.identifier_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getidentifier_list_linha()
+     * @generated
+     */
+    EClass IDENTIFIER_LIST_LINHA = eINSTANCE.getidentifier_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.translation_unit_linhaImpl <em>translation unit linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.translation_unit_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettranslation_unit_linha()
+     * @generated
+     */
+    EClass TRANSLATION_UNIT_LINHA = eINSTANCE.gettranslation_unit_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.primary_expressionImpl <em>primary expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.primary_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getprimary_expression()
+     * @generated
+     */
+    EClass PRIMARY_EXPRESSION = eINSTANCE.getprimary_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRIMARY_EXPRESSION__IDENTIFIER = eINSTANCE.getprimary_expression_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Constant</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRIMARY_EXPRESSION__CONSTANT = eINSTANCE.getprimary_expression_Constant();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRIMARY_EXPRESSION__STRING = eINSTANCE.getprimary_expression_String();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRIMARY_EXPRESSION__EXPRESSION = eINSTANCE.getprimary_expression_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Generic selection</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRIMARY_EXPRESSION__GENERIC_SELECTION = eINSTANCE.getprimary_expression_Generic_selection();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.enumeration_constantImpl <em>enumeration constant</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.enumeration_constantImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumeration_constant()
+     * @generated
+     */
+    EClass ENUMERATION_CONSTANT = eINSTANCE.getenumeration_constant();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUMERATION_CONSTANT__IDENTIFIER = eINSTANCE.getenumeration_constant_Identifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.generic_selectionImpl <em>generic selection</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.generic_selectionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_selection()
+     * @generated
+     */
+    EClass GENERIC_SELECTION = eINSTANCE.getgeneric_selection();
+
+    /**
+     * The meta object literal for the '<em><b>generic</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GENERIC_SELECTION__GENERIC = eINSTANCE.getgeneric_selection__generic();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_SELECTION__ASSIGNMENT_EXPRESSION = eINSTANCE.getgeneric_selection_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Generic assoc list</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_SELECTION__GENERIC_ASSOC_LIST = eINSTANCE.getgeneric_selection_Generic_assoc_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.generic_assoc_listImpl <em>generic assoc list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.generic_assoc_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_assoc_list()
+     * @generated
+     */
+    EClass GENERIC_ASSOC_LIST = eINSTANCE.getgeneric_assoc_list();
+
+    /**
+     * The meta object literal for the '<em><b>Generic association</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_ASSOC_LIST__GENERIC_ASSOCIATION = eINSTANCE.getgeneric_assoc_list_Generic_association();
+
+    /**
+     * The meta object literal for the '<em><b>Generic assoc list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_ASSOC_LIST__GENERIC_ASSOC_LIST_LINHA = eINSTANCE.getgeneric_assoc_list_Generic_assoc_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.generic_assoc_list_linhaImpl <em>generic assoc list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.generic_assoc_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_assoc_list_linha()
+     * @generated
+     */
+    EClass GENERIC_ASSOC_LIST_LINHA = eINSTANCE.getgeneric_assoc_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.generic_associationImpl <em>generic association</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.generic_associationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_association()
+     * @generated
+     */
+    EClass GENERIC_ASSOCIATION = eINSTANCE.getgeneric_association();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_ASSOCIATION__TYPE_NAME = eINSTANCE.getgeneric_association_Type_name();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_ASSOCIATION__ASSIGNMENT_EXPRESSION = eINSTANCE.getgeneric_association_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Default</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GENERIC_ASSOCIATION__DEFAULT = eINSTANCE.getgeneric_association_Default();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.postfix_expressionImpl <em>postfix expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.postfix_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION = eINSTANCE.getpostfix_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Primary expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION__PRIMARY_EXPRESSION = eINSTANCE.getpostfix_expression_Primary_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Postfix expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION__POSTFIX_EXPRESSION_LINHA = eINSTANCE.getpostfix_expression_Postfix_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.postfix_expression_linhaImpl <em>postfix expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.postfix_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression_linha()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_LINHA = eINSTANCE.getpostfix_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.initializer_listImpl <em>initializer list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.initializer_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list()
+     * @generated
+     */
+    EClass INITIALIZER_LIST = eINSTANCE.getinitializer_list();
+
+    /**
+     * The meta object literal for the '<em><b>Designation</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST__DESIGNATION = eINSTANCE.getinitializer_list_Designation();
+
+    /**
+     * The meta object literal for the '<em><b>Initializer</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST__INITIALIZER = eINSTANCE.getinitializer_list_Initializer();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST__INIT_DECLARATOR_LIST_LINHA = eINSTANCE.getinitializer_list_Init_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.initializer_list_linhaImpl <em>initializer list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.initializer_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list_linha()
+     * @generated
+     */
+    EClass INITIALIZER_LIST_LINHA = eINSTANCE.getinitializer_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.initializer_list_complementImpl <em>initializer list complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.initializer_list_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list_complement()
+     * @generated
+     */
+    EClass INITIALIZER_LIST_COMPLEMENT = eINSTANCE.getinitializer_list_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Designation</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST_COMPLEMENT__DESIGNATION = eINSTANCE.getinitializer_list_complement_Designation();
+
+    /**
+     * The meta object literal for the '<em><b>Initializer</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST_COMPLEMENT__INITIALIZER = eINSTANCE.getinitializer_list_complement_Initializer();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.designationImpl <em>designation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.designationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignation()
+     * @generated
+     */
+    EClass DESIGNATION = eINSTANCE.getdesignation();
+
+    /**
+     * The meta object literal for the '<em><b>Designator list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DESIGNATION__DESIGNATOR_LIST = eINSTANCE.getdesignation_Designator_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.designator_listImpl <em>designator list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.designator_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator_list()
+     * @generated
+     */
+    EClass DESIGNATOR_LIST = eINSTANCE.getdesignator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Designator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DESIGNATOR_LIST__DESIGNATOR = eINSTANCE.getdesignator_list_Designator();
+
+    /**
+     * The meta object literal for the '<em><b>Designator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DESIGNATOR_LIST__DESIGNATOR_LIST_LINHA = eINSTANCE.getdesignator_list_Designator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.designator_list_linhaImpl <em>designator list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.designator_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator_list_linha()
+     * @generated
+     */
+    EClass DESIGNATOR_LIST_LINHA = eINSTANCE.getdesignator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.designatorImpl <em>designator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.designatorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator()
+     * @generated
+     */
+    EClass DESIGNATOR = eINSTANCE.getdesignator();
+
+    /**
+     * The meta object literal for the '<em><b>Constant expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DESIGNATOR__CONSTANT_EXPRESSION = eINSTANCE.getdesignator_Constant_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DESIGNATOR__IDENTIFIER = eINSTANCE.getdesignator_Identifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.static_assert_declarationImpl <em>static assert declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.static_assert_declarationImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstatic_assert_declaration()
+     * @generated
+     */
+    EClass STATIC_ASSERT_DECLARATION = eINSTANCE.getstatic_assert_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Constant expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATIC_ASSERT_DECLARATION__CONSTANT_EXPRESSION = eINSTANCE.getstatic_assert_declaration_Constant_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.postfix_expression_complementImpl <em>postfix expression complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.postfix_expression_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression_complement()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT = eINSTANCE.getpostfix_expression_complement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.argument_expression_listImpl <em>argument expression list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.argument_expression_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getargument_expression_list()
+     * @generated
+     */
+    EClass ARGUMENT_EXPRESSION_LIST = eINSTANCE.getargument_expression_list();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION = eINSTANCE.getargument_expression_list_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Argument expression list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA = eINSTANCE.getargument_expression_list_Argument_expression_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.argument_expression_list_linhaImpl <em>argument expression list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.argument_expression_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getargument_expression_list_linha()
+     * @generated
+     */
+    EClass ARGUMENT_EXPRESSION_LIST_LINHA = eINSTANCE.getargument_expression_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.unary_expressionImpl <em>unary expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.unary_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getunary_expression()
+     * @generated
+     */
+    EClass UNARY_EXPRESSION = eINSTANCE.getunary_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Postfix expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UNARY_EXPRESSION__POSTFIX_EXPRESSION = eINSTANCE.getunary_expression_Postfix_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Unary expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UNARY_EXPRESSION__UNARY_EXPRESSION = eINSTANCE.getunary_expression_Unary_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Unary operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute UNARY_EXPRESSION__UNARY_OPERATOR = eINSTANCE.getunary_expression_Unary_operator();
+
+    /**
+     * The meta object literal for the '<em><b>Cast expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UNARY_EXPRESSION__CAST_EXPRESSION = eINSTANCE.getunary_expression_Cast_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UNARY_EXPRESSION__TYPE_NAME = eINSTANCE.getunary_expression_Type_name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.cast_expressionImpl <em>cast expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.cast_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getcast_expression()
+     * @generated
+     */
+    EClass CAST_EXPRESSION = eINSTANCE.getcast_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Unary expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAST_EXPRESSION__UNARY_EXPRESSION = eINSTANCE.getcast_expression_Unary_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAST_EXPRESSION__TYPE_NAME = eINSTANCE.getcast_expression_Type_name();
+
+    /**
+     * The meta object literal for the '<em><b>Cast expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAST_EXPRESSION__CAST_EXPRESSION = eINSTANCE.getcast_expression_Cast_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.multiplicative_expressionImpl <em>multiplicative expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.multiplicative_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression()
+     * @generated
+     */
+    EClass MULTIPLICATIVE_EXPRESSION = eINSTANCE.getmultiplicative_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Cast expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION = eINSTANCE.getmultiplicative_expression_Cast_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Multiplicative expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA = eINSTANCE.getmultiplicative_expression_Multiplicative_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.multiplicative_expression_linhaImpl <em>multiplicative expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.multiplicative_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression_linha()
+     * @generated
+     */
+    EClass MULTIPLICATIVE_EXPRESSION_LINHA = eINSTANCE.getmultiplicative_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.multiplicative_expression_complementImpl <em>multiplicative expression complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.multiplicative_expression_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression_complement()
+     * @generated
+     */
+    EClass MULTIPLICATIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getmultiplicative_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Cast expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION_COMPLEMENT__CAST_EXPRESSION = eINSTANCE.getmultiplicative_expression_complement_Cast_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.additive_expressionImpl <em>additive expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.additive_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression()
+     * @generated
+     */
+    EClass ADDITIVE_EXPRESSION = eINSTANCE.getadditive_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Multiplicative expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION = eINSTANCE.getadditive_expression_Multiplicative_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Additive expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA = eINSTANCE.getadditive_expression_Additive_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.additive_expression_linhaImpl <em>additive expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.additive_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression_linha()
+     * @generated
+     */
+    EClass ADDITIVE_EXPRESSION_LINHA = eINSTANCE.getadditive_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.additive_expression_complementImpl <em>additive expression complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.additive_expression_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression_complement()
+     * @generated
+     */
+    EClass ADDITIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getadditive_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Multiplicative expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION = eINSTANCE.getadditive_expression_complement_Multiplicative_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.shift_expressionImpl <em>shift expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.shift_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression()
+     * @generated
+     */
+    EClass SHIFT_EXPRESSION = eINSTANCE.getshift_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Additive expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION__ADDITIVE_EXPRESSION = eINSTANCE.getshift_expression_Additive_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA = eINSTANCE.getshift_expression_Shift_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.shift_expression_linhaImpl <em>shift expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.shift_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression_linha()
+     * @generated
+     */
+    EClass SHIFT_EXPRESSION_LINHA = eINSTANCE.getshift_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.shift_expression_complementImpl <em>shift expression complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.shift_expression_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression_complement()
+     * @generated
+     */
+    EClass SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getshift_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Additive expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION_COMPLEMENT__ADDITIVE_EXPRESSION = eINSTANCE.getshift_expression_complement_Additive_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.relational_expressionImpl <em>relational expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.relational_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression()
+     * @generated
+     */
+    EClass RELATIONAL_EXPRESSION = eINSTANCE.getrelational_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION__SHIFT_EXPRESSION = eINSTANCE.getrelational_expression_Shift_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Relational expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getrelational_expression_Relational_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.relational_expression_linhaImpl <em>relational expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.relational_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression_linha()
+     * @generated
+     */
+    EClass RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getrelational_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.relational_expression_complementImpl <em>relational expression complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.relational_expression_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression_complement()
+     * @generated
+     */
+    EClass RELATIONAL_EXPRESSION_COMPLEMENT = eINSTANCE.getrelational_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION_COMPLEMENT__SHIFT_EXPRESSION = eINSTANCE.getrelational_expression_complement_Shift_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.equality_expressionImpl <em>equality expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.equality_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression()
+     * @generated
+     */
+    EClass EQUALITY_EXPRESSION = eINSTANCE.getequality_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Relational expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION__RELATIONAL_EXPRESSION = eINSTANCE.getequality_expression_Relational_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION__EQUALITY_EXPRESSION_LINHA = eINSTANCE.getequality_expression_Equality_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.equality_expression_linhaImpl <em>equality expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.equality_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression_linha()
+     * @generated
+     */
+    EClass EQUALITY_EXPRESSION_LINHA = eINSTANCE.getequality_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.equality_expression_complementImpl <em>equality expression complement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.equality_expression_complementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression_complement()
+     * @generated
+     */
+    EClass EQUALITY_EXPRESSION_COMPLEMENT = eINSTANCE.getequality_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Relational expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION_COMPLEMENT__RELATIONAL_EXPRESSION = eINSTANCE.getequality_expression_complement_Relational_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.statementImpl <em>statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstatement()
+     * @generated
+     */
+    EClass STATEMENT = eINSTANCE.getstatement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.jump_statementImpl <em>jump statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.jump_statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getjump_statement()
+     * @generated
+     */
+    EClass JUMP_STATEMENT = eINSTANCE.getjump_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JUMP_STATEMENT__IDENTIFIER = eINSTANCE.getjump_statement_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference JUMP_STATEMENT__EXPRESSION = eINSTANCE.getjump_statement_Expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.iteration_statementImpl <em>iteration statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.iteration_statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getiteration_statement()
+     * @generated
+     */
+    EClass ITERATION_STATEMENT = eINSTANCE.getiteration_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ITERATION_STATEMENT__EXPRESSION = eINSTANCE.getiteration_statement_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ITERATION_STATEMENT__STATEMENT = eINSTANCE.getiteration_statement_Statement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ITERATION_STATEMENT__EXPRESSION_STATEMENT = eINSTANCE.getiteration_statement_Expression_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression statement2</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ITERATION_STATEMENT__EXPRESSION_STATEMENT2 = eINSTANCE.getiteration_statement_Expression_statement2();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ITERATION_STATEMENT__DECLARATION = eINSTANCE.getiteration_statement_Declaration();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.selection_statementImpl <em>selection statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.selection_statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getselection_statement()
+     * @generated
+     */
+    EClass SELECTION_STATEMENT = eINSTANCE.getselection_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTION_STATEMENT__EXPRESSION = eINSTANCE.getselection_statement_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTION_STATEMENT__STATEMENT = eINSTANCE.getselection_statement_Statement();
+
+    /**
+     * The meta object literal for the '<em><b>Statement2</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTION_STATEMENT__STATEMENT2 = eINSTANCE.getselection_statement_Statement2();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.labeled_statementImpl <em>labeled statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.labeled_statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlabeled_statement()
+     * @generated
+     */
+    EClass LABELED_STATEMENT = eINSTANCE.getlabeled_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LABELED_STATEMENT__IDENTIFIER = eINSTANCE.getlabeled_statement_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LABELED_STATEMENT__STATEMENT = eINSTANCE.getlabeled_statement_Statement();
+
+    /**
+     * The meta object literal for the '<em><b>Constant expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LABELED_STATEMENT__CONSTANT_EXPRESSION = eINSTANCE.getlabeled_statement_Constant_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.compound_statementImpl <em>compound statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.compound_statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getcompound_statement()
+     * @generated
+     */
+    EClass COMPOUND_STATEMENT = eINSTANCE.getcompound_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Block item list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPOUND_STATEMENT__BLOCK_ITEM_LIST = eINSTANCE.getcompound_statement_Block_item_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.block_item_listImpl <em>block item list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.block_item_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item_list()
+     * @generated
+     */
+    EClass BLOCK_ITEM_LIST = eINSTANCE.getblock_item_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.block_item_list_linhaImpl <em>block item list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.block_item_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item_list_linha()
+     * @generated
+     */
+    EClass BLOCK_ITEM_LIST_LINHA = eINSTANCE.getblock_item_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.block_itemImpl <em>block item</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.block_itemImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item()
+     * @generated
+     */
+    EClass BLOCK_ITEM = eINSTANCE.getblock_item();
+
+    /**
+     * The meta object literal for the '<em><b>Block item list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA = eINSTANCE.getblock_item_Block_item_list_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM__DECLARATION = eINSTANCE.getblock_item_Declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM__STATEMENT = eINSTANCE.getblock_item_Statement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.expression_statementImpl <em>expression statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.expression_statementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression_statement()
+     * @generated
+     */
+    EClass EXPRESSION_STATEMENT = eINSTANCE.getexpression_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION_STATEMENT__EXPRESSION = eINSTANCE.getexpression_statement_Expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.and_expressionImpl <em>and expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.and_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getand_expression()
+     * @generated
+     */
+    EClass AND_EXPRESSION = eINSTANCE.getand_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION__EQUALITY_EXPRESSION = eINSTANCE.getand_expression_Equality_expression();
+
+    /**
+     * The meta object literal for the '<em><b>And expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION__AND_EXPRESSION_LINHA = eINSTANCE.getand_expression_And_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.and_expression_linhaImpl <em>and expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.and_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getand_expression_linha()
+     * @generated
+     */
+    EClass AND_EXPRESSION_LINHA = eINSTANCE.getand_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.exclusive_or_expressionImpl <em>exclusive or expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.exclusive_or_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexclusive_or_expression()
+     * @generated
+     */
+    EClass EXCLUSIVE_OR_EXPRESSION = eINSTANCE.getexclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>And expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION = eINSTANCE.getexclusive_or_expression_And_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Exclusive or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getexclusive_or_expression_Exclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.exclusive_or_expression_linhaImpl <em>exclusive or expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.exclusive_or_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexclusive_or_expression_linha()
+     * @generated
+     */
+    EClass EXCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getexclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.inclusive_or_expressionImpl <em>inclusive or expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.inclusive_or_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinclusive_or_expression()
+     * @generated
+     */
+    EClass INCLUSIVE_OR_EXPRESSION = eINSTANCE.getinclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Exclusive or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION = eINSTANCE.getinclusive_or_expression_Exclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusive or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getinclusive_or_expression_Inclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.inclusive_or_expression_linhaImpl <em>inclusive or expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.inclusive_or_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinclusive_or_expression_linha()
+     * @generated
+     */
+    EClass INCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getinclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.logical_and_expressionImpl <em>logical and expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.logical_and_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_and_expression()
+     * @generated
+     */
+    EClass LOGICAL_AND_EXPRESSION = eINSTANCE.getlogical_and_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusive or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION = eINSTANCE.getlogical_and_expression_Inclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical and expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA = eINSTANCE.getlogical_and_expression_Logical_and_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.logical_and_expression_linhaImpl <em>logical and expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.logical_and_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_and_expression_linha()
+     * @generated
+     */
+    EClass LOGICAL_AND_EXPRESSION_LINHA = eINSTANCE.getlogical_and_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.logical_or_expressionImpl <em>logical or expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.logical_or_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_or_expression()
+     * @generated
+     */
+    EClass LOGICAL_OR_EXPRESSION = eINSTANCE.getlogical_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical and expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION = eINSTANCE.getlogical_or_expression_Logical_and_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA = eINSTANCE.getlogical_or_expression_Logical_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.logical_or_expression_linhaImpl <em>logical or expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.logical_or_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_or_expression_linha()
+     * @generated
+     */
+    EClass LOGICAL_OR_EXPRESSION_LINHA = eINSTANCE.getlogical_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.conditional_expressionImpl <em>conditional expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.conditional_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconditional_expression()
+     * @generated
+     */
+    EClass CONDITIONAL_EXPRESSION = eINSTANCE.getconditional_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION__LOGICAL_OR_EXPRESSION = eINSTANCE.getconditional_expression_Logical_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION__CONDITIONAL_EXPRESSION_LINHA = eINSTANCE.getconditional_expression_Conditional_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.conditional_expression_linhaImpl <em>conditional expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.conditional_expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconditional_expression_linha()
+     * @generated
+     */
+    EClass CONDITIONAL_EXPRESSION_LINHA = eINSTANCE.getconditional_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.assignment_expressionImpl <em>assignment expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.assignment_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getassignment_expression()
+     * @generated
+     */
+    EClass ASSIGNMENT_EXPRESSION = eINSTANCE.getassignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSIGNMENT_EXPRESSION__CONDITIONAL_EXPRESSION = eINSTANCE.getassignment_expression_Conditional_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Unary expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION = eINSTANCE.getassignment_expression_Unary_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSIGNMENT_EXPRESSION__ASSIGNMENT_OPERATOR = eINSTANCE.getassignment_expression_Assignment_operator();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSIGNMENT_EXPRESSION__ASSIGNMENT_EXPRESSION = eINSTANCE.getassignment_expression_Assignment_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.type_nameImpl <em>type name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.type_nameImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_name()
+     * @generated
+     */
+    EClass TYPE_NAME = eINSTANCE.gettype_name();
+
+    /**
+     * The meta object literal for the '<em><b>Initializer list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_NAME__INITIALIZER_LIST = eINSTANCE.gettype_name_Initializer_list();
+
+    /**
+     * The meta object literal for the '<em><b>Specifier qualifier list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_NAME__SPECIFIER_QUALIFIER_LIST = eINSTANCE.gettype_name_Specifier_qualifier_list();
+
+    /**
+     * The meta object literal for the '<em><b>Abstract declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_NAME__ABSTRACT_DECLARATOR = eINSTANCE.gettype_name_Abstract_declarator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.expressionImpl <em>expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression()
+     * @generated
+     */
+    EClass EXPRESSION = eINSTANCE.getexpression();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__ASSIGNMENT_EXPRESSION = eINSTANCE.getexpression_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__EXPRESSION_LINHA = eINSTANCE.getexpression_Expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.expression_linhaImpl <em>expression linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.expression_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression_linha()
+     * @generated
+     */
+    EClass EXPRESSION_LINHA = eINSTANCE.getexpression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.constant_expressionImpl <em>constant expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.constant_expressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconstant_expression()
+     * @generated
+     */
+    EClass CONSTANT_EXPRESSION = eINSTANCE.getconstant_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONSTANT_EXPRESSION__CONDITIONAL_EXPRESSION = eINSTANCE.getconstant_expression_Conditional_expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.init_declarator_listImpl <em>init declarator list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.init_declarator_listImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator_list()
+     * @generated
+     */
+    EClass INIT_DECLARATOR_LIST = eINSTANCE.getinit_declarator_list();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INIT_DECLARATOR_LIST__INIT_DECLARATOR = eINSTANCE.getinit_declarator_list_Init_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INIT_DECLARATOR_LIST__INIT_DECLARATOR_LIST_LINHA = eINSTANCE.getinit_declarator_list_Init_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.init_declarator_list_linhaImpl <em>init declarator list linha</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.init_declarator_list_linhaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator_list_linha()
+     * @generated
+     */
+    EClass INIT_DECLARATOR_LIST_LINHA = eINSTANCE.getinit_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.init_declaratorImpl <em>init declarator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.init_declaratorImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator()
+     * @generated
+     */
+    EClass INIT_DECLARATOR = eINSTANCE.getinit_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INIT_DECLARATOR__DECLARATOR = eINSTANCE.getinit_declarator_Declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Initializer</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INIT_DECLARATOR__INITIALIZER = eINSTANCE.getinit_declarator_Initializer();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.string_ufcgImpl <em>string ufcg</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.string_ufcgImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstring_ufcg()
+     * @generated
+     */
+    EClass STRING_UFCG = eINSTANCE.getstring_ufcg();
+
+    /**
+     * The meta object literal for the '<em><b>String literal</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_UFCG__STRING_LITERAL = eINSTANCE.getstring_ufcg_String_literal();
+
+    /**
+     * The meta object literal for the '<em><b>func </b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_UFCG__FUNC_ = eINSTANCE.getstring_ufcg___func__();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.constantImpl <em>constant</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.constantImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconstant()
+     * @generated
+     */
+    EClass CONSTANT = eINSTANCE.getconstant();
+
+    /**
+     * The meta object literal for the '<em><b>Iconstant</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONSTANT__ICONSTANT = eINSTANCE.getconstant_I_constant();
+
+    /**
+     * The meta object literal for the '<em><b>Fconstant</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONSTANT__FCONSTANT = eINSTANCE.getconstant_F_constant();
+
+    /**
+     * The meta object literal for the '<em><b>Enumz</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONSTANT__ENUMZ = eINSTANCE.getconstant_Enumz();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.EnumeratorListLinhaActionImpl <em>Enumerator List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.EnumeratorListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEnumeratorListLinhaAction()
+     * @generated
+     */
+    EClass ENUMERATOR_LIST_LINHA_ACTION = eINSTANCE.getEnumeratorListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Enumerator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATOR_LIST_LINHA_ACTION__ENUMERATOR = eINSTANCE.getEnumeratorListLinhaAction_Enumerator();
+
+    /**
+     * The meta object literal for the '<em><b>Enumerator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENUMERATOR_LIST_LINHA_ACTION__ENUMERATOR_LIST_LINHA = eINSTANCE.getEnumeratorListLinhaAction_Enumerator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.StructOrUnionSpecifierComplementActionImpl <em>Struct Or Union Specifier Complement Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.StructOrUnionSpecifierComplementActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructOrUnionSpecifierComplementAction()
+     * @generated
+     */
+    EClass STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION = eINSTANCE.getStructOrUnionSpecifierComplementAction();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declaration list</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION__STRUCT_DECLARATION_LIST = eINSTANCE.getStructOrUnionSpecifierComplementAction_Struct_declaration_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.StructDeclarationListLinhaActionImpl <em>Struct Declaration List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.StructDeclarationListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructDeclarationListLinhaAction()
+     * @generated
+     */
+    EClass STRUCT_DECLARATION_LIST_LINHA_ACTION = eINSTANCE.getStructDeclarationListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION_LIST_LINHA_ACTION__STRUCT_DECLARATION = eINSTANCE.getStructDeclarationListLinhaAction_Struct_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declaration list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATION_LIST_LINHA_ACTION__STRUCT_DECLARATION_LIST_LINHA = eINSTANCE.getStructDeclarationListLinhaAction_Struct_declaration_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.StructDeclaratorListLinhaActionImpl <em>Struct Declarator List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.StructDeclaratorListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructDeclaratorListLinhaAction()
+     * @generated
+     */
+    EClass STRUCT_DECLARATOR_LIST_LINHA_ACTION = eINSTANCE.getStructDeclaratorListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATOR_LIST_LINHA_ACTION__STRUCT_DECLARATOR = eINSTANCE.getStructDeclaratorListLinhaAction_Struct_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Struct declarator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STRUCT_DECLARATOR_LIST_LINHA_ACTION__STRUCT_DECLARATOR_LIST_LINHA = eINSTANCE.getStructDeclaratorListLinhaAction_Struct_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.DeclarationListLinhaActionImpl <em>Declaration List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.DeclarationListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDeclarationListLinhaAction()
+     * @generated
+     */
+    EClass DECLARATION_LIST_LINHA_ACTION = eINSTANCE.getDeclarationListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_LIST_LINHA_ACTION__DECLARATION = eINSTANCE.getDeclarationListLinhaAction_Declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Declaration list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION_LIST_LINHA_ACTION__DECLARATION_LIST_LINHA = eINSTANCE.getDeclarationListLinhaAction_Declaration_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.TypeQualifierListLinhaAtionImpl <em>Type Qualifier List Linha Ation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.TypeQualifierListLinhaAtionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getTypeQualifierListLinhaAtion()
+     * @generated
+     */
+    EClass TYPE_QUALIFIER_LIST_LINHA_ATION = eINSTANCE.getTypeQualifierListLinhaAtion();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER = eINSTANCE.getTypeQualifierListLinhaAtion_Type_qualifier();
+
+    /**
+     * The meta object literal for the '<em><b>Type qualifier list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA = eINSTANCE.getTypeQualifierListLinhaAtion_Type_qualifier_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl <em>Direct Declarator Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectDeclaratorLinhaAction()
+     * @generated
+     */
+    EClass DIRECT_DECLARATOR_LINHA_ACTION = eINSTANCE.getDirectDeclaratorLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Direct declarator complemento</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_COMPLEMENTO = eINSTANCE.getDirectDeclaratorLinhaAction_Direct_declarator_complemento();
+
+    /**
+     * The meta object literal for the '<em><b>Direct declarator linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_LINHA = eINSTANCE.getDirectDeclaratorLinhaAction_Direct_declarator_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ParameterListLinhaActionImpl <em>Parameter List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.ParameterListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getParameterListLinhaAction()
+     * @generated
+     */
+    EClass PARAMETER_LIST_LINHA_ACTION = eINSTANCE.getParameterListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_LIST_LINHA_ACTION__PARAMETER_DECLARATION = eINSTANCE.getParameterListLinhaAction_Parameter_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_LIST_LINHA_ACTION__PARAMETER_LIST_LINHA = eINSTANCE.getParameterListLinhaAction_Parameter_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.DirectAbstractDeclarratorLinhaActionImpl <em>Direct Abstract Declarrator Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.DirectAbstractDeclarratorLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectAbstractDeclarratorLinhaAction()
+     * @generated
+     */
+    EClass DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION = eINSTANCE.getDirectAbstractDeclarratorLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Direct abstract declarator complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION__DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT = eINSTANCE.getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Direct abstract declarator linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION__DIRECT_ABSTRACT_DECLARATOR_LINHA = eINSTANCE.getDirectAbstractDeclarratorLinhaAction_Direct_abstract_declarator_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.IdentifierListLinhaActionImpl <em>Identifier List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.IdentifierListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getIdentifierListLinhaAction()
+     * @generated
+     */
+    EClass IDENTIFIER_LIST_LINHA_ACTION = eINSTANCE.getIdentifierListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IDENTIFIER_LIST_LINHA_ACTION__IDENTIFIER = eINSTANCE.getIdentifierListLinhaAction_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IDENTIFIER_LIST_LINHA_ACTION__IDENTIFIER_LIST_LINHA = eINSTANCE.getIdentifierListLinhaAction_Identifier_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.TranlationUnitLinhaActionImpl <em>Tranlation Unit Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.TranlationUnitLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getTranlationUnitLinhaAction()
+     * @generated
+     */
+    EClass TRANLATION_UNIT_LINHA_ACTION = eINSTANCE.getTranlationUnitLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>External declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANLATION_UNIT_LINHA_ACTION__EXTERNAL_DECLARATION = eINSTANCE.getTranlationUnitLinhaAction_External_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Translation unit linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANLATION_UNIT_LINHA_ACTION__TRANSLATION_UNIT_LINHA = eINSTANCE.getTranlationUnitLinhaAction_Translation_unit_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.GenericAssocListLinhaActionImpl <em>Generic Assoc List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.GenericAssocListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getGenericAssocListLinhaAction()
+     * @generated
+     */
+    EClass GENERIC_ASSOC_LIST_LINHA_ACTION = eINSTANCE.getGenericAssocListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Generic association</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_ASSOC_LIST_LINHA_ACTION__GENERIC_ASSOCIATION = eINSTANCE.getGenericAssocListLinhaAction_Generic_association();
+
+    /**
+     * The meta object literal for the '<em><b>Generic assoc list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_ASSOC_LIST_LINHA_ACTION__GENERIC_ASSOC_LIST_LINHA = eINSTANCE.getGenericAssocListLinhaAction_Generic_assoc_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionLinhaActionImpl <em>Postfix Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionLinhaAction()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_LINHA_ACTION = eINSTANCE.getPostfixExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Postfix expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION_LINHA_ACTION__POSTFIX_EXPRESSION_COMPLEMENT = eINSTANCE.getPostfixExpressionLinhaAction_Postfix_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Postfix expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION_LINHA_ACTION__POSTFIX_EXPRESSION_LINHA = eINSTANCE.getPostfixExpressionLinhaAction_Postfix_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.InitializerListLinhaActionImpl <em>Initializer List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.InitializerListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitializerListLinhaAction()
+     * @generated
+     */
+    EClass INITIALIZER_LIST_LINHA_ACTION = eINSTANCE.getInitializerListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Initializer list complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST_LINHA_ACTION__INITIALIZER_LIST_COMPLEMENT = eINSTANCE.getInitializerListLinhaAction_Initializer_list_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIALIZER_LIST_LINHA_ACTION__INIT_DECLARATOR_LIST_LINHA = eINSTANCE.getInitializerListLinhaAction_Init_declarator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.DesignatorListLinhaActionImpl <em>Designator List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.DesignatorListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDesignatorListLinhaAction()
+     * @generated
+     */
+    EClass DESIGNATOR_LIST_LINHA_ACTION = eINSTANCE.getDesignatorListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Designator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR = eINSTANCE.getDesignatorListLinhaAction_Designator();
+
+    /**
+     * The meta object literal for the '<em><b>Designator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR_LIST_LINHA = eINSTANCE.getDesignatorListLinhaAction_Designator_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl <em>Postfix Expression Complement Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementExpression()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION = eINSTANCE.getPostfixExpressionComplementExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION = eINSTANCE.getPostfixExpressionComplementExpression_Expression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl <em>Postfix Expression Complement Empty</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementEmpty()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_EMPTY = eINSTANCE.getPostfixExpressionComplementEmpty();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementArgListImpl <em>Postfix Expression Complement Arg List</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementArgListImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementArgList()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST = eINSTANCE.getPostfixExpressionComplementArgList();
+
+    /**
+     * The meta object literal for the '<em><b>Argument expression list</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST__ARGUMENT_EXPRESSION_LIST = eINSTANCE.getPostfixExpressionComplementArgList_Argument_expression_list();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementIdentifierImpl <em>Postfix Expression Complement Identifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementIdentifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementIdentifier()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER = eINSTANCE.getPostfixExpressionComplementIdentifier();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER = eINSTANCE.getPostfixExpressionComplementIdentifier_Identifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementPointerImpl <em>Postfix Expression Complement Pointer</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementPointerImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementPointer()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_POINTER = eINSTANCE.getPostfixExpressionComplementPointer();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER = eINSTANCE.getPostfixExpressionComplementPointer_Identifier();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementIncrementImpl <em>Postfix Expression Complement Increment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementIncrementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementIncrement()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT = eINSTANCE.getPostfixExpressionComplementIncrement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementDecrementImpl <em>Postfix Expression Complement Decrement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementDecrementImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementDecrement()
+     * @generated
+     */
+    EClass POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT = eINSTANCE.getPostfixExpressionComplementDecrement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ArgumentExpressionListLinhaActionImpl <em>Argument Expression List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.ArgumentExpressionListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getArgumentExpressionListLinhaAction()
+     * @generated
+     */
+    EClass ARGUMENT_EXPRESSION_LIST_LINHA_ACTION = eINSTANCE.getArgumentExpressionListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ASSIGNMENT_EXPRESSION = eINSTANCE.getArgumentExpressionListLinhaAction_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Argument expression list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ARGUMENT_EXPRESSION_LIST_LINHA = eINSTANCE.getArgumentExpressionListLinhaAction_Argument_expression_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl <em>Multiplicative Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getMultiplicativeExpressionLinhaAction()
+     * @generated
+     */
+    EClass MULTIPLICATIVE_EXPRESSION_LINHA_ACTION = eINSTANCE.getMultiplicativeExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Multiplicative expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Multiplicative expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_LINHA = eINSTANCE.getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl <em>Additive Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAdditiveExpressionLinhaAction()
+     * @generated
+     */
+    EClass ADDITIVE_EXPRESSION_LINHA_ACTION = eINSTANCE.getAdditiveExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Additive expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getAdditiveExpressionLinhaAction_Additive_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Additive expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_LINHA = eINSTANCE.getAdditiveExpressionLinhaAction_Additive_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl <em>Shift Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getShiftExpressionLinhaAction()
+     * @generated
+     */
+    EClass SHIFT_EXPRESSION_LINHA_ACTION = eINSTANCE.getShiftExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getShiftExpressionLinhaAction_Shift_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_LINHA = eINSTANCE.getShiftExpressionLinhaAction_Shift_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl <em>Relational Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getRelationalExpressionLinhaAction()
+     * @generated
+     */
+    EClass RELATIONAL_EXPRESSION_LINHA_ACTION = eINSTANCE.getRelationalExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getRelationalExpressionLinhaAction_Shift_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Relational expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION_LINHA_ACTION__RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getRelationalExpressionLinhaAction_Relational_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl <em>Equality Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEqualityExpressionLinhaAction()
+     * @generated
+     */
+    EClass EQUALITY_EXPRESSION_LINHA_ACTION = eINSTANCE.getEqualityExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_COMPLEMENT = eINSTANCE.getEqualityExpressionLinhaAction_Equality_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA = eINSTANCE.getEqualityExpressionLinhaAction_Equality_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl <em>Block Item List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getBlockItemListLinhaAction()
+     * @generated
+     */
+    EClass BLOCK_ITEM_LIST_LINHA_ACTION = eINSTANCE.getBlockItemListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Block item</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM = eINSTANCE.getBlockItemListLinhaAction_Block_item();
+
+    /**
+     * The meta object literal for the '<em><b>Block item list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM_LIST_LINHA = eINSTANCE.getBlockItemListLinhaAction_Block_item_list_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl <em>And Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAndExpressionLinhaAction()
+     * @generated
+     */
+    EClass AND_EXPRESSION_LINHA_ACTION = eINSTANCE.getAndExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION = eINSTANCE.getAndExpressionLinhaAction_Equality_expression();
+
+    /**
+     * The meta object literal for the '<em><b>And expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION_LINHA_ACTION__AND_EXPRESSION_LINHA = eINSTANCE.getAndExpressionLinhaAction_And_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl <em>Exclusive Or Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExclusiveOrExpressionLinhaAction()
+     * @generated
+     */
+    EClass EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = eINSTANCE.getExclusiveOrExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>And expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__AND_EXPRESSION = eINSTANCE.getExclusiveOrExpressionLinhaAction_And_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Exclusive or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl <em>Inclusive Or Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInclusiveOrExpressionLinhaAction()
+     * @generated
+     */
+    EClass INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = eINSTANCE.getInclusiveOrExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Exclusive or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION = eINSTANCE.getInclusiveOrExpressionLinhaAction_Exclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusive or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl <em>Logical And Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalAndExpressionLinhaAction()
+     * @generated
+     */
+    EClass LOGICAL_AND_EXPRESSION_LINHA_ACTION = eINSTANCE.getLogicalAndExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusive or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_AND_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION = eINSTANCE.getLogicalAndExpressionLinhaAction_Inclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical and expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_AND_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION_LINHA = eINSTANCE.getLogicalAndExpressionLinhaAction_Logical_and_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl <em>Logical Or Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalOrExpressionLinhaAction()
+     * @generated
+     */
+    EClass LOGICAL_OR_EXPRESSION_LINHA_ACTION = eINSTANCE.getLogicalOrExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Logical and expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION = eINSTANCE.getLogicalOrExpressionLinhaAction_Logical_and_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_OR_EXPRESSION_LINHA = eINSTANCE.getLogicalOrExpressionLinhaAction_Logical_or_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl <em>Conditional Expression Linha Acction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getConditionalExpressionLinhaAcction()
+     * @generated
+     */
+    EClass CONDITIONAL_EXPRESSION_LINHA_ACCTION = eINSTANCE.getConditionalExpressionLinhaAcction();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION_LINHA_ACCTION__EXPRESSION = eINSTANCE.getConditionalExpressionLinhaAcction_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION = eINSTANCE.getConditionalExpressionLinhaAcction_Conditional_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION_LINHA = eINSTANCE.getConditionalExpressionLinhaAcction_Conditional_expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ExpressionLinhaActionImpl <em>Expression Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.ExpressionLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExpressionLinhaAction()
+     * @generated
+     */
+    EClass EXPRESSION_LINHA_ACTION = eINSTANCE.getExpressionLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION_LINHA_ACTION__ASSIGNMENT_EXPRESSION = eINSTANCE.getExpressionLinhaAction_Assignment_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION_LINHA_ACTION__EXPRESSION_LINHA = eINSTANCE.getExpressionLinhaAction_Expression_linha();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.InitDecclaratorListLinhaActionImpl <em>Init Decclarator List Linha Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.InitDecclaratorListLinhaActionImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitDecclaratorListLinhaAction()
+     * @generated
+     */
+    EClass INIT_DECCLARATOR_LIST_LINHA_ACTION = eINSTANCE.getInitDecclaratorListLinhaAction();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INIT_DECCLARATOR_LIST_LINHA_ACTION__INIT_DECLARATOR = eINSTANCE.getInitDecclaratorListLinhaAction_Init_declarator();
+
+    /**
+     * The meta object literal for the '<em><b>Init declarator list linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INIT_DECCLARATOR_LIST_LINHA_ACTION__INIT_DECLARATOR_LIST_LINHA = eINSTANCE.getInitDecclaratorListLinhaAction_Init_declarator_list_linha();
 
   }
 

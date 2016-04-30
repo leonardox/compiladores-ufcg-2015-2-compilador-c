@@ -11,9 +11,125 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.example.ansic.AdditiveExpressionLinhaAction;
+import org.xtext.example.ansic.AndExpressionLinhaAction;
 import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.ArgumentExpressionListLinhaAction;
+import org.xtext.example.ansic.BlockItemListLinhaAction;
+import org.xtext.example.ansic.ConditionalExpressionLinhaAcction;
+import org.xtext.example.ansic.DeclarationListLinhaAction;
+import org.xtext.example.ansic.DesignatorListLinhaAction;
+import org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction;
+import org.xtext.example.ansic.DirectDeclaratorLinhaAction;
 import org.xtext.example.ansic.DomainModel;
+import org.xtext.example.ansic.EnumeratorListLinhaAction;
+import org.xtext.example.ansic.EqualityExpressionLinhaAction;
+import org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction;
+import org.xtext.example.ansic.ExpressionLinhaAction;
+import org.xtext.example.ansic.GenericAssocListLinhaAction;
+import org.xtext.example.ansic.IdentifierListLinhaAction;
+import org.xtext.example.ansic.InclusiveOrExpressionLinhaAction;
+import org.xtext.example.ansic.InitDecclaratorListLinhaAction;
+import org.xtext.example.ansic.InitializerListLinhaAction;
+import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
+import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
+import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
+import org.xtext.example.ansic.ParameterListLinhaAction;
+import org.xtext.example.ansic.PostfixExpressionComplementArgList;
+import org.xtext.example.ansic.PostfixExpressionComplementDecrement;
+import org.xtext.example.ansic.PostfixExpressionComplementEmpty;
+import org.xtext.example.ansic.PostfixExpressionComplementExpression;
+import org.xtext.example.ansic.PostfixExpressionComplementIdentifier;
+import org.xtext.example.ansic.PostfixExpressionComplementIncrement;
+import org.xtext.example.ansic.PostfixExpressionComplementPointer;
+import org.xtext.example.ansic.PostfixExpressionLinhaAction;
+import org.xtext.example.ansic.RelationalExpressionLinhaAction;
+import org.xtext.example.ansic.ShiftExpressionLinhaAction;
+import org.xtext.example.ansic.StructDeclarationListLinhaAction;
+import org.xtext.example.ansic.StructDeclaratorListLinhaAction;
+import org.xtext.example.ansic.StructOrUnionSpecifierComplementAction;
+import org.xtext.example.ansic.TranlationUnitLinhaAction;
+import org.xtext.example.ansic.TypeQualifierListLinhaAtion;
+import org.xtext.example.ansic.abstract_declarator;
+import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.additive_expression_complement;
+import org.xtext.example.ansic.alignment_specifier;
+import org.xtext.example.ansic.and_expression;
+import org.xtext.example.ansic.argument_expression_list;
+import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.atomic_type_specifier;
+import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.cast_expression;
+import org.xtext.example.ansic.compound_statement;
+import org.xtext.example.ansic.conditional_expression;
+import org.xtext.example.ansic.constant;
+import org.xtext.example.ansic.constant_expression;
+import org.xtext.example.ansic.declaration;
+import org.xtext.example.ansic.declaration_list;
+import org.xtext.example.ansic.declaration_specifiers;
+import org.xtext.example.ansic.declarator;
+import org.xtext.example.ansic.designation;
+import org.xtext.example.ansic.designator;
+import org.xtext.example.ansic.designator_list;
+import org.xtext.example.ansic.direct_abstract_declarator;
+import org.xtext.example.ansic.direct_abstract_declarator_complement;
+import org.xtext.example.ansic.direct_declarator;
+import org.xtext.example.ansic.direct_declarator_complemento;
+import org.xtext.example.ansic.enum_specifier;
+import org.xtext.example.ansic.enumeration_constant;
+import org.xtext.example.ansic.enumerator;
+import org.xtext.example.ansic.enumerator_list;
+import org.xtext.example.ansic.equality_expression;
+import org.xtext.example.ansic.equality_expression_complement;
+import org.xtext.example.ansic.exclusive_or_expression;
+import org.xtext.example.ansic.expression;
+import org.xtext.example.ansic.expression_statement;
+import org.xtext.example.ansic.external_declaration;
+import org.xtext.example.ansic.function_definition;
+import org.xtext.example.ansic.generic_assoc_list;
+import org.xtext.example.ansic.generic_association;
+import org.xtext.example.ansic.generic_selection;
+import org.xtext.example.ansic.identifier_list;
+import org.xtext.example.ansic.inclusive_or_expression;
+import org.xtext.example.ansic.init_declarator;
+import org.xtext.example.ansic.init_declarator_list;
+import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.initializer_list;
+import org.xtext.example.ansic.initializer_list_complement;
+import org.xtext.example.ansic.iteration_statement;
+import org.xtext.example.ansic.jump_statement;
+import org.xtext.example.ansic.labeled_statement;
+import org.xtext.example.ansic.logical_and_expression;
+import org.xtext.example.ansic.logical_or_expression;
+import org.xtext.example.ansic.multiplicative_expression;
+import org.xtext.example.ansic.multiplicative_expression_complement;
+import org.xtext.example.ansic.parameter_declaration;
+import org.xtext.example.ansic.parameter_list;
+import org.xtext.example.ansic.parameter_type_list;
+import org.xtext.example.ansic.pointer;
+import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.primary_expression;
+import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.relational_expression_complement;
+import org.xtext.example.ansic.selection_statement;
+import org.xtext.example.ansic.shift_expression;
+import org.xtext.example.ansic.shift_expression_complement;
+import org.xtext.example.ansic.specifier_qualifier_list;
+import org.xtext.example.ansic.static_assert_declaration;
+import org.xtext.example.ansic.string_ufcg;
+import org.xtext.example.ansic.struct_declaration;
+import org.xtext.example.ansic.struct_declaration_list;
+import org.xtext.example.ansic.struct_declarator;
+import org.xtext.example.ansic.struct_declarator_list;
+import org.xtext.example.ansic.struct_or_union_specifier;
+import org.xtext.example.ansic.translation_unit;
+import org.xtext.example.ansic.type_name;
+import org.xtext.example.ansic.type_qualifier_list;
+import org.xtext.example.ansic.type_specifier;
+import org.xtext.example.ansic.unary_expression;
 import org.xtext.example.services.AnsicGrammarAccess;
 
 @SuppressWarnings("all")
@@ -30,8 +146,371 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == AnsicPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case AnsicPackage.ADDITIVE_EXPRESSION_LINHA_ACTION:
+				sequence_additive_expression_linha(context, (AdditiveExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.AND_EXPRESSION_LINHA_ACTION:
+				sequence_and_expression_linha(context, (AndExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION:
+				sequence_argument_expression_list_linha(context, (ArgumentExpressionListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.BLOCK_ITEM_LIST_LINHA_ACTION:
+				sequence_block_item_list_linha(context, (BlockItemListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.CONDITIONAL_EXPRESSION_LINHA_ACCTION:
+				sequence_conditional_expression_linha(context, (ConditionalExpressionLinhaAcction) semanticObject); 
+				return; 
+			case AnsicPackage.DECLARATION_LIST_LINHA_ACTION:
+				sequence_declaration_list_linha(context, (DeclarationListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.DESIGNATOR_LIST_LINHA_ACTION:
+				sequence_designator_list_linha(context, (DesignatorListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION:
+				sequence_direct_abstract_declarator_linha(context, (DirectAbstractDeclarratorLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_DECLARATOR_LINHA_ACTION:
+				sequence_direct_declarator_linha(context, (DirectDeclaratorLinhaAction) semanticObject); 
+				return; 
 			case AnsicPackage.DOMAIN_MODEL:
 				sequence_DomainModel(context, (DomainModel) semanticObject); 
+				return; 
+			case AnsicPackage.ENUMERATOR_LIST_LINHA_ACTION:
+				sequence_enumerator_list_linha(context, (EnumeratorListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.EQUALITY_EXPRESSION_LINHA_ACTION:
+				sequence_equality_expression_linha(context, (EqualityExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION:
+				sequence_exclusive_or_expression_linha(context, (ExclusiveOrExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.EXPRESSION_LINHA_ACTION:
+				sequence_expression_linha(context, (ExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.GENERIC_ASSOC_LIST_LINHA_ACTION:
+				sequence_generic_assoc_list_linha(context, (GenericAssocListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.IDENTIFIER_LIST_LINHA_ACTION:
+				sequence_identifier_list_linha(context, (IdentifierListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.INCLUSIVE_OR_EXPRESSION_LINHA_ACTION:
+				sequence_inclusive_or_expression_linha(context, (InclusiveOrExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.INIT_DECCLARATOR_LIST_LINHA_ACTION:
+				sequence_init_declarator_list_linha(context, (InitDecclaratorListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.INITIALIZER_LIST_LINHA_ACTION:
+				sequence_initializer_list_linha(context, (InitializerListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.LOGICAL_AND_EXPRESSION_LINHA_ACTION:
+				sequence_logical_and_expression_linha(context, (LogicalAndExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.LOGICAL_OR_EXPRESSION_LINHA_ACTION:
+				sequence_logical_or_expression_linha(context, (LogicalOrExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION:
+				sequence_multiplicative_expression_linha(context, (MultiplicativeExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.PARAMETER_LIST_LINHA_ACTION:
+				sequence_parameter_list_linha(context, (ParameterListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementArgList) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementDecrement) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementEmpty) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementExpression) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementIdentifier) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementIncrement) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_POINTER:
+				sequence_postfix_expression_complement(context, (PostfixExpressionComplementPointer) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_LINHA_ACTION:
+				sequence_postfix_expression_linha(context, (PostfixExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.RELATIONAL_EXPRESSION_LINHA_ACTION:
+				sequence_relational_expression_linha(context, (RelationalExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.SHIFT_EXPRESSION_LINHA_ACTION:
+				sequence_shift_expression_linha(context, (ShiftExpressionLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_DECLARATION_LIST_LINHA_ACTION:
+				sequence_struct_declaration_list_linha(context, (StructDeclarationListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_DECLARATOR_LIST_LINHA_ACTION:
+				sequence_struct_declarator_list_linha(context, (StructDeclaratorListLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION:
+				sequence_struct_or_union_specifier_complement(context, (StructOrUnionSpecifierComplementAction) semanticObject); 
+				return; 
+			case AnsicPackage.TRANLATION_UNIT_LINHA_ACTION:
+				sequence_translation_unit_linha(context, (TranlationUnitLinhaAction) semanticObject); 
+				return; 
+			case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION:
+				sequence_type_qualifier_list_linha(context, (TypeQualifierListLinhaAtion) semanticObject); 
+				return; 
+			case AnsicPackage.ABSTRACT_DECLARATOR:
+				sequence_abstract_declarator(context, (abstract_declarator) semanticObject); 
+				return; 
+			case AnsicPackage.ADDITIVE_EXPRESSION:
+				sequence_additive_expression(context, (additive_expression) semanticObject); 
+				return; 
+			case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT:
+				sequence_additive_expression_complement(context, (additive_expression_complement) semanticObject); 
+				return; 
+			case AnsicPackage.ALIGNMENT_SPECIFIER:
+				sequence_alignment_specifier(context, (alignment_specifier) semanticObject); 
+				return; 
+			case AnsicPackage.AND_EXPRESSION:
+				sequence_and_expression(context, (and_expression) semanticObject); 
+				return; 
+			case AnsicPackage.ARGUMENT_EXPRESSION_LIST:
+				sequence_argument_expression_list(context, (argument_expression_list) semanticObject); 
+				return; 
+			case AnsicPackage.ASSIGNMENT_EXPRESSION:
+				sequence_assignment_expression(context, (assignment_expression) semanticObject); 
+				return; 
+			case AnsicPackage.ATOMIC_TYPE_SPECIFIER:
+				sequence_atomic_type_specifier(context, (atomic_type_specifier) semanticObject); 
+				return; 
+			case AnsicPackage.BLOCK_ITEM:
+				if (rule == grammarAccess.getBlock_itemRule()) {
+					sequence_block_item(context, (block_item) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getBlock_item_listRule()) {
+					sequence_block_item_block_item_list(context, (block_item) semanticObject); 
+					return; 
+				}
+				else break;
+			case AnsicPackage.CAST_EXPRESSION:
+				sequence_cast_expression(context, (cast_expression) semanticObject); 
+				return; 
+			case AnsicPackage.COMPOUND_STATEMENT:
+				sequence_compound_statement(context, (compound_statement) semanticObject); 
+				return; 
+			case AnsicPackage.CONDITIONAL_EXPRESSION:
+				sequence_conditional_expression(context, (conditional_expression) semanticObject); 
+				return; 
+			case AnsicPackage.CONSTANT:
+				sequence_constant(context, (constant) semanticObject); 
+				return; 
+			case AnsicPackage.CONSTANT_EXPRESSION:
+				sequence_constant_expression(context, (constant_expression) semanticObject); 
+				return; 
+			case AnsicPackage.DECLARATION:
+				sequence_declaration(context, (declaration) semanticObject); 
+				return; 
+			case AnsicPackage.DECLARATION_LIST:
+				sequence_declaration_list(context, (declaration_list) semanticObject); 
+				return; 
+			case AnsicPackage.DECLARATION_SPECIFIERS:
+				sequence_declaration_specifiers(context, (declaration_specifiers) semanticObject); 
+				return; 
+			case AnsicPackage.DECLARATOR:
+				sequence_declarator(context, (declarator) semanticObject); 
+				return; 
+			case AnsicPackage.DESIGNATION:
+				sequence_designation(context, (designation) semanticObject); 
+				return; 
+			case AnsicPackage.DESIGNATOR:
+				sequence_designator(context, (designator) semanticObject); 
+				return; 
+			case AnsicPackage.DESIGNATOR_LIST:
+				sequence_designator_list(context, (designator_list) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR:
+				sequence_direct_abstract_declarator(context, (direct_abstract_declarator) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT:
+				sequence_direct_abstract_declarator_complement(context, (direct_abstract_declarator_complement) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_DECLARATOR:
+				sequence_direct_declarator(context, (direct_declarator) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_DECLARATOR_COMPLEMENTO:
+				sequence_direct_declarator_complemento(context, (direct_declarator_complemento) semanticObject); 
+				return; 
+			case AnsicPackage.ENUM_SPECIFIER:
+				sequence_enum_specifier(context, (enum_specifier) semanticObject); 
+				return; 
+			case AnsicPackage.ENUMERATION_CONSTANT:
+				sequence_enumeration_constant(context, (enumeration_constant) semanticObject); 
+				return; 
+			case AnsicPackage.ENUMERATOR:
+				sequence_enumerator(context, (enumerator) semanticObject); 
+				return; 
+			case AnsicPackage.ENUMERATOR_LIST:
+				sequence_enumerator_list(context, (enumerator_list) semanticObject); 
+				return; 
+			case AnsicPackage.EQUALITY_EXPRESSION:
+				sequence_equality_expression(context, (equality_expression) semanticObject); 
+				return; 
+			case AnsicPackage.EQUALITY_EXPRESSION_COMPLEMENT:
+				sequence_equality_expression_complement(context, (equality_expression_complement) semanticObject); 
+				return; 
+			case AnsicPackage.EXCLUSIVE_OR_EXPRESSION:
+				sequence_exclusive_or_expression(context, (exclusive_or_expression) semanticObject); 
+				return; 
+			case AnsicPackage.EXPRESSION:
+				sequence_expression(context, (expression) semanticObject); 
+				return; 
+			case AnsicPackage.EXPRESSION_STATEMENT:
+				sequence_expression_statement(context, (expression_statement) semanticObject); 
+				return; 
+			case AnsicPackage.EXTERNAL_DECLARATION:
+				sequence_external_declaration(context, (external_declaration) semanticObject); 
+				return; 
+			case AnsicPackage.FUNCTION_DEFINITION:
+				sequence_function_definition(context, (function_definition) semanticObject); 
+				return; 
+			case AnsicPackage.GENERIC_ASSOC_LIST:
+				sequence_generic_assoc_list(context, (generic_assoc_list) semanticObject); 
+				return; 
+			case AnsicPackage.GENERIC_ASSOCIATION:
+				sequence_generic_association(context, (generic_association) semanticObject); 
+				return; 
+			case AnsicPackage.GENERIC_SELECTION:
+				sequence_generic_selection(context, (generic_selection) semanticObject); 
+				return; 
+			case AnsicPackage.IDENTIFIER_LIST:
+				sequence_identifier_list(context, (identifier_list) semanticObject); 
+				return; 
+			case AnsicPackage.INCLUSIVE_OR_EXPRESSION:
+				sequence_inclusive_or_expression(context, (inclusive_or_expression) semanticObject); 
+				return; 
+			case AnsicPackage.INIT_DECLARATOR:
+				sequence_init_declarator(context, (init_declarator) semanticObject); 
+				return; 
+			case AnsicPackage.INIT_DECLARATOR_LIST:
+				sequence_init_declarator_list(context, (init_declarator_list) semanticObject); 
+				return; 
+			case AnsicPackage.INITIALIZER:
+				sequence_initializer(context, (initializer) semanticObject); 
+				return; 
+			case AnsicPackage.INITIALIZER_LIST:
+				sequence_initializer_list(context, (initializer_list) semanticObject); 
+				return; 
+			case AnsicPackage.INITIALIZER_LIST_COMPLEMENT:
+				sequence_initializer_list_complement(context, (initializer_list_complement) semanticObject); 
+				return; 
+			case AnsicPackage.ITERATION_STATEMENT:
+				sequence_iteration_statement(context, (iteration_statement) semanticObject); 
+				return; 
+			case AnsicPackage.JUMP_STATEMENT:
+				sequence_jump_statement(context, (jump_statement) semanticObject); 
+				return; 
+			case AnsicPackage.LABELED_STATEMENT:
+				sequence_labeled_statement(context, (labeled_statement) semanticObject); 
+				return; 
+			case AnsicPackage.LOGICAL_AND_EXPRESSION:
+				sequence_logical_and_expression(context, (logical_and_expression) semanticObject); 
+				return; 
+			case AnsicPackage.LOGICAL_OR_EXPRESSION:
+				sequence_logical_or_expression(context, (logical_or_expression) semanticObject); 
+				return; 
+			case AnsicPackage.MULTIPLICATIVE_EXPRESSION:
+				sequence_multiplicative_expression(context, (multiplicative_expression) semanticObject); 
+				return; 
+			case AnsicPackage.MULTIPLICATIVE_EXPRESSION_COMPLEMENT:
+				sequence_multiplicative_expression_complement(context, (multiplicative_expression_complement) semanticObject); 
+				return; 
+			case AnsicPackage.PARAMETER_DECLARATION:
+				sequence_parameter_declaration(context, (parameter_declaration) semanticObject); 
+				return; 
+			case AnsicPackage.PARAMETER_LIST:
+				sequence_parameter_list(context, (parameter_list) semanticObject); 
+				return; 
+			case AnsicPackage.PARAMETER_TYPE_LIST:
+				sequence_parameter_type_list(context, (parameter_type_list) semanticObject); 
+				return; 
+			case AnsicPackage.POINTER:
+				sequence_pointer(context, (pointer) semanticObject); 
+				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION:
+				sequence_postfix_expression(context, (postfix_expression) semanticObject); 
+				return; 
+			case AnsicPackage.PRIMARY_EXPRESSION:
+				sequence_primary_expression(context, (primary_expression) semanticObject); 
+				return; 
+			case AnsicPackage.RELATIONAL_EXPRESSION:
+				sequence_relational_expression(context, (relational_expression) semanticObject); 
+				return; 
+			case AnsicPackage.RELATIONAL_EXPRESSION_COMPLEMENT:
+				sequence_relational_expression_complement(context, (relational_expression_complement) semanticObject); 
+				return; 
+			case AnsicPackage.SELECTION_STATEMENT:
+				sequence_selection_statement(context, (selection_statement) semanticObject); 
+				return; 
+			case AnsicPackage.SHIFT_EXPRESSION:
+				sequence_shift_expression(context, (shift_expression) semanticObject); 
+				return; 
+			case AnsicPackage.SHIFT_EXPRESSION_COMPLEMENT:
+				sequence_shift_expression_complement(context, (shift_expression_complement) semanticObject); 
+				return; 
+			case AnsicPackage.SPECIFIER_QUALIFIER_LIST:
+				sequence_specifier_qualifier_list(context, (specifier_qualifier_list) semanticObject); 
+				return; 
+			case AnsicPackage.STATIC_ASSERT_DECLARATION:
+				sequence_static_assert_declaration(context, (static_assert_declaration) semanticObject); 
+				return; 
+			case AnsicPackage.STRING_UFCG:
+				sequence_string_ufcg(context, (string_ufcg) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_DECLARATION:
+				sequence_struct_declaration(context, (struct_declaration) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_DECLARATION_LIST:
+				sequence_struct_declaration_list(context, (struct_declaration_list) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_DECLARATOR:
+				sequence_struct_declarator(context, (struct_declarator) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_DECLARATOR_LIST:
+				sequence_struct_declarator_list(context, (struct_declarator_list) semanticObject); 
+				return; 
+			case AnsicPackage.STRUCT_OR_UNION_SPECIFIER:
+				sequence_struct_or_union_specifier(context, (struct_or_union_specifier) semanticObject); 
+				return; 
+			case AnsicPackage.TRANSLATION_UNIT:
+				sequence_translation_unit(context, (translation_unit) semanticObject); 
+				return; 
+			case AnsicPackage.TYPE_NAME:
+				if (rule == grammarAccess.getPostfix_expressionRule()) {
+					sequence_postfix_expression_type_name(context, (type_name) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getType_nameRule()) {
+					sequence_type_name(context, (type_name) semanticObject); 
+					return; 
+				}
+				else break;
+			case AnsicPackage.TYPE_QUALIFIER_LIST:
+				if (rule == grammarAccess.getDirect_abstract_declarator_complementRule()) {
+					sequence_direct_abstract_declarator_complement_type_qualifier_list(context, (type_qualifier_list) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getType_qualifier_listRule()) {
+					sequence_type_qualifier_list(context, (type_qualifier_list) semanticObject); 
+					return; 
+				}
+				else break;
+			case AnsicPackage.TYPE_SPECIFIER:
+				sequence_type_specifier(context, (type_specifier) semanticObject); 
+				return; 
+			case AnsicPackage.UNARY_EXPRESSION:
+				sequence_unary_expression(context, (unary_expression) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -46,6 +525,1813 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     geetings+=translation_unit
 	 */
 	protected void sequence_DomainModel(ISerializationContext context, DomainModel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     abstract_declarator returns abstract_declarator
+	 *
+	 * Constraint:
+	 *     ((pointer=pointer direct_abstract_declarator=direct_abstract_declarator) | pointer=pointer | direct_abstract_declarator=direct_abstract_declarator)
+	 */
+	protected void sequence_abstract_declarator(ISerializationContext context, abstract_declarator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     additive_expression returns additive_expression
+	 *
+	 * Constraint:
+	 *     (multiplicative_expression=multiplicative_expression additive_expression_linha=additive_expression_linha)
+	 */
+	protected void sequence_additive_expression(ISerializationContext context, additive_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAdditive_expressionAccess().getMultiplicative_expressionMultiplicative_expressionParserRuleCall_0_0(), semanticObject.getMultiplicative_expression());
+		feeder.accept(grammarAccess.getAdditive_expressionAccess().getAdditive_expression_linhaAdditive_expression_linhaParserRuleCall_1_0(), semanticObject.getAdditive_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     additive_expression_complement returns additive_expression_complement
+	 *
+	 * Constraint:
+	 *     (multiplicative_expression=multiplicative_expression | multiplicative_expression=multiplicative_expression)
+	 */
+	protected void sequence_additive_expression_complement(ISerializationContext context, additive_expression_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     additive_expression_linha returns AdditiveExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?
+	 */
+	protected void sequence_additive_expression_linha(ISerializationContext context, AdditiveExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     alignment_specifier returns alignment_specifier
+	 *
+	 * Constraint:
+	 *     (type_name=type_name | constant_expression=constant_expression)
+	 */
+	protected void sequence_alignment_specifier(ISerializationContext context, alignment_specifier semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     and_expression returns and_expression
+	 *
+	 * Constraint:
+	 *     (equality_expression=equality_expression and_expression_linha=and_expression_linha)
+	 */
+	protected void sequence_and_expression(ISerializationContext context, and_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.AND_EXPRESSION__EQUALITY_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.AND_EXPRESSION__EQUALITY_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.AND_EXPRESSION__AND_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.AND_EXPRESSION__AND_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAnd_expressionAccess().getEquality_expressionEquality_expressionParserRuleCall_0_0(), semanticObject.getEquality_expression());
+		feeder.accept(grammarAccess.getAnd_expressionAccess().getAnd_expression_linhaAnd_expression_linhaParserRuleCall_1_0(), semanticObject.getAnd_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     and_expression_linha returns AndExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (equality_expression=equality_expression and_expression_linha=and_expression_linha)?
+	 */
+	protected void sequence_and_expression_linha(ISerializationContext context, AndExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     argument_expression_list returns argument_expression_list
+	 *
+	 * Constraint:
+	 *     (assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha)
+	 */
+	protected void sequence_argument_expression_list(ISerializationContext context, argument_expression_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_0(), semanticObject.getAssignment_expression());
+		feeder.accept(grammarAccess.getArgument_expression_listAccess().getArgument_expression_list_linhaArgument_expression_list_linhaParserRuleCall_1_0(), semanticObject.getArgument_expression_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     argument_expression_list_linha returns ArgumentExpressionListLinhaAction
+	 *
+	 * Constraint:
+	 *     (assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha)?
+	 */
+	protected void sequence_argument_expression_list_linha(ISerializationContext context, ArgumentExpressionListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     assignment_expression returns assignment_expression
+	 *
+	 * Constraint:
+	 *     (
+	 *         conditional_expression=conditional_expression | 
+	 *         (unary_expression=unary_expression assignment_operator=assignment_operator assignment_expression=assignment_expression)
+	 *     )
+	 */
+	protected void sequence_assignment_expression(ISerializationContext context, assignment_expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     atomic_type_specifier returns atomic_type_specifier
+	 *
+	 * Constraint:
+	 *     type_name=type_name
+	 */
+	protected void sequence_atomic_type_specifier(ISerializationContext context, atomic_type_specifier semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ATOMIC_TYPE_SPECIFIER__TYPE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ATOMIC_TYPE_SPECIFIER__TYPE_NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtomic_type_specifierAccess().getType_nameType_nameParserRuleCall_2_0(), semanticObject.getType_name());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     block_item returns block_item
+	 *
+	 * Constraint:
+	 *     (declaration=declaration | statement=statement)
+	 */
+	protected void sequence_block_item(ISerializationContext context, block_item semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     block_item_list returns block_item
+	 *
+	 * Constraint:
+	 *     ((declaration=declaration | statement=statement) block_item_list_linha=block_item_list_linha)
+	 */
+	protected void sequence_block_item_block_item_list(ISerializationContext context, block_item semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     block_item_list_linha returns BlockItemListLinhaAction
+	 *
+	 * Constraint:
+	 *     (block_item=block_item block_item_list_linha=block_item_list_linha)?
+	 */
+	protected void sequence_block_item_list_linha(ISerializationContext context, BlockItemListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     cast_expression returns cast_expression
+	 *
+	 * Constraint:
+	 *     (unary_expression=unary_expression | (type_name=type_name cast_expression=cast_expression))
+	 */
+	protected void sequence_cast_expression(ISerializationContext context, cast_expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns compound_statement
+	 *     compound_statement returns compound_statement
+	 *
+	 * Constraint:
+	 *     block_item_list=block_item_list
+	 */
+	protected void sequence_compound_statement(ISerializationContext context, compound_statement semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.COMPOUND_STATEMENT__BLOCK_ITEM_LIST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.COMPOUND_STATEMENT__BLOCK_ITEM_LIST));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCompound_statementAccess().getBlock_item_listBlock_item_listParserRuleCall_1_1_0(), semanticObject.getBlock_item_list());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     conditional_expression returns conditional_expression
+	 *
+	 * Constraint:
+	 *     (logical_or_expression=logical_or_expression conditional_expression_linha=conditional_expression_linha)
+	 */
+	protected void sequence_conditional_expression(ISerializationContext context, conditional_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.CONDITIONAL_EXPRESSION__LOGICAL_OR_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.CONDITIONAL_EXPRESSION__LOGICAL_OR_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.CONDITIONAL_EXPRESSION__CONDITIONAL_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.CONDITIONAL_EXPRESSION__CONDITIONAL_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getConditional_expressionAccess().getLogical_or_expressionLogical_or_expressionParserRuleCall_0_0(), semanticObject.getLogical_or_expression());
+		feeder.accept(grammarAccess.getConditional_expressionAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_1_0(), semanticObject.getConditional_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     conditional_expression_linha returns ConditionalExpressionLinhaAcction
+	 *
+	 * Constraint:
+	 *     (expression=expression conditional_expression=conditional_expression conditional_expression_linha=conditional_expression_linha)?
+	 */
+	protected void sequence_conditional_expression_linha(ISerializationContext context, ConditionalExpressionLinhaAcction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     constant returns constant
+	 *
+	 * Constraint:
+	 *     (i_constant=I_CONSTANT | f_constant=F_CONSTANT | enumz='enum')
+	 */
+	protected void sequence_constant(ISerializationContext context, constant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     constant_expression returns constant_expression
+	 *
+	 * Constraint:
+	 *     conditional_expression=conditional_expression
+	 */
+	protected void sequence_constant_expression(ISerializationContext context, constant_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.CONSTANT_EXPRESSION__CONDITIONAL_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.CONSTANT_EXPRESSION__CONDITIONAL_EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getConstant_expressionAccess().getConditional_expressionConditional_expressionParserRuleCall_0(), semanticObject.getConditional_expression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     declaration returns declaration
+	 *
+	 * Constraint:
+	 *     (
+	 *         declaration_specifiers+=declaration_specifiers | 
+	 *         (declaration_specifiers+=declaration_specifiers init_declarator_list+=init_declarator_list) | 
+	 *         static_assert_declaration=static_assert_declaration
+	 *     )
+	 */
+	protected void sequence_declaration(ISerializationContext context, declaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     declaration_list returns declaration_list
+	 *
+	 * Constraint:
+	 *     (declaration=declaration declaration_list_linha=declaration_list_linha)
+	 */
+	protected void sequence_declaration_list(ISerializationContext context, declaration_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DECLARATION_LIST__DECLARATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DECLARATION_LIST__DECLARATION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DECLARATION_LIST__DECLARATION_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DECLARATION_LIST__DECLARATION_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDeclaration_listAccess().getDeclarationDeclarationParserRuleCall_0_0(), semanticObject.getDeclaration());
+		feeder.accept(grammarAccess.getDeclaration_listAccess().getDeclaration_list_linhaDeclaration_list_linhaParserRuleCall_1_0(), semanticObject.getDeclaration_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     declaration_list_linha returns DeclarationListLinhaAction
+	 *
+	 * Constraint:
+	 *     (declaration=declaration declaration_list_linha=declaration_list_linha)?
+	 */
+	protected void sequence_declaration_list_linha(ISerializationContext context, DeclarationListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     declaration_specifiers returns declaration_specifiers
+	 *
+	 * Constraint:
+	 *     (
+	 *         (storage_class_specifier=storage_class_specifier declaration_specifiers+=declaration_specifiers) | 
+	 *         storage_class_specifier=storage_class_specifier | 
+	 *         (type_specifier=type_specifier declaration_specifiers+=declaration_specifiers) | 
+	 *         type_specifier=type_specifier | 
+	 *         (type_qualifier=type_qualifier declaration_specifiers+=declaration_specifiers) | 
+	 *         type_qualifier=type_qualifier | 
+	 *         (function_specifier=function_specifier declaration_specifiers+=declaration_specifiers) | 
+	 *         function_specifier=function_specifier | 
+	 *         (alignment_specifier=alignment_specifier declaration_specifiers+=declaration_specifiers) | 
+	 *         alignment_specifier=alignment_specifier
+	 *     )
+	 */
+	protected void sequence_declaration_specifiers(ISerializationContext context, declaration_specifiers semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     declarator returns declarator
+	 *
+	 * Constraint:
+	 *     ((pointer=pointer direct_declarator=direct_declarator) | direct_declarator=direct_declarator)
+	 */
+	protected void sequence_declarator(ISerializationContext context, declarator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     designation returns designation
+	 *
+	 * Constraint:
+	 *     designator_list=designator_list
+	 */
+	protected void sequence_designation(ISerializationContext context, designation semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DESIGNATION__DESIGNATOR_LIST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DESIGNATION__DESIGNATOR_LIST));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDesignationAccess().getDesignator_listDesignator_listParserRuleCall_0_0(), semanticObject.getDesignator_list());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     designator returns designator
+	 *
+	 * Constraint:
+	 *     (constant_expression=conditional_expression | identifier=ID)
+	 */
+	protected void sequence_designator(ISerializationContext context, designator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     designator_list returns designator_list
+	 *
+	 * Constraint:
+	 *     (designator=designator designator_list_linha=designator_list_linha)
+	 */
+	protected void sequence_designator_list(ISerializationContext context, designator_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DESIGNATOR_LIST__DESIGNATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DESIGNATOR_LIST__DESIGNATOR));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DESIGNATOR_LIST__DESIGNATOR_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DESIGNATOR_LIST__DESIGNATOR_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDesignator_listAccess().getDesignatorDesignatorParserRuleCall_0_0(), semanticObject.getDesignator());
+		feeder.accept(grammarAccess.getDesignator_listAccess().getDesignator_list_linhaDesignator_list_linhaParserRuleCall_1_0(), semanticObject.getDesignator_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     designator_list_linha returns DesignatorListLinhaAction
+	 *
+	 * Constraint:
+	 *     (designator=designator designator_list_linha=declaration_list_linha)?
+	 */
+	protected void sequence_designator_list_linha(ISerializationContext context, DesignatorListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_abstract_declarator_complement returns direct_abstract_declarator_complement
+	 *
+	 * Constraint:
+	 *     (
+	 *         assignment_expression=assignment_expression | 
+	 *         (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *         (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *         type_qualifier_list=type_qualifier_list | 
+	 *         assignment_expression=assignment_expression | 
+	 *         parameter_type_list=parameter_type_list
+	 *     )
+	 */
+	protected void sequence_direct_abstract_declarator_complement(ISerializationContext context, direct_abstract_declarator_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_abstract_declarator_complement returns type_qualifier_list
+	 *
+	 * Constraint:
+	 *     (type_qualifier=type_qualifier type_qualifier_list_linha=type_qualifier_list_linha assignment_expression=assignment_expression)
+	 */
+	protected void sequence_direct_abstract_declarator_complement_type_qualifier_list(ISerializationContext context, type_qualifier_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__ASSIGNMENT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__ASSIGNMENT_EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getType_qualifier_listAccess().getType_qualifierType_qualifierParserRuleCall_0_0(), semanticObject.getType_qualifier());
+		feeder.accept(grammarAccess.getType_qualifier_listAccess().getType_qualifier_list_linhaType_qualifier_list_linhaParserRuleCall_1_0(), semanticObject.getType_qualifier_list_linha());
+		feeder.accept(grammarAccess.getDirect_abstract_declarator_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_2_3_0(), semanticObject.getAssignment_expression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_abstract_declarator returns direct_abstract_declarator
+	 *
+	 * Constraint:
+	 *     (
+	 *         (
+	 *             abstract_declarator=abstract_declarator | 
+	 *             (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *             assignment_expression=assignment_expression | 
+	 *             (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *             (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *             type_qualifier_list=type_qualifier_list | 
+	 *             assignment_expression=assignment_expression | 
+	 *             parameter_type_list=parameter_type_list
+	 *         )? 
+	 *         direct_abstract_declarator_linha=direct_abstract_declarator_linha
+	 *     )
+	 */
+	protected void sequence_direct_abstract_declarator(ISerializationContext context, direct_abstract_declarator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_abstract_declarator_linha returns DirectAbstractDeclarratorLinhaAction
+	 *
+	 * Constraint:
+	 *     (direct_abstract_declarator_complement=direct_abstract_declarator_complement direct_abstract_declarator_linha=direct_abstract_declarator_linha)?
+	 */
+	protected void sequence_direct_abstract_declarator_linha(ISerializationContext context, DirectAbstractDeclarratorLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_declarator_complemento returns direct_declarator_complemento
+	 *
+	 * Constraint:
+	 *     (
+	 *         (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *         assignment_expression=assignment_expression | 
+	 *         type_qualifier_list=type_qualifier_list | 
+	 *         (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *         (type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression) | 
+	 *         type_qualifier_list=type_qualifier_list | 
+	 *         assignment_expression=assignment_expression | 
+	 *         parameter_type_list=parameter_type_list | 
+	 *         identifier_list=identifier_list
+	 *     )
+	 */
+	protected void sequence_direct_declarator_complemento(ISerializationContext context, direct_declarator_complemento semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_declarator returns direct_declarator
+	 *
+	 * Constraint:
+	 *     ((identifier=ID direct_declarator_linha=direct_declarator_linha) | (declarator=declarator direct_declarator_linha=direct_declarator_linha))
+	 */
+	protected void sequence_direct_declarator(ISerializationContext context, direct_declarator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     direct_declarator_linha returns DirectDeclaratorLinhaAction
+	 *
+	 * Constraint:
+	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
+	 */
+	protected void sequence_direct_declarator_linha(ISerializationContext context, DirectDeclaratorLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     enum_specifier returns enum_specifier
+	 *
+	 * Constraint:
+	 *     (
+	 *         enumerator_list=enumerator_list | 
+	 *         enumerator_list=enumerator_list | 
+	 *         (identifier=ID enumerator_list=enumerator_list) | 
+	 *         (identifier=ID enumerator_list=enumerator_list) | 
+	 *         identifier=ID
+	 *     )
+	 */
+	protected void sequence_enum_specifier(ISerializationContext context, enum_specifier semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     enumeration_constant returns enumeration_constant
+	 *
+	 * Constraint:
+	 *     identifier=ID
+	 */
+	protected void sequence_enumeration_constant(ISerializationContext context, enumeration_constant semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ENUMERATION_CONSTANT__IDENTIFIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ENUMERATION_CONSTANT__IDENTIFIER));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEnumeration_constantAccess().getIdentifierIDTerminalRuleCall_0(), semanticObject.getIdentifier());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     enumerator returns enumerator
+	 *
+	 * Constraint:
+	 *     ((enumeration_constant=enumeration_constant conditional_expression=constant_expression) | enumeration_constant=enumeration_constant)
+	 */
+	protected void sequence_enumerator(ISerializationContext context, enumerator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     enumerator_list returns enumerator_list
+	 *
+	 * Constraint:
+	 *     (enumarator=enumerator enumerator_list_linha=enumerator_list_linha)
+	 */
+	protected void sequence_enumerator_list(ISerializationContext context, enumerator_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ENUMERATOR_LIST__ENUMARATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ENUMERATOR_LIST__ENUMARATOR));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ENUMERATOR_LIST__ENUMERATOR_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ENUMERATOR_LIST__ENUMERATOR_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEnumerator_listAccess().getEnumaratorEnumeratorParserRuleCall_0_0(), semanticObject.getEnumarator());
+		feeder.accept(grammarAccess.getEnumerator_listAccess().getEnumerator_list_linhaEnumerator_list_linhaParserRuleCall_1_0(), semanticObject.getEnumerator_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     enumerator_list_linha returns EnumeratorListLinhaAction
+	 *
+	 * Constraint:
+	 *     (enumerator=enumerator enumerator_list_linha=enumerator_list_linha)?
+	 */
+	protected void sequence_enumerator_list_linha(ISerializationContext context, EnumeratorListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     equality_expression_complement returns equality_expression_complement
+	 *
+	 * Constraint:
+	 *     (relational_expression=relational_expression | relational_expression=relational_expression)
+	 */
+	protected void sequence_equality_expression_complement(ISerializationContext context, equality_expression_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     equality_expression returns equality_expression
+	 *
+	 * Constraint:
+	 *     (relational_expression=relational_expression equality_expression_linha=equality_expression_linha)
+	 */
+	protected void sequence_equality_expression(ISerializationContext context, equality_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EQUALITY_EXPRESSION__RELATIONAL_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EQUALITY_EXPRESSION__RELATIONAL_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EQUALITY_EXPRESSION__EQUALITY_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EQUALITY_EXPRESSION__EQUALITY_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEquality_expressionAccess().getRelational_expressionRelational_expressionParserRuleCall_0_0(), semanticObject.getRelational_expression());
+		feeder.accept(grammarAccess.getEquality_expressionAccess().getEquality_expression_linhaEquality_expression_linhaParserRuleCall_1_0(), semanticObject.getEquality_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     equality_expression_linha returns EqualityExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (equality_expression_complement=equality_expression_complement equality_expression_linha=equality_expression_linha)?
+	 */
+	protected void sequence_equality_expression_linha(ISerializationContext context, EqualityExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     exclusive_or_expression returns exclusive_or_expression
+	 *
+	 * Constraint:
+	 *     (and_expression=and_expression exclusive_or_expression_linha=exclusive_or_expression_linha)
+	 */
+	protected void sequence_exclusive_or_expression(ISerializationContext context, exclusive_or_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExclusive_or_expressionAccess().getAnd_expressionAnd_expressionParserRuleCall_0_0(), semanticObject.getAnd_expression());
+		feeder.accept(grammarAccess.getExclusive_or_expressionAccess().getExclusive_or_expression_linhaExclusive_or_expression_linhaParserRuleCall_1_0(), semanticObject.getExclusive_or_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     exclusive_or_expression_linha returns ExclusiveOrExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (and_expression=and_expression exclusive_or_expression_linha=exclusive_or_expression_linha)?
+	 */
+	protected void sequence_exclusive_or_expression_linha(ISerializationContext context, ExclusiveOrExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     expression returns expression
+	 *
+	 * Constraint:
+	 *     (assignment_expression=assignment_expression expression_linha=expression_linha)
+	 */
+	protected void sequence_expression(ISerializationContext context, expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXPRESSION__ASSIGNMENT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXPRESSION__ASSIGNMENT_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXPRESSION__EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXPRESSION__EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpressionAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_0(), semanticObject.getAssignment_expression());
+		feeder.accept(grammarAccess.getExpressionAccess().getExpression_linhaExpression_linhaParserRuleCall_1_0(), semanticObject.getExpression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     expression_linha returns ExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (assignment_expression=assignment_expression expression_linha=expression_linha)?
+	 */
+	protected void sequence_expression_linha(ISerializationContext context, ExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns expression_statement
+	 *     expression_statement returns expression_statement
+	 *
+	 * Constraint:
+	 *     expression=expression
+	 */
+	protected void sequence_expression_statement(ISerializationContext context, expression_statement semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXPRESSION_STATEMENT__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXPRESSION_STATEMENT__EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpression_statementAccess().getExpressionExpressionParserRuleCall_1_0_0(), semanticObject.getExpression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     external_declaration returns external_declaration
+	 *
+	 * Constraint:
+	 *     (function_definitio=function_definition | declaration=declaration)
+	 */
+	protected void sequence_external_declaration(ISerializationContext context, external_declaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     function_definition returns function_definition
+	 *
+	 * Constraint:
+	 *     (
+	 *         (declaration_specifiers+=declaration_specifiers declarator=declarator declaration_list+=declaration_list compound_statement=compound_statement) | 
+	 *         (declaration_specifiers+=declaration_specifiers declarator=declarator compound_statement=compound_statement)
+	 *     )
+	 */
+	protected void sequence_function_definition(ISerializationContext context, function_definition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     generic_assoc_list returns generic_assoc_list
+	 *
+	 * Constraint:
+	 *     (generic_association=generic_association generic_assoc_list_linha=generic_assoc_list_linha)
+	 */
+	protected void sequence_generic_assoc_list(ISerializationContext context, generic_assoc_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.GENERIC_ASSOC_LIST__GENERIC_ASSOCIATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.GENERIC_ASSOC_LIST__GENERIC_ASSOCIATION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.GENERIC_ASSOC_LIST__GENERIC_ASSOC_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.GENERIC_ASSOC_LIST__GENERIC_ASSOC_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGeneric_assoc_listAccess().getGeneric_associationGeneric_associationParserRuleCall_0_0(), semanticObject.getGeneric_association());
+		feeder.accept(grammarAccess.getGeneric_assoc_listAccess().getGeneric_assoc_list_linhaGeneric_assoc_list_linhaParserRuleCall_1_0(), semanticObject.getGeneric_assoc_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     generic_assoc_list_linha returns GenericAssocListLinhaAction
+	 *
+	 * Constraint:
+	 *     (generic_association=generic_association generic_assoc_list_linha=generic_assoc_list_linha)?
+	 */
+	protected void sequence_generic_assoc_list_linha(ISerializationContext context, GenericAssocListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     generic_association returns generic_association
+	 *
+	 * Constraint:
+	 *     ((type_name=type_name assignment_expression=assignment_expression) | (default='default' assignment_expression=assignment_expression))
+	 */
+	protected void sequence_generic_association(ISerializationContext context, generic_association semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     generic_selection returns generic_selection
+	 *
+	 * Constraint:
+	 *     (_generic='_Generic' assignment_expression=assignment_expression generic_assoc_list+=generic_assoc_list)
+	 */
+	protected void sequence_generic_selection(ISerializationContext context, generic_selection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     identifier_list returns identifier_list
+	 *
+	 * Constraint:
+	 *     (identifier=ID identifier_list_linha=identifier_list_linha)
+	 */
+	protected void sequence_identifier_list(ISerializationContext context, identifier_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.IDENTIFIER_LIST__IDENTIFIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.IDENTIFIER_LIST__IDENTIFIER));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.IDENTIFIER_LIST__IDENTIFIER_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.IDENTIFIER_LIST__IDENTIFIER_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIdentifier_listAccess().getIdentifierIDTerminalRuleCall_0_0(), semanticObject.getIdentifier());
+		feeder.accept(grammarAccess.getIdentifier_listAccess().getIdentifier_list_linhaIdentifier_list_linhaParserRuleCall_1_0(), semanticObject.getIdentifier_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     identifier_list_linha returns IdentifierListLinhaAction
+	 *
+	 * Constraint:
+	 *     (identifier=ID identifier_list_linha=identifier_list_linha)?
+	 */
+	protected void sequence_identifier_list_linha(ISerializationContext context, IdentifierListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     inclusive_or_expression returns inclusive_or_expression
+	 *
+	 * Constraint:
+	 *     (exclusive_or_expression=exclusive_or_expression inclusive_or_expression_linha=inclusive_or_expression_linha)
+	 */
+	protected void sequence_inclusive_or_expression(ISerializationContext context, inclusive_or_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getInclusive_or_expressionAccess().getExclusive_or_expressionExclusive_or_expressionParserRuleCall_0_0(), semanticObject.getExclusive_or_expression());
+		feeder.accept(grammarAccess.getInclusive_or_expressionAccess().getInclusive_or_expression_linhaInclusive_or_expression_linhaParserRuleCall_1_0(), semanticObject.getInclusive_or_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     inclusive_or_expression_linha returns InclusiveOrExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (exclusive_or_expression=exclusive_or_expression inclusive_or_expression_linha=inclusive_or_expression_linha)?
+	 */
+	protected void sequence_inclusive_or_expression_linha(ISerializationContext context, InclusiveOrExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     init_declarator returns init_declarator
+	 *
+	 * Constraint:
+	 *     ((declarator=declarator initializer=initializer) | declarator=declarator)
+	 */
+	protected void sequence_init_declarator(ISerializationContext context, init_declarator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     init_declarator_list returns init_declarator_list
+	 *
+	 * Constraint:
+	 *     (init_declarator=init_declarator init_declarator_list_linha=init_declarator_list_linha)
+	 */
+	protected void sequence_init_declarator_list(ISerializationContext context, init_declarator_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.INIT_DECLARATOR_LIST__INIT_DECLARATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.INIT_DECLARATOR_LIST__INIT_DECLARATOR));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.INIT_DECLARATOR_LIST__INIT_DECLARATOR_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.INIT_DECLARATOR_LIST__INIT_DECLARATOR_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getInit_declarator_listAccess().getInit_declaratorInit_declaratorParserRuleCall_0_0(), semanticObject.getInit_declarator());
+		feeder.accept(grammarAccess.getInit_declarator_listAccess().getInit_declarator_list_linhaInit_declarator_list_linhaParserRuleCall_1_0(), semanticObject.getInit_declarator_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     init_declarator_list_linha returns InitDecclaratorListLinhaAction
+	 *
+	 * Constraint:
+	 *     (init_declarator=init_declarator init_declarator_list_linha=init_declarator_list_linha)?
+	 */
+	protected void sequence_init_declarator_list_linha(ISerializationContext context, InitDecclaratorListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     initializer returns initializer
+	 *
+	 * Constraint:
+	 *     (init_declarator_list=initializer_list | init_declarator_list=initializer_list | assignment_expression=assignment_expression)
+	 */
+	protected void sequence_initializer(ISerializationContext context, initializer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     initializer_list_complement returns initializer_list_complement
+	 *
+	 * Constraint:
+	 *     ((designation=designation initializer=initializer) | initializer=initializer)
+	 */
+	protected void sequence_initializer_list_complement(ISerializationContext context, initializer_list_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     initializer_list returns initializer_list
+	 *
+	 * Constraint:
+	 *     (
+	 *         (designation=designation initializer=initializer init_declarator_list_linha=init_declarator_list_linha) | 
+	 *         (initializer=initializer init_declarator_list_linha=init_declarator_list_linha)
+	 *     )
+	 */
+	protected void sequence_initializer_list(ISerializationContext context, initializer_list semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     initializer_list_linha returns InitializerListLinhaAction
+	 *
+	 * Constraint:
+	 *     (initializer_list_complement=initializer_list_complement init_declarator_list_linha=init_declarator_list_linha)?
+	 */
+	protected void sequence_initializer_list_linha(ISerializationContext context, InitializerListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns iteration_statement
+	 *     iteration_statement returns iteration_statement
+	 *
+	 * Constraint:
+	 *     (
+	 *         (expression=expression statement=statement) | 
+	 *         (statement=statement expression=expression) | 
+	 *         (expression_statement=expression_statement expression_statement2=expression_statement statement=statement) | 
+	 *         (expression_statement=expression_statement expression_statement2=expression_statement expression=expression statement=statement) | 
+	 *         (declaration=declaration expression_statement=expression_statement statement=statement) | 
+	 *         (declaration=declaration expression_statement=expression_statement expression=expression statement=statement)
+	 *     )
+	 */
+	protected void sequence_iteration_statement(ISerializationContext context, iteration_statement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns jump_statement
+	 *     jump_statement returns jump_statement
+	 *
+	 * Constraint:
+	 *     (identifier=ID | expression=expression)
+	 */
+	protected void sequence_jump_statement(ISerializationContext context, jump_statement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns labeled_statement
+	 *     labeled_statement returns labeled_statement
+	 *
+	 * Constraint:
+	 *     ((identifier=ID statement=statement) | (constant_expression=conditional_expression statement=statement) | statement=statement)
+	 */
+	protected void sequence_labeled_statement(ISerializationContext context, labeled_statement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     logical_and_expression_linha returns LogicalAndExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)?
+	 */
+	protected void sequence_logical_and_expression_linha(ISerializationContext context, LogicalAndExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     logical_and_expression returns logical_and_expression
+	 *
+	 * Constraint:
+	 *     (inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)
+	 */
+	protected void sequence_logical_and_expression(ISerializationContext context, logical_and_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLogical_and_expressionAccess().getInclusive_or_expressionInclusive_or_expressionParserRuleCall_0_0(), semanticObject.getInclusive_or_expression());
+		feeder.accept(grammarAccess.getLogical_and_expressionAccess().getLogical_and_expression_linhaLogical_and_expression_linhaParserRuleCall_1_0(), semanticObject.getLogical_and_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     logical_or_expression_linha returns LogicalOrExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (logical_and_expression=logical_and_expression logical_or_expression_linha=logical_or_expression_linha)?
+	 */
+	protected void sequence_logical_or_expression_linha(ISerializationContext context, LogicalOrExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     logical_or_expression returns logical_or_expression
+	 *
+	 * Constraint:
+	 *     (logical_and_expression=logical_and_expression logical_or_expression_linha=logical_or_expression_linha)
+	 */
+	protected void sequence_logical_or_expression(ISerializationContext context, logical_or_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLogical_or_expressionAccess().getLogical_and_expressionLogical_and_expressionParserRuleCall_0_0(), semanticObject.getLogical_and_expression());
+		feeder.accept(grammarAccess.getLogical_or_expressionAccess().getLogical_or_expression_linhaLogical_or_expression_linhaParserRuleCall_1_0(), semanticObject.getLogical_or_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     multiplicative_expression_complement returns multiplicative_expression_complement
+	 *
+	 * Constraint:
+	 *     (cast_expression=cast_expression | cast_expression=cast_expression | cast_expression=cast_expression)
+	 */
+	protected void sequence_multiplicative_expression_complement(ISerializationContext context, multiplicative_expression_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     multiplicative_expression_linha returns MultiplicativeExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (multiplicative_expression_complement=multiplicative_expression_complement multiplicative_expression_linha=multiplicative_expression_linha)?
+	 */
+	protected void sequence_multiplicative_expression_linha(ISerializationContext context, MultiplicativeExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     multiplicative_expression returns multiplicative_expression
+	 *
+	 * Constraint:
+	 *     (cast_expression=cast_expression multiplicative_expression_linha=multiplicative_expression_linha)
+	 */
+	protected void sequence_multiplicative_expression(ISerializationContext context, multiplicative_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMultiplicative_expressionAccess().getCast_expressionCast_expressionParserRuleCall_0_0(), semanticObject.getCast_expression());
+		feeder.accept(grammarAccess.getMultiplicative_expressionAccess().getMultiplicative_expression_linhaMultiplicative_expression_linhaParserRuleCall_1_0(), semanticObject.getMultiplicative_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     parameter_declaration returns parameter_declaration
+	 *
+	 * Constraint:
+	 *     (
+	 *         (declaration_specifiers=declaration_specifiers declarator=declarator) | 
+	 *         (declaration_specifiers=declaration_specifiers abstract_declarator=abstract_declarator) | 
+	 *         declaration_specifiers=declaration_specifiers
+	 *     )
+	 */
+	protected void sequence_parameter_declaration(ISerializationContext context, parameter_declaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     parameter_list_linha returns ParameterListLinhaAction
+	 *
+	 * Constraint:
+	 *     (parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)?
+	 */
+	protected void sequence_parameter_list_linha(ISerializationContext context, ParameterListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     parameter_list returns parameter_list
+	 *
+	 * Constraint:
+	 *     (parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)
+	 */
+	protected void sequence_parameter_list(ISerializationContext context, parameter_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_DECLARATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_DECLARATION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getParameter_listAccess().getParameter_declarationParameter_declarationParserRuleCall_0_0(), semanticObject.getParameter_declaration());
+		feeder.accept(grammarAccess.getParameter_listAccess().getParameter_list_linhaParameter_list_linhaParserRuleCall_1_0(), semanticObject.getParameter_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     parameter_type_list returns parameter_type_list
+	 *
+	 * Constraint:
+	 *     (parameter_list=parameter_list | parameter_list=parameter_list)
+	 */
+	protected void sequence_parameter_type_list(ISerializationContext context, parameter_type_list semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     pointer returns pointer
+	 *
+	 * Constraint:
+	 *     ((type_qualifier_list=type_qualifier_list pointer=pointer) | type_qualifier_list=type_qualifier_list | pointer=pointer)
+	 */
+	protected void sequence_pointer(ISerializationContext context, pointer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementArgList
+	 *
+	 * Constraint:
+	 *     argument_expression_list+=argument_expression_list
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementArgList semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementDecrement
+	 *
+	 * Constraint:
+	 *     {PostfixExpressionComplementDecrement}
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementDecrement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementEmpty
+	 *
+	 * Constraint:
+	 *     {PostfixExpressionComplementEmpty}
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementEmpty semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementExpression
+	 *
+	 * Constraint:
+	 *     expression=expression
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementExpression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getExpressionExpressionParserRuleCall_0_2_0(), semanticObject.getExpression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementIdentifier
+	 *
+	 * Constraint:
+	 *     identifier=ID
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementIdentifier semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDTerminalRuleCall_3_2_0(), semanticObject.getIdentifier());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementIncrement
+	 *
+	 * Constraint:
+	 *     {PostfixExpressionComplementIncrement}
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementIncrement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_complement returns PostfixExpressionComplementPointer
+	 *
+	 * Constraint:
+	 *     identifier=ID
+	 */
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementPointer semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDTerminalRuleCall_4_2_0(), semanticObject.getIdentifier());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression_linha returns PostfixExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (postfix_expression_complement=postfix_expression_complement postfix_expression_linha=postfix_expression_linha)?
+	 */
+	protected void sequence_postfix_expression_linha(ISerializationContext context, PostfixExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression returns postfix_expression
+	 *
+	 * Constraint:
+	 *     (primary_expression=primary_expression postfix_expression_linha=postfix_expression_linha)
+	 */
+	protected void sequence_postfix_expression(ISerializationContext context, postfix_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION__PRIMARY_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION__PRIMARY_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION__POSTFIX_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION__POSTFIX_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPostfix_expressionAccess().getPrimary_expressionPrimary_expressionParserRuleCall_0_0_0(), semanticObject.getPrimary_expression());
+		feeder.accept(grammarAccess.getPostfix_expressionAccess().getPostfix_expression_linhaPostfix_expression_linhaParserRuleCall_0_1_0(), semanticObject.getPostfix_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     postfix_expression returns type_name
+	 *
+	 * Constraint:
+	 *     (
+	 *         ((specifier_qualifier_list=specifier_qualifier_list abstract_declarator=abstract_declarator) | specifier_qualifier_list=specifier_qualifier_list) 
+	 *         (
+	 *             (initializer_list=initializer_list postfix_expression_linha=postfix_expression_linha) | 
+	 *             (initializer_list=initializer_list postfix_expression_linha=postfix_expression_linha)
+	 *         )
+	 *     )
+	 */
+	protected void sequence_postfix_expression_type_name(ISerializationContext context, type_name semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     primary_expression returns primary_expression
+	 *
+	 * Constraint:
+	 *     (identifier=ID | constant=constant | string=string_ufcg | expression=expression | generic_selection=generic_selection)
+	 */
+	protected void sequence_primary_expression(ISerializationContext context, primary_expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     relational_expression_complement returns relational_expression_complement
+	 *
+	 * Constraint:
+	 *     (shift_expression=shift_expression | shift_expression=shift_expression | shift_expression=shift_expression | shift_expression=shift_expression)
+	 */
+	protected void sequence_relational_expression_complement(ISerializationContext context, relational_expression_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     relational_expression_linha returns RelationalExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
+	 */
+	protected void sequence_relational_expression_linha(ISerializationContext context, RelationalExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     relational_expression returns relational_expression
+	 *
+	 * Constraint:
+	 *     (shift_expression=shift_expression relational_expression_linha=relational_expression_linha)
+	 */
+	protected void sequence_relational_expression(ISerializationContext context, relational_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION__SHIFT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION__SHIFT_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRelational_expressionAccess().getShift_expressionShift_expressionParserRuleCall_0_0(), semanticObject.getShift_expression());
+		feeder.accept(grammarAccess.getRelational_expressionAccess().getRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_0(), semanticObject.getRelational_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns selection_statement
+	 *     selection_statement returns selection_statement
+	 *
+	 * Constraint:
+	 *     (
+	 *         (expression=expression statement=statement statement2=statement) | 
+	 *         (expression=expression statement=statement) | 
+	 *         (expression=expression statement=expression)
+	 *     )
+	 */
+	protected void sequence_selection_statement(ISerializationContext context, selection_statement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     shift_expression_complement returns shift_expression_complement
+	 *
+	 * Constraint:
+	 *     (additive_expression=additive_expression | additive_expression=additive_expression)
+	 */
+	protected void sequence_shift_expression_complement(ISerializationContext context, shift_expression_complement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     shift_expression_linha returns ShiftExpressionLinhaAction
+	 *
+	 * Constraint:
+	 *     (shift_expression_complement=shift_expression_complement shift_expression_linha=shift_expression_linha)?
+	 */
+	protected void sequence_shift_expression_linha(ISerializationContext context, ShiftExpressionLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     shift_expression returns shift_expression
+	 *
+	 * Constraint:
+	 *     (additive_expression=additive_expression shift_expression_linha=shift_expression_linha)
+	 */
+	protected void sequence_shift_expression(ISerializationContext context, shift_expression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.SHIFT_EXPRESSION__ADDITIVE_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.SHIFT_EXPRESSION__ADDITIVE_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getShift_expressionAccess().getAdditive_expressionAdditive_expressionParserRuleCall_0_0(), semanticObject.getAdditive_expression());
+		feeder.accept(grammarAccess.getShift_expressionAccess().getShift_expression_linhaShift_expression_linhaParserRuleCall_1_0(), semanticObject.getShift_expression_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     specifier_qualifier_list returns specifier_qualifier_list
+	 *
+	 * Constraint:
+	 *     (
+	 *         (type_specifier=type_specifier specifier_qualifier_list=specifier_qualifier_list) | 
+	 *         type_specifier=type_specifier | 
+	 *         (type_qualifier=type_qualifier specifier_qualifier_list=specifier_qualifier_list) | 
+	 *         type_qualifier=type_qualifier
+	 *     )
+	 */
+	protected void sequence_specifier_qualifier_list(ISerializationContext context, specifier_qualifier_list semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     static_assert_declaration returns static_assert_declaration
+	 *
+	 * Constraint:
+	 *     constant_expression=constant_expression
+	 */
+	protected void sequence_static_assert_declaration(ISerializationContext context, static_assert_declaration semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.STATIC_ASSERT_DECLARATION__CONSTANT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.STATIC_ASSERT_DECLARATION__CONSTANT_EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStatic_assert_declarationAccess().getConstant_expressionConstant_expressionParserRuleCall_2_0(), semanticObject.getConstant_expression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     string_ufcg returns string_ufcg
+	 *
+	 * Constraint:
+	 *     (string_literal=STRING_LITERAL | __func__='__func__')
+	 */
+	protected void sequence_string_ufcg(ISerializationContext context, string_ufcg semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_declaration_list_linha returns StructDeclarationListLinhaAction
+	 *
+	 * Constraint:
+	 *     (struct_declaration=struct_declaration struct_declaration_list_linha=struct_declaration_list_linha)?
+	 */
+	protected void sequence_struct_declaration_list_linha(ISerializationContext context, StructDeclarationListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_declaration_list returns struct_declaration_list
+	 *
+	 * Constraint:
+	 *     (struct_declaration=struct_declaration struct_declaration_list_linha=struct_declaration_list_linha)
+	 */
+	protected void sequence_struct_declaration_list(ISerializationContext context, struct_declaration_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATION_LIST__STRUCT_DECLARATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATION_LIST__STRUCT_DECLARATION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATION_LIST__STRUCT_DECLARATION_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATION_LIST__STRUCT_DECLARATION_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStruct_declaration_listAccess().getStruct_declarationStruct_declarationParserRuleCall_0_0(), semanticObject.getStruct_declaration());
+		feeder.accept(grammarAccess.getStruct_declaration_listAccess().getStruct_declaration_list_linhaStruct_declaration_list_linhaParserRuleCall_1_0(), semanticObject.getStruct_declaration_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_declaration returns struct_declaration
+	 *
+	 * Constraint:
+	 *     (
+	 *         specifier_qualifier_list=specifier_qualifier_list | 
+	 *         (specifier_qualifier_list=specifier_qualifier_list struct_declarator_list=struct_declarator_list) | 
+	 *         static_assert_declaration=static_assert_declaration
+	 *     )
+	 */
+	protected void sequence_struct_declaration(ISerializationContext context, struct_declaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_declarator_list_linha returns StructDeclaratorListLinhaAction
+	 *
+	 * Constraint:
+	 *     (struct_declarator=struct_declarator struct_declarator_list_linha=struct_declarator_list_linha)?
+	 */
+	protected void sequence_struct_declarator_list_linha(ISerializationContext context, StructDeclaratorListLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_declarator_list returns struct_declarator_list
+	 *
+	 * Constraint:
+	 *     (struct_declarator=struct_declarator struct_declarator_list_linha=struct_declarator_list_linha)
+	 */
+	protected void sequence_struct_declarator_list(ISerializationContext context, struct_declarator_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.STRUCT_DECLARATOR_LIST__STRUCT_DECLARATOR_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStruct_declarator_listAccess().getStruct_declaratorStruct_declaratorParserRuleCall_0_0(), semanticObject.getStruct_declarator());
+		feeder.accept(grammarAccess.getStruct_declarator_listAccess().getStruct_declarator_list_linhaStruct_declarator_list_linhaParserRuleCall_1_0(), semanticObject.getStruct_declarator_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_declarator returns struct_declarator
+	 *
+	 * Constraint:
+	 *     (constant_expression=constant_expression | (declarator=declarator constant_expression=constant_expression) | declarator=declarator)
+	 */
+	protected void sequence_struct_declarator(ISerializationContext context, struct_declarator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_or_union_specifier_complement returns StructOrUnionSpecifierComplementAction
+	 *
+	 * Constraint:
+	 *     struct_declaration_list=struct_declaration_list?
+	 */
+	protected void sequence_struct_or_union_specifier_complement(ISerializationContext context, StructOrUnionSpecifierComplementAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     struct_or_union_specifier returns struct_or_union_specifier
+	 *
+	 * Constraint:
+	 *     (
+	 *         (struct_or_union=struct_or_union struct_declaration_list=struct_declaration_list) | 
+	 *         (struct_or_union=struct_or_union identifier=ID struct_or_union_specifier_complement=struct_or_union_specifier_complement)
+	 *     )
+	 */
+	protected void sequence_struct_or_union_specifier(ISerializationContext context, struct_or_union_specifier semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     translation_unit_linha returns TranlationUnitLinhaAction
+	 *
+	 * Constraint:
+	 *     (external_declaration=external_declaration translation_unit_linha=translation_unit_linha)?
+	 */
+	protected void sequence_translation_unit_linha(ISerializationContext context, TranlationUnitLinhaAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     translation_unit returns translation_unit
+	 *
+	 * Constraint:
+	 *     (external_declaration=external_declaration translation_unit_linha=translation_unit_linha)
+	 */
+	protected void sequence_translation_unit(ISerializationContext context, translation_unit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.TRANSLATION_UNIT__EXTERNAL_DECLARATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.TRANSLATION_UNIT__EXTERNAL_DECLARATION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.TRANSLATION_UNIT__TRANSLATION_UNIT_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.TRANSLATION_UNIT__TRANSLATION_UNIT_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTranslation_unitAccess().getExternal_declarationExternal_declarationParserRuleCall_0_0(), semanticObject.getExternal_declaration());
+		feeder.accept(grammarAccess.getTranslation_unitAccess().getTranslation_unit_linhaTranslation_unit_linhaParserRuleCall_1_0(), semanticObject.getTranslation_unit_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     type_name returns type_name
+	 *
+	 * Constraint:
+	 *     ((specifier_qualifier_list=specifier_qualifier_list abstract_declarator=abstract_declarator) | specifier_qualifier_list=specifier_qualifier_list)
+	 */
+	protected void sequence_type_name(ISerializationContext context, type_name semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     type_qualifier_list_linha returns TypeQualifierListLinhaAtion
+	 *
+	 * Constraint:
+	 *     (type_qualifier=type_qualifier type_qualifier_list_linha=type_qualifier_list_linha)?
+	 */
+	protected void sequence_type_qualifier_list_linha(ISerializationContext context, TypeQualifierListLinhaAtion semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     type_qualifier_list returns type_qualifier_list
+	 *
+	 * Constraint:
+	 *     (type_qualifier=type_qualifier type_qualifier_list_linha=type_qualifier_list_linha)
+	 */
+	protected void sequence_type_qualifier_list(ISerializationContext context, type_qualifier_list semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.TYPE_QUALIFIER_LIST__TYPE_QUALIFIER_LIST_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getType_qualifier_listAccess().getType_qualifierType_qualifierParserRuleCall_0_0(), semanticObject.getType_qualifier());
+		feeder.accept(grammarAccess.getType_qualifier_listAccess().getType_qualifier_list_linhaType_qualifier_list_linhaParserRuleCall_1_0(), semanticObject.getType_qualifier_list_linha());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     type_specifier returns type_specifier
+	 *
+	 * Constraint:
+	 *     (atomic_type_specifier=atomic_type_specifier | struct_or_union_specifier=struct_or_union_specifier | enum_specifier=enum_specifier)
+	 */
+	protected void sequence_type_specifier(ISerializationContext context, type_specifier semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     unary_expression returns unary_expression
+	 *
+	 * Constraint:
+	 *     (
+	 *         postfix_expression=postfix_expression | 
+	 *         unary_expression=unary_expression | 
+	 *         unary_expression=unary_expression | 
+	 *         (unary_operator=unary_operator cast_expression=cast_expression) | 
+	 *         unary_expression=unary_expression | 
+	 *         type_name=type_name | 
+	 *         type_name=type_name
+	 *     )
+	 */
+	protected void sequence_unary_expression(ISerializationContext context, unary_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

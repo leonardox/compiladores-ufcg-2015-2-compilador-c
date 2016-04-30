@@ -81,6 +81,741 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createDomainModelAdapter();
       }
       @Override
+      public Adapter casetranslation_unit(translation_unit object)
+      {
+        return createtranslation_unitAdapter();
+      }
+      @Override
+      public Adapter caseexternal_declaration(external_declaration object)
+      {
+        return createexternal_declarationAdapter();
+      }
+      @Override
+      public Adapter casedeclaration_specifiers(declaration_specifiers object)
+      {
+        return createdeclaration_specifiersAdapter();
+      }
+      @Override
+      public Adapter casealignment_specifier(alignment_specifier object)
+      {
+        return createalignment_specifierAdapter();
+      }
+      @Override
+      public Adapter casetype_specifier(type_specifier object)
+      {
+        return createtype_specifierAdapter();
+      }
+      @Override
+      public Adapter caseenum_specifier(enum_specifier object)
+      {
+        return createenum_specifierAdapter();
+      }
+      @Override
+      public Adapter caseenumerator_list(enumerator_list object)
+      {
+        return createenumerator_listAdapter();
+      }
+      @Override
+      public Adapter caseenumerator_list_linha(enumerator_list_linha object)
+      {
+        return createenumerator_list_linhaAdapter();
+      }
+      @Override
+      public Adapter caseenumerator(enumerator object)
+      {
+        return createenumeratorAdapter();
+      }
+      @Override
+      public Adapter caseatomic_type_specifier(atomic_type_specifier object)
+      {
+        return createatomic_type_specifierAdapter();
+      }
+      @Override
+      public Adapter casestruct_or_union_specifier(struct_or_union_specifier object)
+      {
+        return createstruct_or_union_specifierAdapter();
+      }
+      @Override
+      public Adapter casestruct_or_union_specifier_complement(struct_or_union_specifier_complement object)
+      {
+        return createstruct_or_union_specifier_complementAdapter();
+      }
+      @Override
+      public Adapter casestruct_declaration_list(struct_declaration_list object)
+      {
+        return createstruct_declaration_listAdapter();
+      }
+      @Override
+      public Adapter casestruct_declaration_list_linha(struct_declaration_list_linha object)
+      {
+        return createstruct_declaration_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casestruct_declaration(struct_declaration object)
+      {
+        return createstruct_declarationAdapter();
+      }
+      @Override
+      public Adapter casestruct_declarator_list(struct_declarator_list object)
+      {
+        return createstruct_declarator_listAdapter();
+      }
+      @Override
+      public Adapter casestruct_declarator_list_linha(struct_declarator_list_linha object)
+      {
+        return createstruct_declarator_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casestruct_declarator(struct_declarator object)
+      {
+        return createstruct_declaratorAdapter();
+      }
+      @Override
+      public Adapter casespecifier_qualifier_list(specifier_qualifier_list object)
+      {
+        return createspecifier_qualifier_listAdapter();
+      }
+      @Override
+      public Adapter casedeclaration(declaration object)
+      {
+        return createdeclarationAdapter();
+      }
+      @Override
+      public Adapter casefunction_definition(function_definition object)
+      {
+        return createfunction_definitionAdapter();
+      }
+      @Override
+      public Adapter casedeclaration_list(declaration_list object)
+      {
+        return createdeclaration_listAdapter();
+      }
+      @Override
+      public Adapter casedeclaration_list_linha(declaration_list_linha object)
+      {
+        return createdeclaration_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casedeclarator(declarator object)
+      {
+        return createdeclaratorAdapter();
+      }
+      @Override
+      public Adapter casepointer(pointer object)
+      {
+        return createpointerAdapter();
+      }
+      @Override
+      public Adapter casetype_qualifier_list(type_qualifier_list object)
+      {
+        return createtype_qualifier_listAdapter();
+      }
+      @Override
+      public Adapter casetype_qualifier_list_linha(type_qualifier_list_linha object)
+      {
+        return createtype_qualifier_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casedirect_declarator(direct_declarator object)
+      {
+        return createdirect_declaratorAdapter();
+      }
+      @Override
+      public Adapter casedirect_declarator_linha(direct_declarator_linha object)
+      {
+        return createdirect_declarator_linhaAdapter();
+      }
+      @Override
+      public Adapter casedirect_declarator_complemento(direct_declarator_complemento object)
+      {
+        return createdirect_declarator_complementoAdapter();
+      }
+      @Override
+      public Adapter caseparameter_type_list(parameter_type_list object)
+      {
+        return createparameter_type_listAdapter();
+      }
+      @Override
+      public Adapter caseparameter_list(parameter_list object)
+      {
+        return createparameter_listAdapter();
+      }
+      @Override
+      public Adapter caseparameter_list_linha(parameter_list_linha object)
+      {
+        return createparameter_list_linhaAdapter();
+      }
+      @Override
+      public Adapter caseparameter_declaration(parameter_declaration object)
+      {
+        return createparameter_declarationAdapter();
+      }
+      @Override
+      public Adapter caseabstract_declarator(abstract_declarator object)
+      {
+        return createabstract_declaratorAdapter();
+      }
+      @Override
+      public Adapter casedirect_abstract_declarator(direct_abstract_declarator object)
+      {
+        return createdirect_abstract_declaratorAdapter();
+      }
+      @Override
+      public Adapter caseinitializer(initializer object)
+      {
+        return createinitializerAdapter();
+      }
+      @Override
+      public Adapter casedirect_abstract_declarator_linha(direct_abstract_declarator_linha object)
+      {
+        return createdirect_abstract_declarator_linhaAdapter();
+      }
+      @Override
+      public Adapter casedirect_abstract_declarator_complement(direct_abstract_declarator_complement object)
+      {
+        return createdirect_abstract_declarator_complementAdapter();
+      }
+      @Override
+      public Adapter caseidentifier_list(identifier_list object)
+      {
+        return createidentifier_listAdapter();
+      }
+      @Override
+      public Adapter caseidentifier_list_linha(identifier_list_linha object)
+      {
+        return createidentifier_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casetranslation_unit_linha(translation_unit_linha object)
+      {
+        return createtranslation_unit_linhaAdapter();
+      }
+      @Override
+      public Adapter caseprimary_expression(primary_expression object)
+      {
+        return createprimary_expressionAdapter();
+      }
+      @Override
+      public Adapter caseenumeration_constant(enumeration_constant object)
+      {
+        return createenumeration_constantAdapter();
+      }
+      @Override
+      public Adapter casegeneric_selection(generic_selection object)
+      {
+        return creategeneric_selectionAdapter();
+      }
+      @Override
+      public Adapter casegeneric_assoc_list(generic_assoc_list object)
+      {
+        return creategeneric_assoc_listAdapter();
+      }
+      @Override
+      public Adapter casegeneric_assoc_list_linha(generic_assoc_list_linha object)
+      {
+        return creategeneric_assoc_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casegeneric_association(generic_association object)
+      {
+        return creategeneric_associationAdapter();
+      }
+      @Override
+      public Adapter casepostfix_expression(postfix_expression object)
+      {
+        return createpostfix_expressionAdapter();
+      }
+      @Override
+      public Adapter casepostfix_expression_linha(postfix_expression_linha object)
+      {
+        return createpostfix_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseinitializer_list(initializer_list object)
+      {
+        return createinitializer_listAdapter();
+      }
+      @Override
+      public Adapter caseinitializer_list_linha(initializer_list_linha object)
+      {
+        return createinitializer_list_linhaAdapter();
+      }
+      @Override
+      public Adapter caseinitializer_list_complement(initializer_list_complement object)
+      {
+        return createinitializer_list_complementAdapter();
+      }
+      @Override
+      public Adapter casedesignation(designation object)
+      {
+        return createdesignationAdapter();
+      }
+      @Override
+      public Adapter casedesignator_list(designator_list object)
+      {
+        return createdesignator_listAdapter();
+      }
+      @Override
+      public Adapter casedesignator_list_linha(designator_list_linha object)
+      {
+        return createdesignator_list_linhaAdapter();
+      }
+      @Override
+      public Adapter casedesignator(designator object)
+      {
+        return createdesignatorAdapter();
+      }
+      @Override
+      public Adapter casestatic_assert_declaration(static_assert_declaration object)
+      {
+        return createstatic_assert_declarationAdapter();
+      }
+      @Override
+      public Adapter casepostfix_expression_complement(postfix_expression_complement object)
+      {
+        return createpostfix_expression_complementAdapter();
+      }
+      @Override
+      public Adapter caseargument_expression_list(argument_expression_list object)
+      {
+        return createargument_expression_listAdapter();
+      }
+      @Override
+      public Adapter caseargument_expression_list_linha(argument_expression_list_linha object)
+      {
+        return createargument_expression_list_linhaAdapter();
+      }
+      @Override
+      public Adapter caseunary_expression(unary_expression object)
+      {
+        return createunary_expressionAdapter();
+      }
+      @Override
+      public Adapter casecast_expression(cast_expression object)
+      {
+        return createcast_expressionAdapter();
+      }
+      @Override
+      public Adapter casemultiplicative_expression(multiplicative_expression object)
+      {
+        return createmultiplicative_expressionAdapter();
+      }
+      @Override
+      public Adapter casemultiplicative_expression_linha(multiplicative_expression_linha object)
+      {
+        return createmultiplicative_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter casemultiplicative_expression_complement(multiplicative_expression_complement object)
+      {
+        return createmultiplicative_expression_complementAdapter();
+      }
+      @Override
+      public Adapter caseadditive_expression(additive_expression object)
+      {
+        return createadditive_expressionAdapter();
+      }
+      @Override
+      public Adapter caseadditive_expression_linha(additive_expression_linha object)
+      {
+        return createadditive_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseadditive_expression_complement(additive_expression_complement object)
+      {
+        return createadditive_expression_complementAdapter();
+      }
+      @Override
+      public Adapter caseshift_expression(shift_expression object)
+      {
+        return createshift_expressionAdapter();
+      }
+      @Override
+      public Adapter caseshift_expression_linha(shift_expression_linha object)
+      {
+        return createshift_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseshift_expression_complement(shift_expression_complement object)
+      {
+        return createshift_expression_complementAdapter();
+      }
+      @Override
+      public Adapter caserelational_expression(relational_expression object)
+      {
+        return createrelational_expressionAdapter();
+      }
+      @Override
+      public Adapter caserelational_expression_linha(relational_expression_linha object)
+      {
+        return createrelational_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caserelational_expression_complement(relational_expression_complement object)
+      {
+        return createrelational_expression_complementAdapter();
+      }
+      @Override
+      public Adapter caseequality_expression(equality_expression object)
+      {
+        return createequality_expressionAdapter();
+      }
+      @Override
+      public Adapter caseequality_expression_linha(equality_expression_linha object)
+      {
+        return createequality_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseequality_expression_complement(equality_expression_complement object)
+      {
+        return createequality_expression_complementAdapter();
+      }
+      @Override
+      public Adapter casestatement(statement object)
+      {
+        return createstatementAdapter();
+      }
+      @Override
+      public Adapter casejump_statement(jump_statement object)
+      {
+        return createjump_statementAdapter();
+      }
+      @Override
+      public Adapter caseiteration_statement(iteration_statement object)
+      {
+        return createiteration_statementAdapter();
+      }
+      @Override
+      public Adapter caseselection_statement(selection_statement object)
+      {
+        return createselection_statementAdapter();
+      }
+      @Override
+      public Adapter caselabeled_statement(labeled_statement object)
+      {
+        return createlabeled_statementAdapter();
+      }
+      @Override
+      public Adapter casecompound_statement(compound_statement object)
+      {
+        return createcompound_statementAdapter();
+      }
+      @Override
+      public Adapter caseblock_item_list(block_item_list object)
+      {
+        return createblock_item_listAdapter();
+      }
+      @Override
+      public Adapter caseblock_item_list_linha(block_item_list_linha object)
+      {
+        return createblock_item_list_linhaAdapter();
+      }
+      @Override
+      public Adapter caseblock_item(block_item object)
+      {
+        return createblock_itemAdapter();
+      }
+      @Override
+      public Adapter caseexpression_statement(expression_statement object)
+      {
+        return createexpression_statementAdapter();
+      }
+      @Override
+      public Adapter caseand_expression(and_expression object)
+      {
+        return createand_expressionAdapter();
+      }
+      @Override
+      public Adapter caseand_expression_linha(and_expression_linha object)
+      {
+        return createand_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseexclusive_or_expression(exclusive_or_expression object)
+      {
+        return createexclusive_or_expressionAdapter();
+      }
+      @Override
+      public Adapter caseexclusive_or_expression_linha(exclusive_or_expression_linha object)
+      {
+        return createexclusive_or_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseinclusive_or_expression(inclusive_or_expression object)
+      {
+        return createinclusive_or_expressionAdapter();
+      }
+      @Override
+      public Adapter caseinclusive_or_expression_linha(inclusive_or_expression_linha object)
+      {
+        return createinclusive_or_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caselogical_and_expression(logical_and_expression object)
+      {
+        return createlogical_and_expressionAdapter();
+      }
+      @Override
+      public Adapter caselogical_and_expression_linha(logical_and_expression_linha object)
+      {
+        return createlogical_and_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caselogical_or_expression(logical_or_expression object)
+      {
+        return createlogical_or_expressionAdapter();
+      }
+      @Override
+      public Adapter caselogical_or_expression_linha(logical_or_expression_linha object)
+      {
+        return createlogical_or_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseconditional_expression(conditional_expression object)
+      {
+        return createconditional_expressionAdapter();
+      }
+      @Override
+      public Adapter caseconditional_expression_linha(conditional_expression_linha object)
+      {
+        return createconditional_expression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseassignment_expression(assignment_expression object)
+      {
+        return createassignment_expressionAdapter();
+      }
+      @Override
+      public Adapter casetype_name(type_name object)
+      {
+        return createtype_nameAdapter();
+      }
+      @Override
+      public Adapter caseexpression(expression object)
+      {
+        return createexpressionAdapter();
+      }
+      @Override
+      public Adapter caseexpression_linha(expression_linha object)
+      {
+        return createexpression_linhaAdapter();
+      }
+      @Override
+      public Adapter caseconstant_expression(constant_expression object)
+      {
+        return createconstant_expressionAdapter();
+      }
+      @Override
+      public Adapter caseinit_declarator_list(init_declarator_list object)
+      {
+        return createinit_declarator_listAdapter();
+      }
+      @Override
+      public Adapter caseinit_declarator_list_linha(init_declarator_list_linha object)
+      {
+        return createinit_declarator_list_linhaAdapter();
+      }
+      @Override
+      public Adapter caseinit_declarator(init_declarator object)
+      {
+        return createinit_declaratorAdapter();
+      }
+      @Override
+      public Adapter casestring_ufcg(string_ufcg object)
+      {
+        return createstring_ufcgAdapter();
+      }
+      @Override
+      public Adapter caseconstant(constant object)
+      {
+        return createconstantAdapter();
+      }
+      @Override
+      public Adapter caseEnumeratorListLinhaAction(EnumeratorListLinhaAction object)
+      {
+        return createEnumeratorListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseStructOrUnionSpecifierComplementAction(StructOrUnionSpecifierComplementAction object)
+      {
+        return createStructOrUnionSpecifierComplementActionAdapter();
+      }
+      @Override
+      public Adapter caseStructDeclarationListLinhaAction(StructDeclarationListLinhaAction object)
+      {
+        return createStructDeclarationListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseStructDeclaratorListLinhaAction(StructDeclaratorListLinhaAction object)
+      {
+        return createStructDeclaratorListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseDeclarationListLinhaAction(DeclarationListLinhaAction object)
+      {
+        return createDeclarationListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseTypeQualifierListLinhaAtion(TypeQualifierListLinhaAtion object)
+      {
+        return createTypeQualifierListLinhaAtionAdapter();
+      }
+      @Override
+      public Adapter caseDirectDeclaratorLinhaAction(DirectDeclaratorLinhaAction object)
+      {
+        return createDirectDeclaratorLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseParameterListLinhaAction(ParameterListLinhaAction object)
+      {
+        return createParameterListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseDirectAbstractDeclarratorLinhaAction(DirectAbstractDeclarratorLinhaAction object)
+      {
+        return createDirectAbstractDeclarratorLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseIdentifierListLinhaAction(IdentifierListLinhaAction object)
+      {
+        return createIdentifierListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseTranlationUnitLinhaAction(TranlationUnitLinhaAction object)
+      {
+        return createTranlationUnitLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseGenericAssocListLinhaAction(GenericAssocListLinhaAction object)
+      {
+        return createGenericAssocListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionLinhaAction(PostfixExpressionLinhaAction object)
+      {
+        return createPostfixExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseInitializerListLinhaAction(InitializerListLinhaAction object)
+      {
+        return createInitializerListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseDesignatorListLinhaAction(DesignatorListLinhaAction object)
+      {
+        return createDesignatorListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementExpression(PostfixExpressionComplementExpression object)
+      {
+        return createPostfixExpressionComplementExpressionAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementEmpty(PostfixExpressionComplementEmpty object)
+      {
+        return createPostfixExpressionComplementEmptyAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementArgList(PostfixExpressionComplementArgList object)
+      {
+        return createPostfixExpressionComplementArgListAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementIdentifier(PostfixExpressionComplementIdentifier object)
+      {
+        return createPostfixExpressionComplementIdentifierAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementPointer(PostfixExpressionComplementPointer object)
+      {
+        return createPostfixExpressionComplementPointerAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementIncrement(PostfixExpressionComplementIncrement object)
+      {
+        return createPostfixExpressionComplementIncrementAdapter();
+      }
+      @Override
+      public Adapter casePostfixExpressionComplementDecrement(PostfixExpressionComplementDecrement object)
+      {
+        return createPostfixExpressionComplementDecrementAdapter();
+      }
+      @Override
+      public Adapter caseArgumentExpressionListLinhaAction(ArgumentExpressionListLinhaAction object)
+      {
+        return createArgumentExpressionListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseMultiplicativeExpressionLinhaAction(MultiplicativeExpressionLinhaAction object)
+      {
+        return createMultiplicativeExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseAdditiveExpressionLinhaAction(AdditiveExpressionLinhaAction object)
+      {
+        return createAdditiveExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseShiftExpressionLinhaAction(ShiftExpressionLinhaAction object)
+      {
+        return createShiftExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseRelationalExpressionLinhaAction(RelationalExpressionLinhaAction object)
+      {
+        return createRelationalExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseEqualityExpressionLinhaAction(EqualityExpressionLinhaAction object)
+      {
+        return createEqualityExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseBlockItemListLinhaAction(BlockItemListLinhaAction object)
+      {
+        return createBlockItemListLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseAndExpressionLinhaAction(AndExpressionLinhaAction object)
+      {
+        return createAndExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseExclusiveOrExpressionLinhaAction(ExclusiveOrExpressionLinhaAction object)
+      {
+        return createExclusiveOrExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseInclusiveOrExpressionLinhaAction(InclusiveOrExpressionLinhaAction object)
+      {
+        return createInclusiveOrExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseLogicalAndExpressionLinhaAction(LogicalAndExpressionLinhaAction object)
+      {
+        return createLogicalAndExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseLogicalOrExpressionLinhaAction(LogicalOrExpressionLinhaAction object)
+      {
+        return createLogicalOrExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseConditionalExpressionLinhaAcction(ConditionalExpressionLinhaAcction object)
+      {
+        return createConditionalExpressionLinhaAcctionAdapter();
+      }
+      @Override
+      public Adapter caseExpressionLinhaAction(ExpressionLinhaAction object)
+      {
+        return createExpressionLinhaActionAdapter();
+      }
+      @Override
+      public Adapter caseInitDecclaratorListLinhaAction(InitDecclaratorListLinhaAction object)
+      {
+        return createInitDecclaratorListLinhaActionAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -113,6 +848,2211 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDomainModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.translation_unit <em>translation unit</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.translation_unit
+   * @generated
+   */
+  public Adapter createtranslation_unitAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.external_declaration <em>external declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.external_declaration
+   * @generated
+   */
+  public Adapter createexternal_declarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.declaration_specifiers <em>declaration specifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.declaration_specifiers
+   * @generated
+   */
+  public Adapter createdeclaration_specifiersAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.alignment_specifier <em>alignment specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.alignment_specifier
+   * @generated
+   */
+  public Adapter createalignment_specifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.type_specifier <em>type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.type_specifier
+   * @generated
+   */
+  public Adapter createtype_specifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.enum_specifier <em>enum specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.enum_specifier
+   * @generated
+   */
+  public Adapter createenum_specifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.enumerator_list <em>enumerator list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.enumerator_list
+   * @generated
+   */
+  public Adapter createenumerator_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.enumerator_list_linha <em>enumerator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.enumerator_list_linha
+   * @generated
+   */
+  public Adapter createenumerator_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.enumerator <em>enumerator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.enumerator
+   * @generated
+   */
+  public Adapter createenumeratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.atomic_type_specifier <em>atomic type specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.atomic_type_specifier
+   * @generated
+   */
+  public Adapter createatomic_type_specifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_or_union_specifier <em>struct or union specifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_or_union_specifier
+   * @generated
+   */
+  public Adapter createstruct_or_union_specifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_or_union_specifier_complement <em>struct or union specifier complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_or_union_specifier_complement
+   * @generated
+   */
+  public Adapter createstruct_or_union_specifier_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_declaration_list <em>struct declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_declaration_list
+   * @generated
+   */
+  public Adapter createstruct_declaration_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_declaration_list_linha <em>struct declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_declaration_list_linha
+   * @generated
+   */
+  public Adapter createstruct_declaration_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_declaration <em>struct declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_declaration
+   * @generated
+   */
+  public Adapter createstruct_declarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_declarator_list <em>struct declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_declarator_list
+   * @generated
+   */
+  public Adapter createstruct_declarator_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_declarator_list_linha <em>struct declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_declarator_list_linha
+   * @generated
+   */
+  public Adapter createstruct_declarator_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.struct_declarator <em>struct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.struct_declarator
+   * @generated
+   */
+  public Adapter createstruct_declaratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.specifier_qualifier_list <em>specifier qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.specifier_qualifier_list
+   * @generated
+   */
+  public Adapter createspecifier_qualifier_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.declaration <em>declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.declaration
+   * @generated
+   */
+  public Adapter createdeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.function_definition <em>function definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.function_definition
+   * @generated
+   */
+  public Adapter createfunction_definitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.declaration_list <em>declaration list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.declaration_list
+   * @generated
+   */
+  public Adapter createdeclaration_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.declaration_list_linha <em>declaration list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.declaration_list_linha
+   * @generated
+   */
+  public Adapter createdeclaration_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.declarator <em>declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.declarator
+   * @generated
+   */
+  public Adapter createdeclaratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.pointer <em>pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.pointer
+   * @generated
+   */
+  public Adapter createpointerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.type_qualifier_list <em>type qualifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.type_qualifier_list
+   * @generated
+   */
+  public Adapter createtype_qualifier_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.type_qualifier_list_linha <em>type qualifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.type_qualifier_list_linha
+   * @generated
+   */
+  public Adapter createtype_qualifier_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.direct_declarator <em>direct declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.direct_declarator
+   * @generated
+   */
+  public Adapter createdirect_declaratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.direct_declarator_linha <em>direct declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.direct_declarator_linha
+   * @generated
+   */
+  public Adapter createdirect_declarator_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.direct_declarator_complemento <em>direct declarator complemento</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.direct_declarator_complemento
+   * @generated
+   */
+  public Adapter createdirect_declarator_complementoAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.parameter_type_list <em>parameter type list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.parameter_type_list
+   * @generated
+   */
+  public Adapter createparameter_type_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.parameter_list <em>parameter list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.parameter_list
+   * @generated
+   */
+  public Adapter createparameter_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.parameter_list_linha <em>parameter list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.parameter_list_linha
+   * @generated
+   */
+  public Adapter createparameter_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.parameter_declaration <em>parameter declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.parameter_declaration
+   * @generated
+   */
+  public Adapter createparameter_declarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.abstract_declarator <em>abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.abstract_declarator
+   * @generated
+   */
+  public Adapter createabstract_declaratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.direct_abstract_declarator <em>direct abstract declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.direct_abstract_declarator
+   * @generated
+   */
+  public Adapter createdirect_abstract_declaratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.initializer <em>initializer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.initializer
+   * @generated
+   */
+  public Adapter createinitializerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.direct_abstract_declarator_linha <em>direct abstract declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_linha
+   * @generated
+   */
+  public Adapter createdirect_abstract_declarator_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.direct_abstract_declarator_complement <em>direct abstract declarator complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.direct_abstract_declarator_complement
+   * @generated
+   */
+  public Adapter createdirect_abstract_declarator_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.identifier_list <em>identifier list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.identifier_list
+   * @generated
+   */
+  public Adapter createidentifier_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.identifier_list_linha <em>identifier list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.identifier_list_linha
+   * @generated
+   */
+  public Adapter createidentifier_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.translation_unit_linha <em>translation unit linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.translation_unit_linha
+   * @generated
+   */
+  public Adapter createtranslation_unit_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.primary_expression <em>primary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.primary_expression
+   * @generated
+   */
+  public Adapter createprimary_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.enumeration_constant <em>enumeration constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.enumeration_constant
+   * @generated
+   */
+  public Adapter createenumeration_constantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.generic_selection <em>generic selection</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.generic_selection
+   * @generated
+   */
+  public Adapter creategeneric_selectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.generic_assoc_list <em>generic assoc list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.generic_assoc_list
+   * @generated
+   */
+  public Adapter creategeneric_assoc_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.generic_assoc_list_linha <em>generic assoc list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.generic_assoc_list_linha
+   * @generated
+   */
+  public Adapter creategeneric_assoc_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.generic_association <em>generic association</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.generic_association
+   * @generated
+   */
+  public Adapter creategeneric_associationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.postfix_expression <em>postfix expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.postfix_expression
+   * @generated
+   */
+  public Adapter createpostfix_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.postfix_expression_linha <em>postfix expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.postfix_expression_linha
+   * @generated
+   */
+  public Adapter createpostfix_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.initializer_list <em>initializer list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.initializer_list
+   * @generated
+   */
+  public Adapter createinitializer_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.initializer_list_linha <em>initializer list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.initializer_list_linha
+   * @generated
+   */
+  public Adapter createinitializer_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.initializer_list_complement <em>initializer list complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.initializer_list_complement
+   * @generated
+   */
+  public Adapter createinitializer_list_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.designation <em>designation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.designation
+   * @generated
+   */
+  public Adapter createdesignationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.designator_list <em>designator list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.designator_list
+   * @generated
+   */
+  public Adapter createdesignator_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.designator_list_linha <em>designator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.designator_list_linha
+   * @generated
+   */
+  public Adapter createdesignator_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.designator <em>designator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.designator
+   * @generated
+   */
+  public Adapter createdesignatorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.static_assert_declaration <em>static assert declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.static_assert_declaration
+   * @generated
+   */
+  public Adapter createstatic_assert_declarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.postfix_expression_complement <em>postfix expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.postfix_expression_complement
+   * @generated
+   */
+  public Adapter createpostfix_expression_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.argument_expression_list <em>argument expression list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.argument_expression_list
+   * @generated
+   */
+  public Adapter createargument_expression_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.argument_expression_list_linha <em>argument expression list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.argument_expression_list_linha
+   * @generated
+   */
+  public Adapter createargument_expression_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.unary_expression <em>unary expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.unary_expression
+   * @generated
+   */
+  public Adapter createunary_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.cast_expression <em>cast expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.cast_expression
+   * @generated
+   */
+  public Adapter createcast_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.multiplicative_expression <em>multiplicative expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.multiplicative_expression
+   * @generated
+   */
+  public Adapter createmultiplicative_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.multiplicative_expression_linha <em>multiplicative expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.multiplicative_expression_linha
+   * @generated
+   */
+  public Adapter createmultiplicative_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.multiplicative_expression_complement <em>multiplicative expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.multiplicative_expression_complement
+   * @generated
+   */
+  public Adapter createmultiplicative_expression_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.additive_expression <em>additive expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.additive_expression
+   * @generated
+   */
+  public Adapter createadditive_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.additive_expression_linha <em>additive expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.additive_expression_linha
+   * @generated
+   */
+  public Adapter createadditive_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.additive_expression_complement <em>additive expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.additive_expression_complement
+   * @generated
+   */
+  public Adapter createadditive_expression_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.shift_expression <em>shift expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.shift_expression
+   * @generated
+   */
+  public Adapter createshift_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.shift_expression_linha <em>shift expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.shift_expression_linha
+   * @generated
+   */
+  public Adapter createshift_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.shift_expression_complement <em>shift expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.shift_expression_complement
+   * @generated
+   */
+  public Adapter createshift_expression_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.relational_expression <em>relational expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.relational_expression
+   * @generated
+   */
+  public Adapter createrelational_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.relational_expression_linha <em>relational expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.relational_expression_linha
+   * @generated
+   */
+  public Adapter createrelational_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.relational_expression_complement <em>relational expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.relational_expression_complement
+   * @generated
+   */
+  public Adapter createrelational_expression_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.equality_expression <em>equality expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.equality_expression
+   * @generated
+   */
+  public Adapter createequality_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.equality_expression_linha <em>equality expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.equality_expression_linha
+   * @generated
+   */
+  public Adapter createequality_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.equality_expression_complement <em>equality expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.equality_expression_complement
+   * @generated
+   */
+  public Adapter createequality_expression_complementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.statement <em>statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.statement
+   * @generated
+   */
+  public Adapter createstatementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.jump_statement <em>jump statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.jump_statement
+   * @generated
+   */
+  public Adapter createjump_statementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.iteration_statement <em>iteration statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.iteration_statement
+   * @generated
+   */
+  public Adapter createiteration_statementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.selection_statement <em>selection statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.selection_statement
+   * @generated
+   */
+  public Adapter createselection_statementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.labeled_statement <em>labeled statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.labeled_statement
+   * @generated
+   */
+  public Adapter createlabeled_statementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.compound_statement <em>compound statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.compound_statement
+   * @generated
+   */
+  public Adapter createcompound_statementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.block_item_list <em>block item list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.block_item_list
+   * @generated
+   */
+  public Adapter createblock_item_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.block_item_list_linha <em>block item list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.block_item_list_linha
+   * @generated
+   */
+  public Adapter createblock_item_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.block_item <em>block item</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.block_item
+   * @generated
+   */
+  public Adapter createblock_itemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.expression_statement <em>expression statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.expression_statement
+   * @generated
+   */
+  public Adapter createexpression_statementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.and_expression <em>and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.and_expression
+   * @generated
+   */
+  public Adapter createand_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.and_expression_linha <em>and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.and_expression_linha
+   * @generated
+   */
+  public Adapter createand_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.exclusive_or_expression <em>exclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.exclusive_or_expression
+   * @generated
+   */
+  public Adapter createexclusive_or_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.exclusive_or_expression_linha <em>exclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.exclusive_or_expression_linha
+   * @generated
+   */
+  public Adapter createexclusive_or_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.inclusive_or_expression <em>inclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.inclusive_or_expression
+   * @generated
+   */
+  public Adapter createinclusive_or_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.inclusive_or_expression_linha <em>inclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.inclusive_or_expression_linha
+   * @generated
+   */
+  public Adapter createinclusive_or_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.logical_and_expression <em>logical and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.logical_and_expression
+   * @generated
+   */
+  public Adapter createlogical_and_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.logical_and_expression_linha <em>logical and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.logical_and_expression_linha
+   * @generated
+   */
+  public Adapter createlogical_and_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.logical_or_expression <em>logical or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.logical_or_expression
+   * @generated
+   */
+  public Adapter createlogical_or_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.logical_or_expression_linha <em>logical or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.logical_or_expression_linha
+   * @generated
+   */
+  public Adapter createlogical_or_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.conditional_expression <em>conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.conditional_expression
+   * @generated
+   */
+  public Adapter createconditional_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.conditional_expression_linha <em>conditional expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.conditional_expression_linha
+   * @generated
+   */
+  public Adapter createconditional_expression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.assignment_expression <em>assignment expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.assignment_expression
+   * @generated
+   */
+  public Adapter createassignment_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.type_name <em>type name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.type_name
+   * @generated
+   */
+  public Adapter createtype_nameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.expression <em>expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.expression
+   * @generated
+   */
+  public Adapter createexpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.expression_linha <em>expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.expression_linha
+   * @generated
+   */
+  public Adapter createexpression_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.constant_expression <em>constant expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.constant_expression
+   * @generated
+   */
+  public Adapter createconstant_expressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.init_declarator_list <em>init declarator list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.init_declarator_list
+   * @generated
+   */
+  public Adapter createinit_declarator_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.init_declarator_list_linha <em>init declarator list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.init_declarator_list_linha
+   * @generated
+   */
+  public Adapter createinit_declarator_list_linhaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.init_declarator <em>init declarator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.init_declarator
+   * @generated
+   */
+  public Adapter createinit_declaratorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.string_ufcg <em>string ufcg</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.string_ufcg
+   * @generated
+   */
+  public Adapter createstring_ufcgAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.constant <em>constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.constant
+   * @generated
+   */
+  public Adapter createconstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.EnumeratorListLinhaAction <em>Enumerator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.EnumeratorListLinhaAction
+   * @generated
+   */
+  public Adapter createEnumeratorListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.StructOrUnionSpecifierComplementAction <em>Struct Or Union Specifier Complement Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.StructOrUnionSpecifierComplementAction
+   * @generated
+   */
+  public Adapter createStructOrUnionSpecifierComplementActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.StructDeclarationListLinhaAction <em>Struct Declaration List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.StructDeclarationListLinhaAction
+   * @generated
+   */
+  public Adapter createStructDeclarationListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.StructDeclaratorListLinhaAction <em>Struct Declarator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.StructDeclaratorListLinhaAction
+   * @generated
+   */
+  public Adapter createStructDeclaratorListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.DeclarationListLinhaAction <em>Declaration List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.DeclarationListLinhaAction
+   * @generated
+   */
+  public Adapter createDeclarationListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion <em>Type Qualifier List Linha Ation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.TypeQualifierListLinhaAtion
+   * @generated
+   */
+  public Adapter createTypeQualifierListLinhaAtionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction <em>Direct Declarator Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction
+   * @generated
+   */
+  public Adapter createDirectDeclaratorLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ParameterListLinhaAction <em>Parameter List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.ParameterListLinhaAction
+   * @generated
+   */
+  public Adapter createParameterListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction <em>Direct Abstract Declarrator Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction
+   * @generated
+   */
+  public Adapter createDirectAbstractDeclarratorLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.IdentifierListLinhaAction <em>Identifier List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.IdentifierListLinhaAction
+   * @generated
+   */
+  public Adapter createIdentifierListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.TranlationUnitLinhaAction <em>Tranlation Unit Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.TranlationUnitLinhaAction
+   * @generated
+   */
+  public Adapter createTranlationUnitLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.GenericAssocListLinhaAction <em>Generic Assoc List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.GenericAssocListLinhaAction
+   * @generated
+   */
+  public Adapter createGenericAssocListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionLinhaAction <em>Postfix Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createPostfixExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.InitializerListLinhaAction <em>Initializer List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.InitializerListLinhaAction
+   * @generated
+   */
+  public Adapter createInitializerListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.DesignatorListLinhaAction <em>Designator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.DesignatorListLinhaAction
+   * @generated
+   */
+  public Adapter createDesignatorListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementExpression <em>Postfix Expression Complement Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementExpression
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementEmpty <em>Postfix Expression Complement Empty</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementEmpty
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementEmptyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementArgList <em>Postfix Expression Complement Arg List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementArgList
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementArgListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementIdentifier <em>Postfix Expression Complement Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementIdentifier
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementIdentifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementPointer <em>Postfix Expression Complement Pointer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementPointer
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementPointerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementIncrement <em>Postfix Expression Complement Increment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementIncrement
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementIncrementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementDecrement <em>Postfix Expression Complement Decrement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PostfixExpressionComplementDecrement
+   * @generated
+   */
+  public Adapter createPostfixExpressionComplementDecrementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ArgumentExpressionListLinhaAction <em>Argument Expression List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.ArgumentExpressionListLinhaAction
+   * @generated
+   */
+  public Adapter createArgumentExpressionListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction <em>Multiplicative Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createMultiplicativeExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction <em>Additive Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createAdditiveExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction <em>Shift Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createShiftExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction <em>Relational Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createRelationalExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction <em>Equality Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createEqualityExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.BlockItemListLinhaAction <em>Block Item List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.BlockItemListLinhaAction
+   * @generated
+   */
+  public Adapter createBlockItemListLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.AndExpressionLinhaAction <em>And Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.AndExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createAndExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction <em>Exclusive Or Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createExclusiveOrExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction <em>Inclusive Or Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createInclusiveOrExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction <em>Logical And Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createLogicalAndExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction <em>Logical Or Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createLogicalOrExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction <em>Conditional Expression Linha Acction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction
+   * @generated
+   */
+  public Adapter createConditionalExpressionLinhaAcctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ExpressionLinhaAction <em>Expression Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.ExpressionLinhaAction
+   * @generated
+   */
+  public Adapter createExpressionLinhaActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.InitDecclaratorListLinhaAction <em>Init Decclarator List Linha Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.InitDecclaratorListLinhaAction
+   * @generated
+   */
+  public Adapter createInitDecclaratorListLinhaActionAdapter()
   {
     return null;
   }

@@ -5,315 +5,468 @@ generate ansic "http://www.xtext.org/example/Ansic"
 DomainModel:
 	geetings+=translation_unit;
 
-primary_expression
-	: IDENTIFIER
-	| CONSTANT
-	| STRING_LITERAL
-	| '(' expression ')'
+translation_unit:
+	external_declaration=external_declaration translation_unit_linha=translation_unit_linha
 	;
 
-
-postfix_expressionL
-	: ( '[' expression ']' postfix_expressionL )
-	|   '(' ')' postfix_expressionL
-	| ( '(' argument_expression_list ')' postfix_expressionL )
-	|  '.' IDENTIFIER postfix_expressionL
-	|  PTR_OP IDENTIFIER postfix_expressionL
-	|  INC_OP postfix_expressionL
-	|  (DEC_OP postfix_expressionL)?
-;
-		
-postfix_expression
-	: primary_expression postfix_expressionL
-	;
-		
-argument_expression_listI
-	: (',' assignment_expression argument_expression_listI)?
-	;
-	
-argument_expression_list
-	: assignment_expression argument_expression_listI
-	;
-
-unary_expression
-	: postfix_expression
-	| INC_OP unary_expression
-	| DEC_OP unary_expression
-	| unary_operator cast_expression
-	| SIZEOF unary_expression
-	| SIZEOF '(' type_name ')'
-	;
-	
-unary_operator
-	: '&'
-	| '*'
-	| '+'
-	| '-'
-	| '~'
-	| '!'
-	;
-	
-cast_expression
-	: unary_expression
-	| '(' type_name ')' cast_expression
-	;
-
-multiplicative_expressionI
-	: '*' cast_expression multiplicative_expressionI
-	| '/' cast_expression multiplicative_expressionI
-	| ('%' cast_expression multiplicative_expressionI)?
-;
-
-multiplicative_expression
-	: cast_expression multiplicative_expressionI
-	;
-	
-additive_expression
-	: multiplicative_expression (('+'|'-') multiplicative_expression)*
-	;
-	
-shift_expression
-	: additive_expression ((LEFT_OP|RIGHT_OP) additive_expression)*
-	;
-	
-relational_expression
-	: shift_expression (('<'|'>'|LE_OP|GE_OP) shift_expression)*
-	;
-
-equality_expression
-	: relational_expression ((EQ_OP|NE_OP) relational_expression)*
-	;
-
-and_expression
-	: equality_expression ('&' equality_expression)*
-	;
-
-exclusive_or_expression
-	: and_expression ('^' and_expression)*
-	;
-
-inclusive_or_expression
-	: exclusive_or_expression ('|' exclusive_or_expression)*
-	;
-
-logical_and_expression
-	: inclusive_or_expression (AND_OP inclusive_or_expression)*
-	;
-
-logical_or_expression
-	: logical_and_expression (OR_OP logical_and_expression)*
-	;
-		
-conditional_expression
-	: logical_or_expression ('?' expression ':' conditional_expression)?
-	;
-
-assignment_expression
-	: conditional_expression
-	| unary_expression assignment_operator assignment_expression
-	;
-
-expression
-	: assignment_expression (',' assignment_expression)*
-	;
-
-assignment_operator
-	: '='
-	| MUL_ASSIGN
-	| DIV_ASSIGN
-	| MOD_ASSIGN
-	| ADD_ASSIGN
-	| SUB_ASSIGN
-	| LEFT_ASSIGN
-	| RIGHT_ASSIGN
-	| AND_ASSIGN
-	| XOR_ASSIGN
-	| OR_ASSIGN
-	;
- 
- constant_expression
-	: conditional_expression
-	;
-
-declaration
-	: declaration_specifiers init_declarator_list? ';'
+external_declaration
+	: function_definitio=function_definition
+	| declaration=declaration
 	;
 
 declaration_specifiers
-	: storage_class_specifier declaration_specifiers?
-	| type_specifier declaration_specifiers?
-	| type_qualifier declaration_specifiers?
+	: storage_class_specifier=storage_class_specifier declaration_specifiers+=declaration_specifiers
+	| storage_class_specifier=storage_class_specifier
+	| type_specifier=type_specifier declaration_specifiers+=declaration_specifiers
+	| type_specifier=type_specifier
+	| type_qualifier=type_qualifier declaration_specifiers+=declaration_specifiers
+	| type_qualifier=type_qualifier
+	| function_specifier=function_specifier declaration_specifiers+=declaration_specifiers
+	| function_specifier=function_specifier
+	| alignment_specifier=alignment_specifier declaration_specifiers+=declaration_specifiers
+	| alignment_specifier=alignment_specifier
 	;
+	
+function_specifier
+	: 'inline'
+	| '_Noreturn'
+;
 
-init_declarator_list
-	: init_declarator (',' init_declarator)*
-	;
+alignment_specifier
+	: '_Alignas' '(' type_name=type_name ')'
+	| '_Alignas' '(' constant_expression=constant_expression ')'
+;
 
-init_declarator
-	: declarator ('=' initializer)*
-	;
-
-storage_class_specifier
-	: TYPEDEF
-	| EXTERN
-	| STATIC
-	| AUTO
-	| REGISTER
-	;
+type_qualifier
+	: 'const'
+	| 'restrict'
+	| 'volatile'
+	| '_Atomic'
+;
 
 type_specifier
-	: VOID
-	| 'charz'
-	| SHORT
-	| INT
-	| LONG
-	| FLOAT
-	| DOUBLE
-	| SIGNED
-	| UNSIGNED
-	| struct_or_union_specifier
-	| enum_specifier
-	| TYPE_NAMEE
-	;
-
-struct_or_union_specifier
-	: struct_or_union IDENTIFIER '{' struct_declaration_list '}'
-	| struct_or_union '{' struct_declaration_list '}'
-	| struct_or_union IDENTIFIER
-	;
-
-struct_or_union
-	: STRUCT
-	| UNION
-	;
-
-struct_declaration_list
-	: struct_declaration+
-	;
-
-struct_declaration
-	: specifier_qualifier_list struct_declarator_list ';'
-	;
-
-specifier_qualifier_list
-	: type_specifier specifier_qualifier_list
-	| type_specifier
-	| type_qualifier specifier_qualifier_list
-	| type_qualifier
-	;
-
-struct_declarator_list
-	: struct_declarator (',' struct_declarator)*
-	;
-
-struct_declarator
-	: declarator
-	| ':' constant_expression
-	| declarator ':' constant_expression
+	: 'void'
+	| 'char'
+	| 'short'
+	| 'int'
+	| 'long'
+	| 'float'
+	| 'double'
+	| 'signed'
+	| 'unsigned'
+	| 'bool'
+	| '_Complex'
+	| '_Imaginary'	  	/* non-mandated extension */
+	| atomic_type_specifier=atomic_type_specifier
+	| struct_or_union_specifier=struct_or_union_specifier
+	| enum_specifier=enum_specifier
+	| 'typedef'		/* after it has been defined as such */
 	;
 
 enum_specifier
-	: ENUM '{' enumerator_list '}'
-	| ENUM IDENTIFIER '{' enumerator_list '}'
-	| ENUM IDENTIFIER
+	: 'enum' '{' enumerator_list=enumerator_list '}'
+	| 'enum' '{' enumerator_list=enumerator_list ',' '}'
+	| 'enum' identifier=ID '{' enumerator_list=enumerator_list '}'
+	| 'enum' identifier=ID '{' enumerator_list=enumerator_list ',' '}'
+	| 'enum' identifier=ID
 	;
 
 enumerator_list
-	: enumerator (',' enumerator)*
+	: enumarator=enumerator enumerator_list_linha=enumerator_list_linha
+;
+
+enumerator_list_linha
+	: {EnumeratorListLinhaAction}(',' enumerator=enumerator enumerator_list_linha=enumerator_list_linha)?
+;
+
+enumerator	/* identifiers must be flagged as ENUMERATION_CONSTANT */
+	: enumeration_constant=enumeration_constant '=' conditional_expression=constant_expression
+	| enumeration_constant=enumeration_constant
+;
+
+atomic_type_specifier
+	: '_Atomic' '(' type_name=type_name ')'
+;
+
+
+struct_or_union_specifier
+	: struct_or_union=struct_or_union '{' struct_declaration_list=struct_declaration_list '}'
+	| struct_or_union=struct_or_union identifier=ID struct_or_union_specifier_complement=struct_or_union_specifier_complement
 	;
 
-enumerator
-	: IDENTIFIER
-	| IDENTIFIER '=' constant_expression
+struct_or_union
+	: 'struct'
+	| 'union'
 	;
 
-type_qualifier
-	: CONST
-	| VOLATILE
+
+struct_or_union_specifier_complement:
+	{StructOrUnionSpecifierComplementAction}('{' struct_declaration_list=struct_declaration_list '}')?
+;
+
+struct_declaration_list
+	: struct_declaration=struct_declaration struct_declaration_list_linha=struct_declaration_list_linha
 	;
+
+struct_declaration_list_linha:
+	{StructDeclarationListLinhaAction}(struct_declaration=struct_declaration struct_declaration_list_linha=struct_declaration_list_linha)?
+;
+
+struct_declaration
+	: specifier_qualifier_list=specifier_qualifier_list ';'	/* for anonymous struct/union */
+	| specifier_qualifier_list=specifier_qualifier_list struct_declarator_list=struct_declarator_list ';'
+	| static_assert_declaration=static_assert_declaration
+	;
+
+struct_declarator_list
+	: struct_declarator=struct_declarator struct_declarator_list_linha=struct_declarator_list_linha
+	;
+struct_declarator_list_linha:
+	{StructDeclaratorListLinhaAction}(',' struct_declarator=struct_declarator struct_declarator_list_linha=struct_declarator_list_linha)?
+;
+struct_declarator
+	: ':' constant_expression=constant_expression
+	| declarator=declarator ':' constant_expression=constant_expression
+	| declarator=declarator
+	;
+
+specifier_qualifier_list
+	: type_specifier=type_specifier specifier_qualifier_list=specifier_qualifier_list
+	| type_specifier=type_specifier
+	| type_qualifier=type_qualifier specifier_qualifier_list=specifier_qualifier_list
+	| type_qualifier=type_qualifier
+	;
+
+storage_class_specifier
+	: 'typedef'	/* identifiers must be flagged as TYPEDEF_NAME */
+	| 'extern'
+	| 'static'
+	| '_Thread_local'
+	| 'auto'
+	| 'register'
+	;
+
+declaration
+	: declaration_specifiers+=declaration_specifiers ';'
+	| declaration_specifiers+=declaration_specifiers init_declarator_list+=init_declarator_list ';'
+	| static_assert_declaration=static_assert_declaration
+	;
+
+function_definition
+	: declaration_specifiers+=declaration_specifiers declarator=declarator declaration_list+=declaration_list compound_statement=compound_statement
+	| declaration_specifiers+=declaration_specifiers declarator=declarator compound_statement=compound_statement
+	;
+
+
+declaration_list
+	: declaration=declaration declaration_list_linha=declaration_list_linha
+	;
+	
+declaration_list_linha
+:
+	{DeclarationListLinhaAction}(declaration=declaration declaration_list_linha=declaration_list_linha)?
+;
 
 declarator
-	: pointer direct_declarator
-	| direct_declarator
-	;
-
-direct_declarator
-	: IDENTIFIER direct_declaratorI
-	| '(' declarator ')' direct_declaratorI
-	
-	;
-
-direct_declaratorI
-	: '[' constant_expression ']' direct_declaratorI
-	| '[' ']' direct_declaratorI
-	| '(' parameter_type_list ')' direct_declaratorI
-	| '(' identifier_list ')' direct_declaratorI
-	| ('(' ')' direct_declaratorI)?
-	;
+	: pointer=pointer direct_declarator=direct_declarator
+	| direct_declarator=direct_declarator
+;
 
 pointer
-	: '*'
-	| '*' type_qualifier_list
-	| '*' pointer
-	| '*' type_qualifier_list pointer
-	;
+	: '*' type_qualifier_list=type_qualifier_list pointer=pointer
+	| '*' type_qualifier_list=type_qualifier_list
+	| '*' pointer=pointer
+	| '*'
+;
 
 type_qualifier_list
-	: type_qualifier+
-	;
+	: type_qualifier=type_qualifier type_qualifier_list_linha=type_qualifier_list_linha
+;
 
+type_qualifier_list_linha
+	:{TypeQualifierListLinhaAtion}(type_qualifier=type_qualifier type_qualifier_list_linha=type_qualifier_list_linha)?
+;
+
+direct_declarator
+	: identifier=ID direct_declarator_linha=direct_declarator_linha
+	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
+;
+
+direct_declarator_linha
+	:{DirectDeclaratorLinhaAction}(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
+;
+
+direct_declarator_complemento
+	: '[' ']'
+	| '[' '*' ']'
+	| '[' 'static' type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression ']'
+	| '[' 'static' assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list '*' ']'
+	| '[' type_qualifier_list=type_qualifier_list 'static' assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list ']'
+	| '[' assignment_expression=assignment_expression ']'
+	| '(' parameter_type_list=parameter_type_list ')'
+	| '(' ')'
+	| '(' identifier_list=identifier_list ')'
+;
 
 parameter_type_list
-	: parameter_list (',' ELLIPSIS)*
+	: parameter_list=parameter_list ',' '...'
+	| parameter_list=parameter_list
 	;
 
 parameter_list
-	: parameter_declaration (',' parameter_declaration)*
-	;
+	: parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha
+;
+
+parameter_list_linha
+	: {ParameterListLinhaAction}(',' parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)?
+;
 
 parameter_declaration
-	: declaration_specifiers declarator
-	| declaration_specifiers abstract_declarator
-	| declaration_specifiers
-	;
-
-identifier_list
-	: IDENTIFIER ( ',' IDENTIFIER)*
-	;
-
-type_name
-	:specifier_qualifier_list abstract_declarator?
-	;
+	: declaration_specifiers=declaration_specifiers declarator=declarator
+	| declaration_specifiers=declaration_specifiers abstract_declarator=abstract_declarator
+	| declaration_specifiers=declaration_specifiers
+;
 
 abstract_declarator
-	: direct_abstract_declarator
-	| pointer direct_abstract_declarator?
+	: pointer=pointer direct_abstract_declarator=direct_abstract_declarator
+	| pointer=pointer
+	| direct_abstract_declarator=direct_abstract_declarator
 	;
 
 direct_abstract_declarator
-	: '(' abstract_declarator ')' direct_abstract_declaratorI
-	| '[' ']' direct_abstract_declaratorI
-	| '[' constant_expression ']' direct_abstract_declaratorI
-	| '(' ')' direct_abstract_declaratorI
-	| '(' parameter_type_list ')' direct_abstract_declaratorI
-	
+	: ('(' abstract_declarator=abstract_declarator ')'
+	| '[' ']'
+	| '[' '*' ']'
+	| '[' 'static' type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression ']'
+	| '[' 'static' assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list 'static' assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list ']'
+	| '[' assignment_expression=assignment_expression ']'
+	| '(' ')'
+	| '(' parameter_type_list=parameter_type_list ')') direct_abstract_declarator_linha=direct_abstract_declarator_linha
 	;
 
-direct_abstract_declaratorI
-	: '[' ']' direct_abstract_declaratorI
-	| '[' constant_expression ']' direct_abstract_declaratorI
-	| '(' ')' direct_abstract_declaratorI
-	| '(' parameter_type_list ')' direct_abstract_declaratorI
-	;
+
 initializer
-	: assignment_expression
-	| '{' initializer_list '}'
-	| '{' initializer_list ',' '}'
+	: '{' init_declarator_list=initializer_list '}'
+	| '{' init_declarator_list=initializer_list ',' '}'
+	| assignment_expression=assignment_expression
 	;
+
+direct_abstract_declarator_linha:
+	{DirectAbstractDeclarratorLinhaAction}(direct_abstract_declarator_complement=direct_abstract_declarator_complement direct_abstract_declarator_linha=direct_abstract_declarator_linha)?
+;
+
+direct_abstract_declarator_complement:
+	'[' ']'
+	| '[' '*' ']'
+	| '[' 'static' type_qualifier_list assignment_expression=assignment_expression ']'
+	| '[' 'static' assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list 'static' assignment_expression=assignment_expression ']'
+	| '[' type_qualifier_list=type_qualifier_list ']'
+	| '[' assignment_expression=assignment_expression ']'
+	| '(' ')'
+	| '(' parameter_type_list=parameter_type_list ')'
+;
+
+identifier_list
+	: identifier=ID identifier_list_linha=identifier_list_linha 
+	;
+	
+identifier_list_linha
+	: {IdentifierListLinhaAction}(',' identifier=ID identifier_list_linha=identifier_list_linha)?
+;
+
+translation_unit_linha:
+	{TranlationUnitLinhaAction}(external_declaration=external_declaration translation_unit_linha=translation_unit_linha)?
+	;
+
+primary_expression:
+	identifier=ID
+	| constant=constant
+	| string=string_ufcg
+	| '(' expression=expression ')'
+	| generic_selection=generic_selection;
+
+//TODO NINGUEM CHAMA
+enumeration_constant		/* before it has been defined as such */
+	: identifier=ID
+		
+	;
+
+
+
+generic_selection
+	: _generic='_Generic' '(' assignment_expression=assignment_expression ',' generic_assoc_list+=generic_assoc_list ')'
+	;
+
+generic_assoc_list
+	: generic_association=generic_association generic_assoc_list_linha=generic_assoc_list_linha
+	;
+
+generic_assoc_list_linha
+:
+	{GenericAssocListLinhaAction}(',' generic_association=generic_association generic_assoc_list_linha=generic_assoc_list_linha)?
+;
+
+generic_association
+	: type_name=type_name ':' assignment_expression=assignment_expression
+	| default='default' ':' assignment_expression=assignment_expression
+	;
+
+postfix_expression
+	: primary_expression=primary_expression postfix_expression_linha=postfix_expression_linha
+	| '(' type_name ')' '{' initializer_list=initializer_list '}' postfix_expression_linha=postfix_expression_linha
+	| '(' type_name ')' '{' initializer_list=initializer_list ',' '}' postfix_expression_linha=postfix_expression_linha
+	;
+
+postfix_expression_linha:
+	{PostfixExpressionLinhaAction}(postfix_expression_complement=postfix_expression_complement postfix_expression_linha=postfix_expression_linha)?
+;
 
 initializer_list
-	: initializer (',' initializer)*
+	: designation=designation initializer=initializer init_declarator_list_linha=init_declarator_list_linha
+	| initializer=initializer init_declarator_list_linha=init_declarator_list_linha
+;
+
+initializer_list_linha
+	: {InitializerListLinhaAction}(initializer_list_complement=initializer_list_complement init_declarator_list_linha=init_declarator_list_linha)?
+;
+
+
+
+initializer_list_complement
+	: ',' designation=designation initializer=initializer
+	| ',' initializer=initializer
+;
+
+designation
+	: designator_list=designator_list '='
 	;
+
+designator_list
+	: designator=designator designator_list_linha=designator_list_linha
+;
+
+designator_list_linha
+	: {DesignatorListLinhaAction}(designator=designator designator_list_linha=declaration_list_linha)?
+;
+
+
+designator
+	: '[' constant_expression=conditional_expression ']'
+	| '.' identifier=ID
+;
+
+static_assert_declaration
+	: '_Static_assert' '(' constant_expression=constant_expression ',' STRING_LITERAL ')' ';'
+;
+
+
+postfix_expression_complement:
+	{PostfixExpressionComplementExpression}'[' expression=expression ']'
+	|{PostfixExpressionComplementEmpty}'(' ')'
+	|{PostfixExpressionComplementArgList}'(' argument_expression_list+=argument_expression_list ')'
+	|{PostfixExpressionComplementIdentifier}'.' identifier=ID
+	|{PostfixExpressionComplementPointer}'->' identifier=ID
+	|{PostfixExpressionComplementIncrement}'++'
+	|{PostfixExpressionComplementDecrement}'--'
+;
+
+argument_expression_list
+	: assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha
+	;
+
+argument_expression_list_linha:
+	{ArgumentExpressionListLinhaAction}(',' assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha)?
+;
+
+unary_expression
+	: postfix_expression=postfix_expression
+	| '++' unary_expression=unary_expression
+	| '--' unary_expression=unary_expression
+	| unary_operator=unary_operator cast_expression=cast_expression
+	| 'sizeof' unary_expression=unary_expression
+	| 'sizeof' '(' type_name=type_name ')'
+	| '_Alignof' '(' type_name=type_name ')'
+	;
+
+cast_expression
+	: unary_expression=unary_expression
+	| '(' type_name=type_name ')' cast_expression=cast_expression
+	;
+
+multiplicative_expression
+	: cast_expression=cast_expression multiplicative_expression_linha=multiplicative_expression_linha
+	;
+	
+multiplicative_expression_linha:
+	{MultiplicativeExpressionLinhaAction}(multiplicative_expression_complement=multiplicative_expression_complement multiplicative_expression_linha=multiplicative_expression_linha)?
+;	
+
+multiplicative_expression_complement
+	:'*' cast_expression=cast_expression
+	|'/' cast_expression=cast_expression
+	|'%' cast_expression=cast_expression
+;
+
+additive_expression
+	: multiplicative_expression=multiplicative_expression additive_expression_linha=additive_expression_linha
+	;
+
+additive_expression_linha
+	:{AdditiveExpressionLinhaAction}(additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?;
+
+additive_expression_complement:
+	'+' multiplicative_expression=multiplicative_expression
+	|'-' multiplicative_expression=multiplicative_expression
+;
+
+shift_expression
+	: additive_expression=additive_expression shift_expression_linha=shift_expression_linha
+	;
+
+shift_expression_linha:
+	{ShiftExpressionLinhaAction}(shift_expression_complement=shift_expression_complement shift_expression_linha=shift_expression_linha)?
+;
+
+shift_expression_complement
+	: '<<' additive_expression=additive_expression
+	| '>>' additive_expression=additive_expression
+;
+
+relational_expression
+	: shift_expression=shift_expression relational_expression_linha=relational_expression_linha
+;
+
+relational_expression_linha
+	:{RelationalExpressionLinhaAction}(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
+;
+
+relational_expression_complement
+	: '<' shift_expression=shift_expression
+	| '>' shift_expression=shift_expression
+	| '<=' shift_expression=shift_expression
+	| '>=' shift_expression=shift_expression
+;
+
+equality_expression
+	: relational_expression=relational_expression equality_expression_linha=equality_expression_linha	
+;
+
+equality_expression_linha
+	:{EqualityExpressionLinhaAction}(equality_expression_complement=equality_expression_complement equality_expression_linha=equality_expression_linha)?
+;
+
+equality_expression_complement
+	: '==' relational_expression=relational_expression
+	| '!=' relational_expression=relational_expression	
+;
 
 statement
 	: labeled_statement
@@ -324,150 +477,243 @@ statement
 	| jump_statement
 	;
 
+
+jump_statement
+	: 'goto' identifier=ID ';'
+	| 'continue' ';'
+	| 'break' ';'
+	| 'return' ';'
+	| 'return' expression=expression ';'
+;
+
+
+
+iteration_statement
+	: 'while' '(' expression=expression ')' statement=statement
+	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
+	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')' statement=statement
+	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression ')' statement=statement
+	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
+	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')' statement=statement
+;
+
+selection_statement
+	: 'if' '(' expression=expression ')' statement=statement 'else' statement2=statement
+	| 'if' '(' expression=expression ')' statement=statement
+	| 'switch' '(' expression=expression ')' statement=expression
+;
+
+
+
 labeled_statement
-	: IDENTIFIER ':' statement
-	| CASE constant_expression ':' statement
-	| DEFAULT ':' statement
-	;
+	: identifier=ID ':' statement=statement
+	| 'case' constant_expression=conditional_expression ':' statement=statement
+	| 'default' ':' statement=statement
+;
 
 compound_statement
 	: '{' '}'
-	| '{' statement_list '}'
-	| '{' declaration_list '}'
-	| '{' declaration_list statement_list '}'
-	;
+	| '{'  block_item_list=block_item_list '}'
+;
 
-declaration_list
-	: declaration+
-	;
+block_item_list
+	: block_item block_item_list_linha=block_item_list_linha
+;
 
-statement_list
-	: statement+
-	;
+block_item_list_linha
+	: {BlockItemListLinhaAction}(block_item=block_item block_item_list_linha=block_item_list_linha)?
+;
+
+block_item
+	: declaration=declaration
+	| statement=statement
+;
 
 expression_statement
 	: ';'
-	| expression ';'
-	;
-
-selection_statement
-	: IF '(' expression ')' statement
-	| IF '(' expression ')' statement ELSE statement
-	| SWITCH '(' expression ')' statement
-	;
-
-iteration_statement
-	: WHILE '(' expression ')' statement
-	| DO statement WHILE '(' expression ')' ';'
-	| FOR '(' expression_statement expression_statement ')' statement
-	| FOR '(' expression_statement expression_statement expression ')' statement
-	;
-
-jump_statement
-	: GOTO IDENTIFIER ';'
-	| CONTINUE ';'
-	| BREAK ';'
-	| RETURNO ';'
-	| RETURNO expression ';'
-	;
-
-translation_unit
-	: external_declaration+
-	;
-
-external_declaration
-	: function_definition
-	| declaration
-	;
-
-function_definition
-	: declaration_specifiers declarator declaration_list compound_statement
-	| declaration_specifiers declarator compound_statement
-	| declarator declaration_list compound_statement
-	| declarator compound_statement
-	;
-  
- 
-
-	//missing
-terminal AUTO : "auto";
-terminal BREAK : "break";
-terminal CASE : "case";
-terminal CHAR : "char";
-terminal CONST : "const";
-terminal CONTINUE : "continue";
-terminal DEFAULT : "default";
-terminal DO : "do";
-terminal DOUBLE : "double";
-terminal ELSE : "else";
-terminal ENUM : "enum";
-terminal EXTERN : "extern";
-terminal FLOAT : "float";		
-terminal FOR : "for";
-terminal GOTO : "goto";
-terminal IF : "if";
-terminal INTE : "int";
-terminal LONG : "long";
-terminal REGISTER : "register";
-terminal RETURNO : "return";
-terminal SHORT : "short";
-terminal SIGNED : "signed";
-terminal SIZEOF : "sizeof";
-terminal STATIC : "static";
-terminal STRUCT : "struct";
-terminal SWITCH : "switch";
-terminal TYPEDEF : "typedef";
-terminal UNION : "union";
-terminal UNSIGNED : "unsigned";
-terminal VOID : "void";
-terminal VOLATILE : "volatile";
-terminal WHILE : "while";
-//missing
-
-terminal ELLIPSIS : "..." ;
-terminal RIGHT_ASSIGN : ">>=";
-terminal LEFT_ASSIGN : "<<=";
-terminal ADD_ASSIGN : "+=";
-terminal SUB_ASSIGN : "-=";
-terminal MUL_ASSIGN : "*=";
-terminal DIV_ASSIGN : "/="; 
-terminal MOD_ASSIGN : "%=";
-terminal AND_ASSIGN : "&=";
-terminal XOR_ASSIGN : "^=";
-terminal OR_ASSIGN : "|=";
-terminal RIGHT_OP : ">>";
-terminal LEFT_OP : "<<";
-terminal INC_OP : "++";
-terminal DEC_OP : "--";
-terminal PTR_OP : "->";
-terminal AND_OP : "&&";
-terminal OR_OP : "||";
-terminal LE_OP : "<=";
-terminal GE_OP : ">=";
-terminal EQ_OP : "==";
-terminal NE_OP : "!=";
-
-
-IDENTIFIER :
-	ID
-;
-
-TYPE_NAMEE :
-	ID
-;
-
-STRING_LITERAL :
-	STRING
+	| expression=expression ';'
 ;
 
 
-terminal D : ('0'..'9');
-terminal L : ('a'..'z'|'A'..'Z');
-terminal E : ('E'|'e')('+'|'-')?D+;
-FS : ('f'|'F'|'l'|'L');
-IS : ('u'|'U'|'l'|'L')+;
+and_expression
+	: equality_expression=equality_expression and_expression_linha=and_expression_linha
+;
 
-//0[xX]{H}+{IS}?	
-//L?'(\\.|[^\\'])+'
-CONSTANT:  D+(IS)? | D*'.'D+E?FS? | D+'.'E?FS?  ;
-//missing
+and_expression_linha
+	: {AndExpressionLinhaAction}('&' equality_expression=equality_expression and_expression_linha=and_expression_linha)?
+;
+
+exclusive_or_expression
+	: and_expression=and_expression exclusive_or_expression_linha=exclusive_or_expression_linha
+;
+
+exclusive_or_expression_linha
+	: {ExclusiveOrExpressionLinhaAction}('^' and_expression=and_expression exclusive_or_expression_linha=exclusive_or_expression_linha)?
+;
+
+inclusive_or_expression
+	: exclusive_or_expression=exclusive_or_expression inclusive_or_expression_linha=inclusive_or_expression_linha
+;
+
+inclusive_or_expression_linha
+	: {InclusiveOrExpressionLinhaAction}('|' exclusive_or_expression=exclusive_or_expression inclusive_or_expression_linha=inclusive_or_expression_linha)?
+;
+
+logical_and_expression
+	: inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha
+;
+
+logical_and_expression_linha
+	: {LogicalAndExpressionLinhaAction}('and' inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)?
+;
+
+logical_or_expression
+	: logical_and_expression=logical_and_expression logical_or_expression_linha=logical_or_expression_linha
+;
+	
+logical_or_expression_linha
+	: {LogicalOrExpressionLinhaAction}('or' logical_and_expression=logical_and_expression logical_or_expression_linha=logical_or_expression_linha)?	
+;
+
+conditional_expression
+	: logical_or_expression=logical_or_expression conditional_expression_linha=conditional_expression_linha
+;
+
+conditional_expression_linha
+	: {ConditionalExpressionLinhaAcction}('?' expression=expression ':' conditional_expression=conditional_expression conditional_expression_linha=conditional_expression_linha)?
+;
+
+assignment_expression
+	: conditional_expression=conditional_expression
+	| unary_expression=unary_expression assignment_operator=assignment_operator assignment_expression=assignment_expression
+;
+
+assignment_operator
+	: '='
+	| '*='
+	| '/='
+	| '%='
+	| '+='
+	| '-='
+	| '<<='
+	| '>>='
+	| '&='
+	| '^='
+	| '|='
+;
+
+
+
+
+unary_operator
+	: '&'
+	| '*'
+	| '+'
+	| '-'
+	| '~'
+	| '!'
+	;
+
+type_name
+	: specifier_qualifier_list=specifier_qualifier_list abstract_declarator=abstract_declarator
+	| specifier_qualifier_list=specifier_qualifier_list
+	;
+	
+
+expression
+	: assignment_expression=assignment_expression expression_linha=expression_linha
+;
+expression_linha:
+	{ExpressionLinhaAction}(',' assignment_expression=assignment_expression expression_linha=expression_linha)?
+;
+
+constant_expression
+	: conditional_expression=conditional_expression	/* with constraints */
+;
+
+
+init_declarator_list
+	: init_declarator=init_declarator init_declarator_list_linha=init_declarator_list_linha
+	;
+
+init_declarator_list_linha:
+	{InitDecclaratorListLinhaAction}(',' init_declarator=init_declarator init_declarator_list_linha=init_declarator_list_linha)?
+;
+
+init_declarator
+	: declarator=declarator '=' initializer=initializer
+	| declarator=declarator
+	;
+
+string_ufcg
+	: string_literal=STRING_LITERAL
+	| __func__='__func__';
+
+
+constant
+	: i_constant=I_CONSTANT		/* includes character_constant */
+	| f_constant=F_CONSTANT
+	| enumz='enum'	/* after it has been defined as such */
+	;
+
+terminal O:
+	('0'..'7');
+
+terminal D:
+	('0'..'9');
+
+terminal NZ:
+	('1'..'9');
+
+terminal L:
+	('a'..'z' | 'A'..'Z' | '_');
+
+terminal A:
+	('a'..'z' | 'A'..'Z' | '_' | '0' '..' '9');
+
+terminal H:
+	('a'..'f' | 'A'..'F' | '0' '..' '9');
+
+terminal HP:
+	('0' ('x' | 'X'));
+
+terminal E:
+	('E' | 'e') ('+' | '-')? D '+';
+
+terminal P:
+	('P' | 'p') ('+' | '-')? '{' D '}' '+';
+
+terminal FS:
+	'f' | 'F' | 'l' | 'L';
+
+terminal ES:
+	A; //TODO
+terminal IS:
+	((('u' | 'U') ('l' | 'L' | 'l' 'l' | 'L' 'L')?) | (('l' | 'L' | 'l' 'l' | 'L' 'L') ('u' | 'U')?));
+
+terminal CP:
+	('u' | 'U' | 'L');
+
+terminal SP:
+	('u' '8' | 'u' | 'U' | 'L');
+	//Algum mito faz esse ES??
+terminal WS:
+	(' ' | '\t' | '\r' | '\n' | '\f')+;
+
+terminal I_CONSTANT:
+	HP H '+' IS? |
+	NZ D '*' IS? |
+	"0" O '*' IS? |
+	CP? "'" (('^' | '\'' | '\\' | '\n') | ES)+ "'";
+
+terminal F_CONSTANT:
+	D '+' E FS? |
+	D '*' "." D '+' E? FS? |
+	D '+' "." E? FS? |
+	HP H '+' P FS?
+	HP H '*' "." H '+' P FS? |
+	HP H '+' "." P FS?;
+
+terminal STRING_LITERAL:
+	(SP? '"' (('^' | '\'' | '\\' | '\n') | ES)* '"' WS*)+;
+

@@ -7,7 +7,510 @@
   <genPackages prefix="Ansic" basePackage="org.xtext.example" disposableProviderFactory="true"
       fileExtensions="ansic" ecorePackage="Ansic.ecore#/">
     <genClasses ecoreClass="Ansic.ecore#//DomainModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//DomainModel/geetings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DomainModel/geetings"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//translation_unit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//translation_unit/external_declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//translation_unit/translation_unit_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//external_declaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//external_declaration/function_definitio"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//external_declaration/declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//declaration_specifiers">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//declaration_specifiers/storage_class_specifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration_specifiers/declaration_specifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration_specifiers/type_specifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//declaration_specifiers/type_qualifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//declaration_specifiers/function_specifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration_specifiers/alignment_specifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//alignment_specifier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//alignment_specifier/type_name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//alignment_specifier/constant_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//type_specifier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_specifier/atomic_type_specifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_specifier/struct_or_union_specifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_specifier/enum_specifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//enum_specifier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//enum_specifier/enumerator_list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//enum_specifier/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//enumerator_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//enumerator_list/enumarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//enumerator_list/enumerator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//enumerator_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//enumerator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//enumerator/enumeration_constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//enumerator/conditional_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//atomic_type_specifier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//atomic_type_specifier/type_name"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//struct_or_union_specifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//struct_or_union_specifier/struct_or_union"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_or_union_specifier/struct_declaration_list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//struct_or_union_specifier/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_or_union_specifier/struct_or_union_specifier_complement"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//struct_or_union_specifier_complement"/>
+    <genClasses ecoreClass="Ansic.ecore#//struct_declaration_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declaration_list/struct_declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declaration_list/struct_declaration_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//struct_declaration_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//struct_declaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declaration/specifier_qualifier_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declaration/struct_declarator_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declaration/static_assert_declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//struct_declarator_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declarator_list/struct_declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declarator_list/struct_declarator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//struct_declarator_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//struct_declarator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declarator/constant_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//struct_declarator/declarator"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//specifier_qualifier_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//specifier_qualifier_list/type_specifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//specifier_qualifier_list/specifier_qualifier_list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//specifier_qualifier_list/type_qualifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//declaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration/declaration_specifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration/init_declarator_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration/static_assert_declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//function_definition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//function_definition/declaration_specifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//function_definition/declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//function_definition/declaration_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//function_definition/compound_statement"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//declaration_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration_list/declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declaration_list/declaration_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//declaration_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//declarator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declarator/pointer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//declarator/direct_declarator"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//pointer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//pointer/type_qualifier_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//pointer/pointer"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//type_qualifier_list">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//type_qualifier_list/type_qualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_qualifier_list/type_qualifier_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//type_qualifier_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//direct_declarator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//direct_declarator/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator/direct_declarator_linha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator/declarator"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//direct_declarator_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//direct_declarator_complemento">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator_complemento/type_qualifier_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator_complemento/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator_complemento/parameter_type_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator_complemento/identifier_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//parameter_type_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_type_list/parameter_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//parameter_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_list/parameter_declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_list/parameter_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//parameter_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//parameter_declaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_declaration/declaration_specifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_declaration/declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_declaration/abstract_declarator"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//abstract_declarator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//abstract_declarator/pointer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//abstract_declarator/direct_abstract_declarator"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//direct_abstract_declarator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator/abstract_declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator/type_qualifier_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator/parameter_type_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator/direct_abstract_declarator_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//initializer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer/init_declarator_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer/assignment_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//direct_abstract_declarator_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//direct_abstract_declarator_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator_complement/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator_complement/type_qualifier_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_abstract_declarator_complement/parameter_type_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//identifier_list">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//identifier_list/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//identifier_list/identifier_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//identifier_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//translation_unit_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//primary_expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//primary_expression/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/constant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/string"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/generic_selection"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//enumeration_constant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//enumeration_constant/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//generic_selection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//generic_selection/_generic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//generic_selection/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//generic_selection/generic_assoc_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//generic_assoc_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//generic_assoc_list/generic_association"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//generic_assoc_list/generic_assoc_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//generic_assoc_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//generic_association">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//generic_association/type_name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//generic_association/assignment_expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//generic_association/default"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//postfix_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//postfix_expression/primary_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//postfix_expression/postfix_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//postfix_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//initializer_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer_list/designation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer_list/initializer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer_list/init_declarator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//initializer_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//initializer_list_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer_list_complement/designation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//initializer_list_complement/initializer"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//designation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//designation/designator_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//designator_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//designator_list/designator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//designator_list/designator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//designator_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//designator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//designator/constant_expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//designator/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//static_assert_declaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//static_assert_declaration/constant_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//postfix_expression_complement"/>
+    <genClasses ecoreClass="Ansic.ecore#//argument_expression_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//argument_expression_list/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//argument_expression_list/argument_expression_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//argument_expression_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//unary_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//unary_expression/postfix_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//unary_expression/unary_expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//unary_expression/unary_operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//unary_expression/cast_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//unary_expression/type_name"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//cast_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//cast_expression/unary_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//cast_expression/type_name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//cast_expression/cast_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//multiplicative_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//multiplicative_expression/cast_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//multiplicative_expression/multiplicative_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//multiplicative_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//multiplicative_expression_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//multiplicative_expression_complement/cast_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//additive_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression/multiplicative_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression/additive_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//additive_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//additive_expression_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression_complement/multiplicative_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//shift_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//shift_expression/additive_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//shift_expression/shift_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//shift_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//shift_expression_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//shift_expression_complement/additive_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//relational_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression/shift_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression/relational_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//relational_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//relational_expression_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_complement/shift_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//equality_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//equality_expression/relational_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//equality_expression/equality_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//equality_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//equality_expression_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//equality_expression_complement/relational_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//statement"/>
+    <genClasses ecoreClass="Ansic.ecore#//jump_statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//jump_statement/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//jump_statement/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//iteration_statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//iteration_statement/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//iteration_statement/statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//iteration_statement/expression_statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//iteration_statement/expression_statement2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//iteration_statement/declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//selection_statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//selection_statement/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//selection_statement/statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//selection_statement/statement2"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//labeled_statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//labeled_statement/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//labeled_statement/statement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//labeled_statement/constant_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//compound_statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//compound_statement/block_item_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//block_item_list"/>
+    <genClasses ecoreClass="Ansic.ecore#//block_item_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//block_item">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//block_item/block_item_list_linha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//block_item/declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//block_item/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//expression_statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression_statement/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//and_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//and_expression/equality_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//and_expression/and_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//and_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//exclusive_or_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//exclusive_or_expression/and_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//exclusive_or_expression/exclusive_or_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//exclusive_or_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//inclusive_or_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//inclusive_or_expression/exclusive_or_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//inclusive_or_expression/inclusive_or_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//inclusive_or_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//logical_and_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//logical_and_expression/inclusive_or_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//logical_and_expression/logical_and_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//logical_and_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//logical_or_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//logical_or_expression/logical_and_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//logical_or_expression/logical_or_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//logical_or_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//conditional_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//conditional_expression/logical_or_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//conditional_expression/conditional_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//conditional_expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//assignment_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//assignment_expression/conditional_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//assignment_expression/unary_expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//assignment_expression/assignment_operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//assignment_expression/assignment_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//type_name">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_name/initializer_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_name/specifier_qualifier_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//type_name/abstract_declarator"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression/expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//constant_expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//constant_expression/conditional_expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//init_declarator_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//init_declarator_list/init_declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//init_declarator_list/init_declarator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//init_declarator_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//init_declarator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//init_declarator/declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//init_declarator/initializer"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//string_ufcg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//string_ufcg/string_literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//string_ufcg/__func__"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//constant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/i_constant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/f_constant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/enumz"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//EnumeratorListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//EnumeratorListLinhaAction/enumerator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//EnumeratorListLinhaAction/enumerator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//StructOrUnionSpecifierComplementAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//StructOrUnionSpecifierComplementAction/struct_declaration_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//StructDeclarationListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//StructDeclarationListLinhaAction/struct_declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//StructDeclarationListLinhaAction/struct_declaration_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//StructDeclaratorListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//StructDeclaratorListLinhaAction/struct_declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//StructDeclaratorListLinhaAction/struct_declarator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//DeclarationListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DeclarationListLinhaAction/declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DeclarationListLinhaAction/declaration_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//TypeQualifierListLinhaAtion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//TypeQualifierListLinhaAtion/type_qualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//TypeQualifierListLinhaAtion/type_qualifier_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//DirectDeclaratorLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DirectDeclaratorLinhaAction/direct_declarator_complemento"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DirectDeclaratorLinhaAction/direct_declarator_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//ParameterListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ParameterListLinhaAction/parameter_declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ParameterListLinhaAction/parameter_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//DirectAbstractDeclarratorLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DirectAbstractDeclarratorLinhaAction/direct_abstract_declarator_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DirectAbstractDeclarratorLinhaAction/direct_abstract_declarator_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//IdentifierListLinhaAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//IdentifierListLinhaAction/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//IdentifierListLinhaAction/identifier_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//TranlationUnitLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//TranlationUnitLinhaAction/external_declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//TranlationUnitLinhaAction/translation_unit_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//GenericAssocListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//GenericAssocListLinhaAction/generic_association"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//GenericAssocListLinhaAction/generic_assoc_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//PostfixExpressionLinhaAction/postfix_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//PostfixExpressionLinhaAction/postfix_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//InitializerListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InitializerListLinhaAction/initializer_list_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InitializerListLinhaAction/init_declarator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//DesignatorListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DesignatorListLinhaAction/designator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DesignatorListLinhaAction/designator_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//PostfixExpressionComplementExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementEmpty"/>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementArgList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//PostfixExpressionComplementArgList/argument_expression_list"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementIdentifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//PostfixExpressionComplementIdentifier/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementPointer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//PostfixExpressionComplementPointer/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementIncrement"/>
+    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementDecrement"/>
+    <genClasses ecoreClass="Ansic.ecore#//ArgumentExpressionListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ArgumentExpressionListLinhaAction/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ArgumentExpressionListLinhaAction/argument_expression_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//MultiplicativeExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//MultiplicativeExpressionLinhaAction/multiplicative_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//MultiplicativeExpressionLinhaAction/multiplicative_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//AdditiveExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//AdditiveExpressionLinhaAction/additive_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//AdditiveExpressionLinhaAction/additive_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//ShiftExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ShiftExpressionLinhaAction/shift_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ShiftExpressionLinhaAction/shift_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//RelationalExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//RelationalExpressionLinhaAction/shift_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//RelationalExpressionLinhaAction/relational_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//EqualityExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//EqualityExpressionLinhaAction/equality_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//EqualityExpressionLinhaAction/equality_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//BlockItemListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//BlockItemListLinhaAction/block_item"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//BlockItemListLinhaAction/block_item_list_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//AndExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//AndExpressionLinhaAction/equality_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//AndExpressionLinhaAction/and_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//ExclusiveOrExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ExclusiveOrExpressionLinhaAction/and_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ExclusiveOrExpressionLinhaAction/exclusive_or_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//InclusiveOrExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InclusiveOrExpressionLinhaAction/exclusive_or_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InclusiveOrExpressionLinhaAction/inclusive_or_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//LogicalAndExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//LogicalAndExpressionLinhaAction/inclusive_or_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//LogicalAndExpressionLinhaAction/logical_and_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//LogicalOrExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//LogicalOrExpressionLinhaAction/logical_and_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//LogicalOrExpressionLinhaAction/logical_or_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//ConditionalExpressionLinhaAcction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ConditionalExpressionLinhaAcction/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ConditionalExpressionLinhaAcction/conditional_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ConditionalExpressionLinhaAcction/conditional_expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//ExpressionLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ExpressionLinhaAction/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ExpressionLinhaAction/expression_linha"/>
+    </genClasses>
+    <genClasses ecoreClass="Ansic.ecore#//InitDecclaratorListLinhaAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InitDecclaratorListLinhaAction/init_declarator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InitDecclaratorListLinhaAction/init_declarator_list_linha"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

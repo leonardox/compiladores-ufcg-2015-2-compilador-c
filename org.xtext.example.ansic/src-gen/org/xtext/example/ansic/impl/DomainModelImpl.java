@@ -5,16 +5,21 @@ package org.xtext.example.ansic.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.DomainModel;
+import org.xtext.example.ansic.translation_unit;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,14 +37,14 @@ import org.xtext.example.ansic.DomainModel;
 public class DomainModelImpl extends MinimalEObjectImpl.Container implements DomainModel
 {
   /**
-   * The cached value of the '{@link #getGeetings() <em>Geetings</em>}' attribute list.
+   * The cached value of the '{@link #getGeetings() <em>Geetings</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getGeetings()
    * @generated
    * @ordered
    */
-  protected EList<String> geetings;
+  protected EList<translation_unit> geetings;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,13 +72,29 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getGeetings()
+  public EList<translation_unit> getGeetings()
   {
     if (geetings == null)
     {
-      geetings = new EDataTypeEList<String>(String.class, this, AnsicPackage.DOMAIN_MODEL__GEETINGS);
+      geetings = new EObjectContainmentEList<translation_unit>(translation_unit.class, this, AnsicPackage.DOMAIN_MODEL__GEETINGS);
     }
     return geetings;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.DOMAIN_MODEL__GEETINGS:
+        return ((InternalEList<?>)getGeetings()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -105,7 +126,7 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
     {
       case AnsicPackage.DOMAIN_MODEL__GEETINGS:
         getGeetings().clear();
-        getGeetings().addAll((Collection<? extends String>)newValue);
+        getGeetings().addAll((Collection<? extends translation_unit>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,23 +163,6 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
         return geetings != null && !geetings.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (geetings: ");
-    result.append(geetings);
-    result.append(')');
-    return result.toString();
   }
 
 } //DomainModelImpl
