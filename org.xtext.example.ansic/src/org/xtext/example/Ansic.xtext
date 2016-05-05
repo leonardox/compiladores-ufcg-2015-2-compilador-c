@@ -500,20 +500,20 @@ iteration_statement
 selection_statement
 	: 'if' '(' expression=expression ')' statement=statement 'else' statement2=statement
 	| 'if' '(' expression=expression ')' statement=statement
-	| 'switch' '(' expression=expression ')' statement=expression
+	| 'switch' '(' expression=expression ')' statement=statement
 ;
 
 
 
 labeled_statement
 	: identifier=ID ':' statement=statement
-	| 'case' constant_expression=conditional_expression ':' statement=statement
+	| 'case' conditional_expression=conditional_expression ':' statement=statement
 	| 'default' ':' statement=statement
 ;
 
 compound_statement
 	: '{' '}'
-	| '{'  block_item_list=block_item_list '}'
+	| '{'  block_item_list+=block_item_list '}'
 ;
 
 block_item_list
@@ -716,4 +716,3 @@ terminal F_CONSTANT:
 
 terminal STRING_LITERAL:
 	(SP? '"' (('^' | '\'' | '\\' | '\n') | ES)* '"' WS*)+;
-
