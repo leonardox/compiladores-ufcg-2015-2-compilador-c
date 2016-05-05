@@ -651,10 +651,15 @@ string_ufcg
 
 
 constant
-	: i_constant=I_CONSTANT		/* includes character_constant */
-	| f_constant=F_CONSTANT
+	: i_constant=INT	/* includes character_constant */
+	| f_constant=FLOAT
 	| enumz='enum'	/* after it has been defined as such */
 	;
+
+
+terminal FLOAT:
+	('0'..'9')+ '.' ('0'..'9')*
+;
 
 terminal O:
 	('0'..'7');
