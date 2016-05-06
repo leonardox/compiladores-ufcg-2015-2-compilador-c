@@ -3,7 +3,9 @@
  */
 package org.xtext.example.validation
 
-
+import org.eclipse.xtext.validation.Check
+import org.xtext.example.ansic.type_specifier
+import org.xtext.example.ansic.AnsicPackage
 /**
  * This class contains custom validation rules. 
  *

@@ -38,29 +38,29 @@ alignment_specifier
 ;
 
 type_qualifier
-	: 'const'
-	| 'restrict'
-	| 'volatile'
-	| '_Atomic'
+	: namez='const'
+	| namez='restrict'
+	| namez='volatile'
+	| namez='_Atomic'
 ;
 
 type_specifier
-	: 'void'
-	| 'char'
-	| 'short'
-	| 'int'
-	| 'long'
-	| 'float'
-	| 'double'
-	| 'signed'
-	| 'unsigned'
-	| 'bool'
-	| '_Complex'
-	| '_Imaginary'	  	/* non-mandated extension */
+	: type_name_str='void'
+	| type_name_str='char'
+	| type_name_str='short'
+	| type_name_str='int'
+	| type_name_str='long'
+	| type_name_str='float'
+	| type_name_str='double'
+	| type_name_str='signed'
+	| type_name_str='unsigned'
+	| type_name_str='bool'
+	| type_name_str='_Complex'
+	| type_name_str='_Imaginary'	  	/* non-mandated extension */
 	| atomic_type_specifier=atomic_type_specifier
 	| struct_or_union_specifier=struct_or_union_specifier
 	| enum_specifier=enum_specifier
-	| 'typedef'		/* after it has been defined as such */
+	| type_name_str='typedef'		/* after it has been defined as such */
 	;
 
 enum_specifier
@@ -388,7 +388,7 @@ argument_expression_list_linha:
 
 unary_expression
 	: postfix_expression=postfix_expression
-	| '++' unary_expression=unary_expression
+	| {PlusPlus} plus='++' unary_expression=unary_expression
 	| '--' unary_expression=unary_expression
 	| unary_operator=unary_operator cast_expression=cast_expression
 	| 'sizeof' unary_expression=unary_expression
