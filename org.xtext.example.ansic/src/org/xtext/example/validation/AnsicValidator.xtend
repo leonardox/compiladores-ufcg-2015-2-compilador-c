@@ -13,8 +13,18 @@ import org.xtext.example.ansic.AnsicPackage
  */
 class AnsicValidator extends AbstractAnsicValidator {
 	
-//  public static val INVALID_NAME = 'invalidName'
-//
+  public static val INVALID_NAME = 'invalidName'
+
+  	@Check
+	def checkGreetingStartsWithCapital(type_specifier tName) {
+		println(tName.type_name_str);
+		if(tName.type_name_str.equals("char")){
+			error("Não pode char, cuzão!", AnsicPackage.Literals.TYPE_SPECIFIER__TYPE_NAME_STR);
+		}
+	}
+	
+  
+  //
 //	@Check
 //	def checkGreetingStartsWithCapital(Greeting greeting) {
 //		if (!Character.isUpperCase(greeting.name.charAt(0))) {
