@@ -42,6 +42,7 @@ import org.xtext.example.ansic.parameter_declaration;
 import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.postfix_expression_linha;
 import org.xtext.example.ansic.primary_expression;
 import org.xtext.example.ansic.relational_expression;
 import org.xtext.example.ansic.selection_statement;
@@ -220,120 +221,140 @@ public class AnsicValidator extends AbstractAnsicValidator {
       }
       String tr = this.variables.get(idRight);
       String tl = this.variables.get(idLeft);
-      boolean _and = false;
-      boolean _equals = Objects.equal(tl, "int");
-      if (!_equals) {
-        _and = false;
-      } else {
-        boolean _equals_1 = Objects.equal(tr, "float");
-        _and = _equals_1;
-      }
-      if (_and) {
-        this.error("Tipos incompativeis, De float para int", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_1 = false;
-      boolean _equals_2 = Objects.equal(tl, "int");
-      if (!_equals_2) {
-        _and_1 = false;
-      } else {
-        boolean _equals_3 = Objects.equal(tr, "double");
-        _and_1 = _equals_3;
-      }
-      if (_and_1) {
-        this.error("Tipos incompativeis, De double para int", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_2 = false;
-      boolean _equals_4 = Objects.equal(tl, "short");
-      if (!_equals_4) {
-        _and_2 = false;
-      } else {
-        boolean _equals_5 = Objects.equal(tr, "float");
-        _and_2 = _equals_5;
-      }
-      if (_and_2) {
-        this.error("Tipos incompativeis, De float para short", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_3 = false;
-      boolean _equals_6 = Objects.equal(tl, "short");
-      if (!_equals_6) {
-        _and_3 = false;
-      } else {
-        boolean _equals_7 = Objects.equal(tr, "double");
-        _and_3 = _equals_7;
-      }
-      if (_and_3) {
-        this.error("Tipos incompativeis, De double para short", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_4 = false;
-      boolean _equals_8 = Objects.equal(tl, "long");
-      if (!_equals_8) {
-        _and_4 = false;
-      } else {
-        boolean _equals_9 = Objects.equal(tr, "float");
-        _and_4 = _equals_9;
-      }
-      if (_and_4) {
-        this.error("Tipos incompativeis, De float para long", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_5 = false;
-      boolean _equals_10 = Objects.equal(tl, "long");
-      if (!_equals_10) {
-        _and_5 = false;
-      } else {
-        boolean _equals_11 = Objects.equal(tr, "double");
-        _and_5 = _equals_11;
-      }
-      if (_and_5) {
-        this.error("Tipos incompativeis, De double para long", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_6 = false;
-      boolean _equals_12 = Objects.equal(tl, "int");
-      if (!_equals_12) {
-        _and_6 = false;
-      } else {
-        boolean _equals_13 = Objects.equal(tr, "long");
-        _and_6 = _equals_13;
-      }
-      if (_and_6) {
-        this.error("Tipos incompativeis, De int para long", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_7 = false;
-      boolean _equals_14 = Objects.equal(tl, "signed");
-      if (!_equals_14) {
-        _and_7 = false;
-      } else {
-        boolean _equals_15 = Objects.equal(tr, "unsigned");
-        _and_7 = _equals_15;
-      }
-      if (_and_7) {
-        this.error("Tipos unsigned, De long para signed", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
-      boolean _and_8 = false;
-      boolean _equals_16 = Objects.equal(tl, "unsigned");
-      if (!_equals_16) {
-        _and_8 = false;
-      } else {
-        boolean _equals_17 = Objects.equal(tr, "signed");
-        _and_8 = _equals_17;
-      }
-      if (_and_8) {
-        this.error("Tipos incompativeis, De unsigned para signed", 
-          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
-      }
+      this.validateAlarg(tr, tl);
+      assignment_expression _assignment_expression_2 = asexp.getAssignment_expression();
+      conditional_expression _conditional_expression_1 = _assignment_expression_2.getConditional_expression();
+      logical_or_expression _logical_or_expression_1 = _conditional_expression_1.getLogical_or_expression();
+      logical_and_expression _logical_and_expression_1 = _logical_or_expression_1.getLogical_and_expression();
+      inclusive_or_expression _inclusive_or_expression_1 = _logical_and_expression_1.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression_1 = _inclusive_or_expression_1.getExclusive_or_expression();
+      and_expression _and_expression_1 = _exclusive_or_expression_1.getAnd_expression();
+      equality_expression _equality_expression_1 = _and_expression_1.getEquality_expression();
+      relational_expression _relational_expression_1 = _equality_expression_1.getRelational_expression();
+      shift_expression _shift_expression_1 = _relational_expression_1.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_2 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_2 = _unary_expression_2.getPostfix_expression();
+      postfix_expression_linha mthodCall = _postfix_expression_2.getPostfix_expression_linha();
     }
     Set<String> _keySet_1 = this.variables.keySet();
     boolean _contains_1 = _keySet_1.contains(idLeft);
     boolean _not_1 = (!_contains_1);
     if (_not_1) {
       this.error("Variavel não declarada", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+  }
+  
+  public void validateAlarg(final String tr, final String tl) {
+    boolean _and = false;
+    boolean _equals = Objects.equal(tl, "int");
+    if (!_equals) {
+      _and = false;
+    } else {
+      boolean _equals_1 = Objects.equal(tr, "float");
+      _and = _equals_1;
+    }
+    if (_and) {
+      this.error("Tipos incompativeis, De float para int", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_1 = false;
+    boolean _equals_2 = Objects.equal(tl, "int");
+    if (!_equals_2) {
+      _and_1 = false;
+    } else {
+      boolean _equals_3 = Objects.equal(tr, "double");
+      _and_1 = _equals_3;
+    }
+    if (_and_1) {
+      this.error("Tipos incompativeis, De double para int", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_2 = false;
+    boolean _equals_4 = Objects.equal(tl, "short");
+    if (!_equals_4) {
+      _and_2 = false;
+    } else {
+      boolean _equals_5 = Objects.equal(tr, "float");
+      _and_2 = _equals_5;
+    }
+    if (_and_2) {
+      this.error("Tipos incompativeis, De float para short", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_3 = false;
+    boolean _equals_6 = Objects.equal(tl, "short");
+    if (!_equals_6) {
+      _and_3 = false;
+    } else {
+      boolean _equals_7 = Objects.equal(tr, "double");
+      _and_3 = _equals_7;
+    }
+    if (_and_3) {
+      this.error("Tipos incompativeis, De double para short", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_4 = false;
+    boolean _equals_8 = Objects.equal(tl, "long");
+    if (!_equals_8) {
+      _and_4 = false;
+    } else {
+      boolean _equals_9 = Objects.equal(tr, "float");
+      _and_4 = _equals_9;
+    }
+    if (_and_4) {
+      this.error("Tipos incompativeis, De float para long", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_5 = false;
+    boolean _equals_10 = Objects.equal(tl, "long");
+    if (!_equals_10) {
+      _and_5 = false;
+    } else {
+      boolean _equals_11 = Objects.equal(tr, "double");
+      _and_5 = _equals_11;
+    }
+    if (_and_5) {
+      this.error("Tipos incompativeis, De double para long", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_6 = false;
+    boolean _equals_12 = Objects.equal(tl, "int");
+    if (!_equals_12) {
+      _and_6 = false;
+    } else {
+      boolean _equals_13 = Objects.equal(tr, "long");
+      _and_6 = _equals_13;
+    }
+    if (_and_6) {
+      this.error("Tipos incompativeis, De int para long", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_7 = false;
+    boolean _equals_14 = Objects.equal(tl, "signed");
+    if (!_equals_14) {
+      _and_7 = false;
+    } else {
+      boolean _equals_15 = Objects.equal(tr, "unsigned");
+      _and_7 = _equals_15;
+    }
+    if (_and_7) {
+      this.error("Tipos unsigned, De long para signed", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    boolean _and_8 = false;
+    boolean _equals_16 = Objects.equal(tl, "unsigned");
+    if (!_equals_16) {
+      _and_8 = false;
+    } else {
+      boolean _equals_17 = Objects.equal(tr, "signed");
+      _and_8 = _equals_17;
+    }
+    if (_and_8) {
+      this.error("Tipos incompativeis, De unsigned para signed", 
         AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
     }
   }

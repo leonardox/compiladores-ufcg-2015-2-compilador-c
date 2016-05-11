@@ -75,7 +75,22 @@ class AnsicValidator extends AbstractAnsicValidator {
 			}			
 			var tr = variables.get(idRight);
 			var tl = variables.get(idLeft);		
-			if(tl == "int" && tr=="float"){
+			validateAlarg(tr,tl)
+			var mthodCall = asexp.assignment_expression.conditional_expression.
+					logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+					and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+					multiplicative_expression.cast_expression.unary_expression.postfix_expression.postfix_expression_linha				
+		}
+		
+		if(!variables.keySet.contains(idLeft)){
+			error('Variavel não declarada',
+				AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
+			);
+		}
+	}
+	
+	def validateAlarg(String tr, String tl){
+		if(tl == "int" && tr=="float"){
 				error('Tipos incompativeis, De float para int',
 					AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
 				);
@@ -119,14 +134,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 				error('Tipos incompativeis, De unsigned para signed',
 					AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
 				);
-			}					
-		}
-		
-		if(!variables.keySet.contains(idLeft)){
-			error('Variavel não declarada',
-				AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
-			);
-		}
+			}	
 	}
 	
 	@Check
