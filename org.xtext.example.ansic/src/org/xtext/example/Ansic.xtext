@@ -66,9 +66,9 @@ type_specifier
 enum_specifier
 	: 'enum' '{' enumerator_list=enumerator_list '}'
 	| 'enum' '{' enumerator_list=enumerator_list ',' '}'
-	| 'enum' identifier=ID '{' enumerator_list=enumerator_list '}'
-	| 'enum' identifier=ID '{' enumerator_list=enumerator_list ',' '}'
-	| 'enum' identifier=ID
+	| 'enum' identifier=IDz '{' enumerator_list=enumerator_list '}'
+	| 'enum' identifier=IDz '{' enumerator_list=enumerator_list ',' '}'
+	| 'enum' identifier=IDz
 	;
 
 enumerator_list
@@ -91,7 +91,7 @@ atomic_type_specifier
 
 struct_or_union_specifier
 	: struct_or_union=struct_or_union '{' struct_declaration_list=struct_declaration_list '}'
-	| struct_or_union=struct_or_union identifier=ID struct_or_union_specifier_complement=struct_or_union_specifier_complement
+	| struct_or_union=struct_or_union identifier=IDz struct_or_union_specifier_complement=struct_or_union_specifier_complement
 	;
 
 struct_or_union
@@ -188,7 +188,7 @@ type_qualifier_list_linha
 ;
 
 direct_declarator
-	: identifier=ID direct_declarator_linha=direct_declarator_linha
+	: identifier=IDz direct_declarator_linha=direct_declarator_linha
 	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
 ;
 
@@ -274,11 +274,11 @@ direct_abstract_declarator_complement:
 ;
 
 identifier_list
-	: identifier=ID identifier_list_linha=identifier_list_linha 
+	: identifier=IDz identifier_list_linha=identifier_list_linha 
 	;
 	
 identifier_list_linha
-	: {IdentifierListLinhaAction}(',' identifier=ID identifier_list_linha=identifier_list_linha)?
+	: {IdentifierListLinhaAction}(',' identifier=IDz identifier_list_linha=identifier_list_linha)?
 ;
 
 translation_unit_linha:
@@ -286,7 +286,7 @@ translation_unit_linha:
 	;
 
 primary_expression:
-	identifier=ID
+	identifier=IDz
 	| constant=constant
 	| string=string_ufcg
 	| '(' expression=expression ')'
@@ -294,7 +294,7 @@ primary_expression:
 
 //TODO NINGUEM CHAMA
 enumeration_constant		/* before it has been defined as such */
-	: identifier=ID
+	: identifier=IDz
 		
 	;
 
@@ -359,7 +359,7 @@ designator_list_linha
 
 designator
 	: '[' constant_expression=conditional_expression ']'
-	| '.' identifier=ID
+	| '.' identifier=IDz
 ;
 
 static_assert_declaration
@@ -371,8 +371,8 @@ postfix_expression_complement:
 	{PostfixExpressionComplementExpression}'[' expression=expression ']'
 	|{PostfixExpressionComplementEmpty}'(' ')'
 	|{PostfixExpressionComplementArgList}'(' argument_expression_list+=argument_expression_list ')'
-	|{PostfixExpressionComplementIdentifier}'.' identifier=ID
-	|{PostfixExpressionComplementPointer}'->' identifier=ID
+	|{PostfixExpressionComplementIdentifier}'.' identifier=IDz
+	|{PostfixExpressionComplementPointer}'->' identifier=IDz
 	|{PostfixExpressionComplementIncrement}'++'
 	|{PostfixExpressionComplementDecrement}'--'
 ;
@@ -478,7 +478,7 @@ statement
 
 
 jump_statement
-	: 'goto' identifier=ID ';'
+	: 'goto' identifier=IDz ';'
 	| 'continue' ';'
 	| 'break' ';'
 	| 'return' ';'
@@ -505,7 +505,7 @@ selection_statement
 
 
 labeled_statement
-	: identifier=ID ':' statement=statement
+	: identifier=IDz ':' statement=statement
 	| 'case' conditional_expression=conditional_expression ':' statement=statement
 	| 'default' ':' statement=statement
 ;
@@ -655,6 +655,8 @@ constant
 	| enumz='enum'	/* after it has been defined as such */
 	;
 
+
+terminal IDz : ('a'..'z'|'A'..'Z'|'_')+;
 
 terminal FLOAT:
 	('0'..'9')+ '.' ('0'..'9')*

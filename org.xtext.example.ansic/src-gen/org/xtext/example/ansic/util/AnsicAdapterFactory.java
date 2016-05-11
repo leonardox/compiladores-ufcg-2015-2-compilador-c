@@ -241,9 +241,9 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createparameter_type_listAdapter();
       }
       @Override
-      public Adapter caseparameter_list(parameter_list object)
+      public Adapter caseparameter_lista(parameter_lista object)
       {
-        return createparameter_listAdapter();
+        return createparameter_listaAdapter();
       }
       @Override
       public Adapter caseparameter_list_linha(parameter_list_linha object)
@@ -1328,16 +1328,16 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.parameter_list <em>parameter list</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.parameter_lista <em>parameter lista</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.ansic.parameter_list
+   * @see org.xtext.example.ansic.parameter_lista
    * @generated
    */
-  public Adapter createparameter_listAdapter()
+  public Adapter createparameter_listaAdapter()
   {
     return null;
   }

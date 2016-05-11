@@ -130,11 +130,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//direct_declarator_complemento/identifier_list"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//parameter_type_list">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_type_list/parameter_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_type_list/parameter_lista"/>
     </genClasses>
-    <genClasses ecoreClass="Ansic.ecore#//parameter_list">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_list/parameter_declaration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_list/parameter_list_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//parameter_lista">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_lista/parameter_declarations"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//parameter_list_linha">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//parameter_list_linha/parameter_declaration"/>

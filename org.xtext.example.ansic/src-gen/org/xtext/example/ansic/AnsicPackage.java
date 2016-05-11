@@ -1334,13 +1334,13 @@ public interface AnsicPackage extends EPackage
   int PARAMETER_TYPE_LIST = 32;
 
   /**
-   * The feature id for the '<em><b>Parameter list</b></em>' containment reference list.
+   * The feature id for the '<em><b>Parameter lista</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_TYPE_LIST__PARAMETER_LIST = 0;
+  int PARAMETER_TYPE_LIST__PARAMETER_LISTA = 0;
 
   /**
    * The number of structural features of the '<em>parameter type list</em>' class.
@@ -1352,41 +1352,32 @@ public interface AnsicPackage extends EPackage
   int PARAMETER_TYPE_LIST_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_listImpl <em>parameter list</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_listaImpl <em>parameter lista</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.parameter_listImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list()
+   * @see org.xtext.example.ansic.impl.parameter_listaImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_lista()
    * @generated
    */
-  int PARAMETER_LIST = 33;
+  int PARAMETER_LISTA = 33;
 
   /**
-   * The feature id for the '<em><b>Parameter declaration</b></em>' containment reference.
+   * The feature id for the '<em><b>Parameter declarations</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_LIST__PARAMETER_DECLARATION = 0;
+  int PARAMETER_LISTA__PARAMETER_DECLARATIONS = 0;
 
   /**
-   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference list.
+   * The number of structural features of the '<em>parameter lista</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETER_LIST__PARAMETER_LIST_LINHA = 1;
-
-  /**
-   * The number of structural features of the '<em>parameter list</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_LIST_FEATURE_COUNT = 2;
+  int PARAMETER_LISTA_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_list_linhaImpl <em>parameter list linha</em>}' class.
@@ -6291,47 +6282,36 @@ public interface AnsicPackage extends EPackage
   EClass getparameter_type_list();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.parameter_type_list#getParameter_list <em>Parameter list</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_type_list#getParameter_lista <em>Parameter lista</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameter list</em>'.
-   * @see org.xtext.example.ansic.parameter_type_list#getParameter_list()
+   * @return the meta object for the containment reference '<em>Parameter lista</em>'.
+   * @see org.xtext.example.ansic.parameter_type_list#getParameter_lista()
    * @see #getparameter_type_list()
    * @generated
    */
-  EReference getparameter_type_list_Parameter_list();
+  EReference getparameter_type_list_Parameter_lista();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_list <em>parameter list</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_lista <em>parameter lista</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>parameter list</em>'.
-   * @see org.xtext.example.ansic.parameter_list
+   * @return the meta object for class '<em>parameter lista</em>'.
+   * @see org.xtext.example.ansic.parameter_lista
    * @generated
    */
-  EClass getparameter_list();
+  EClass getparameter_lista();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_list#getParameter_declaration <em>Parameter declaration</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.parameter_lista#getParameter_declarations <em>Parameter declarations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter declaration</em>'.
-   * @see org.xtext.example.ansic.parameter_list#getParameter_declaration()
-   * @see #getparameter_list()
+   * @return the meta object for the containment reference list '<em>Parameter declarations</em>'.
+   * @see org.xtext.example.ansic.parameter_lista#getParameter_declarations()
+   * @see #getparameter_lista()
    * @generated
    */
-  EReference getparameter_list_Parameter_declaration();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.parameter_list#getParameter_list_linha <em>Parameter list linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameter list linha</em>'.
-   * @see org.xtext.example.ansic.parameter_list#getParameter_list_linha()
-   * @see #getparameter_list()
-   * @generated
-   */
-  EReference getparameter_list_Parameter_list_linha();
+  EReference getparameter_lista_Parameter_declarations();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_list_linha <em>parameter list linha</em>}'.
@@ -10405,38 +10385,30 @@ public interface AnsicPackage extends EPackage
     EClass PARAMETER_TYPE_LIST = eINSTANCE.getparameter_type_list();
 
     /**
-     * The meta object literal for the '<em><b>Parameter list</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Parameter lista</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PARAMETER_TYPE_LIST__PARAMETER_LIST = eINSTANCE.getparameter_type_list_Parameter_list();
+    EReference PARAMETER_TYPE_LIST__PARAMETER_LISTA = eINSTANCE.getparameter_type_list_Parameter_lista();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_listImpl <em>parameter list</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_listaImpl <em>parameter lista</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.parameter_listImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list()
+     * @see org.xtext.example.ansic.impl.parameter_listaImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_lista()
      * @generated
      */
-    EClass PARAMETER_LIST = eINSTANCE.getparameter_list();
+    EClass PARAMETER_LISTA = eINSTANCE.getparameter_lista();
 
     /**
-     * The meta object literal for the '<em><b>Parameter declaration</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Parameter declarations</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PARAMETER_LIST__PARAMETER_DECLARATION = eINSTANCE.getparameter_list_Parameter_declaration();
-
-    /**
-     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_LIST__PARAMETER_LIST_LINHA = eINSTANCE.getparameter_list_Parameter_list_linha();
+    EReference PARAMETER_LISTA__PARAMETER_DECLARATIONS = eINSTANCE.getparameter_lista_Parameter_declarations();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_list_linhaImpl <em>parameter list linha</em>}' class.

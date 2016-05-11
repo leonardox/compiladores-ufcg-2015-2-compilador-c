@@ -154,7 +154,8 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDirect_declarator_complementoAccess().getGroup_10(), "rule__Direct_declarator_complemento__Group_10__0");
 					put(grammarAccess.getDirect_declarator_complementoAccess().getGroup_11(), "rule__Direct_declarator_complemento__Group_11__0");
 					put(grammarAccess.getParameter_type_listAccess().getGroup_0(), "rule__Parameter_type_list__Group_0__0");
-					put(grammarAccess.getParameter_listAccess().getGroup(), "rule__Parameter_list__Group__0");
+					put(grammarAccess.getParameter_listaAccess().getGroup(), "rule__Parameter_lista__Group__0");
+					put(grammarAccess.getParameter_listaAccess().getGroup_1(), "rule__Parameter_lista__Group_1__0");
 					put(grammarAccess.getParameter_list_linhaAccess().getGroup(), "rule__Parameter_list_linha__Group__0");
 					put(grammarAccess.getParameter_declarationAccess().getGroup_0(), "rule__Parameter_declaration__Group_0__0");
 					put(grammarAccess.getParameter_declarationAccess().getGroup_1(), "rule__Parameter_declaration__Group_1__0");
@@ -438,10 +439,10 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDirect_declarator_complementoAccess().getAssignment_expressionAssignment_8_1(), "rule__Direct_declarator_complemento__Assignment_expressionAssignment_8_1");
 					put(grammarAccess.getDirect_declarator_complementoAccess().getParameter_type_listAssignment_9_1(), "rule__Direct_declarator_complemento__Parameter_type_listAssignment_9_1");
 					put(grammarAccess.getDirect_declarator_complementoAccess().getIdentifier_listAssignment_11_1(), "rule__Direct_declarator_complemento__Identifier_listAssignment_11_1");
-					put(grammarAccess.getParameter_type_listAccess().getParameter_listAssignment_0_0(), "rule__Parameter_type_list__Parameter_listAssignment_0_0");
-					put(grammarAccess.getParameter_type_listAccess().getParameter_listAssignment_1(), "rule__Parameter_type_list__Parameter_listAssignment_1");
-					put(grammarAccess.getParameter_listAccess().getParameter_declarationAssignment_0(), "rule__Parameter_list__Parameter_declarationAssignment_0");
-					put(grammarAccess.getParameter_listAccess().getParameter_list_linhaAssignment_1(), "rule__Parameter_list__Parameter_list_linhaAssignment_1");
+					put(grammarAccess.getParameter_type_listAccess().getParameter_listaAssignment_0_0(), "rule__Parameter_type_list__Parameter_listaAssignment_0_0");
+					put(grammarAccess.getParameter_type_listAccess().getParameter_listaAssignment_1(), "rule__Parameter_type_list__Parameter_listaAssignment_1");
+					put(grammarAccess.getParameter_listaAccess().getParameter_declarationsAssignment_0(), "rule__Parameter_lista__Parameter_declarationsAssignment_0");
+					put(grammarAccess.getParameter_listaAccess().getParameter_declarationsAssignment_1_1(), "rule__Parameter_lista__Parameter_declarationsAssignment_1_1");
 					put(grammarAccess.getParameter_list_linhaAccess().getParameter_declarationAssignment_1(), "rule__Parameter_list_linha__Parameter_declarationAssignment_1");
 					put(grammarAccess.getParameter_list_linhaAccess().getParameter_list_linhaAssignment_2(), "rule__Parameter_list_linha__Parameter_list_linhaAssignment_2");
 					put(grammarAccess.getParameter_declarationAccess().getDeclaration_specifiersAssignment_0_0(), "rule__Parameter_declaration__Declaration_specifiersAssignment_0_0");

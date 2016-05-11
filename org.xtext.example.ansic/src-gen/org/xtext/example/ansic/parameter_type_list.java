@@ -3,8 +3,6 @@
  */
 package org.xtext.example.ansic;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.parameter_type_list#getParameter_list <em>Parameter list</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.parameter_type_list#getParameter_lista <em>Parameter lista</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getparameter_type_list()
@@ -26,19 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface parameter_type_list extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Parameter list</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.ansic.parameter_list}.
+   * Returns the value of the '<em><b>Parameter lista</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameter list</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Parameter lista</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameter list</em>' containment reference list.
-   * @see org.xtext.example.ansic.AnsicPackage#getparameter_type_list_Parameter_list()
+   * @return the value of the '<em>Parameter lista</em>' containment reference.
+   * @see #setParameter_lista(parameter_lista)
+   * @see org.xtext.example.ansic.AnsicPackage#getparameter_type_list_Parameter_lista()
    * @model containment="true"
    * @generated
    */
-  EList<parameter_list> getParameter_list();
+  parameter_lista getParameter_lista();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.parameter_type_list#getParameter_lista <em>Parameter lista</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Parameter lista</em>' containment reference.
+   * @see #getParameter_lista()
+   * @generated
+   */
+  void setParameter_lista(parameter_lista value);
 
 } // parameter_type_list

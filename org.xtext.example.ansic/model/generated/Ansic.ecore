@@ -183,14 +183,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="parameter_type_list">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_list" upperBound="-1"
-        eType="#//parameter_list" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_lista" eType="#//parameter_lista"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="parameter_list">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_declaration"
-        eType="#//parameter_declaration" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_list_linha" upperBound="-1"
-        eType="#//parameter_list_linha" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="parameter_lista">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_declarations"
+        upperBound="-1" eType="#//parameter_declaration" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="parameter_list_linha">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_declaration"

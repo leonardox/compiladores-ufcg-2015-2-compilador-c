@@ -38,7 +38,8 @@ import org.xtext.example.ansic.initializer;
 import org.xtext.example.ansic.logical_and_expression;
 import org.xtext.example.ansic.logical_or_expression;
 import org.xtext.example.ansic.multiplicative_expression;
-import org.xtext.example.ansic.parameter_list;
+import org.xtext.example.ansic.parameter_declaration;
+import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.postfix_expression;
 import org.xtext.example.ansic.primary_expression;
@@ -59,6 +60,8 @@ import org.xtext.example.validation.AbstractAnsicValidator;
 @SuppressWarnings("all")
 public class AnsicValidator extends AbstractAnsicValidator {
   public static class Function {
+    public int param_number = 0;
+    
     public List<String> params_types = new ArrayList<String>();
     
     public String retType;
@@ -71,17 +74,6 @@ public class AnsicValidator extends AbstractAnsicValidator {
   private HashMap<String, String> variables = CollectionLiterals.<String, String>newHashMap();
   
   private HashMap<String, AnsicValidator.Function> functions = CollectionLiterals.<String, AnsicValidator.Function>newHashMap();
-  
-  @Check
-  public void checkGreetingStartsWithCapital(final type_specifier tName) {
-    String _type_name_str = tName.getType_name_str();
-    InputOutput.<String>println(_type_name_str);
-    String _type_name_str_1 = tName.getType_name_str();
-    boolean _equals = _type_name_str_1.equals("char");
-    if (_equals) {
-      this.error("Não pode char, cuzão!", AnsicPackage.Literals.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER);
-    }
-  }
   
   @Check
   public String checkDeclarationTypes(final declaration decl) {
@@ -347,11 +339,11 @@ public class AnsicValidator extends AbstractAnsicValidator {
   }
   
   @Check
-  public Object checkFunctionDefinition(final function_definition func_decl) {
-    Object _xblockexpression = null;
+  public AnsicValidator.Function checkFunctionDefinition(final function_definition func_decl) {
+    AnsicValidator.Function _xblockexpression = null;
     {
       AnsicValidator.Function f = new AnsicValidator.Function();
-      Object _xifexpression = null;
+      AnsicValidator.Function _xifexpression = null;
       EList<declaration_list> _declaration_list = func_decl.getDeclaration_list();
       boolean _equals = Objects.equal(_declaration_list, null);
       if (_equals) {
@@ -371,7 +363,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
         }
         _xifexpression = _xblockexpression_1;
       } else {
-        String _xblockexpression_2 = null;
+        AnsicValidator.Function _xblockexpression_2 = null;
         {
           EList<declaration_specifiers> _declaration_specifiers = func_decl.getDeclaration_specifiers();
           declaration_specifiers _get = _declaration_specifiers.get(0);
@@ -388,10 +380,20 @@ public class AnsicValidator extends AbstractAnsicValidator {
           direct_declarator_linha _direct_declarator_linha = _direct_declarator_1.getDirect_declarator_linha();
           direct_declarator_complemento _direct_declarator_complemento = _direct_declarator_linha.getDirect_declarator_complemento();
           parameter_type_list _parameter_type_list = _direct_declarator_complemento.getParameter_type_list();
-          EList<parameter_list> _parameter_list = _parameter_type_list.getParameter_list();
-          parameter_list _get_1 = _parameter_list.get(0);
-          String _plus = ("size:" + _get_1);
-          _xblockexpression_2 = InputOutput.<String>println(_plus);
+          parameter_lista _parameter_lista = _parameter_type_list.getParameter_lista();
+          EList<parameter_declaration> params = _parameter_lista.getParameter_declarations();
+          int _size = params.size();
+          f.param_number = _size;
+          for (int i = 0; (i < f.param_number); i++) {
+            {
+              parameter_declaration decl = params.get(i);
+              declaration_specifiers _declaration_specifiers_1 = decl.getDeclaration_specifiers();
+              type_specifier _type_specifier_1 = _declaration_specifiers_1.getType_specifier();
+              String _type_name_str_1 = _type_specifier_1.getType_name_str();
+              f.params_types.add(_type_name_str_1);
+            }
+          }
+          _xblockexpression_2 = this.functions.put(f.name, f);
         }
         _xifexpression = _xblockexpression_2;
       }

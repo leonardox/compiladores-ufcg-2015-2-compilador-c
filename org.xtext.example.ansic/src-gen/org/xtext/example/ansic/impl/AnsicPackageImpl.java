@@ -124,8 +124,8 @@ import org.xtext.example.ansic.multiplicative_expression;
 import org.xtext.example.ansic.multiplicative_expression_complement;
 import org.xtext.example.ansic.multiplicative_expression_linha;
 import org.xtext.example.ansic.parameter_declaration;
-import org.xtext.example.ansic.parameter_list;
 import org.xtext.example.ansic.parameter_list_linha;
+import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.pointer;
 import org.xtext.example.ansic.postfix_expression;
@@ -404,7 +404,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass parameter_listEClass = null;
+  private EClass parameter_listaEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -2245,7 +2245,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getparameter_type_list_Parameter_list()
+  public EReference getparameter_type_list_Parameter_lista()
   {
     return (EReference)parameter_type_listEClass.getEStructuralFeatures().get(0);
   }
@@ -2255,9 +2255,9 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getparameter_list()
+  public EClass getparameter_lista()
   {
-    return parameter_listEClass;
+    return parameter_listaEClass;
   }
 
   /**
@@ -2265,19 +2265,9 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getparameter_list_Parameter_declaration()
+  public EReference getparameter_lista_Parameter_declarations()
   {
-    return (EReference)parameter_listEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getparameter_list_Parameter_list_linha()
-  {
-    return (EReference)parameter_listEClass.getEStructuralFeatures().get(1);
+    return (EReference)parameter_listaEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5450,11 +5440,10 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(direct_declarator_complementoEClass, DIRECT_DECLARATOR_COMPLEMENTO__IDENTIFIER_LIST);
 
     parameter_type_listEClass = createEClass(PARAMETER_TYPE_LIST);
-    createEReference(parameter_type_listEClass, PARAMETER_TYPE_LIST__PARAMETER_LIST);
+    createEReference(parameter_type_listEClass, PARAMETER_TYPE_LIST__PARAMETER_LISTA);
 
-    parameter_listEClass = createEClass(PARAMETER_LIST);
-    createEReference(parameter_listEClass, PARAMETER_LIST__PARAMETER_DECLARATION);
-    createEReference(parameter_listEClass, PARAMETER_LIST__PARAMETER_LIST_LINHA);
+    parameter_listaEClass = createEClass(PARAMETER_LISTA);
+    createEReference(parameter_listaEClass, PARAMETER_LISTA__PARAMETER_DECLARATIONS);
 
     parameter_list_linhaEClass = createEClass(PARAMETER_LIST_LINHA);
     createEReference(parameter_list_linhaEClass, PARAMETER_LIST_LINHA__PARAMETER_DECLARATION);
@@ -6069,11 +6058,10 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getdirect_declarator_complemento_Identifier_list(), this.getidentifier_list(), null, "identifier_list", null, 0, 1, direct_declarator_complemento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameter_type_listEClass, parameter_type_list.class, "parameter_type_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getparameter_type_list_Parameter_list(), this.getparameter_list(), null, "parameter_list", null, 0, -1, parameter_type_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getparameter_type_list_Parameter_lista(), this.getparameter_lista(), null, "parameter_lista", null, 0, 1, parameter_type_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(parameter_listEClass, parameter_list.class, "parameter_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getparameter_list_Parameter_declaration(), this.getparameter_declaration(), null, "parameter_declaration", null, 0, 1, parameter_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getparameter_list_Parameter_list_linha(), this.getparameter_list_linha(), null, "parameter_list_linha", null, 0, -1, parameter_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(parameter_listaEClass, parameter_lista.class, "parameter_lista", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getparameter_lista_Parameter_declarations(), this.getparameter_declaration(), null, "parameter_declarations", null, 0, -1, parameter_lista.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(parameter_list_linhaEClass, parameter_list_linha.class, "parameter_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getparameter_list_linha_Parameter_declaration(), this.getparameter_declaration(), null, "parameter_declaration", null, 0, 1, parameter_list_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

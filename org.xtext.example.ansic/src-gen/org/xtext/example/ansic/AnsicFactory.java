@@ -321,13 +321,13 @@ public interface AnsicFactory extends EFactory
   parameter_type_list createparameter_type_list();
 
   /**
-   * Returns a new object of class '<em>parameter list</em>'.
+   * Returns a new object of class '<em>parameter lista</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>parameter list</em>'.
+   * @return a new object of class '<em>parameter lista</em>'.
    * @generated
    */
-  parameter_list createparameter_list();
+  parameter_lista createparameter_lista();
 
   /**
    * Returns a new object of class '<em>parameter list linha</em>'.

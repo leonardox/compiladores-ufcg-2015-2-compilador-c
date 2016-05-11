@@ -108,8 +108,8 @@ import org.xtext.example.ansic.logical_or_expression;
 import org.xtext.example.ansic.multiplicative_expression;
 import org.xtext.example.ansic.multiplicative_expression_complement;
 import org.xtext.example.ansic.parameter_declaration;
-import org.xtext.example.ansic.parameter_list;
 import org.xtext.example.ansic.parameter_list_linha;
+import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.pointer;
 import org.xtext.example.ansic.postfix_expression;
@@ -429,11 +429,11 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.PARAMETER_DECLARATION:
 				sequence_parameter_declaration(context, (parameter_declaration) semanticObject); 
 				return; 
-			case AnsicPackage.PARAMETER_LIST:
-				sequence_parameter_list(context, (parameter_list) semanticObject); 
-				return; 
 			case AnsicPackage.PARAMETER_LIST_LINHA:
 				sequence_parameter_list_linha(context, (parameter_list_linha) semanticObject); 
+				return; 
+			case AnsicPackage.PARAMETER_LISTA:
+				sequence_parameter_lista(context, (parameter_lista) semanticObject); 
 				return; 
 			case AnsicPackage.PARAMETER_TYPE_LIST:
 				sequence_parameter_type_list(context, (parameter_type_list) semanticObject); 
@@ -936,7 +936,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     designator returns designator
 	 *
 	 * Constraint:
-	 *     (constant_expression=conditional_expression | identifier=ID)
+	 *     (constant_expression=conditional_expression | identifier=IDz)
 	 */
 	protected void sequence_designator(ISerializationContext context, designator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1082,7 +1082,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     direct_declarator returns direct_declarator
 	 *
 	 * Constraint:
-	 *     ((identifier=ID direct_declarator_linha=direct_declarator_linha?) | (declarator=declarator direct_declarator_linha=direct_declarator_linha?))
+	 *     ((identifier=IDz direct_declarator_linha=direct_declarator_linha) | (declarator=declarator direct_declarator_linha=direct_declarator_linha))
 	 */
 	protected void sequence_direct_declarator(ISerializationContext context, direct_declarator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1094,10 +1094,19 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     direct_declarator_linha returns direct_declarator_linha
 	 *
 	 * Constraint:
-	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha?)
+	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)
 	 */
 	protected void sequence_direct_declarator_linha(ISerializationContext context, direct_declarator_linha semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_COMPLEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_COMPLEMENTO));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDirect_declarator_linhaAccess().getDirect_declarator_complementoDirect_declarator_complementoParserRuleCall_0_0(), semanticObject.getDirect_declarator_complemento());
+		feeder.accept(grammarAccess.getDirect_declarator_linhaAccess().getDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_1_0(), semanticObject.getDirect_declarator_linha());
+		feeder.finish();
 	}
 	
 	
@@ -1109,9 +1118,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (
 	 *         enumerator_list=enumerator_list | 
 	 *         enumerator_list=enumerator_list | 
-	 *         (identifier=ID enumerator_list=enumerator_list) | 
-	 *         (identifier=ID enumerator_list=enumerator_list) | 
-	 *         identifier=ID
+	 *         (identifier=IDz enumerator_list=enumerator_list) | 
+	 *         (identifier=IDz enumerator_list=enumerator_list) | 
+	 *         identifier=IDz
 	 *     )
 	 */
 	protected void sequence_enum_specifier(ISerializationContext context, enum_specifier semanticObject) {
@@ -1124,7 +1133,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     enumeration_constant returns enumeration_constant
 	 *
 	 * Constraint:
-	 *     identifier=ID
+	 *     identifier=IDz
 	 */
 	protected void sequence_enumeration_constant(ISerializationContext context, enumeration_constant semanticObject) {
 		if (errorAcceptor != null) {
@@ -1132,7 +1141,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ENUMERATION_CONSTANT__IDENTIFIER));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEnumeration_constantAccess().getIdentifierIDTerminalRuleCall_0(), semanticObject.getIdentifier());
+		feeder.accept(grammarAccess.getEnumeration_constantAccess().getIdentifierIDzTerminalRuleCall_0(), semanticObject.getIdentifier());
 		feeder.finish();
 	}
 	
@@ -1400,7 +1409,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     identifier_list returns identifier_list
 	 *
 	 * Constraint:
-	 *     (identifier=ID identifier_list_linha=identifier_list_linha)
+	 *     (identifier=IDz identifier_list_linha=identifier_list_linha)
 	 */
 	protected void sequence_identifier_list(ISerializationContext context, identifier_list semanticObject) {
 		if (errorAcceptor != null) {
@@ -1410,7 +1419,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.IDENTIFIER_LIST__IDENTIFIER_LIST_LINHA));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIdentifier_listAccess().getIdentifierIDTerminalRuleCall_0_0(), semanticObject.getIdentifier());
+		feeder.accept(grammarAccess.getIdentifier_listAccess().getIdentifierIDzTerminalRuleCall_0_0(), semanticObject.getIdentifier());
 		feeder.accept(grammarAccess.getIdentifier_listAccess().getIdentifier_list_linhaIdentifier_list_linhaParserRuleCall_1_0(), semanticObject.getIdentifier_list_linha());
 		feeder.finish();
 	}
@@ -1421,7 +1430,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     identifier_list_linha returns IdentifierListLinhaAction
 	 *
 	 * Constraint:
-	 *     (identifier=ID identifier_list_linha=identifier_list_linha)?
+	 *     (identifier=IDz identifier_list_linha=identifier_list_linha)?
 	 */
 	protected void sequence_identifier_list_linha(ISerializationContext context, IdentifierListLinhaAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1581,7 +1590,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     jump_statement returns jump_statement
 	 *
 	 * Constraint:
-	 *     (identifier=ID | expression=expression)
+	 *     (identifier=IDz | expression=expression)
 	 */
 	protected void sequence_jump_statement(ISerializationContext context, jump_statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1593,7 +1602,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     labeled_statement returns labeled_statement
 	 *
 	 * Constraint:
-	 *     ((identifier=ID statement=statement) | (conditional_expression=conditional_expression statement=statement) | statement=statement)
+	 *     ((identifier=IDz statement=statement) | (conditional_expression=conditional_expression statement=statement) | statement=statement)
 	 */
 	protected void sequence_labeled_statement(ISerializationContext context, labeled_statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1732,7 +1741,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     parameter_list_linha returns parameter_list_linha
 	 *
 	 * Constraint:
-	 *     (parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?)
+	 *     (parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha)
 	 */
 	protected void sequence_parameter_list_linha(ISerializationContext context, parameter_list_linha semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1741,12 +1750,12 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     parameter_list returns parameter_list
+	 *     parameter_lista returns parameter_lista
 	 *
 	 * Constraint:
-	 *     (parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?)
+	 *     (parameter_declarations+=parameter_declaration parameter_declarations+=parameter_declaration*)
 	 */
-	protected void sequence_parameter_list(ISerializationContext context, parameter_list semanticObject) {
+	protected void sequence_parameter_lista(ISerializationContext context, parameter_lista semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1756,7 +1765,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     parameter_type_list returns parameter_type_list
 	 *
 	 * Constraint:
-	 *     (parameter_list+=parameter_list | parameter_list+=parameter_list)
+	 *     (parameter_lista=parameter_lista | parameter_lista=parameter_lista)
 	 */
 	protected void sequence_parameter_type_list(ISerializationContext context, parameter_type_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1834,7 +1843,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     postfix_expression_complement returns PostfixExpressionComplementIdentifier
 	 *
 	 * Constraint:
-	 *     identifier=ID
+	 *     identifier=IDz
 	 */
 	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementIdentifier semanticObject) {
 		if (errorAcceptor != null) {
@@ -1842,7 +1851,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDTerminalRuleCall_3_2_0(), semanticObject.getIdentifier());
+		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_2_0(), semanticObject.getIdentifier());
 		feeder.finish();
 	}
 	
@@ -1864,7 +1873,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     postfix_expression_complement returns PostfixExpressionComplementPointer
 	 *
 	 * Constraint:
-	 *     identifier=ID
+	 *     identifier=IDz
 	 */
 	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementPointer semanticObject) {
 		if (errorAcceptor != null) {
@@ -1872,7 +1881,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDTerminalRuleCall_4_2_0(), semanticObject.getIdentifier());
+		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_2_0(), semanticObject.getIdentifier());
 		feeder.finish();
 	}
 	
@@ -1933,7 +1942,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     primary_expression returns primary_expression
 	 *
 	 * Constraint:
-	 *     (identifier=ID | constant=constant | string=string_ufcg | expression=expression | generic_selection=generic_selection)
+	 *     (identifier=IDz | constant=constant | string=string_ufcg | expression=expression | generic_selection=generic_selection)
 	 */
 	protected void sequence_primary_expression(ISerializationContext context, primary_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2225,7 +2234,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     (
 	 *         (struct_or_union=struct_or_union struct_declaration_list=struct_declaration_list) | 
-	 *         (struct_or_union=struct_or_union identifier=ID struct_or_union_specifier_complement=struct_or_union_specifier_complement)
+	 *         (struct_or_union=struct_or_union identifier=IDz struct_or_union_specifier_complement=struct_or_union_specifier_complement)
 	 *     )
 	 */
 	protected void sequence_struct_or_union_specifier(ISerializationContext context, struct_or_union_specifier semanticObject) {

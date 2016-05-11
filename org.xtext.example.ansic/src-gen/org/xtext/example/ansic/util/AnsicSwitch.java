@@ -305,10 +305,10 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AnsicPackage.PARAMETER_LIST:
+      case AnsicPackage.PARAMETER_LISTA:
       {
-        parameter_list parameter_list = (parameter_list)theEObject;
-        T result = caseparameter_list(parameter_list);
+        parameter_lista parameter_lista = (parameter_lista)theEObject;
+        T result = caseparameter_lista(parameter_lista);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1672,17 +1672,17 @@ public class AnsicSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>parameter list</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>parameter lista</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>parameter list</em>'.
+   * @return the result of interpreting the object as an instance of '<em>parameter lista</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseparameter_list(parameter_list object)
+  public T caseparameter_lista(parameter_lista object)
   {
     return null;
   }

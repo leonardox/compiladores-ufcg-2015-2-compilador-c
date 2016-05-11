@@ -98,7 +98,7 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.DIRECT_DECLARATOR_LINHA: return createdirect_declarator_linha();
       case AnsicPackage.DIRECT_DECLARATOR_COMPLEMENTO: return createdirect_declarator_complemento();
       case AnsicPackage.PARAMETER_TYPE_LIST: return createparameter_type_list();
-      case AnsicPackage.PARAMETER_LIST: return createparameter_list();
+      case AnsicPackage.PARAMETER_LISTA: return createparameter_lista();
       case AnsicPackage.PARAMETER_LIST_LINHA: return createparameter_list_linha();
       case AnsicPackage.PARAMETER_DECLARATION: return createparameter_declaration();
       case AnsicPackage.ABSTRACT_DECLARATOR: return createabstract_declarator();
@@ -585,10 +585,10 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public parameter_list createparameter_list()
+  public parameter_lista createparameter_lista()
   {
-    parameter_listImpl parameter_list = new parameter_listImpl();
-    return parameter_list;
+    parameter_listaImpl parameter_lista = new parameter_listaImpl();
+    return parameter_lista;
   }
 
   /**

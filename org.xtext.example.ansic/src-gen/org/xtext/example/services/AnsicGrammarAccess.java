@@ -562,7 +562,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Keyword cEnumKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cIdentifierAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_2_1_0 = (RuleCall)cIdentifierAssignment_2_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_2_1_0 = (RuleCall)cIdentifierAssignment_2_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		private final Assignment cEnumerator_listAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
 		private final RuleCall cEnumerator_listEnumerator_listParserRuleCall_2_3_0 = (RuleCall)cEnumerator_listAssignment_2_3.eContents().get(0);
@@ -570,7 +570,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Keyword cEnumKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cIdentifierAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_3_1_0 = (RuleCall)cIdentifierAssignment_3_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_3_1_0 = (RuleCall)cIdentifierAssignment_3_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		private final Assignment cEnumerator_listAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
 		private final RuleCall cEnumerator_listEnumerator_listParserRuleCall_3_3_0 = (RuleCall)cEnumerator_listAssignment_3_3.eContents().get(0);
@@ -579,19 +579,19 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
 		private final Keyword cEnumKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cIdentifierAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_4_1_0 = (RuleCall)cIdentifierAssignment_4_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_4_1_0 = (RuleCall)cIdentifierAssignment_4_1.eContents().get(0);
 		
 		//enum_specifier:
 		//	'enum' '{' enumerator_list=enumerator_list '}'
 		//	| 'enum' '{' enumerator_list=enumerator_list ',' '}'
-		//	| 'enum' identifier=ID '{' enumerator_list=enumerator_list '}'
-		//	| 'enum' identifier=ID '{' enumerator_list=enumerator_list ',' '}'
-		//	| 'enum' identifier=ID;
+		//	| 'enum' identifier=IDz '{' enumerator_list=enumerator_list '}'
+		//	| 'enum' identifier=IDz '{' enumerator_list=enumerator_list ',' '}'
+		//	| 'enum' identifier=IDz;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'enum' '{' enumerator_list=enumerator_list '}' | 'enum' '{' enumerator_list=enumerator_list ',' '}' | 'enum'
-		//identifier=ID '{' enumerator_list=enumerator_list '}' | 'enum' identifier=ID '{' enumerator_list=enumerator_list ','
-		//'}' | 'enum' identifier=ID
+		//identifier=IDz '{' enumerator_list=enumerator_list '}' | 'enum' identifier=IDz '{' enumerator_list=enumerator_list ','
+		//'}' | 'enum' identifier=IDz
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'enum' '{' enumerator_list=enumerator_list '}'
@@ -633,17 +633,17 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 		
-		//'enum' identifier=ID '{' enumerator_list=enumerator_list '}'
+		//'enum' identifier=IDz '{' enumerator_list=enumerator_list '}'
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//'enum'
 		public Keyword getEnumKeyword_2_0() { return cEnumKeyword_2_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_2_1() { return cIdentifierAssignment_2_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_2_1_0() { return cIdentifierIDTerminalRuleCall_2_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_2_1_0() { return cIdentifierIDzTerminalRuleCall_2_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_2() { return cLeftCurlyBracketKeyword_2_2; }
@@ -657,17 +657,17 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_2_4() { return cRightCurlyBracketKeyword_2_4; }
 		
-		//'enum' identifier=ID '{' enumerator_list=enumerator_list ',' '}'
+		//'enum' identifier=IDz '{' enumerator_list=enumerator_list ',' '}'
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//'enum'
 		public Keyword getEnumKeyword_3_0() { return cEnumKeyword_3_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_3_1() { return cIdentifierAssignment_3_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_3_1_0() { return cIdentifierIDTerminalRuleCall_3_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_3_1_0() { return cIdentifierIDzTerminalRuleCall_3_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_2() { return cLeftCurlyBracketKeyword_3_2; }
@@ -684,17 +684,17 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_3_5() { return cRightCurlyBracketKeyword_3_5; }
 		
-		//'enum' identifier=ID
+		//'enum' identifier=IDz
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'enum'
 		public Keyword getEnumKeyword_4_0() { return cEnumKeyword_4_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_4_1() { return cIdentifierAssignment_4_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_4_1_0() { return cIdentifierIDTerminalRuleCall_4_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_4_1_0() { return cIdentifierIDzTerminalRuleCall_4_1_0; }
 	}
 	public class Enumerator_listElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.enumerator_list");
@@ -852,18 +852,18 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cStruct_or_unionAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final RuleCall cStruct_or_unionStruct_or_unionParserRuleCall_1_0_0 = (RuleCall)cStruct_or_unionAssignment_1_0.eContents().get(0);
 		private final Assignment cIdentifierAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_1_1_0 = (RuleCall)cIdentifierAssignment_1_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_1_1_0 = (RuleCall)cIdentifierAssignment_1_1.eContents().get(0);
 		private final Assignment cStruct_or_union_specifier_complementAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cStruct_or_union_specifier_complementStruct_or_union_specifier_complementParserRuleCall_1_2_0 = (RuleCall)cStruct_or_union_specifier_complementAssignment_1_2.eContents().get(0);
 		
 		//struct_or_union_specifier:
 		//	struct_or_union=struct_or_union '{' struct_declaration_list=struct_declaration_list '}'
-		//	| struct_or_union=struct_or_union identifier=ID
+		//	| struct_or_union=struct_or_union identifier=IDz
 		//	struct_or_union_specifier_complement=struct_or_union_specifier_complement;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//struct_or_union=struct_or_union '{' struct_declaration_list=struct_declaration_list '}' |
-		//struct_or_union=struct_or_union identifier=ID
+		//struct_or_union=struct_or_union identifier=IDz
 		//struct_or_union_specifier_complement=struct_or_union_specifier_complement
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
@@ -888,7 +888,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_0_3() { return cRightCurlyBracketKeyword_0_3; }
 		
-		//struct_or_union=struct_or_union identifier=ID struct_or_union_specifier_complement=struct_or_union_specifier_complement
+		//struct_or_union=struct_or_union identifier=IDz struct_or_union_specifier_complement=struct_or_union_specifier_complement
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//struct_or_union=struct_or_union
@@ -897,11 +897,11 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//struct_or_union
 		public RuleCall getStruct_or_unionStruct_or_unionParserRuleCall_1_0_0() { return cStruct_or_unionStruct_or_unionParserRuleCall_1_0_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_1_1() { return cIdentifierAssignment_1_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_1_1_0() { return cIdentifierIDTerminalRuleCall_1_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_1_1_0() { return cIdentifierIDzTerminalRuleCall_1_1_0; }
 		
 		//struct_or_union_specifier_complement=struct_or_union_specifier_complement
 		public Assignment getStruct_or_union_specifier_complementAssignment_1_2() { return cStruct_or_union_specifier_complementAssignment_1_2; }
@@ -1719,7 +1719,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cIdentifierAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cIdentifierIDTerminalRuleCall_0_0_0 = (RuleCall)cIdentifierAssignment_0_0.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_0_0_0 = (RuleCall)cIdentifierAssignment_0_0.eContents().get(0);
 		private final Assignment cDirect_declarator_linhaAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final RuleCall cDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_0_1_0 = (RuleCall)cDirect_declarator_linhaAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
@@ -1731,30 +1731,30 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_1_3_0 = (RuleCall)cDirect_declarator_linhaAssignment_1_3.eContents().get(0);
 		
 		//direct_declarator:
-		//	identifier=ID direct_declarator_linha=direct_declarator_linha?
-		//	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha?;
+		//	identifier=IDz direct_declarator_linha=direct_declarator_linha
+		//	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//identifier=ID direct_declarator_linha=direct_declarator_linha? | '(' declarator=declarator ')'
-		//direct_declarator_linha=direct_declarator_linha?
+		//identifier=IDz direct_declarator_linha=direct_declarator_linha | '(' declarator=declarator ')'
+		//direct_declarator_linha=direct_declarator_linha
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//identifier=ID direct_declarator_linha=direct_declarator_linha?
+		//identifier=IDz direct_declarator_linha=direct_declarator_linha
 		public Group getGroup_0() { return cGroup_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_0_0() { return cIdentifierAssignment_0_0; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_0_0_0() { return cIdentifierIDTerminalRuleCall_0_0_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_0_0_0() { return cIdentifierIDzTerminalRuleCall_0_0_0; }
 		
-		//direct_declarator_linha=direct_declarator_linha?
+		//direct_declarator_linha=direct_declarator_linha
 		public Assignment getDirect_declarator_linhaAssignment_0_1() { return cDirect_declarator_linhaAssignment_0_1; }
 		
 		//direct_declarator_linha
 		public RuleCall getDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_0_1_0() { return cDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_0_1_0; }
 		
-		//'(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha?
+		//'(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//'('
@@ -1769,7 +1769,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 		
-		//direct_declarator_linha=direct_declarator_linha?
+		//direct_declarator_linha=direct_declarator_linha
 		public Assignment getDirect_declarator_linhaAssignment_1_3() { return cDirect_declarator_linhaAssignment_1_3; }
 		
 		//direct_declarator_linha
@@ -1784,10 +1784,10 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_1_0 = (RuleCall)cDirect_declarator_linhaAssignment_1.eContents().get(0);
 		
 		//direct_declarator_linha:
-		//	direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha?;
+		//	(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha?
+		//(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
 		public Group getGroup() { return cGroup; }
 		
 		//direct_declarator_complemento=direct_declarator_complemento
@@ -1796,7 +1796,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//direct_declarator_complemento
 		public RuleCall getDirect_declarator_complementoDirect_declarator_complementoParserRuleCall_0_0() { return cDirect_declarator_complementoDirect_declarator_complementoParserRuleCall_0_0; }
 		
-		//direct_declarator_linha=direct_declarator_linha?
+		//direct_declarator_linha=direct_declarator_linha
 		public Assignment getDirect_declarator_linhaAssignment_1() { return cDirect_declarator_linhaAssignment_1; }
 		
 		//direct_declarator_linha
@@ -2093,29 +2093,29 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.parameter_type_list");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Assignment cParameter_listAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cParameter_listParameter_listParserRuleCall_0_0_0 = (RuleCall)cParameter_listAssignment_0_0.eContents().get(0);
+		private final Assignment cParameter_listaAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cParameter_listaParameter_listaParserRuleCall_0_0_0 = (RuleCall)cParameter_listaAssignment_0_0.eContents().get(0);
 		private final Keyword cCommaKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final Keyword cFullStopFullStopFullStopKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Assignment cParameter_listAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cParameter_listParameter_listParserRuleCall_1_0 = (RuleCall)cParameter_listAssignment_1.eContents().get(0);
+		private final Assignment cParameter_listaAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cParameter_listaParameter_listaParserRuleCall_1_0 = (RuleCall)cParameter_listaAssignment_1.eContents().get(0);
 		
 		//parameter_type_list:
-		//	parameter_list+=parameter_list ',' '...'
-		//	| parameter_list+=parameter_list;
+		//	parameter_lista=parameter_lista ',' '...'
+		//	| parameter_lista=parameter_lista;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//parameter_list+=parameter_list ',' '...' | parameter_list+=parameter_list
+		//parameter_lista=parameter_lista ',' '...' | parameter_lista=parameter_lista
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//parameter_list+=parameter_list ',' '...'
+		//parameter_lista=parameter_lista ',' '...'
 		public Group getGroup_0() { return cGroup_0; }
 		
-		//parameter_list+=parameter_list
-		public Assignment getParameter_listAssignment_0_0() { return cParameter_listAssignment_0_0; }
+		//parameter_lista=parameter_lista
+		public Assignment getParameter_listaAssignment_0_0() { return cParameter_listaAssignment_0_0; }
 		
-		//parameter_list
-		public RuleCall getParameter_listParameter_listParserRuleCall_0_0_0() { return cParameter_listParameter_listParserRuleCall_0_0_0; }
+		//parameter_lista
+		public RuleCall getParameter_listaParameter_listaParserRuleCall_0_0_0() { return cParameter_listaParameter_listaParserRuleCall_0_0_0; }
 		
 		//','
 		public Keyword getCommaKeyword_0_1() { return cCommaKeyword_0_1; }
@@ -2123,38 +2123,46 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'...'
 		public Keyword getFullStopFullStopFullStopKeyword_0_2() { return cFullStopFullStopFullStopKeyword_0_2; }
 		
-		//parameter_list+=parameter_list
-		public Assignment getParameter_listAssignment_1() { return cParameter_listAssignment_1; }
+		//parameter_lista=parameter_lista
+		public Assignment getParameter_listaAssignment_1() { return cParameter_listaAssignment_1; }
 		
-		//parameter_list
-		public RuleCall getParameter_listParameter_listParserRuleCall_1_0() { return cParameter_listParameter_listParserRuleCall_1_0; }
+		//parameter_lista
+		public RuleCall getParameter_listaParameter_listaParserRuleCall_1_0() { return cParameter_listaParameter_listaParserRuleCall_1_0; }
 	}
-	public class Parameter_listElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.parameter_list");
+	public class Parameter_listaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.parameter_lista");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cParameter_declarationAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cParameter_declarationParameter_declarationParserRuleCall_0_0 = (RuleCall)cParameter_declarationAssignment_0.eContents().get(0);
-		private final Assignment cParameter_list_linhaAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cParameter_list_linhaParameter_list_linhaParserRuleCall_1_0 = (RuleCall)cParameter_list_linhaAssignment_1.eContents().get(0);
+		private final Assignment cParameter_declarationsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cParameter_declarationsParameter_declarationParserRuleCall_0_0 = (RuleCall)cParameter_declarationsAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cParameter_declarationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cParameter_declarationsParameter_declarationParserRuleCall_1_1_0 = (RuleCall)cParameter_declarationsAssignment_1_1.eContents().get(0);
 		
-		//parameter_list:
-		//	parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?;
+		//parameter_lista:
+		//	parameter_declarations+=parameter_declaration (',' parameter_declarations+=parameter_declaration)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?
+		//parameter_declarations+=parameter_declaration (',' parameter_declarations+=parameter_declaration)*
 		public Group getGroup() { return cGroup; }
 		
-		//parameter_declaration=parameter_declaration
-		public Assignment getParameter_declarationAssignment_0() { return cParameter_declarationAssignment_0; }
+		//parameter_declarations+=parameter_declaration
+		public Assignment getParameter_declarationsAssignment_0() { return cParameter_declarationsAssignment_0; }
 		
 		//parameter_declaration
-		public RuleCall getParameter_declarationParameter_declarationParserRuleCall_0_0() { return cParameter_declarationParameter_declarationParserRuleCall_0_0; }
+		public RuleCall getParameter_declarationsParameter_declarationParserRuleCall_0_0() { return cParameter_declarationsParameter_declarationParserRuleCall_0_0; }
 		
-		//parameter_list_linha+=parameter_list_linha?
-		public Assignment getParameter_list_linhaAssignment_1() { return cParameter_list_linhaAssignment_1; }
+		//(',' parameter_declarations+=parameter_declaration)*
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//parameter_list_linha
-		public RuleCall getParameter_list_linhaParameter_list_linhaParserRuleCall_1_0() { return cParameter_list_linhaParameter_list_linhaParserRuleCall_1_0; }
+		//','
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		
+		//parameter_declarations+=parameter_declaration
+		public Assignment getParameter_declarationsAssignment_1_1() { return cParameter_declarationsAssignment_1_1; }
+		
+		//parameter_declaration
+		public RuleCall getParameter_declarationsParameter_declarationParserRuleCall_1_1_0() { return cParameter_declarationsParameter_declarationParserRuleCall_1_1_0; }
 	}
 	public class Parameter_list_linhaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.parameter_list_linha");
@@ -2166,10 +2174,10 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParameter_list_linhaParameter_list_linhaParserRuleCall_2_0 = (RuleCall)cParameter_list_linhaAssignment_2.eContents().get(0);
 		
 		//parameter_list_linha:
-		//	',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?;
+		//	(',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?
+		//(',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha)?
 		public Group getGroup() { return cGroup; }
 		
 		//','
@@ -2181,7 +2189,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//parameter_declaration
 		public RuleCall getParameter_declarationParameter_declarationParserRuleCall_1_0() { return cParameter_declarationParameter_declarationParserRuleCall_1_0; }
 		
-		//parameter_list_linha+=parameter_list_linha?
+		//parameter_list_linha+=parameter_list_linha
 		public Assignment getParameter_list_linhaAssignment_2() { return cParameter_list_linhaAssignment_2; }
 		
 		//parameter_list_linha
@@ -2923,22 +2931,22 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.identifier_list");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cIdentifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cIdentifierIDTerminalRuleCall_0_0 = (RuleCall)cIdentifierAssignment_0.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_0_0 = (RuleCall)cIdentifierAssignment_0.eContents().get(0);
 		private final Assignment cIdentifier_list_linhaAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cIdentifier_list_linhaIdentifier_list_linhaParserRuleCall_1_0 = (RuleCall)cIdentifier_list_linhaAssignment_1.eContents().get(0);
 		
 		//identifier_list:
-		//	identifier=ID identifier_list_linha=identifier_list_linha;
+		//	identifier=IDz identifier_list_linha=identifier_list_linha;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//identifier=ID identifier_list_linha=identifier_list_linha
+		//identifier=IDz identifier_list_linha=identifier_list_linha
 		public Group getGroup() { return cGroup; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_0() { return cIdentifierAssignment_0; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_0_0() { return cIdentifierIDTerminalRuleCall_0_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_0_0() { return cIdentifierIDzTerminalRuleCall_0_0; }
 		
 		//identifier_list_linha=identifier_list_linha
 		public Assignment getIdentifier_list_linhaAssignment_1() { return cIdentifier_list_linhaAssignment_1; }
@@ -2953,31 +2961,31 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cIdentifierAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_1_1_0 = (RuleCall)cIdentifierAssignment_1_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_1_1_0 = (RuleCall)cIdentifierAssignment_1_1.eContents().get(0);
 		private final Assignment cIdentifier_list_linhaAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cIdentifier_list_linhaIdentifier_list_linhaParserRuleCall_1_2_0 = (RuleCall)cIdentifier_list_linhaAssignment_1_2.eContents().get(0);
 		
 		//identifier_list_linha:
-		//	{IdentifierListLinhaAction} (',' identifier=ID identifier_list_linha=identifier_list_linha)?;
+		//	{IdentifierListLinhaAction} (',' identifier=IDz identifier_list_linha=identifier_list_linha)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{IdentifierListLinhaAction} (',' identifier=ID identifier_list_linha=identifier_list_linha)?
+		//{IdentifierListLinhaAction} (',' identifier=IDz identifier_list_linha=identifier_list_linha)?
 		public Group getGroup() { return cGroup; }
 		
 		//{IdentifierListLinhaAction}
 		public Action getIdentifierListLinhaActionAction_0() { return cIdentifierListLinhaActionAction_0; }
 		
-		//(',' identifier=ID identifier_list_linha=identifier_list_linha)?
+		//(',' identifier=IDz identifier_list_linha=identifier_list_linha)?
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//','
 		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_1_1() { return cIdentifierAssignment_1_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_1_1_0() { return cIdentifierIDTerminalRuleCall_1_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_1_1_0() { return cIdentifierIDzTerminalRuleCall_1_1_0; }
 		
 		//identifier_list_linha=identifier_list_linha
 		public Assignment getIdentifier_list_linhaAssignment_1_2() { return cIdentifier_list_linhaAssignment_1_2; }
@@ -3025,7 +3033,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.primary_expression");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cIdentifierAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cIdentifierIDTerminalRuleCall_0_0 = (RuleCall)cIdentifierAssignment_0.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_0_0 = (RuleCall)cIdentifierAssignment_0.eContents().get(0);
 		private final Assignment cConstantAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cConstantConstantParserRuleCall_1_0 = (RuleCall)cConstantAssignment_1.eContents().get(0);
 		private final Assignment cStringAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
@@ -3039,22 +3047,22 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGeneric_selectionGeneric_selectionParserRuleCall_4_0 = (RuleCall)cGeneric_selectionAssignment_4.eContents().get(0);
 		
 		//primary_expression:
-		//	identifier=ID
+		//	identifier=IDz
 		//	| constant=constant
 		//	| string=string_ufcg
 		//	| '(' expression=expression ')'
 		//	| generic_selection=generic_selection;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//identifier=ID | constant=constant | string=string_ufcg | '(' expression=expression ')' |
+		//identifier=IDz | constant=constant | string=string_ufcg | '(' expression=expression ')' |
 		//generic_selection=generic_selection
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_0() { return cIdentifierAssignment_0; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_0_0() { return cIdentifierIDTerminalRuleCall_0_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_0_0() { return cIdentifierIDzTerminalRuleCall_0_0; }
 		
 		//constant=constant
 		public Assignment getConstantAssignment_1() { return cConstantAssignment_1; }
@@ -3092,18 +3100,18 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	public class Enumeration_constantElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.enumeration_constant");
 		private final Assignment cIdentifierAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_0 = (RuleCall)cIdentifierAssignment.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_0 = (RuleCall)cIdentifierAssignment.eContents().get(0);
 		
 		////TODO NINGUEM CHAMA
 		//enumeration_constant / * before it has been defined as such * /:
-		//	identifier=ID;
+		//	identifier=IDz;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment() { return cIdentifierAssignment; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_0() { return cIdentifierIDTerminalRuleCall_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_0() { return cIdentifierIDzTerminalRuleCall_0; }
 	}
 	public class Generic_selectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.generic_selection");
@@ -3683,14 +3691,14 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cIdentifierAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_1_1_0 = (RuleCall)cIdentifierAssignment_1_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_1_1_0 = (RuleCall)cIdentifierAssignment_1_1.eContents().get(0);
 		
 		//designator:
 		//	'[' constant_expression=conditional_expression ']'
-		//	| '.' identifier=ID;
+		//	| '.' identifier=IDz;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'[' constant_expression=conditional_expression ']' | '.' identifier=ID
+		//'[' constant_expression=conditional_expression ']' | '.' identifier=IDz
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'[' constant_expression=conditional_expression ']'
@@ -3708,17 +3716,17 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//']'
 		public Keyword getRightSquareBracketKeyword_0_2() { return cRightSquareBracketKeyword_0_2; }
 		
-		//'.' identifier=ID
+		//'.' identifier=IDz
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//'.'
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_1_1() { return cIdentifierAssignment_1_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_1_1_0() { return cIdentifierIDTerminalRuleCall_1_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_1_1_0() { return cIdentifierIDzTerminalRuleCall_1_1_0; }
 	}
 	public class Static_assert_declarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.static_assert_declaration");
@@ -3786,12 +3794,12 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cPostfixExpressionComplementIdentifierAction_3_0 = (Action)cGroup_3.eContents().get(0);
 		private final Keyword cFullStopKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
 		private final Assignment cIdentifierAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cIdentifierIDTerminalRuleCall_3_2_0 = (RuleCall)cIdentifierAssignment_3_2.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_3_2_0 = (RuleCall)cIdentifierAssignment_3_2.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
 		private final Action cPostfixExpressionComplementPointerAction_4_0 = (Action)cGroup_4.eContents().get(0);
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final Assignment cIdentifierAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cIdentifierIDTerminalRuleCall_4_2_0 = (RuleCall)cIdentifierAssignment_4_2.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_4_2_0 = (RuleCall)cIdentifierAssignment_4_2.eContents().get(0);
 		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
 		private final Action cPostfixExpressionComplementIncrementAction_5_0 = (Action)cGroup_5.eContents().get(0);
 		private final Keyword cPlusSignPlusSignKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
@@ -3803,15 +3811,15 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//	{PostfixExpressionComplementExpression} '[' expression=expression ']'
 		//	| {PostfixExpressionComplementEmpty} '(' ')'
 		//	| {PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')'
-		//	| {PostfixExpressionComplementIdentifier} '.' identifier=ID
-		//	| {PostfixExpressionComplementPointer} '->' identifier=ID
+		//	| {PostfixExpressionComplementIdentifier} '.' identifier=IDz
+		//	| {PostfixExpressionComplementPointer} '->' identifier=IDz
 		//	| {PostfixExpressionComplementIncrement} '++'
 		//	| {PostfixExpressionComplementDecrement} '--';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{PostfixExpressionComplementExpression} '[' expression=expression ']' | {PostfixExpressionComplementEmpty} '(' ')' |
 		//{PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')' |
-		//{PostfixExpressionComplementIdentifier} '.' identifier=ID | {PostfixExpressionComplementPointer} '->' identifier=ID |
+		//{PostfixExpressionComplementIdentifier} '.' identifier=IDz | {PostfixExpressionComplementPointer} '->' identifier=IDz |
 		//{PostfixExpressionComplementIncrement} '++' | {PostfixExpressionComplementDecrement} '--'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
@@ -3863,7 +3871,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_2_3() { return cRightParenthesisKeyword_2_3; }
 		
-		//{PostfixExpressionComplementIdentifier} '.' identifier=ID
+		//{PostfixExpressionComplementIdentifier} '.' identifier=IDz
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//{PostfixExpressionComplementIdentifier}
@@ -3872,13 +3880,13 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'.'
 		public Keyword getFullStopKeyword_3_1() { return cFullStopKeyword_3_1; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_3_2() { return cIdentifierAssignment_3_2; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_3_2_0() { return cIdentifierIDTerminalRuleCall_3_2_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_3_2_0() { return cIdentifierIDzTerminalRuleCall_3_2_0; }
 		
-		//{PostfixExpressionComplementPointer} '->' identifier=ID
+		//{PostfixExpressionComplementPointer} '->' identifier=IDz
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//{PostfixExpressionComplementPointer}
@@ -3887,11 +3895,11 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//'->'
 		public Keyword getHyphenMinusGreaterThanSignKeyword_4_1() { return cHyphenMinusGreaterThanSignKeyword_4_1; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_4_2() { return cIdentifierAssignment_4_2; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_4_2_0() { return cIdentifierIDTerminalRuleCall_4_2_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_4_2_0() { return cIdentifierIDzTerminalRuleCall_4_2_0; }
 		
 		//{PostfixExpressionComplementIncrement} '++'
 		public Group getGroup_5() { return cGroup_5; }
@@ -4842,7 +4850,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Keyword cGotoKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
 		private final Assignment cIdentifierAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cIdentifierIDTerminalRuleCall_0_1_0 = (RuleCall)cIdentifierAssignment_0_1.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_0_1_0 = (RuleCall)cIdentifierAssignment_0_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cContinueKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
@@ -4860,27 +4868,27 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
 		
 		//jump_statement:
-		//	'goto' identifier=ID ';'
+		//	'goto' identifier=IDz ';'
 		//	| 'continue' ';'
 		//	| 'break' ';'
 		//	| 'return' ';'
 		//	| 'return' expression=expression ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'goto' identifier=ID ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression=expression ';'
+		//'goto' identifier=IDz ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression=expression ';'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'goto' identifier=ID ';'
+		//'goto' identifier=IDz ';'
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//'goto'
 		public Keyword getGotoKeyword_0_0() { return cGotoKeyword_0_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_0_1() { return cIdentifierAssignment_0_1; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_0_1_0() { return cIdentifierIDTerminalRuleCall_0_1_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_0_1_0() { return cIdentifierIDzTerminalRuleCall_0_1_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_0_2() { return cSemicolonKeyword_0_2; }
@@ -4998,8 +5006,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
 		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')'
 		//	statement=statement
-		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement
-		//	expression=expression ')' statement=statement
+		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression
+		//	')' statement=statement
 		//	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
 		//	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')'
 		//	statement=statement;
@@ -5328,7 +5336,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cIdentifierAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cIdentifierIDTerminalRuleCall_0_0_0 = (RuleCall)cIdentifierAssignment_0_0.eContents().get(0);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_0_0_0 = (RuleCall)cIdentifierAssignment_0_0.eContents().get(0);
 		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final Assignment cStatementAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final RuleCall cStatementStatementParserRuleCall_0_2_0 = (RuleCall)cStatementAssignment_0_2.eContents().get(0);
@@ -5346,23 +5354,23 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStatementStatementParserRuleCall_2_2_0 = (RuleCall)cStatementAssignment_2_2.eContents().get(0);
 		
 		//labeled_statement:
-		//	identifier=ID ':' statement=statement
+		//	identifier=IDz ':' statement=statement
 		//	| 'case' conditional_expression=conditional_expression ':' statement=statement
 		//	| 'default' ':' statement=statement;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//identifier=ID ':' statement=statement | 'case' conditional_expression=conditional_expression ':' statement=statement |
+		//identifier=IDz ':' statement=statement | 'case' conditional_expression=conditional_expression ':' statement=statement |
 		//'default' ':' statement=statement
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//identifier=ID ':' statement=statement
+		//identifier=IDz ':' statement=statement
 		public Group getGroup_0() { return cGroup_0; }
 		
-		//identifier=ID
+		//identifier=IDz
 		public Assignment getIdentifierAssignment_0_0() { return cIdentifierAssignment_0_0; }
 		
-		//ID
-		public RuleCall getIdentifierIDTerminalRuleCall_0_0_0() { return cIdentifierIDTerminalRuleCall_0_0_0; }
+		//IDz
+		public RuleCall getIdentifierIDzTerminalRuleCall_0_0_0() { return cIdentifierIDzTerminalRuleCall_0_0_0; }
 		
 		//':'
 		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
@@ -6478,7 +6486,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	private final Direct_declarator_linhaElements pDirect_declarator_linha;
 	private final Direct_declarator_complementoElements pDirect_declarator_complemento;
 	private final Parameter_type_listElements pParameter_type_list;
-	private final Parameter_listElements pParameter_list;
+	private final Parameter_listaElements pParameter_lista;
 	private final Parameter_list_linhaElements pParameter_list_linha;
 	private final Parameter_declarationElements pParameter_declaration;
 	private final Abstract_declaratorElements pAbstract_declarator;
@@ -6559,6 +6567,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	private final Init_declaratorElements pInit_declarator;
 	private final String_ufcgElements pString_ufcg;
 	private final ConstantElements pConstant;
+	private final TerminalRule tIDz;
 	private final TerminalRule tFLOAT;
 	private final TerminalRule tO;
 	private final TerminalRule tD;
@@ -6624,7 +6633,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDirect_declarator_linha = new Direct_declarator_linhaElements();
 		this.pDirect_declarator_complemento = new Direct_declarator_complementoElements();
 		this.pParameter_type_list = new Parameter_type_listElements();
-		this.pParameter_list = new Parameter_listElements();
+		this.pParameter_lista = new Parameter_listaElements();
 		this.pParameter_list_linha = new Parameter_list_linhaElements();
 		this.pParameter_declaration = new Parameter_declarationElements();
 		this.pAbstract_declarator = new Abstract_declaratorElements();
@@ -6705,6 +6714,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		this.pInit_declarator = new Init_declaratorElements();
 		this.pString_ufcg = new String_ufcgElements();
 		this.pConstant = new ConstantElements();
+		this.tIDz = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.IDz");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.FLOAT");
 		this.tO = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.O");
 		this.tD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.D");
@@ -6866,9 +6876,9 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//enum_specifier:
 	//	'enum' '{' enumerator_list=enumerator_list '}'
 	//	| 'enum' '{' enumerator_list=enumerator_list ',' '}'
-	//	| 'enum' identifier=ID '{' enumerator_list=enumerator_list '}'
-	//	| 'enum' identifier=ID '{' enumerator_list=enumerator_list ',' '}'
-	//	| 'enum' identifier=ID;
+	//	| 'enum' identifier=IDz '{' enumerator_list=enumerator_list '}'
+	//	| 'enum' identifier=IDz '{' enumerator_list=enumerator_list ',' '}'
+	//	| 'enum' identifier=IDz;
 	public Enum_specifierElements getEnum_specifierAccess() {
 		return pEnum_specifier;
 	}
@@ -6920,7 +6930,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//struct_or_union_specifier:
 	//	struct_or_union=struct_or_union '{' struct_declaration_list=struct_declaration_list '}'
-	//	| struct_or_union=struct_or_union identifier=ID
+	//	| struct_or_union=struct_or_union identifier=IDz
 	//	struct_or_union_specifier_complement=struct_or_union_specifier_complement;
 	public Struct_or_union_specifierElements getStruct_or_union_specifierAccess() {
 		return pStruct_or_union_specifier;
@@ -7134,8 +7144,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//direct_declarator:
-	//	identifier=ID direct_declarator_linha=direct_declarator_linha?
-	//	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha?;
+	//	identifier=IDz direct_declarator_linha=direct_declarator_linha
+	//	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha;
 	public Direct_declaratorElements getDirect_declaratorAccess() {
 		return pDirect_declarator;
 	}
@@ -7145,7 +7155,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//direct_declarator_linha:
-	//	direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha?;
+	//	(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?;
 	public Direct_declarator_linhaElements getDirect_declarator_linhaAccess() {
 		return pDirect_declarator_linha;
 	}
@@ -7176,8 +7186,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//parameter_type_list:
-	//	parameter_list+=parameter_list ',' '...'
-	//	| parameter_list+=parameter_list;
+	//	parameter_lista=parameter_lista ',' '...'
+	//	| parameter_lista=parameter_lista;
 	public Parameter_type_listElements getParameter_type_listAccess() {
 		return pParameter_type_list;
 	}
@@ -7186,18 +7196,18 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		return getParameter_type_listAccess().getRule();
 	}
 	
-	//parameter_list:
-	//	parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?;
-	public Parameter_listElements getParameter_listAccess() {
-		return pParameter_list;
+	//parameter_lista:
+	//	parameter_declarations+=parameter_declaration (',' parameter_declarations+=parameter_declaration)*;
+	public Parameter_listaElements getParameter_listaAccess() {
+		return pParameter_lista;
 	}
 	
-	public ParserRule getParameter_listRule() {
-		return getParameter_listAccess().getRule();
+	public ParserRule getParameter_listaRule() {
+		return getParameter_listaAccess().getRule();
 	}
 	
 	//parameter_list_linha:
-	//	',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?;
+	//	(',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha)?;
 	public Parameter_list_linhaElements getParameter_list_linhaAccess() {
 		return pParameter_list_linha;
 	}
@@ -7293,7 +7303,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//identifier_list:
-	//	identifier=ID identifier_list_linha=identifier_list_linha;
+	//	identifier=IDz identifier_list_linha=identifier_list_linha;
 	public Identifier_listElements getIdentifier_listAccess() {
 		return pIdentifier_list;
 	}
@@ -7303,7 +7313,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//identifier_list_linha:
-	//	{IdentifierListLinhaAction} (',' identifier=ID identifier_list_linha=identifier_list_linha)?;
+	//	{IdentifierListLinhaAction} (',' identifier=IDz identifier_list_linha=identifier_list_linha)?;
 	public Identifier_list_linhaElements getIdentifier_list_linhaAccess() {
 		return pIdentifier_list_linha;
 	}
@@ -7324,7 +7334,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//primary_expression:
-	//	identifier=ID
+	//	identifier=IDz
 	//	| constant=constant
 	//	| string=string_ufcg
 	//	| '(' expression=expression ')'
@@ -7339,7 +7349,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	
 	////TODO NINGUEM CHAMA
 	//enumeration_constant / * before it has been defined as such * /:
-	//	identifier=ID;
+	//	identifier=IDz;
 	public Enumeration_constantElements getEnumeration_constantAccess() {
 		return pEnumeration_constant;
 	}
@@ -7478,7 +7488,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//designator:
 	//	'[' constant_expression=conditional_expression ']'
-	//	| '.' identifier=ID;
+	//	| '.' identifier=IDz;
 	public DesignatorElements getDesignatorAccess() {
 		return pDesignator;
 	}
@@ -7501,8 +7511,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//	{PostfixExpressionComplementExpression} '[' expression=expression ']'
 	//	| {PostfixExpressionComplementEmpty} '(' ')'
 	//	| {PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')'
-	//	| {PostfixExpressionComplementIdentifier} '.' identifier=ID
-	//	| {PostfixExpressionComplementPointer} '->' identifier=ID
+	//	| {PostfixExpressionComplementIdentifier} '.' identifier=IDz
+	//	| {PostfixExpressionComplementPointer} '->' identifier=IDz
 	//	| {PostfixExpressionComplementIncrement} '++'
 	//	| {PostfixExpressionComplementDecrement} '--';
 	public Postfix_expression_complementElements getPostfix_expression_complementAccess() {
@@ -7740,7 +7750,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//jump_statement:
-	//	'goto' identifier=ID ';'
+	//	'goto' identifier=IDz ';'
 	//	| 'continue' ';'
 	//	| 'break' ';'
 	//	| 'return' ';'
@@ -7758,8 +7768,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
 	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')'
 	//	statement=statement
-	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement
-	//	expression=expression ')' statement=statement
+	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression
+	//	')' statement=statement
 	//	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
 	//	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')'
 	//	statement=statement;
@@ -7784,7 +7794,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//labeled_statement:
-	//	identifier=ID ':' statement=statement
+	//	identifier=IDz ':' statement=statement
 	//	| 'case' conditional_expression=conditional_expression ':' statement=statement
 	//	| 'default' ':' statement=statement;
 	public Labeled_statementElements getLabeled_statementAccess() {
@@ -8116,6 +8126,12 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstantAccess().getRule();
 	}
 	
+	//terminal IDz:
+	//	'a'..'z' | 'A'..'Z' | '_'+;
+	public TerminalRule getIDzRule() {
+		return tIDz;
+	}
+	
 	//terminal FLOAT:
 	//	'0'..'9'+ '.' '0'..'9'*;
 	public TerminalRule getFLOATRule() {
@@ -8245,7 +8261,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}

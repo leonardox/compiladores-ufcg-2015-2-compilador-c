@@ -3,22 +3,17 @@
  */
 package org.xtext.example.ansic.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.xtext.example.ansic.AnsicPackage;
-import org.xtext.example.ansic.parameter_list;
+import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 
 /**
@@ -29,7 +24,7 @@ import org.xtext.example.ansic.parameter_type_list;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.impl.parameter_type_listImpl#getParameter_list <em>Parameter list</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.parameter_type_listImpl#getParameter_lista <em>Parameter lista</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,14 +32,14 @@ import org.xtext.example.ansic.parameter_type_list;
 public class parameter_type_listImpl extends MinimalEObjectImpl.Container implements parameter_type_list
 {
   /**
-   * The cached value of the '{@link #getParameter_list() <em>Parameter list</em>}' containment reference list.
+   * The cached value of the '{@link #getParameter_lista() <em>Parameter lista</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParameter_list()
+   * @see #getParameter_lista()
    * @generated
    * @ordered
    */
-  protected EList<parameter_list> parameter_list;
+  protected parameter_lista parameter_lista;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,13 +67,47 @@ public class parameter_type_listImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<parameter_list> getParameter_list()
+  public parameter_lista getParameter_lista()
   {
-    if (parameter_list == null)
+    return parameter_lista;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetParameter_lista(parameter_lista newParameter_lista, NotificationChain msgs)
+  {
+    parameter_lista oldParameter_lista = parameter_lista;
+    parameter_lista = newParameter_lista;
+    if (eNotificationRequired())
     {
-      parameter_list = new EObjectContainmentEList<parameter_list>(parameter_list.class, this, AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LIST);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA, oldParameter_lista, newParameter_lista);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return parameter_list;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParameter_lista(parameter_lista newParameter_lista)
+  {
+    if (newParameter_lista != parameter_lista)
+    {
+      NotificationChain msgs = null;
+      if (parameter_lista != null)
+        msgs = ((InternalEObject)parameter_lista).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA, null, msgs);
+      if (newParameter_lista != null)
+        msgs = ((InternalEObject)newParameter_lista).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA, null, msgs);
+      msgs = basicSetParameter_lista(newParameter_lista, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA, newParameter_lista, newParameter_lista));
   }
 
   /**
@@ -91,8 +120,8 @@ public class parameter_type_listImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LIST:
-        return ((InternalEList<?>)getParameter_list()).basicRemove(otherEnd, msgs);
+      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA:
+        return basicSetParameter_lista(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -107,8 +136,8 @@ public class parameter_type_listImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LIST:
-        return getParameter_list();
+      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA:
+        return getParameter_lista();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,15 +147,13 @@ public class parameter_type_listImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LIST:
-        getParameter_list().clear();
-        getParameter_list().addAll((Collection<? extends parameter_list>)newValue);
+      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA:
+        setParameter_lista((parameter_lista)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,8 +169,8 @@ public class parameter_type_listImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LIST:
-        getParameter_list().clear();
+      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA:
+        setParameter_lista((parameter_lista)null);
         return;
     }
     super.eUnset(featureID);
@@ -159,8 +186,8 @@ public class parameter_type_listImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LIST:
-        return parameter_list != null && !parameter_list.isEmpty();
+      case AnsicPackage.PARAMETER_TYPE_LIST__PARAMETER_LISTA:
+        return parameter_lista != null;
     }
     return super.eIsSet(featureID);
   }

@@ -1102,9 +1102,9 @@ ruleenum_specifier returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_10_0=RULE_ID
+					lv_identifier_10_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_10_0, grammarAccess.getEnum_specifierAccess().getIdentifierIDTerminalRuleCall_2_1_0());
+						newLeafNode(lv_identifier_10_0, grammarAccess.getEnum_specifierAccess().getIdentifierIDzTerminalRuleCall_2_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1114,7 +1114,7 @@ ruleenum_specifier returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_10_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -1154,9 +1154,9 @@ ruleenum_specifier returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_15_0=RULE_ID
+					lv_identifier_15_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_15_0, grammarAccess.getEnum_specifierAccess().getIdentifierIDTerminalRuleCall_3_1_0());
+						newLeafNode(lv_identifier_15_0, grammarAccess.getEnum_specifierAccess().getIdentifierIDzTerminalRuleCall_3_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1166,7 +1166,7 @@ ruleenum_specifier returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_15_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -1210,9 +1210,9 @@ ruleenum_specifier returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_21_0=RULE_ID
+					lv_identifier_21_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_21_0, grammarAccess.getEnum_specifierAccess().getIdentifierIDTerminalRuleCall_4_1_0());
+						newLeafNode(lv_identifier_21_0, grammarAccess.getEnum_specifierAccess().getIdentifierIDzTerminalRuleCall_4_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1222,7 +1222,7 @@ ruleenum_specifier returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_21_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -1580,9 +1580,9 @@ rulestruct_or_union_specifier returns [EObject current=null]
 			)
 			(
 				(
-					lv_identifier_5_0=RULE_ID
+					lv_identifier_5_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_5_0, grammarAccess.getStruct_or_union_specifierAccess().getIdentifierIDTerminalRuleCall_1_1_0());
+						newLeafNode(lv_identifier_5_0, grammarAccess.getStruct_or_union_specifierAccess().getIdentifierIDzTerminalRuleCall_1_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1592,7 +1592,7 @@ rulestruct_or_union_specifier returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_5_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -3111,9 +3111,9 @@ ruledirect_declarator returns [EObject current=null]
 		(
 			(
 				(
-					lv_identifier_0_0=RULE_ID
+					lv_identifier_0_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_0_0, grammarAccess.getDirect_declaratorAccess().getIdentifierIDTerminalRuleCall_0_0_0());
+						newLeafNode(lv_identifier_0_0, grammarAccess.getDirect_declaratorAccess().getIdentifierIDzTerminalRuleCall_0_0_0());
 					}
 					{
 						if ($current==null) {
@@ -3123,7 +3123,7 @@ ruledirect_declarator returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_0_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -3145,7 +3145,7 @@ ruledirect_declarator returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)?
+			)
 		)
 		    |
 		(
@@ -3194,7 +3194,7 @@ ruledirect_declarator returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)?
+			)
 		)
 	)
 ;
@@ -3252,8 +3252,8 @@ ruledirect_declarator_linha returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
-	)
+		)
+	)?
 ;
 
 // Entry rule entryRuledirect_declarator_complemento
@@ -3674,18 +3674,18 @@ ruleparameter_type_list returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getParameter_type_listAccess().getParameter_listParameter_listParserRuleCall_0_0_0());
+						newCompositeNode(grammarAccess.getParameter_type_listAccess().getParameter_listaParameter_listaParserRuleCall_0_0_0());
 					}
-					lv_parameter_list_0_0=ruleparameter_list
+					lv_parameter_lista_0_0=ruleparameter_lista
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getParameter_type_listRule());
 						}
-						add(
+						set(
 							$current,
-							"parameter_list",
-							lv_parameter_list_0_0,
-							"org.xtext.example.Ansic.parameter_list");
+							"parameter_lista",
+							lv_parameter_lista_0_0,
+							"org.xtext.example.Ansic.parameter_lista");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3703,18 +3703,18 @@ ruleparameter_type_list returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getParameter_type_listAccess().getParameter_listParameter_listParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getParameter_type_listAccess().getParameter_listaParameter_listaParserRuleCall_1_0());
 				}
-				lv_parameter_list_3_0=ruleparameter_list
+				lv_parameter_lista_3_0=ruleparameter_lista
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getParameter_type_listRule());
 					}
-					add(
+					set(
 						$current,
-						"parameter_list",
-						lv_parameter_list_3_0,
-						"org.xtext.example.Ansic.parameter_list");
+						"parameter_lista",
+						lv_parameter_lista_3_0,
+						"org.xtext.example.Ansic.parameter_lista");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3722,15 +3722,15 @@ ruleparameter_type_list returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleparameter_list
-entryRuleparameter_list returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getParameter_listRule()); }
-	iv_ruleparameter_list=ruleparameter_list
-	{ $current=$iv_ruleparameter_list.current; }
+// Entry rule entryRuleparameter_lista
+entryRuleparameter_lista returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getParameter_listaRule()); }
+	iv_ruleparameter_lista=ruleparameter_lista
+	{ $current=$iv_ruleparameter_lista.current; }
 	EOF;
 
-// Rule parameter_list
-ruleparameter_list returns [EObject current=null]
+// Rule parameter_lista
+ruleparameter_lista returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3741,41 +3741,47 @@ ruleparameter_list returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getParameter_listAccess().getParameter_declarationParameter_declarationParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getParameter_listaAccess().getParameter_declarationsParameter_declarationParserRuleCall_0_0());
 				}
-				lv_parameter_declaration_0_0=ruleparameter_declaration
+				lv_parameter_declarations_0_0=ruleparameter_declaration
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getParameter_listRule());
+						$current = createModelElementForParent(grammarAccess.getParameter_listaRule());
 					}
-					set(
+					add(
 						$current,
-						"parameter_declaration",
-						lv_parameter_declaration_0_0,
+						"parameter_declarations",
+						lv_parameter_declarations_0_0,
 						"org.xtext.example.Ansic.parameter_declaration");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			otherlv_1=','
+			{
+				newLeafNode(otherlv_1, grammarAccess.getParameter_listaAccess().getCommaKeyword_1_0());
+			}
 			(
-				{
-					newCompositeNode(grammarAccess.getParameter_listAccess().getParameter_list_linhaParameter_list_linhaParserRuleCall_1_0());
-				}
-				lv_parameter_list_linha_1_0=ruleparameter_list_linha
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getParameter_listRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getParameter_listaAccess().getParameter_declarationsParameter_declarationParserRuleCall_1_1_0());
 					}
-					add(
-						$current,
-						"parameter_list_linha",
-						lv_parameter_list_linha_1_0,
-						"org.xtext.example.Ansic.parameter_list_linha");
-					afterParserOrEnumRuleCall();
-				}
+					lv_parameter_declarations_2_0=ruleparameter_declaration
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getParameter_listaRule());
+						}
+						add(
+							$current,
+							"parameter_declarations",
+							lv_parameter_declarations_2_0,
+							"org.xtext.example.Ansic.parameter_declaration");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)?
+		)*
 	)
 ;
 
@@ -3836,8 +3842,8 @@ ruleparameter_list_linha returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
-	)
+		)
+	)?
 ;
 
 // Entry rule entryRuleparameter_declaration
@@ -4959,9 +4965,9 @@ ruleidentifier_list returns [EObject current=null]
 	(
 		(
 			(
-				lv_identifier_0_0=RULE_ID
+				lv_identifier_0_0=RULE_IDZ
 				{
-					newLeafNode(lv_identifier_0_0, grammarAccess.getIdentifier_listAccess().getIdentifierIDTerminalRuleCall_0_0());
+					newLeafNode(lv_identifier_0_0, grammarAccess.getIdentifier_listAccess().getIdentifierIDzTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -4971,7 +4977,7 @@ ruleidentifier_list returns [EObject current=null]
 						$current,
 						"identifier",
 						lv_identifier_0_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.xtext.example.Ansic.IDz");
 				}
 			)
 		)
@@ -5030,9 +5036,9 @@ ruleidentifier_list_linha returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_2_0=RULE_ID
+					lv_identifier_2_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_2_0, grammarAccess.getIdentifier_list_linhaAccess().getIdentifierIDTerminalRuleCall_1_1_0());
+						newLeafNode(lv_identifier_2_0, grammarAccess.getIdentifier_list_linhaAccess().getIdentifierIDzTerminalRuleCall_1_1_0());
 					}
 					{
 						if ($current==null) {
@@ -5042,7 +5048,7 @@ ruleidentifier_list_linha returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_2_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -5156,9 +5162,9 @@ ruleprimary_expression returns [EObject current=null]
 	(
 		(
 			(
-				lv_identifier_0_0=RULE_ID
+				lv_identifier_0_0=RULE_IDZ
 				{
-					newLeafNode(lv_identifier_0_0, grammarAccess.getPrimary_expressionAccess().getIdentifierIDTerminalRuleCall_0_0());
+					newLeafNode(lv_identifier_0_0, grammarAccess.getPrimary_expressionAccess().getIdentifierIDzTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -5168,7 +5174,7 @@ ruleprimary_expression returns [EObject current=null]
 						$current,
 						"identifier",
 						lv_identifier_0_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"org.xtext.example.Ansic.IDz");
 				}
 			)
 		)
@@ -5282,9 +5288,9 @@ ruleenumeration_constant returns [EObject current=null]
 }:
 	(
 		(
-			lv_identifier_0_0=RULE_ID
+			lv_identifier_0_0=RULE_IDZ
 			{
-				newLeafNode(lv_identifier_0_0, grammarAccess.getEnumeration_constantAccess().getIdentifierIDTerminalRuleCall_0());
+				newLeafNode(lv_identifier_0_0, grammarAccess.getEnumeration_constantAccess().getIdentifierIDzTerminalRuleCall_0());
 			}
 			{
 				if ($current==null) {
@@ -5294,7 +5300,7 @@ ruleenumeration_constant returns [EObject current=null]
 					$current,
 					"identifier",
 					lv_identifier_0_0,
-					"org.eclipse.xtext.common.Terminals.ID");
+					"org.xtext.example.Ansic.IDz");
 			}
 		)
 	)
@@ -6313,9 +6319,9 @@ ruledesignator returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_4_0=RULE_ID
+					lv_identifier_4_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_4_0, grammarAccess.getDesignatorAccess().getIdentifierIDTerminalRuleCall_1_1_0());
+						newLeafNode(lv_identifier_4_0, grammarAccess.getDesignatorAccess().getIdentifierIDzTerminalRuleCall_1_1_0());
 					}
 					{
 						if ($current==null) {
@@ -6325,7 +6331,7 @@ ruledesignator returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_4_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -6529,9 +6535,9 @@ rulepostfix_expression_complement returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_13_0=RULE_ID
+					lv_identifier_13_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_13_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDTerminalRuleCall_3_2_0());
+						newLeafNode(lv_identifier_13_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_2_0());
 					}
 					{
 						if ($current==null) {
@@ -6541,7 +6547,7 @@ rulepostfix_expression_complement returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_13_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -6564,9 +6570,9 @@ rulepostfix_expression_complement returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_16_0=RULE_ID
+					lv_identifier_16_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_16_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDTerminalRuleCall_4_2_0());
+						newLeafNode(lv_identifier_16_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_2_0());
 					}
 					{
 						if ($current==null) {
@@ -6576,7 +6582,7 @@ rulepostfix_expression_complement returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_16_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -8177,9 +8183,9 @@ rulejump_statement returns [EObject current=null]
 			}
 			(
 				(
-					lv_identifier_1_0=RULE_ID
+					lv_identifier_1_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_1_0, grammarAccess.getJump_statementAccess().getIdentifierIDTerminalRuleCall_0_1_0());
+						newLeafNode(lv_identifier_1_0, grammarAccess.getJump_statementAccess().getIdentifierIDzTerminalRuleCall_0_1_0());
 					}
 					{
 						if ($current==null) {
@@ -8189,7 +8195,7 @@ rulejump_statement returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_1_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -8941,9 +8947,9 @@ rulelabeled_statement returns [EObject current=null]
 		(
 			(
 				(
-					lv_identifier_0_0=RULE_ID
+					lv_identifier_0_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_0_0, grammarAccess.getLabeled_statementAccess().getIdentifierIDTerminalRuleCall_0_0_0());
+						newLeafNode(lv_identifier_0_0, grammarAccess.getLabeled_statementAccess().getIdentifierIDzTerminalRuleCall_0_0_0());
 					}
 					{
 						if ($current==null) {
@@ -8953,7 +8959,7 @@ rulelabeled_statement returns [EObject current=null]
 							$current,
 							"identifier",
 							lv_identifier_0_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
@@ -10962,6 +10968,8 @@ ruleconstant returns [EObject current=null]
 		)
 	)
 ;
+
+RULE_IDZ : ('a'..'z'|'A'..'Z'|'_')+;
 
 RULE_FLOAT : ('0'..'9')+ '.' ('0'..'9')*;
 
