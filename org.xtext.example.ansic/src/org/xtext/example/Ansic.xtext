@@ -188,12 +188,12 @@ type_qualifier_list_linha
 ;
 
 direct_declarator
-	: identifier=ID (direct_declarator_linha=direct_declarator_linha)?
-	| '(' declarator=declarator ')' (direct_declarator_linha=direct_declarator_linha)?
+	: identifier=ID direct_declarator_linha=direct_declarator_linha
+	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
 ;
 
 direct_declarator_linha
-	:direct_declarator_complemento=direct_declarator_complemento (direct_declarator_linha=direct_declarator_linha)?
+	:(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_complemento
@@ -212,16 +212,15 @@ direct_declarator_complemento
 ;
 
 parameter_type_list
-	: parameter_list+=parameter_list ',' '...'
-	| parameter_list+=parameter_list
+	: parameter_lista=parameter_lista ',' '...'
+	| parameter_lista=parameter_lista
 	;
 
-parameter_list
-	: parameter_declaration=parameter_declaration (parameter_list_linha+=parameter_list_linha)?
-;
+parameter_lista
+	: parameter_declarations+=parameter_declaration (',' parameter_declarations+=parameter_declaration)*;
 
 parameter_list_linha
-	: ',' parameter_declaration=parameter_declaration (parameter_list_linha+=parameter_list_linha)?
+	: (',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha)?
 ;
 
 parameter_declaration
@@ -721,3 +720,4 @@ terminal F_CONSTANT:
 
 terminal STRING_LITERAL:
 	(SP? '"' (('^' | '\'' | '\\' | '\n') | ES)* '"' WS*)+;
+

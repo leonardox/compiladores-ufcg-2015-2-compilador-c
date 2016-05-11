@@ -25,20 +25,13 @@ class AnsicValidator extends AbstractAnsicValidator {
     public static val INVALID_NAME = 'invalidName'
   private var variables = <String,String>newHashMap();
   public static class Function{
+  		public int param_number = 0;
   		public List<String> params_types = new ArrayList<String>();
   		public String retType;
   		public String name;
   }
   private var functions = <String, Function>newHashMap();
 
-  	@Check
-	def checkGreetingStartsWithCapital(type_specifier tName) {
-		println(tName.type_name_str);
-		if(tName.type_name_str.equals("char")){
-			error("Não pode char, cuzão!", AnsicPackage.Literals.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER);
-		}
-	}
-	
 	@Check
 	def checkDeclarationTypes(declaration decl){
 		var leftType =  decl.declaration_specifiers.get(0).type_specifier.type_name_str;
@@ -147,10 +140,15 @@ class AnsicValidator extends AbstractAnsicValidator {
 		}else{
 			f.retType = func_decl.declaration_specifiers.get(0).type_specifier.type_name_str;
 			f.name = func_decl.declarator.direct_declarator.identifier.toString();
-			println( "size:" + func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento.parameter_type_list.parameter_list.get(0));
+			var params = func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento.parameter_type_list.parameter_lista.parameter_declarations;
+			f.param_number = params.size;		
+			for(var i = 0; i< f.param_number; i++){
+				var decl = params.get(i);
+				f.params_types.add(decl.declaration_specifiers.type_specifier.type_name_str);
+			}
+			functions.put(f.name, f);
+			//println( "size:" + func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento.parameter_type_list.parameter_list.get(0));
 		}
-			//var iterator = func_decl.declarator.direct_declarator.;		}
-			
 	}
 	@Check
 	def checkSwitch(selection_statement sel_stmt){
@@ -176,3 +174,4 @@ class AnsicValidator extends AbstractAnsicValidator {
 //	}
 	
 }
+
