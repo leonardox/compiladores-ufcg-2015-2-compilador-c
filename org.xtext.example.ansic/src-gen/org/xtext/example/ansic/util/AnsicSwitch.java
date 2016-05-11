@@ -108,6 +108,13 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case AnsicPackage.TYPE_QUALIFIER:
+      {
+        type_qualifier type_qualifier = (type_qualifier)theEObject;
+        T result = casetype_qualifier(type_qualifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case AnsicPackage.TYPE_SPECIFIER:
       {
         type_specifier type_specifier = (type_specifier)theEObject;
@@ -638,7 +645,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         jump_statement jump_statement = (jump_statement)theEObject;
         T result = casejump_statement(jump_statement);
-        if (result == null) result = casestatement(jump_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -646,7 +652,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         iteration_statement iteration_statement = (iteration_statement)theEObject;
         T result = caseiteration_statement(iteration_statement);
-        if (result == null) result = casestatement(iteration_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -654,7 +659,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         selection_statement selection_statement = (selection_statement)theEObject;
         T result = caseselection_statement(selection_statement);
-        if (result == null) result = casestatement(selection_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -662,7 +666,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         labeled_statement labeled_statement = (labeled_statement)theEObject;
         T result = caselabeled_statement(labeled_statement);
-        if (result == null) result = casestatement(labeled_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -670,7 +673,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         compound_statement compound_statement = (compound_statement)theEObject;
         T result = casecompound_statement(compound_statement);
-        if (result == null) result = casestatement(compound_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -692,7 +694,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         block_item block_item = (block_item)theEObject;
         T result = caseblock_item(block_item);
-        if (result == null) result = caseblock_item_list(block_item);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -700,7 +701,6 @@ public class AnsicSwitch<T> extends Switch<T>
       {
         expression_statement expression_statement = (expression_statement)theEObject;
         T result = caseexpression_statement(expression_statement);
-        if (result == null) result = casestatement(expression_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -907,22 +907,6 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AnsicPackage.DIRECT_DECLARATOR_LINHA_ACTION:
-      {
-        DirectDeclaratorLinhaAction directDeclaratorLinhaAction = (DirectDeclaratorLinhaAction)theEObject;
-        T result = caseDirectDeclaratorLinhaAction(directDeclaratorLinhaAction);
-        if (result == null) result = casedirect_declarator_linha(directDeclaratorLinhaAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.PARAMETER_LIST_LINHA_ACTION:
-      {
-        ParameterListLinhaAction parameterListLinhaAction = (ParameterListLinhaAction)theEObject;
-        T result = caseParameterListLinhaAction(parameterListLinhaAction);
-        if (result == null) result = caseparameter_list_linha(parameterListLinhaAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case AnsicPackage.DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION:
       {
         DirectAbstractDeclarratorLinhaAction directAbstractDeclarratorLinhaAction = (DirectAbstractDeclarratorLinhaAction)theEObject;
@@ -1043,6 +1027,14 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case AnsicPackage.PLUS_PLUS:
+      {
+        PlusPlus plusPlus = (PlusPlus)theEObject;
+        T result = casePlusPlus(plusPlus);
+        if (result == null) result = caseunary_expression(plusPlus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION:
       {
         MultiplicativeExpressionLinhaAction multiplicativeExpressionLinhaAction = (MultiplicativeExpressionLinhaAction)theEObject;
@@ -1080,14 +1072,6 @@ public class AnsicSwitch<T> extends Switch<T>
         EqualityExpressionLinhaAction equalityExpressionLinhaAction = (EqualityExpressionLinhaAction)theEObject;
         T result = caseEqualityExpressionLinhaAction(equalityExpressionLinhaAction);
         if (result == null) result = caseequality_expression_linha(equalityExpressionLinhaAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.BLOCK_ITEM_LIST_LINHA_ACTION:
-      {
-        BlockItemListLinhaAction blockItemListLinhaAction = (BlockItemListLinhaAction)theEObject;
-        T result = caseBlockItemListLinhaAction(blockItemListLinhaAction);
-        if (result == null) result = caseblock_item_list_linha(blockItemListLinhaAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1235,6 +1219,22 @@ public class AnsicSwitch<T> extends Switch<T>
    * @generated
    */
   public T casealignment_specifier(alignment_specifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>type qualifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>type qualifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casetype_qualifier(type_qualifier object)
   {
     return null;
   }
@@ -3032,38 +3032,6 @@ public class AnsicSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Direct Declarator Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Direct Declarator Linha Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDirectDeclaratorLinhaAction(DirectDeclaratorLinhaAction object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Parameter List Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parameter List Linha Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseParameterListLinhaAction(ParameterListLinhaAction object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Direct Abstract Declarrator Linha Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3304,6 +3272,22 @@ public class AnsicSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Plus Plus</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Plus Plus</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePlusPlus(PlusPlus object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Multiplicative Expression Linha Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3379,22 +3363,6 @@ public class AnsicSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEqualityExpressionLinhaAction(EqualityExpressionLinhaAction object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Block Item List Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Block Item List Linha Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBlockItemListLinhaAction(BlockItemListLinhaAction object)
   {
     return null;
   }

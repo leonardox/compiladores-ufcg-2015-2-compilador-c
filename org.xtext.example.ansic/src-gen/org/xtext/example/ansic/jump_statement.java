@@ -3,6 +3,7 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,7 @@ package org.xtext.example.ansic;
  * @model
  * @generated
  */
-public interface jump_statement extends statement
+public interface jump_statement extends EObject
 {
   /**
    * Returns the value of the '<em><b>Identifier</b></em>' attribute.

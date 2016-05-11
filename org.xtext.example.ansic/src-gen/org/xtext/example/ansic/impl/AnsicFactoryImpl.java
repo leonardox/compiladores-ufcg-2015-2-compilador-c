@@ -70,6 +70,7 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.EXTERNAL_DECLARATION: return createexternal_declaration();
       case AnsicPackage.DECLARATION_SPECIFIERS: return createdeclaration_specifiers();
       case AnsicPackage.ALIGNMENT_SPECIFIER: return createalignment_specifier();
+      case AnsicPackage.TYPE_QUALIFIER: return createtype_qualifier();
       case AnsicPackage.TYPE_SPECIFIER: return createtype_specifier();
       case AnsicPackage.ENUM_SPECIFIER: return createenum_specifier();
       case AnsicPackage.ENUMERATOR_LIST: return createenumerator_list();
@@ -182,8 +183,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.STRUCT_DECLARATOR_LIST_LINHA_ACTION: return createStructDeclaratorListLinhaAction();
       case AnsicPackage.DECLARATION_LIST_LINHA_ACTION: return createDeclarationListLinhaAction();
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION: return createTypeQualifierListLinhaAtion();
-      case AnsicPackage.DIRECT_DECLARATOR_LINHA_ACTION: return createDirectDeclaratorLinhaAction();
-      case AnsicPackage.PARAMETER_LIST_LINHA_ACTION: return createParameterListLinhaAction();
       case AnsicPackage.DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION: return createDirectAbstractDeclarratorLinhaAction();
       case AnsicPackage.IDENTIFIER_LIST_LINHA_ACTION: return createIdentifierListLinhaAction();
       case AnsicPackage.TRANLATION_UNIT_LINHA_ACTION: return createTranlationUnitLinhaAction();
@@ -199,12 +198,12 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT: return createPostfixExpressionComplementIncrement();
       case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT: return createPostfixExpressionComplementDecrement();
       case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION: return createArgumentExpressionListLinhaAction();
+      case AnsicPackage.PLUS_PLUS: return createPlusPlus();
       case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION: return createMultiplicativeExpressionLinhaAction();
       case AnsicPackage.ADDITIVE_EXPRESSION_LINHA_ACTION: return createAdditiveExpressionLinhaAction();
       case AnsicPackage.SHIFT_EXPRESSION_LINHA_ACTION: return createShiftExpressionLinhaAction();
       case AnsicPackage.RELATIONAL_EXPRESSION_LINHA_ACTION: return createRelationalExpressionLinhaAction();
       case AnsicPackage.EQUALITY_EXPRESSION_LINHA_ACTION: return createEqualityExpressionLinhaAction();
-      case AnsicPackage.BLOCK_ITEM_LIST_LINHA_ACTION: return createBlockItemListLinhaAction();
       case AnsicPackage.AND_EXPRESSION_LINHA_ACTION: return createAndExpressionLinhaAction();
       case AnsicPackage.EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION: return createExclusiveOrExpressionLinhaAction();
       case AnsicPackage.INCLUSIVE_OR_EXPRESSION_LINHA_ACTION: return createInclusiveOrExpressionLinhaAction();
@@ -271,6 +270,17 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
   {
     alignment_specifierImpl alignment_specifier = new alignment_specifierImpl();
     return alignment_specifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public type_qualifier createtype_qualifier()
+  {
+    type_qualifierImpl type_qualifier = new type_qualifierImpl();
+    return type_qualifier;
   }
 
   /**
@@ -1510,28 +1520,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DirectDeclaratorLinhaAction createDirectDeclaratorLinhaAction()
-  {
-    DirectDeclaratorLinhaActionImpl directDeclaratorLinhaAction = new DirectDeclaratorLinhaActionImpl();
-    return directDeclaratorLinhaAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterListLinhaAction createParameterListLinhaAction()
-  {
-    ParameterListLinhaActionImpl parameterListLinhaAction = new ParameterListLinhaActionImpl();
-    return parameterListLinhaAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public DirectAbstractDeclarratorLinhaAction createDirectAbstractDeclarratorLinhaAction()
   {
     DirectAbstractDeclarratorLinhaActionImpl directAbstractDeclarratorLinhaAction = new DirectAbstractDeclarratorLinhaActionImpl();
@@ -1697,6 +1685,17 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public PlusPlus createPlusPlus()
+  {
+    PlusPlusImpl plusPlus = new PlusPlusImpl();
+    return plusPlus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MultiplicativeExpressionLinhaAction createMultiplicativeExpressionLinhaAction()
   {
     MultiplicativeExpressionLinhaActionImpl multiplicativeExpressionLinhaAction = new MultiplicativeExpressionLinhaActionImpl();
@@ -1745,17 +1744,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
   {
     EqualityExpressionLinhaActionImpl equalityExpressionLinhaAction = new EqualityExpressionLinhaActionImpl();
     return equalityExpressionLinhaAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BlockItemListLinhaAction createBlockItemListLinhaAction()
-  {
-    BlockItemListLinhaActionImpl blockItemListLinhaAction = new BlockItemListLinhaActionImpl();
-    return blockItemListLinhaAction;
   }
 
   /**

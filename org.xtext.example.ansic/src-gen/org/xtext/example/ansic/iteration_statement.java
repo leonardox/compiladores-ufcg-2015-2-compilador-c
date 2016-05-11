@@ -3,6 +3,7 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +25,7 @@ package org.xtext.example.ansic;
  * @model
  * @generated
  */
-public interface iteration_statement extends statement
+public interface iteration_statement extends EObject
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' containment reference.

@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.block_item;
-import org.xtext.example.ansic.block_item_list_linha;
 import org.xtext.example.ansic.declaration;
 import org.xtext.example.ansic.statement;
 
@@ -25,25 +25,14 @@ import org.xtext.example.ansic.statement;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.impl.block_itemImpl#getBlock_item_list_linha <em>Block item list linha</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.block_itemImpl#getDeclaration <em>Declaration</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.block_itemImpl#getStatement <em>Statement</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class block_itemImpl extends block_item_listImpl implements block_item
+public class block_itemImpl extends MinimalEObjectImpl.Container implements block_item
 {
-  /**
-   * The cached value of the '{@link #getBlock_item_list_linha() <em>Block item list linha</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getBlock_item_list_linha()
-   * @generated
-   * @ordered
-   */
-  protected block_item_list_linha block_item_list_linha;
-
   /**
    * The cached value of the '{@link #getDeclaration() <em>Declaration</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -83,54 +72,6 @@ public class block_itemImpl extends block_item_listImpl implements block_item
   protected EClass eStaticClass()
   {
     return AnsicPackage.Literals.BLOCK_ITEM;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public block_item_list_linha getBlock_item_list_linha()
-  {
-    return block_item_list_linha;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetBlock_item_list_linha(block_item_list_linha newBlock_item_list_linha, NotificationChain msgs)
-  {
-    block_item_list_linha oldBlock_item_list_linha = block_item_list_linha;
-    block_item_list_linha = newBlock_item_list_linha;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA, oldBlock_item_list_linha, newBlock_item_list_linha);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setBlock_item_list_linha(block_item_list_linha newBlock_item_list_linha)
-  {
-    if (newBlock_item_list_linha != block_item_list_linha)
-    {
-      NotificationChain msgs = null;
-      if (block_item_list_linha != null)
-        msgs = ((InternalEObject)block_item_list_linha).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA, null, msgs);
-      if (newBlock_item_list_linha != null)
-        msgs = ((InternalEObject)newBlock_item_list_linha).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA, null, msgs);
-      msgs = basicSetBlock_item_list_linha(newBlock_item_list_linha, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA, newBlock_item_list_linha, newBlock_item_list_linha));
   }
 
   /**
@@ -239,8 +180,6 @@ public class block_itemImpl extends block_item_listImpl implements block_item
   {
     switch (featureID)
     {
-      case AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA:
-        return basicSetBlock_item_list_linha(null, msgs);
       case AnsicPackage.BLOCK_ITEM__DECLARATION:
         return basicSetDeclaration(null, msgs);
       case AnsicPackage.BLOCK_ITEM__STATEMENT:
@@ -259,8 +198,6 @@ public class block_itemImpl extends block_item_listImpl implements block_item
   {
     switch (featureID)
     {
-      case AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA:
-        return getBlock_item_list_linha();
       case AnsicPackage.BLOCK_ITEM__DECLARATION:
         return getDeclaration();
       case AnsicPackage.BLOCK_ITEM__STATEMENT:
@@ -279,9 +216,6 @@ public class block_itemImpl extends block_item_listImpl implements block_item
   {
     switch (featureID)
     {
-      case AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA:
-        setBlock_item_list_linha((block_item_list_linha)newValue);
-        return;
       case AnsicPackage.BLOCK_ITEM__DECLARATION:
         setDeclaration((declaration)newValue);
         return;
@@ -302,9 +236,6 @@ public class block_itemImpl extends block_item_listImpl implements block_item
   {
     switch (featureID)
     {
-      case AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA:
-        setBlock_item_list_linha((block_item_list_linha)null);
-        return;
       case AnsicPackage.BLOCK_ITEM__DECLARATION:
         setDeclaration((declaration)null);
         return;
@@ -325,8 +256,6 @@ public class block_itemImpl extends block_item_listImpl implements block_item
   {
     switch (featureID)
     {
-      case AnsicPackage.BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA:
-        return block_item_list_linha != null;
       case AnsicPackage.BLOCK_ITEM__DECLARATION:
         return declaration != null;
       case AnsicPackage.BLOCK_ITEM__STATEMENT:

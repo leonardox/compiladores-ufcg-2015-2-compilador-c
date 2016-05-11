@@ -99,30 +99,30 @@ public interface declaration_specifiers extends EObject
   void setType_specifier(type_specifier value);
 
   /**
-   * Returns the value of the '<em><b>Type qualifier</b></em>' attribute.
+   * Returns the value of the '<em><b>Type qualifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type qualifier</em>' attribute isn't clear,
+   * If the meaning of the '<em>Type qualifier</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type qualifier</em>' attribute.
-   * @see #setType_qualifier(String)
+   * @return the value of the '<em>Type qualifier</em>' containment reference.
+   * @see #setType_qualifier(type_qualifier)
    * @see org.xtext.example.ansic.AnsicPackage#getdeclaration_specifiers_Type_qualifier()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getType_qualifier();
+  type_qualifier getType_qualifier();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.ansic.declaration_specifiers#getType_qualifier <em>Type qualifier</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.ansic.declaration_specifiers#getType_qualifier <em>Type qualifier</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type qualifier</em>' attribute.
+   * @param value the new value of the '<em>Type qualifier</em>' containment reference.
    * @see #getType_qualifier()
    * @generated
    */
-  void setType_qualifier(String value);
+  void setType_qualifier(type_qualifier value);
 
   /**
    * Returns the value of the '<em><b>Function specifier</b></em>' attribute.

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.alignment_specifier;
 import org.xtext.example.ansic.declaration_specifiers;
+import org.xtext.example.ansic.type_qualifier;
 import org.xtext.example.ansic.type_specifier;
 
 /**
@@ -85,24 +86,14 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
   protected type_specifier type_specifier;
 
   /**
-   * The default value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' attribute.
+   * The cached value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType_qualifier()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_QUALIFIER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType_qualifier()
-   * @generated
-   * @ordered
-   */
-  protected String type_qualifier = TYPE_QUALIFIER_EDEFAULT;
+  protected type_qualifier type_qualifier;
 
   /**
    * The default value of the '{@link #getFunction_specifier() <em>Function specifier</em>}' attribute.
@@ -245,7 +236,7 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType_qualifier()
+  public type_qualifier getType_qualifier()
   {
     return type_qualifier;
   }
@@ -255,12 +246,37 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType_qualifier(String newType_qualifier)
+  public NotificationChain basicSetType_qualifier(type_qualifier newType_qualifier, NotificationChain msgs)
   {
-    String oldType_qualifier = type_qualifier;
+    type_qualifier oldType_qualifier = type_qualifier;
     type_qualifier = newType_qualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER, oldType_qualifier, type_qualifier));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER, oldType_qualifier, newType_qualifier);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType_qualifier(type_qualifier newType_qualifier)
+  {
+    if (newType_qualifier != type_qualifier)
+    {
+      NotificationChain msgs = null;
+      if (type_qualifier != null)
+        msgs = ((InternalEObject)type_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER, null, msgs);
+      if (newType_qualifier != null)
+        msgs = ((InternalEObject)newType_qualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER, null, msgs);
+      msgs = basicSetType_qualifier(newType_qualifier, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER, newType_qualifier, newType_qualifier));
   }
 
   /**
@@ -348,6 +364,8 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
         return ((InternalEList<?>)getDeclaration_specifiers()).basicRemove(otherEnd, msgs);
       case AnsicPackage.DECLARATION_SPECIFIERS__TYPE_SPECIFIER:
         return basicSetType_specifier(null, msgs);
+      case AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER:
+        return basicSetType_qualifier(null, msgs);
       case AnsicPackage.DECLARATION_SPECIFIERS__ALIGNMENT_SPECIFIER:
         return basicSetAlignment_specifier(null, msgs);
     }
@@ -402,7 +420,7 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
         setType_specifier((type_specifier)newValue);
         return;
       case AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER:
-        setType_qualifier((String)newValue);
+        setType_qualifier((type_qualifier)newValue);
         return;
       case AnsicPackage.DECLARATION_SPECIFIERS__FUNCTION_SPECIFIER:
         setFunction_specifier((String)newValue);
@@ -434,7 +452,7 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
         setType_specifier((type_specifier)null);
         return;
       case AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER:
-        setType_qualifier(TYPE_QUALIFIER_EDEFAULT);
+        setType_qualifier((type_qualifier)null);
         return;
       case AnsicPackage.DECLARATION_SPECIFIERS__FUNCTION_SPECIFIER:
         setFunction_specifier(FUNCTION_SPECIFIER_EDEFAULT);
@@ -463,7 +481,7 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
       case AnsicPackage.DECLARATION_SPECIFIERS__TYPE_SPECIFIER:
         return type_specifier != null;
       case AnsicPackage.DECLARATION_SPECIFIERS__TYPE_QUALIFIER:
-        return TYPE_QUALIFIER_EDEFAULT == null ? type_qualifier != null : !TYPE_QUALIFIER_EDEFAULT.equals(type_qualifier);
+        return type_qualifier != null;
       case AnsicPackage.DECLARATION_SPECIFIERS__FUNCTION_SPECIFIER:
         return FUNCTION_SPECIFIER_EDEFAULT == null ? function_specifier != null : !FUNCTION_SPECIFIER_EDEFAULT.equals(function_specifier);
       case AnsicPackage.DECLARATION_SPECIFIERS__ALIGNMENT_SPECIFIER:
@@ -485,8 +503,6 @@ public class declaration_specifiersImpl extends MinimalEObjectImpl.Container imp
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (storage_class_specifier: ");
     result.append(storage_class_specifier);
-    result.append(", type_qualifier: ");
-    result.append(type_qualifier);
     result.append(", function_specifier: ");
     result.append(function_specifier);
     result.append(')');

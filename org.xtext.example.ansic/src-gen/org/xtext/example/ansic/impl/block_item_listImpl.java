@@ -3,22 +3,63 @@
  */
 package org.xtext.example.ansic.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.block_item;
 import org.xtext.example.ansic.block_item_list;
+import org.xtext.example.ansic.block_item_list_linha;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>block item list</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.impl.block_item_listImpl#getBlock_item <em>Block item</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.block_item_listImpl#getBlock_item_list_linha <em>Block item list linha</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class block_item_listImpl extends MinimalEObjectImpl.Container implements block_item_list
 {
+  /**
+   * The cached value of the '{@link #getBlock_item() <em>Block item</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBlock_item()
+   * @generated
+   * @ordered
+   */
+  protected block_item block_item;
+
+  /**
+   * The cached value of the '{@link #getBlock_item_list_linha() <em>Block item list linha</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBlock_item_list_linha()
+   * @generated
+   * @ordered
+   */
+  protected EList<block_item_list_linha> block_item_list_linha;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -38,6 +79,164 @@ public class block_item_listImpl extends MinimalEObjectImpl.Container implements
   protected EClass eStaticClass()
   {
     return AnsicPackage.Literals.BLOCK_ITEM_LIST;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public block_item getBlock_item()
+  {
+    return block_item;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBlock_item(block_item newBlock_item, NotificationChain msgs)
+  {
+    block_item oldBlock_item = block_item;
+    block_item = newBlock_item;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM, oldBlock_item, newBlock_item);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBlock_item(block_item newBlock_item)
+  {
+    if (newBlock_item != block_item)
+    {
+      NotificationChain msgs = null;
+      if (block_item != null)
+        msgs = ((InternalEObject)block_item).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM, null, msgs);
+      if (newBlock_item != null)
+        msgs = ((InternalEObject)newBlock_item).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM, null, msgs);
+      msgs = basicSetBlock_item(newBlock_item, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM, newBlock_item, newBlock_item));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<block_item_list_linha> getBlock_item_list_linha()
+  {
+    if (block_item_list_linha == null)
+    {
+      block_item_list_linha = new EObjectContainmentEList<block_item_list_linha>(block_item_list_linha.class, this, AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA);
+    }
+    return block_item_list_linha;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM:
+        return basicSetBlock_item(null, msgs);
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA:
+        return ((InternalEList<?>)getBlock_item_list_linha()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM:
+        return getBlock_item();
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA:
+        return getBlock_item_list_linha();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM:
+        setBlock_item((block_item)newValue);
+        return;
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA:
+        getBlock_item_list_linha().clear();
+        getBlock_item_list_linha().addAll((Collection<? extends block_item_list_linha>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM:
+        setBlock_item((block_item)null);
+        return;
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA:
+        getBlock_item_list_linha().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM:
+        return block_item != null;
+      case AnsicPackage.BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA:
+        return block_item_list_linha != null && !block_item_list_linha.isEmpty();
+    }
+    return super.eIsSet(featureID);
   }
 
 } //block_item_listImpl

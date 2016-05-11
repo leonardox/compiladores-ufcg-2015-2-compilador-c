@@ -69,6 +69,15 @@ public interface AnsicFactory extends EFactory
   alignment_specifier createalignment_specifier();
 
   /**
+   * Returns a new object of class '<em>type qualifier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>type qualifier</em>'.
+   * @generated
+   */
+  type_qualifier createtype_qualifier();
+
+  /**
    * Returns a new object of class '<em>type specifier</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1077,24 +1086,6 @@ public interface AnsicFactory extends EFactory
   TypeQualifierListLinhaAtion createTypeQualifierListLinhaAtion();
 
   /**
-   * Returns a new object of class '<em>Direct Declarator Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Direct Declarator Linha Action</em>'.
-   * @generated
-   */
-  DirectDeclaratorLinhaAction createDirectDeclaratorLinhaAction();
-
-  /**
-   * Returns a new object of class '<em>Parameter List Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Parameter List Linha Action</em>'.
-   * @generated
-   */
-  ParameterListLinhaAction createParameterListLinhaAction();
-
-  /**
    * Returns a new object of class '<em>Direct Abstract Declarrator Linha Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1230,6 +1221,15 @@ public interface AnsicFactory extends EFactory
   ArgumentExpressionListLinhaAction createArgumentExpressionListLinhaAction();
 
   /**
+   * Returns a new object of class '<em>Plus Plus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Plus Plus</em>'.
+   * @generated
+   */
+  PlusPlus createPlusPlus();
+
+  /**
    * Returns a new object of class '<em>Multiplicative Expression Linha Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1273,15 +1273,6 @@ public interface AnsicFactory extends EFactory
    * @generated
    */
   EqualityExpressionLinhaAction createEqualityExpressionLinhaAction();
-
-  /**
-   * Returns a new object of class '<em>Block Item List Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Block Item List Linha Action</em>'.
-   * @generated
-   */
-  BlockItemListLinhaAction createBlockItemListLinhaAction();
 
   /**
    * Returns a new object of class '<em>And Expression Linha Action</em>'.

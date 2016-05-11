@@ -18,12 +18,10 @@ import org.xtext.example.ansic.AdditiveExpressionLinhaAction;
 import org.xtext.example.ansic.AndExpressionLinhaAction;
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.ArgumentExpressionListLinhaAction;
-import org.xtext.example.ansic.BlockItemListLinhaAction;
 import org.xtext.example.ansic.ConditionalExpressionLinhaAcction;
 import org.xtext.example.ansic.DeclarationListLinhaAction;
 import org.xtext.example.ansic.DesignatorListLinhaAction;
 import org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction;
-import org.xtext.example.ansic.DirectDeclaratorLinhaAction;
 import org.xtext.example.ansic.DomainModel;
 import org.xtext.example.ansic.EnumeratorListLinhaAction;
 import org.xtext.example.ansic.EqualityExpressionLinhaAction;
@@ -37,7 +35,7 @@ import org.xtext.example.ansic.InitializerListLinhaAction;
 import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
 import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
 import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
-import org.xtext.example.ansic.ParameterListLinhaAction;
+import org.xtext.example.ansic.PlusPlus;
 import org.xtext.example.ansic.PostfixExpressionComplementArgList;
 import org.xtext.example.ansic.PostfixExpressionComplementDecrement;
 import org.xtext.example.ansic.PostfixExpressionComplementEmpty;
@@ -62,6 +60,8 @@ import org.xtext.example.ansic.argument_expression_list;
 import org.xtext.example.ansic.assignment_expression;
 import org.xtext.example.ansic.atomic_type_specifier;
 import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.block_item_list;
+import org.xtext.example.ansic.block_item_list_linha;
 import org.xtext.example.ansic.cast_expression;
 import org.xtext.example.ansic.compound_statement;
 import org.xtext.example.ansic.conditional_expression;
@@ -78,6 +78,7 @@ import org.xtext.example.ansic.direct_abstract_declarator;
 import org.xtext.example.ansic.direct_abstract_declarator_complement;
 import org.xtext.example.ansic.direct_declarator;
 import org.xtext.example.ansic.direct_declarator_complemento;
+import org.xtext.example.ansic.direct_declarator_linha;
 import org.xtext.example.ansic.enum_specifier;
 import org.xtext.example.ansic.enumeration_constant;
 import org.xtext.example.ansic.enumerator;
@@ -108,6 +109,7 @@ import org.xtext.example.ansic.multiplicative_expression;
 import org.xtext.example.ansic.multiplicative_expression_complement;
 import org.xtext.example.ansic.parameter_declaration;
 import org.xtext.example.ansic.parameter_list;
+import org.xtext.example.ansic.parameter_list_linha;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.pointer;
 import org.xtext.example.ansic.postfix_expression;
@@ -118,6 +120,7 @@ import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.shift_expression;
 import org.xtext.example.ansic.shift_expression_complement;
 import org.xtext.example.ansic.specifier_qualifier_list;
+import org.xtext.example.ansic.statement;
 import org.xtext.example.ansic.static_assert_declaration;
 import org.xtext.example.ansic.string_ufcg;
 import org.xtext.example.ansic.struct_declaration;
@@ -127,6 +130,7 @@ import org.xtext.example.ansic.struct_declarator_list;
 import org.xtext.example.ansic.struct_or_union_specifier;
 import org.xtext.example.ansic.translation_unit;
 import org.xtext.example.ansic.type_name;
+import org.xtext.example.ansic.type_qualifier;
 import org.xtext.example.ansic.type_qualifier_list;
 import org.xtext.example.ansic.type_specifier;
 import org.xtext.example.ansic.unary_expression;
@@ -155,9 +159,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION:
 				sequence_argument_expression_list_linha(context, (ArgumentExpressionListLinhaAction) semanticObject); 
 				return; 
-			case AnsicPackage.BLOCK_ITEM_LIST_LINHA_ACTION:
-				sequence_block_item_list_linha(context, (BlockItemListLinhaAction) semanticObject); 
-				return; 
 			case AnsicPackage.CONDITIONAL_EXPRESSION_LINHA_ACCTION:
 				sequence_conditional_expression_linha(context, (ConditionalExpressionLinhaAcction) semanticObject); 
 				return; 
@@ -169,9 +170,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case AnsicPackage.DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION:
 				sequence_direct_abstract_declarator_linha(context, (DirectAbstractDeclarratorLinhaAction) semanticObject); 
-				return; 
-			case AnsicPackage.DIRECT_DECLARATOR_LINHA_ACTION:
-				sequence_direct_declarator_linha(context, (DirectDeclaratorLinhaAction) semanticObject); 
 				return; 
 			case AnsicPackage.DOMAIN_MODEL:
 				sequence_DomainModel(context, (DomainModel) semanticObject); 
@@ -212,8 +210,8 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION:
 				sequence_multiplicative_expression_linha(context, (MultiplicativeExpressionLinhaAction) semanticObject); 
 				return; 
-			case AnsicPackage.PARAMETER_LIST_LINHA_ACTION:
-				sequence_parameter_list_linha(context, (ParameterListLinhaAction) semanticObject); 
+			case AnsicPackage.PLUS_PLUS:
+				sequence_unary_expression(context, (PlusPlus) semanticObject); 
 				return; 
 			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST:
 				sequence_postfix_expression_complement(context, (PostfixExpressionComplementArgList) semanticObject); 
@@ -285,15 +283,14 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				sequence_atomic_type_specifier(context, (atomic_type_specifier) semanticObject); 
 				return; 
 			case AnsicPackage.BLOCK_ITEM:
-				if (rule == grammarAccess.getBlock_itemRule()) {
-					sequence_block_item(context, (block_item) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getBlock_item_listRule()) {
-					sequence_block_item_block_item_list(context, (block_item) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_block_item(context, (block_item) semanticObject); 
+				return; 
+			case AnsicPackage.BLOCK_ITEM_LIST:
+				sequence_block_item_list(context, (block_item_list) semanticObject); 
+				return; 
+			case AnsicPackage.BLOCK_ITEM_LIST_LINHA:
+				sequence_block_item_list_linha(context, (block_item_list_linha) semanticObject); 
+				return; 
 			case AnsicPackage.CAST_EXPRESSION:
 				sequence_cast_expression(context, (cast_expression) semanticObject); 
 				return; 
@@ -341,6 +338,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case AnsicPackage.DIRECT_DECLARATOR_COMPLEMENTO:
 				sequence_direct_declarator_complemento(context, (direct_declarator_complemento) semanticObject); 
+				return; 
+			case AnsicPackage.DIRECT_DECLARATOR_LINHA:
+				sequence_direct_declarator_linha(context, (direct_declarator_linha) semanticObject); 
 				return; 
 			case AnsicPackage.ENUM_SPECIFIER:
 				sequence_enum_specifier(context, (enum_specifier) semanticObject); 
@@ -432,6 +432,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.PARAMETER_LIST:
 				sequence_parameter_list(context, (parameter_list) semanticObject); 
 				return; 
+			case AnsicPackage.PARAMETER_LIST_LINHA:
+				sequence_parameter_list_linha(context, (parameter_list_linha) semanticObject); 
+				return; 
 			case AnsicPackage.PARAMETER_TYPE_LIST:
 				sequence_parameter_type_list(context, (parameter_type_list) semanticObject); 
 				return; 
@@ -461,6 +464,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case AnsicPackage.SPECIFIER_QUALIFIER_LIST:
 				sequence_specifier_qualifier_list(context, (specifier_qualifier_list) semanticObject); 
+				return; 
+			case AnsicPackage.STATEMENT:
+				sequence_statement(context, (statement) semanticObject); 
 				return; 
 			case AnsicPackage.STATIC_ASSERT_DECLARATION:
 				sequence_static_assert_declaration(context, (static_assert_declaration) semanticObject); 
@@ -496,6 +502,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case AnsicPackage.TYPE_QUALIFIER:
+				sequence_type_qualifier(context, (type_qualifier) semanticObject); 
+				return; 
 			case AnsicPackage.TYPE_QUALIFIER_LIST:
 				if (rule == grammarAccess.getDirect_abstract_declarator_complementRule()) {
 					sequence_direct_abstract_declarator_complement_type_qualifier_list(context, (type_qualifier_list) semanticObject); 
@@ -711,24 +720,24 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     block_item_list returns block_item
+	 *     block_item_list returns block_item_list
 	 *
 	 * Constraint:
-	 *     ((declaration=declaration | statement=statement) block_item_list_linha=block_item_list_linha)
+	 *     (block_item=block_item block_item_list_linha+=block_item_list_linha?)
 	 */
-	protected void sequence_block_item_block_item_list(ISerializationContext context, block_item semanticObject) {
+	protected void sequence_block_item_list(ISerializationContext context, block_item_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     block_item_list_linha returns BlockItemListLinhaAction
+	 *     block_item_list_linha returns block_item_list_linha
 	 *
 	 * Constraint:
-	 *     (block_item=block_item block_item_list_linha=block_item_list_linha)?
+	 *     (block_item=block_item block_item_list_linha+=block_item_list_linha?)
 	 */
-	protected void sequence_block_item_list_linha(ISerializationContext context, BlockItemListLinhaAction semanticObject) {
+	protected void sequence_block_item_list_linha(ISerializationContext context, block_item_list_linha semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -747,20 +756,13 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     statement returns compound_statement
 	 *     compound_statement returns compound_statement
 	 *
 	 * Constraint:
-	 *     block_item_list=block_item_list
+	 *     block_item_list+=block_item_list
 	 */
 	protected void sequence_compound_statement(ISerializationContext context, compound_statement semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.COMPOUND_STATEMENT__BLOCK_ITEM_LIST) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.COMPOUND_STATEMENT__BLOCK_ITEM_LIST));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCompound_statementAccess().getBlock_item_listBlock_item_listParserRuleCall_1_1_0(), semanticObject.getBlock_item_list());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -802,7 +804,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     constant returns constant
 	 *
 	 * Constraint:
-	 *     (i_constant=I_CONSTANT | f_constant=F_CONSTANT | enumz='enum')
+	 *     (i_constant=INT | f_constant=FLOAT | enumz='enum')
 	 */
 	protected void sequence_constant(ISerializationContext context, constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1080,7 +1082,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     direct_declarator returns direct_declarator
 	 *
 	 * Constraint:
-	 *     ((identifier=ID direct_declarator_linha=direct_declarator_linha) | (declarator=declarator direct_declarator_linha=direct_declarator_linha))
+	 *     ((identifier=ID direct_declarator_linha=direct_declarator_linha?) | (declarator=declarator direct_declarator_linha=direct_declarator_linha?))
 	 */
 	protected void sequence_direct_declarator(ISerializationContext context, direct_declarator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1089,12 +1091,12 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     direct_declarator_linha returns DirectDeclaratorLinhaAction
+	 *     direct_declarator_linha returns direct_declarator_linha
 	 *
 	 * Constraint:
-	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
+	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha?)
 	 */
-	protected void sequence_direct_declarator_linha(ISerializationContext context, DirectDeclaratorLinhaAction semanticObject) {
+	protected void sequence_direct_declarator_linha(ISerializationContext context, direct_declarator_linha semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1293,7 +1295,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     statement returns expression_statement
 	 *     expression_statement returns expression_statement
 	 *
 	 * Constraint:
@@ -1558,7 +1559,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     statement returns iteration_statement
 	 *     iteration_statement returns iteration_statement
 	 *
 	 * Constraint:
@@ -1578,7 +1578,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     statement returns jump_statement
 	 *     jump_statement returns jump_statement
 	 *
 	 * Constraint:
@@ -1591,11 +1590,10 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     statement returns labeled_statement
 	 *     labeled_statement returns labeled_statement
 	 *
 	 * Constraint:
-	 *     ((identifier=ID statement=statement) | (constant_expression=conditional_expression statement=statement) | statement=statement)
+	 *     ((identifier=ID statement=statement) | (conditional_expression=conditional_expression statement=statement) | statement=statement)
 	 */
 	protected void sequence_labeled_statement(ISerializationContext context, labeled_statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1731,12 +1729,12 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     parameter_list_linha returns ParameterListLinhaAction
+	 *     parameter_list_linha returns parameter_list_linha
 	 *
 	 * Constraint:
-	 *     (parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)?
+	 *     (parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?)
 	 */
-	protected void sequence_parameter_list_linha(ISerializationContext context, ParameterListLinhaAction semanticObject) {
+	protected void sequence_parameter_list_linha(ISerializationContext context, parameter_list_linha semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1746,19 +1744,10 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     parameter_list returns parameter_list
 	 *
 	 * Constraint:
-	 *     (parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)
+	 *     (parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha?)
 	 */
 	protected void sequence_parameter_list(ISerializationContext context, parameter_list semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_DECLARATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_DECLARATION));
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_LIST_LINHA) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.PARAMETER_LIST__PARAMETER_LIST_LINHA));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getParameter_listAccess().getParameter_declarationParameter_declarationParserRuleCall_0_0(), semanticObject.getParameter_declaration());
-		feeder.accept(grammarAccess.getParameter_listAccess().getParameter_list_linhaParameter_list_linhaParserRuleCall_1_0(), semanticObject.getParameter_list_linha());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1767,7 +1756,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     parameter_type_list returns parameter_type_list
 	 *
 	 * Constraint:
-	 *     (parameter_list=parameter_list | parameter_list=parameter_list)
+	 *     (parameter_list+=parameter_list | parameter_list+=parameter_list)
 	 */
 	protected void sequence_parameter_type_list(ISerializationContext context, parameter_type_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1998,14 +1987,13 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     statement returns selection_statement
 	 *     selection_statement returns selection_statement
 	 *
 	 * Constraint:
 	 *     (
 	 *         (expression=expression statement=statement statement2=statement) | 
 	 *         (expression=expression statement=statement) | 
-	 *         (expression=expression statement=expression)
+	 *         (expression=expression statement=statement)
 	 *     )
 	 */
 	protected void sequence_selection_statement(ISerializationContext context, selection_statement semanticObject) {
@@ -2071,6 +2059,25 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     )
 	 */
 	protected void sequence_specifier_qualifier_list(ISerializationContext context, specifier_qualifier_list semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     statement returns statement
+	 *
+	 * Constraint:
+	 *     (
+	 *         labeled_statement=labeled_statement | 
+	 *         compound_statement=compound_statement | 
+	 *         expression_statement=expression_statement | 
+	 *         selection_statement=selection_statement | 
+	 *         iteration_statement=iteration_statement | 
+	 *         jump_statement=jump_statement
+	 *     )
+	 */
+	protected void sequence_statement(ISerializationContext context, statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -2306,13 +2313,63 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     type_qualifier returns type_qualifier
+	 *
+	 * Constraint:
+	 *     (namez='const' | namez='restrict' | namez='volatile' | namez='_Atomic')
+	 */
+	protected void sequence_type_qualifier(ISerializationContext context, type_qualifier semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     type_specifier returns type_specifier
 	 *
 	 * Constraint:
-	 *     (atomic_type_specifier=atomic_type_specifier | struct_or_union_specifier=struct_or_union_specifier | enum_specifier=enum_specifier)
+	 *     (
+	 *         type_name_str='void' | 
+	 *         type_name_str='char' | 
+	 *         type_name_str='short' | 
+	 *         type_name_str='int' | 
+	 *         type_name_str='long' | 
+	 *         type_name_str='float' | 
+	 *         type_name_str='double' | 
+	 *         type_name_str='signed' | 
+	 *         type_name_str='unsigned' | 
+	 *         type_name_str='bool' | 
+	 *         type_name_str='_Complex' | 
+	 *         type_name_str='_Imaginary' | 
+	 *         atomic_type_specifier=atomic_type_specifier | 
+	 *         struct_or_union_specifier=struct_or_union_specifier | 
+	 *         enum_specifier=enum_specifier | 
+	 *         type_name_str='typedef'
+	 *     )
 	 */
 	protected void sequence_type_specifier(ISerializationContext context, type_specifier semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     unary_expression returns PlusPlus
+	 *
+	 * Constraint:
+	 *     (plus='++' unary_expression=unary_expression)
+	 */
+	protected void sequence_unary_expression(ISerializationContext context, PlusPlus semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.PLUS_PLUS__PLUS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.PLUS_PLUS__PLUS));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.UNARY_EXPRESSION__UNARY_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.UNARY_EXPRESSION__UNARY_EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getUnary_expressionAccess().getPlusPlusSignPlusSignKeyword_1_1_0(), semanticObject.getPlus());
+		feeder.accept(grammarAccess.getUnary_expressionAccess().getUnary_expressionUnary_expressionParserRuleCall_1_2_0(), semanticObject.getUnary_expression());
+		feeder.finish();
 	}
 	
 	
@@ -2323,7 +2380,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     (
 	 *         postfix_expression=postfix_expression | 
-	 *         unary_expression=unary_expression | 
 	 *         unary_expression=unary_expression | 
 	 *         (unary_operator=unary_operator cast_expression=cast_expression) | 
 	 *         unary_expression=unary_expression | 

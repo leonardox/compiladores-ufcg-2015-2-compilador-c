@@ -38,7 +38,7 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
    * @generated
    * @ordered
    */
-  protected static final String ICONSTANT_EDEFAULT = null;
+  protected static final int ICONSTANT_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getI_constant() <em>Iconstant</em>}' attribute.
@@ -48,7 +48,7 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
    * @generated
    * @ordered
    */
-  protected String i_constant = ICONSTANT_EDEFAULT;
+  protected int i_constant = ICONSTANT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getF_constant() <em>Fconstant</em>}' attribute.
@@ -116,7 +116,7 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getI_constant()
+  public int getI_constant()
   {
     return i_constant;
   }
@@ -126,9 +126,9 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setI_constant(String newI_constant)
+  public void setI_constant(int newI_constant)
   {
-    String oldI_constant = i_constant;
+    int oldI_constant = i_constant;
     i_constant = newI_constant;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.CONSTANT__ICONSTANT, oldI_constant, i_constant));
@@ -211,7 +211,7 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
     switch (featureID)
     {
       case AnsicPackage.CONSTANT__ICONSTANT:
-        setI_constant((String)newValue);
+        setI_constant((Integer)newValue);
         return;
       case AnsicPackage.CONSTANT__FCONSTANT:
         setF_constant((String)newValue);
@@ -257,7 +257,7 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
     switch (featureID)
     {
       case AnsicPackage.CONSTANT__ICONSTANT:
-        return ICONSTANT_EDEFAULT == null ? i_constant != null : !ICONSTANT_EDEFAULT.equals(i_constant);
+        return i_constant != ICONSTANT_EDEFAULT;
       case AnsicPackage.CONSTANT__FCONSTANT:
         return FCONSTANT_EDEFAULT == null ? f_constant != null : !FCONSTANT_EDEFAULT.equals(f_constant);
       case AnsicPackage.CONSTANT__ENUMZ:

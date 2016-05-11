@@ -3,14 +3,21 @@
  */
 package org.xtext.example.ansic.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.parameter_declaration;
@@ -44,14 +51,14 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
   protected parameter_declaration parameter_declaration;
 
   /**
-   * The cached value of the '{@link #getParameter_list_linha() <em>Parameter list linha</em>}' containment reference.
+   * The cached value of the '{@link #getParameter_list_linha() <em>Parameter list linha</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getParameter_list_linha()
    * @generated
    * @ordered
    */
-  protected parameter_list_linha parameter_list_linha;
+  protected EList<parameter_list_linha> parameter_list_linha;
 
   /**
    * <!-- begin-user-doc -->
@@ -127,47 +134,13 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public parameter_list_linha getParameter_list_linha()
+  public EList<parameter_list_linha> getParameter_list_linha()
   {
+    if (parameter_list_linha == null)
+    {
+      parameter_list_linha = new EObjectContainmentEList<parameter_list_linha>(parameter_list_linha.class, this, AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA);
+    }
     return parameter_list_linha;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetParameter_list_linha(parameter_list_linha newParameter_list_linha, NotificationChain msgs)
-  {
-    parameter_list_linha oldParameter_list_linha = parameter_list_linha;
-    parameter_list_linha = newParameter_list_linha;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA, oldParameter_list_linha, newParameter_list_linha);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setParameter_list_linha(parameter_list_linha newParameter_list_linha)
-  {
-    if (newParameter_list_linha != parameter_list_linha)
-    {
-      NotificationChain msgs = null;
-      if (parameter_list_linha != null)
-        msgs = ((InternalEObject)parameter_list_linha).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA, null, msgs);
-      if (newParameter_list_linha != null)
-        msgs = ((InternalEObject)newParameter_list_linha).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA, null, msgs);
-      msgs = basicSetParameter_list_linha(newParameter_list_linha, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA, newParameter_list_linha, newParameter_list_linha));
   }
 
   /**
@@ -183,7 +156,7 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
       case AnsicPackage.PARAMETER_LIST__PARAMETER_DECLARATION:
         return basicSetParameter_declaration(null, msgs);
       case AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA:
-        return basicSetParameter_list_linha(null, msgs);
+        return ((InternalEList<?>)getParameter_list_linha()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -211,6 +184,7 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -220,7 +194,8 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
         setParameter_declaration((parameter_declaration)newValue);
         return;
       case AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA:
-        setParameter_list_linha((parameter_list_linha)newValue);
+        getParameter_list_linha().clear();
+        getParameter_list_linha().addAll((Collection<? extends parameter_list_linha>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,7 +215,7 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
         setParameter_declaration((parameter_declaration)null);
         return;
       case AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA:
-        setParameter_list_linha((parameter_list_linha)null);
+        getParameter_list_linha().clear();
         return;
     }
     super.eUnset(featureID);
@@ -259,7 +234,7 @@ public class parameter_listImpl extends MinimalEObjectImpl.Container implements 
       case AnsicPackage.PARAMETER_LIST__PARAMETER_DECLARATION:
         return parameter_declaration != null;
       case AnsicPackage.PARAMETER_LIST__PARAMETER_LIST_LINHA:
-        return parameter_list_linha != null;
+        return parameter_list_linha != null && !parameter_list_linha.isEmpty();
     }
     return super.eIsSet(featureID);
   }

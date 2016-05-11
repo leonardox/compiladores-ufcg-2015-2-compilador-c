@@ -3,6 +3,8 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -10,6 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>parameter list linha</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.parameter_list_linha#getParameter_declaration <em>Parameter declaration</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.parameter_list_linha#getParameter_list_linha <em>Parameter list linha</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getparameter_list_linha()
  * @model
@@ -17,4 +26,46 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface parameter_list_linha extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Parameter declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Parameter declaration</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Parameter declaration</em>' containment reference.
+   * @see #setParameter_declaration(parameter_declaration)
+   * @see org.xtext.example.ansic.AnsicPackage#getparameter_list_linha_Parameter_declaration()
+   * @model containment="true"
+   * @generated
+   */
+  parameter_declaration getParameter_declaration();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.parameter_list_linha#getParameter_declaration <em>Parameter declaration</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Parameter declaration</em>' containment reference.
+   * @see #getParameter_declaration()
+   * @generated
+   */
+  void setParameter_declaration(parameter_declaration value);
+
+  /**
+   * Returns the value of the '<em><b>Parameter list linha</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.ansic.parameter_list_linha}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Parameter list linha</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Parameter list linha</em>' containment reference list.
+   * @see org.xtext.example.ansic.AnsicPackage#getparameter_list_linha_Parameter_list_linha()
+   * @model containment="true"
+   * @generated
+   */
+  EList<parameter_list_linha> getParameter_list_linha();
+
 } // parameter_list_linha

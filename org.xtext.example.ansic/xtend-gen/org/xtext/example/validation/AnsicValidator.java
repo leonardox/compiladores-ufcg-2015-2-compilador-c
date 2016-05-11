@@ -3,6 +3,52 @@
  */
 package org.xtext.example.validation;
 
+import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.InputOutput;
+import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.and_expression;
+import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.cast_expression;
+import org.xtext.example.ansic.compound_statement;
+import org.xtext.example.ansic.conditional_expression;
+import org.xtext.example.ansic.constant;
+import org.xtext.example.ansic.declaration;
+import org.xtext.example.ansic.declaration_list;
+import org.xtext.example.ansic.declaration_specifiers;
+import org.xtext.example.ansic.declarator;
+import org.xtext.example.ansic.direct_declarator;
+import org.xtext.example.ansic.direct_declarator_complemento;
+import org.xtext.example.ansic.direct_declarator_linha;
+import org.xtext.example.ansic.equality_expression;
+import org.xtext.example.ansic.exclusive_or_expression;
+import org.xtext.example.ansic.expression;
+import org.xtext.example.ansic.function_definition;
+import org.xtext.example.ansic.inclusive_or_expression;
+import org.xtext.example.ansic.init_declarator;
+import org.xtext.example.ansic.init_declarator_list;
+import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.logical_and_expression;
+import org.xtext.example.ansic.logical_or_expression;
+import org.xtext.example.ansic.multiplicative_expression;
+import org.xtext.example.ansic.parameter_list;
+import org.xtext.example.ansic.parameter_type_list;
+import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.primary_expression;
+import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.selection_statement;
+import org.xtext.example.ansic.shift_expression;
+import org.xtext.example.ansic.statement;
+import org.xtext.example.ansic.string_ufcg;
+import org.xtext.example.ansic.type_specifier;
+import org.xtext.example.ansic.unary_expression;
 import org.xtext.example.validation.AbstractAnsicValidator;
 
 /**
@@ -12,4 +58,379 @@ import org.xtext.example.validation.AbstractAnsicValidator;
  */
 @SuppressWarnings("all")
 public class AnsicValidator extends AbstractAnsicValidator {
+  public static class Function {
+    public List<String> params_types = new ArrayList<String>();
+    
+    public String retType;
+    
+    public String name;
+  }
+  
+  public final static String INVALID_NAME = "invalidName";
+  
+  private HashMap<String, String> variables = CollectionLiterals.<String, String>newHashMap();
+  
+  private HashMap<String, AnsicValidator.Function> functions = CollectionLiterals.<String, AnsicValidator.Function>newHashMap();
+  
+  @Check
+  public void checkGreetingStartsWithCapital(final type_specifier tName) {
+    String _type_name_str = tName.getType_name_str();
+    InputOutput.<String>println(_type_name_str);
+    String _type_name_str_1 = tName.getType_name_str();
+    boolean _equals = _type_name_str_1.equals("char");
+    if (_equals) {
+      this.error("NÃ£o pode char, cuzÃ£o!", AnsicPackage.Literals.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER);
+    }
+  }
+  
+  @Check
+  public String checkDeclarationTypes(final declaration decl) {
+    String _xblockexpression = null;
+    {
+      EList<declaration_specifiers> _declaration_specifiers = decl.getDeclaration_specifiers();
+      declaration_specifiers _get = _declaration_specifiers.get(0);
+      type_specifier _type_specifier = _get.getType_specifier();
+      String leftType = _type_specifier.getType_name_str();
+      EList<init_declarator_list> _init_declarator_list = decl.getInit_declarator_list();
+      init_declarator_list _get_1 = _init_declarator_list.get(0);
+      init_declarator _init_declarator = _get_1.getInit_declarator();
+      declarator _declarator = _init_declarator.getDeclarator();
+      direct_declarator _direct_declarator = _declarator.getDirect_declarator();
+      String id = _direct_declarator.getIdentifier();
+      EList<init_declarator_list> _init_declarator_list_1 = decl.getInit_declarator_list();
+      init_declarator_list _get_2 = _init_declarator_list_1.get(0);
+      init_declarator _init_declarator_1 = _get_2.getInit_declarator();
+      initializer _initializer = _init_declarator_1.getInitializer();
+      assignment_expression _assignment_expression = _initializer.getAssignment_expression();
+      conditional_expression _conditional_expression = _assignment_expression.getConditional_expression();
+      logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
+      logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
+      inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+      and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression rightType = _postfix_expression.getPrimary_expression();
+      boolean _and = false;
+      constant _constant = rightType.getConstant();
+      String _f_constant = _constant.getF_constant();
+      boolean _equals = Objects.equal(_f_constant, null);
+      if (!_equals) {
+        _and = false;
+      } else {
+        constant _constant_1 = rightType.getConstant();
+        String _enumz = _constant_1.getEnumz();
+        boolean _equals_1 = Objects.equal(_enumz, null);
+        _and = _equals_1;
+      }
+      if (_and) {
+        boolean _or = false;
+        boolean _or_1 = false;
+        boolean _equals_2 = Objects.equal(leftType, "char");
+        if (_equals_2) {
+          _or_1 = true;
+        } else {
+          boolean _equals_3 = Objects.equal(leftType, "bool");
+          _or_1 = _equals_3;
+        }
+        if (_or_1) {
+          _or = true;
+        } else {
+          boolean _equals_4 = Objects.equal(leftType, "void");
+          _or = _equals_4;
+        }
+        if (_or) {
+          InputOutput.<String>println("entrou");
+          this.error("Esse tipo não recebe valores numéricos", 
+            AnsicPackage.Literals.DECLARATION__DECLARATION_SPECIFIERS);
+        }
+      } else {
+        constant _constant_2 = rightType.getConstant();
+        String _f_constant_1 = _constant_2.getF_constant();
+        boolean _notEquals = (!Objects.equal(_f_constant_1, null));
+        if (_notEquals) {
+          boolean _or_2 = false;
+          boolean _or_3 = false;
+          boolean _or_4 = false;
+          boolean _equals_5 = Objects.equal(leftType, "char");
+          if (_equals_5) {
+            _or_4 = true;
+          } else {
+            boolean _equals_6 = Objects.equal(leftType, "bool");
+            _or_4 = _equals_6;
+          }
+          if (_or_4) {
+            _or_3 = true;
+          } else {
+            boolean _equals_7 = Objects.equal(leftType, "void");
+            _or_3 = _equals_7;
+          }
+          if (_or_3) {
+            _or_2 = true;
+          } else {
+            boolean _equals_8 = Objects.equal(leftType, "int");
+            _or_2 = _equals_8;
+          }
+          if (_or_2) {
+            InputOutput.<String>println("entrou");
+            this.error("Esse tipo não recebe valores numéricos com ponto flutuante", 
+              AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+          }
+        }
+      }
+      string_ufcg _string = rightType.getString();
+      boolean _notEquals_1 = (!Objects.equal(_string, null));
+      if (_notEquals_1) {
+      }
+      _xblockexpression = this.variables.put(id, leftType);
+    }
+    return _xblockexpression;
+  }
+  
+  @Check
+  public void checkAtribType(final assignment_expression asexp) {
+    unary_expression _unary_expression = asexp.getUnary_expression();
+    postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+    primary_expression _primary_expression = _postfix_expression.getPrimary_expression();
+    String idLeft = _primary_expression.getIdentifier();
+    assignment_expression _assignment_expression = asexp.getAssignment_expression();
+    boolean _notEquals = (!Objects.equal(_assignment_expression, null));
+    if (_notEquals) {
+      assignment_expression _assignment_expression_1 = asexp.getAssignment_expression();
+      conditional_expression _conditional_expression = _assignment_expression_1.getConditional_expression();
+      logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
+      logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
+      inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+      and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression _primary_expression_1 = _postfix_expression_1.getPrimary_expression();
+      String idRight = _primary_expression_1.getIdentifier();
+      Set<String> _keySet = this.variables.keySet();
+      boolean _contains = _keySet.contains(idRight);
+      boolean _not = (!_contains);
+      if (_not) {
+        this.error("Variavel não declarada", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__ASSIGNMENT_EXPRESSION);
+      }
+      String tr = this.variables.get(idRight);
+      String tl = this.variables.get(idLeft);
+      boolean _and = false;
+      boolean _equals = Objects.equal(tl, "int");
+      if (!_equals) {
+        _and = false;
+      } else {
+        boolean _equals_1 = Objects.equal(tr, "float");
+        _and = _equals_1;
+      }
+      if (_and) {
+        this.error("Tipos incompativeis, De float para int", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_1 = false;
+      boolean _equals_2 = Objects.equal(tl, "int");
+      if (!_equals_2) {
+        _and_1 = false;
+      } else {
+        boolean _equals_3 = Objects.equal(tr, "double");
+        _and_1 = _equals_3;
+      }
+      if (_and_1) {
+        this.error("Tipos incompativeis, De double para int", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_2 = false;
+      boolean _equals_4 = Objects.equal(tl, "short");
+      if (!_equals_4) {
+        _and_2 = false;
+      } else {
+        boolean _equals_5 = Objects.equal(tr, "float");
+        _and_2 = _equals_5;
+      }
+      if (_and_2) {
+        this.error("Tipos incompativeis, De float para short", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_3 = false;
+      boolean _equals_6 = Objects.equal(tl, "short");
+      if (!_equals_6) {
+        _and_3 = false;
+      } else {
+        boolean _equals_7 = Objects.equal(tr, "double");
+        _and_3 = _equals_7;
+      }
+      if (_and_3) {
+        this.error("Tipos incompativeis, De double para short", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_4 = false;
+      boolean _equals_8 = Objects.equal(tl, "long");
+      if (!_equals_8) {
+        _and_4 = false;
+      } else {
+        boolean _equals_9 = Objects.equal(tr, "float");
+        _and_4 = _equals_9;
+      }
+      if (_and_4) {
+        this.error("Tipos incompativeis, De float para long", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_5 = false;
+      boolean _equals_10 = Objects.equal(tl, "long");
+      if (!_equals_10) {
+        _and_5 = false;
+      } else {
+        boolean _equals_11 = Objects.equal(tr, "double");
+        _and_5 = _equals_11;
+      }
+      if (_and_5) {
+        this.error("Tipos incompativeis, De double para long", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_6 = false;
+      boolean _equals_12 = Objects.equal(tl, "int");
+      if (!_equals_12) {
+        _and_6 = false;
+      } else {
+        boolean _equals_13 = Objects.equal(tr, "long");
+        _and_6 = _equals_13;
+      }
+      if (_and_6) {
+        this.error("Tipos incompativeis, De int para long", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_7 = false;
+      boolean _equals_14 = Objects.equal(tl, "signed");
+      if (!_equals_14) {
+        _and_7 = false;
+      } else {
+        boolean _equals_15 = Objects.equal(tr, "unsigned");
+        _and_7 = _equals_15;
+      }
+      if (_and_7) {
+        this.error("Tipos unsigned, De long para signed", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+      boolean _and_8 = false;
+      boolean _equals_16 = Objects.equal(tl, "unsigned");
+      if (!_equals_16) {
+        _and_8 = false;
+      } else {
+        boolean _equals_17 = Objects.equal(tr, "signed");
+        _and_8 = _equals_17;
+      }
+      if (_and_8) {
+        this.error("Tipos incompativeis, De unsigned para signed", 
+          AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+      }
+    }
+    Set<String> _keySet_1 = this.variables.keySet();
+    boolean _contains_1 = _keySet_1.contains(idLeft);
+    boolean _not_1 = (!_contains_1);
+    if (_not_1) {
+      this.error("Variavel não declarada", 
+        AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+  }
+  
+  @Check
+  public Object checkFunctionDefinition(final function_definition func_decl) {
+    Object _xblockexpression = null;
+    {
+      AnsicValidator.Function f = new AnsicValidator.Function();
+      Object _xifexpression = null;
+      EList<declaration_list> _declaration_list = func_decl.getDeclaration_list();
+      boolean _equals = Objects.equal(_declaration_list, null);
+      if (_equals) {
+        AnsicValidator.Function _xblockexpression_1 = null;
+        {
+          EList<declaration_specifiers> _declaration_specifiers = func_decl.getDeclaration_specifiers();
+          declaration_specifiers _get = _declaration_specifiers.get(0);
+          type_specifier _type_specifier = _get.getType_specifier();
+          String _type_name_str = _type_specifier.getType_name_str();
+          f.retType = _type_name_str;
+          declarator _declarator = func_decl.getDeclarator();
+          direct_declarator _direct_declarator = _declarator.getDirect_declarator();
+          String _identifier = _direct_declarator.getIdentifier();
+          String _string = _identifier.toString();
+          f.name = _string;
+          _xblockexpression_1 = this.functions.put(f.name, f);
+        }
+        _xifexpression = _xblockexpression_1;
+      } else {
+        String _xblockexpression_2 = null;
+        {
+          EList<declaration_specifiers> _declaration_specifiers = func_decl.getDeclaration_specifiers();
+          declaration_specifiers _get = _declaration_specifiers.get(0);
+          type_specifier _type_specifier = _get.getType_specifier();
+          String _type_name_str = _type_specifier.getType_name_str();
+          f.retType = _type_name_str;
+          declarator _declarator = func_decl.getDeclarator();
+          direct_declarator _direct_declarator = _declarator.getDirect_declarator();
+          String _identifier = _direct_declarator.getIdentifier();
+          String _string = _identifier.toString();
+          f.name = _string;
+          declarator _declarator_1 = func_decl.getDeclarator();
+          direct_declarator _direct_declarator_1 = _declarator_1.getDirect_declarator();
+          direct_declarator_linha _direct_declarator_linha = _direct_declarator_1.getDirect_declarator_linha();
+          direct_declarator_complemento _direct_declarator_complemento = _direct_declarator_linha.getDirect_declarator_complemento();
+          parameter_type_list _parameter_type_list = _direct_declarator_complemento.getParameter_type_list();
+          EList<parameter_list> _parameter_list = _parameter_type_list.getParameter_list();
+          parameter_list _get_1 = _parameter_list.get(0);
+          String _plus = ("size:" + _get_1);
+          _xblockexpression_2 = InputOutput.<String>println(_plus);
+        }
+        _xifexpression = _xblockexpression_2;
+      }
+      _xblockexpression = _xifexpression;
+    }
+    return _xblockexpression;
+  }
+  
+  @Check
+  public compound_statement checkSwitch(final selection_statement sel_stmt) {
+    compound_statement _xblockexpression = null;
+    {
+      expression _expression = sel_stmt.getExpression();
+      assignment_expression _assignment_expression = _expression.getAssignment_expression();
+      assignment_expression _assignment_expression_1 = _assignment_expression.getAssignment_expression();
+      conditional_expression _conditional_expression = _assignment_expression_1.getConditional_expression();
+      logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
+      logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
+      inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+      and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression _primary_expression = _postfix_expression.getPrimary_expression();
+      String id = _primary_expression.getIdentifier();
+      Set<String> _keySet = this.variables.keySet();
+      boolean _contains = _keySet.contains(id);
+      if (_contains) {
+        this.error("Variavel não declarada", AnsicPackage.Literals.SELECTION_STATEMENT__EXPRESSION);
+      }
+      statement _statement = sel_stmt.getStatement();
+      _xblockexpression = _statement.getCompound_statement();
+    }
+    return _xblockexpression;
+  }
 }

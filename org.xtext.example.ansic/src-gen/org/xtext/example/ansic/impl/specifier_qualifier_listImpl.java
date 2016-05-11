@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.specifier_qualifier_list;
+import org.xtext.example.ansic.type_qualifier;
 import org.xtext.example.ansic.type_specifier;
 
 /**
@@ -54,24 +55,14 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
   protected specifier_qualifier_list specifier_qualifier_list;
 
   /**
-   * The default value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' attribute.
+   * The cached value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType_qualifier()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_QUALIFIER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType_qualifier()
-   * @generated
-   * @ordered
-   */
-  protected String type_qualifier = TYPE_QUALIFIER_EDEFAULT;
+  protected type_qualifier type_qualifier;
 
   /**
    * <!-- begin-user-doc -->
@@ -195,7 +186,7 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType_qualifier()
+  public type_qualifier getType_qualifier()
   {
     return type_qualifier;
   }
@@ -205,12 +196,37 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType_qualifier(String newType_qualifier)
+  public NotificationChain basicSetType_qualifier(type_qualifier newType_qualifier, NotificationChain msgs)
   {
-    String oldType_qualifier = type_qualifier;
+    type_qualifier oldType_qualifier = type_qualifier;
     type_qualifier = newType_qualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER, oldType_qualifier, type_qualifier));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER, oldType_qualifier, newType_qualifier);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType_qualifier(type_qualifier newType_qualifier)
+  {
+    if (newType_qualifier != type_qualifier)
+    {
+      NotificationChain msgs = null;
+      if (type_qualifier != null)
+        msgs = ((InternalEObject)type_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER, null, msgs);
+      if (newType_qualifier != null)
+        msgs = ((InternalEObject)newType_qualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER, null, msgs);
+      msgs = basicSetType_qualifier(newType_qualifier, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER, newType_qualifier, newType_qualifier));
   }
 
   /**
@@ -227,6 +243,8 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
         return basicSetType_specifier(null, msgs);
       case AnsicPackage.SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST:
         return basicSetSpecifier_qualifier_list(null, msgs);
+      case AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER:
+        return basicSetType_qualifier(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -268,7 +286,7 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
         setSpecifier_qualifier_list((specifier_qualifier_list)newValue);
         return;
       case AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER:
-        setType_qualifier((String)newValue);
+        setType_qualifier((type_qualifier)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -291,7 +309,7 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
         setSpecifier_qualifier_list((specifier_qualifier_list)null);
         return;
       case AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER:
-        setType_qualifier(TYPE_QUALIFIER_EDEFAULT);
+        setType_qualifier((type_qualifier)null);
         return;
     }
     super.eUnset(featureID);
@@ -312,26 +330,9 @@ public class specifier_qualifier_listImpl extends MinimalEObjectImpl.Container i
       case AnsicPackage.SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST:
         return specifier_qualifier_list != null;
       case AnsicPackage.SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER:
-        return TYPE_QUALIFIER_EDEFAULT == null ? type_qualifier != null : !TYPE_QUALIFIER_EDEFAULT.equals(type_qualifier);
+        return type_qualifier != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type_qualifier: ");
-    result.append(type_qualifier);
-    result.append(')');
-    return result.toString();
   }
 
 } //specifier_qualifier_listImpl

@@ -3,6 +3,7 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,14 +16,14 @@ package org.xtext.example.ansic;
  * <ul>
  *   <li>{@link org.xtext.example.ansic.labeled_statement#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.labeled_statement#getStatement <em>Statement</em>}</li>
- *   <li>{@link org.xtext.example.ansic.labeled_statement#getConstant_expression <em>Constant expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.labeled_statement#getConditional_expression <em>Conditional expression</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getlabeled_statement()
  * @model
  * @generated
  */
-public interface labeled_statement extends statement
+public interface labeled_statement extends EObject
 {
   /**
    * Returns the value of the '<em><b>Identifier</b></em>' attribute.
@@ -77,29 +78,29 @@ public interface labeled_statement extends statement
   void setStatement(statement value);
 
   /**
-   * Returns the value of the '<em><b>Constant expression</b></em>' containment reference.
+   * Returns the value of the '<em><b>Conditional expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Constant expression</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Conditional expression</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Constant expression</em>' containment reference.
-   * @see #setConstant_expression(conditional_expression)
-   * @see org.xtext.example.ansic.AnsicPackage#getlabeled_statement_Constant_expression()
+   * @return the value of the '<em>Conditional expression</em>' containment reference.
+   * @see #setConditional_expression(conditional_expression)
+   * @see org.xtext.example.ansic.AnsicPackage#getlabeled_statement_Conditional_expression()
    * @model containment="true"
    * @generated
    */
-  conditional_expression getConstant_expression();
+  conditional_expression getConditional_expression();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.ansic.labeled_statement#getConstant_expression <em>Constant expression</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.ansic.labeled_statement#getConditional_expression <em>Conditional expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Constant expression</em>' containment reference.
-   * @see #getConstant_expression()
+   * @param value the new value of the '<em>Conditional expression</em>' containment reference.
+   * @see #getConditional_expression()
    * @generated
    */
-  void setConstant_expression(conditional_expression value);
+  void setConditional_expression(conditional_expression value);
 
 } // labeled_statement

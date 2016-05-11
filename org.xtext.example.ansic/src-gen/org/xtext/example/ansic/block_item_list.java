@@ -3,6 +3,8 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -10,6 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>block item list</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.block_item_list#getBlock_item <em>Block item</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.block_item_list#getBlock_item_list_linha <em>Block item list linha</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getblock_item_list()
  * @model
@@ -17,4 +26,46 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface block_item_list extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Block item</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Block item</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Block item</em>' containment reference.
+   * @see #setBlock_item(block_item)
+   * @see org.xtext.example.ansic.AnsicPackage#getblock_item_list_Block_item()
+   * @model containment="true"
+   * @generated
+   */
+  block_item getBlock_item();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.block_item_list#getBlock_item <em>Block item</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Block item</em>' containment reference.
+   * @see #getBlock_item()
+   * @generated
+   */
+  void setBlock_item(block_item value);
+
+  /**
+   * Returns the value of the '<em><b>Block item list linha</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.ansic.block_item_list_linha}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Block item list linha</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Block item list linha</em>' containment reference list.
+   * @see org.xtext.example.ansic.AnsicPackage#getblock_item_list_Block_item_list_linha()
+   * @model containment="true"
+   * @generated
+   */
+  EList<block_item_list_linha> getBlock_item_list_linha();
+
 } // block_item_list

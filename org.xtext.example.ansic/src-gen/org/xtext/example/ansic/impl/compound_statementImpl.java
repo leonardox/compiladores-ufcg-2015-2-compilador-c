@@ -3,13 +3,19 @@
  */
 package org.xtext.example.ansic.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.block_item_list;
@@ -28,17 +34,17 @@ import org.xtext.example.ansic.compound_statement;
  *
  * @generated
  */
-public class compound_statementImpl extends statementImpl implements compound_statement
+public class compound_statementImpl extends MinimalEObjectImpl.Container implements compound_statement
 {
   /**
-   * The cached value of the '{@link #getBlock_item_list() <em>Block item list</em>}' containment reference.
+   * The cached value of the '{@link #getBlock_item_list() <em>Block item list</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getBlock_item_list()
    * @generated
    * @ordered
    */
-  protected block_item_list block_item_list;
+  protected EList<block_item_list> block_item_list;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,47 +72,13 @@ public class compound_statementImpl extends statementImpl implements compound_st
    * <!-- end-user-doc -->
    * @generated
    */
-  public block_item_list getBlock_item_list()
+  public EList<block_item_list> getBlock_item_list()
   {
+    if (block_item_list == null)
+    {
+      block_item_list = new EObjectContainmentEList<block_item_list>(block_item_list.class, this, AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST);
+    }
     return block_item_list;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetBlock_item_list(block_item_list newBlock_item_list, NotificationChain msgs)
-  {
-    block_item_list oldBlock_item_list = block_item_list;
-    block_item_list = newBlock_item_list;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST, oldBlock_item_list, newBlock_item_list);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setBlock_item_list(block_item_list newBlock_item_list)
-  {
-    if (newBlock_item_list != block_item_list)
-    {
-      NotificationChain msgs = null;
-      if (block_item_list != null)
-        msgs = ((InternalEObject)block_item_list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST, null, msgs);
-      if (newBlock_item_list != null)
-        msgs = ((InternalEObject)newBlock_item_list).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST, null, msgs);
-      msgs = basicSetBlock_item_list(newBlock_item_list, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST, newBlock_item_list, newBlock_item_list));
   }
 
   /**
@@ -120,7 +92,7 @@ public class compound_statementImpl extends statementImpl implements compound_st
     switch (featureID)
     {
       case AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST:
-        return basicSetBlock_item_list(null, msgs);
+        return ((InternalEList<?>)getBlock_item_list()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -146,13 +118,15 @@ public class compound_statementImpl extends statementImpl implements compound_st
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST:
-        setBlock_item_list((block_item_list)newValue);
+        getBlock_item_list().clear();
+        getBlock_item_list().addAll((Collection<? extends block_item_list>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +143,7 @@ public class compound_statementImpl extends statementImpl implements compound_st
     switch (featureID)
     {
       case AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST:
-        setBlock_item_list((block_item_list)null);
+        getBlock_item_list().clear();
         return;
     }
     super.eUnset(featureID);
@@ -186,7 +160,7 @@ public class compound_statementImpl extends statementImpl implements compound_st
     switch (featureID)
     {
       case AnsicPackage.COMPOUND_STATEMENT__BLOCK_ITEM_LIST:
-        return block_item_list != null;
+        return block_item_list != null && !block_item_list.isEmpty();
     }
     return super.eIsSet(featureID);
   }

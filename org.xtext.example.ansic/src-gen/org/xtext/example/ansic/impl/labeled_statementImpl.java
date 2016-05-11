@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.conditional_expression;
@@ -26,12 +27,12 @@ import org.xtext.example.ansic.statement;
  * <ul>
  *   <li>{@link org.xtext.example.ansic.impl.labeled_statementImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.labeled_statementImpl#getStatement <em>Statement</em>}</li>
- *   <li>{@link org.xtext.example.ansic.impl.labeled_statementImpl#getConstant_expression <em>Constant expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.labeled_statementImpl#getConditional_expression <em>Conditional expression</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class labeled_statementImpl extends statementImpl implements labeled_statement
+public class labeled_statementImpl extends MinimalEObjectImpl.Container implements labeled_statement
 {
   /**
    * The default value of the '{@link #getIdentifier() <em>Identifier</em>}' attribute.
@@ -64,14 +65,14 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
   protected statement statement;
 
   /**
-   * The cached value of the '{@link #getConstant_expression() <em>Constant expression</em>}' containment reference.
+   * The cached value of the '{@link #getConditional_expression() <em>Conditional expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConstant_expression()
+   * @see #getConditional_expression()
    * @generated
    * @ordered
    */
-  protected conditional_expression constant_expression;
+  protected conditional_expression conditional_expression;
 
   /**
    * <!-- begin-user-doc -->
@@ -170,9 +171,9 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public conditional_expression getConstant_expression()
+  public conditional_expression getConditional_expression()
   {
-    return constant_expression;
+    return conditional_expression;
   }
 
   /**
@@ -180,13 +181,13 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetConstant_expression(conditional_expression newConstant_expression, NotificationChain msgs)
+  public NotificationChain basicSetConditional_expression(conditional_expression newConditional_expression, NotificationChain msgs)
   {
-    conditional_expression oldConstant_expression = constant_expression;
-    constant_expression = newConstant_expression;
+    conditional_expression oldConditional_expression = conditional_expression;
+    conditional_expression = newConditional_expression;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION, oldConstant_expression, newConstant_expression);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION, oldConditional_expression, newConditional_expression);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -197,20 +198,20 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setConstant_expression(conditional_expression newConstant_expression)
+  public void setConditional_expression(conditional_expression newConditional_expression)
   {
-    if (newConstant_expression != constant_expression)
+    if (newConditional_expression != conditional_expression)
     {
       NotificationChain msgs = null;
-      if (constant_expression != null)
-        msgs = ((InternalEObject)constant_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION, null, msgs);
-      if (newConstant_expression != null)
-        msgs = ((InternalEObject)newConstant_expression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION, null, msgs);
-      msgs = basicSetConstant_expression(newConstant_expression, msgs);
+      if (conditional_expression != null)
+        msgs = ((InternalEObject)conditional_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION, null, msgs);
+      if (newConditional_expression != null)
+        msgs = ((InternalEObject)newConditional_expression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION, null, msgs);
+      msgs = basicSetConditional_expression(newConditional_expression, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION, newConstant_expression, newConstant_expression));
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION, newConditional_expression, newConditional_expression));
   }
 
   /**
@@ -225,8 +226,8 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
     {
       case AnsicPackage.LABELED_STATEMENT__STATEMENT:
         return basicSetStatement(null, msgs);
-      case AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION:
-        return basicSetConstant_expression(null, msgs);
+      case AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION:
+        return basicSetConditional_expression(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -245,8 +246,8 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
         return getIdentifier();
       case AnsicPackage.LABELED_STATEMENT__STATEMENT:
         return getStatement();
-      case AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION:
-        return getConstant_expression();
+      case AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION:
+        return getConditional_expression();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -267,8 +268,8 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
       case AnsicPackage.LABELED_STATEMENT__STATEMENT:
         setStatement((statement)newValue);
         return;
-      case AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION:
-        setConstant_expression((conditional_expression)newValue);
+      case AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION:
+        setConditional_expression((conditional_expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -290,8 +291,8 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
       case AnsicPackage.LABELED_STATEMENT__STATEMENT:
         setStatement((statement)null);
         return;
-      case AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION:
-        setConstant_expression((conditional_expression)null);
+      case AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION:
+        setConditional_expression((conditional_expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -311,8 +312,8 @@ public class labeled_statementImpl extends statementImpl implements labeled_stat
         return IDENTIFIER_EDEFAULT == null ? identifier != null : !IDENTIFIER_EDEFAULT.equals(identifier);
       case AnsicPackage.LABELED_STATEMENT__STATEMENT:
         return statement != null;
-      case AnsicPackage.LABELED_STATEMENT__CONSTANT_EXPRESSION:
-        return constant_expression != null;
+      case AnsicPackage.LABELED_STATEMENT__CONDITIONAL_EXPRESSION:
+        return conditional_expression != null;
     }
     return super.eIsSet(featureID);
   }

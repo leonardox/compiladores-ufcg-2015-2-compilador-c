@@ -3,6 +3,9 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,32 +23,22 @@ package org.xtext.example.ansic;
  * @model
  * @generated
  */
-public interface compound_statement extends statement
+public interface compound_statement extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Block item list</b></em>' containment reference.
+   * Returns the value of the '<em><b>Block item list</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.ansic.block_item_list}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Block item list</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Block item list</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Block item list</em>' containment reference.
-   * @see #setBlock_item_list(block_item_list)
+   * @return the value of the '<em>Block item list</em>' containment reference list.
    * @see org.xtext.example.ansic.AnsicPackage#getcompound_statement_Block_item_list()
    * @model containment="true"
    * @generated
    */
-  block_item_list getBlock_item_list();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.ansic.compound_statement#getBlock_item_list <em>Block item list</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Block item list</em>' containment reference.
-   * @see #getBlock_item_list()
-   * @generated
-   */
-  void setBlock_item_list(block_item_list value);
+  EList<block_item_list> getBlock_item_list();
 
 } // compound_statement

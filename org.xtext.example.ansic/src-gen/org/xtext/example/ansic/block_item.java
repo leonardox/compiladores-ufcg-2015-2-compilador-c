@@ -3,6 +3,7 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,6 @@ package org.xtext.example.ansic;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.block_item#getBlock_item_list_linha <em>Block item list linha</em>}</li>
  *   <li>{@link org.xtext.example.ansic.block_item#getDeclaration <em>Declaration</em>}</li>
  *   <li>{@link org.xtext.example.ansic.block_item#getStatement <em>Statement</em>}</li>
  * </ul>
@@ -22,34 +22,8 @@ package org.xtext.example.ansic;
  * @model
  * @generated
  */
-public interface block_item extends block_item_list
+public interface block_item extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Block item list linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Block item list linha</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Block item list linha</em>' containment reference.
-   * @see #setBlock_item_list_linha(block_item_list_linha)
-   * @see org.xtext.example.ansic.AnsicPackage#getblock_item_Block_item_list_linha()
-   * @model containment="true"
-   * @generated
-   */
-  block_item_list_linha getBlock_item_list_linha();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.ansic.block_item#getBlock_item_list_linha <em>Block item list linha</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Block item list linha</em>' containment reference.
-   * @see #getBlock_item_list_linha()
-   * @generated
-   */
-  void setBlock_item_list_linha(block_item_list_linha value);
-
   /**
    * Returns the value of the '<em><b>Declaration</b></em>' containment reference.
    * <!-- begin-user-doc -->

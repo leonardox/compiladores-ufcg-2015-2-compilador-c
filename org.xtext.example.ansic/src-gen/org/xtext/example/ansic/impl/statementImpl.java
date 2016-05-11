@@ -3,22 +3,104 @@
  */
 package org.xtext.example.ansic.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.compound_statement;
+import org.xtext.example.ansic.expression_statement;
+import org.xtext.example.ansic.iteration_statement;
+import org.xtext.example.ansic.jump_statement;
+import org.xtext.example.ansic.labeled_statement;
+import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.statement;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>statement</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.impl.statementImpl#getLabeled_statement <em>Labeled statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.statementImpl#getCompound_statement <em>Compound statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.statementImpl#getExpression_statement <em>Expression statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.statementImpl#getSelection_statement <em>Selection statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.statementImpl#getIteration_statement <em>Iteration statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.statementImpl#getJump_statement <em>Jump statement</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class statementImpl extends MinimalEObjectImpl.Container implements statement
 {
+  /**
+   * The cached value of the '{@link #getLabeled_statement() <em>Labeled statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLabeled_statement()
+   * @generated
+   * @ordered
+   */
+  protected labeled_statement labeled_statement;
+
+  /**
+   * The cached value of the '{@link #getCompound_statement() <em>Compound statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCompound_statement()
+   * @generated
+   * @ordered
+   */
+  protected compound_statement compound_statement;
+
+  /**
+   * The cached value of the '{@link #getExpression_statement() <em>Expression statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpression_statement()
+   * @generated
+   * @ordered
+   */
+  protected expression_statement expression_statement;
+
+  /**
+   * The cached value of the '{@link #getSelection_statement() <em>Selection statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSelection_statement()
+   * @generated
+   * @ordered
+   */
+  protected selection_statement selection_statement;
+
+  /**
+   * The cached value of the '{@link #getIteration_statement() <em>Iteration statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIteration_statement()
+   * @generated
+   * @ordered
+   */
+  protected iteration_statement iteration_statement;
+
+  /**
+   * The cached value of the '{@link #getJump_statement() <em>Jump statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getJump_statement()
+   * @generated
+   * @ordered
+   */
+  protected jump_statement jump_statement;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -38,6 +120,436 @@ public class statementImpl extends MinimalEObjectImpl.Container implements state
   protected EClass eStaticClass()
   {
     return AnsicPackage.Literals.STATEMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public labeled_statement getLabeled_statement()
+  {
+    return labeled_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLabeled_statement(labeled_statement newLabeled_statement, NotificationChain msgs)
+  {
+    labeled_statement oldLabeled_statement = labeled_statement;
+    labeled_statement = newLabeled_statement;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__LABELED_STATEMENT, oldLabeled_statement, newLabeled_statement);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLabeled_statement(labeled_statement newLabeled_statement)
+  {
+    if (newLabeled_statement != labeled_statement)
+    {
+      NotificationChain msgs = null;
+      if (labeled_statement != null)
+        msgs = ((InternalEObject)labeled_statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__LABELED_STATEMENT, null, msgs);
+      if (newLabeled_statement != null)
+        msgs = ((InternalEObject)newLabeled_statement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__LABELED_STATEMENT, null, msgs);
+      msgs = basicSetLabeled_statement(newLabeled_statement, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__LABELED_STATEMENT, newLabeled_statement, newLabeled_statement));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public compound_statement getCompound_statement()
+  {
+    return compound_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCompound_statement(compound_statement newCompound_statement, NotificationChain msgs)
+  {
+    compound_statement oldCompound_statement = compound_statement;
+    compound_statement = newCompound_statement;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__COMPOUND_STATEMENT, oldCompound_statement, newCompound_statement);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCompound_statement(compound_statement newCompound_statement)
+  {
+    if (newCompound_statement != compound_statement)
+    {
+      NotificationChain msgs = null;
+      if (compound_statement != null)
+        msgs = ((InternalEObject)compound_statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__COMPOUND_STATEMENT, null, msgs);
+      if (newCompound_statement != null)
+        msgs = ((InternalEObject)newCompound_statement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__COMPOUND_STATEMENT, null, msgs);
+      msgs = basicSetCompound_statement(newCompound_statement, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__COMPOUND_STATEMENT, newCompound_statement, newCompound_statement));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public expression_statement getExpression_statement()
+  {
+    return expression_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExpression_statement(expression_statement newExpression_statement, NotificationChain msgs)
+  {
+    expression_statement oldExpression_statement = expression_statement;
+    expression_statement = newExpression_statement;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__EXPRESSION_STATEMENT, oldExpression_statement, newExpression_statement);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpression_statement(expression_statement newExpression_statement)
+  {
+    if (newExpression_statement != expression_statement)
+    {
+      NotificationChain msgs = null;
+      if (expression_statement != null)
+        msgs = ((InternalEObject)expression_statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__EXPRESSION_STATEMENT, null, msgs);
+      if (newExpression_statement != null)
+        msgs = ((InternalEObject)newExpression_statement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__EXPRESSION_STATEMENT, null, msgs);
+      msgs = basicSetExpression_statement(newExpression_statement, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__EXPRESSION_STATEMENT, newExpression_statement, newExpression_statement));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public selection_statement getSelection_statement()
+  {
+    return selection_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSelection_statement(selection_statement newSelection_statement, NotificationChain msgs)
+  {
+    selection_statement oldSelection_statement = selection_statement;
+    selection_statement = newSelection_statement;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__SELECTION_STATEMENT, oldSelection_statement, newSelection_statement);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSelection_statement(selection_statement newSelection_statement)
+  {
+    if (newSelection_statement != selection_statement)
+    {
+      NotificationChain msgs = null;
+      if (selection_statement != null)
+        msgs = ((InternalEObject)selection_statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__SELECTION_STATEMENT, null, msgs);
+      if (newSelection_statement != null)
+        msgs = ((InternalEObject)newSelection_statement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__SELECTION_STATEMENT, null, msgs);
+      msgs = basicSetSelection_statement(newSelection_statement, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__SELECTION_STATEMENT, newSelection_statement, newSelection_statement));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public iteration_statement getIteration_statement()
+  {
+    return iteration_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIteration_statement(iteration_statement newIteration_statement, NotificationChain msgs)
+  {
+    iteration_statement oldIteration_statement = iteration_statement;
+    iteration_statement = newIteration_statement;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__ITERATION_STATEMENT, oldIteration_statement, newIteration_statement);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIteration_statement(iteration_statement newIteration_statement)
+  {
+    if (newIteration_statement != iteration_statement)
+    {
+      NotificationChain msgs = null;
+      if (iteration_statement != null)
+        msgs = ((InternalEObject)iteration_statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__ITERATION_STATEMENT, null, msgs);
+      if (newIteration_statement != null)
+        msgs = ((InternalEObject)newIteration_statement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__ITERATION_STATEMENT, null, msgs);
+      msgs = basicSetIteration_statement(newIteration_statement, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__ITERATION_STATEMENT, newIteration_statement, newIteration_statement));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public jump_statement getJump_statement()
+  {
+    return jump_statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetJump_statement(jump_statement newJump_statement, NotificationChain msgs)
+  {
+    jump_statement oldJump_statement = jump_statement;
+    jump_statement = newJump_statement;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__JUMP_STATEMENT, oldJump_statement, newJump_statement);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setJump_statement(jump_statement newJump_statement)
+  {
+    if (newJump_statement != jump_statement)
+    {
+      NotificationChain msgs = null;
+      if (jump_statement != null)
+        msgs = ((InternalEObject)jump_statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__JUMP_STATEMENT, null, msgs);
+      if (newJump_statement != null)
+        msgs = ((InternalEObject)newJump_statement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.STATEMENT__JUMP_STATEMENT, null, msgs);
+      msgs = basicSetJump_statement(newJump_statement, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.STATEMENT__JUMP_STATEMENT, newJump_statement, newJump_statement));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.STATEMENT__LABELED_STATEMENT:
+        return basicSetLabeled_statement(null, msgs);
+      case AnsicPackage.STATEMENT__COMPOUND_STATEMENT:
+        return basicSetCompound_statement(null, msgs);
+      case AnsicPackage.STATEMENT__EXPRESSION_STATEMENT:
+        return basicSetExpression_statement(null, msgs);
+      case AnsicPackage.STATEMENT__SELECTION_STATEMENT:
+        return basicSetSelection_statement(null, msgs);
+      case AnsicPackage.STATEMENT__ITERATION_STATEMENT:
+        return basicSetIteration_statement(null, msgs);
+      case AnsicPackage.STATEMENT__JUMP_STATEMENT:
+        return basicSetJump_statement(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.STATEMENT__LABELED_STATEMENT:
+        return getLabeled_statement();
+      case AnsicPackage.STATEMENT__COMPOUND_STATEMENT:
+        return getCompound_statement();
+      case AnsicPackage.STATEMENT__EXPRESSION_STATEMENT:
+        return getExpression_statement();
+      case AnsicPackage.STATEMENT__SELECTION_STATEMENT:
+        return getSelection_statement();
+      case AnsicPackage.STATEMENT__ITERATION_STATEMENT:
+        return getIteration_statement();
+      case AnsicPackage.STATEMENT__JUMP_STATEMENT:
+        return getJump_statement();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.STATEMENT__LABELED_STATEMENT:
+        setLabeled_statement((labeled_statement)newValue);
+        return;
+      case AnsicPackage.STATEMENT__COMPOUND_STATEMENT:
+        setCompound_statement((compound_statement)newValue);
+        return;
+      case AnsicPackage.STATEMENT__EXPRESSION_STATEMENT:
+        setExpression_statement((expression_statement)newValue);
+        return;
+      case AnsicPackage.STATEMENT__SELECTION_STATEMENT:
+        setSelection_statement((selection_statement)newValue);
+        return;
+      case AnsicPackage.STATEMENT__ITERATION_STATEMENT:
+        setIteration_statement((iteration_statement)newValue);
+        return;
+      case AnsicPackage.STATEMENT__JUMP_STATEMENT:
+        setJump_statement((jump_statement)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.STATEMENT__LABELED_STATEMENT:
+        setLabeled_statement((labeled_statement)null);
+        return;
+      case AnsicPackage.STATEMENT__COMPOUND_STATEMENT:
+        setCompound_statement((compound_statement)null);
+        return;
+      case AnsicPackage.STATEMENT__EXPRESSION_STATEMENT:
+        setExpression_statement((expression_statement)null);
+        return;
+      case AnsicPackage.STATEMENT__SELECTION_STATEMENT:
+        setSelection_statement((selection_statement)null);
+        return;
+      case AnsicPackage.STATEMENT__ITERATION_STATEMENT:
+        setIteration_statement((iteration_statement)null);
+        return;
+      case AnsicPackage.STATEMENT__JUMP_STATEMENT:
+        setJump_statement((jump_statement)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.STATEMENT__LABELED_STATEMENT:
+        return labeled_statement != null;
+      case AnsicPackage.STATEMENT__COMPOUND_STATEMENT:
+        return compound_statement != null;
+      case AnsicPackage.STATEMENT__EXPRESSION_STATEMENT:
+        return expression_statement != null;
+      case AnsicPackage.STATEMENT__SELECTION_STATEMENT:
+        return selection_statement != null;
+      case AnsicPackage.STATEMENT__ITERATION_STATEMENT:
+        return iteration_statement != null;
+      case AnsicPackage.STATEMENT__JUMP_STATEMENT:
+        return jump_statement != null;
+    }
+    return super.eIsSet(featureID);
   }
 
 } //statementImpl

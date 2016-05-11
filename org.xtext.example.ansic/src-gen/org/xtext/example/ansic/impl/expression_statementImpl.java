@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.expression;
@@ -28,7 +29,7 @@ import org.xtext.example.ansic.expression_statement;
  *
  * @generated
  */
-public class expression_statementImpl extends statementImpl implements expression_statement
+public class expression_statementImpl extends MinimalEObjectImpl.Container implements expression_statement
 {
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.

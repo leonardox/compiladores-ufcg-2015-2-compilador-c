@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.expression;
@@ -29,7 +30,7 @@ import org.xtext.example.ansic.jump_statement;
  *
  * @generated
  */
-public class jump_statementImpl extends statementImpl implements jump_statement
+public class jump_statementImpl extends MinimalEObjectImpl.Container implements jump_statement
 {
   /**
    * The default value of the '{@link #getIdentifier() <em>Identifier</em>}' attribute.

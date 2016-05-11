@@ -197,7 +197,7 @@ public interface AnsicPackage extends EPackage
   int DECLARATION_SPECIFIERS__TYPE_SPECIFIER = 2;
 
   /**
-   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * The feature id for the '<em><b>Type qualifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -270,6 +270,34 @@ public interface AnsicPackage extends EPackage
   int ALIGNMENT_SPECIFIER_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.type_qualifierImpl <em>type qualifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.type_qualifierImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier()
+   * @generated
+   */
+  int TYPE_QUALIFIER = 5;
+
+  /**
+   * The feature id for the '<em><b>Namez</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER__NAMEZ = 0;
+
+  /**
+   * The number of structural features of the '<em>type qualifier</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_QUALIFIER_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.type_specifierImpl <em>type specifier</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -277,7 +305,16 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_specifier()
    * @generated
    */
-  int TYPE_SPECIFIER = 5;
+  int TYPE_SPECIFIER = 6;
+
+  /**
+   * The feature id for the '<em><b>Type name str</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_SPECIFIER__TYPE_NAME_STR = 0;
 
   /**
    * The feature id for the '<em><b>Atomic type specifier</b></em>' containment reference.
@@ -286,7 +323,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER = 0;
+  int TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER = 1;
 
   /**
    * The feature id for the '<em><b>Struct or union specifier</b></em>' containment reference.
@@ -295,7 +332,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER = 1;
+  int TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER = 2;
 
   /**
    * The feature id for the '<em><b>Enum specifier</b></em>' containment reference.
@@ -304,7 +341,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_SPECIFIER__ENUM_SPECIFIER = 2;
+  int TYPE_SPECIFIER__ENUM_SPECIFIER = 3;
 
   /**
    * The number of structural features of the '<em>type specifier</em>' class.
@@ -313,7 +350,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_SPECIFIER_FEATURE_COUNT = 3;
+  int TYPE_SPECIFIER_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.enum_specifierImpl <em>enum specifier</em>}' class.
@@ -323,7 +360,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenum_specifier()
    * @generated
    */
-  int ENUM_SPECIFIER = 6;
+  int ENUM_SPECIFIER = 7;
 
   /**
    * The feature id for the '<em><b>Enumerator list</b></em>' containment reference.
@@ -360,7 +397,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator_list()
    * @generated
    */
-  int ENUMERATOR_LIST = 7;
+  int ENUMERATOR_LIST = 8;
 
   /**
    * The feature id for the '<em><b>Enumarator</b></em>' containment reference.
@@ -397,7 +434,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator_list_linha()
    * @generated
    */
-  int ENUMERATOR_LIST_LINHA = 8;
+  int ENUMERATOR_LIST_LINHA = 9;
 
   /**
    * The number of structural features of the '<em>enumerator list linha</em>' class.
@@ -416,7 +453,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumerator()
    * @generated
    */
-  int ENUMERATOR = 9;
+  int ENUMERATOR = 10;
 
   /**
    * The feature id for the '<em><b>Enumeration constant</b></em>' containment reference.
@@ -453,7 +490,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getatomic_type_specifier()
    * @generated
    */
-  int ATOMIC_TYPE_SPECIFIER = 10;
+  int ATOMIC_TYPE_SPECIFIER = 11;
 
   /**
    * The feature id for the '<em><b>Type name</b></em>' containment reference.
@@ -481,7 +518,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_or_union_specifier()
    * @generated
    */
-  int STRUCT_OR_UNION_SPECIFIER = 11;
+  int STRUCT_OR_UNION_SPECIFIER = 12;
 
   /**
    * The feature id for the '<em><b>Struct or union</b></em>' attribute.
@@ -536,7 +573,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_or_union_specifier_complement()
    * @generated
    */
-  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT = 12;
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT = 13;
 
   /**
    * The number of structural features of the '<em>struct or union specifier complement</em>' class.
@@ -555,7 +592,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration_list()
    * @generated
    */
-  int STRUCT_DECLARATION_LIST = 13;
+  int STRUCT_DECLARATION_LIST = 14;
 
   /**
    * The feature id for the '<em><b>Struct declaration</b></em>' containment reference.
@@ -592,7 +629,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration_list_linha()
    * @generated
    */
-  int STRUCT_DECLARATION_LIST_LINHA = 14;
+  int STRUCT_DECLARATION_LIST_LINHA = 15;
 
   /**
    * The number of structural features of the '<em>struct declaration list linha</em>' class.
@@ -611,7 +648,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declaration()
    * @generated
    */
-  int STRUCT_DECLARATION = 15;
+  int STRUCT_DECLARATION = 16;
 
   /**
    * The feature id for the '<em><b>Specifier qualifier list</b></em>' containment reference.
@@ -657,7 +694,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator_list()
    * @generated
    */
-  int STRUCT_DECLARATOR_LIST = 16;
+  int STRUCT_DECLARATOR_LIST = 17;
 
   /**
    * The feature id for the '<em><b>Struct declarator</b></em>' containment reference.
@@ -694,7 +731,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator_list_linha()
    * @generated
    */
-  int STRUCT_DECLARATOR_LIST_LINHA = 17;
+  int STRUCT_DECLARATOR_LIST_LINHA = 18;
 
   /**
    * The number of structural features of the '<em>struct declarator list linha</em>' class.
@@ -713,7 +750,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstruct_declarator()
    * @generated
    */
-  int STRUCT_DECLARATOR = 18;
+  int STRUCT_DECLARATOR = 19;
 
   /**
    * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
@@ -750,7 +787,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getspecifier_qualifier_list()
    * @generated
    */
-  int SPECIFIER_QUALIFIER_LIST = 19;
+  int SPECIFIER_QUALIFIER_LIST = 20;
 
   /**
    * The feature id for the '<em><b>Type specifier</b></em>' containment reference.
@@ -771,7 +808,7 @@ public interface AnsicPackage extends EPackage
   int SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST = 1;
 
   /**
-   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * The feature id for the '<em><b>Type qualifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -796,7 +833,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration()
    * @generated
    */
-  int DECLARATION = 20;
+  int DECLARATION = 21;
 
   /**
    * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference list.
@@ -842,7 +879,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getfunction_definition()
    * @generated
    */
-  int FUNCTION_DEFINITION = 21;
+  int FUNCTION_DEFINITION = 22;
 
   /**
    * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference list.
@@ -897,7 +934,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_list()
    * @generated
    */
-  int DECLARATION_LIST = 22;
+  int DECLARATION_LIST = 23;
 
   /**
    * The feature id for the '<em><b>Declaration</b></em>' containment reference.
@@ -934,7 +971,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclaration_list_linha()
    * @generated
    */
-  int DECLARATION_LIST_LINHA = 23;
+  int DECLARATION_LIST_LINHA = 24;
 
   /**
    * The number of structural features of the '<em>declaration list linha</em>' class.
@@ -953,7 +990,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdeclarator()
    * @generated
    */
-  int DECLARATOR = 24;
+  int DECLARATOR = 25;
 
   /**
    * The feature id for the '<em><b>Pointer</b></em>' containment reference.
@@ -990,7 +1027,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpointer()
    * @generated
    */
-  int POINTER = 25;
+  int POINTER = 26;
 
   /**
    * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
@@ -1027,7 +1064,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator_complement()
    * @generated
    */
-  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT = 39;
+  int DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT = 40;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -1073,7 +1110,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier_list()
    * @generated
    */
-  int TYPE_QUALIFIER_LIST = 26;
+  int TYPE_QUALIFIER_LIST = 27;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -1103,7 +1140,7 @@ public interface AnsicPackage extends EPackage
   int TYPE_QUALIFIER_LIST__PARAMETER_TYPE_LIST = DIRECT_ABSTRACT_DECLARATOR_COMPLEMENT__PARAMETER_TYPE_LIST;
 
   /**
-   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * The feature id for the '<em><b>Type qualifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1137,7 +1174,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier_list_linha()
    * @generated
    */
-  int TYPE_QUALIFIER_LIST_LINHA = 27;
+  int TYPE_QUALIFIER_LIST_LINHA = 28;
 
   /**
    * The number of structural features of the '<em>type qualifier list linha</em>' class.
@@ -1156,7 +1193,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator()
    * @generated
    */
-  int DIRECT_DECLARATOR = 28;
+  int DIRECT_DECLARATOR = 29;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -1202,7 +1239,25 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator_linha()
    * @generated
    */
-  int DIRECT_DECLARATOR_LINHA = 29;
+  int DIRECT_DECLARATOR_LINHA = 30;
+
+  /**
+   * The feature id for the '<em><b>Direct declarator complemento</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_COMPLEMENTO = 0;
+
+  /**
+   * The feature id for the '<em><b>Direct declarator linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_LINHA = 1;
 
   /**
    * The number of structural features of the '<em>direct declarator linha</em>' class.
@@ -1211,7 +1266,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DIRECT_DECLARATOR_LINHA_FEATURE_COUNT = 0;
+  int DIRECT_DECLARATOR_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.direct_declarator_complementoImpl <em>direct declarator complemento</em>}' class.
@@ -1221,7 +1276,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_declarator_complemento()
    * @generated
    */
-  int DIRECT_DECLARATOR_COMPLEMENTO = 30;
+  int DIRECT_DECLARATOR_COMPLEMENTO = 31;
 
   /**
    * The feature id for the '<em><b>Type qualifier list</b></em>' containment reference.
@@ -1276,10 +1331,10 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_type_list()
    * @generated
    */
-  int PARAMETER_TYPE_LIST = 31;
+  int PARAMETER_TYPE_LIST = 32;
 
   /**
-   * The feature id for the '<em><b>Parameter list</b></em>' containment reference.
+   * The feature id for the '<em><b>Parameter list</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1304,7 +1359,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list()
    * @generated
    */
-  int PARAMETER_LIST = 32;
+  int PARAMETER_LIST = 33;
 
   /**
    * The feature id for the '<em><b>Parameter declaration</b></em>' containment reference.
@@ -1316,7 +1371,7 @@ public interface AnsicPackage extends EPackage
   int PARAMETER_LIST__PARAMETER_DECLARATION = 0;
 
   /**
-   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference.
+   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1341,7 +1396,25 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_list_linha()
    * @generated
    */
-  int PARAMETER_LIST_LINHA = 33;
+  int PARAMETER_LIST_LINHA = 34;
+
+  /**
+   * The feature id for the '<em><b>Parameter declaration</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_LINHA__PARAMETER_DECLARATION = 0;
+
+  /**
+   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETER_LIST_LINHA__PARAMETER_LIST_LINHA = 1;
 
   /**
    * The number of structural features of the '<em>parameter list linha</em>' class.
@@ -1350,7 +1423,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARAMETER_LIST_LINHA_FEATURE_COUNT = 0;
+  int PARAMETER_LIST_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.parameter_declarationImpl <em>parameter declaration</em>}' class.
@@ -1360,7 +1433,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getparameter_declaration()
    * @generated
    */
-  int PARAMETER_DECLARATION = 34;
+  int PARAMETER_DECLARATION = 35;
 
   /**
    * The feature id for the '<em><b>Declaration specifiers</b></em>' containment reference.
@@ -1406,7 +1479,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getabstract_declarator()
    * @generated
    */
-  int ABSTRACT_DECLARATOR = 35;
+  int ABSTRACT_DECLARATOR = 36;
 
   /**
    * The feature id for the '<em><b>Pointer</b></em>' containment reference.
@@ -1443,7 +1516,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator()
    * @generated
    */
-  int DIRECT_ABSTRACT_DECLARATOR = 36;
+  int DIRECT_ABSTRACT_DECLARATOR = 37;
 
   /**
    * The feature id for the '<em><b>Abstract declarator</b></em>' containment reference.
@@ -1507,7 +1580,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer()
    * @generated
    */
-  int INITIALIZER = 37;
+  int INITIALIZER = 38;
 
   /**
    * The feature id for the '<em><b>Init declarator list</b></em>' containment reference.
@@ -1544,7 +1617,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdirect_abstract_declarator_linha()
    * @generated
    */
-  int DIRECT_ABSTRACT_DECLARATOR_LINHA = 38;
+  int DIRECT_ABSTRACT_DECLARATOR_LINHA = 39;
 
   /**
    * The number of structural features of the '<em>direct abstract declarator linha</em>' class.
@@ -1563,7 +1636,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getidentifier_list()
    * @generated
    */
-  int IDENTIFIER_LIST = 40;
+  int IDENTIFIER_LIST = 41;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -1600,7 +1673,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getidentifier_list_linha()
    * @generated
    */
-  int IDENTIFIER_LIST_LINHA = 41;
+  int IDENTIFIER_LIST_LINHA = 42;
 
   /**
    * The number of structural features of the '<em>identifier list linha</em>' class.
@@ -1619,7 +1692,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettranslation_unit_linha()
    * @generated
    */
-  int TRANSLATION_UNIT_LINHA = 42;
+  int TRANSLATION_UNIT_LINHA = 43;
 
   /**
    * The number of structural features of the '<em>translation unit linha</em>' class.
@@ -1638,7 +1711,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getprimary_expression()
    * @generated
    */
-  int PRIMARY_EXPRESSION = 43;
+  int PRIMARY_EXPRESSION = 44;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -1702,7 +1775,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getenumeration_constant()
    * @generated
    */
-  int ENUMERATION_CONSTANT = 44;
+  int ENUMERATION_CONSTANT = 45;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -1730,7 +1803,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_selection()
    * @generated
    */
-  int GENERIC_SELECTION = 45;
+  int GENERIC_SELECTION = 46;
 
   /**
    * The feature id for the '<em><b>generic</b></em>' attribute.
@@ -1776,7 +1849,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_assoc_list()
    * @generated
    */
-  int GENERIC_ASSOC_LIST = 46;
+  int GENERIC_ASSOC_LIST = 47;
 
   /**
    * The feature id for the '<em><b>Generic association</b></em>' containment reference.
@@ -1813,7 +1886,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_assoc_list_linha()
    * @generated
    */
-  int GENERIC_ASSOC_LIST_LINHA = 47;
+  int GENERIC_ASSOC_LIST_LINHA = 48;
 
   /**
    * The number of structural features of the '<em>generic assoc list linha</em>' class.
@@ -1832,7 +1905,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getgeneric_association()
    * @generated
    */
-  int GENERIC_ASSOCIATION = 48;
+  int GENERIC_ASSOCIATION = 49;
 
   /**
    * The feature id for the '<em><b>Type name</b></em>' containment reference.
@@ -1878,7 +1951,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression()
    * @generated
    */
-  int POSTFIX_EXPRESSION = 49;
+  int POSTFIX_EXPRESSION = 50;
 
   /**
    * The feature id for the '<em><b>Primary expression</b></em>' containment reference.
@@ -1915,7 +1988,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression_linha()
    * @generated
    */
-  int POSTFIX_EXPRESSION_LINHA = 50;
+  int POSTFIX_EXPRESSION_LINHA = 51;
 
   /**
    * The number of structural features of the '<em>postfix expression linha</em>' class.
@@ -1934,7 +2007,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list()
    * @generated
    */
-  int INITIALIZER_LIST = 51;
+  int INITIALIZER_LIST = 52;
 
   /**
    * The feature id for the '<em><b>Designation</b></em>' containment reference.
@@ -1980,7 +2053,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list_linha()
    * @generated
    */
-  int INITIALIZER_LIST_LINHA = 52;
+  int INITIALIZER_LIST_LINHA = 53;
 
   /**
    * The number of structural features of the '<em>initializer list linha</em>' class.
@@ -1999,7 +2072,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinitializer_list_complement()
    * @generated
    */
-  int INITIALIZER_LIST_COMPLEMENT = 53;
+  int INITIALIZER_LIST_COMPLEMENT = 54;
 
   /**
    * The feature id for the '<em><b>Designation</b></em>' containment reference.
@@ -2036,7 +2109,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignation()
    * @generated
    */
-  int DESIGNATION = 54;
+  int DESIGNATION = 55;
 
   /**
    * The feature id for the '<em><b>Designator list</b></em>' containment reference.
@@ -2064,7 +2137,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator_list()
    * @generated
    */
-  int DESIGNATOR_LIST = 55;
+  int DESIGNATOR_LIST = 56;
 
   /**
    * The feature id for the '<em><b>Designator</b></em>' containment reference.
@@ -2101,7 +2174,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator_list_linha()
    * @generated
    */
-  int DESIGNATOR_LIST_LINHA = 56;
+  int DESIGNATOR_LIST_LINHA = 57;
 
   /**
    * The number of structural features of the '<em>designator list linha</em>' class.
@@ -2120,7 +2193,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getdesignator()
    * @generated
    */
-  int DESIGNATOR = 57;
+  int DESIGNATOR = 58;
 
   /**
    * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
@@ -2157,7 +2230,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstatic_assert_declaration()
    * @generated
    */
-  int STATIC_ASSERT_DECLARATION = 58;
+  int STATIC_ASSERT_DECLARATION = 59;
 
   /**
    * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
@@ -2185,7 +2258,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getpostfix_expression_complement()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT = 59;
+  int POSTFIX_EXPRESSION_COMPLEMENT = 60;
 
   /**
    * The number of structural features of the '<em>postfix expression complement</em>' class.
@@ -2204,7 +2277,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getargument_expression_list()
    * @generated
    */
-  int ARGUMENT_EXPRESSION_LIST = 60;
+  int ARGUMENT_EXPRESSION_LIST = 61;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -2241,7 +2314,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getargument_expression_list_linha()
    * @generated
    */
-  int ARGUMENT_EXPRESSION_LIST_LINHA = 61;
+  int ARGUMENT_EXPRESSION_LIST_LINHA = 62;
 
   /**
    * The number of structural features of the '<em>argument expression list linha</em>' class.
@@ -2260,7 +2333,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getunary_expression()
    * @generated
    */
-  int UNARY_EXPRESSION = 62;
+  int UNARY_EXPRESSION = 63;
 
   /**
    * The feature id for the '<em><b>Postfix expression</b></em>' containment reference.
@@ -2324,7 +2397,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getcast_expression()
    * @generated
    */
-  int CAST_EXPRESSION = 63;
+  int CAST_EXPRESSION = 64;
 
   /**
    * The feature id for the '<em><b>Unary expression</b></em>' containment reference.
@@ -2370,7 +2443,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression()
    * @generated
    */
-  int MULTIPLICATIVE_EXPRESSION = 64;
+  int MULTIPLICATIVE_EXPRESSION = 65;
 
   /**
    * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
@@ -2407,7 +2480,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression_linha()
    * @generated
    */
-  int MULTIPLICATIVE_EXPRESSION_LINHA = 65;
+  int MULTIPLICATIVE_EXPRESSION_LINHA = 66;
 
   /**
    * The number of structural features of the '<em>multiplicative expression linha</em>' class.
@@ -2426,7 +2499,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getmultiplicative_expression_complement()
    * @generated
    */
-  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT = 66;
+  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT = 67;
 
   /**
    * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
@@ -2454,7 +2527,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression()
    * @generated
    */
-  int ADDITIVE_EXPRESSION = 67;
+  int ADDITIVE_EXPRESSION = 68;
 
   /**
    * The feature id for the '<em><b>Multiplicative expression</b></em>' containment reference.
@@ -2491,7 +2564,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression_linha()
    * @generated
    */
-  int ADDITIVE_EXPRESSION_LINHA = 68;
+  int ADDITIVE_EXPRESSION_LINHA = 69;
 
   /**
    * The number of structural features of the '<em>additive expression linha</em>' class.
@@ -2510,7 +2583,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getadditive_expression_complement()
    * @generated
    */
-  int ADDITIVE_EXPRESSION_COMPLEMENT = 69;
+  int ADDITIVE_EXPRESSION_COMPLEMENT = 70;
 
   /**
    * The feature id for the '<em><b>Multiplicative expression</b></em>' containment reference.
@@ -2538,7 +2611,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression()
    * @generated
    */
-  int SHIFT_EXPRESSION = 70;
+  int SHIFT_EXPRESSION = 71;
 
   /**
    * The feature id for the '<em><b>Additive expression</b></em>' containment reference.
@@ -2575,7 +2648,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression_linha()
    * @generated
    */
-  int SHIFT_EXPRESSION_LINHA = 71;
+  int SHIFT_EXPRESSION_LINHA = 72;
 
   /**
    * The number of structural features of the '<em>shift expression linha</em>' class.
@@ -2594,7 +2667,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getshift_expression_complement()
    * @generated
    */
-  int SHIFT_EXPRESSION_COMPLEMENT = 72;
+  int SHIFT_EXPRESSION_COMPLEMENT = 73;
 
   /**
    * The feature id for the '<em><b>Additive expression</b></em>' containment reference.
@@ -2622,7 +2695,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression()
    * @generated
    */
-  int RELATIONAL_EXPRESSION = 73;
+  int RELATIONAL_EXPRESSION = 74;
 
   /**
    * The feature id for the '<em><b>Shift expression</b></em>' containment reference.
@@ -2659,7 +2732,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression_linha()
    * @generated
    */
-  int RELATIONAL_EXPRESSION_LINHA = 74;
+  int RELATIONAL_EXPRESSION_LINHA = 75;
 
   /**
    * The number of structural features of the '<em>relational expression linha</em>' class.
@@ -2678,7 +2751,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getrelational_expression_complement()
    * @generated
    */
-  int RELATIONAL_EXPRESSION_COMPLEMENT = 75;
+  int RELATIONAL_EXPRESSION_COMPLEMENT = 76;
 
   /**
    * The feature id for the '<em><b>Shift expression</b></em>' containment reference.
@@ -2706,7 +2779,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression()
    * @generated
    */
-  int EQUALITY_EXPRESSION = 76;
+  int EQUALITY_EXPRESSION = 77;
 
   /**
    * The feature id for the '<em><b>Relational expression</b></em>' containment reference.
@@ -2743,7 +2816,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression_linha()
    * @generated
    */
-  int EQUALITY_EXPRESSION_LINHA = 77;
+  int EQUALITY_EXPRESSION_LINHA = 78;
 
   /**
    * The number of structural features of the '<em>equality expression linha</em>' class.
@@ -2762,7 +2835,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getequality_expression_complement()
    * @generated
    */
-  int EQUALITY_EXPRESSION_COMPLEMENT = 78;
+  int EQUALITY_EXPRESSION_COMPLEMENT = 79;
 
   /**
    * The feature id for the '<em><b>Relational expression</b></em>' containment reference.
@@ -2790,7 +2863,61 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstatement()
    * @generated
    */
-  int STATEMENT = 79;
+  int STATEMENT = 80;
+
+  /**
+   * The feature id for the '<em><b>Labeled statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__LABELED_STATEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Compound statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__COMPOUND_STATEMENT = 1;
+
+  /**
+   * The feature id for the '<em><b>Expression statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__EXPRESSION_STATEMENT = 2;
+
+  /**
+   * The feature id for the '<em><b>Selection statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__SELECTION_STATEMENT = 3;
+
+  /**
+   * The feature id for the '<em><b>Iteration statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__ITERATION_STATEMENT = 4;
+
+  /**
+   * The feature id for the '<em><b>Jump statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__JUMP_STATEMENT = 5;
 
   /**
    * The number of structural features of the '<em>statement</em>' class.
@@ -2799,7 +2926,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMENT_FEATURE_COUNT = 0;
+  int STATEMENT_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.jump_statementImpl <em>jump statement</em>}' class.
@@ -2809,7 +2936,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getjump_statement()
    * @generated
    */
-  int JUMP_STATEMENT = 80;
+  int JUMP_STATEMENT = 81;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -2818,7 +2945,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUMP_STATEMENT__IDENTIFIER = STATEMENT_FEATURE_COUNT + 0;
+  int JUMP_STATEMENT__IDENTIFIER = 0;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2827,7 +2954,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUMP_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 1;
+  int JUMP_STATEMENT__EXPRESSION = 1;
 
   /**
    * The number of structural features of the '<em>jump statement</em>' class.
@@ -2836,7 +2963,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUMP_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+  int JUMP_STATEMENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.iteration_statementImpl <em>iteration statement</em>}' class.
@@ -2846,7 +2973,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getiteration_statement()
    * @generated
    */
-  int ITERATION_STATEMENT = 81;
+  int ITERATION_STATEMENT = 82;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2855,7 +2982,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITERATION_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+  int ITERATION_STATEMENT__EXPRESSION = 0;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -2864,7 +2991,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITERATION_STATEMENT__STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+  int ITERATION_STATEMENT__STATEMENT = 1;
 
   /**
    * The feature id for the '<em><b>Expression statement</b></em>' containment reference.
@@ -2873,7 +3000,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITERATION_STATEMENT__EXPRESSION_STATEMENT = STATEMENT_FEATURE_COUNT + 2;
+  int ITERATION_STATEMENT__EXPRESSION_STATEMENT = 2;
 
   /**
    * The feature id for the '<em><b>Expression statement2</b></em>' containment reference.
@@ -2882,7 +3009,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITERATION_STATEMENT__EXPRESSION_STATEMENT2 = STATEMENT_FEATURE_COUNT + 3;
+  int ITERATION_STATEMENT__EXPRESSION_STATEMENT2 = 3;
 
   /**
    * The feature id for the '<em><b>Declaration</b></em>' containment reference.
@@ -2891,7 +3018,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITERATION_STATEMENT__DECLARATION = STATEMENT_FEATURE_COUNT + 4;
+  int ITERATION_STATEMENT__DECLARATION = 4;
 
   /**
    * The number of structural features of the '<em>iteration statement</em>' class.
@@ -2900,7 +3027,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITERATION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 5;
+  int ITERATION_STATEMENT_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.selection_statementImpl <em>selection statement</em>}' class.
@@ -2910,7 +3037,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getselection_statement()
    * @generated
    */
-  int SELECTION_STATEMENT = 82;
+  int SELECTION_STATEMENT = 83;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2919,7 +3046,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTION_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+  int SELECTION_STATEMENT__EXPRESSION = 0;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -2928,7 +3055,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTION_STATEMENT__STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+  int SELECTION_STATEMENT__STATEMENT = 1;
 
   /**
    * The feature id for the '<em><b>Statement2</b></em>' containment reference.
@@ -2937,7 +3064,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTION_STATEMENT__STATEMENT2 = STATEMENT_FEATURE_COUNT + 2;
+  int SELECTION_STATEMENT__STATEMENT2 = 2;
 
   /**
    * The number of structural features of the '<em>selection statement</em>' class.
@@ -2946,7 +3073,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+  int SELECTION_STATEMENT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.labeled_statementImpl <em>labeled statement</em>}' class.
@@ -2956,7 +3083,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlabeled_statement()
    * @generated
    */
-  int LABELED_STATEMENT = 83;
+  int LABELED_STATEMENT = 84;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -2965,7 +3092,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_STATEMENT__IDENTIFIER = STATEMENT_FEATURE_COUNT + 0;
+  int LABELED_STATEMENT__IDENTIFIER = 0;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -2974,16 +3101,16 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_STATEMENT__STATEMENT = STATEMENT_FEATURE_COUNT + 1;
+  int LABELED_STATEMENT__STATEMENT = 1;
 
   /**
-   * The feature id for the '<em><b>Constant expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LABELED_STATEMENT__CONSTANT_EXPRESSION = STATEMENT_FEATURE_COUNT + 2;
+  int LABELED_STATEMENT__CONDITIONAL_EXPRESSION = 2;
 
   /**
    * The number of structural features of the '<em>labeled statement</em>' class.
@@ -2992,7 +3119,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LABELED_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+  int LABELED_STATEMENT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.compound_statementImpl <em>compound statement</em>}' class.
@@ -3002,16 +3129,16 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getcompound_statement()
    * @generated
    */
-  int COMPOUND_STATEMENT = 84;
+  int COMPOUND_STATEMENT = 85;
 
   /**
-   * The feature id for the '<em><b>Block item list</b></em>' containment reference.
+   * The feature id for the '<em><b>Block item list</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPOUND_STATEMENT__BLOCK_ITEM_LIST = STATEMENT_FEATURE_COUNT + 0;
+  int COMPOUND_STATEMENT__BLOCK_ITEM_LIST = 0;
 
   /**
    * The number of structural features of the '<em>compound statement</em>' class.
@@ -3020,7 +3147,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPOUND_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+  int COMPOUND_STATEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.block_item_listImpl <em>block item list</em>}' class.
@@ -3030,7 +3157,25 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item_list()
    * @generated
    */
-  int BLOCK_ITEM_LIST = 85;
+  int BLOCK_ITEM_LIST = 86;
+
+  /**
+   * The feature id for the '<em><b>Block item</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST__BLOCK_ITEM = 0;
+
+  /**
+   * The feature id for the '<em><b>Block item list linha</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA = 1;
 
   /**
    * The number of structural features of the '<em>block item list</em>' class.
@@ -3039,7 +3184,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_ITEM_LIST_FEATURE_COUNT = 0;
+  int BLOCK_ITEM_LIST_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.block_item_list_linhaImpl <em>block item list linha</em>}' class.
@@ -3049,7 +3194,25 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item_list_linha()
    * @generated
    */
-  int BLOCK_ITEM_LIST_LINHA = 86;
+  int BLOCK_ITEM_LIST_LINHA = 87;
+
+  /**
+   * The feature id for the '<em><b>Block item</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_LINHA__BLOCK_ITEM = 0;
+
+  /**
+   * The feature id for the '<em><b>Block item list linha</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_ITEM_LIST_LINHA__BLOCK_ITEM_LIST_LINHA = 1;
 
   /**
    * The number of structural features of the '<em>block item list linha</em>' class.
@@ -3058,7 +3221,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT = 0;
+  int BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.block_itemImpl <em>block item</em>}' class.
@@ -3068,16 +3231,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getblock_item()
    * @generated
    */
-  int BLOCK_ITEM = 87;
-
-  /**
-   * The feature id for the '<em><b>Block item list linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA = BLOCK_ITEM_LIST_FEATURE_COUNT + 0;
+  int BLOCK_ITEM = 88;
 
   /**
    * The feature id for the '<em><b>Declaration</b></em>' containment reference.
@@ -3086,7 +3240,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_ITEM__DECLARATION = BLOCK_ITEM_LIST_FEATURE_COUNT + 1;
+  int BLOCK_ITEM__DECLARATION = 0;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -3095,7 +3249,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_ITEM__STATEMENT = BLOCK_ITEM_LIST_FEATURE_COUNT + 2;
+  int BLOCK_ITEM__STATEMENT = 1;
 
   /**
    * The number of structural features of the '<em>block item</em>' class.
@@ -3104,7 +3258,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_ITEM_FEATURE_COUNT = BLOCK_ITEM_LIST_FEATURE_COUNT + 3;
+  int BLOCK_ITEM_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.expression_statementImpl <em>expression statement</em>}' class.
@@ -3114,7 +3268,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression_statement()
    * @generated
    */
-  int EXPRESSION_STATEMENT = 88;
+  int EXPRESSION_STATEMENT = 89;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -3123,7 +3277,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+  int EXPRESSION_STATEMENT__EXPRESSION = 0;
 
   /**
    * The number of structural features of the '<em>expression statement</em>' class.
@@ -3132,7 +3286,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+  int EXPRESSION_STATEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.and_expressionImpl <em>and expression</em>}' class.
@@ -3142,7 +3296,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getand_expression()
    * @generated
    */
-  int AND_EXPRESSION = 89;
+  int AND_EXPRESSION = 90;
 
   /**
    * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
@@ -3179,7 +3333,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getand_expression_linha()
    * @generated
    */
-  int AND_EXPRESSION_LINHA = 90;
+  int AND_EXPRESSION_LINHA = 91;
 
   /**
    * The number of structural features of the '<em>and expression linha</em>' class.
@@ -3198,7 +3352,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexclusive_or_expression()
    * @generated
    */
-  int EXCLUSIVE_OR_EXPRESSION = 91;
+  int EXCLUSIVE_OR_EXPRESSION = 92;
 
   /**
    * The feature id for the '<em><b>And expression</b></em>' containment reference.
@@ -3235,7 +3389,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexclusive_or_expression_linha()
    * @generated
    */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA = 92;
+  int EXCLUSIVE_OR_EXPRESSION_LINHA = 93;
 
   /**
    * The number of structural features of the '<em>exclusive or expression linha</em>' class.
@@ -3254,7 +3408,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinclusive_or_expression()
    * @generated
    */
-  int INCLUSIVE_OR_EXPRESSION = 93;
+  int INCLUSIVE_OR_EXPRESSION = 94;
 
   /**
    * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
@@ -3291,7 +3445,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinclusive_or_expression_linha()
    * @generated
    */
-  int INCLUSIVE_OR_EXPRESSION_LINHA = 94;
+  int INCLUSIVE_OR_EXPRESSION_LINHA = 95;
 
   /**
    * The number of structural features of the '<em>inclusive or expression linha</em>' class.
@@ -3310,7 +3464,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_and_expression()
    * @generated
    */
-  int LOGICAL_AND_EXPRESSION = 95;
+  int LOGICAL_AND_EXPRESSION = 96;
 
   /**
    * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
@@ -3347,7 +3501,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_and_expression_linha()
    * @generated
    */
-  int LOGICAL_AND_EXPRESSION_LINHA = 96;
+  int LOGICAL_AND_EXPRESSION_LINHA = 97;
 
   /**
    * The number of structural features of the '<em>logical and expression linha</em>' class.
@@ -3366,7 +3520,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_or_expression()
    * @generated
    */
-  int LOGICAL_OR_EXPRESSION = 97;
+  int LOGICAL_OR_EXPRESSION = 98;
 
   /**
    * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
@@ -3403,7 +3557,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getlogical_or_expression_linha()
    * @generated
    */
-  int LOGICAL_OR_EXPRESSION_LINHA = 98;
+  int LOGICAL_OR_EXPRESSION_LINHA = 99;
 
   /**
    * The number of structural features of the '<em>logical or expression linha</em>' class.
@@ -3422,7 +3576,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconditional_expression()
    * @generated
    */
-  int CONDITIONAL_EXPRESSION = 99;
+  int CONDITIONAL_EXPRESSION = 100;
 
   /**
    * The feature id for the '<em><b>Logical or expression</b></em>' containment reference.
@@ -3459,7 +3613,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconditional_expression_linha()
    * @generated
    */
-  int CONDITIONAL_EXPRESSION_LINHA = 100;
+  int CONDITIONAL_EXPRESSION_LINHA = 101;
 
   /**
    * The number of structural features of the '<em>conditional expression linha</em>' class.
@@ -3478,7 +3632,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getassignment_expression()
    * @generated
    */
-  int ASSIGNMENT_EXPRESSION = 101;
+  int ASSIGNMENT_EXPRESSION = 102;
 
   /**
    * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
@@ -3533,7 +3687,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_name()
    * @generated
    */
-  int TYPE_NAME = 102;
+  int TYPE_NAME = 103;
 
   /**
    * The feature id for the '<em><b>Primary expression</b></em>' containment reference.
@@ -3597,7 +3751,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression()
    * @generated
    */
-  int EXPRESSION = 103;
+  int EXPRESSION = 104;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -3634,7 +3788,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getexpression_linha()
    * @generated
    */
-  int EXPRESSION_LINHA = 104;
+  int EXPRESSION_LINHA = 105;
 
   /**
    * The number of structural features of the '<em>expression linha</em>' class.
@@ -3653,7 +3807,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconstant_expression()
    * @generated
    */
-  int CONSTANT_EXPRESSION = 105;
+  int CONSTANT_EXPRESSION = 106;
 
   /**
    * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
@@ -3681,7 +3835,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator_list()
    * @generated
    */
-  int INIT_DECLARATOR_LIST = 106;
+  int INIT_DECLARATOR_LIST = 107;
 
   /**
    * The feature id for the '<em><b>Init declarator</b></em>' containment reference.
@@ -3718,7 +3872,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator_list_linha()
    * @generated
    */
-  int INIT_DECLARATOR_LIST_LINHA = 107;
+  int INIT_DECLARATOR_LIST_LINHA = 108;
 
   /**
    * The number of structural features of the '<em>init declarator list linha</em>' class.
@@ -3737,7 +3891,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getinit_declarator()
    * @generated
    */
-  int INIT_DECLARATOR = 108;
+  int INIT_DECLARATOR = 109;
 
   /**
    * The feature id for the '<em><b>Declarator</b></em>' containment reference.
@@ -3774,7 +3928,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getstring_ufcg()
    * @generated
    */
-  int STRING_UFCG = 109;
+  int STRING_UFCG = 110;
 
   /**
    * The feature id for the '<em><b>String literal</b></em>' attribute.
@@ -3811,7 +3965,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getconstant()
    * @generated
    */
-  int CONSTANT = 110;
+  int CONSTANT = 111;
 
   /**
    * The feature id for the '<em><b>Iconstant</b></em>' attribute.
@@ -3857,7 +4011,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEnumeratorListLinhaAction()
    * @generated
    */
-  int ENUMERATOR_LIST_LINHA_ACTION = 111;
+  int ENUMERATOR_LIST_LINHA_ACTION = 112;
 
   /**
    * The feature id for the '<em><b>Enumerator</b></em>' containment reference.
@@ -3894,7 +4048,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructOrUnionSpecifierComplementAction()
    * @generated
    */
-  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION = 112;
+  int STRUCT_OR_UNION_SPECIFIER_COMPLEMENT_ACTION = 113;
 
   /**
    * The feature id for the '<em><b>Struct declaration list</b></em>' containment reference.
@@ -3922,7 +4076,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructDeclarationListLinhaAction()
    * @generated
    */
-  int STRUCT_DECLARATION_LIST_LINHA_ACTION = 113;
+  int STRUCT_DECLARATION_LIST_LINHA_ACTION = 114;
 
   /**
    * The feature id for the '<em><b>Struct declaration</b></em>' containment reference.
@@ -3959,7 +4113,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getStructDeclaratorListLinhaAction()
    * @generated
    */
-  int STRUCT_DECLARATOR_LIST_LINHA_ACTION = 114;
+  int STRUCT_DECLARATOR_LIST_LINHA_ACTION = 115;
 
   /**
    * The feature id for the '<em><b>Struct declarator</b></em>' containment reference.
@@ -3996,7 +4150,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDeclarationListLinhaAction()
    * @generated
    */
-  int DECLARATION_LIST_LINHA_ACTION = 115;
+  int DECLARATION_LIST_LINHA_ACTION = 116;
 
   /**
    * The feature id for the '<em><b>Declaration</b></em>' containment reference.
@@ -4033,10 +4187,10 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getTypeQualifierListLinhaAtion()
    * @generated
    */
-  int TYPE_QUALIFIER_LIST_LINHA_ATION = 116;
+  int TYPE_QUALIFIER_LIST_LINHA_ATION = 117;
 
   /**
-   * The feature id for the '<em><b>Type qualifier</b></em>' attribute.
+   * The feature id for the '<em><b>Type qualifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -4063,80 +4217,6 @@ public interface AnsicPackage extends EPackage
   int TYPE_QUALIFIER_LIST_LINHA_ATION_FEATURE_COUNT = TYPE_QUALIFIER_LIST_LINHA_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl <em>Direct Declarator Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectDeclaratorLinhaAction()
-   * @generated
-   */
-  int DIRECT_DECLARATOR_LINHA_ACTION = 117;
-
-  /**
-   * The feature id for the '<em><b>Direct declarator complemento</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_COMPLEMENTO = DIRECT_DECLARATOR_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Direct declarator linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_LINHA = DIRECT_DECLARATOR_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Direct Declarator Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIRECT_DECLARATOR_LINHA_ACTION_FEATURE_COUNT = DIRECT_DECLARATOR_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.ParameterListLinhaActionImpl <em>Parameter List Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.ParameterListLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getParameterListLinhaAction()
-   * @generated
-   */
-  int PARAMETER_LIST_LINHA_ACTION = 118;
-
-  /**
-   * The feature id for the '<em><b>Parameter declaration</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_LIST_LINHA_ACTION__PARAMETER_DECLARATION = PARAMETER_LIST_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Parameter list linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_LIST_LINHA_ACTION__PARAMETER_LIST_LINHA = PARAMETER_LIST_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Parameter List Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARAMETER_LIST_LINHA_ACTION_FEATURE_COUNT = PARAMETER_LIST_LINHA_FEATURE_COUNT + 2;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.DirectAbstractDeclarratorLinhaActionImpl <em>Direct Abstract Declarrator Linha Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4144,7 +4224,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectAbstractDeclarratorLinhaAction()
    * @generated
    */
-  int DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION = 119;
+  int DIRECT_ABSTRACT_DECLARRATOR_LINHA_ACTION = 118;
 
   /**
    * The feature id for the '<em><b>Direct abstract declarator complement</b></em>' containment reference.
@@ -4181,7 +4261,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getIdentifierListLinhaAction()
    * @generated
    */
-  int IDENTIFIER_LIST_LINHA_ACTION = 120;
+  int IDENTIFIER_LIST_LINHA_ACTION = 119;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -4218,7 +4298,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getTranlationUnitLinhaAction()
    * @generated
    */
-  int TRANLATION_UNIT_LINHA_ACTION = 121;
+  int TRANLATION_UNIT_LINHA_ACTION = 120;
 
   /**
    * The feature id for the '<em><b>External declaration</b></em>' containment reference.
@@ -4255,7 +4335,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getGenericAssocListLinhaAction()
    * @generated
    */
-  int GENERIC_ASSOC_LIST_LINHA_ACTION = 122;
+  int GENERIC_ASSOC_LIST_LINHA_ACTION = 121;
 
   /**
    * The feature id for the '<em><b>Generic association</b></em>' containment reference.
@@ -4292,7 +4372,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionLinhaAction()
    * @generated
    */
-  int POSTFIX_EXPRESSION_LINHA_ACTION = 123;
+  int POSTFIX_EXPRESSION_LINHA_ACTION = 122;
 
   /**
    * The feature id for the '<em><b>Postfix expression complement</b></em>' containment reference.
@@ -4329,7 +4409,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitializerListLinhaAction()
    * @generated
    */
-  int INITIALIZER_LIST_LINHA_ACTION = 124;
+  int INITIALIZER_LIST_LINHA_ACTION = 123;
 
   /**
    * The feature id for the '<em><b>Initializer list complement</b></em>' containment reference.
@@ -4366,7 +4446,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDesignatorListLinhaAction()
    * @generated
    */
-  int DESIGNATOR_LIST_LINHA_ACTION = 125;
+  int DESIGNATOR_LIST_LINHA_ACTION = 124;
 
   /**
    * The feature id for the '<em><b>Designator</b></em>' containment reference.
@@ -4403,7 +4483,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementExpression()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION = 126;
+  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION = 125;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -4431,7 +4511,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementEmpty()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY = 127;
+  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY = 126;
 
   /**
    * The number of structural features of the '<em>Postfix Expression Complement Empty</em>' class.
@@ -4450,7 +4530,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementArgList()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST = 128;
+  int POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST = 127;
 
   /**
    * The feature id for the '<em><b>Argument expression list</b></em>' containment reference list.
@@ -4478,7 +4558,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementIdentifier()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER = 129;
+  int POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER = 128;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -4506,7 +4586,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementPointer()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_POINTER = 130;
+  int POSTFIX_EXPRESSION_COMPLEMENT_POINTER = 129;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -4534,7 +4614,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementIncrement()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT = 131;
+  int POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT = 130;
 
   /**
    * The number of structural features of the '<em>Postfix Expression Complement Increment</em>' class.
@@ -4553,7 +4633,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementDecrement()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT = 132;
+  int POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT = 131;
 
   /**
    * The number of structural features of the '<em>Postfix Expression Complement Decrement</em>' class.
@@ -4572,7 +4652,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getArgumentExpressionListLinhaAction()
    * @generated
    */
-  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION = 133;
+  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION = 132;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -4600,6 +4680,79 @@ public interface AnsicPackage extends EPackage
    * @ordered
    */
   int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION_FEATURE_COUNT = ARGUMENT_EXPRESSION_LIST_LINHA_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PlusPlusImpl <em>Plus Plus</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.ansic.impl.PlusPlusImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPlusPlus()
+   * @generated
+   */
+  int PLUS_PLUS = 133;
+
+  /**
+   * The feature id for the '<em><b>Postfix expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS__POSTFIX_EXPRESSION = UNARY_EXPRESSION__POSTFIX_EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Unary expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS__UNARY_EXPRESSION = UNARY_EXPRESSION__UNARY_EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Unary operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS__UNARY_OPERATOR = UNARY_EXPRESSION__UNARY_OPERATOR;
+
+  /**
+   * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS__CAST_EXPRESSION = UNARY_EXPRESSION__CAST_EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS__TYPE_NAME = UNARY_EXPRESSION__TYPE_NAME;
+
+  /**
+   * The feature id for the '<em><b>Plus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS__PLUS = UNARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Plus Plus</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_PLUS_FEATURE_COUNT = UNARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl <em>Multiplicative Expression Linha Action</em>}' class.
@@ -4787,43 +4940,6 @@ public interface AnsicPackage extends EPackage
   int EQUALITY_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl <em>Block Item List Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getBlockItemListLinhaAction()
-   * @generated
-   */
-  int BLOCK_ITEM_LIST_LINHA_ACTION = 139;
-
-  /**
-   * The feature id for the '<em><b>Block item</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM = BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Block item list linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM_LIST_LINHA = BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Block Item List Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_ITEM_LIST_LINHA_ACTION_FEATURE_COUNT = BLOCK_ITEM_LIST_LINHA_FEATURE_COUNT + 2;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl <em>And Expression Linha Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4831,7 +4947,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAndExpressionLinhaAction()
    * @generated
    */
-  int AND_EXPRESSION_LINHA_ACTION = 140;
+  int AND_EXPRESSION_LINHA_ACTION = 139;
 
   /**
    * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
@@ -4868,7 +4984,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExclusiveOrExpressionLinhaAction()
    * @generated
    */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 141;
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 140;
 
   /**
    * The feature id for the '<em><b>And expression</b></em>' containment reference.
@@ -4905,7 +5021,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInclusiveOrExpressionLinhaAction()
    * @generated
    */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 142;
+  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 141;
 
   /**
    * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
@@ -4942,7 +5058,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalAndExpressionLinhaAction()
    * @generated
    */
-  int LOGICAL_AND_EXPRESSION_LINHA_ACTION = 143;
+  int LOGICAL_AND_EXPRESSION_LINHA_ACTION = 142;
 
   /**
    * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
@@ -4979,7 +5095,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalOrExpressionLinhaAction()
    * @generated
    */
-  int LOGICAL_OR_EXPRESSION_LINHA_ACTION = 144;
+  int LOGICAL_OR_EXPRESSION_LINHA_ACTION = 143;
 
   /**
    * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
@@ -5016,7 +5132,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getConditionalExpressionLinhaAcction()
    * @generated
    */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION = 145;
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION = 144;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -5062,7 +5178,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExpressionLinhaAction()
    * @generated
    */
-  int EXPRESSION_LINHA_ACTION = 146;
+  int EXPRESSION_LINHA_ACTION = 145;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -5099,7 +5215,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitDecclaratorListLinhaAction()
    * @generated
    */
-  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 147;
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 146;
 
   /**
    * The feature id for the '<em><b>Init declarator</b></em>' containment reference.
@@ -5258,15 +5374,15 @@ public interface AnsicPackage extends EPackage
   EReference getdeclaration_specifiers_Type_specifier();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.declaration_specifiers#getType_qualifier <em>Type qualifier</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.declaration_specifiers#getType_qualifier <em>Type qualifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @return the meta object for the containment reference '<em>Type qualifier</em>'.
    * @see org.xtext.example.ansic.declaration_specifiers#getType_qualifier()
    * @see #getdeclaration_specifiers()
    * @generated
    */
-  EAttribute getdeclaration_specifiers_Type_qualifier();
+  EReference getdeclaration_specifiers_Type_qualifier();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.ansic.declaration_specifiers#getFunction_specifier <em>Function specifier</em>}'.
@@ -5323,6 +5439,27 @@ public interface AnsicPackage extends EPackage
   EReference getalignment_specifier_Constant_expression();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.type_qualifier <em>type qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>type qualifier</em>'.
+   * @see org.xtext.example.ansic.type_qualifier
+   * @generated
+   */
+  EClass gettype_qualifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.type_qualifier#getNamez <em>Namez</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Namez</em>'.
+   * @see org.xtext.example.ansic.type_qualifier#getNamez()
+   * @see #gettype_qualifier()
+   * @generated
+   */
+  EAttribute gettype_qualifier_Namez();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.type_specifier <em>type specifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5331,6 +5468,17 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass gettype_specifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.type_specifier#getType_name_str <em>Type name str</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type name str</em>'.
+   * @see org.xtext.example.ansic.type_specifier#getType_name_str()
+   * @see #gettype_specifier()
+   * @generated
+   */
+  EAttribute gettype_specifier_Type_name_str();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_specifier#getAtomic_type_specifier <em>Atomic type specifier</em>}'.
@@ -5748,15 +5896,15 @@ public interface AnsicPackage extends EPackage
   EReference getspecifier_qualifier_list_Specifier_qualifier_list();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.specifier_qualifier_list#getType_qualifier <em>Type qualifier</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.specifier_qualifier_list#getType_qualifier <em>Type qualifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @return the meta object for the containment reference '<em>Type qualifier</em>'.
    * @see org.xtext.example.ansic.specifier_qualifier_list#getType_qualifier()
    * @see #getspecifier_qualifier_list()
    * @generated
    */
-  EAttribute getspecifier_qualifier_list_Type_qualifier();
+  EReference getspecifier_qualifier_list_Type_qualifier();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.declaration <em>declaration</em>}'.
@@ -5972,15 +6120,15 @@ public interface AnsicPackage extends EPackage
   EClass gettype_qualifier_list();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.type_qualifier_list#getType_qualifier <em>Type qualifier</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_qualifier_list#getType_qualifier <em>Type qualifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @return the meta object for the containment reference '<em>Type qualifier</em>'.
    * @see org.xtext.example.ansic.type_qualifier_list#getType_qualifier()
    * @see #gettype_qualifier_list()
    * @generated
    */
-  EAttribute gettype_qualifier_list_Type_qualifier();
+  EReference gettype_qualifier_list_Type_qualifier();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.type_qualifier_list#getType_qualifier_list_linha <em>Type qualifier list linha</em>}'.
@@ -6057,6 +6205,28 @@ public interface AnsicPackage extends EPackage
   EClass getdirect_declarator_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_complemento <em>Direct declarator complemento</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct declarator complemento</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_complemento()
+   * @see #getdirect_declarator_linha()
+   * @generated
+   */
+  EReference getdirect_declarator_linha_Direct_declarator_complemento();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_linha <em>Direct declarator linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Direct declarator linha</em>'.
+   * @see org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_linha()
+   * @see #getdirect_declarator_linha()
+   * @generated
+   */
+  EReference getdirect_declarator_linha_Direct_declarator_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.direct_declarator_complemento <em>direct declarator complemento</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6121,10 +6291,10 @@ public interface AnsicPackage extends EPackage
   EClass getparameter_type_list();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_type_list#getParameter_list <em>Parameter list</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.parameter_type_list#getParameter_list <em>Parameter list</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter list</em>'.
+   * @return the meta object for the containment reference list '<em>Parameter list</em>'.
    * @see org.xtext.example.ansic.parameter_type_list#getParameter_list()
    * @see #getparameter_type_list()
    * @generated
@@ -6153,10 +6323,10 @@ public interface AnsicPackage extends EPackage
   EReference getparameter_list_Parameter_declaration();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_list#getParameter_list_linha <em>Parameter list linha</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.parameter_list#getParameter_list_linha <em>Parameter list linha</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter list linha</em>'.
+   * @return the meta object for the containment reference list '<em>Parameter list linha</em>'.
    * @see org.xtext.example.ansic.parameter_list#getParameter_list_linha()
    * @see #getparameter_list()
    * @generated
@@ -6172,6 +6342,28 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getparameter_list_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.parameter_list_linha#getParameter_declaration <em>Parameter declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parameter declaration</em>'.
+   * @see org.xtext.example.ansic.parameter_list_linha#getParameter_declaration()
+   * @see #getparameter_list_linha()
+   * @generated
+   */
+  EReference getparameter_list_linha_Parameter_declaration();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.parameter_list_linha#getParameter_list_linha <em>Parameter list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Parameter list linha</em>'.
+   * @see org.xtext.example.ansic.parameter_list_linha#getParameter_list_linha()
+   * @see #getparameter_list_linha()
+   * @generated
+   */
+  EReference getparameter_list_linha_Parameter_list_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.parameter_declaration <em>parameter declaration</em>}'.
@@ -7393,6 +7585,72 @@ public interface AnsicPackage extends EPackage
   EClass getstatement();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.statement#getLabeled_statement <em>Labeled statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Labeled statement</em>'.
+   * @see org.xtext.example.ansic.statement#getLabeled_statement()
+   * @see #getstatement()
+   * @generated
+   */
+  EReference getstatement_Labeled_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.statement#getCompound_statement <em>Compound statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Compound statement</em>'.
+   * @see org.xtext.example.ansic.statement#getCompound_statement()
+   * @see #getstatement()
+   * @generated
+   */
+  EReference getstatement_Compound_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.statement#getExpression_statement <em>Expression statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression statement</em>'.
+   * @see org.xtext.example.ansic.statement#getExpression_statement()
+   * @see #getstatement()
+   * @generated
+   */
+  EReference getstatement_Expression_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.statement#getSelection_statement <em>Selection statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Selection statement</em>'.
+   * @see org.xtext.example.ansic.statement#getSelection_statement()
+   * @see #getstatement()
+   * @generated
+   */
+  EReference getstatement_Selection_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.statement#getIteration_statement <em>Iteration statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Iteration statement</em>'.
+   * @see org.xtext.example.ansic.statement#getIteration_statement()
+   * @see #getstatement()
+   * @generated
+   */
+  EReference getstatement_Iteration_statement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.statement#getJump_statement <em>Jump statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Jump statement</em>'.
+   * @see org.xtext.example.ansic.statement#getJump_statement()
+   * @see #getstatement()
+   * @generated
+   */
+  EReference getstatement_Jump_statement();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.jump_statement <em>jump statement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7565,15 +7823,15 @@ public interface AnsicPackage extends EPackage
   EReference getlabeled_statement_Statement();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.labeled_statement#getConstant_expression <em>Constant expression</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.labeled_statement#getConditional_expression <em>Conditional expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Constant expression</em>'.
-   * @see org.xtext.example.ansic.labeled_statement#getConstant_expression()
+   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
+   * @see org.xtext.example.ansic.labeled_statement#getConditional_expression()
    * @see #getlabeled_statement()
    * @generated
    */
-  EReference getlabeled_statement_Constant_expression();
+  EReference getlabeled_statement_Conditional_expression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.compound_statement <em>compound statement</em>}'.
@@ -7586,10 +7844,10 @@ public interface AnsicPackage extends EPackage
   EClass getcompound_statement();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.compound_statement#getBlock_item_list <em>Block item list</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.compound_statement#getBlock_item_list <em>Block item list</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Block item list</em>'.
+   * @return the meta object for the containment reference list '<em>Block item list</em>'.
    * @see org.xtext.example.ansic.compound_statement#getBlock_item_list()
    * @see #getcompound_statement()
    * @generated
@@ -7607,6 +7865,28 @@ public interface AnsicPackage extends EPackage
   EClass getblock_item_list();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item_list#getBlock_item <em>Block item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Block item</em>'.
+   * @see org.xtext.example.ansic.block_item_list#getBlock_item()
+   * @see #getblock_item_list()
+   * @generated
+   */
+  EReference getblock_item_list_Block_item();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.block_item_list#getBlock_item_list_linha <em>Block item list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Block item list linha</em>'.
+   * @see org.xtext.example.ansic.block_item_list#getBlock_item_list_linha()
+   * @see #getblock_item_list()
+   * @generated
+   */
+  EReference getblock_item_list_Block_item_list_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.block_item_list_linha <em>block item list linha</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7617,6 +7897,28 @@ public interface AnsicPackage extends EPackage
   EClass getblock_item_list_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item_list_linha#getBlock_item <em>Block item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Block item</em>'.
+   * @see org.xtext.example.ansic.block_item_list_linha#getBlock_item()
+   * @see #getblock_item_list_linha()
+   * @generated
+   */
+  EReference getblock_item_list_linha_Block_item();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.block_item_list_linha#getBlock_item_list_linha <em>Block item list linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Block item list linha</em>'.
+   * @see org.xtext.example.ansic.block_item_list_linha#getBlock_item_list_linha()
+   * @see #getblock_item_list_linha()
+   * @generated
+   */
+  EReference getblock_item_list_linha_Block_item_list_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.block_item <em>block item</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7625,17 +7927,6 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getblock_item();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item#getBlock_item_list_linha <em>Block item list linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Block item list linha</em>'.
-   * @see org.xtext.example.ansic.block_item#getBlock_item_list_linha()
-   * @see #getblock_item()
-   * @generated
-   */
-  EReference getblock_item_Block_item_list_linha();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.block_item#getDeclaration <em>Declaration</em>}'.
@@ -8401,15 +8692,15 @@ public interface AnsicPackage extends EPackage
   EClass getTypeQualifierListLinhaAtion();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier <em>Type qualifier</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier <em>Type qualifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type qualifier</em>'.
+   * @return the meta object for the containment reference '<em>Type qualifier</em>'.
    * @see org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier()
    * @see #getTypeQualifierListLinhaAtion()
    * @generated
    */
-  EAttribute getTypeQualifierListLinhaAtion_Type_qualifier();
+  EReference getTypeQualifierListLinhaAtion_Type_qualifier();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.TypeQualifierListLinhaAtion#getType_qualifier_list_linha <em>Type qualifier list linha</em>}'.
@@ -8421,70 +8712,6 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EReference getTypeQualifierListLinhaAtion_Type_qualifier_list_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction <em>Direct Declarator Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Direct Declarator Linha Action</em>'.
-   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction
-   * @generated
-   */
-  EClass getDirectDeclaratorLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_complemento <em>Direct declarator complemento</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Direct declarator complemento</em>'.
-   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_complemento()
-   * @see #getDirectDeclaratorLinhaAction()
-   * @generated
-   */
-  EReference getDirectDeclaratorLinhaAction_Direct_declarator_complemento();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_linha <em>Direct declarator linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Direct declarator linha</em>'.
-   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction#getDirect_declarator_linha()
-   * @see #getDirectDeclaratorLinhaAction()
-   * @generated
-   */
-  EReference getDirectDeclaratorLinhaAction_Direct_declarator_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.ParameterListLinhaAction <em>Parameter List Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parameter List Linha Action</em>'.
-   * @see org.xtext.example.ansic.ParameterListLinhaAction
-   * @generated
-   */
-  EClass getParameterListLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ParameterListLinhaAction#getParameter_declaration <em>Parameter declaration</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter declaration</em>'.
-   * @see org.xtext.example.ansic.ParameterListLinhaAction#getParameter_declaration()
-   * @see #getParameterListLinhaAction()
-   * @generated
-   */
-  EReference getParameterListLinhaAction_Parameter_declaration();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ParameterListLinhaAction#getParameter_list_linha <em>Parameter list linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter list linha</em>'.
-   * @see org.xtext.example.ansic.ParameterListLinhaAction#getParameter_list_linha()
-   * @see #getParameterListLinhaAction()
-   * @generated
-   */
-  EReference getParameterListLinhaAction_Parameter_list_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction <em>Direct Abstract Declarrator Linha Action</em>}'.
@@ -8857,6 +9084,27 @@ public interface AnsicPackage extends EPackage
   EReference getArgumentExpressionListLinhaAction_Argument_expression_list_linha();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PlusPlus <em>Plus Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Plus Plus</em>'.
+   * @see org.xtext.example.ansic.PlusPlus
+   * @generated
+   */
+  EClass getPlusPlus();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.PlusPlus#getPlus <em>Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Plus</em>'.
+   * @see org.xtext.example.ansic.PlusPlus#getPlus()
+   * @see #getPlusPlus()
+   * @generated
+   */
+  EAttribute getPlusPlus_Plus();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction <em>Multiplicative Expression Linha Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -9015,38 +9263,6 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EReference getEqualityExpressionLinhaAction_Equality_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.BlockItemListLinhaAction <em>Block Item List Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Block Item List Linha Action</em>'.
-   * @see org.xtext.example.ansic.BlockItemListLinhaAction
-   * @generated
-   */
-  EClass getBlockItemListLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item <em>Block item</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Block item</em>'.
-   * @see org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item()
-   * @see #getBlockItemListLinhaAction()
-   * @generated
-   */
-  EReference getBlockItemListLinhaAction_Block_item();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item_list_linha <em>Block item list linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Block item list linha</em>'.
-   * @see org.xtext.example.ansic.BlockItemListLinhaAction#getBlock_item_list_linha()
-   * @see #getBlockItemListLinhaAction()
-   * @generated
-   */
-  EReference getBlockItemListLinhaAction_Block_item_list_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.AndExpressionLinhaAction <em>And Expression Linha Action</em>}'.
@@ -9443,12 +9659,12 @@ public interface AnsicPackage extends EPackage
     EReference DECLARATION_SPECIFIERS__TYPE_SPECIFIER = eINSTANCE.getdeclaration_specifiers_Type_specifier();
 
     /**
-     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DECLARATION_SPECIFIERS__TYPE_QUALIFIER = eINSTANCE.getdeclaration_specifiers_Type_qualifier();
+    EReference DECLARATION_SPECIFIERS__TYPE_QUALIFIER = eINSTANCE.getdeclaration_specifiers_Type_qualifier();
 
     /**
      * The meta object literal for the '<em><b>Function specifier</b></em>' attribute feature.
@@ -9493,6 +9709,24 @@ public interface AnsicPackage extends EPackage
     EReference ALIGNMENT_SPECIFIER__CONSTANT_EXPRESSION = eINSTANCE.getalignment_specifier_Constant_expression();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.type_qualifierImpl <em>type qualifier</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.type_qualifierImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#gettype_qualifier()
+     * @generated
+     */
+    EClass TYPE_QUALIFIER = eINSTANCE.gettype_qualifier();
+
+    /**
+     * The meta object literal for the '<em><b>Namez</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_QUALIFIER__NAMEZ = eINSTANCE.gettype_qualifier_Namez();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.type_specifierImpl <em>type specifier</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9501,6 +9735,14 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass TYPE_SPECIFIER = eINSTANCE.gettype_specifier();
+
+    /**
+     * The meta object literal for the '<em><b>Type name str</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_SPECIFIER__TYPE_NAME_STR = eINSTANCE.gettype_specifier_Type_name_str();
 
     /**
      * The meta object literal for the '<em><b>Atomic type specifier</b></em>' containment reference feature.
@@ -9843,12 +10085,12 @@ public interface AnsicPackage extends EPackage
     EReference SPECIFIER_QUALIFIER_LIST__SPECIFIER_QUALIFIER_LIST = eINSTANCE.getspecifier_qualifier_list_Specifier_qualifier_list();
 
     /**
-     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER = eINSTANCE.getspecifier_qualifier_list_Type_qualifier();
+    EReference SPECIFIER_QUALIFIER_LIST__TYPE_QUALIFIER = eINSTANCE.getspecifier_qualifier_list_Type_qualifier();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.declarationImpl <em>declaration</em>}' class.
@@ -10025,12 +10267,12 @@ public interface AnsicPackage extends EPackage
     EClass TYPE_QUALIFIER_LIST = eINSTANCE.gettype_qualifier_list();
 
     /**
-     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPE_QUALIFIER_LIST__TYPE_QUALIFIER = eINSTANCE.gettype_qualifier_list_Type_qualifier();
+    EReference TYPE_QUALIFIER_LIST__TYPE_QUALIFIER = eINSTANCE.gettype_qualifier_list_Type_qualifier();
 
     /**
      * The meta object literal for the '<em><b>Type qualifier list linha</b></em>' containment reference feature.
@@ -10095,6 +10337,22 @@ public interface AnsicPackage extends EPackage
     EClass DIRECT_DECLARATOR_LINHA = eINSTANCE.getdirect_declarator_linha();
 
     /**
+     * The meta object literal for the '<em><b>Direct declarator complemento</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_COMPLEMENTO = eINSTANCE.getdirect_declarator_linha_Direct_declarator_complemento();
+
+    /**
+     * The meta object literal for the '<em><b>Direct declarator linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_LINHA = eINSTANCE.getdirect_declarator_linha_Direct_declarator_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.direct_declarator_complementoImpl <em>direct declarator complemento</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -10147,7 +10405,7 @@ public interface AnsicPackage extends EPackage
     EClass PARAMETER_TYPE_LIST = eINSTANCE.getparameter_type_list();
 
     /**
-     * The meta object literal for the '<em><b>Parameter list</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Parameter list</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -10173,7 +10431,7 @@ public interface AnsicPackage extends EPackage
     EReference PARAMETER_LIST__PARAMETER_DECLARATION = eINSTANCE.getparameter_list_Parameter_declaration();
 
     /**
-     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -10189,6 +10447,22 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass PARAMETER_LIST_LINHA = eINSTANCE.getparameter_list_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter declaration</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_LIST_LINHA__PARAMETER_DECLARATION = eINSTANCE.getparameter_list_linha_Parameter_declaration();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARAMETER_LIST_LINHA__PARAMETER_LIST_LINHA = eINSTANCE.getparameter_list_linha_Parameter_list_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.parameter_declarationImpl <em>parameter declaration</em>}' class.
@@ -11203,6 +11477,54 @@ public interface AnsicPackage extends EPackage
     EClass STATEMENT = eINSTANCE.getstatement();
 
     /**
+     * The meta object literal for the '<em><b>Labeled statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__LABELED_STATEMENT = eINSTANCE.getstatement_Labeled_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Compound statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__COMPOUND_STATEMENT = eINSTANCE.getstatement_Compound_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__EXPRESSION_STATEMENT = eINSTANCE.getstatement_Expression_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Selection statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__SELECTION_STATEMENT = eINSTANCE.getstatement_Selection_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Iteration statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__ITERATION_STATEMENT = eINSTANCE.getstatement_Iteration_statement();
+
+    /**
+     * The meta object literal for the '<em><b>Jump statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__JUMP_STATEMENT = eINSTANCE.getstatement_Jump_statement();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.jump_statementImpl <em>jump statement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11339,12 +11661,12 @@ public interface AnsicPackage extends EPackage
     EReference LABELED_STATEMENT__STATEMENT = eINSTANCE.getlabeled_statement_Statement();
 
     /**
-     * The meta object literal for the '<em><b>Constant expression</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LABELED_STATEMENT__CONSTANT_EXPRESSION = eINSTANCE.getlabeled_statement_Constant_expression();
+    EReference LABELED_STATEMENT__CONDITIONAL_EXPRESSION = eINSTANCE.getlabeled_statement_Conditional_expression();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.compound_statementImpl <em>compound statement</em>}' class.
@@ -11357,7 +11679,7 @@ public interface AnsicPackage extends EPackage
     EClass COMPOUND_STATEMENT = eINSTANCE.getcompound_statement();
 
     /**
-     * The meta object literal for the '<em><b>Block item list</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Block item list</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -11375,6 +11697,22 @@ public interface AnsicPackage extends EPackage
     EClass BLOCK_ITEM_LIST = eINSTANCE.getblock_item_list();
 
     /**
+     * The meta object literal for the '<em><b>Block item</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM_LIST__BLOCK_ITEM = eINSTANCE.getblock_item_list_Block_item();
+
+    /**
+     * The meta object literal for the '<em><b>Block item list linha</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM_LIST__BLOCK_ITEM_LIST_LINHA = eINSTANCE.getblock_item_list_Block_item_list_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.block_item_list_linhaImpl <em>block item list linha</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11385,6 +11723,22 @@ public interface AnsicPackage extends EPackage
     EClass BLOCK_ITEM_LIST_LINHA = eINSTANCE.getblock_item_list_linha();
 
     /**
+     * The meta object literal for the '<em><b>Block item</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM_LIST_LINHA__BLOCK_ITEM = eINSTANCE.getblock_item_list_linha_Block_item();
+
+    /**
+     * The meta object literal for the '<em><b>Block item list linha</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_ITEM_LIST_LINHA__BLOCK_ITEM_LIST_LINHA = eINSTANCE.getblock_item_list_linha_Block_item_list_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.block_itemImpl <em>block item</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11393,14 +11747,6 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass BLOCK_ITEM = eINSTANCE.getblock_item();
-
-    /**
-     * The meta object literal for the '<em><b>Block item list linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BLOCK_ITEM__BLOCK_ITEM_LIST_LINHA = eINSTANCE.getblock_item_Block_item_list_linha();
 
     /**
      * The meta object literal for the '<em><b>Declaration</b></em>' containment reference feature.
@@ -12037,12 +12383,12 @@ public interface AnsicPackage extends EPackage
     EClass TYPE_QUALIFIER_LIST_LINHA_ATION = eINSTANCE.getTypeQualifierListLinhaAtion();
 
     /**
-     * The meta object literal for the '<em><b>Type qualifier</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type qualifier</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER = eINSTANCE.getTypeQualifierListLinhaAtion_Type_qualifier();
+    EReference TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER = eINSTANCE.getTypeQualifierListLinhaAtion_Type_qualifier();
 
     /**
      * The meta object literal for the '<em><b>Type qualifier list linha</b></em>' containment reference feature.
@@ -12051,58 +12397,6 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EReference TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA = eINSTANCE.getTypeQualifierListLinhaAtion_Type_qualifier_list_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl <em>Direct Declarator Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.DirectDeclaratorLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getDirectDeclaratorLinhaAction()
-     * @generated
-     */
-    EClass DIRECT_DECLARATOR_LINHA_ACTION = eINSTANCE.getDirectDeclaratorLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Direct declarator complemento</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_COMPLEMENTO = eINSTANCE.getDirectDeclaratorLinhaAction_Direct_declarator_complemento();
-
-    /**
-     * The meta object literal for the '<em><b>Direct declarator linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DIRECT_DECLARATOR_LINHA_ACTION__DIRECT_DECLARATOR_LINHA = eINSTANCE.getDirectDeclaratorLinhaAction_Direct_declarator_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ParameterListLinhaActionImpl <em>Parameter List Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.ParameterListLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getParameterListLinhaAction()
-     * @generated
-     */
-    EClass PARAMETER_LIST_LINHA_ACTION = eINSTANCE.getParameterListLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Parameter declaration</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_LIST_LINHA_ACTION__PARAMETER_DECLARATION = eINSTANCE.getParameterListLinhaAction_Parameter_declaration();
-
-    /**
-     * The meta object literal for the '<em><b>Parameter list linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PARAMETER_LIST_LINHA_ACTION__PARAMETER_LIST_LINHA = eINSTANCE.getParameterListLinhaAction_Parameter_list_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.DirectAbstractDeclarratorLinhaActionImpl <em>Direct Abstract Declarrator Linha Action</em>}' class.
@@ -12415,6 +12709,24 @@ public interface AnsicPackage extends EPackage
     EReference ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ARGUMENT_EXPRESSION_LIST_LINHA = eINSTANCE.getArgumentExpressionListLinhaAction_Argument_expression_list_linha();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PlusPlusImpl <em>Plus Plus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.ansic.impl.PlusPlusImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPlusPlus()
+     * @generated
+     */
+    EClass PLUS_PLUS = eINSTANCE.getPlusPlus();
+
+    /**
+     * The meta object literal for the '<em><b>Plus</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PLUS_PLUS__PLUS = eINSTANCE.getPlusPlus_Plus();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl <em>Multiplicative Expression Linha Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12543,32 +12855,6 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EReference EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA = eINSTANCE.getEqualityExpressionLinhaAction_Equality_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl <em>Block Item List Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.BlockItemListLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getBlockItemListLinhaAction()
-     * @generated
-     */
-    EClass BLOCK_ITEM_LIST_LINHA_ACTION = eINSTANCE.getBlockItemListLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Block item</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM = eINSTANCE.getBlockItemListLinhaAction_Block_item();
-
-    /**
-     * The meta object literal for the '<em><b>Block item list linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BLOCK_ITEM_LIST_LINHA_ACTION__BLOCK_ITEM_LIST_LINHA = eINSTANCE.getBlockItemListLinhaAction_Block_item_list_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl <em>And Expression Linha Action</em>}' class.

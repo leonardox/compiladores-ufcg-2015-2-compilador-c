@@ -188,12 +188,12 @@ type_qualifier_list_linha
 ;
 
 direct_declarator
-	: identifier=ID direct_declarator_linha=direct_declarator_linha
-	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
+	: identifier=ID (direct_declarator_linha=direct_declarator_linha)?
+	| '(' declarator=declarator ')' (direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_linha
-	:{DirectDeclaratorLinhaAction}(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
+	:direct_declarator_complemento=direct_declarator_complemento (direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_complemento
@@ -212,16 +212,16 @@ direct_declarator_complemento
 ;
 
 parameter_type_list
-	: parameter_list=parameter_list ',' '...'
-	| parameter_list=parameter_list
+	: parameter_list+=parameter_list ',' '...'
+	| parameter_list+=parameter_list
 	;
 
 parameter_list
-	: parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha
+	: parameter_declaration=parameter_declaration (parameter_list_linha+=parameter_list_linha)?
 ;
 
 parameter_list_linha
-	: {ParameterListLinhaAction}(',' parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)?
+	: ',' parameter_declaration=parameter_declaration (parameter_list_linha+=parameter_list_linha)?
 ;
 
 parameter_declaration
@@ -469,12 +469,12 @@ equality_expression_complement
 ;
 
 statement
-	: labeled_statement
-	| compound_statement
-	| expression_statement
-	| selection_statement
-	| iteration_statement
-	| jump_statement
+	: labeled_statement=labeled_statement
+	| compound_statement=compound_statement
+	| expression_statement=expression_statement
+	| selection_statement=selection_statement
+	| iteration_statement=iteration_statement
+	| jump_statement=jump_statement
 	;
 
 
@@ -517,11 +517,11 @@ compound_statement
 ;
 
 block_item_list
-	: block_item block_item_list_linha=block_item_list_linha
+	: block_item=block_item (block_item_list_linha+=block_item_list_linha)?
 ;
 
 block_item_list_linha
-	: {BlockItemListLinhaAction}(block_item=block_item block_item_list_linha=block_item_list_linha)?
+	: block_item=block_item (block_item_list_linha+=block_item_list_linha)?
 ;
 
 block_item

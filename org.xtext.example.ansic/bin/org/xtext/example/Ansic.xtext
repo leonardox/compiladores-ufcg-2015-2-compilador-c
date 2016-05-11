@@ -38,29 +38,29 @@ alignment_specifier
 ;
 
 type_qualifier
-	: 'const'
-	| 'restrict'
-	| 'volatile'
-	| '_Atomic'
+	: namez='const'
+	| namez='restrict'
+	| namez='volatile'
+	| namez='_Atomic'
 ;
 
 type_specifier
-	: 'void'
-	| 'char'
-	| 'short'
-	| 'int'
-	| 'long'
-	| 'float'
-	| 'double'
-	| 'signed'
-	| 'unsigned'
-	| 'bool'
-	| '_Complex'
-	| '_Imaginary'	  	/* non-mandated extension */
+	: type_name_str='void'
+	| type_name_str='char'
+	| type_name_str='short'
+	| type_name_str='int'
+	| type_name_str='long'
+	| type_name_str='float'
+	| type_name_str='double'
+	| type_name_str='signed'
+	| type_name_str='unsigned'
+	| type_name_str='bool'
+	| type_name_str='_Complex'
+	| type_name_str='_Imaginary'	  	/* non-mandated extension */
 	| atomic_type_specifier=atomic_type_specifier
 	| struct_or_union_specifier=struct_or_union_specifier
 	| enum_specifier=enum_specifier
-	| 'typedef'		/* after it has been defined as such */
+	| type_name_str='typedef'		/* after it has been defined as such */
 	;
 
 enum_specifier
@@ -188,12 +188,12 @@ type_qualifier_list_linha
 ;
 
 direct_declarator
-	: identifier=ID direct_declarator_linha=direct_declarator_linha
-	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
+	: identifier=ID (direct_declarator_linha=direct_declarator_linha)?
+	| '(' declarator=declarator ')' (direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_linha
-	:{DirectDeclaratorLinhaAction}(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
+	:direct_declarator_complemento=direct_declarator_complemento (direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_complemento
@@ -212,16 +212,16 @@ direct_declarator_complemento
 ;
 
 parameter_type_list
-	: parameter_list=parameter_list ',' '...'
-	| parameter_list=parameter_list
+	: parameter_list+=parameter_list ',' '...'
+	| parameter_list+=parameter_list
 	;
 
 parameter_list
-	: parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha
+	: parameter_declaration=parameter_declaration (parameter_list_linha+=parameter_list_linha)?
 ;
 
 parameter_list_linha
-	: {ParameterListLinhaAction}(',' parameter_declaration=parameter_declaration parameter_list_linha=parameter_list_linha)?
+	: ',' parameter_declaration=parameter_declaration (parameter_list_linha+=parameter_list_linha)?
 ;
 
 parameter_declaration
@@ -388,7 +388,7 @@ argument_expression_list_linha:
 
 unary_expression
 	: postfix_expression=postfix_expression
-	| '++' unary_expression=unary_expression
+	| {PlusPlus} plus='++' unary_expression=unary_expression
 	| '--' unary_expression=unary_expression
 	| unary_operator=unary_operator cast_expression=cast_expression
 	| 'sizeof' unary_expression=unary_expression
@@ -469,12 +469,12 @@ equality_expression_complement
 ;
 
 statement
-	: labeled_statement
-	| compound_statement
-	| expression_statement
-	| selection_statement
-	| iteration_statement
-	| jump_statement
+	: labeled_statement=labeled_statement
+	| compound_statement=compound_statement
+	| expression_statement=expression_statement
+	| selection_statement=selection_statement
+	| iteration_statement=iteration_statement
+	| jump_statement=jump_statement
 	;
 
 
@@ -500,28 +500,28 @@ iteration_statement
 selection_statement
 	: 'if' '(' expression=expression ')' statement=statement 'else' statement2=statement
 	| 'if' '(' expression=expression ')' statement=statement
-	| 'switch' '(' expression=expression ')' statement=expression
+	| 'switch' '(' expression=expression ')' statement=statement
 ;
 
 
 
 labeled_statement
 	: identifier=ID ':' statement=statement
-	| 'case' constant_expression=conditional_expression ':' statement=statement
+	| 'case' conditional_expression=conditional_expression ':' statement=statement
 	| 'default' ':' statement=statement
 ;
 
 compound_statement
 	: '{' '}'
-	| '{'  block_item_list=block_item_list '}'
+	| '{'  block_item_list+=block_item_list '}'
 ;
 
 block_item_list
-	: block_item block_item_list_linha=block_item_list_linha
+	: block_item=block_item (block_item_list_linha+=block_item_list_linha)?
 ;
 
 block_item_list_linha
-	: {BlockItemListLinhaAction}(block_item=block_item block_item_list_linha=block_item_list_linha)?
+	: block_item=block_item (block_item_list_linha+=block_item_list_linha)?
 ;
 
 block_item
@@ -651,10 +651,15 @@ string_ufcg
 
 
 constant
-	: i_constant=I_CONSTANT		/* includes character_constant */
-	| f_constant=F_CONSTANT
+	: i_constant=INT	/* includes character_constant */
+	| f_constant=FLOAT
 	| enumz='enum'	/* after it has been defined as such */
 	;
+
+
+terminal FLOAT:
+	('0'..'9')+ '.' ('0'..'9')*
+;
 
 terminal O:
 	('0'..'7');
@@ -716,4 +721,3 @@ terminal F_CONSTANT:
 
 terminal STRING_LITERAL:
 	(SP? '"' (('^' | '\'' | '\\' | '\n') | ES)* '"' WS*)+;
-

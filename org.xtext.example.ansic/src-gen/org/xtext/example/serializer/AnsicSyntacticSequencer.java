@@ -27,7 +27,6 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_direct_declarator_complemento___LeftParenthesisKeyword_10_0_RightParenthesisKeyword_10_1___or___LeftSquareBracketKeyword_0_0_RightSquareBracketKeyword_0_1___or___LeftSquareBracketKeyword_1_0_AsteriskKeyword_1_1_RightSquareBracketKeyword_1_2__;
 	protected AbstractElementAlias match_jump_statement___BreakKeyword_2_0_SemicolonKeyword_2_1___or___ContinueKeyword_1_0_SemicolonKeyword_1_1___or___ReturnKeyword_3_0_SemicolonKeyword_3_1__;
 	protected AbstractElementAlias match_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0;
-	protected AbstractElementAlias match_type_specifier_BoolKeyword_9_or_CharKeyword_1_or_DoubleKeyword_6_or_FloatKeyword_5_or_IntKeyword_3_or_LongKeyword_4_or_ShortKeyword_2_or_SignedKeyword_7_or_TypedefKeyword_15_or_UnsignedKeyword_8_or_VoidKeyword_0_or__ComplexKeyword_10_or__ImaginaryKeyword_11;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -37,7 +36,6 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_direct_declarator_complemento___LeftParenthesisKeyword_10_0_RightParenthesisKeyword_10_1___or___LeftSquareBracketKeyword_0_0_RightSquareBracketKeyword_0_1___or___LeftSquareBracketKeyword_1_0_AsteriskKeyword_1_1_RightSquareBracketKeyword_1_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getLeftParenthesisKeyword_10_0()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getRightParenthesisKeyword_10_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getLeftSquareBracketKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getRightSquareBracketKeyword_0_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getAsteriskKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getRightSquareBracketKeyword_1_2())));
 		match_jump_statement___BreakKeyword_2_0_SemicolonKeyword_2_1___or___ContinueKeyword_1_0_SemicolonKeyword_1_1___or___ReturnKeyword_3_0_SemicolonKeyword_3_1__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getBreakKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getSemicolonKeyword_2_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getContinueKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getSemicolonKeyword_1_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getReturnKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getSemicolonKeyword_3_1())));
 		match_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getPostfix_expressionAccess().getLeftParenthesisKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getPostfix_expressionAccess().getLeftParenthesisKeyword_2_0()));
-		match_type_specifier_BoolKeyword_9_or_CharKeyword_1_or_DoubleKeyword_6_or_FloatKeyword_5_or_IntKeyword_3_or_LongKeyword_4_or_ShortKeyword_2_or_SignedKeyword_7_or_TypedefKeyword_15_or_UnsignedKeyword_8_or_VoidKeyword_0_or__ComplexKeyword_10_or__ImaginaryKeyword_11 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getBoolKeyword_9()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getCharKeyword_1()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getDoubleKeyword_6()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getFloatKeyword_5()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getIntKeyword_3()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getLongKeyword_4()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getShortKeyword_2()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getSignedKeyword_7()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getTypedefKeyword_15()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getUnsignedKeyword_8()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().getVoidKeyword_0()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().get_ComplexKeyword_10()), new TokenAlias(false, false, grammarAccess.getType_specifierAccess().get_ImaginaryKeyword_11()));
 	}
 	
 	@Override
@@ -73,8 +71,6 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_jump_statement___BreakKeyword_2_0_SemicolonKeyword_2_1___or___ContinueKeyword_1_0_SemicolonKeyword_1_1___or___ReturnKeyword_3_0_SemicolonKeyword_3_1__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0.equals(syntax))
 				emit_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_type_specifier_BoolKeyword_9_or_CharKeyword_1_or_DoubleKeyword_6_or_FloatKeyword_5_or_IntKeyword_3_or_LongKeyword_4_or_ShortKeyword_2_or_SignedKeyword_7_or_TypedefKeyword_15_or_UnsignedKeyword_8_or_VoidKeyword_0_or__ComplexKeyword_10_or__ImaginaryKeyword_11.equals(syntax))
-				emit_type_specifier_BoolKeyword_9_or_CharKeyword_1_or_DoubleKeyword_6_or_FloatKeyword_5_or_IntKeyword_3_or_LongKeyword_4_or_ShortKeyword_2_or_SignedKeyword_7_or_TypedefKeyword_15_or_UnsignedKeyword_8_or_VoidKeyword_0_or__ComplexKeyword_10_or__ImaginaryKeyword_11(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -131,31 +127,6 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) specifier_qualifier_list=specifier_qualifier_list
 	 */
 	protected void emit_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         'void' | 
-	  *         'char' | 
-	  *         'short' | 
-	  *         'int' | 
-	  *         'long' | 
-	  *         'float' | 
-	  *         'double' | 
-	  *         'signed' | 
-	  *         'unsigned' | 
-	  *         'bool' | 
-	  *         '_Complex' | 
-	  *         '_Imaginary' | 
-	  *         'typedef'
-	  *     )
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_type_specifier_BoolKeyword_9_or_CharKeyword_1_or_DoubleKeyword_6_or_FloatKeyword_5_or_IntKeyword_3_or_LongKeyword_4_or_ShortKeyword_2_or_SignedKeyword_7_or_TypedefKeyword_15_or_UnsignedKeyword_8_or_VoidKeyword_0_or__ComplexKeyword_10_or__ImaginaryKeyword_11(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

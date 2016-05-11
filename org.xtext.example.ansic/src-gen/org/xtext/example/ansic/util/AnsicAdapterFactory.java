@@ -101,6 +101,11 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createalignment_specifierAdapter();
       }
       @Override
+      public Adapter casetype_qualifier(type_qualifier object)
+      {
+        return createtype_qualifierAdapter();
+      }
+      @Override
       public Adapter casetype_specifier(type_specifier object)
       {
         return createtype_specifierAdapter();
@@ -661,16 +666,6 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createTypeQualifierListLinhaAtionAdapter();
       }
       @Override
-      public Adapter caseDirectDeclaratorLinhaAction(DirectDeclaratorLinhaAction object)
-      {
-        return createDirectDeclaratorLinhaActionAdapter();
-      }
-      @Override
-      public Adapter caseParameterListLinhaAction(ParameterListLinhaAction object)
-      {
-        return createParameterListLinhaActionAdapter();
-      }
-      @Override
       public Adapter caseDirectAbstractDeclarratorLinhaAction(DirectAbstractDeclarratorLinhaAction object)
       {
         return createDirectAbstractDeclarratorLinhaActionAdapter();
@@ -746,6 +741,11 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createArgumentExpressionListLinhaActionAdapter();
       }
       @Override
+      public Adapter casePlusPlus(PlusPlus object)
+      {
+        return createPlusPlusAdapter();
+      }
+      @Override
       public Adapter caseMultiplicativeExpressionLinhaAction(MultiplicativeExpressionLinhaAction object)
       {
         return createMultiplicativeExpressionLinhaActionAdapter();
@@ -769,11 +769,6 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
       public Adapter caseEqualityExpressionLinhaAction(EqualityExpressionLinhaAction object)
       {
         return createEqualityExpressionLinhaActionAdapter();
-      }
-      @Override
-      public Adapter caseBlockItemListLinhaAction(BlockItemListLinhaAction object)
-      {
-        return createBlockItemListLinhaActionAdapter();
       }
       @Override
       public Adapter caseAndExpressionLinhaAction(AndExpressionLinhaAction object)
@@ -908,6 +903,21 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createalignment_specifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.type_qualifier <em>type qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.type_qualifier
+   * @generated
+   */
+  public Adapter createtype_qualifierAdapter()
   {
     return null;
   }
@@ -2593,36 +2603,6 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.DirectDeclaratorLinhaAction <em>Direct Declarator Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.DirectDeclaratorLinhaAction
-   * @generated
-   */
-  public Adapter createDirectDeclaratorLinhaActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.ParameterListLinhaAction <em>Parameter List Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.ParameterListLinhaAction
-   * @generated
-   */
-  public Adapter createParameterListLinhaActionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction <em>Direct Abstract Declarrator Linha Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2848,6 +2828,21 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PlusPlus <em>Plus Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.ansic.PlusPlus
+   * @generated
+   */
+  public Adapter createPlusPlusAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction <em>Multiplicative Expression Linha Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2918,21 +2913,6 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEqualityExpressionLinhaActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.BlockItemListLinhaAction <em>Block Item List Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.BlockItemListLinhaAction
-   * @generated
-   */
-  public Adapter createBlockItemListLinhaActionAdapter()
   {
     return null;
   }

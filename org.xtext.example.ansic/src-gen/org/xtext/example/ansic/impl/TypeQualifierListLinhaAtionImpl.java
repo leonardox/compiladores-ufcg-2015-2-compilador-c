@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.TypeQualifierListLinhaAtion;
+import org.xtext.example.ansic.type_qualifier;
 import org.xtext.example.ansic.type_qualifier_list_linha;
 
 /**
@@ -32,24 +33,14 @@ import org.xtext.example.ansic.type_qualifier_list_linha;
 public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaImpl implements TypeQualifierListLinhaAtion
 {
   /**
-   * The default value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' attribute.
+   * The cached value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getType_qualifier()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_QUALIFIER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType_qualifier() <em>Type qualifier</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType_qualifier()
-   * @generated
-   * @ordered
-   */
-  protected String type_qualifier = TYPE_QUALIFIER_EDEFAULT;
+  protected type_qualifier type_qualifier;
 
   /**
    * The cached value of the '{@link #getType_qualifier_list_linha() <em>Type qualifier list linha</em>}' containment reference.
@@ -87,7 +78,7 @@ public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaIm
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType_qualifier()
+  public type_qualifier getType_qualifier()
   {
     return type_qualifier;
   }
@@ -97,12 +88,37 @@ public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaIm
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType_qualifier(String newType_qualifier)
+  public NotificationChain basicSetType_qualifier(type_qualifier newType_qualifier, NotificationChain msgs)
   {
-    String oldType_qualifier = type_qualifier;
+    type_qualifier oldType_qualifier = type_qualifier;
     type_qualifier = newType_qualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER, oldType_qualifier, type_qualifier));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER, oldType_qualifier, newType_qualifier);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType_qualifier(type_qualifier newType_qualifier)
+  {
+    if (newType_qualifier != type_qualifier)
+    {
+      NotificationChain msgs = null;
+      if (type_qualifier != null)
+        msgs = ((InternalEObject)type_qualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER, null, msgs);
+      if (newType_qualifier != null)
+        msgs = ((InternalEObject)newType_qualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER, null, msgs);
+      msgs = basicSetType_qualifier(newType_qualifier, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER, newType_qualifier, newType_qualifier));
   }
 
   /**
@@ -163,6 +179,8 @@ public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaIm
   {
     switch (featureID)
     {
+      case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER:
+        return basicSetType_qualifier(null, msgs);
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA:
         return basicSetType_qualifier_list_linha(null, msgs);
     }
@@ -198,7 +216,7 @@ public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaIm
     switch (featureID)
     {
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER:
-        setType_qualifier((String)newValue);
+        setType_qualifier((type_qualifier)newValue);
         return;
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA:
         setType_qualifier_list_linha((type_qualifier_list_linha)newValue);
@@ -218,7 +236,7 @@ public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaIm
     switch (featureID)
     {
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER:
-        setType_qualifier(TYPE_QUALIFIER_EDEFAULT);
+        setType_qualifier((type_qualifier)null);
         return;
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA:
         setType_qualifier_list_linha((type_qualifier_list_linha)null);
@@ -238,28 +256,11 @@ public class TypeQualifierListLinhaAtionImpl extends type_qualifier_list_linhaIm
     switch (featureID)
     {
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER:
-        return TYPE_QUALIFIER_EDEFAULT == null ? type_qualifier != null : !TYPE_QUALIFIER_EDEFAULT.equals(type_qualifier);
+        return type_qualifier != null;
       case AnsicPackage.TYPE_QUALIFIER_LIST_LINHA_ATION__TYPE_QUALIFIER_LIST_LINHA:
         return type_qualifier_list_linha != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type_qualifier: ");
-    result.append(type_qualifier);
-    result.append(')');
-    return result.toString();
   }
 
 } //TypeQualifierListLinhaAtionImpl

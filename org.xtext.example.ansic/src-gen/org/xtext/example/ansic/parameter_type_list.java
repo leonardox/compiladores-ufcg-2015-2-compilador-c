@@ -3,6 +3,8 @@
  */
 package org.xtext.example.ansic;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,29 +26,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface parameter_type_list extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Parameter list</b></em>' containment reference.
+   * Returns the value of the '<em><b>Parameter list</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.ansic.parameter_list}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameter list</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Parameter list</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameter list</em>' containment reference.
-   * @see #setParameter_list(parameter_list)
+   * @return the value of the '<em>Parameter list</em>' containment reference list.
    * @see org.xtext.example.ansic.AnsicPackage#getparameter_type_list_Parameter_list()
    * @model containment="true"
    * @generated
    */
-  parameter_list getParameter_list();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.ansic.parameter_type_list#getParameter_list <em>Parameter list</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Parameter list</em>' containment reference.
-   * @see #getParameter_list()
-   * @generated
-   */
-  void setParameter_list(parameter_list value);
+  EList<parameter_list> getParameter_list();
 
 } // parameter_type_list

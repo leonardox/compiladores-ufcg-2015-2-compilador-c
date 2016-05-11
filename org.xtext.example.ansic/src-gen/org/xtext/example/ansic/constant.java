@@ -34,12 +34,12 @@ public interface constant extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Iconstant</em>' attribute.
-   * @see #setI_constant(String)
+   * @see #setI_constant(int)
    * @see org.xtext.example.ansic.AnsicPackage#getconstant_I_constant()
    * @model
    * @generated
    */
-  String getI_constant();
+  int getI_constant();
 
   /**
    * Sets the value of the '{@link org.xtext.example.ansic.constant#getI_constant <em>Iconstant</em>}' attribute.
@@ -49,7 +49,7 @@ public interface constant extends EObject
    * @see #getI_constant()
    * @generated
    */
-  void setI_constant(String value);
+  void setI_constant(int value);
 
   /**
    * Returns the value of the '<em><b>Fconstant</b></em>' attribute.

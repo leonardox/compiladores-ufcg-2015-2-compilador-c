@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface selection_statement extends statement
+public interface selection_statement extends EObject
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' containment reference.
@@ -60,12 +60,12 @@ public interface selection_statement extends statement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Statement</em>' containment reference.
-   * @see #setStatement(EObject)
+   * @see #setStatement(statement)
    * @see org.xtext.example.ansic.AnsicPackage#getselection_statement_Statement()
    * @model containment="true"
    * @generated
    */
-  EObject getStatement();
+  statement getStatement();
 
   /**
    * Sets the value of the '{@link org.xtext.example.ansic.selection_statement#getStatement <em>Statement</em>}' containment reference.
@@ -75,7 +75,7 @@ public interface selection_statement extends statement
    * @see #getStatement()
    * @generated
    */
-  void setStatement(EObject value);
+  void setStatement(statement value);
 
   /**
    * Returns the value of the '<em><b>Statement2</b></em>' containment reference.

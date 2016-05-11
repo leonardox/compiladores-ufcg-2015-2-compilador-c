@@ -26,6 +26,7 @@ import org.xtext.example.ansic.type_specifier;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.ansic.impl.type_specifierImpl#getType_name_str <em>Type name str</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.type_specifierImpl#getAtomic_type_specifier <em>Atomic type specifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.type_specifierImpl#getStruct_or_union_specifier <em>Struct or union specifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.type_specifierImpl#getEnum_specifier <em>Enum specifier</em>}</li>
@@ -35,6 +36,26 @@ import org.xtext.example.ansic.type_specifier;
  */
 public class type_specifierImpl extends MinimalEObjectImpl.Container implements type_specifier
 {
+  /**
+   * The default value of the '{@link #getType_name_str() <em>Type name str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType_name_str()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_NAME_STR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType_name_str() <em>Type name str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType_name_str()
+   * @generated
+   * @ordered
+   */
+  protected String type_name_str = TYPE_NAME_STR_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getAtomic_type_specifier() <em>Atomic type specifier</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -84,6 +105,29 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   protected EClass eStaticClass()
   {
     return AnsicPackage.Literals.TYPE_SPECIFIER;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getType_name_str()
+  {
+    return type_name_str;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType_name_str(String newType_name_str)
+  {
+    String oldType_name_str = type_name_str;
+    type_name_str = newType_name_str;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.TYPE_SPECIFIER__TYPE_NAME_STR, oldType_name_str, type_name_str));
   }
 
   /**
@@ -260,6 +304,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
+      case AnsicPackage.TYPE_SPECIFIER__TYPE_NAME_STR:
+        return getType_name_str();
       case AnsicPackage.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER:
         return getAtomic_type_specifier();
       case AnsicPackage.TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER:
@@ -280,6 +326,9 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
+      case AnsicPackage.TYPE_SPECIFIER__TYPE_NAME_STR:
+        setType_name_str((String)newValue);
+        return;
       case AnsicPackage.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER:
         setAtomic_type_specifier((atomic_type_specifier)newValue);
         return;
@@ -303,6 +352,9 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
+      case AnsicPackage.TYPE_SPECIFIER__TYPE_NAME_STR:
+        setType_name_str(TYPE_NAME_STR_EDEFAULT);
+        return;
       case AnsicPackage.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER:
         setAtomic_type_specifier((atomic_type_specifier)null);
         return;
@@ -326,6 +378,8 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
+      case AnsicPackage.TYPE_SPECIFIER__TYPE_NAME_STR:
+        return TYPE_NAME_STR_EDEFAULT == null ? type_name_str != null : !TYPE_NAME_STR_EDEFAULT.equals(type_name_str);
       case AnsicPackage.TYPE_SPECIFIER__ATOMIC_TYPE_SPECIFIER:
         return atomic_type_specifier != null;
       case AnsicPackage.TYPE_SPECIFIER__STRUCT_OR_UNION_SPECIFIER:
@@ -334,6 +388,23 @@ public class type_specifierImpl extends MinimalEObjectImpl.Container implements 
         return enum_specifier != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (type_name_str: ");
+    result.append(type_name_str);
+    result.append(')');
+    return result.toString();
   }
 
 } //type_specifierImpl

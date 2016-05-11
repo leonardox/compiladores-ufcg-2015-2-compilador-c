@@ -10,6 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>direct declarator linha</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_complemento <em>Direct declarator complemento</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_linha <em>Direct declarator linha</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getdirect_declarator_linha()
  * @model
@@ -17,4 +24,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface direct_declarator_linha extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Direct declarator complemento</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Direct declarator complemento</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Direct declarator complemento</em>' containment reference.
+   * @see #setDirect_declarator_complemento(direct_declarator_complemento)
+   * @see org.xtext.example.ansic.AnsicPackage#getdirect_declarator_linha_Direct_declarator_complemento()
+   * @model containment="true"
+   * @generated
+   */
+  direct_declarator_complemento getDirect_declarator_complemento();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_complemento <em>Direct declarator complemento</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Direct declarator complemento</em>' containment reference.
+   * @see #getDirect_declarator_complemento()
+   * @generated
+   */
+  void setDirect_declarator_complemento(direct_declarator_complemento value);
+
+  /**
+   * Returns the value of the '<em><b>Direct declarator linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Direct declarator linha</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Direct declarator linha</em>' containment reference.
+   * @see #setDirect_declarator_linha(direct_declarator_linha)
+   * @see org.xtext.example.ansic.AnsicPackage#getdirect_declarator_linha_Direct_declarator_linha()
+   * @model containment="true"
+   * @generated
+   */
+  direct_declarator_linha getDirect_declarator_linha();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.direct_declarator_linha#getDirect_declarator_linha <em>Direct declarator linha</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Direct declarator linha</em>' containment reference.
+   * @see #getDirect_declarator_linha()
+   * @generated
+   */
+  void setDirect_declarator_linha(direct_declarator_linha value);
+
 } // direct_declarator_linha

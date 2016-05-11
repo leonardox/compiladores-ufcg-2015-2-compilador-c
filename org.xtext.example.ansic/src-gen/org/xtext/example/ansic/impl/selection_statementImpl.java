@@ -7,10 +7,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.expression;
@@ -32,7 +32,7 @@ import org.xtext.example.ansic.statement;
  *
  * @generated
  */
-public class selection_statementImpl extends statementImpl implements selection_statement
+public class selection_statementImpl extends MinimalEObjectImpl.Container implements selection_statement
 {
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
@@ -52,7 +52,7 @@ public class selection_statementImpl extends statementImpl implements selection_
    * @generated
    * @ordered
    */
-  protected EObject statement;
+  protected statement statement;
 
   /**
    * The cached value of the '{@link #getStatement2() <em>Statement2</em>}' containment reference.
@@ -138,7 +138,7 @@ public class selection_statementImpl extends statementImpl implements selection_
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getStatement()
+  public statement getStatement()
   {
     return statement;
   }
@@ -148,9 +148,9 @@ public class selection_statementImpl extends statementImpl implements selection_
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetStatement(EObject newStatement, NotificationChain msgs)
+  public NotificationChain basicSetStatement(statement newStatement, NotificationChain msgs)
   {
-    EObject oldStatement = statement;
+    statement oldStatement = statement;
     statement = newStatement;
     if (eNotificationRequired())
     {
@@ -165,7 +165,7 @@ public class selection_statementImpl extends statementImpl implements selection_
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStatement(EObject newStatement)
+  public void setStatement(statement newStatement)
   {
     if (newStatement != statement)
     {
@@ -283,7 +283,7 @@ public class selection_statementImpl extends statementImpl implements selection_
         setExpression((expression)newValue);
         return;
       case AnsicPackage.SELECTION_STATEMENT__STATEMENT:
-        setStatement((EObject)newValue);
+        setStatement((statement)newValue);
         return;
       case AnsicPackage.SELECTION_STATEMENT__STATEMENT2:
         setStatement2((statement)newValue);
@@ -306,7 +306,7 @@ public class selection_statementImpl extends statementImpl implements selection_
         setExpression((expression)null);
         return;
       case AnsicPackage.SELECTION_STATEMENT__STATEMENT:
-        setStatement((EObject)null);
+        setStatement((statement)null);
         return;
       case AnsicPackage.SELECTION_STATEMENT__STATEMENT2:
         setStatement2((statement)null);

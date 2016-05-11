@@ -10,6 +10,17 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>statement</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.statement#getLabeled_statement <em>Labeled statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.statement#getCompound_statement <em>Compound statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.statement#getExpression_statement <em>Expression statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.statement#getSelection_statement <em>Selection statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.statement#getIteration_statement <em>Iteration statement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.statement#getJump_statement <em>Jump statement</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getstatement()
  * @model
@@ -17,4 +28,160 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface statement extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Labeled statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Labeled statement</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Labeled statement</em>' containment reference.
+   * @see #setLabeled_statement(labeled_statement)
+   * @see org.xtext.example.ansic.AnsicPackage#getstatement_Labeled_statement()
+   * @model containment="true"
+   * @generated
+   */
+  labeled_statement getLabeled_statement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.statement#getLabeled_statement <em>Labeled statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Labeled statement</em>' containment reference.
+   * @see #getLabeled_statement()
+   * @generated
+   */
+  void setLabeled_statement(labeled_statement value);
+
+  /**
+   * Returns the value of the '<em><b>Compound statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Compound statement</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Compound statement</em>' containment reference.
+   * @see #setCompound_statement(compound_statement)
+   * @see org.xtext.example.ansic.AnsicPackage#getstatement_Compound_statement()
+   * @model containment="true"
+   * @generated
+   */
+  compound_statement getCompound_statement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.statement#getCompound_statement <em>Compound statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Compound statement</em>' containment reference.
+   * @see #getCompound_statement()
+   * @generated
+   */
+  void setCompound_statement(compound_statement value);
+
+  /**
+   * Returns the value of the '<em><b>Expression statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Expression statement</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Expression statement</em>' containment reference.
+   * @see #setExpression_statement(expression_statement)
+   * @see org.xtext.example.ansic.AnsicPackage#getstatement_Expression_statement()
+   * @model containment="true"
+   * @generated
+   */
+  expression_statement getExpression_statement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.statement#getExpression_statement <em>Expression statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Expression statement</em>' containment reference.
+   * @see #getExpression_statement()
+   * @generated
+   */
+  void setExpression_statement(expression_statement value);
+
+  /**
+   * Returns the value of the '<em><b>Selection statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Selection statement</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Selection statement</em>' containment reference.
+   * @see #setSelection_statement(selection_statement)
+   * @see org.xtext.example.ansic.AnsicPackage#getstatement_Selection_statement()
+   * @model containment="true"
+   * @generated
+   */
+  selection_statement getSelection_statement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.statement#getSelection_statement <em>Selection statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Selection statement</em>' containment reference.
+   * @see #getSelection_statement()
+   * @generated
+   */
+  void setSelection_statement(selection_statement value);
+
+  /**
+   * Returns the value of the '<em><b>Iteration statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Iteration statement</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Iteration statement</em>' containment reference.
+   * @see #setIteration_statement(iteration_statement)
+   * @see org.xtext.example.ansic.AnsicPackage#getstatement_Iteration_statement()
+   * @model containment="true"
+   * @generated
+   */
+  iteration_statement getIteration_statement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.statement#getIteration_statement <em>Iteration statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Iteration statement</em>' containment reference.
+   * @see #getIteration_statement()
+   * @generated
+   */
+  void setIteration_statement(iteration_statement value);
+
+  /**
+   * Returns the value of the '<em><b>Jump statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Jump statement</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Jump statement</em>' containment reference.
+   * @see #setJump_statement(jump_statement)
+   * @see org.xtext.example.ansic.AnsicPackage#getstatement_Jump_statement()
+   * @model containment="true"
+   * @generated
+   */
+  jump_statement getJump_statement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.statement#getJump_statement <em>Jump statement</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Jump statement</em>' containment reference.
+   * @see #getJump_statement()
+   * @generated
+   */
+  void setJump_statement(jump_statement value);
+
 } // statement

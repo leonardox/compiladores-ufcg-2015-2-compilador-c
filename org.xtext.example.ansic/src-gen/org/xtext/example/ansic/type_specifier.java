@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.ansic.type_specifier#getType_name_str <em>Type name str</em>}</li>
  *   <li>{@link org.xtext.example.ansic.type_specifier#getAtomic_type_specifier <em>Atomic type specifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.type_specifier#getStruct_or_union_specifier <em>Struct or union specifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.type_specifier#getEnum_specifier <em>Enum specifier</em>}</li>
@@ -25,6 +26,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface type_specifier extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Type name str</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type name str</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type name str</em>' attribute.
+   * @see #setType_name_str(String)
+   * @see org.xtext.example.ansic.AnsicPackage#gettype_specifier_Type_name_str()
+   * @model
+   * @generated
+   */
+  String getType_name_str();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.type_specifier#getType_name_str <em>Type name str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type name str</em>' attribute.
+   * @see #getType_name_str()
+   * @generated
+   */
+  void setType_name_str(String value);
+
   /**
    * Returns the value of the '<em><b>Atomic type specifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
