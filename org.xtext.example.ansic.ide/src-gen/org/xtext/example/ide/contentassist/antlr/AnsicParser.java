@@ -221,9 +221,8 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPostfix_expression_complementAccess().getGroup_2(), "rule__Postfix_expression_complement__Group_2__0");
 					put(grammarAccess.getPostfix_expression_complementAccess().getGroup_3(), "rule__Postfix_expression_complement__Group_3__0");
 					put(grammarAccess.getPostfix_expression_complementAccess().getGroup_4(), "rule__Postfix_expression_complement__Group_4__0");
-					put(grammarAccess.getPostfix_expression_complementAccess().getGroup_5(), "rule__Postfix_expression_complement__Group_5__0");
-					put(grammarAccess.getPostfix_expression_complementAccess().getGroup_6(), "rule__Postfix_expression_complement__Group_6__0");
 					put(grammarAccess.getArgument_expression_listAccess().getGroup(), "rule__Argument_expression_list__Group__0");
+					put(grammarAccess.getArgument_expression_listAccess().getGroup_1(), "rule__Argument_expression_list__Group_1__0");
 					put(grammarAccess.getArgument_expression_list_linhaAccess().getGroup(), "rule__Argument_expression_list_linha__Group__0");
 					put(grammarAccess.getArgument_expression_list_linhaAccess().getGroup_1(), "rule__Argument_expression_list_linha__Group_1__0");
 					put(grammarAccess.getUnary_expressionAccess().getGroup_1(), "rule__Unary_expression__Group_1__0");
@@ -530,11 +529,11 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDesignatorAccess().getIdentifierAssignment_1_1(), "rule__Designator__IdentifierAssignment_1_1");
 					put(grammarAccess.getStatic_assert_declarationAccess().getConstant_expressionAssignment_2(), "rule__Static_assert_declaration__Constant_expressionAssignment_2");
 					put(grammarAccess.getPostfix_expression_complementAccess().getExpressionAssignment_0_2(), "rule__Postfix_expression_complement__ExpressionAssignment_0_2");
-					put(grammarAccess.getPostfix_expression_complementAccess().getArgument_expression_listAssignment_2_2(), "rule__Postfix_expression_complement__Argument_expression_listAssignment_2_2");
-					put(grammarAccess.getPostfix_expression_complementAccess().getIdentifierAssignment_3_2(), "rule__Postfix_expression_complement__IdentifierAssignment_3_2");
-					put(grammarAccess.getPostfix_expression_complementAccess().getIdentifierAssignment_4_2(), "rule__Postfix_expression_complement__IdentifierAssignment_4_2");
-					put(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionAssignment_0(), "rule__Argument_expression_list__Assignment_expressionAssignment_0");
-					put(grammarAccess.getArgument_expression_listAccess().getArgument_expression_list_linhaAssignment_1(), "rule__Argument_expression_list__Argument_expression_list_linhaAssignment_1");
+					put(grammarAccess.getPostfix_expression_complementAccess().getArgument_expression_listAssignment_2_1(), "rule__Postfix_expression_complement__Argument_expression_listAssignment_2_1");
+					put(grammarAccess.getPostfix_expression_complementAccess().getIdentifierAssignment_3_1(), "rule__Postfix_expression_complement__IdentifierAssignment_3_1");
+					put(grammarAccess.getPostfix_expression_complementAccess().getIdentifierAssignment_4_1(), "rule__Postfix_expression_complement__IdentifierAssignment_4_1");
+					put(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionsAssignment_0(), "rule__Argument_expression_list__Assignment_expressionsAssignment_0");
+					put(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionsAssignment_1_1(), "rule__Argument_expression_list__Assignment_expressionsAssignment_1_1");
 					put(grammarAccess.getArgument_expression_list_linhaAccess().getAssignment_expressionAssignment_1_1(), "rule__Argument_expression_list_linha__Assignment_expressionAssignment_1_1");
 					put(grammarAccess.getArgument_expression_list_linhaAccess().getArgument_expression_list_linhaAssignment_1_2(), "rule__Argument_expression_list_linha__Argument_expression_list_linhaAssignment_1_2");
 					put(grammarAccess.getUnary_expressionAccess().getPostfix_expressionAssignment_0(), "rule__Unary_expression__Postfix_expressionAssignment_0");

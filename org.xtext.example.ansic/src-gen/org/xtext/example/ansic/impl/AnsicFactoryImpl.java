@@ -192,11 +192,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.DESIGNATOR_LIST_LINHA_ACTION: return createDesignatorListLinhaAction();
       case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION: return createPostfixExpressionComplementExpression();
       case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY: return createPostfixExpressionComplementEmpty();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST: return createPostfixExpressionComplementArgList();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER: return createPostfixExpressionComplementIdentifier();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_POINTER: return createPostfixExpressionComplementPointer();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT: return createPostfixExpressionComplementIncrement();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT: return createPostfixExpressionComplementDecrement();
       case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION: return createArgumentExpressionListLinhaAction();
       case AnsicPackage.PLUS_PLUS: return createPlusPlus();
       case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION: return createMultiplicativeExpressionLinhaAction();
@@ -1612,61 +1607,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
   {
     PostfixExpressionComplementEmptyImpl postfixExpressionComplementEmpty = new PostfixExpressionComplementEmptyImpl();
     return postfixExpressionComplementEmpty;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpressionComplementArgList createPostfixExpressionComplementArgList()
-  {
-    PostfixExpressionComplementArgListImpl postfixExpressionComplementArgList = new PostfixExpressionComplementArgListImpl();
-    return postfixExpressionComplementArgList;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpressionComplementIdentifier createPostfixExpressionComplementIdentifier()
-  {
-    PostfixExpressionComplementIdentifierImpl postfixExpressionComplementIdentifier = new PostfixExpressionComplementIdentifierImpl();
-    return postfixExpressionComplementIdentifier;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpressionComplementPointer createPostfixExpressionComplementPointer()
-  {
-    PostfixExpressionComplementPointerImpl postfixExpressionComplementPointer = new PostfixExpressionComplementPointerImpl();
-    return postfixExpressionComplementPointer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpressionComplementIncrement createPostfixExpressionComplementIncrement()
-  {
-    PostfixExpressionComplementIncrementImpl postfixExpressionComplementIncrement = new PostfixExpressionComplementIncrementImpl();
-    return postfixExpressionComplementIncrement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpressionComplementDecrement createPostfixExpressionComplementDecrement()
-  {
-    PostfixExpressionComplementDecrementImpl postfixExpressionComplementDecrement = new PostfixExpressionComplementDecrementImpl();
-    return postfixExpressionComplementDecrement;
   }
 
   /**

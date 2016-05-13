@@ -370,15 +370,15 @@ static_assert_declaration
 postfix_expression_complement:
 	{PostfixExpressionComplementExpression}'[' expression=expression ']'
 	|{PostfixExpressionComplementEmpty}'(' ')'
-	|{PostfixExpressionComplementArgList}'(' argument_expression_list+=argument_expression_list ')'
-	|{PostfixExpressionComplementIdentifier}'.' identifier=IDz
-	|{PostfixExpressionComplementPointer}'->' identifier=IDz
-	|{PostfixExpressionComplementIncrement}'++'
-	|{PostfixExpressionComplementDecrement}'--'
+	|'(' argument_expression_list+=argument_expression_list ')'
+	|'.' identifier=IDz
+	|'->' identifier=IDz
+	|'++'
+	|'--'
 ;
 
 argument_expression_list
-	: assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha
+	: assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)+
 	;
 
 argument_expression_list_linha:

@@ -1167,51 +1167,6 @@ public interface AnsicFactory extends EFactory
   PostfixExpressionComplementEmpty createPostfixExpressionComplementEmpty();
 
   /**
-   * Returns a new object of class '<em>Postfix Expression Complement Arg List</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Arg List</em>'.
-   * @generated
-   */
-  PostfixExpressionComplementArgList createPostfixExpressionComplementArgList();
-
-  /**
-   * Returns a new object of class '<em>Postfix Expression Complement Identifier</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Identifier</em>'.
-   * @generated
-   */
-  PostfixExpressionComplementIdentifier createPostfixExpressionComplementIdentifier();
-
-  /**
-   * Returns a new object of class '<em>Postfix Expression Complement Pointer</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Pointer</em>'.
-   * @generated
-   */
-  PostfixExpressionComplementPointer createPostfixExpressionComplementPointer();
-
-  /**
-   * Returns a new object of class '<em>Postfix Expression Complement Increment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Increment</em>'.
-   * @generated
-   */
-  PostfixExpressionComplementIncrement createPostfixExpressionComplementIncrement();
-
-  /**
-   * Returns a new object of class '<em>Postfix Expression Complement Decrement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Decrement</em>'.
-   * @generated
-   */
-  PostfixExpressionComplementDecrement createPostfixExpressionComplementDecrement();
-
-  /**
    * Returns a new object of class '<em>Argument Expression List Linha Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

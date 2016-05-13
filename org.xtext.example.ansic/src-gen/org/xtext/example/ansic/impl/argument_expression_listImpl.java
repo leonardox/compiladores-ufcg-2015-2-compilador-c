@@ -3,18 +3,22 @@
  */
 package org.xtext.example.ansic.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.argument_expression_list;
-import org.xtext.example.ansic.argument_expression_list_linha;
 import org.xtext.example.ansic.assignment_expression;
 
 /**
@@ -25,8 +29,7 @@ import org.xtext.example.ansic.assignment_expression;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.impl.argument_expression_listImpl#getAssignment_expression <em>Assignment expression</em>}</li>
- *   <li>{@link org.xtext.example.ansic.impl.argument_expression_listImpl#getArgument_expression_list_linha <em>Argument expression list linha</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.argument_expression_listImpl#getAssignment_expressions <em>Assignment expressions</em>}</li>
  * </ul>
  *
  * @generated
@@ -34,24 +37,14 @@ import org.xtext.example.ansic.assignment_expression;
 public class argument_expression_listImpl extends MinimalEObjectImpl.Container implements argument_expression_list
 {
   /**
-   * The cached value of the '{@link #getAssignment_expression() <em>Assignment expression</em>}' containment reference.
+   * The cached value of the '{@link #getAssignment_expressions() <em>Assignment expressions</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAssignment_expression()
+   * @see #getAssignment_expressions()
    * @generated
    * @ordered
    */
-  protected assignment_expression assignment_expression;
-
-  /**
-   * The cached value of the '{@link #getArgument_expression_list_linha() <em>Argument expression list linha</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getArgument_expression_list_linha()
-   * @generated
-   * @ordered
-   */
-  protected argument_expression_list_linha argument_expression_list_linha;
+  protected EList<assignment_expression> assignment_expressions;
 
   /**
    * <!-- begin-user-doc -->
@@ -79,95 +72,13 @@ public class argument_expression_listImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public assignment_expression getAssignment_expression()
+  public EList<assignment_expression> getAssignment_expressions()
   {
-    return assignment_expression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetAssignment_expression(assignment_expression newAssignment_expression, NotificationChain msgs)
-  {
-    assignment_expression oldAssignment_expression = assignment_expression;
-    assignment_expression = newAssignment_expression;
-    if (eNotificationRequired())
+    if (assignment_expressions == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION, oldAssignment_expression, newAssignment_expression);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      assignment_expressions = new EObjectContainmentEList<assignment_expression>(assignment_expression.class, this, AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAssignment_expression(assignment_expression newAssignment_expression)
-  {
-    if (newAssignment_expression != assignment_expression)
-    {
-      NotificationChain msgs = null;
-      if (assignment_expression != null)
-        msgs = ((InternalEObject)assignment_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION, null, msgs);
-      if (newAssignment_expression != null)
-        msgs = ((InternalEObject)newAssignment_expression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION, null, msgs);
-      msgs = basicSetAssignment_expression(newAssignment_expression, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION, newAssignment_expression, newAssignment_expression));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public argument_expression_list_linha getArgument_expression_list_linha()
-  {
-    return argument_expression_list_linha;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetArgument_expression_list_linha(argument_expression_list_linha newArgument_expression_list_linha, NotificationChain msgs)
-  {
-    argument_expression_list_linha oldArgument_expression_list_linha = argument_expression_list_linha;
-    argument_expression_list_linha = newArgument_expression_list_linha;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA, oldArgument_expression_list_linha, newArgument_expression_list_linha);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setArgument_expression_list_linha(argument_expression_list_linha newArgument_expression_list_linha)
-  {
-    if (newArgument_expression_list_linha != argument_expression_list_linha)
-    {
-      NotificationChain msgs = null;
-      if (argument_expression_list_linha != null)
-        msgs = ((InternalEObject)argument_expression_list_linha).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA, null, msgs);
-      if (newArgument_expression_list_linha != null)
-        msgs = ((InternalEObject)newArgument_expression_list_linha).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA, null, msgs);
-      msgs = basicSetArgument_expression_list_linha(newArgument_expression_list_linha, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA, newArgument_expression_list_linha, newArgument_expression_list_linha));
+    return assignment_expressions;
   }
 
   /**
@@ -180,10 +91,8 @@ public class argument_expression_listImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION:
-        return basicSetAssignment_expression(null, msgs);
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA:
-        return basicSetArgument_expression_list_linha(null, msgs);
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS:
+        return ((InternalEList<?>)getAssignment_expressions()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -198,10 +107,8 @@ public class argument_expression_listImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION:
-        return getAssignment_expression();
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA:
-        return getArgument_expression_list_linha();
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS:
+        return getAssignment_expressions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -211,16 +118,15 @@ public class argument_expression_listImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION:
-        setAssignment_expression((assignment_expression)newValue);
-        return;
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA:
-        setArgument_expression_list_linha((argument_expression_list_linha)newValue);
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS:
+        getAssignment_expressions().clear();
+        getAssignment_expressions().addAll((Collection<? extends assignment_expression>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -236,11 +142,8 @@ public class argument_expression_listImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION:
-        setAssignment_expression((assignment_expression)null);
-        return;
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA:
-        setArgument_expression_list_linha((argument_expression_list_linha)null);
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS:
+        getAssignment_expressions().clear();
         return;
     }
     super.eUnset(featureID);
@@ -256,10 +159,8 @@ public class argument_expression_listImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION:
-        return assignment_expression != null;
-      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA:
-        return argument_expression_list_linha != null;
+      case AnsicPackage.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS:
+        return assignment_expressions != null && !assignment_expressions.isEmpty();
     }
     return super.eIsSet(featureID);
   }

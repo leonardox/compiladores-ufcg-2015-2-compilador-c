@@ -33,13 +33,8 @@ import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
 import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
 import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
 import org.xtext.example.ansic.PlusPlus;
-import org.xtext.example.ansic.PostfixExpressionComplementArgList;
-import org.xtext.example.ansic.PostfixExpressionComplementDecrement;
 import org.xtext.example.ansic.PostfixExpressionComplementEmpty;
 import org.xtext.example.ansic.PostfixExpressionComplementExpression;
-import org.xtext.example.ansic.PostfixExpressionComplementIdentifier;
-import org.xtext.example.ansic.PostfixExpressionComplementIncrement;
-import org.xtext.example.ansic.PostfixExpressionComplementPointer;
 import org.xtext.example.ansic.PostfixExpressionLinhaAction;
 import org.xtext.example.ansic.RelationalExpressionLinhaAction;
 import org.xtext.example.ansic.ShiftExpressionLinhaAction;
@@ -1056,41 +1051,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * @generated
    */
   private EClass postfixExpressionComplementEmptyEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixExpressionComplementArgListEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixExpressionComplementIdentifierEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixExpressionComplementPointerEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixExpressionComplementIncrementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixExpressionComplementDecrementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -3005,6 +2965,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getpostfix_expression_complement_Argument_expression_list()
+  {
+    return (EReference)postfix_expression_complementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getpostfix_expression_complement_Identifier()
+  {
+    return (EAttribute)postfix_expression_complementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getargument_expression_list()
   {
     return argument_expression_listEClass;
@@ -3015,19 +2995,9 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getargument_expression_list_Assignment_expression()
+  public EReference getargument_expression_list_Assignment_expressions()
   {
     return (EReference)argument_expression_listEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getargument_expression_list_Argument_expression_list_linha()
-  {
-    return (EReference)argument_expression_listEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4755,86 +4725,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPostfixExpressionComplementArgList()
-  {
-    return postfixExpressionComplementArgListEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPostfixExpressionComplementArgList_Argument_expression_list()
-  {
-    return (EReference)postfixExpressionComplementArgListEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPostfixExpressionComplementIdentifier()
-  {
-    return postfixExpressionComplementIdentifierEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPostfixExpressionComplementIdentifier_Identifier()
-  {
-    return (EAttribute)postfixExpressionComplementIdentifierEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPostfixExpressionComplementPointer()
-  {
-    return postfixExpressionComplementPointerEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPostfixExpressionComplementPointer_Identifier()
-  {
-    return (EAttribute)postfixExpressionComplementPointerEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPostfixExpressionComplementIncrement()
-  {
-    return postfixExpressionComplementIncrementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPostfixExpressionComplementDecrement()
-  {
-    return postfixExpressionComplementDecrementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getArgumentExpressionListLinhaAction()
   {
     return argumentExpressionListLinhaActionEClass;
@@ -5544,10 +5434,11 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(static_assert_declarationEClass, STATIC_ASSERT_DECLARATION__CONSTANT_EXPRESSION);
 
     postfix_expression_complementEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT);
+    createEReference(postfix_expression_complementEClass, POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+    createEAttribute(postfix_expression_complementEClass, POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER);
 
     argument_expression_listEClass = createEClass(ARGUMENT_EXPRESSION_LIST);
-    createEReference(argument_expression_listEClass, ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION);
-    createEReference(argument_expression_listEClass, ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA);
+    createEReference(argument_expression_listEClass, ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSIONS);
 
     argument_expression_list_linhaEClass = createEClass(ARGUMENT_EXPRESSION_LIST_LINHA);
 
@@ -5786,19 +5677,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
 
     postfixExpressionComplementEmptyEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_EMPTY);
 
-    postfixExpressionComplementArgListEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST);
-    createEReference(postfixExpressionComplementArgListEClass, POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST__ARGUMENT_EXPRESSION_LIST);
-
-    postfixExpressionComplementIdentifierEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER);
-    createEAttribute(postfixExpressionComplementIdentifierEClass, POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER);
-
-    postfixExpressionComplementPointerEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_POINTER);
-    createEAttribute(postfixExpressionComplementPointerEClass, POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER);
-
-    postfixExpressionComplementIncrementEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT);
-
-    postfixExpressionComplementDecrementEClass = createEClass(POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT);
-
     argumentExpressionListLinhaActionEClass = createEClass(ARGUMENT_EXPRESSION_LIST_LINHA_ACTION);
     createEReference(argumentExpressionListLinhaActionEClass, ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ASSIGNMENT_EXPRESSION);
     createEReference(argumentExpressionListLinhaActionEClass, ARGUMENT_EXPRESSION_LIST_LINHA_ACTION__ARGUMENT_EXPRESSION_LIST_LINHA);
@@ -5906,11 +5784,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     designatorListLinhaActionEClass.getESuperTypes().add(this.getdesignator_list_linha());
     postfixExpressionComplementExpressionEClass.getESuperTypes().add(this.getpostfix_expression_complement());
     postfixExpressionComplementEmptyEClass.getESuperTypes().add(this.getpostfix_expression_complement());
-    postfixExpressionComplementArgListEClass.getESuperTypes().add(this.getpostfix_expression_complement());
-    postfixExpressionComplementIdentifierEClass.getESuperTypes().add(this.getpostfix_expression_complement());
-    postfixExpressionComplementPointerEClass.getESuperTypes().add(this.getpostfix_expression_complement());
-    postfixExpressionComplementIncrementEClass.getESuperTypes().add(this.getpostfix_expression_complement());
-    postfixExpressionComplementDecrementEClass.getESuperTypes().add(this.getpostfix_expression_complement());
     argumentExpressionListLinhaActionEClass.getESuperTypes().add(this.getargument_expression_list_linha());
     plusPlusEClass.getESuperTypes().add(this.getunary_expression());
     multiplicativeExpressionLinhaActionEClass.getESuperTypes().add(this.getmultiplicative_expression_linha());
@@ -6162,10 +6035,11 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getstatic_assert_declaration_Constant_expression(), this.getconstant_expression(), null, "constant_expression", null, 0, 1, static_assert_declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(postfix_expression_complementEClass, postfix_expression_complement.class, "postfix_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getpostfix_expression_complement_Argument_expression_list(), this.getargument_expression_list(), null, "argument_expression_list", null, 0, -1, postfix_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getpostfix_expression_complement_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, postfix_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(argument_expression_listEClass, argument_expression_list.class, "argument_expression_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getargument_expression_list_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, argument_expression_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getargument_expression_list_Argument_expression_list_linha(), this.getargument_expression_list_linha(), null, "argument_expression_list_linha", null, 0, 1, argument_expression_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getargument_expression_list_Assignment_expressions(), this.getassignment_expression(), null, "assignment_expressions", null, 0, -1, argument_expression_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(argument_expression_list_linhaEClass, argument_expression_list_linha.class, "argument_expression_list_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -6403,19 +6277,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getPostfixExpressionComplementExpression_Expression(), this.getexpression(), null, "expression", null, 0, 1, PostfixExpressionComplementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(postfixExpressionComplementEmptyEClass, PostfixExpressionComplementEmpty.class, "PostfixExpressionComplementEmpty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(postfixExpressionComplementArgListEClass, PostfixExpressionComplementArgList.class, "PostfixExpressionComplementArgList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPostfixExpressionComplementArgList_Argument_expression_list(), this.getargument_expression_list(), null, "argument_expression_list", null, 0, -1, PostfixExpressionComplementArgList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(postfixExpressionComplementIdentifierEClass, PostfixExpressionComplementIdentifier.class, "PostfixExpressionComplementIdentifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPostfixExpressionComplementIdentifier_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, PostfixExpressionComplementIdentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(postfixExpressionComplementPointerEClass, PostfixExpressionComplementPointer.class, "PostfixExpressionComplementPointer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPostfixExpressionComplementPointer_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, PostfixExpressionComplementPointer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(postfixExpressionComplementIncrementEClass, PostfixExpressionComplementIncrement.class, "PostfixExpressionComplementIncrement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(postfixExpressionComplementDecrementEClass, PostfixExpressionComplementDecrement.class, "PostfixExpressionComplementDecrement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(argumentExpressionListLinhaActionEClass, ArgumentExpressionListLinhaAction.class, "ArgumentExpressionListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getArgumentExpressionListLinhaAction_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, ArgumentExpressionListLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

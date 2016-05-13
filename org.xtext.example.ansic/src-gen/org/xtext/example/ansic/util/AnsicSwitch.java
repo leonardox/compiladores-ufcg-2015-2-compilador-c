@@ -979,46 +979,6 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST:
-      {
-        PostfixExpressionComplementArgList postfixExpressionComplementArgList = (PostfixExpressionComplementArgList)theEObject;
-        T result = casePostfixExpressionComplementArgList(postfixExpressionComplementArgList);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementArgList);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER:
-      {
-        PostfixExpressionComplementIdentifier postfixExpressionComplementIdentifier = (PostfixExpressionComplementIdentifier)theEObject;
-        T result = casePostfixExpressionComplementIdentifier(postfixExpressionComplementIdentifier);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementIdentifier);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_POINTER:
-      {
-        PostfixExpressionComplementPointer postfixExpressionComplementPointer = (PostfixExpressionComplementPointer)theEObject;
-        T result = casePostfixExpressionComplementPointer(postfixExpressionComplementPointer);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementPointer);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT:
-      {
-        PostfixExpressionComplementIncrement postfixExpressionComplementIncrement = (PostfixExpressionComplementIncrement)theEObject;
-        T result = casePostfixExpressionComplementIncrement(postfixExpressionComplementIncrement);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementIncrement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT:
-      {
-        PostfixExpressionComplementDecrement postfixExpressionComplementDecrement = (PostfixExpressionComplementDecrement)theEObject;
-        T result = casePostfixExpressionComplementDecrement(postfixExpressionComplementDecrement);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementDecrement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION:
       {
         ArgumentExpressionListLinhaAction argumentExpressionListLinhaAction = (ArgumentExpressionListLinhaAction)theEObject;
@@ -3171,86 +3131,6 @@ public class AnsicSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePostfixExpressionComplementEmpty(PostfixExpressionComplementEmpty object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Arg List</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Arg List</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixExpressionComplementArgList(PostfixExpressionComplementArgList object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Identifier</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Identifier</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixExpressionComplementIdentifier(PostfixExpressionComplementIdentifier object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Pointer</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Pointer</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixExpressionComplementPointer(PostfixExpressionComplementPointer object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Increment</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Increment</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixExpressionComplementIncrement(PostfixExpressionComplementIncrement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Decrement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Decrement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixExpressionComplementDecrement(PostfixExpressionComplementDecrement object)
   {
     return null;
   }

@@ -711,31 +711,6 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createPostfixExpressionComplementEmptyAdapter();
       }
       @Override
-      public Adapter casePostfixExpressionComplementArgList(PostfixExpressionComplementArgList object)
-      {
-        return createPostfixExpressionComplementArgListAdapter();
-      }
-      @Override
-      public Adapter casePostfixExpressionComplementIdentifier(PostfixExpressionComplementIdentifier object)
-      {
-        return createPostfixExpressionComplementIdentifierAdapter();
-      }
-      @Override
-      public Adapter casePostfixExpressionComplementPointer(PostfixExpressionComplementPointer object)
-      {
-        return createPostfixExpressionComplementPointerAdapter();
-      }
-      @Override
-      public Adapter casePostfixExpressionComplementIncrement(PostfixExpressionComplementIncrement object)
-      {
-        return createPostfixExpressionComplementIncrementAdapter();
-      }
-      @Override
-      public Adapter casePostfixExpressionComplementDecrement(PostfixExpressionComplementDecrement object)
-      {
-        return createPostfixExpressionComplementDecrementAdapter();
-      }
-      @Override
       public Adapter caseArgumentExpressionListLinhaAction(ArgumentExpressionListLinhaAction object)
       {
         return createArgumentExpressionListLinhaActionAdapter();
@@ -2733,81 +2708,6 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPostfixExpressionComplementEmptyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementArgList <em>Postfix Expression Complement Arg List</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementArgList
-   * @generated
-   */
-  public Adapter createPostfixExpressionComplementArgListAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementIdentifier <em>Postfix Expression Complement Identifier</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementIdentifier
-   * @generated
-   */
-  public Adapter createPostfixExpressionComplementIdentifierAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementPointer <em>Postfix Expression Complement Pointer</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementPointer
-   * @generated
-   */
-  public Adapter createPostfixExpressionComplementPointerAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementIncrement <em>Postfix Expression Complement Increment</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementIncrement
-   * @generated
-   */
-  public Adapter createPostfixExpressionComplementIncrementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementDecrement <em>Postfix Expression Complement Decrement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementDecrement
-   * @generated
-   */
-  public Adapter createPostfixExpressionComplementDecrementAdapter()
   {
     return null;
   }

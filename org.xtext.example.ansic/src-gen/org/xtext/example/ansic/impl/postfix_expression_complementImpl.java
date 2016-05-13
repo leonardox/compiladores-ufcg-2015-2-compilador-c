@@ -3,22 +3,72 @@
  */
 package org.xtext.example.ansic.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.argument_expression_list;
 import org.xtext.example.ansic.postfix_expression_complement;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>postfix expression complement</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.impl.postfix_expression_complementImpl#getArgument_expression_list <em>Argument expression list</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.postfix_expression_complementImpl#getIdentifier <em>Identifier</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class postfix_expression_complementImpl extends MinimalEObjectImpl.Container implements postfix_expression_complement
 {
+  /**
+   * The cached value of the '{@link #getArgument_expression_list() <em>Argument expression list</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgument_expression_list()
+   * @generated
+   * @ordered
+   */
+  protected EList<argument_expression_list> argument_expression_list;
+
+  /**
+   * The default value of the '{@link #getIdentifier() <em>Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected static final String IDENTIFIER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getIdentifier() <em>Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected String identifier = IDENTIFIER_EDEFAULT;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -38,6 +88,154 @@ public class postfix_expression_complementImpl extends MinimalEObjectImpl.Contai
   protected EClass eStaticClass()
   {
     return AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<argument_expression_list> getArgument_expression_list()
+  {
+    if (argument_expression_list == null)
+    {
+      argument_expression_list = new EObjectContainmentEList<argument_expression_list>(argument_expression_list.class, this, AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+    }
+    return argument_expression_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getIdentifier()
+  {
+    return identifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIdentifier(String newIdentifier)
+  {
+    String oldIdentifier = identifier;
+    identifier = newIdentifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER, oldIdentifier, identifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST:
+        return ((InternalEList<?>)getArgument_expression_list()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST:
+        return getArgument_expression_list();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER:
+        return getIdentifier();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST:
+        getArgument_expression_list().clear();
+        getArgument_expression_list().addAll((Collection<? extends argument_expression_list>)newValue);
+        return;
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER:
+        setIdentifier((String)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST:
+        getArgument_expression_list().clear();
+        return;
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER:
+        setIdentifier(IDENTIFIER_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST:
+        return argument_expression_list != null && !argument_expression_list.isEmpty();
+      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER:
+        return IDENTIFIER_EDEFAULT == null ? identifier != null : !IDENTIFIER_EDEFAULT.equals(identifier);
+    }
+    return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (identifier: ");
+    result.append(identifier);
+    result.append(')');
+    return result.toString();
   }
 
 } //postfix_expression_complementImpl

@@ -27,6 +27,7 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_direct_declarator_complemento___LeftParenthesisKeyword_10_0_RightParenthesisKeyword_10_1___or___LeftSquareBracketKeyword_0_0_RightSquareBracketKeyword_0_1___or___LeftSquareBracketKeyword_1_0_AsteriskKeyword_1_1_RightSquareBracketKeyword_1_2__;
 	protected AbstractElementAlias match_jump_statement___BreakKeyword_2_0_SemicolonKeyword_2_1___or___ContinueKeyword_1_0_SemicolonKeyword_1_1___or___ReturnKeyword_3_0_SemicolonKeyword_3_1__;
 	protected AbstractElementAlias match_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0;
+	protected AbstractElementAlias match_postfix_expression_complement_HyphenMinusHyphenMinusKeyword_6_or_PlusSignPlusSignKeyword_5;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -36,6 +37,7 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_direct_declarator_complemento___LeftParenthesisKeyword_10_0_RightParenthesisKeyword_10_1___or___LeftSquareBracketKeyword_0_0_RightSquareBracketKeyword_0_1___or___LeftSquareBracketKeyword_1_0_AsteriskKeyword_1_1_RightSquareBracketKeyword_1_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getLeftParenthesisKeyword_10_0()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getRightParenthesisKeyword_10_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getLeftSquareBracketKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getRightSquareBracketKeyword_0_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getAsteriskKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getDirect_declarator_complementoAccess().getRightSquareBracketKeyword_1_2())));
 		match_jump_statement___BreakKeyword_2_0_SemicolonKeyword_2_1___or___ContinueKeyword_1_0_SemicolonKeyword_1_1___or___ReturnKeyword_3_0_SemicolonKeyword_3_1__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getBreakKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getSemicolonKeyword_2_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getContinueKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getSemicolonKeyword_1_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getReturnKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getJump_statementAccess().getSemicolonKeyword_3_1())));
 		match_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getPostfix_expressionAccess().getLeftParenthesisKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getPostfix_expressionAccess().getLeftParenthesisKeyword_2_0()));
+		match_postfix_expression_complement_HyphenMinusHyphenMinusKeyword_6_or_PlusSignPlusSignKeyword_5 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusHyphenMinusKeyword_6()), new TokenAlias(false, false, grammarAccess.getPostfix_expression_complementAccess().getPlusSignPlusSignKeyword_5()));
 	}
 	
 	@Override
@@ -71,6 +73,8 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_jump_statement___BreakKeyword_2_0_SemicolonKeyword_2_1___or___ContinueKeyword_1_0_SemicolonKeyword_1_1___or___ReturnKeyword_3_0_SemicolonKeyword_3_1__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0.equals(syntax))
 				emit_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_postfix_expression_complement_HyphenMinusHyphenMinusKeyword_6_or_PlusSignPlusSignKeyword_5.equals(syntax))
+				emit_postfix_expression_complement_HyphenMinusHyphenMinusKeyword_6_or_PlusSignPlusSignKeyword_5(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -127,6 +131,17 @@ public class AnsicSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) specifier_qualifier_list=specifier_qualifier_list
 	 */
 	protected void emit_postfix_expression_LeftParenthesisKeyword_1_0_or_LeftParenthesisKeyword_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '++' | '--'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) (rule start)
+	 */
+	protected void emit_postfix_expression_complement_HyphenMinusHyphenMinusKeyword_6_or_PlusSignPlusSignKeyword_5(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

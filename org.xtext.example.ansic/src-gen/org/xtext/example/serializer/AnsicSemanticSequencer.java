@@ -36,13 +36,8 @@ import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
 import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
 import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
 import org.xtext.example.ansic.PlusPlus;
-import org.xtext.example.ansic.PostfixExpressionComplementArgList;
-import org.xtext.example.ansic.PostfixExpressionComplementDecrement;
 import org.xtext.example.ansic.PostfixExpressionComplementEmpty;
 import org.xtext.example.ansic.PostfixExpressionComplementExpression;
-import org.xtext.example.ansic.PostfixExpressionComplementIdentifier;
-import org.xtext.example.ansic.PostfixExpressionComplementIncrement;
-import org.xtext.example.ansic.PostfixExpressionComplementPointer;
 import org.xtext.example.ansic.PostfixExpressionLinhaAction;
 import org.xtext.example.ansic.RelationalExpressionLinhaAction;
 import org.xtext.example.ansic.ShiftExpressionLinhaAction;
@@ -113,6 +108,7 @@ import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.pointer;
 import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.postfix_expression_complement;
 import org.xtext.example.ansic.primary_expression;
 import org.xtext.example.ansic.relational_expression;
 import org.xtext.example.ansic.relational_expression_complement;
@@ -213,26 +209,11 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.PLUS_PLUS:
 				sequence_unary_expression(context, (PlusPlus) semanticObject); 
 				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_ARG_LIST:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementArgList) semanticObject); 
-				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_DECREMENT:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementDecrement) semanticObject); 
-				return; 
 			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY:
 				sequence_postfix_expression_complement(context, (PostfixExpressionComplementEmpty) semanticObject); 
 				return; 
 			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION:
 				sequence_postfix_expression_complement(context, (PostfixExpressionComplementExpression) semanticObject); 
-				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementIdentifier) semanticObject); 
-				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_INCREMENT:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementIncrement) semanticObject); 
-				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_POINTER:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementPointer) semanticObject); 
 				return; 
 			case AnsicPackage.POSTFIX_EXPRESSION_LINHA_ACTION:
 				sequence_postfix_expression_linha(context, (PostfixExpressionLinhaAction) semanticObject); 
@@ -444,6 +425,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.POSTFIX_EXPRESSION:
 				sequence_postfix_expression(context, (postfix_expression) semanticObject); 
 				return; 
+			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT:
+				sequence_postfix_expression_complement(context, (postfix_expression_complement) semanticObject); 
+				return; 
 			case AnsicPackage.PRIMARY_EXPRESSION:
 				sequence_primary_expression(context, (primary_expression) semanticObject); 
 				return; 
@@ -645,19 +629,10 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     argument_expression_list returns argument_expression_list
 	 *
 	 * Constraint:
-	 *     (assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha)
+	 *     (assignment_expressions+=assignment_expression assignment_expressions+=assignment_expression+)
 	 */
 	protected void sequence_argument_expression_list(ISerializationContext context, argument_expression_list semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ASSIGNMENT_EXPRESSION));
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.ARGUMENT_EXPRESSION_LIST__ARGUMENT_EXPRESSION_LIST_LINHA));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_0(), semanticObject.getAssignment_expression());
-		feeder.accept(grammarAccess.getArgument_expression_listAccess().getArgument_expression_list_linhaArgument_expression_list_linhaParserRuleCall_1_0(), semanticObject.getArgument_expression_list_linha());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1786,30 +1761,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementArgList
-	 *
-	 * Constraint:
-	 *     argument_expression_list+=argument_expression_list
-	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementArgList semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementDecrement
-	 *
-	 * Constraint:
-	 *     {PostfixExpressionComplementDecrement}
-	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementDecrement semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     postfix_expression_complement returns PostfixExpressionComplementEmpty
 	 *
 	 * Constraint:
@@ -1840,49 +1791,13 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementIdentifier
+	 *     postfix_expression_complement returns postfix_expression_complement
 	 *
 	 * Constraint:
-	 *     identifier=IDz
+	 *     (argument_expression_list+=argument_expression_list | identifier=IDz | identifier=IDz)
 	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementIdentifier semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_IDENTIFIER__IDENTIFIER));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_2_0(), semanticObject.getIdentifier());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementIncrement
-	 *
-	 * Constraint:
-	 *     {PostfixExpressionComplementIncrement}
-	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementIncrement semanticObject) {
+	protected void sequence_postfix_expression_complement(ISerializationContext context, postfix_expression_complement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementPointer
-	 *
-	 * Constraint:
-	 *     identifier=IDz
-	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementPointer semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_POINTER__IDENTIFIER));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_2_0(), semanticObject.getIdentifier());
-		feeder.finish();
 	}
 	
 	

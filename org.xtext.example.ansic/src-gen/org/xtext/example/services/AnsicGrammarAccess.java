@@ -3785,42 +3785,33 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Action cPostfixExpressionComplementArgListAction_2_0 = (Action)cGroup_2.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cArgument_expression_listAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cArgument_expression_listArgument_expression_listParserRuleCall_2_2_0 = (RuleCall)cArgument_expression_listAssignment_2_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cArgument_expression_listAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cArgument_expression_listArgument_expression_listParserRuleCall_2_1_0 = (RuleCall)cArgument_expression_listAssignment_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Action cPostfixExpressionComplementIdentifierAction_3_0 = (Action)cGroup_3.eContents().get(0);
-		private final Keyword cFullStopKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cIdentifierAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cIdentifierIDzTerminalRuleCall_3_2_0 = (RuleCall)cIdentifierAssignment_3_2.eContents().get(0);
+		private final Keyword cFullStopKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cIdentifierAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_3_1_0 = (RuleCall)cIdentifierAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
-		private final Action cPostfixExpressionComplementPointerAction_4_0 = (Action)cGroup_4.eContents().get(0);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cIdentifierAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cIdentifierIDzTerminalRuleCall_4_2_0 = (RuleCall)cIdentifierAssignment_4_2.eContents().get(0);
-		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
-		private final Action cPostfixExpressionComplementIncrementAction_5_0 = (Action)cGroup_5.eContents().get(0);
-		private final Keyword cPlusSignPlusSignKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
-		private final Action cPostfixExpressionComplementDecrementAction_6_0 = (Action)cGroup_6.eContents().get(0);
-		private final Keyword cHyphenMinusHyphenMinusKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cIdentifierAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cIdentifierIDzTerminalRuleCall_4_1_0 = (RuleCall)cIdentifierAssignment_4_1.eContents().get(0);
+		private final Keyword cPlusSignPlusSignKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cHyphenMinusHyphenMinusKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		
 		//postfix_expression_complement:
 		//	{PostfixExpressionComplementExpression} '[' expression=expression ']'
 		//	| {PostfixExpressionComplementEmpty} '(' ')'
-		//	| {PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')'
-		//	| {PostfixExpressionComplementIdentifier} '.' identifier=IDz
-		//	| {PostfixExpressionComplementPointer} '->' identifier=IDz
-		//	| {PostfixExpressionComplementIncrement} '++'
-		//	| {PostfixExpressionComplementDecrement} '--';
+		//	| '(' argument_expression_list+=argument_expression_list ')'
+		//	| '.' identifier=IDz
+		//	| '->' identifier=IDz
+		//	| '++'
+		//	| '--';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{PostfixExpressionComplementExpression} '[' expression=expression ']' | {PostfixExpressionComplementEmpty} '(' ')' |
-		//{PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')' |
-		//{PostfixExpressionComplementIdentifier} '.' identifier=IDz | {PostfixExpressionComplementPointer} '->' identifier=IDz |
-		//{PostfixExpressionComplementIncrement} '++' | {PostfixExpressionComplementDecrement} '--'
+		//{PostfixExpressionComplementExpression} '[' expression=expression ']' | {PostfixExpressionComplementEmpty} '(' ')' | '('
+		//argument_expression_list+=argument_expression_list ')' | '.' identifier=IDz | '->' identifier=IDz | '++' | '--'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//{PostfixExpressionComplementExpression} '[' expression=expression ']'
@@ -3853,98 +3844,85 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 		
-		//{PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')'
+		//'(' argument_expression_list+=argument_expression_list ')'
 		public Group getGroup_2() { return cGroup_2; }
 		
-		//{PostfixExpressionComplementArgList}
-		public Action getPostfixExpressionComplementArgListAction_2_0() { return cPostfixExpressionComplementArgListAction_2_0; }
-		
 		//'('
-		public Keyword getLeftParenthesisKeyword_2_1() { return cLeftParenthesisKeyword_2_1; }
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 		
 		//argument_expression_list+=argument_expression_list
-		public Assignment getArgument_expression_listAssignment_2_2() { return cArgument_expression_listAssignment_2_2; }
+		public Assignment getArgument_expression_listAssignment_2_1() { return cArgument_expression_listAssignment_2_1; }
 		
 		//argument_expression_list
-		public RuleCall getArgument_expression_listArgument_expression_listParserRuleCall_2_2_0() { return cArgument_expression_listArgument_expression_listParserRuleCall_2_2_0; }
+		public RuleCall getArgument_expression_listArgument_expression_listParserRuleCall_2_1_0() { return cArgument_expression_listArgument_expression_listParserRuleCall_2_1_0; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_2_3() { return cRightParenthesisKeyword_2_3; }
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 		
-		//{PostfixExpressionComplementIdentifier} '.' identifier=IDz
+		//'.' identifier=IDz
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//{PostfixExpressionComplementIdentifier}
-		public Action getPostfixExpressionComplementIdentifierAction_3_0() { return cPostfixExpressionComplementIdentifierAction_3_0; }
-		
 		//'.'
-		public Keyword getFullStopKeyword_3_1() { return cFullStopKeyword_3_1; }
+		public Keyword getFullStopKeyword_3_0() { return cFullStopKeyword_3_0; }
 		
 		//identifier=IDz
-		public Assignment getIdentifierAssignment_3_2() { return cIdentifierAssignment_3_2; }
+		public Assignment getIdentifierAssignment_3_1() { return cIdentifierAssignment_3_1; }
 		
 		//IDz
-		public RuleCall getIdentifierIDzTerminalRuleCall_3_2_0() { return cIdentifierIDzTerminalRuleCall_3_2_0; }
+		public RuleCall getIdentifierIDzTerminalRuleCall_3_1_0() { return cIdentifierIDzTerminalRuleCall_3_1_0; }
 		
-		//{PostfixExpressionComplementPointer} '->' identifier=IDz
+		//'->' identifier=IDz
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//{PostfixExpressionComplementPointer}
-		public Action getPostfixExpressionComplementPointerAction_4_0() { return cPostfixExpressionComplementPointerAction_4_0; }
-		
 		//'->'
-		public Keyword getHyphenMinusGreaterThanSignKeyword_4_1() { return cHyphenMinusGreaterThanSignKeyword_4_1; }
+		public Keyword getHyphenMinusGreaterThanSignKeyword_4_0() { return cHyphenMinusGreaterThanSignKeyword_4_0; }
 		
 		//identifier=IDz
-		public Assignment getIdentifierAssignment_4_2() { return cIdentifierAssignment_4_2; }
+		public Assignment getIdentifierAssignment_4_1() { return cIdentifierAssignment_4_1; }
 		
 		//IDz
-		public RuleCall getIdentifierIDzTerminalRuleCall_4_2_0() { return cIdentifierIDzTerminalRuleCall_4_2_0; }
-		
-		//{PostfixExpressionComplementIncrement} '++'
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//{PostfixExpressionComplementIncrement}
-		public Action getPostfixExpressionComplementIncrementAction_5_0() { return cPostfixExpressionComplementIncrementAction_5_0; }
+		public RuleCall getIdentifierIDzTerminalRuleCall_4_1_0() { return cIdentifierIDzTerminalRuleCall_4_1_0; }
 		
 		//'++'
-		public Keyword getPlusSignPlusSignKeyword_5_1() { return cPlusSignPlusSignKeyword_5_1; }
-		
-		//{PostfixExpressionComplementDecrement} '--'
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//{PostfixExpressionComplementDecrement}
-		public Action getPostfixExpressionComplementDecrementAction_6_0() { return cPostfixExpressionComplementDecrementAction_6_0; }
+		public Keyword getPlusSignPlusSignKeyword_5() { return cPlusSignPlusSignKeyword_5; }
 		
 		//'--'
-		public Keyword getHyphenMinusHyphenMinusKeyword_6_1() { return cHyphenMinusHyphenMinusKeyword_6_1; }
+		public Keyword getHyphenMinusHyphenMinusKeyword_6() { return cHyphenMinusHyphenMinusKeyword_6; }
 	}
 	public class Argument_expression_listElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.argument_expression_list");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cAssignment_expressionAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cAssignment_expressionAssignment_expressionParserRuleCall_0_0 = (RuleCall)cAssignment_expressionAssignment_0.eContents().get(0);
-		private final Assignment cArgument_expression_list_linhaAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cArgument_expression_list_linhaArgument_expression_list_linhaParserRuleCall_1_0 = (RuleCall)cArgument_expression_list_linhaAssignment_1.eContents().get(0);
+		private final Assignment cAssignment_expressionsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cAssignment_expressionsAssignment_expressionParserRuleCall_0_0 = (RuleCall)cAssignment_expressionsAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAssignment_expressionsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAssignment_expressionsAssignment_expressionParserRuleCall_1_1_0 = (RuleCall)cAssignment_expressionsAssignment_1_1.eContents().get(0);
 		
 		//argument_expression_list:
-		//	assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha;
+		//	assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha
+		//assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)+
 		public Group getGroup() { return cGroup; }
 		
-		//assignment_expression=assignment_expression
-		public Assignment getAssignment_expressionAssignment_0() { return cAssignment_expressionAssignment_0; }
+		//assignment_expressions+=assignment_expression
+		public Assignment getAssignment_expressionsAssignment_0() { return cAssignment_expressionsAssignment_0; }
 		
 		//assignment_expression
-		public RuleCall getAssignment_expressionAssignment_expressionParserRuleCall_0_0() { return cAssignment_expressionAssignment_expressionParserRuleCall_0_0; }
+		public RuleCall getAssignment_expressionsAssignment_expressionParserRuleCall_0_0() { return cAssignment_expressionsAssignment_expressionParserRuleCall_0_0; }
 		
-		//argument_expression_list_linha=argument_expression_list_linha
-		public Assignment getArgument_expression_list_linhaAssignment_1() { return cArgument_expression_list_linhaAssignment_1; }
+		//(',' assignment_expressions+=assignment_expression)+
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//argument_expression_list_linha
-		public RuleCall getArgument_expression_list_linhaArgument_expression_list_linhaParserRuleCall_1_0() { return cArgument_expression_list_linhaArgument_expression_list_linhaParserRuleCall_1_0; }
+		//','
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		
+		//assignment_expressions+=assignment_expression
+		public Assignment getAssignment_expressionsAssignment_1_1() { return cAssignment_expressionsAssignment_1_1; }
+		
+		//assignment_expression
+		public RuleCall getAssignment_expressionsAssignment_expressionParserRuleCall_1_1_0() { return cAssignment_expressionsAssignment_expressionParserRuleCall_1_1_0; }
 	}
 	public class Argument_expression_list_linhaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.argument_expression_list_linha");
@@ -7510,11 +7488,11 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//postfix_expression_complement:
 	//	{PostfixExpressionComplementExpression} '[' expression=expression ']'
 	//	| {PostfixExpressionComplementEmpty} '(' ')'
-	//	| {PostfixExpressionComplementArgList} '(' argument_expression_list+=argument_expression_list ')'
-	//	| {PostfixExpressionComplementIdentifier} '.' identifier=IDz
-	//	| {PostfixExpressionComplementPointer} '->' identifier=IDz
-	//	| {PostfixExpressionComplementIncrement} '++'
-	//	| {PostfixExpressionComplementDecrement} '--';
+	//	| '(' argument_expression_list+=argument_expression_list ')'
+	//	| '.' identifier=IDz
+	//	| '->' identifier=IDz
+	//	| '++'
+	//	| '--';
 	public Postfix_expression_complementElements getPostfix_expression_complementAccess() {
 		return pPostfix_expression_complement;
 	}
@@ -7524,7 +7502,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//argument_expression_list:
-	//	assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha;
+	//	assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)+;
 	public Argument_expression_listElements getArgument_expression_listAccess() {
 		return pArgument_expression_list;
 	}

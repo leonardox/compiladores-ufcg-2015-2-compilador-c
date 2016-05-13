@@ -6479,26 +6479,16 @@ rulepostfix_expression_complement returns [EObject current=null]
 		)
 		    |
 		(
-			(
-				{
-					/* */
-				}
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementArgListAction_2_0(),
-						$current);
-				}
-			)
-			otherlv_8='('
+			otherlv_7='('
 			{
-				newLeafNode(otherlv_8, grammarAccess.getPostfix_expression_complementAccess().getLeftParenthesisKeyword_2_1());
+				newLeafNode(otherlv_7, grammarAccess.getPostfix_expression_complementAccess().getLeftParenthesisKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getPostfix_expression_complementAccess().getArgument_expression_listArgument_expression_listParserRuleCall_2_2_0());
+						newCompositeNode(grammarAccess.getPostfix_expression_complementAccess().getArgument_expression_listArgument_expression_listParserRuleCall_2_1_0());
 					}
-					lv_argument_expression_list_9_0=ruleargument_expression_list
+					lv_argument_expression_list_8_0=ruleargument_expression_list
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getPostfix_expression_complementRule());
@@ -6506,38 +6496,53 @@ rulepostfix_expression_complement returns [EObject current=null]
 						add(
 							$current,
 							"argument_expression_list",
-							lv_argument_expression_list_9_0,
+							lv_argument_expression_list_8_0,
 							"org.xtext.example.Ansic.argument_expression_list");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_10=')'
+			otherlv_9=')'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getPostfix_expression_complementAccess().getRightParenthesisKeyword_2_3());
+				newLeafNode(otherlv_9, grammarAccess.getPostfix_expression_complementAccess().getRightParenthesisKeyword_2_2());
 			}
 		)
 		    |
 		(
-			(
-				{
-					/* */
-				}
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementIdentifierAction_3_0(),
-						$current);
-				}
-			)
-			otherlv_12='.'
+			otherlv_10='.'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getPostfix_expression_complementAccess().getFullStopKeyword_3_1());
+				newLeafNode(otherlv_10, grammarAccess.getPostfix_expression_complementAccess().getFullStopKeyword_3_0());
+			}
+			(
+				(
+					lv_identifier_11_0=RULE_IDZ
+					{
+						newLeafNode(lv_identifier_11_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPostfix_expression_complementRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"identifier",
+							lv_identifier_11_0,
+							"org.xtext.example.Ansic.IDz");
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_12='->'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusGreaterThanSignKeyword_4_0());
 			}
 			(
 				(
 					lv_identifier_13_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_13_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_2_0());
+						newLeafNode(lv_identifier_13_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_1_0());
 					}
 					{
 						if ($current==null) {
@@ -6553,74 +6558,15 @@ rulepostfix_expression_complement returns [EObject current=null]
 			)
 		)
 		    |
-		(
-			(
-				{
-					/* */
-				}
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementPointerAction_4_0(),
-						$current);
-				}
-			)
-			otherlv_15='->'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusGreaterThanSignKeyword_4_1());
-			}
-			(
-				(
-					lv_identifier_16_0=RULE_IDZ
-					{
-						newLeafNode(lv_identifier_16_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_2_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getPostfix_expression_complementRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"identifier",
-							lv_identifier_16_0,
-							"org.xtext.example.Ansic.IDz");
-					}
-				)
-			)
-		)
+		otherlv_14='++'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getPostfix_expression_complementAccess().getPlusSignPlusSignKeyword_5());
+		}
 		    |
-		(
-			(
-				{
-					/* */
-				}
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementIncrementAction_5_0(),
-						$current);
-				}
-			)
-			otherlv_18='++'
-			{
-				newLeafNode(otherlv_18, grammarAccess.getPostfix_expression_complementAccess().getPlusSignPlusSignKeyword_5_1());
-			}
-		)
-		    |
-		(
-			(
-				{
-					/* */
-				}
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementDecrementAction_6_0(),
-						$current);
-				}
-			)
-			otherlv_20='--'
-			{
-				newLeafNode(otherlv_20, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusHyphenMinusKeyword_6_1());
-			}
-		)
+		otherlv_15='--'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusHyphenMinusKeyword_6());
+		}
 	)
 ;
 
@@ -6643,41 +6589,47 @@ ruleargument_expression_list returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionsAssignment_expressionParserRuleCall_0_0());
 				}
-				lv_assignment_expression_0_0=ruleassignment_expression
+				lv_assignment_expressions_0_0=ruleassignment_expression
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getArgument_expression_listRule());
 					}
-					set(
+					add(
 						$current,
-						"assignment_expression",
-						lv_assignment_expression_0_0,
+						"assignment_expressions",
+						lv_assignment_expressions_0_0,
 						"org.xtext.example.Ansic.assignment_expression");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			otherlv_1=','
+			{
+				newLeafNode(otherlv_1, grammarAccess.getArgument_expression_listAccess().getCommaKeyword_1_0());
+			}
 			(
-				{
-					newCompositeNode(grammarAccess.getArgument_expression_listAccess().getArgument_expression_list_linhaArgument_expression_list_linhaParserRuleCall_1_0());
-				}
-				lv_argument_expression_list_linha_1_0=ruleargument_expression_list_linha
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getArgument_expression_listRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getArgument_expression_listAccess().getAssignment_expressionsAssignment_expressionParserRuleCall_1_1_0());
 					}
-					set(
-						$current,
-						"argument_expression_list_linha",
-						lv_argument_expression_list_linha_1_0,
-						"org.xtext.example.Ansic.argument_expression_list_linha");
-					afterParserOrEnumRuleCall();
-				}
+					lv_assignment_expressions_2_0=ruleassignment_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getArgument_expression_listRule());
+						}
+						add(
+							$current,
+							"assignment_expressions",
+							lv_assignment_expressions_2_0,
+							"org.xtext.example.Ansic.assignment_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
+		)+
 	)
 ;
 
