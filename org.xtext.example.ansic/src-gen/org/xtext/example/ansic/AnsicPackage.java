@@ -2243,13 +2243,22 @@ public interface AnsicPackage extends EPackage
   int POSTFIX_EXPRESSION_COMPLEMENT = 60;
 
   /**
-   * The feature id for the '<em><b>Argument expression list</b></em>' containment reference list.
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST = 0;
+  int POSTFIX_EXPRESSION_COMPLEMENT__EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Argument expression list</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST = 1;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -2258,7 +2267,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER = 1;
+  int POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER = 2;
 
   /**
    * The number of structural features of the '<em>postfix expression complement</em>' class.
@@ -2267,7 +2276,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 2;
+  int POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.argument_expression_listImpl <em>argument expression list</em>}' class.
@@ -4476,32 +4485,14 @@ public interface AnsicPackage extends EPackage
   int DESIGNATOR_LIST_LINHA_ACTION_FEATURE_COUNT = DESIGNATOR_LIST_LINHA_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl <em>Postfix Expression Complement Expression</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostFixEmpryParamsImpl <em>Post Fix Empry Params</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementExpression()
+   * @see org.xtext.example.ansic.impl.PostFixEmpryParamsImpl
+   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostFixEmpryParams()
    * @generated
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION = 125;
-
-  /**
-   * The feature id for the '<em><b>Argument expression list</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__ARGUMENT_EXPRESSION_LIST = POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST;
-
-  /**
-   * The feature id for the '<em><b>Identifier</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__IDENTIFIER = POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER;
+  int POST_FIX_EMPRY_PARAMS = 125;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -4510,35 +4501,16 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+  int POST_FIX_EMPRY_PARAMS__EXPRESSION = POSTFIX_EXPRESSION_COMPLEMENT__EXPRESSION;
 
   /**
-   * The number of structural features of the '<em>Postfix Expression Complement Expression</em>' class.
+   * The feature id for the '<em><b>Argument expression list</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl <em>Postfix Expression Complement Empty</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementEmpty()
-   * @generated
-   */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY = 126;
-
-  /**
-   * The feature id for the '<em><b>Argument expression list</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY__ARGUMENT_EXPRESSION_LIST = POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST;
+  int POST_FIX_EMPRY_PARAMS__ARGUMENT_EXPRESSION_LIST = POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -4547,16 +4519,16 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY__IDENTIFIER = POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER;
+  int POST_FIX_EMPRY_PARAMS__IDENTIFIER = POSTFIX_EXPRESSION_COMPLEMENT__IDENTIFIER;
 
   /**
-   * The number of structural features of the '<em>Postfix Expression Complement Empty</em>' class.
+   * The number of structural features of the '<em>Post Fix Empry Params</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int POSTFIX_EXPRESSION_COMPLEMENT_EMPTY_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
+  int POST_FIX_EMPRY_PARAMS_FEATURE_COUNT = POSTFIX_EXPRESSION_COMPLEMENT_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.ArgumentExpressionListLinhaActionImpl <em>Argument Expression List Linha Action</em>}' class.
@@ -4566,7 +4538,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getArgumentExpressionListLinhaAction()
    * @generated
    */
-  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION = 127;
+  int ARGUMENT_EXPRESSION_LIST_LINHA_ACTION = 126;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -4603,7 +4575,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPlusPlus()
    * @generated
    */
-  int PLUS_PLUS = 128;
+  int PLUS_PLUS = 127;
 
   /**
    * The feature id for the '<em><b>Postfix expression</b></em>' containment reference.
@@ -4676,7 +4648,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getMultiplicativeExpressionLinhaAction()
    * @generated
    */
-  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION = 129;
+  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION = 128;
 
   /**
    * The feature id for the '<em><b>Multiplicative expression complement</b></em>' containment reference.
@@ -4713,7 +4685,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAdditiveExpressionLinhaAction()
    * @generated
    */
-  int ADDITIVE_EXPRESSION_LINHA_ACTION = 130;
+  int ADDITIVE_EXPRESSION_LINHA_ACTION = 129;
 
   /**
    * The feature id for the '<em><b>Additive expression complement</b></em>' containment reference.
@@ -4750,7 +4722,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getShiftExpressionLinhaAction()
    * @generated
    */
-  int SHIFT_EXPRESSION_LINHA_ACTION = 131;
+  int SHIFT_EXPRESSION_LINHA_ACTION = 130;
 
   /**
    * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
@@ -4787,7 +4759,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getRelationalExpressionLinhaAction()
    * @generated
    */
-  int RELATIONAL_EXPRESSION_LINHA_ACTION = 132;
+  int RELATIONAL_EXPRESSION_LINHA_ACTION = 131;
 
   /**
    * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
@@ -4824,7 +4796,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEqualityExpressionLinhaAction()
    * @generated
    */
-  int EQUALITY_EXPRESSION_LINHA_ACTION = 133;
+  int EQUALITY_EXPRESSION_LINHA_ACTION = 132;
 
   /**
    * The feature id for the '<em><b>Equality expression complement</b></em>' containment reference.
@@ -4861,7 +4833,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAndExpressionLinhaAction()
    * @generated
    */
-  int AND_EXPRESSION_LINHA_ACTION = 134;
+  int AND_EXPRESSION_LINHA_ACTION = 133;
 
   /**
    * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
@@ -4898,7 +4870,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExclusiveOrExpressionLinhaAction()
    * @generated
    */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 135;
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 134;
 
   /**
    * The feature id for the '<em><b>And expression</b></em>' containment reference.
@@ -4935,7 +4907,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInclusiveOrExpressionLinhaAction()
    * @generated
    */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 136;
+  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 135;
 
   /**
    * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
@@ -4972,7 +4944,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalAndExpressionLinhaAction()
    * @generated
    */
-  int LOGICAL_AND_EXPRESSION_LINHA_ACTION = 137;
+  int LOGICAL_AND_EXPRESSION_LINHA_ACTION = 136;
 
   /**
    * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
@@ -5009,7 +4981,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalOrExpressionLinhaAction()
    * @generated
    */
-  int LOGICAL_OR_EXPRESSION_LINHA_ACTION = 138;
+  int LOGICAL_OR_EXPRESSION_LINHA_ACTION = 137;
 
   /**
    * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
@@ -5046,7 +5018,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getConditionalExpressionLinhaAcction()
    * @generated
    */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION = 139;
+  int CONDITIONAL_EXPRESSION_LINHA_ACCTION = 138;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -5092,7 +5064,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExpressionLinhaAction()
    * @generated
    */
-  int EXPRESSION_LINHA_ACTION = 140;
+  int EXPRESSION_LINHA_ACTION = 139;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -5129,7 +5101,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitDecclaratorListLinhaAction()
    * @generated
    */
-  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 141;
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 140;
 
   /**
    * The feature id for the '<em><b>Init declarator</b></em>' containment reference.
@@ -7002,10 +6974,21 @@ public interface AnsicPackage extends EPackage
   EClass getpostfix_expression_complement();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.ansic.postfix_expression_complement#getArgument_expression_list <em>Argument expression list</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.postfix_expression_complement#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Argument expression list</em>'.
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.postfix_expression_complement#getExpression()
+   * @see #getpostfix_expression_complement()
+   * @generated
+   */
+  EReference getpostfix_expression_complement_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.postfix_expression_complement#getArgument_expression_list <em>Argument expression list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Argument expression list</em>'.
    * @see org.xtext.example.ansic.postfix_expression_complement#getArgument_expression_list()
    * @see #getpostfix_expression_complement()
    * @generated
@@ -8852,35 +8835,14 @@ public interface AnsicPackage extends EPackage
   EReference getDesignatorListLinhaAction_Designator_list_linha();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementExpression <em>Postfix Expression Complement Expression</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.ansic.PostFixEmpryParams <em>Post Fix Empry Params</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Postfix Expression Complement Expression</em>'.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementExpression
+   * @return the meta object for class '<em>Post Fix Empry Params</em>'.
+   * @see org.xtext.example.ansic.PostFixEmpryParams
    * @generated
    */
-  EClass getPostfixExpressionComplementExpression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.PostfixExpressionComplementExpression#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementExpression#getExpression()
-   * @see #getPostfixExpressionComplementExpression()
-   * @generated
-   */
-  EReference getPostfixExpressionComplementExpression_Expression();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.PostfixExpressionComplementEmpty <em>Postfix Expression Complement Empty</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Postfix Expression Complement Empty</em>'.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementEmpty
-   * @generated
-   */
-  EClass getPostfixExpressionComplementEmpty();
+  EClass getPostFixEmpryParams();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.ArgumentExpressionListLinhaAction <em>Argument Expression List Linha Action</em>}'.
@@ -10892,7 +10854,15 @@ public interface AnsicPackage extends EPackage
     EClass POSTFIX_EXPRESSION_COMPLEMENT = eINSTANCE.getpostfix_expression_complement();
 
     /**
-     * The meta object literal for the '<em><b>Argument expression list</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POSTFIX_EXPRESSION_COMPLEMENT__EXPRESSION = eINSTANCE.getpostfix_expression_complement_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Argument expression list</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -12412,32 +12382,14 @@ public interface AnsicPackage extends EPackage
     EReference DESIGNATOR_LIST_LINHA_ACTION__DESIGNATOR_LIST_LINHA = eINSTANCE.getDesignatorListLinhaAction_Designator_list_linha();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl <em>Postfix Expression Complement Expression</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostFixEmpryParamsImpl <em>Post Fix Empry Params</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementExpressionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementExpression()
+     * @see org.xtext.example.ansic.impl.PostFixEmpryParamsImpl
+     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostFixEmpryParams()
      * @generated
      */
-    EClass POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION = eINSTANCE.getPostfixExpressionComplementExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION = eINSTANCE.getPostfixExpressionComplementExpression_Expression();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl <em>Postfix Expression Complement Empty</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.PostfixExpressionComplementEmptyImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getPostfixExpressionComplementEmpty()
-     * @generated
-     */
-    EClass POSTFIX_EXPRESSION_COMPLEMENT_EMPTY = eINSTANCE.getPostfixExpressionComplementEmpty();
+    EClass POST_FIX_EMPRY_PARAMS = eINSTANCE.getPostFixEmpryParams();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.ArgumentExpressionListLinhaActionImpl <em>Argument Expression List Linha Action</em>}' class.

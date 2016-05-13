@@ -1149,22 +1149,13 @@ public interface AnsicFactory extends EFactory
   DesignatorListLinhaAction createDesignatorListLinhaAction();
 
   /**
-   * Returns a new object of class '<em>Postfix Expression Complement Expression</em>'.
+   * Returns a new object of class '<em>Post Fix Empry Params</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Expression</em>'.
+   * @return a new object of class '<em>Post Fix Empry Params</em>'.
    * @generated
    */
-  PostfixExpressionComplementExpression createPostfixExpressionComplementExpression();
-
-  /**
-   * Returns a new object of class '<em>Postfix Expression Complement Empty</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Expression Complement Empty</em>'.
-   * @generated
-   */
-  PostfixExpressionComplementEmpty createPostfixExpressionComplementEmpty();
+  PostFixEmpryParams createPostFixEmpryParams();
 
   /**
    * Returns a new object of class '<em>Argument Expression List Linha Action</em>'.

@@ -320,8 +320,10 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="postfix_expression_complement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//expression"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="argument_expression_list"
-        upperBound="-1" eType="#//argument_expression_list" containment="true"/>
+        eType="#//argument_expression_list" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="argument_expression_list">
@@ -645,12 +647,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="designator_list_linha"
         eType="#//declaration_list_linha" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PostfixExpressionComplementExpression"
-      eSuperTypes="#//postfix_expression_complement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//expression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PostfixExpressionComplementEmpty" eSuperTypes="#//postfix_expression_complement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PostFixEmpryParams" eSuperTypes="#//postfix_expression_complement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ArgumentExpressionListLinhaAction" eSuperTypes="#//argument_expression_list_linha">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assignment_expression"
         eType="#//assignment_expression" containment="true"/>

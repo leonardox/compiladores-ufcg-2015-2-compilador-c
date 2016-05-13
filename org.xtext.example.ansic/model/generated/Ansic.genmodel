@@ -226,6 +226,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//static_assert_declaration/constant_expression"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//postfix_expression_complement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//postfix_expression_complement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//postfix_expression_complement/argument_expression_list"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//postfix_expression_complement/identifier"/>
     </genClasses>
@@ -451,10 +452,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DesignatorListLinhaAction/designator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//DesignatorListLinhaAction/designator_list_linha"/>
     </genClasses>
-    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//PostfixExpressionComplementExpression/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="Ansic.ecore#//PostfixExpressionComplementEmpty"/>
+    <genClasses ecoreClass="Ansic.ecore#//PostFixEmpryParams"/>
     <genClasses ecoreClass="Ansic.ecore#//ArgumentExpressionListLinhaAction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ArgumentExpressionListLinhaAction/assignment_expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ArgumentExpressionListLinhaAction/argument_expression_list_linha"/>

@@ -963,19 +963,11 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION:
+      case AnsicPackage.POST_FIX_EMPRY_PARAMS:
       {
-        PostfixExpressionComplementExpression postfixExpressionComplementExpression = (PostfixExpressionComplementExpression)theEObject;
-        T result = casePostfixExpressionComplementExpression(postfixExpressionComplementExpression);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY:
-      {
-        PostfixExpressionComplementEmpty postfixExpressionComplementEmpty = (PostfixExpressionComplementEmpty)theEObject;
-        T result = casePostfixExpressionComplementEmpty(postfixExpressionComplementEmpty);
-        if (result == null) result = casepostfix_expression_complement(postfixExpressionComplementEmpty);
+        PostFixEmpryParams postFixEmpryParams = (PostFixEmpryParams)theEObject;
+        T result = casePostFixEmpryParams(postFixEmpryParams);
+        if (result == null) result = casepostfix_expression_complement(postFixEmpryParams);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -3104,33 +3096,17 @@ public class AnsicSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Post Fix Empry Params</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Post Fix Empry Params</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePostfixExpressionComplementExpression(PostfixExpressionComplementExpression object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Expression Complement Empty</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Expression Complement Empty</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixExpressionComplementEmpty(PostfixExpressionComplementEmpty object)
+  public T casePostFixEmpryParams(PostFixEmpryParams object)
   {
     return null;
   }

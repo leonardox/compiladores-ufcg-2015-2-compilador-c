@@ -527,7 +527,7 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDesignatorAccess().getConstant_expressionAssignment_0_1(), "rule__Designator__Constant_expressionAssignment_0_1");
 					put(grammarAccess.getDesignatorAccess().getIdentifierAssignment_1_1(), "rule__Designator__IdentifierAssignment_1_1");
 					put(grammarAccess.getStatic_assert_declarationAccess().getConstant_expressionAssignment_2(), "rule__Static_assert_declaration__Constant_expressionAssignment_2");
-					put(grammarAccess.getPostfix_expression_complementAccess().getExpressionAssignment_0_2(), "rule__Postfix_expression_complement__ExpressionAssignment_0_2");
+					put(grammarAccess.getPostfix_expression_complementAccess().getExpressionAssignment_0_1(), "rule__Postfix_expression_complement__ExpressionAssignment_0_1");
 					put(grammarAccess.getPostfix_expression_complementAccess().getArgument_expression_listAssignment_2_1(), "rule__Postfix_expression_complement__Argument_expression_listAssignment_2_1");
 					put(grammarAccess.getPostfix_expression_complementAccess().getIdentifierAssignment_3_1(), "rule__Postfix_expression_complement__IdentifierAssignment_3_1");
 					put(grammarAccess.getPostfix_expression_complementAccess().getIdentifierAssignment_4_1(), "rule__Postfix_expression_complement__IdentifierAssignment_4_1");

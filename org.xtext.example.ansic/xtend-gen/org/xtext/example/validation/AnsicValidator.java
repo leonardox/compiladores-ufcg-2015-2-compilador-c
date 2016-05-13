@@ -9,19 +9,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.validation.Check;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.ExclusiveRange;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.xtext.example.ansic.AnsicPackage;
+import org.xtext.example.ansic.DomainModel;
+import org.xtext.example.ansic.PostFixEmpryParams;
 import org.xtext.example.ansic.additive_expression;
 import org.xtext.example.ansic.and_expression;
+import org.xtext.example.ansic.argument_expression_list;
 import org.xtext.example.ansic.assignment_expression;
 import org.xtext.example.ansic.cast_expression;
 import org.xtext.example.ansic.compound_statement;
 import org.xtext.example.ansic.conditional_expression;
 import org.xtext.example.ansic.constant;
 import org.xtext.example.ansic.declaration;
-import org.xtext.example.ansic.declaration_list;
 import org.xtext.example.ansic.declaration_specifiers;
 import org.xtext.example.ansic.declarator;
 import org.xtext.example.ansic.direct_declarator;
@@ -43,13 +47,13 @@ import org.xtext.example.ansic.parameter_declaration;
 import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
 import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.postfix_expression_complement;
 import org.xtext.example.ansic.postfix_expression_linha;
 import org.xtext.example.ansic.primary_expression;
 import org.xtext.example.ansic.relational_expression;
 import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.shift_expression;
 import org.xtext.example.ansic.statement;
-import org.xtext.example.ansic.translation_unit;
 import org.xtext.example.ansic.type_specifier;
 import org.xtext.example.ansic.unary_expression;
 import org.xtext.example.validation.AbstractAnsicValidator;
@@ -78,7 +82,8 @@ public class AnsicValidator extends AbstractAnsicValidator {
   private HashMap<String, AnsicValidator.Function> functions = CollectionLiterals.<String, AnsicValidator.Function>newHashMap();
   
   @Check
-  public void restart(final translation_unit t) {
+  public void restart(final DomainModel d) {
+    InputOutput.<String>println("Clearing...");
     this.variables.clear();
     this.functions.clear();
   }
@@ -122,7 +127,6 @@ public class AnsicValidator extends AbstractAnsicValidator {
         _or = _equals_5;
       }
       if (_or) {
-        InputOutput.<String>println("entrou");
         this.error("Esse tipo não recebe valores numéricos", 
           AnsicPackage.Literals.DECLARATION__DECLARATION_SPECIFIERS);
       }
@@ -154,9 +158,62 @@ public class AnsicValidator extends AbstractAnsicValidator {
           _or_2 = _equals_9;
         }
         if (_or_2) {
-          InputOutput.<String>println("entrou");
           this.error("Esse tipo não recebe valores numéricos com ponto flutuante", 
             AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+        }
+      }
+    }
+  }
+  
+  @Check
+  public void checkForEmptyParamFunc(final PostFixEmpryParams call) {
+    EObject _eContainer = call.eContainer();
+    EObject _eContainer_1 = _eContainer.eContainer();
+    postfix_expression parent = ((postfix_expression) _eContainer_1);
+    primary_expression _primary_expression = parent.getPrimary_expression();
+    String name = _primary_expression.getIdentifier();
+    boolean _containsKey = this.functions.containsKey(name);
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error("Função não definida", 
+        null);
+    } else {
+      AnsicValidator.Function func = this.functions.get(name);
+      if ((func.param_number != 0)) {
+        this.error("Numero de parametros incompativeis", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void checkFunctionCall(final postfix_expression_complement call) {
+    EObject _eContainer = call.eContainer();
+    EObject _eContainer_1 = _eContainer.eContainer();
+    postfix_expression parent = ((postfix_expression) _eContainer_1);
+    primary_expression _primary_expression = parent.getPrimary_expression();
+    String name = _primary_expression.getIdentifier();
+    boolean _containsKey = this.functions.containsKey(name);
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error("Função não definida", 
+        null);
+    } else {
+      AnsicValidator.Function func = this.functions.get(name);
+      InputOutput.<String>println((((("Checking params for: " + func.name) + " With: ") + Integer.valueOf(func.param_number)) + " params."));
+      argument_expression_list _argument_expression_list = call.getArgument_expression_list();
+      EList<assignment_expression> _assignment_expressions = _argument_expression_list.getAssignment_expressions();
+      int _size = _assignment_expressions.size();
+      boolean _notEquals = (func.param_number != _size);
+      if (_notEquals) {
+        this.error("Numero de parametros incompativeis", 
+          AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+      } else {
+        argument_expression_list _argument_expression_list_1 = call.getArgument_expression_list();
+        EList<assignment_expression> _assignment_expressions_1 = _argument_expression_list_1.getAssignment_expressions();
+        int _size_1 = _assignment_expressions_1.size();
+        ExclusiveRange _doubleDotLessThan = new ExclusiveRange(0, _size_1, true);
+        for (final Integer i : _doubleDotLessThan) {
         }
       }
     }
@@ -199,6 +256,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
       constant _constant = rightType.getConstant();
       boolean _notEquals = (!Objects.equal(_constant, null));
       if (_notEquals) {
+        this.checkDeclarationWithConstant(leftType, rightType);
       } else {
         boolean _and = false;
         String _identifier = rightType.getIdentifier();
@@ -213,17 +271,37 @@ public class AnsicValidator extends AbstractAnsicValidator {
           _and = _not;
         }
         if (_and) {
-          this.checkDeclarationWithConstant(leftType, rightType);
+          String _identifier_2 = rightType.getIdentifier();
+          boolean _containsKey = this.variables.containsKey(_identifier_2);
+          if (_containsKey) {
+            String _identifier_3 = rightType.getIdentifier();
+            String rType = this.variables.get(_identifier_3);
+            boolean _and_1 = false;
+            boolean _equals = Objects.equal(leftType, "enum");
+            if (!_equals) {
+              _and_1 = false;
+            } else {
+              boolean _notEquals_2 = (!Objects.equal(rightType, "enum"));
+              _and_1 = _notEquals_2;
+            }
+            if (_and_1) {
+              this.error("A variavel deve ser um enum", 
+                AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+            }
+          } else {
+            this.error("Variavel não declarada", 
+              AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+          }
         } else {
           expression _expression = rightType.getExpression();
-          boolean _notEquals_2 = (!Objects.equal(_expression, null));
-          if (_notEquals_2) {
+          boolean _notEquals_3 = (!Objects.equal(_expression, null));
+          if (_notEquals_3) {
           }
         }
       }
       String _xifexpression = null;
-      boolean _containsKey = this.variables.containsKey(id);
-      if (_containsKey) {
+      boolean _containsKey_1 = this.variables.containsKey(id);
+      if (_containsKey_1) {
         this.error("Variável já declarada", null);
       } else {
         _xifexpression = this.variables.put(id, leftType);
@@ -462,9 +540,14 @@ public class AnsicValidator extends AbstractAnsicValidator {
     AnsicValidator.Function _xblockexpression = null;
     {
       AnsicValidator.Function f = new AnsicValidator.Function();
+      InputOutput.<String>println("Creating function...");
       AnsicValidator.Function _xifexpression = null;
-      EList<declaration_list> _declaration_list = func_decl.getDeclaration_list();
-      boolean _equals = Objects.equal(_declaration_list, null);
+      declarator _declarator = func_decl.getDeclarator();
+      direct_declarator _direct_declarator = _declarator.getDirect_declarator();
+      direct_declarator_linha _direct_declarator_linha = _direct_declarator.getDirect_declarator_linha();
+      direct_declarator_complemento _direct_declarator_complemento = _direct_declarator_linha.getDirect_declarator_complemento();
+      parameter_type_list _parameter_type_list = _direct_declarator_complemento.getParameter_type_list();
+      boolean _equals = Objects.equal(_parameter_type_list, null);
       if (_equals) {
         AnsicValidator.Function _xblockexpression_1 = null;
         {
@@ -473,11 +556,13 @@ public class AnsicValidator extends AbstractAnsicValidator {
           type_specifier _type_specifier = _get.getType_specifier();
           String _type_name_str = _type_specifier.getType_name_str();
           f.retType = _type_name_str;
-          declarator _declarator = func_decl.getDeclarator();
-          direct_declarator _direct_declarator = _declarator.getDirect_declarator();
-          String _identifier = _direct_declarator.getIdentifier();
+          declarator _declarator_1 = func_decl.getDeclarator();
+          direct_declarator _direct_declarator_1 = _declarator_1.getDirect_declarator();
+          String _identifier = _direct_declarator_1.getIdentifier();
           String _string = _identifier.toString();
           f.name = _string;
+          f.param_number = 0;
+          InputOutput.<String>println((("Inserting function... " + f.name) + "With 0 params"));
           _xblockexpression_1 = this.functions.put(f.name, f);
         }
         _xifexpression = _xblockexpression_1;
@@ -489,17 +574,17 @@ public class AnsicValidator extends AbstractAnsicValidator {
           type_specifier _type_specifier = _get.getType_specifier();
           String _type_name_str = _type_specifier.getType_name_str();
           f.retType = _type_name_str;
-          declarator _declarator = func_decl.getDeclarator();
-          direct_declarator _direct_declarator = _declarator.getDirect_declarator();
-          String _identifier = _direct_declarator.getIdentifier();
-          String _string = _identifier.toString();
-          f.name = _string;
           declarator _declarator_1 = func_decl.getDeclarator();
           direct_declarator _direct_declarator_1 = _declarator_1.getDirect_declarator();
-          direct_declarator_linha _direct_declarator_linha = _direct_declarator_1.getDirect_declarator_linha();
-          direct_declarator_complemento _direct_declarator_complemento = _direct_declarator_linha.getDirect_declarator_complemento();
-          parameter_type_list _parameter_type_list = _direct_declarator_complemento.getParameter_type_list();
-          parameter_lista _parameter_lista = _parameter_type_list.getParameter_lista();
+          String _identifier = _direct_declarator_1.getIdentifier();
+          String _string = _identifier.toString();
+          f.name = _string;
+          declarator _declarator_2 = func_decl.getDeclarator();
+          direct_declarator _direct_declarator_2 = _declarator_2.getDirect_declarator();
+          direct_declarator_linha _direct_declarator_linha_1 = _direct_declarator_2.getDirect_declarator_linha();
+          direct_declarator_complemento _direct_declarator_complemento_1 = _direct_declarator_linha_1.getDirect_declarator_complemento();
+          parameter_type_list _parameter_type_list_1 = _direct_declarator_complemento_1.getParameter_type_list();
+          parameter_lista _parameter_lista = _parameter_type_list_1.getParameter_lista();
           EList<parameter_declaration> params = _parameter_lista.getParameter_declarations();
           int _size = params.size();
           f.param_number = _size;
@@ -512,6 +597,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
               f.params_types.add(_type_name_str_1);
             }
           }
+          InputOutput.<String>println((((("Inserting function... " + f.name) + "with ") + Integer.valueOf(f.param_number)) + " params"));
           _xblockexpression_2 = this.functions.put(f.name, f);
         }
         _xifexpression = _xblockexpression_2;

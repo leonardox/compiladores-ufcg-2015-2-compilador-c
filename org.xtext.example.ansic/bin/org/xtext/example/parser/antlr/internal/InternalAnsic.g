@@ -6398,26 +6398,16 @@ rulepostfix_expression_complement returns [EObject current=null]
 }:
 	(
 		(
-			(
-				{
-					/* */
-				}
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementExpressionAction_0_0(),
-						$current);
-				}
-			)
-			otherlv_1='['
+			otherlv_0='['
 			{
-				newLeafNode(otherlv_1, grammarAccess.getPostfix_expression_complementAccess().getLeftSquareBracketKeyword_0_1());
+				newLeafNode(otherlv_0, grammarAccess.getPostfix_expression_complementAccess().getLeftSquareBracketKeyword_0_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getPostfix_expression_complementAccess().getExpressionExpressionParserRuleCall_0_2_0());
+						newCompositeNode(grammarAccess.getPostfix_expression_complementAccess().getExpressionExpressionParserRuleCall_0_1_0());
 					}
-					lv_expression_2_0=ruleexpression
+					lv_expression_1_0=ruleexpression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getPostfix_expression_complementRule());
@@ -6425,15 +6415,15 @@ rulepostfix_expression_complement returns [EObject current=null]
 						set(
 							$current,
 							"expression",
-							lv_expression_2_0,
+							lv_expression_1_0,
 							"org.xtext.example.Ansic.expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_3=']'
+			otherlv_2=']'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getPostfix_expression_complementAccess().getRightSquareBracketKeyword_0_3());
+				newLeafNode(otherlv_2, grammarAccess.getPostfix_expression_complementAccess().getRightSquareBracketKeyword_0_2());
 			}
 		)
 		    |
@@ -6444,60 +6434,60 @@ rulepostfix_expression_complement returns [EObject current=null]
 				}
 				{
 					$current = forceCreateModelElement(
-						grammarAccess.getPostfix_expression_complementAccess().getPostfixExpressionComplementEmptyAction_1_0(),
+						grammarAccess.getPostfix_expression_complementAccess().getPostFixEmpryParamsAction_1_0(),
 						$current);
 				}
 			)
-			otherlv_5='('
+			otherlv_4='('
 			{
-				newLeafNode(otherlv_5, grammarAccess.getPostfix_expression_complementAccess().getLeftParenthesisKeyword_1_1());
+				newLeafNode(otherlv_4, grammarAccess.getPostfix_expression_complementAccess().getLeftParenthesisKeyword_1_1());
 			}
-			otherlv_6=')'
+			otherlv_5=')'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getPostfix_expression_complementAccess().getRightParenthesisKeyword_1_2());
+				newLeafNode(otherlv_5, grammarAccess.getPostfix_expression_complementAccess().getRightParenthesisKeyword_1_2());
 			}
 		)
 		    |
 		(
-			otherlv_7='('
+			otherlv_6='('
 			{
-				newLeafNode(otherlv_7, grammarAccess.getPostfix_expression_complementAccess().getLeftParenthesisKeyword_2_0());
+				newLeafNode(otherlv_6, grammarAccess.getPostfix_expression_complementAccess().getLeftParenthesisKeyword_2_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getPostfix_expression_complementAccess().getArgument_expression_listArgument_expression_listParserRuleCall_2_1_0());
 					}
-					lv_argument_expression_list_8_0=ruleargument_expression_list
+					lv_argument_expression_list_7_0=ruleargument_expression_list
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getPostfix_expression_complementRule());
 						}
-						add(
+						set(
 							$current,
 							"argument_expression_list",
-							lv_argument_expression_list_8_0,
+							lv_argument_expression_list_7_0,
 							"org.xtext.example.Ansic.argument_expression_list");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_9=')'
+			otherlv_8=')'
 			{
-				newLeafNode(otherlv_9, grammarAccess.getPostfix_expression_complementAccess().getRightParenthesisKeyword_2_2());
+				newLeafNode(otherlv_8, grammarAccess.getPostfix_expression_complementAccess().getRightParenthesisKeyword_2_2());
 			}
 		)
 		    |
 		(
-			otherlv_10='.'
+			otherlv_9='.'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getPostfix_expression_complementAccess().getFullStopKeyword_3_0());
+				newLeafNode(otherlv_9, grammarAccess.getPostfix_expression_complementAccess().getFullStopKeyword_3_0());
 			}
 			(
 				(
-					lv_identifier_11_0=RULE_IDZ
+					lv_identifier_10_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_11_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_1_0());
+						newLeafNode(lv_identifier_10_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_3_1_0());
 					}
 					{
 						if ($current==null) {
@@ -6506,7 +6496,7 @@ rulepostfix_expression_complement returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"identifier",
-							lv_identifier_11_0,
+							lv_identifier_10_0,
 							"org.xtext.example.Ansic.IDz");
 					}
 				)
@@ -6514,15 +6504,15 @@ rulepostfix_expression_complement returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_12='->'
+			otherlv_11='->'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusGreaterThanSignKeyword_4_0());
+				newLeafNode(otherlv_11, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusGreaterThanSignKeyword_4_0());
 			}
 			(
 				(
-					lv_identifier_13_0=RULE_IDZ
+					lv_identifier_12_0=RULE_IDZ
 					{
-						newLeafNode(lv_identifier_13_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_1_0());
+						newLeafNode(lv_identifier_12_0, grammarAccess.getPostfix_expression_complementAccess().getIdentifierIDzTerminalRuleCall_4_1_0());
 					}
 					{
 						if ($current==null) {
@@ -6531,21 +6521,21 @@ rulepostfix_expression_complement returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"identifier",
-							lv_identifier_13_0,
+							lv_identifier_12_0,
 							"org.xtext.example.Ansic.IDz");
 					}
 				)
 			)
 		)
 		    |
-		otherlv_14='++'
+		otherlv_13='++'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getPostfix_expression_complementAccess().getPlusSignPlusSignKeyword_5());
+			newLeafNode(otherlv_13, grammarAccess.getPostfix_expression_complementAccess().getPlusSignPlusSignKeyword_5());
 		}
 		    |
-		otherlv_15='--'
+		otherlv_14='--'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusHyphenMinusKeyword_6());
+			newLeafNode(otherlv_14, grammarAccess.getPostfix_expression_complementAccess().getHyphenMinusHyphenMinusKeyword_6());
 		}
 	)
 ;
@@ -6609,7 +6599,7 @@ ruleargument_expression_list returns [EObject current=null]
 					}
 				)
 			)
-		)+
+		)*
 	)
 ;
 

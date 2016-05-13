@@ -367,9 +367,9 @@ static_assert_declaration
 
 
 postfix_expression_complement:
-	{PostfixExpressionComplementExpression}'[' expression=expression ']'
-	|{PostfixExpressionComplementEmpty}'(' ')'
-	|'(' argument_expression_list+=argument_expression_list ')'
+	'[' expression=expression ']'
+	|{PostFixEmpryParams}'(' ')'
+	|'(' argument_expression_list=argument_expression_list ')'
 	|'.' identifier=IDz
 	|'->' identifier=IDz
 	|'++'
@@ -377,7 +377,7 @@ postfix_expression_complement:
 ;
 
 argument_expression_list
-	: assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)+
+	: assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)*
 	;
 
 argument_expression_list_linha:

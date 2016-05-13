@@ -190,8 +190,7 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.POSTFIX_EXPRESSION_LINHA_ACTION: return createPostfixExpressionLinhaAction();
       case AnsicPackage.INITIALIZER_LIST_LINHA_ACTION: return createInitializerListLinhaAction();
       case AnsicPackage.DESIGNATOR_LIST_LINHA_ACTION: return createDesignatorListLinhaAction();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION: return createPostfixExpressionComplementExpression();
-      case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY: return createPostfixExpressionComplementEmpty();
+      case AnsicPackage.POST_FIX_EMPRY_PARAMS: return createPostFixEmpryParams();
       case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION: return createArgumentExpressionListLinhaAction();
       case AnsicPackage.PLUS_PLUS: return createPlusPlus();
       case AnsicPackage.MULTIPLICATIVE_EXPRESSION_LINHA_ACTION: return createMultiplicativeExpressionLinhaAction();
@@ -1592,21 +1591,10 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public PostfixExpressionComplementExpression createPostfixExpressionComplementExpression()
+  public PostFixEmpryParams createPostFixEmpryParams()
   {
-    PostfixExpressionComplementExpressionImpl postfixExpressionComplementExpression = new PostfixExpressionComplementExpressionImpl();
-    return postfixExpressionComplementExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixExpressionComplementEmpty createPostfixExpressionComplementEmpty()
-  {
-    PostfixExpressionComplementEmptyImpl postfixExpressionComplementEmpty = new PostfixExpressionComplementEmptyImpl();
-    return postfixExpressionComplementEmpty;
+    PostFixEmpryParamsImpl postFixEmpryParams = new PostFixEmpryParamsImpl();
+    return postFixEmpryParams;
   }
 
   /**

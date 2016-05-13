@@ -5,7 +5,11 @@ package org.xtext.example.validation
 
 import org.eclipse.xtext.validation.Check
 import org.xtext.example.ansic.type_specifier
+import org.xtext.example.ansic.DomainModel
+import org.xtext.example.ansic.postfix_expression
+import org.xtext.example.ansic.postfix_expression_complement
 import org.xtext.example.ansic.translation_unit
+import org.xtext.example.ansic.PostFixEmpryParams
 import org.xtext.example.ansic.enum_specifier
 import org.xtext.example.ansic.declaration
 import org.xtext.example.ansic.primary_expression
@@ -25,7 +29,7 @@ import org.xtext.example.ansic.impl.AnsicFactoryImpl
  */
 class AnsicValidator extends AbstractAnsicValidator {
 	
-    public static val INVALID_NAME = 'invalidName'
+  public static val INVALID_NAME = 'invalidName'
   private var variables = <String,String>newHashMap();
   public static class Function{
   		public int param_number = 0;
@@ -37,7 +41,8 @@ class AnsicValidator extends AbstractAnsicValidator {
 
 
 	@Check
-	def restart(translation_unit t){
+	def restart(DomainModel d){
+		println("Clearing...")
 		variables.clear();
 		functions.clear();
 	}
@@ -45,18 +50,60 @@ class AnsicValidator extends AbstractAnsicValidator {
 	def checkDeclarationWithConstant(String leftType, primary_expression rightType){
 		if(rightType.constant.f_constant == null && rightType.constant.enumz == null && rightType.constant.char == null){
 			if(leftType == "char" || leftType == 'bool' || leftType == 'void'){
-				println("entrou");
 							error('Esse tipo não recebe valores numéricos', 
 					AnsicPackage.Literals.DECLARATION__DECLARATION_SPECIFIERS);
 			}
 		}else if(rightType.constant.f_constant != null){
 			if(leftType == "char" || leftType == 'bool' || leftType == 'void' || leftType == "int"){
-				println("entrou");
 							error('Esse tipo não recebe valores numéricos com ponto flutuante', 
 					AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
 			}
 		}
 	}
+	
+	@Check
+	def checkForEmptyParamFunc(PostFixEmpryParams call){
+		var parent = call.eContainer().eContainer() as postfix_expression;
+		var name = parent.primary_expression.identifier;
+		if(!functions.containsKey(name)){
+			error("Função não definida",
+				null
+			)
+		}else{
+			var func = functions.get(name);
+			if(func.param_number != 0){
+				error("Numero de parametros incompativeis",
+					null
+				)
+			}
+		}
+	}
+	
+	@Check
+	def checkFunctionCall(postfix_expression_complement call){
+		var parent = call.eContainer().eContainer() as postfix_expression;
+		var name = parent.primary_expression.identifier;
+		if(!functions.containsKey(name)){
+			error("Função não definida",
+				null
+			)
+		}else{
+			var func = functions.get(name);
+			println("Checking params for: " + func.name + " With: " + func.param_number + " params.")
+			if(func.param_number != call.argument_expression_list.assignment_expressions.size()){
+				error("Numero de parametros incompativeis",
+					AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
+				)
+			}else{
+				for(i : 0 ..<call.argument_expression_list.assignment_expressions.size()){
+					//Validating params
+					//call.argument_expression_list.get(i)
+				}
+			}
+		}
+		
+	}
+	
 	@Check
 	def checkDeclarationTypes(declaration decl){
 		var leftType =  decl.declaration_specifiers.get(0).type_specifier.type_name_str;
@@ -68,8 +115,20 @@ class AnsicValidator extends AbstractAnsicValidator {
 		if(rightType.constant != null){
 			//Validar quando declaração é com uma constant
 			//int a = 3;
+			checkDeclarationWithConstant(leftType, rightType);
 		}else if (rightType.identifier != null && !rightType.identifier.trim.isEmpty()){
-			checkDeclarationWithConstant(leftType, rightType)
+			if(variables.containsKey(rightType.identifier)){
+				var rType = variables.get(rightType.identifier);
+				if(leftType == 'enum' && rightType!='enum'){
+					error("A variavel deve ser um enum",
+						AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST
+					)
+				}				
+			}else{
+				error("Variavel não declarada",
+					AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST
+				)
+			}
 			//Validar quando é declaração que inicia com um id
 			// int a = b;
 		}else if (rightType.expression != null){
@@ -195,9 +254,12 @@ class AnsicValidator extends AbstractAnsicValidator {
 	def checkFunctionDefinition(function_definition func_decl){
 		//Não tem parametros
 		var f = new Function();
-		if(func_decl.declaration_list == null){
+		println("Creating function...");
+		if(func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento.parameter_type_list == null){
 			f.retType = func_decl.declaration_specifiers.get(0).type_specifier.type_name_str;
 			f.name = func_decl.declarator.direct_declarator.identifier.toString();
+			f.param_number = 0;
+			println("Inserting function... " + f.name + "With 0 params");
 			functions.put(f.name, f);
 		}else{
 			f.retType = func_decl.declaration_specifiers.get(0).type_specifier.type_name_str;
@@ -208,6 +270,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 				var decl = params.get(i);
 				f.params_types.add(decl.declaration_specifiers.type_specifier.type_name_str);
 			}
+			println("Inserting function... " + f.name + "with " + f.param_number + " params");
 			functions.put(f.name, f);
 			//println( "size:" + func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento.parameter_type_list.parameter_list.get(0));
 		}

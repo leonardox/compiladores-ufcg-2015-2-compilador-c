@@ -36,8 +36,7 @@ import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
 import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
 import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
 import org.xtext.example.ansic.PlusPlus;
-import org.xtext.example.ansic.PostfixExpressionComplementEmpty;
-import org.xtext.example.ansic.PostfixExpressionComplementExpression;
+import org.xtext.example.ansic.PostFixEmpryParams;
 import org.xtext.example.ansic.PostfixExpressionLinhaAction;
 import org.xtext.example.ansic.RelationalExpressionLinhaAction;
 import org.xtext.example.ansic.ShiftExpressionLinhaAction;
@@ -209,11 +208,8 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case AnsicPackage.PLUS_PLUS:
 				sequence_unary_expression(context, (PlusPlus) semanticObject); 
 				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EMPTY:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementEmpty) semanticObject); 
-				return; 
-			case AnsicPackage.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION:
-				sequence_postfix_expression_complement(context, (PostfixExpressionComplementExpression) semanticObject); 
+			case AnsicPackage.POST_FIX_EMPRY_PARAMS:
+				sequence_postfix_expression_complement(context, (PostFixEmpryParams) semanticObject); 
 				return; 
 			case AnsicPackage.POSTFIX_EXPRESSION_LINHA_ACTION:
 				sequence_postfix_expression_linha(context, (PostfixExpressionLinhaAction) semanticObject); 
@@ -629,7 +625,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     argument_expression_list returns argument_expression_list
 	 *
 	 * Constraint:
-	 *     (assignment_expressions+=assignment_expression assignment_expressions+=assignment_expression+)
+	 *     (assignment_expressions+=assignment_expression assignment_expressions+=assignment_expression*)
 	 */
 	protected void sequence_argument_expression_list(ISerializationContext context, argument_expression_list semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1761,31 +1757,13 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementEmpty
+	 *     postfix_expression_complement returns PostFixEmpryParams
 	 *
 	 * Constraint:
-	 *     {PostfixExpressionComplementEmpty}
+	 *     {PostFixEmpryParams}
 	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementEmpty semanticObject) {
+	protected void sequence_postfix_expression_complement(ISerializationContext context, PostFixEmpryParams semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     postfix_expression_complement returns PostfixExpressionComplementExpression
-	 *
-	 * Constraint:
-	 *     expression=expression
-	 */
-	protected void sequence_postfix_expression_complement(ISerializationContext context, PostfixExpressionComplementExpression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT_EXPRESSION__EXPRESSION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPostfix_expression_complementAccess().getExpressionExpressionParserRuleCall_0_2_0(), semanticObject.getExpression());
-		feeder.finish();
 	}
 	
 	
@@ -1794,7 +1772,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     postfix_expression_complement returns postfix_expression_complement
 	 *
 	 * Constraint:
-	 *     (argument_expression_list+=argument_expression_list | identifier=IDz | identifier=IDz)
+	 *     (expression=expression | argument_expression_list=argument_expression_list | identifier=IDz | identifier=IDz)
 	 */
 	protected void sequence_postfix_expression_complement(ISerializationContext context, postfix_expression_complement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -701,14 +701,9 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
         return createDesignatorListLinhaActionAdapter();
       }
       @Override
-      public Adapter casePostfixExpressionComplementExpression(PostfixExpressionComplementExpression object)
+      public Adapter casePostFixEmpryParams(PostFixEmpryParams object)
       {
-        return createPostfixExpressionComplementExpressionAdapter();
-      }
-      @Override
-      public Adapter casePostfixExpressionComplementEmpty(PostfixExpressionComplementEmpty object)
-      {
-        return createPostfixExpressionComplementEmptyAdapter();
+        return createPostFixEmpryParamsAdapter();
       }
       @Override
       public Adapter caseArgumentExpressionListLinhaAction(ArgumentExpressionListLinhaAction object)
@@ -2683,31 +2678,16 @@ public class AnsicAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementExpression <em>Postfix Expression Complement Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostFixEmpryParams <em>Post Fix Empry Params</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementExpression
+   * @see org.xtext.example.ansic.PostFixEmpryParams
    * @generated
    */
-  public Adapter createPostfixExpressionComplementExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.ansic.PostfixExpressionComplementEmpty <em>Postfix Expression Complement Empty</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.ansic.PostfixExpressionComplementEmpty
-   * @generated
-   */
-  public Adapter createPostfixExpressionComplementEmptyAdapter()
+  public Adapter createPostFixEmpryParamsAdapter()
   {
     return null;
   }
