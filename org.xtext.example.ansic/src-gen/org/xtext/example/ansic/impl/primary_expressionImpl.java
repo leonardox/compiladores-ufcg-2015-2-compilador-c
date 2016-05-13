@@ -17,7 +17,6 @@ import org.xtext.example.ansic.constant;
 import org.xtext.example.ansic.expression;
 import org.xtext.example.ansic.generic_selection;
 import org.xtext.example.ansic.primary_expression;
-import org.xtext.example.ansic.string_ufcg;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,6 @@ import org.xtext.example.ansic.string_ufcg;
  * <ul>
  *   <li>{@link org.xtext.example.ansic.impl.primary_expressionImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.primary_expressionImpl#getConstant <em>Constant</em>}</li>
- *   <li>{@link org.xtext.example.ansic.impl.primary_expressionImpl#getString <em>String</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.primary_expressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.primary_expressionImpl#getGeneric_selection <em>Generic selection</em>}</li>
  * </ul>
@@ -67,16 +65,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
    * @ordered
    */
   protected constant constant;
-
-  /**
-   * The cached value of the '{@link #getString() <em>String</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getString()
-   * @generated
-   * @ordered
-   */
-  protected string_ufcg string;
 
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
@@ -195,54 +183,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public string_ufcg getString()
-  {
-    return string;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetString(string_ufcg newString, NotificationChain msgs)
-  {
-    string_ufcg oldString = string;
-    string = newString;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.PRIMARY_EXPRESSION__STRING, oldString, newString);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setString(string_ufcg newString)
-  {
-    if (newString != string)
-    {
-      NotificationChain msgs = null;
-      if (string != null)
-        msgs = ((InternalEObject)string).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.PRIMARY_EXPRESSION__STRING, null, msgs);
-      if (newString != null)
-        msgs = ((InternalEObject)newString).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.PRIMARY_EXPRESSION__STRING, null, msgs);
-      msgs = basicSetString(newString, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.PRIMARY_EXPRESSION__STRING, newString, newString));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public expression getExpression()
   {
     return expression;
@@ -346,8 +286,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
     {
       case AnsicPackage.PRIMARY_EXPRESSION__CONSTANT:
         return basicSetConstant(null, msgs);
-      case AnsicPackage.PRIMARY_EXPRESSION__STRING:
-        return basicSetString(null, msgs);
       case AnsicPackage.PRIMARY_EXPRESSION__EXPRESSION:
         return basicSetExpression(null, msgs);
       case AnsicPackage.PRIMARY_EXPRESSION__GENERIC_SELECTION:
@@ -370,8 +308,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
         return getIdentifier();
       case AnsicPackage.PRIMARY_EXPRESSION__CONSTANT:
         return getConstant();
-      case AnsicPackage.PRIMARY_EXPRESSION__STRING:
-        return getString();
       case AnsicPackage.PRIMARY_EXPRESSION__EXPRESSION:
         return getExpression();
       case AnsicPackage.PRIMARY_EXPRESSION__GENERIC_SELECTION:
@@ -395,9 +331,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
         return;
       case AnsicPackage.PRIMARY_EXPRESSION__CONSTANT:
         setConstant((constant)newValue);
-        return;
-      case AnsicPackage.PRIMARY_EXPRESSION__STRING:
-        setString((string_ufcg)newValue);
         return;
       case AnsicPackage.PRIMARY_EXPRESSION__EXPRESSION:
         setExpression((expression)newValue);
@@ -425,9 +358,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
       case AnsicPackage.PRIMARY_EXPRESSION__CONSTANT:
         setConstant((constant)null);
         return;
-      case AnsicPackage.PRIMARY_EXPRESSION__STRING:
-        setString((string_ufcg)null);
-        return;
       case AnsicPackage.PRIMARY_EXPRESSION__EXPRESSION:
         setExpression((expression)null);
         return;
@@ -452,8 +382,6 @@ public class primary_expressionImpl extends MinimalEObjectImpl.Container impleme
         return IDENTIFIER_EDEFAULT == null ? identifier != null : !IDENTIFIER_EDEFAULT.equals(identifier);
       case AnsicPackage.PRIMARY_EXPRESSION__CONSTANT:
         return constant != null;
-      case AnsicPackage.PRIMARY_EXPRESSION__STRING:
-        return string != null;
       case AnsicPackage.PRIMARY_EXPRESSION__EXPRESSION:
         return expression != null;
       case AnsicPackage.PRIMARY_EXPRESSION__GENERIC_SELECTION:

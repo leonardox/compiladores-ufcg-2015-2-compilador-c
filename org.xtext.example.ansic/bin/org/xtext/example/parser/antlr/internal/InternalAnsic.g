@@ -5200,36 +5200,16 @@ ruleprimary_expression returns [EObject current=null]
 		)
 		    |
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getPrimary_expressionAccess().getStringString_ufcgParserRuleCall_2_0());
-				}
-				lv_string_2_0=rulestring_ufcg
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getPrimary_expressionRule());
-					}
-					set(
-						$current,
-						"string",
-						lv_string_2_0,
-						"org.xtext.example.Ansic.string_ufcg");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			otherlv_3='('
+			otherlv_2='('
 			{
-				newLeafNode(otherlv_3, grammarAccess.getPrimary_expressionAccess().getLeftParenthesisKeyword_3_0());
+				newLeafNode(otherlv_2, grammarAccess.getPrimary_expressionAccess().getLeftParenthesisKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getPrimary_expressionAccess().getExpressionExpressionParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getPrimary_expressionAccess().getExpressionExpressionParserRuleCall_2_1_0());
 					}
-					lv_expression_4_0=ruleexpression
+					lv_expression_3_0=ruleexpression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getPrimary_expressionRule());
@@ -5237,24 +5217,24 @@ ruleprimary_expression returns [EObject current=null]
 						set(
 							$current,
 							"expression",
-							lv_expression_4_0,
+							lv_expression_3_0,
 							"org.xtext.example.Ansic.expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_5=')'
+			otherlv_4=')'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getPrimary_expressionAccess().getRightParenthesisKeyword_3_2());
+				newLeafNode(otherlv_4, grammarAccess.getPrimary_expressionAccess().getRightParenthesisKeyword_2_2());
 			}
 		)
 		    |
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPrimary_expressionAccess().getGeneric_selectionGeneric_selectionParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getPrimary_expressionAccess().getGeneric_selectionGeneric_selectionParserRuleCall_3_0());
 				}
-				lv_generic_selection_6_0=rulegeneric_selection
+				lv_generic_selection_5_0=rulegeneric_selection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPrimary_expressionRule());
@@ -5262,7 +5242,7 @@ ruleprimary_expression returns [EObject current=null]
 					set(
 						$current,
 						"generic_selection",
-						lv_generic_selection_6_0,
+						lv_generic_selection_5_0,
 						"org.xtext.example.Ansic.generic_selection");
 					afterParserOrEnumRuleCall();
 				}
@@ -10798,58 +10778,6 @@ ruleinit_declarator returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulestring_ufcg
-entryRulestring_ufcg returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getString_ufcgRule()); }
-	iv_rulestring_ufcg=rulestring_ufcg
-	{ $current=$iv_rulestring_ufcg.current; }
-	EOF;
-
-// Rule string_ufcg
-rulestring_ufcg returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_string_literal_0_0=RULE_STRING_LITERAL
-				{
-					newLeafNode(lv_string_literal_0_0, grammarAccess.getString_ufcgAccess().getString_literalSTRING_LITERALTerminalRuleCall_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getString_ufcgRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"string_literal",
-						lv_string_literal_0_0,
-						"org.xtext.example.Ansic.STRING_LITERAL");
-				}
-			)
-		)
-		    |
-		(
-			(
-				lv___func___1_0='__func__'
-				{
-					newLeafNode(lv___func___1_0, grammarAccess.getString_ufcgAccess().get__func____func__Keyword_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getString_ufcgRule());
-					}
-					setWithLastConsumed($current, "__func__", lv___func___1_0, "__func__");
-				}
-			)
-		)
-	)
-;
-
 // Entry rule entryRuleconstant
 entryRuleconstant returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getConstantRule()); }
@@ -10906,15 +10834,34 @@ ruleconstant returns [EObject current=null]
 		    |
 		(
 			(
-				lv_enumz_2_0='enum'
+				lv_char_2_0=RULE_CHAR
 				{
-					newLeafNode(lv_enumz_2_0, grammarAccess.getConstantAccess().getEnumzEnumKeyword_2_0());
+					newLeafNode(lv_char_2_0, grammarAccess.getConstantAccess().getCharCHARTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getConstantRule());
 					}
-					setWithLastConsumed($current, "enumz", lv_enumz_2_0, "enum");
+					setWithLastConsumed(
+						$current,
+						"char",
+						lv_char_2_0,
+						"org.xtext.example.Ansic.CHAR");
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_enumz_3_0='enum'
+				{
+					newLeafNode(lv_enumz_3_0, grammarAccess.getConstantAccess().getEnumzEnumKeyword_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getConstantRule());
+					}
+					setWithLastConsumed($current, "enumz", lv_enumz_3_0, "enum");
 				}
 			)
 		)
@@ -10922,6 +10869,8 @@ ruleconstant returns [EObject current=null]
 ;
 
 RULE_IDZ : ('a'..'z'|'A'..'Z'|'_')+;
+
+RULE_CHAR : '\'' . '\'';
 
 RULE_FLOAT : ('0'..'9')+ '.' ('0'..'9')*;
 

@@ -1723,22 +1723,13 @@ public interface AnsicPackage extends EPackage
   int PRIMARY_EXPRESSION__CONSTANT = 1;
 
   /**
-   * The feature id for the '<em><b>String</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRIMARY_EXPRESSION__STRING = 2;
-
-  /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRIMARY_EXPRESSION__EXPRESSION = 3;
+  int PRIMARY_EXPRESSION__EXPRESSION = 2;
 
   /**
    * The feature id for the '<em><b>Generic selection</b></em>' containment reference.
@@ -1747,7 +1738,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRIMARY_EXPRESSION__GENERIC_SELECTION = 4;
+  int PRIMARY_EXPRESSION__GENERIC_SELECTION = 3;
 
   /**
    * The number of structural features of the '<em>primary expression</em>' class.
@@ -1756,7 +1747,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRIMARY_EXPRESSION_FEATURE_COUNT = 5;
+  int PRIMARY_EXPRESSION_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.enumeration_constantImpl <em>enumeration constant</em>}' class.
@@ -3986,13 +3977,22 @@ public interface AnsicPackage extends EPackage
   int CONSTANT__FCONSTANT = 1;
 
   /**
+   * The feature id for the '<em><b>Char</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTANT__CHAR = 2;
+
+  /**
    * The feature id for the '<em><b>Enumz</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANT__ENUMZ = 2;
+  int CONSTANT__ENUMZ = 3;
 
   /**
    * The number of structural features of the '<em>constant</em>' class.
@@ -4001,7 +4001,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONSTANT_FEATURE_COUNT = 3;
+  int CONSTANT_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.EnumeratorListLinhaActionImpl <em>Enumerator List Linha Action</em>}' class.
@@ -6578,17 +6578,6 @@ public interface AnsicPackage extends EPackage
   EReference getprimary_expression_Constant();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.primary_expression#getString <em>String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>String</em>'.
-   * @see org.xtext.example.ansic.primary_expression#getString()
-   * @see #getprimary_expression()
-   * @generated
-   */
-  EReference getprimary_expression_String();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.primary_expression#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8434,6 +8423,17 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EAttribute getconstant_F_constant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.constant#getChar <em>Char</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Char</em>'.
+   * @see org.xtext.example.ansic.constant#getChar()
+   * @see #getconstant()
+   * @generated
+   */
+  EAttribute getconstant_Char();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.ansic.constant#getEnumz <em>Enumz</em>}'.
@@ -10540,14 +10540,6 @@ public interface AnsicPackage extends EPackage
     EReference PRIMARY_EXPRESSION__CONSTANT = eINSTANCE.getprimary_expression_Constant();
 
     /**
-     * The meta object literal for the '<em><b>String</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PRIMARY_EXPRESSION__STRING = eINSTANCE.getprimary_expression_String();
-
-    /**
      * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -12072,6 +12064,14 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EAttribute CONSTANT__FCONSTANT = eINSTANCE.getconstant_F_constant();
+
+    /**
+     * The meta object literal for the '<em><b>Char</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONSTANT__CHAR = eINSTANCE.getconstant_Char();
 
     /**
      * The meta object literal for the '<em><b>Enumz</b></em>' attribute feature.

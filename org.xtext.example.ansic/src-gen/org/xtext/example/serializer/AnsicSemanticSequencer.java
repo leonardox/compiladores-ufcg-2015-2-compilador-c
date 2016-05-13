@@ -779,7 +779,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     constant returns constant
 	 *
 	 * Constraint:
-	 *     (i_constant=INT | f_constant=FLOAT | enumz='enum')
+	 *     (i_constant=INT | f_constant=FLOAT | char=CHAR | enumz='enum')
 	 */
 	protected void sequence_constant(ISerializationContext context, constant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1857,7 +1857,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     primary_expression returns primary_expression
 	 *
 	 * Constraint:
-	 *     (identifier=IDz | constant=constant | string=string_ufcg | expression=expression | generic_selection=generic_selection)
+	 *     (identifier=IDz | constant=constant | expression=expression | generic_selection=generic_selection)
 	 */
 	protected void sequence_primary_expression(ISerializationContext context, primary_expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

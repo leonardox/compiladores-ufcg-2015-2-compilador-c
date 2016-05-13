@@ -3036,26 +3036,22 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIdentifierIDzTerminalRuleCall_0_0 = (RuleCall)cIdentifierAssignment_0.eContents().get(0);
 		private final Assignment cConstantAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cConstantConstantParserRuleCall_1_0 = (RuleCall)cConstantAssignment_1.eContents().get(0);
-		private final Assignment cStringAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cStringString_ufcgParserRuleCall_2_0 = (RuleCall)cStringAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cExpressionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cExpressionExpressionParserRuleCall_3_1_0 = (RuleCall)cExpressionAssignment_3_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		private final Assignment cGeneric_selectionAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final RuleCall cGeneric_selectionGeneric_selectionParserRuleCall_4_0 = (RuleCall)cGeneric_selectionAssignment_4.eContents().get(0);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cExpressionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cExpressionExpressionParserRuleCall_2_1_0 = (RuleCall)cExpressionAssignment_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cGeneric_selectionAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final RuleCall cGeneric_selectionGeneric_selectionParserRuleCall_3_0 = (RuleCall)cGeneric_selectionAssignment_3.eContents().get(0);
 		
 		//primary_expression:
 		//	identifier=IDz
 		//	| constant=constant
-		//	| string=string_ufcg
 		//	| '(' expression=expression ')'
 		//	| generic_selection=generic_selection;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//identifier=IDz | constant=constant | string=string_ufcg | '(' expression=expression ')' |
-		//generic_selection=generic_selection
+		//identifier=IDz | constant=constant | '(' expression=expression ')' | generic_selection=generic_selection
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//identifier=IDz
@@ -3070,32 +3066,26 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//constant
 		public RuleCall getConstantConstantParserRuleCall_1_0() { return cConstantConstantParserRuleCall_1_0; }
 		
-		//string=string_ufcg
-		public Assignment getStringAssignment_2() { return cStringAssignment_2; }
-		
-		//string_ufcg
-		public RuleCall getStringString_ufcgParserRuleCall_2_0() { return cStringString_ufcgParserRuleCall_2_0; }
-		
 		//'(' expression=expression ')'
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_2() { return cGroup_2; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 		
 		//expression=expression
-		public Assignment getExpressionAssignment_3_1() { return cExpressionAssignment_3_1; }
+		public Assignment getExpressionAssignment_2_1() { return cExpressionAssignment_2_1; }
 		
 		//expression
-		public RuleCall getExpressionExpressionParserRuleCall_3_1_0() { return cExpressionExpressionParserRuleCall_3_1_0; }
+		public RuleCall getExpressionExpressionParserRuleCall_2_1_0() { return cExpressionExpressionParserRuleCall_2_1_0; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 		
 		//generic_selection=generic_selection
-		public Assignment getGeneric_selectionAssignment_4() { return cGeneric_selectionAssignment_4; }
+		public Assignment getGeneric_selectionAssignment_3() { return cGeneric_selectionAssignment_3; }
 		
 		//generic_selection
-		public RuleCall getGeneric_selectionGeneric_selectionParserRuleCall_4_0() { return cGeneric_selectionGeneric_selectionParserRuleCall_4_0; }
+		public RuleCall getGeneric_selectionGeneric_selectionParserRuleCall_3_0() { return cGeneric_selectionGeneric_selectionParserRuleCall_3_0; }
 	}
 	public class Enumeration_constantElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.enumeration_constant");
@@ -6396,16 +6386,19 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cI_constantINTTerminalRuleCall_0_0 = (RuleCall)cI_constantAssignment_0.eContents().get(0);
 		private final Assignment cF_constantAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cF_constantFLOATTerminalRuleCall_1_0 = (RuleCall)cF_constantAssignment_1.eContents().get(0);
-		private final Assignment cEnumzAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cEnumzEnumKeyword_2_0 = (Keyword)cEnumzAssignment_2.eContents().get(0);
+		private final Assignment cCharAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cCharCHARTerminalRuleCall_2_0 = (RuleCall)cCharAssignment_2.eContents().get(0);
+		private final Assignment cEnumzAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final Keyword cEnumzEnumKeyword_3_0 = (Keyword)cEnumzAssignment_3.eContents().get(0);
 		
 		//constant:
 		//	i_constant=INT / * includes character_constant * /
 		//	| f_constant=FLOAT
+		//	| char=CHAR
 		//	| enumz='enum' / * after it has been defined as such * /;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//i_constant=INT / * includes character_constant * / | f_constant=FLOAT | enumz='enum'
+		//i_constant=INT / * includes character_constant * / | f_constant=FLOAT | char=CHAR | enumz='enum'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//i_constant=INT
@@ -6420,11 +6413,17 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//FLOAT
 		public RuleCall getF_constantFLOATTerminalRuleCall_1_0() { return cF_constantFLOATTerminalRuleCall_1_0; }
 		
+		//char=CHAR
+		public Assignment getCharAssignment_2() { return cCharAssignment_2; }
+		
+		//CHAR
+		public RuleCall getCharCHARTerminalRuleCall_2_0() { return cCharCHARTerminalRuleCall_2_0; }
+		
 		//enumz='enum'
-		public Assignment getEnumzAssignment_2() { return cEnumzAssignment_2; }
+		public Assignment getEnumzAssignment_3() { return cEnumzAssignment_3; }
 		
 		//'enum'
-		public Keyword getEnumzEnumKeyword_2_0() { return cEnumzEnumKeyword_2_0; }
+		public Keyword getEnumzEnumKeyword_3_0() { return cEnumzEnumKeyword_3_0; }
 	}
 	
 	
@@ -6546,6 +6545,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	private final String_ufcgElements pString_ufcg;
 	private final ConstantElements pConstant;
 	private final TerminalRule tIDz;
+	private final TerminalRule tCHAR;
 	private final TerminalRule tFLOAT;
 	private final TerminalRule tO;
 	private final TerminalRule tD;
@@ -6693,6 +6693,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		this.pString_ufcg = new String_ufcgElements();
 		this.pConstant = new ConstantElements();
 		this.tIDz = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.IDz");
+		this.tCHAR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.CHAR");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.FLOAT");
 		this.tO = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.O");
 		this.tD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.D");
@@ -7314,7 +7315,6 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//primary_expression:
 	//	identifier=IDz
 	//	| constant=constant
-	//	| string=string_ufcg
 	//	| '(' expression=expression ')'
 	//	| generic_selection=generic_selection;
 	public Primary_expressionElements getPrimary_expressionAccess() {
@@ -8095,6 +8095,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//constant:
 	//	i_constant=INT / * includes character_constant * /
 	//	| f_constant=FLOAT
+	//	| char=CHAR
 	//	| enumz='enum' / * after it has been defined as such * /;
 	public ConstantElements getConstantAccess() {
 		return pConstant;
@@ -8108,6 +8109,12 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//	'a'..'z' | 'A'..'Z' | '_'+;
 	public TerminalRule getIDzRule() {
 		return tIDz;
+	}
+	
+	//terminal CHAR:
+	//	'\'' . '\'';
+	public TerminalRule getCHARRule() {
+		return tCHAR;
 	}
 	
 	//terminal FLOAT:

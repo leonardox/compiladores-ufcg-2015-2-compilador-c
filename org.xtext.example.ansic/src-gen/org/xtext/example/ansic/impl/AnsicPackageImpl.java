@@ -2555,7 +2555,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getprimary_expression_String()
+  public EReference getprimary_expression_Expression()
   {
     return (EReference)primary_expressionEClass.getEStructuralFeatures().get(2);
   }
@@ -2565,19 +2565,9 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getprimary_expression_Expression()
-  {
-    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getprimary_expression_Generic_selection()
   {
-    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(4);
+    return (EReference)primary_expressionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4305,9 +4295,19 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getconstant_Enumz()
+  public EAttribute getconstant_Char()
   {
     return (EAttribute)constantEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getconstant_Enumz()
+  {
+    return (EAttribute)constantEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -5377,7 +5377,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     primary_expressionEClass = createEClass(PRIMARY_EXPRESSION);
     createEAttribute(primary_expressionEClass, PRIMARY_EXPRESSION__IDENTIFIER);
     createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__CONSTANT);
-    createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__STRING);
     createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__EXPRESSION);
     createEReference(primary_expressionEClass, PRIMARY_EXPRESSION__GENERIC_SELECTION);
 
@@ -5619,6 +5618,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     constantEClass = createEClass(CONSTANT);
     createEAttribute(constantEClass, CONSTANT__ICONSTANT);
     createEAttribute(constantEClass, CONSTANT__FCONSTANT);
+    createEAttribute(constantEClass, CONSTANT__CHAR);
     createEAttribute(constantEClass, CONSTANT__ENUMZ);
 
     enumeratorListLinhaActionEClass = createEClass(ENUMERATOR_LIST_LINHA_ACTION);
@@ -5978,7 +5978,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEClass(primary_expressionEClass, primary_expression.class, "primary_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getprimary_expression_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getprimary_expression_Constant(), this.getconstant(), null, "constant", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getprimary_expression_String(), this.getstring_ufcg(), null, "string", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getprimary_expression_Expression(), this.getexpression(), null, "expression", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getprimary_expression_Generic_selection(), this.getgeneric_selection(), null, "generic_selection", null, 0, 1, primary_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -6220,6 +6219,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEClass(constantEClass, constant.class, "constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getconstant_I_constant(), ecorePackage.getEInt(), "i_constant", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getconstant_F_constant(), ecorePackage.getEString(), "f_constant", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getconstant_Char(), ecorePackage.getEString(), "char", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getconstant_Enumz(), ecorePackage.getEString(), "enumz", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(enumeratorListLinhaActionEClass, EnumeratorListLinhaAction.class, "EnumeratorListLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

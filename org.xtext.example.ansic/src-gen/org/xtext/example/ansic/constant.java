@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.ansic.constant#getI_constant <em>Iconstant</em>}</li>
  *   <li>{@link org.xtext.example.ansic.constant#getF_constant <em>Fconstant</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.constant#getChar <em>Char</em>}</li>
  *   <li>{@link org.xtext.example.ansic.constant#getEnumz <em>Enumz</em>}</li>
  * </ul>
  *
@@ -76,6 +77,32 @@ public interface constant extends EObject
    * @generated
    */
   void setF_constant(String value);
+
+  /**
+   * Returns the value of the '<em><b>Char</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Char</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Char</em>' attribute.
+   * @see #setChar(String)
+   * @see org.xtext.example.ansic.AnsicPackage#getconstant_Char()
+   * @model
+   * @generated
+   */
+  String getChar();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.constant#getChar <em>Char</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Char</em>' attribute.
+   * @see #getChar()
+   * @generated
+   */
+  void setChar(String value);
 
   /**
    * Returns the value of the '<em><b>Enumz</b></em>' attribute.

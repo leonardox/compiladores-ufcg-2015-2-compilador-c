@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.ansic.primary_expression#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.xtext.example.ansic.primary_expression#getConstant <em>Constant</em>}</li>
- *   <li>{@link org.xtext.example.ansic.primary_expression#getString <em>String</em>}</li>
  *   <li>{@link org.xtext.example.ansic.primary_expression#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.xtext.example.ansic.primary_expression#getGeneric_selection <em>Generic selection</em>}</li>
  * </ul>
@@ -78,32 +77,6 @@ public interface primary_expression extends EObject
    * @generated
    */
   void setConstant(constant value);
-
-  /**
-   * Returns the value of the '<em><b>String</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>String</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>String</em>' containment reference.
-   * @see #setString(string_ufcg)
-   * @see org.xtext.example.ansic.AnsicPackage#getprimary_expression_String()
-   * @model containment="true"
-   * @generated
-   */
-  string_ufcg getString();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.ansic.primary_expression#getString <em>String</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>String</em>' containment reference.
-   * @see #getString()
-   * @generated
-   */
-  void setString(string_ufcg value);
 
   /**
    * Returns the value of the '<em><b>Expression</b></em>' containment reference.

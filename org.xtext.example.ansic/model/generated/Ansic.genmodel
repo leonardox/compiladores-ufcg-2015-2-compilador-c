@@ -174,7 +174,6 @@
     <genClasses ecoreClass="Ansic.ecore#//primary_expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//primary_expression/identifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/constant"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/string"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//primary_expression/generic_selection"/>
     </genClasses>
@@ -398,6 +397,7 @@
     <genClasses ecoreClass="Ansic.ecore#//constant">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/i_constant"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/f_constant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/char"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//constant/enumz"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//EnumeratorListLinhaAction">

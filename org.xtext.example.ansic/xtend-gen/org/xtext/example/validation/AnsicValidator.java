@@ -27,6 +27,7 @@ import org.xtext.example.ansic.declarator;
 import org.xtext.example.ansic.direct_declarator;
 import org.xtext.example.ansic.direct_declarator_complemento;
 import org.xtext.example.ansic.direct_declarator_linha;
+import org.xtext.example.ansic.enum_specifier;
 import org.xtext.example.ansic.equality_expression;
 import org.xtext.example.ansic.exclusive_or_expression;
 import org.xtext.example.ansic.expression;
@@ -48,6 +49,7 @@ import org.xtext.example.ansic.relational_expression;
 import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.shift_expression;
 import org.xtext.example.ansic.statement;
+import org.xtext.example.ansic.translation_unit;
 import org.xtext.example.ansic.type_specifier;
 import org.xtext.example.ansic.unary_expression;
 import org.xtext.example.validation.AbstractAnsicValidator;
@@ -75,34 +77,49 @@ public class AnsicValidator extends AbstractAnsicValidator {
   
   private HashMap<String, AnsicValidator.Function> functions = CollectionLiterals.<String, AnsicValidator.Function>newHashMap();
   
+  @Check
+  public void restart(final translation_unit t) {
+    this.variables.clear();
+    this.functions.clear();
+  }
+  
   public void checkDeclarationWithConstant(final String leftType, final primary_expression rightType) {
     boolean _and = false;
+    boolean _and_1 = false;
     constant _constant = rightType.getConstant();
     String _f_constant = _constant.getF_constant();
     boolean _equals = Objects.equal(_f_constant, null);
     if (!_equals) {
-      _and = false;
+      _and_1 = false;
     } else {
       constant _constant_1 = rightType.getConstant();
       String _enumz = _constant_1.getEnumz();
       boolean _equals_1 = Objects.equal(_enumz, null);
-      _and = _equals_1;
+      _and_1 = _equals_1;
+    }
+    if (!_and_1) {
+      _and = false;
+    } else {
+      constant _constant_2 = rightType.getConstant();
+      String _char = _constant_2.getChar();
+      boolean _equals_2 = Objects.equal(_char, null);
+      _and = _equals_2;
     }
     if (_and) {
       boolean _or = false;
       boolean _or_1 = false;
-      boolean _equals_2 = Objects.equal(leftType, "char");
-      if (_equals_2) {
+      boolean _equals_3 = Objects.equal(leftType, "char");
+      if (_equals_3) {
         _or_1 = true;
       } else {
-        boolean _equals_3 = Objects.equal(leftType, "bool");
-        _or_1 = _equals_3;
+        boolean _equals_4 = Objects.equal(leftType, "bool");
+        _or_1 = _equals_4;
       }
       if (_or_1) {
         _or = true;
       } else {
-        boolean _equals_4 = Objects.equal(leftType, "void");
-        _or = _equals_4;
+        boolean _equals_5 = Objects.equal(leftType, "void");
+        _or = _equals_5;
       }
       if (_or) {
         InputOutput.<String>println("entrou");
@@ -110,31 +127,31 @@ public class AnsicValidator extends AbstractAnsicValidator {
           AnsicPackage.Literals.DECLARATION__DECLARATION_SPECIFIERS);
       }
     } else {
-      constant _constant_2 = rightType.getConstant();
-      String _f_constant_1 = _constant_2.getF_constant();
+      constant _constant_3 = rightType.getConstant();
+      String _f_constant_1 = _constant_3.getF_constant();
       boolean _notEquals = (!Objects.equal(_f_constant_1, null));
       if (_notEquals) {
         boolean _or_2 = false;
         boolean _or_3 = false;
         boolean _or_4 = false;
-        boolean _equals_5 = Objects.equal(leftType, "char");
-        if (_equals_5) {
+        boolean _equals_6 = Objects.equal(leftType, "char");
+        if (_equals_6) {
           _or_4 = true;
         } else {
-          boolean _equals_6 = Objects.equal(leftType, "bool");
-          _or_4 = _equals_6;
+          boolean _equals_7 = Objects.equal(leftType, "bool");
+          _or_4 = _equals_7;
         }
         if (_or_4) {
           _or_3 = true;
         } else {
-          boolean _equals_7 = Objects.equal(leftType, "void");
-          _or_3 = _equals_7;
+          boolean _equals_8 = Objects.equal(leftType, "void");
+          _or_3 = _equals_8;
         }
         if (_or_3) {
           _or_2 = true;
         } else {
-          boolean _equals_8 = Objects.equal(leftType, "int");
-          _or_2 = _equals_8;
+          boolean _equals_9 = Objects.equal(leftType, "int");
+          _or_2 = _equals_9;
         }
         if (_or_2) {
           InputOutput.<String>println("entrou");
@@ -182,7 +199,6 @@ public class AnsicValidator extends AbstractAnsicValidator {
       constant _constant = rightType.getConstant();
       boolean _notEquals = (!Objects.equal(_constant, null));
       if (_notEquals) {
-        this.checkDeclarationWithConstant(leftType, rightType);
       } else {
         boolean _and = false;
         String _identifier = rightType.getIdentifier();
@@ -197,6 +213,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
           _and = _not;
         }
         if (_and) {
+          this.checkDeclarationWithConstant(leftType, rightType);
         } else {
           expression _expression = rightType.getExpression();
           boolean _notEquals_2 = (!Objects.equal(_expression, null));
@@ -204,7 +221,14 @@ public class AnsicValidator extends AbstractAnsicValidator {
           }
         }
       }
-      _xblockexpression = this.variables.put(id, leftType);
+      String _xifexpression = null;
+      boolean _containsKey = this.variables.containsKey(id);
+      if (_containsKey) {
+        this.error("Variável já declarada", null);
+      } else {
+        _xifexpression = this.variables.put(id, leftType);
+      }
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }
@@ -220,6 +244,27 @@ public class AnsicValidator extends AbstractAnsicValidator {
     String tr = this.variables.get(idRight);
     String tl = this.variables.get(idLeft);
     this.validateAlarg(tr, tl);
+  }
+  
+  @Check
+  public String checkEnumValid(final enum_specifier enumz) {
+    String _xifexpression = null;
+    String _identifier = enumz.getIdentifier();
+    boolean _notEquals = (!Objects.equal(_identifier, null));
+    if (_notEquals) {
+      String _xifexpression_1 = null;
+      String _identifier_1 = enumz.getIdentifier();
+      boolean _containsKey = this.variables.containsKey(_identifier_1);
+      if (_containsKey) {
+        this.error("Variável já declarada", 
+          AnsicPackage.Literals.ENUM_SPECIFIER__IDENTIFIER);
+      } else {
+        String _identifier_2 = enumz.getIdentifier();
+        _xifexpression_1 = this.variables.put(_identifier_2, "enum");
+      }
+      _xifexpression = _xifexpression_1;
+    }
+    return _xifexpression;
   }
   
   @Check

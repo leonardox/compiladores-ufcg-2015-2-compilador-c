@@ -5,6 +5,8 @@ package org.xtext.example.validation
 
 import org.eclipse.xtext.validation.Check
 import org.xtext.example.ansic.type_specifier
+import org.xtext.example.ansic.translation_unit
+import org.xtext.example.ansic.enum_specifier
 import org.xtext.example.ansic.declaration
 import org.xtext.example.ansic.primary_expression
 import org.xtext.example.ansic.assignment_expression
@@ -34,8 +36,14 @@ class AnsicValidator extends AbstractAnsicValidator {
   private var functions = <String, Function>newHashMap();
 
 
+	@Check
+	def restart(translation_unit t){
+		variables.clear();
+		functions.clear();
+	}
+
 	def checkDeclarationWithConstant(String leftType, primary_expression rightType){
-				if(rightType.constant.f_constant == null && rightType.constant.enumz == null ){
+		if(rightType.constant.f_constant == null && rightType.constant.enumz == null && rightType.constant.char == null){
 			if(leftType == "char" || leftType == 'bool' || leftType == 'void'){
 				println("entrou");
 							error('Esse tipo não recebe valores numéricos', 
@@ -60,16 +68,20 @@ class AnsicValidator extends AbstractAnsicValidator {
 		if(rightType.constant != null){
 			//Validar quando declaração é com uma constant
 			//int a = 3;
-			checkDeclarationWithConstant(leftType, rightType)
 		}else if (rightType.identifier != null && !rightType.identifier.trim.isEmpty()){
+			checkDeclarationWithConstant(leftType, rightType)
 			//Validar quando é declaração que inicia com um id
 			// int a = b;
 		}else if (rightType.expression != null){
 			//Validar quando é declaração com uma expressão
 			//int a = b+c;
 		}
+		if(variables.containsKey(id)){
+			error("Variável já declarada", null);
+		}else{
+			variables.put(id, leftType);
+		}
 		
-		variables.put(id, leftType);
 	}
 	
 	def validateActribWithId(String idLeft, String idRight){
@@ -83,6 +95,19 @@ class AnsicValidator extends AbstractAnsicValidator {
 			validateAlarg(tr,tl);
 	}
 	
+	
+	@Check 
+	def checkEnumValid(enum_specifier enumz){
+		if(enumz.identifier != null){
+			if(variables.containsKey(enumz.identifier)){
+				error("Variável já declarada", 
+					AnsicPackage.Literals.ENUM_SPECIFIER__IDENTIFIER
+				);
+			}else{
+				variables.put(enumz.identifier, 'enum');	
+			}			
+		}
+	}
 	@Check
 	def checkAtribType(assignment_expression asexp){		
 		var idLeft = asexp.unary_expression.postfix_expression.primary_expression.identifier;

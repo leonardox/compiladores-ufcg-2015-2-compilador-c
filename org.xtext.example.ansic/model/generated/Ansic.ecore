@@ -248,8 +248,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constant" eType="#//constant"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="string" eType="#//string_ufcg"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generic_selection" eType="#//generic_selection"
@@ -567,6 +565,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="constant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="i_constant" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="f_constant" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="char" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enumz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnumeratorListLinhaAction" eSuperTypes="#//enumerator_list_linha">

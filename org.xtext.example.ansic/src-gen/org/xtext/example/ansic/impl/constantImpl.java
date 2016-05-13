@@ -23,6 +23,7 @@ import org.xtext.example.ansic.constant;
  * <ul>
  *   <li>{@link org.xtext.example.ansic.impl.constantImpl#getI_constant <em>Iconstant</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.constantImpl#getF_constant <em>Fconstant</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.constantImpl#getChar <em>Char</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.constantImpl#getEnumz <em>Enumz</em>}</li>
  * </ul>
  *
@@ -69,6 +70,26 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
    * @ordered
    */
   protected String f_constant = FCONSTANT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getChar() <em>Char</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getChar()
+   * @generated
+   * @ordered
+   */
+  protected static final String CHAR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getChar() <em>Char</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getChar()
+   * @generated
+   * @ordered
+   */
+  protected String char_ = CHAR_EDEFAULT;
 
   /**
    * The default value of the '{@link #getEnumz() <em>Enumz</em>}' attribute.
@@ -162,6 +183,29 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getChar()
+  {
+    return char_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setChar(String newChar)
+  {
+    String oldChar = char_;
+    char_ = newChar;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.CONSTANT__CHAR, oldChar, char_));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getEnumz()
   {
     return enumz;
@@ -194,6 +238,8 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
         return getI_constant();
       case AnsicPackage.CONSTANT__FCONSTANT:
         return getF_constant();
+      case AnsicPackage.CONSTANT__CHAR:
+        return getChar();
       case AnsicPackage.CONSTANT__ENUMZ:
         return getEnumz();
     }
@@ -215,6 +261,9 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
         return;
       case AnsicPackage.CONSTANT__FCONSTANT:
         setF_constant((String)newValue);
+        return;
+      case AnsicPackage.CONSTANT__CHAR:
+        setChar((String)newValue);
         return;
       case AnsicPackage.CONSTANT__ENUMZ:
         setEnumz((String)newValue);
@@ -239,6 +288,9 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
       case AnsicPackage.CONSTANT__FCONSTANT:
         setF_constant(FCONSTANT_EDEFAULT);
         return;
+      case AnsicPackage.CONSTANT__CHAR:
+        setChar(CHAR_EDEFAULT);
+        return;
       case AnsicPackage.CONSTANT__ENUMZ:
         setEnumz(ENUMZ_EDEFAULT);
         return;
@@ -260,6 +312,8 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
         return i_constant != ICONSTANT_EDEFAULT;
       case AnsicPackage.CONSTANT__FCONSTANT:
         return FCONSTANT_EDEFAULT == null ? f_constant != null : !FCONSTANT_EDEFAULT.equals(f_constant);
+      case AnsicPackage.CONSTANT__CHAR:
+        return CHAR_EDEFAULT == null ? char_ != null : !CHAR_EDEFAULT.equals(char_);
       case AnsicPackage.CONSTANT__ENUMZ:
         return ENUMZ_EDEFAULT == null ? enumz != null : !ENUMZ_EDEFAULT.equals(enumz);
     }
@@ -281,6 +335,8 @@ public class constantImpl extends MinimalEObjectImpl.Container implements consta
     result.append(i_constant);
     result.append(", f_constant: ");
     result.append(f_constant);
+    result.append(", char: ");
+    result.append(char_);
     result.append(", enumz: ");
     result.append(enumz);
     result.append(')');
