@@ -6,6 +6,7 @@ package org.xtext.example.validation
 import org.eclipse.xtext.validation.Check
 import org.xtext.example.ansic.type_specifier
 import org.xtext.example.ansic.declaration
+import org.xtext.example.ansic.primary_expression
 import org.xtext.example.ansic.assignment_expression
 import org.xtext.example.ansic.function_definition
 import org.xtext.example.ansic.selection_statement
@@ -32,15 +33,9 @@ class AnsicValidator extends AbstractAnsicValidator {
   }
   private var functions = <String, Function>newHashMap();
 
-	@Check
-	def checkDeclarationTypes(declaration decl){
-		var leftType =  decl.declaration_specifiers.get(0).type_specifier.type_name_str;
-		var id = decl.init_declarator_list.get(0).init_declarator.declarator.direct_declarator.identifier;
-		var rightType = decl.init_declarator_list.get(0).init_declarator.initializer.assignment_expression.conditional_expression.
-							logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
-							and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
-							multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression
-		if(rightType.constant.f_constant == null && rightType.constant.enumz == null ){
+
+	def checkDeclarationWithConstant(String leftType, primary_expression rightType){
+				if(rightType.constant.f_constant == null && rightType.constant.enumz == null ){
 			if(leftType == "char" || leftType == 'bool' || leftType == 'void'){
 				println("entrou");
 							error('Esse tipo não recebe valores numéricos', 
@@ -53,21 +48,31 @@ class AnsicValidator extends AbstractAnsicValidator {
 					AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
 			}
 		}
-		if(rightType.string != null){
-			
+	}
+	@Check
+	def checkDeclarationTypes(declaration decl){
+		var leftType =  decl.declaration_specifiers.get(0).type_specifier.type_name_str;
+		var id = decl.init_declarator_list.get(0).init_declarator.declarator.direct_declarator.identifier;
+		var rightType = decl.init_declarator_list.get(0).init_declarator.initializer.assignment_expression.conditional_expression.
+							logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+							and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+							multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression
+		if(rightType.constant != null){
+			//Validar quando declaração é com uma constant
+			//int a = 3;
+			checkDeclarationWithConstant(leftType, rightType)
+		}else if (rightType.identifier != null && !rightType.identifier.trim.isEmpty()){
+			//Validar quando é declaração que inicia com um id
+			// int a = b;
+		}else if (rightType.expression != null){
+			//Validar quando é declaração com uma expressão
+			//int a = b+c;
 		}
 		
 		variables.put(id, leftType);
 	}
 	
-	@Check
-	def checkAtribType(assignment_expression asexp){		
-		var idLeft = asexp.unary_expression.postfix_expression.primary_expression.identifier;
-		if(asexp.assignment_expression != null){
-			var idRight = asexp.assignment_expression.conditional_expression.
-					logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
-					and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
-					multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression.identifier;
+	def validateActribWithId(String idLeft, String idRight){
 			if(!variables.keySet.contains(idRight)){
 				error('Variavel não declarada',
 					AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__ASSIGNMENT_EXPRESSION
@@ -75,18 +80,42 @@ class AnsicValidator extends AbstractAnsicValidator {
 			}			
 			var tr = variables.get(idRight);
 			var tl = variables.get(idLeft);		
-			validateAlarg(tr,tl)
-			var mthodCall = asexp.assignment_expression.conditional_expression.
-					logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
-					and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
-					multiplicative_expression.cast_expression.unary_expression.postfix_expression.postfix_expression_linha				
-		}
-		
+			validateAlarg(tr,tl);
+	}
+	
+	@Check
+	def checkAtribType(assignment_expression asexp){		
+		var idLeft = asexp.unary_expression.postfix_expression.primary_expression.identifier;
 		if(!variables.keySet.contains(idLeft)){
 			error('Variavel não declarada',
 				AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
 			);
 		}
+		var idRight = asexp.assignment_expression.conditional_expression.
+		logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+		and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+		multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+		if(asexp.assignment_expression != null){
+			if(idRight.identifier != null && !idRight.identifier.trim().isEmpty()){
+				//Validar quando é uma atribuição com outra variavel
+				// a = b
+				validateActribWithId(idLeft, idRight.identifier);
+			}else if(idRight.constant != null){
+				//Validar quando é uma atribuição com uma constante
+				// a = 3;
+				var left_type = variables.get(idLeft);
+				checkDeclarationWithConstant(left_type, idRight)
+			}else if(idRight.expression != null){
+				//Validar quando é uma atribuição com expressão
+				// a = b + c
+			}				
+		}			
+		
+		var mthodCall = asexp.assignment_expression.conditional_expression.
+					logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+					and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+					multiplicative_expression.cast_expression.unary_expression.postfix_expression.postfix_expression_linha	;
+		
 	}
 	
 	def validateAlarg(String tr, String tl){

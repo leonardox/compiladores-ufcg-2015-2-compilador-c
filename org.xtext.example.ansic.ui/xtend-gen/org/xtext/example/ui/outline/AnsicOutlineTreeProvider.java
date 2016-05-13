@@ -4,6 +4,114 @@
 package org.xtext.example.ui.outline;
 
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import org.xtext.example.ansic.abstract_declarator;
+import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.additive_expression_complement;
+import org.xtext.example.ansic.additive_expression_linha;
+import org.xtext.example.ansic.alignment_specifier;
+import org.xtext.example.ansic.and_expression;
+import org.xtext.example.ansic.and_expression_linha;
+import org.xtext.example.ansic.argument_expression_list;
+import org.xtext.example.ansic.argument_expression_list_linha;
+import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.atomic_type_specifier;
+import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.block_item_list;
+import org.xtext.example.ansic.block_item_list_linha;
+import org.xtext.example.ansic.cast_expression;
+import org.xtext.example.ansic.compound_statement;
+import org.xtext.example.ansic.conditional_expression;
+import org.xtext.example.ansic.conditional_expression_linha;
+import org.xtext.example.ansic.constant;
+import org.xtext.example.ansic.constant_expression;
+import org.xtext.example.ansic.declaration;
+import org.xtext.example.ansic.declaration_list;
+import org.xtext.example.ansic.declaration_list_linha;
+import org.xtext.example.ansic.declaration_specifiers;
+import org.xtext.example.ansic.declarator;
+import org.xtext.example.ansic.designation;
+import org.xtext.example.ansic.designator;
+import org.xtext.example.ansic.designator_list;
+import org.xtext.example.ansic.designator_list_linha;
+import org.xtext.example.ansic.direct_abstract_declarator;
+import org.xtext.example.ansic.direct_abstract_declarator_complement;
+import org.xtext.example.ansic.direct_abstract_declarator_linha;
+import org.xtext.example.ansic.direct_declarator;
+import org.xtext.example.ansic.direct_declarator_complemento;
+import org.xtext.example.ansic.direct_declarator_linha;
+import org.xtext.example.ansic.enum_specifier;
+import org.xtext.example.ansic.enumeration_constant;
+import org.xtext.example.ansic.enumerator;
+import org.xtext.example.ansic.enumerator_list;
+import org.xtext.example.ansic.enumerator_list_linha;
+import org.xtext.example.ansic.equality_expression;
+import org.xtext.example.ansic.equality_expression_complement;
+import org.xtext.example.ansic.equality_expression_linha;
+import org.xtext.example.ansic.exclusive_or_expression;
+import org.xtext.example.ansic.exclusive_or_expression_linha;
+import org.xtext.example.ansic.expression;
+import org.xtext.example.ansic.expression_linha;
+import org.xtext.example.ansic.expression_statement;
+import org.xtext.example.ansic.external_declaration;
+import org.xtext.example.ansic.function_definition;
+import org.xtext.example.ansic.generic_assoc_list;
+import org.xtext.example.ansic.generic_assoc_list_linha;
+import org.xtext.example.ansic.generic_association;
+import org.xtext.example.ansic.generic_selection;
+import org.xtext.example.ansic.identifier_list;
+import org.xtext.example.ansic.identifier_list_linha;
+import org.xtext.example.ansic.inclusive_or_expression;
+import org.xtext.example.ansic.inclusive_or_expression_linha;
+import org.xtext.example.ansic.init_declarator;
+import org.xtext.example.ansic.init_declarator_list;
+import org.xtext.example.ansic.init_declarator_list_linha;
+import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.initializer_list;
+import org.xtext.example.ansic.initializer_list_complement;
+import org.xtext.example.ansic.initializer_list_linha;
+import org.xtext.example.ansic.iteration_statement;
+import org.xtext.example.ansic.jump_statement;
+import org.xtext.example.ansic.labeled_statement;
+import org.xtext.example.ansic.logical_and_expression;
+import org.xtext.example.ansic.logical_and_expression_linha;
+import org.xtext.example.ansic.logical_or_expression;
+import org.xtext.example.ansic.logical_or_expression_linha;
+import org.xtext.example.ansic.parameter_declaration;
+import org.xtext.example.ansic.parameter_list_linha;
+import org.xtext.example.ansic.parameter_lista;
+import org.xtext.example.ansic.parameter_type_list;
+import org.xtext.example.ansic.pointer;
+import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.postfix_expression_complement;
+import org.xtext.example.ansic.postfix_expression_linha;
+import org.xtext.example.ansic.primary_expression;
+import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.relational_expression_complement;
+import org.xtext.example.ansic.relational_expression_linha;
+import org.xtext.example.ansic.selection_statement;
+import org.xtext.example.ansic.shift_expression;
+import org.xtext.example.ansic.shift_expression_complement;
+import org.xtext.example.ansic.shift_expression_linha;
+import org.xtext.example.ansic.specifier_qualifier_list;
+import org.xtext.example.ansic.statement;
+import org.xtext.example.ansic.static_assert_declaration;
+import org.xtext.example.ansic.string_ufcg;
+import org.xtext.example.ansic.struct_declaration;
+import org.xtext.example.ansic.struct_declaration_list;
+import org.xtext.example.ansic.struct_declaration_list_linha;
+import org.xtext.example.ansic.struct_declarator;
+import org.xtext.example.ansic.struct_declarator_list;
+import org.xtext.example.ansic.struct_declarator_list_linha;
+import org.xtext.example.ansic.struct_or_union_specifier;
+import org.xtext.example.ansic.struct_or_union_specifier_complement;
+import org.xtext.example.ansic.translation_unit;
+import org.xtext.example.ansic.translation_unit_linha;
+import org.xtext.example.ansic.type_name;
+import org.xtext.example.ansic.type_qualifier;
+import org.xtext.example.ansic.type_qualifier_list;
+import org.xtext.example.ansic.type_qualifier_list_linha;
+import org.xtext.example.ansic.type_specifier;
+import org.xtext.example.ansic.unary_expression;
 
 /**
  * Customization of the default outline structure.
@@ -12,4 +120,435 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
  */
 @SuppressWarnings("all")
 public class AnsicOutlineTreeProvider extends DefaultOutlineTreeProvider {
+  public String _text(final translation_unit entity) {
+    return "translation_unit";
+  }
+  
+  public String _text(final external_declaration entity) {
+    return "external_declaration";
+  }
+  
+  public String _text(final declaration_specifiers entity) {
+    return "declaration_specifiers";
+  }
+  
+  public String _text(final alignment_specifier entity) {
+    return "alignment_specifier";
+  }
+  
+  public String _text(final type_qualifier entity) {
+    return "type_qualifier";
+  }
+  
+  public String _text(final type_specifier entity) {
+    return "type_specifier";
+  }
+  
+  public String _text(final enum_specifier entity) {
+    return "enum_specifier";
+  }
+  
+  public String _text(final enumerator_list entity) {
+    return "enumerator_list";
+  }
+  
+  public String _text(final enumerator_list_linha entity) {
+    return "enumerator_list_linha";
+  }
+  
+  public String _text(final enumerator entity) {
+    return "enumerator";
+  }
+  
+  public String _text(final atomic_type_specifier entity) {
+    return "atomic_type_specifier";
+  }
+  
+  public String _text(final struct_or_union_specifier entity) {
+    return "struct_or_union_specifier";
+  }
+  
+  public String _text(final struct_or_union_specifier_complement entity) {
+    return "struct_or_union_specifier_complement";
+  }
+  
+  public String _text(final struct_declaration_list entity) {
+    return "struct_declaration_list";
+  }
+  
+  public String _text(final struct_declaration_list_linha entity) {
+    return "struct_declaration_list_linha";
+  }
+  
+  public String _text(final struct_declaration entity) {
+    return "struct_declaration";
+  }
+  
+  public String _text(final struct_declarator_list entity) {
+    return "struct_declarator_list";
+  }
+  
+  public String _text(final struct_declarator_list_linha entity) {
+    return "struct_declarator_list_linha";
+  }
+  
+  public String _text(final struct_declarator entity) {
+    return "struct_declarator";
+  }
+  
+  public String _text(final specifier_qualifier_list entity) {
+    return "specifier_qualifier_list";
+  }
+  
+  public String _text(final declaration entity) {
+    return "declaration";
+  }
+  
+  public String _text(final function_definition entity) {
+    return "function_definition";
+  }
+  
+  public String _text(final declaration_list entity) {
+    return "declaration_list";
+  }
+  
+  public String _text(final declaration_list_linha entity) {
+    return "declaration_list_linha";
+  }
+  
+  public String _text(final declarator entity) {
+    return "declarator";
+  }
+  
+  public String _text(final pointer entity) {
+    return "pointer";
+  }
+  
+  public String _text(final type_qualifier_list entity) {
+    return "type_qualifier_list";
+  }
+  
+  public String _text(final type_qualifier_list_linha entity) {
+    return "type_qualifier_list_linha";
+  }
+  
+  public String _text(final direct_declarator entity) {
+    return "direct_declarator";
+  }
+  
+  public String _text(final direct_declarator_linha entity) {
+    return "direct_declarator_linha";
+  }
+  
+  public String _text(final direct_declarator_complemento entity) {
+    return "direct_declarator_complemento";
+  }
+  
+  public String _text(final parameter_type_list entity) {
+    return "parameter_type_list";
+  }
+  
+  public String _text(final parameter_lista entity) {
+    return "parameter_lista";
+  }
+  
+  public String _text(final parameter_list_linha entity) {
+    return "parameter_list_linha";
+  }
+  
+  public String _text(final parameter_declaration entity) {
+    return "parameter_declaration";
+  }
+  
+  public String _text(final abstract_declarator entity) {
+    return "abstract_declarator";
+  }
+  
+  public String _text(final direct_abstract_declarator entity) {
+    return "direct_abstract_declarator";
+  }
+  
+  public String _text(final initializer entity) {
+    return "initializer";
+  }
+  
+  public String _text(final direct_abstract_declarator_linha entity) {
+    return "direct_abstract_declarator_linha";
+  }
+  
+  public String _text(final direct_abstract_declarator_complement entity) {
+    return "direct_abstract_declarator_complement";
+  }
+  
+  public String _text(final identifier_list entity) {
+    return "identifier_list";
+  }
+  
+  public String _text(final identifier_list_linha entity) {
+    return "identifier_list_linha";
+  }
+  
+  public String _text(final translation_unit_linha entity) {
+    return "translation_unit_linha";
+  }
+  
+  public String _text(final primary_expression entity) {
+    return "primary_expression";
+  }
+  
+  public String _text(final enumeration_constant entity) {
+    return "enumeration_constant";
+  }
+  
+  public String _text(final generic_selection entity) {
+    return "generic_selection";
+  }
+  
+  public String _text(final generic_assoc_list entity) {
+    return "generic_assoc_list";
+  }
+  
+  public String _text(final generic_assoc_list_linha entity) {
+    return "generic_assoc_list_linha";
+  }
+  
+  public String _text(final generic_association entity) {
+    return "generic_association";
+  }
+  
+  public String _text(final postfix_expression entity) {
+    return "postfix_expression";
+  }
+  
+  public String _text(final postfix_expression_linha entity) {
+    return "postfix_expression_linha";
+  }
+  
+  public String _text(final initializer_list entity) {
+    return "initializer_list";
+  }
+  
+  public String _text(final initializer_list_linha entity) {
+    return "initializer_list_linha";
+  }
+  
+  public String _text(final initializer_list_complement entity) {
+    return "initializer_list_complement";
+  }
+  
+  public String _text(final designation entity) {
+    return "designation";
+  }
+  
+  public String _text(final designator_list entity) {
+    return "designator_list";
+  }
+  
+  public String _text(final designator_list_linha entity) {
+    return "designator_list_linha";
+  }
+  
+  public String _text(final designator entity) {
+    return "designator";
+  }
+  
+  public String _text(final static_assert_declaration entity) {
+    return "static_assert_declaration";
+  }
+  
+  public String _text(final postfix_expression_complement entity) {
+    return "postfix_expression_complement";
+  }
+  
+  public String _text(final argument_expression_list entity) {
+    return "argument_expression_list";
+  }
+  
+  public String _text(final argument_expression_list_linha entity) {
+    return "argument_expression_list_linha";
+  }
+  
+  public String _text(final unary_expression entity) {
+    return "unary_expression";
+  }
+  
+  public String _text(final cast_expression entity) {
+    return "cast_expression";
+  }
+  
+  public String _text(final additive_expression entity) {
+    return "additive_expression";
+  }
+  
+  public String _text(final additive_expression_linha entity) {
+    return "additive_expression_linha";
+  }
+  
+  public String _text(final additive_expression_complement entity) {
+    return "additive_expression_complement";
+  }
+  
+  public String _text(final shift_expression entity) {
+    return "shift_expression";
+  }
+  
+  public String _text(final shift_expression_linha entity) {
+    return "shift_expression_linha";
+  }
+  
+  public String _text(final shift_expression_complement entity) {
+    return "shift_expression_complement";
+  }
+  
+  public String _text(final relational_expression entity) {
+    return "relational_expression";
+  }
+  
+  public String _text(final relational_expression_linha entity) {
+    return "relational_expression_linha";
+  }
+  
+  public String _text(final relational_expression_complement entity) {
+    return "relational_expression_complement";
+  }
+  
+  public String _text(final equality_expression entity) {
+    return "equality_expression";
+  }
+  
+  public String _text(final equality_expression_linha entity) {
+    return "equality_expression_linha";
+  }
+  
+  public String _text(final equality_expression_complement entity) {
+    return "equality_expression_complement";
+  }
+  
+  public String _text(final statement entity) {
+    return "statement";
+  }
+  
+  public String _text(final jump_statement entity) {
+    return "jump_statement";
+  }
+  
+  public String _text(final iteration_statement entity) {
+    return "iteration_statement";
+  }
+  
+  public String _text(final selection_statement entity) {
+    return "selection_statement";
+  }
+  
+  public String _text(final labeled_statement entity) {
+    return "labeled_statement";
+  }
+  
+  public String _text(final compound_statement entity) {
+    return "compound_statement";
+  }
+  
+  public String _text(final block_item_list entity) {
+    return "block_item_list";
+  }
+  
+  public String _text(final block_item_list_linha entity) {
+    return "block_item_list_linha";
+  }
+  
+  public String _text(final block_item entity) {
+    return "block_item";
+  }
+  
+  public String _text(final expression_statement entity) {
+    return "expression_statement";
+  }
+  
+  public String _text(final and_expression entity) {
+    return "and_expression";
+  }
+  
+  public String _text(final and_expression_linha entity) {
+    return "and_expression_linha";
+  }
+  
+  public String _text(final exclusive_or_expression entity) {
+    return "exclusive_or_expression";
+  }
+  
+  public String _text(final exclusive_or_expression_linha entity) {
+    return "exclusive_or_expression_linha";
+  }
+  
+  public String _text(final inclusive_or_expression entity) {
+    return "inclusive_or_expression";
+  }
+  
+  public String _text(final inclusive_or_expression_linha entity) {
+    return "inclusive_or_expression_linha";
+  }
+  
+  public String _text(final logical_and_expression entity) {
+    return "logical_and_expression";
+  }
+  
+  public String _text(final logical_and_expression_linha entity) {
+    return "logical_and_expression_linha";
+  }
+  
+  public String _text(final logical_or_expression entity) {
+    return "logical_or_expression";
+  }
+  
+  public String _text(final logical_or_expression_linha entity) {
+    return "logical_or_expression_linha";
+  }
+  
+  public String _text(final conditional_expression entity) {
+    return "conditional_expression";
+  }
+  
+  public String _text(final conditional_expression_linha entity) {
+    return "conditional_expression_linha";
+  }
+  
+  public String _text(final assignment_expression entity) {
+    return "assignment_expression";
+  }
+  
+  public String _text(final type_name entity) {
+    return "type_name";
+  }
+  
+  public String _text(final expression entity) {
+    return "expression";
+  }
+  
+  public String _text(final expression_linha entity) {
+    return "expression_linha";
+  }
+  
+  public String _text(final constant_expression entity) {
+    return "constant_expression";
+  }
+  
+  public String _text(final init_declarator_list entity) {
+    return "init_declarator_list";
+  }
+  
+  public String _text(final init_declarator_list_linha entity) {
+    return "init_declarator_list_linha";
+  }
+  
+  public String _text(final init_declarator entity) {
+    return "init_declarator";
+  }
+  
+  public String _text(final string_ufcg entity) {
+    return "string_ufcg";
+  }
+  
+  public String _text(final constant entity) {
+    return "constant";
+  }
 }
