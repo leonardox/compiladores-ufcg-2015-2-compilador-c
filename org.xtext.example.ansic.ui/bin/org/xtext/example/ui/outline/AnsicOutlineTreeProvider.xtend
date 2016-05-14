@@ -81,6 +81,7 @@ import org.xtext.example.ansic.argument_expression_list
 import org.xtext.example.ansic.argument_expression_list_linha
 import org.xtext.example.ansic.unary_expression
 import org.xtext.example.ansic.cast_expression
+import org.xtext.example.ansic.multiplicative_expression
 import org.xtext.example.ansic.multiplicative_expression_linha	
 
 import org.xtext.example.ansic.multiplicative_expression_complement
@@ -159,6 +160,9 @@ def _text(alignment_specifier entity) {
 }
 def _text(type_qualifier entity) {
   return "type_qualifier";
+}
+def _text(multiplicative_expression entity) {
+  return "multiplicative_expression";
 }
 def _text(type_specifier entity) {
   return "type_specifier";

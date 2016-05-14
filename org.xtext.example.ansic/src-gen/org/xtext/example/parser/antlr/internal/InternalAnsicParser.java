@@ -18374,82 +18374,86 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulemultiplicative_expression_linha"
-    // InternalAnsic.g:7076:1: rulemultiplicative_expression_linha returns [EObject current=null] : ( () ( ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:7076:1: rulemultiplicative_expression_linha returns [EObject current=null] : ( ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) ) )? ;
     public final EObject rulemultiplicative_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_multiplicative_expression_complement_1_0 = null;
+        EObject lv_multiplicative_expression_complement_0_0 = null;
 
-        EObject lv_multiplicative_expression_linha_2_0 = null;
+        EObject lv_multiplicative_expression_linha_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7082:2: ( ( () ( ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) ) )? ) )
-            // InternalAnsic.g:7083:2: ( () ( ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) ) )? )
+            // InternalAnsic.g:7082:2: ( ( ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) ) )? )
+            // InternalAnsic.g:7083:2: ( ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) ) )?
             {
-            // InternalAnsic.g:7083:2: ( () ( ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) ) )? )
-            // InternalAnsic.g:7084:3: () ( ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:7084:3: ()
-            // InternalAnsic.g:7085:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicativeExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:7094:3: ( ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) ) )?
+            // InternalAnsic.g:7083:2: ( ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) ) )?
             int alt53=2;
-            int LA53_0 = input.LA(1);
+            switch ( input.LA(1) ) {
+                case 67:
+                    {
+                    int LA53_1 = input.LA(2);
 
-            if ( (LA53_0==67||(LA53_0>=80 && LA53_0<=81)) ) {
-                alt53=1;
+                    if ( (synpred134_InternalAnsic()) ) {
+                        alt53=1;
+                    }
+                    }
+                    break;
+                case 80:
+                    {
+                    int LA53_2 = input.LA(2);
+
+                    if ( (synpred134_InternalAnsic()) ) {
+                        alt53=1;
+                    }
+                    }
+                    break;
+                case 81:
+                    {
+                    int LA53_3 = input.LA(2);
+
+                    if ( (synpred134_InternalAnsic()) ) {
+                        alt53=1;
+                    }
+                    }
+                    break;
             }
+
             switch (alt53) {
                 case 1 :
-                    // InternalAnsic.g:7095:4: ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) )
+                    // InternalAnsic.g:7084:3: ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) )
                     {
-                    // InternalAnsic.g:7095:4: ( (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement ) )
-                    // InternalAnsic.g:7096:5: (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement )
+                    // InternalAnsic.g:7084:3: ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) )
+                    // InternalAnsic.g:7085:4: (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement )
                     {
-                    // InternalAnsic.g:7096:5: (lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement )
-                    // InternalAnsic.g:7097:6: lv_multiplicative_expression_complement_1_0= rulemultiplicative_expression_complement
+                    // InternalAnsic.g:7085:4: (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement )
+                    // InternalAnsic.g:7086:5: lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicative_expression_complementMultiplicative_expression_complementParserRuleCall_1_0_0());
-                      					
+                      					newCompositeNode(grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicative_expression_complementMultiplicative_expression_complementParserRuleCall_0_0());
+                      				
                     }
                     pushFollow(FOLLOW_31);
-                    lv_multiplicative_expression_complement_1_0=rulemultiplicative_expression_complement();
+                    lv_multiplicative_expression_complement_0_0=rulemultiplicative_expression_complement();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getMultiplicative_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"multiplicative_expression_complement",
-                      							lv_multiplicative_expression_complement_1_0,
-                      							"org.xtext.example.Ansic.multiplicative_expression_complement");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getMultiplicative_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"multiplicative_expression_complement",
+                      						lv_multiplicative_expression_complement_0_0,
+                      						"org.xtext.example.Ansic.multiplicative_expression_complement");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -18457,34 +18461,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:7114:4: ( (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha ) )
-                    // InternalAnsic.g:7115:5: (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha )
+                    // InternalAnsic.g:7103:3: ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) )
+                    // InternalAnsic.g:7104:4: (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha )
                     {
-                    // InternalAnsic.g:7115:5: (lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha )
-                    // InternalAnsic.g:7116:6: lv_multiplicative_expression_linha_2_0= rulemultiplicative_expression_linha
+                    // InternalAnsic.g:7104:4: (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha )
+                    // InternalAnsic.g:7105:5: lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicative_expression_linhaMultiplicative_expression_linhaParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicative_expression_linhaMultiplicative_expression_linhaParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_multiplicative_expression_linha_2_0=rulemultiplicative_expression_linha();
+                    lv_multiplicative_expression_linha_1_0=rulemultiplicative_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getMultiplicative_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"multiplicative_expression_linha",
-                      							lv_multiplicative_expression_linha_2_0,
-                      							"org.xtext.example.Ansic.multiplicative_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getMultiplicative_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"multiplicative_expression_linha",
+                      						lv_multiplicative_expression_linha_1_0,
+                      						"org.xtext.example.Ansic.multiplicative_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -18495,9 +18499,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -18523,7 +18524,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulemultiplicative_expression_complement"
-    // InternalAnsic.g:7138:1: entryRulemultiplicative_expression_complement returns [EObject current=null] : iv_rulemultiplicative_expression_complement= rulemultiplicative_expression_complement EOF ;
+    // InternalAnsic.g:7126:1: entryRulemultiplicative_expression_complement returns [EObject current=null] : iv_rulemultiplicative_expression_complement= rulemultiplicative_expression_complement EOF ;
     public final EObject entryRulemultiplicative_expression_complement() throws RecognitionException {
         EObject current = null;
 
@@ -18531,8 +18532,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7138:77: (iv_rulemultiplicative_expression_complement= rulemultiplicative_expression_complement EOF )
-            // InternalAnsic.g:7139:2: iv_rulemultiplicative_expression_complement= rulemultiplicative_expression_complement EOF
+            // InternalAnsic.g:7126:77: (iv_rulemultiplicative_expression_complement= rulemultiplicative_expression_complement EOF )
+            // InternalAnsic.g:7127:2: iv_rulemultiplicative_expression_complement= rulemultiplicative_expression_complement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicative_expression_complementRule()); 
@@ -18563,28 +18564,28 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulemultiplicative_expression_complement"
-    // InternalAnsic.g:7145:1: rulemultiplicative_expression_complement returns [EObject current=null] : ( (otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) ) ) | (otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) ) ) | (otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) ) ) ) ;
+    // InternalAnsic.g:7133:1: rulemultiplicative_expression_complement returns [EObject current=null] : ( (otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) | (otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) ) ) ) ;
     public final EObject rulemultiplicative_expression_complement() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
-        EObject lv_cast_expression_1_0 = null;
+        EObject lv_assignment_expression_1_0 = null;
 
-        EObject lv_cast_expression_3_0 = null;
+        EObject lv_assignment_expression_3_0 = null;
 
-        EObject lv_cast_expression_5_0 = null;
+        EObject lv_assignment_expression_5_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7151:2: ( ( (otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) ) ) | (otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) ) ) | (otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) ) ) ) )
-            // InternalAnsic.g:7152:2: ( (otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) ) ) | (otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) ) ) | (otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) ) ) )
+            // InternalAnsic.g:7139:2: ( ( (otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) | (otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) ) ) ) )
+            // InternalAnsic.g:7140:2: ( (otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) | (otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) ) ) )
             {
-            // InternalAnsic.g:7152:2: ( (otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) ) ) | (otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) ) ) | (otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) ) ) )
+            // InternalAnsic.g:7140:2: ( (otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) | (otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) ) ) )
             int alt54=3;
             switch ( input.LA(1) ) {
             case 67:
@@ -18612,10 +18613,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt54) {
                 case 1 :
-                    // InternalAnsic.g:7153:3: (otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) ) )
+                    // InternalAnsic.g:7141:3: (otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) )
                     {
-                    // InternalAnsic.g:7153:3: (otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) ) )
-                    // InternalAnsic.g:7154:4: otherlv_0= '*' ( (lv_cast_expression_1_0= rulecast_expression ) )
+                    // InternalAnsic.g:7141:3: (otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:7142:4: otherlv_0= '*' ( (lv_assignment_expression_1_0= ruleassignment_expression ) )
                     {
                     otherlv_0=(Token)match(input,67,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18623,19 +18624,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_0, grammarAccess.getMultiplicative_expression_complementAccess().getAsteriskKeyword_0_0());
                       			
                     }
-                    // InternalAnsic.g:7158:4: ( (lv_cast_expression_1_0= rulecast_expression ) )
-                    // InternalAnsic.g:7159:5: (lv_cast_expression_1_0= rulecast_expression )
+                    // InternalAnsic.g:7146:4: ( (lv_assignment_expression_1_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:7147:5: (lv_assignment_expression_1_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:7159:5: (lv_cast_expression_1_0= rulecast_expression )
-                    // InternalAnsic.g:7160:6: lv_cast_expression_1_0= rulecast_expression
+                    // InternalAnsic.g:7147:5: (lv_assignment_expression_1_0= ruleassignment_expression )
+                    // InternalAnsic.g:7148:6: lv_assignment_expression_1_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getCast_expressionCast_expressionParserRuleCall_0_1_0());
+                      						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_1_0());
                       					
                     }
                     pushFollow(FOLLOW_2);
-                    lv_cast_expression_1_0=rulecast_expression();
+                    lv_assignment_expression_1_0=ruleassignment_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -18646,9 +18647,9 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       						}
                       						set(
                       							current,
-                      							"cast_expression",
-                      							lv_cast_expression_1_0,
-                      							"org.xtext.example.Ansic.cast_expression");
+                      							"assignment_expression",
+                      							lv_assignment_expression_1_0,
+                      							"org.xtext.example.Ansic.assignment_expression");
                       						afterParserOrEnumRuleCall();
                       					
                     }
@@ -18665,10 +18666,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:7179:3: (otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) ) )
+                    // InternalAnsic.g:7167:3: (otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
                     {
-                    // InternalAnsic.g:7179:3: (otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) ) )
-                    // InternalAnsic.g:7180:4: otherlv_2= '/' ( (lv_cast_expression_3_0= rulecast_expression ) )
+                    // InternalAnsic.g:7167:3: (otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:7168:4: otherlv_2= '/' ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
                     {
                     otherlv_2=(Token)match(input,80,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18676,19 +18677,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getMultiplicative_expression_complementAccess().getSolidusKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:7184:4: ( (lv_cast_expression_3_0= rulecast_expression ) )
-                    // InternalAnsic.g:7185:5: (lv_cast_expression_3_0= rulecast_expression )
+                    // InternalAnsic.g:7172:4: ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:7173:5: (lv_assignment_expression_3_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:7185:5: (lv_cast_expression_3_0= rulecast_expression )
-                    // InternalAnsic.g:7186:6: lv_cast_expression_3_0= rulecast_expression
+                    // InternalAnsic.g:7173:5: (lv_assignment_expression_3_0= ruleassignment_expression )
+                    // InternalAnsic.g:7174:6: lv_assignment_expression_3_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getCast_expressionCast_expressionParserRuleCall_1_1_0());
+                      						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_1_0());
                       					
                     }
                     pushFollow(FOLLOW_2);
-                    lv_cast_expression_3_0=rulecast_expression();
+                    lv_assignment_expression_3_0=ruleassignment_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -18699,9 +18700,9 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       						}
                       						set(
                       							current,
-                      							"cast_expression",
-                      							lv_cast_expression_3_0,
-                      							"org.xtext.example.Ansic.cast_expression");
+                      							"assignment_expression",
+                      							lv_assignment_expression_3_0,
+                      							"org.xtext.example.Ansic.assignment_expression");
                       						afterParserOrEnumRuleCall();
                       					
                     }
@@ -18718,10 +18719,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:7205:3: (otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) ) )
+                    // InternalAnsic.g:7193:3: (otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) ) )
                     {
-                    // InternalAnsic.g:7205:3: (otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) ) )
-                    // InternalAnsic.g:7206:4: otherlv_4= '%' ( (lv_cast_expression_5_0= rulecast_expression ) )
+                    // InternalAnsic.g:7193:3: (otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:7194:4: otherlv_4= '%' ( (lv_assignment_expression_5_0= ruleassignment_expression ) )
                     {
                     otherlv_4=(Token)match(input,81,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18729,19 +18730,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_4, grammarAccess.getMultiplicative_expression_complementAccess().getPercentSignKeyword_2_0());
                       			
                     }
-                    // InternalAnsic.g:7210:4: ( (lv_cast_expression_5_0= rulecast_expression ) )
-                    // InternalAnsic.g:7211:5: (lv_cast_expression_5_0= rulecast_expression )
+                    // InternalAnsic.g:7198:4: ( (lv_assignment_expression_5_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:7199:5: (lv_assignment_expression_5_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:7211:5: (lv_cast_expression_5_0= rulecast_expression )
-                    // InternalAnsic.g:7212:6: lv_cast_expression_5_0= rulecast_expression
+                    // InternalAnsic.g:7199:5: (lv_assignment_expression_5_0= ruleassignment_expression )
+                    // InternalAnsic.g:7200:6: lv_assignment_expression_5_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getCast_expressionCast_expressionParserRuleCall_2_1_0());
+                      						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_2_1_0());
                       					
                     }
                     pushFollow(FOLLOW_2);
-                    lv_cast_expression_5_0=rulecast_expression();
+                    lv_assignment_expression_5_0=ruleassignment_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -18752,9 +18753,9 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       						}
                       						set(
                       							current,
-                      							"cast_expression",
-                      							lv_cast_expression_5_0,
-                      							"org.xtext.example.Ansic.cast_expression");
+                      							"assignment_expression",
+                      							lv_assignment_expression_5_0,
+                      							"org.xtext.example.Ansic.assignment_expression");
                       						afterParserOrEnumRuleCall();
                       					
                     }
@@ -18795,7 +18796,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleadditive_expression"
-    // InternalAnsic.g:7234:1: entryRuleadditive_expression returns [EObject current=null] : iv_ruleadditive_expression= ruleadditive_expression EOF ;
+    // InternalAnsic.g:7222:1: entryRuleadditive_expression returns [EObject current=null] : iv_ruleadditive_expression= ruleadditive_expression EOF ;
     public final EObject entryRuleadditive_expression() throws RecognitionException {
         EObject current = null;
 
@@ -18803,8 +18804,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7234:60: (iv_ruleadditive_expression= ruleadditive_expression EOF )
-            // InternalAnsic.g:7235:2: iv_ruleadditive_expression= ruleadditive_expression EOF
+            // InternalAnsic.g:7222:60: (iv_ruleadditive_expression= ruleadditive_expression EOF )
+            // InternalAnsic.g:7223:2: iv_ruleadditive_expression= ruleadditive_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditive_expressionRule()); 
@@ -18835,7 +18836,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleadditive_expression"
-    // InternalAnsic.g:7241:1: ruleadditive_expression returns [EObject current=null] : ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) ) ;
+    // InternalAnsic.g:7229:1: ruleadditive_expression returns [EObject current=null] : ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) ) ;
     public final EObject ruleadditive_expression() throws RecognitionException {
         EObject current = null;
 
@@ -18848,17 +18849,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7247:2: ( ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) ) )
-            // InternalAnsic.g:7248:2: ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )
+            // InternalAnsic.g:7235:2: ( ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) ) )
+            // InternalAnsic.g:7236:2: ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )
             {
-            // InternalAnsic.g:7248:2: ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )
-            // InternalAnsic.g:7249:3: ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
+            // InternalAnsic.g:7236:2: ( ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )
+            // InternalAnsic.g:7237:3: ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
             {
-            // InternalAnsic.g:7249:3: ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) )
-            // InternalAnsic.g:7250:4: (lv_multiplicative_expression_0_0= rulemultiplicative_expression )
+            // InternalAnsic.g:7237:3: ( (lv_multiplicative_expression_0_0= rulemultiplicative_expression ) )
+            // InternalAnsic.g:7238:4: (lv_multiplicative_expression_0_0= rulemultiplicative_expression )
             {
-            // InternalAnsic.g:7250:4: (lv_multiplicative_expression_0_0= rulemultiplicative_expression )
-            // InternalAnsic.g:7251:5: lv_multiplicative_expression_0_0= rulemultiplicative_expression
+            // InternalAnsic.g:7238:4: (lv_multiplicative_expression_0_0= rulemultiplicative_expression )
+            // InternalAnsic.g:7239:5: lv_multiplicative_expression_0_0= rulemultiplicative_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -18889,11 +18890,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:7268:3: ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
-            // InternalAnsic.g:7269:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
+            // InternalAnsic.g:7256:3: ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
+            // InternalAnsic.g:7257:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
             {
-            // InternalAnsic.g:7269:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
-            // InternalAnsic.g:7270:5: lv_additive_expression_linha_1_0= ruleadditive_expression_linha
+            // InternalAnsic.g:7257:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
+            // InternalAnsic.g:7258:5: lv_additive_expression_linha_1_0= ruleadditive_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -18949,7 +18950,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleadditive_expression_linha"
-    // InternalAnsic.g:7291:1: entryRuleadditive_expression_linha returns [EObject current=null] : iv_ruleadditive_expression_linha= ruleadditive_expression_linha EOF ;
+    // InternalAnsic.g:7279:1: entryRuleadditive_expression_linha returns [EObject current=null] : iv_ruleadditive_expression_linha= ruleadditive_expression_linha EOF ;
     public final EObject entryRuleadditive_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -18957,8 +18958,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7291:66: (iv_ruleadditive_expression_linha= ruleadditive_expression_linha EOF )
-            // InternalAnsic.g:7292:2: iv_ruleadditive_expression_linha= ruleadditive_expression_linha EOF
+            // InternalAnsic.g:7279:66: (iv_ruleadditive_expression_linha= ruleadditive_expression_linha EOF )
+            // InternalAnsic.g:7280:2: iv_ruleadditive_expression_linha= ruleadditive_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditive_expression_linhaRule()); 
@@ -18989,82 +18990,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleadditive_expression_linha"
-    // InternalAnsic.g:7298:1: ruleadditive_expression_linha returns [EObject current=null] : ( () ( ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:7286:1: ruleadditive_expression_linha returns [EObject current=null] : ( ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )? ;
     public final EObject ruleadditive_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_additive_expression_complement_1_0 = null;
+        EObject lv_additive_expression_complement_0_0 = null;
 
-        EObject lv_additive_expression_linha_2_0 = null;
+        EObject lv_additive_expression_linha_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7304:2: ( ( () ( ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) ) )? ) )
-            // InternalAnsic.g:7305:2: ( () ( ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) ) )? )
+            // InternalAnsic.g:7292:2: ( ( ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )? )
+            // InternalAnsic.g:7293:2: ( ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )?
             {
-            // InternalAnsic.g:7305:2: ( () ( ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) ) )? )
-            // InternalAnsic.g:7306:3: () ( ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:7306:3: ()
-            // InternalAnsic.g:7307:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getAdditive_expression_linhaAccess().getAdditiveExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:7316:3: ( ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) ) )?
+            // InternalAnsic.g:7293:2: ( ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
-            if ( ((LA55_0>=82 && LA55_0<=83)) ) {
-                alt55=1;
+            if ( (LA55_0==82) ) {
+                int LA55_1 = input.LA(2);
+
+                if ( (synpred137_InternalAnsic()) ) {
+                    alt55=1;
+                }
+            }
+            else if ( (LA55_0==83) ) {
+                int LA55_2 = input.LA(2);
+
+                if ( (synpred137_InternalAnsic()) ) {
+                    alt55=1;
+                }
             }
             switch (alt55) {
                 case 1 :
-                    // InternalAnsic.g:7317:4: ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) )
+                    // InternalAnsic.g:7294:3: ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
                     {
-                    // InternalAnsic.g:7317:4: ( (lv_additive_expression_complement_1_0= ruleadditive_expression_complement ) )
-                    // InternalAnsic.g:7318:5: (lv_additive_expression_complement_1_0= ruleadditive_expression_complement )
+                    // InternalAnsic.g:7294:3: ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) )
+                    // InternalAnsic.g:7295:4: (lv_additive_expression_complement_0_0= ruleadditive_expression_complement )
                     {
-                    // InternalAnsic.g:7318:5: (lv_additive_expression_complement_1_0= ruleadditive_expression_complement )
-                    // InternalAnsic.g:7319:6: lv_additive_expression_complement_1_0= ruleadditive_expression_complement
+                    // InternalAnsic.g:7295:4: (lv_additive_expression_complement_0_0= ruleadditive_expression_complement )
+                    // InternalAnsic.g:7296:5: lv_additive_expression_complement_0_0= ruleadditive_expression_complement
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getAdditive_expression_linhaAccess().getAdditive_expression_complementAdditive_expression_complementParserRuleCall_1_0_0());
-                      					
+                      					newCompositeNode(grammarAccess.getAdditive_expression_linhaAccess().getAdditive_expression_complementAdditive_expression_complementParserRuleCall_0_0());
+                      				
                     }
                     pushFollow(FOLLOW_32);
-                    lv_additive_expression_complement_1_0=ruleadditive_expression_complement();
+                    lv_additive_expression_complement_0_0=ruleadditive_expression_complement();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getAdditive_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"additive_expression_complement",
-                      							lv_additive_expression_complement_1_0,
-                      							"org.xtext.example.Ansic.additive_expression_complement");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getAdditive_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"additive_expression_complement",
+                      						lv_additive_expression_complement_0_0,
+                      						"org.xtext.example.Ansic.additive_expression_complement");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -19072,34 +19063,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:7336:4: ( (lv_additive_expression_linha_2_0= ruleadditive_expression_linha ) )
-                    // InternalAnsic.g:7337:5: (lv_additive_expression_linha_2_0= ruleadditive_expression_linha )
+                    // InternalAnsic.g:7313:3: ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
+                    // InternalAnsic.g:7314:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
                     {
-                    // InternalAnsic.g:7337:5: (lv_additive_expression_linha_2_0= ruleadditive_expression_linha )
-                    // InternalAnsic.g:7338:6: lv_additive_expression_linha_2_0= ruleadditive_expression_linha
+                    // InternalAnsic.g:7314:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
+                    // InternalAnsic.g:7315:5: lv_additive_expression_linha_1_0= ruleadditive_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getAdditive_expression_linhaAccess().getAdditive_expression_linhaAdditive_expression_linhaParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getAdditive_expression_linhaAccess().getAdditive_expression_linhaAdditive_expression_linhaParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_additive_expression_linha_2_0=ruleadditive_expression_linha();
+                    lv_additive_expression_linha_1_0=ruleadditive_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getAdditive_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"additive_expression_linha",
-                      							lv_additive_expression_linha_2_0,
-                      							"org.xtext.example.Ansic.additive_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getAdditive_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"additive_expression_linha",
+                      						lv_additive_expression_linha_1_0,
+                      						"org.xtext.example.Ansic.additive_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -19110,9 +19101,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -19138,7 +19126,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleadditive_expression_complement"
-    // InternalAnsic.g:7360:1: entryRuleadditive_expression_complement returns [EObject current=null] : iv_ruleadditive_expression_complement= ruleadditive_expression_complement EOF ;
+    // InternalAnsic.g:7336:1: entryRuleadditive_expression_complement returns [EObject current=null] : iv_ruleadditive_expression_complement= ruleadditive_expression_complement EOF ;
     public final EObject entryRuleadditive_expression_complement() throws RecognitionException {
         EObject current = null;
 
@@ -19146,8 +19134,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7360:71: (iv_ruleadditive_expression_complement= ruleadditive_expression_complement EOF )
-            // InternalAnsic.g:7361:2: iv_ruleadditive_expression_complement= ruleadditive_expression_complement EOF
+            // InternalAnsic.g:7336:71: (iv_ruleadditive_expression_complement= ruleadditive_expression_complement EOF )
+            // InternalAnsic.g:7337:2: iv_ruleadditive_expression_complement= ruleadditive_expression_complement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditive_expression_complementRule()); 
@@ -19178,25 +19166,25 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleadditive_expression_complement"
-    // InternalAnsic.g:7367:1: ruleadditive_expression_complement returns [EObject current=null] : ( (otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) ) ) | (otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) ) ) ) ;
+    // InternalAnsic.g:7343:1: ruleadditive_expression_complement returns [EObject current=null] : ( (otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) ) ;
     public final EObject ruleadditive_expression_complement() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
-        EObject lv_multiplicative_expression_1_0 = null;
+        EObject lv_assignment_expression_1_0 = null;
 
-        EObject lv_multiplicative_expression_3_0 = null;
+        EObject lv_assignment_expression_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7373:2: ( ( (otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) ) ) | (otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) ) ) ) )
-            // InternalAnsic.g:7374:2: ( (otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) ) ) | (otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) ) ) )
+            // InternalAnsic.g:7349:2: ( ( (otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) ) )
+            // InternalAnsic.g:7350:2: ( (otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )
             {
-            // InternalAnsic.g:7374:2: ( (otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) ) ) | (otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) ) ) )
+            // InternalAnsic.g:7350:2: ( (otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) ) | (otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )
             int alt56=2;
             int LA56_0 = input.LA(1);
 
@@ -19215,10 +19203,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt56) {
                 case 1 :
-                    // InternalAnsic.g:7375:3: (otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) ) )
+                    // InternalAnsic.g:7351:3: (otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) )
                     {
-                    // InternalAnsic.g:7375:3: (otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) ) )
-                    // InternalAnsic.g:7376:4: otherlv_0= '+' ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) )
+                    // InternalAnsic.g:7351:3: (otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:7352:4: otherlv_0= '+' ( (lv_assignment_expression_1_0= ruleassignment_expression ) )
                     {
                     otherlv_0=(Token)match(input,82,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19226,19 +19214,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_0, grammarAccess.getAdditive_expression_complementAccess().getPlusSignKeyword_0_0());
                       			
                     }
-                    // InternalAnsic.g:7380:4: ( (lv_multiplicative_expression_1_0= rulemultiplicative_expression ) )
-                    // InternalAnsic.g:7381:5: (lv_multiplicative_expression_1_0= rulemultiplicative_expression )
+                    // InternalAnsic.g:7356:4: ( (lv_assignment_expression_1_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:7357:5: (lv_assignment_expression_1_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:7381:5: (lv_multiplicative_expression_1_0= rulemultiplicative_expression )
-                    // InternalAnsic.g:7382:6: lv_multiplicative_expression_1_0= rulemultiplicative_expression
+                    // InternalAnsic.g:7357:5: (lv_assignment_expression_1_0= ruleassignment_expression )
+                    // InternalAnsic.g:7358:6: lv_assignment_expression_1_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getMultiplicative_expressionMultiplicative_expressionParserRuleCall_0_1_0());
+                      						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_1_0());
                       					
                     }
                     pushFollow(FOLLOW_2);
-                    lv_multiplicative_expression_1_0=rulemultiplicative_expression();
+                    lv_assignment_expression_1_0=ruleassignment_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -19249,9 +19237,9 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       						}
                       						set(
                       							current,
-                      							"multiplicative_expression",
-                      							lv_multiplicative_expression_1_0,
-                      							"org.xtext.example.Ansic.multiplicative_expression");
+                      							"assignment_expression",
+                      							lv_assignment_expression_1_0,
+                      							"org.xtext.example.Ansic.assignment_expression");
                       						afterParserOrEnumRuleCall();
                       					
                     }
@@ -19268,10 +19256,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:7401:3: (otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) ) )
+                    // InternalAnsic.g:7377:3: (otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
                     {
-                    // InternalAnsic.g:7401:3: (otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) ) )
-                    // InternalAnsic.g:7402:4: otherlv_2= '-' ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) )
+                    // InternalAnsic.g:7377:3: (otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:7378:4: otherlv_2= '-' ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
                     {
                     otherlv_2=(Token)match(input,83,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19279,19 +19267,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getAdditive_expression_complementAccess().getHyphenMinusKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:7406:4: ( (lv_multiplicative_expression_3_0= rulemultiplicative_expression ) )
-                    // InternalAnsic.g:7407:5: (lv_multiplicative_expression_3_0= rulemultiplicative_expression )
+                    // InternalAnsic.g:7382:4: ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:7383:5: (lv_assignment_expression_3_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:7407:5: (lv_multiplicative_expression_3_0= rulemultiplicative_expression )
-                    // InternalAnsic.g:7408:6: lv_multiplicative_expression_3_0= rulemultiplicative_expression
+                    // InternalAnsic.g:7383:5: (lv_assignment_expression_3_0= ruleassignment_expression )
+                    // InternalAnsic.g:7384:6: lv_assignment_expression_3_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getMultiplicative_expressionMultiplicative_expressionParserRuleCall_1_1_0());
+                      						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_1_0());
                       					
                     }
                     pushFollow(FOLLOW_2);
-                    lv_multiplicative_expression_3_0=rulemultiplicative_expression();
+                    lv_assignment_expression_3_0=ruleassignment_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -19302,9 +19290,9 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       						}
                       						set(
                       							current,
-                      							"multiplicative_expression",
-                      							lv_multiplicative_expression_3_0,
-                      							"org.xtext.example.Ansic.multiplicative_expression");
+                      							"assignment_expression",
+                      							lv_assignment_expression_3_0,
+                      							"org.xtext.example.Ansic.assignment_expression");
                       						afterParserOrEnumRuleCall();
                       					
                     }
@@ -19345,7 +19333,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleshift_expression"
-    // InternalAnsic.g:7430:1: entryRuleshift_expression returns [EObject current=null] : iv_ruleshift_expression= ruleshift_expression EOF ;
+    // InternalAnsic.g:7406:1: entryRuleshift_expression returns [EObject current=null] : iv_ruleshift_expression= ruleshift_expression EOF ;
     public final EObject entryRuleshift_expression() throws RecognitionException {
         EObject current = null;
 
@@ -19353,8 +19341,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7430:57: (iv_ruleshift_expression= ruleshift_expression EOF )
-            // InternalAnsic.g:7431:2: iv_ruleshift_expression= ruleshift_expression EOF
+            // InternalAnsic.g:7406:57: (iv_ruleshift_expression= ruleshift_expression EOF )
+            // InternalAnsic.g:7407:2: iv_ruleshift_expression= ruleshift_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getShift_expressionRule()); 
@@ -19385,7 +19373,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleshift_expression"
-    // InternalAnsic.g:7437:1: ruleshift_expression returns [EObject current=null] : ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) ) ;
+    // InternalAnsic.g:7413:1: ruleshift_expression returns [EObject current=null] : ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) ) ;
     public final EObject ruleshift_expression() throws RecognitionException {
         EObject current = null;
 
@@ -19398,17 +19386,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7443:2: ( ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) ) )
-            // InternalAnsic.g:7444:2: ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )
+            // InternalAnsic.g:7419:2: ( ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) ) )
+            // InternalAnsic.g:7420:2: ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )
             {
-            // InternalAnsic.g:7444:2: ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )
-            // InternalAnsic.g:7445:3: ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
+            // InternalAnsic.g:7420:2: ( ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )
+            // InternalAnsic.g:7421:3: ( (lv_additive_expression_0_0= ruleadditive_expression ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
             {
-            // InternalAnsic.g:7445:3: ( (lv_additive_expression_0_0= ruleadditive_expression ) )
-            // InternalAnsic.g:7446:4: (lv_additive_expression_0_0= ruleadditive_expression )
+            // InternalAnsic.g:7421:3: ( (lv_additive_expression_0_0= ruleadditive_expression ) )
+            // InternalAnsic.g:7422:4: (lv_additive_expression_0_0= ruleadditive_expression )
             {
-            // InternalAnsic.g:7446:4: (lv_additive_expression_0_0= ruleadditive_expression )
-            // InternalAnsic.g:7447:5: lv_additive_expression_0_0= ruleadditive_expression
+            // InternalAnsic.g:7422:4: (lv_additive_expression_0_0= ruleadditive_expression )
+            // InternalAnsic.g:7423:5: lv_additive_expression_0_0= ruleadditive_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -19439,11 +19427,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:7464:3: ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
-            // InternalAnsic.g:7465:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
+            // InternalAnsic.g:7440:3: ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
+            // InternalAnsic.g:7441:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
             {
-            // InternalAnsic.g:7465:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
-            // InternalAnsic.g:7466:5: lv_shift_expression_linha_1_0= ruleshift_expression_linha
+            // InternalAnsic.g:7441:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
+            // InternalAnsic.g:7442:5: lv_shift_expression_linha_1_0= ruleshift_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -19499,7 +19487,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleshift_expression_linha"
-    // InternalAnsic.g:7487:1: entryRuleshift_expression_linha returns [EObject current=null] : iv_ruleshift_expression_linha= ruleshift_expression_linha EOF ;
+    // InternalAnsic.g:7463:1: entryRuleshift_expression_linha returns [EObject current=null] : iv_ruleshift_expression_linha= ruleshift_expression_linha EOF ;
     public final EObject entryRuleshift_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -19507,8 +19495,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7487:63: (iv_ruleshift_expression_linha= ruleshift_expression_linha EOF )
-            // InternalAnsic.g:7488:2: iv_ruleshift_expression_linha= ruleshift_expression_linha EOF
+            // InternalAnsic.g:7463:63: (iv_ruleshift_expression_linha= ruleshift_expression_linha EOF )
+            // InternalAnsic.g:7464:2: iv_ruleshift_expression_linha= ruleshift_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getShift_expression_linhaRule()); 
@@ -19539,78 +19527,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleshift_expression_linha"
-    // InternalAnsic.g:7494:1: ruleshift_expression_linha returns [EObject current=null] : ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:7470:1: ruleshift_expression_linha returns [EObject current=null] : ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )? ;
     public final EObject ruleshift_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_shift_expression_complement_1_0 = null;
+        EObject lv_shift_expression_complement_0_0 = null;
 
-        EObject lv_shift_expression_linha_2_0 = null;
+        EObject lv_shift_expression_linha_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7500:2: ( ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )? ) )
-            // InternalAnsic.g:7501:2: ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )? )
+            // InternalAnsic.g:7476:2: ( ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )? )
+            // InternalAnsic.g:7477:2: ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )?
             {
-            // InternalAnsic.g:7501:2: ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )? )
-            // InternalAnsic.g:7502:3: () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:7502:3: ()
-            // InternalAnsic.g:7503:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getShift_expression_linhaAccess().getShiftExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:7512:3: ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )?
+            // InternalAnsic.g:7477:2: ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )?
             int alt57=2;
-            alt57 = dfa57.predict(input);
+            int LA57_0 = input.LA(1);
+
+            if ( (LA57_0==84) ) {
+                int LA57_1 = input.LA(2);
+
+                if ( (synpred139_InternalAnsic()) ) {
+                    alt57=1;
+                }
+            }
+            else if ( (LA57_0==85) ) {
+                int LA57_2 = input.LA(2);
+
+                if ( (synpred139_InternalAnsic()) ) {
+                    alt57=1;
+                }
+            }
             switch (alt57) {
                 case 1 :
-                    // InternalAnsic.g:7513:4: ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) )
+                    // InternalAnsic.g:7478:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
                     {
-                    // InternalAnsic.g:7513:4: ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) )
-                    // InternalAnsic.g:7514:5: (lv_shift_expression_complement_1_0= ruleshift_expression_complement )
+                    // InternalAnsic.g:7478:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) )
+                    // InternalAnsic.g:7479:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
                     {
-                    // InternalAnsic.g:7514:5: (lv_shift_expression_complement_1_0= ruleshift_expression_complement )
-                    // InternalAnsic.g:7515:6: lv_shift_expression_complement_1_0= ruleshift_expression_complement
+                    // InternalAnsic.g:7479:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
+                    // InternalAnsic.g:7480:5: lv_shift_expression_complement_0_0= ruleshift_expression_complement
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_1_0_0());
-                      					
+                      					newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0());
+                      				
                     }
                     pushFollow(FOLLOW_33);
-                    lv_shift_expression_complement_1_0=ruleshift_expression_complement();
+                    lv_shift_expression_complement_0_0=ruleshift_expression_complement();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getShift_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"shift_expression_complement",
-                      							lv_shift_expression_complement_1_0,
-                      							"org.xtext.example.Ansic.shift_expression_complement");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getShift_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"shift_expression_complement",
+                      						lv_shift_expression_complement_0_0,
+                      						"org.xtext.example.Ansic.shift_expression_complement");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -19618,34 +19600,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:7532:4: ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) )
-                    // InternalAnsic.g:7533:5: (lv_shift_expression_linha_2_0= ruleshift_expression_linha )
+                    // InternalAnsic.g:7497:3: ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
+                    // InternalAnsic.g:7498:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
                     {
-                    // InternalAnsic.g:7533:5: (lv_shift_expression_linha_2_0= ruleshift_expression_linha )
-                    // InternalAnsic.g:7534:6: lv_shift_expression_linha_2_0= ruleshift_expression_linha
+                    // InternalAnsic.g:7498:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
+                    // InternalAnsic.g:7499:5: lv_shift_expression_linha_1_0= ruleshift_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_linhaShift_expression_linhaParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_linhaShift_expression_linhaParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_shift_expression_linha_2_0=ruleshift_expression_linha();
+                    lv_shift_expression_linha_1_0=ruleshift_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getShift_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"shift_expression_linha",
-                      							lv_shift_expression_linha_2_0,
-                      							"org.xtext.example.Ansic.shift_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getShift_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"shift_expression_linha",
+                      						lv_shift_expression_linha_1_0,
+                      						"org.xtext.example.Ansic.shift_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -19656,9 +19638,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -19684,7 +19663,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleshift_expression_complement"
-    // InternalAnsic.g:7556:1: entryRuleshift_expression_complement returns [EObject current=null] : iv_ruleshift_expression_complement= ruleshift_expression_complement EOF ;
+    // InternalAnsic.g:7520:1: entryRuleshift_expression_complement returns [EObject current=null] : iv_ruleshift_expression_complement= ruleshift_expression_complement EOF ;
     public final EObject entryRuleshift_expression_complement() throws RecognitionException {
         EObject current = null;
 
@@ -19692,8 +19671,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7556:68: (iv_ruleshift_expression_complement= ruleshift_expression_complement EOF )
-            // InternalAnsic.g:7557:2: iv_ruleshift_expression_complement= ruleshift_expression_complement EOF
+            // InternalAnsic.g:7520:68: (iv_ruleshift_expression_complement= ruleshift_expression_complement EOF )
+            // InternalAnsic.g:7521:2: iv_ruleshift_expression_complement= ruleshift_expression_complement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getShift_expression_complementRule()); 
@@ -19724,7 +19703,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleshift_expression_complement"
-    // InternalAnsic.g:7563:1: ruleshift_expression_complement returns [EObject current=null] : ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) ) ;
+    // InternalAnsic.g:7527:1: ruleshift_expression_complement returns [EObject current=null] : ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) ) ;
     public final EObject ruleshift_expression_complement() throws RecognitionException {
         EObject current = null;
 
@@ -19739,10 +19718,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7569:2: ( ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) ) )
-            // InternalAnsic.g:7570:2: ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) )
+            // InternalAnsic.g:7533:2: ( ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) ) )
+            // InternalAnsic.g:7534:2: ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) )
             {
-            // InternalAnsic.g:7570:2: ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) )
+            // InternalAnsic.g:7534:2: ( (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) ) | (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) ) )
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -19761,10 +19740,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt58) {
                 case 1 :
-                    // InternalAnsic.g:7571:3: (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) )
+                    // InternalAnsic.g:7535:3: (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) )
                     {
-                    // InternalAnsic.g:7571:3: (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) )
-                    // InternalAnsic.g:7572:4: otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) )
+                    // InternalAnsic.g:7535:3: (otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) ) )
+                    // InternalAnsic.g:7536:4: otherlv_0= '<<' ( (lv_additive_expression_1_0= ruleadditive_expression ) )
                     {
                     otherlv_0=(Token)match(input,84,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19772,11 +19751,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_0, grammarAccess.getShift_expression_complementAccess().getLessThanSignLessThanSignKeyword_0_0());
                       			
                     }
-                    // InternalAnsic.g:7576:4: ( (lv_additive_expression_1_0= ruleadditive_expression ) )
-                    // InternalAnsic.g:7577:5: (lv_additive_expression_1_0= ruleadditive_expression )
+                    // InternalAnsic.g:7540:4: ( (lv_additive_expression_1_0= ruleadditive_expression ) )
+                    // InternalAnsic.g:7541:5: (lv_additive_expression_1_0= ruleadditive_expression )
                     {
-                    // InternalAnsic.g:7577:5: (lv_additive_expression_1_0= ruleadditive_expression )
-                    // InternalAnsic.g:7578:6: lv_additive_expression_1_0= ruleadditive_expression
+                    // InternalAnsic.g:7541:5: (lv_additive_expression_1_0= ruleadditive_expression )
+                    // InternalAnsic.g:7542:6: lv_additive_expression_1_0= ruleadditive_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19814,10 +19793,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:7597:3: (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) )
+                    // InternalAnsic.g:7561:3: (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) )
                     {
-                    // InternalAnsic.g:7597:3: (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) )
-                    // InternalAnsic.g:7598:4: otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) )
+                    // InternalAnsic.g:7561:3: (otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) ) )
+                    // InternalAnsic.g:7562:4: otherlv_2= '>>' ( (lv_additive_expression_3_0= ruleadditive_expression ) )
                     {
                     otherlv_2=(Token)match(input,85,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19825,11 +19804,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getShift_expression_complementAccess().getGreaterThanSignGreaterThanSignKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:7602:4: ( (lv_additive_expression_3_0= ruleadditive_expression ) )
-                    // InternalAnsic.g:7603:5: (lv_additive_expression_3_0= ruleadditive_expression )
+                    // InternalAnsic.g:7566:4: ( (lv_additive_expression_3_0= ruleadditive_expression ) )
+                    // InternalAnsic.g:7567:5: (lv_additive_expression_3_0= ruleadditive_expression )
                     {
-                    // InternalAnsic.g:7603:5: (lv_additive_expression_3_0= ruleadditive_expression )
-                    // InternalAnsic.g:7604:6: lv_additive_expression_3_0= ruleadditive_expression
+                    // InternalAnsic.g:7567:5: (lv_additive_expression_3_0= ruleadditive_expression )
+                    // InternalAnsic.g:7568:6: lv_additive_expression_3_0= ruleadditive_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19891,7 +19870,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulerelational_expression"
-    // InternalAnsic.g:7626:1: entryRulerelational_expression returns [EObject current=null] : iv_rulerelational_expression= rulerelational_expression EOF ;
+    // InternalAnsic.g:7590:1: entryRulerelational_expression returns [EObject current=null] : iv_rulerelational_expression= rulerelational_expression EOF ;
     public final EObject entryRulerelational_expression() throws RecognitionException {
         EObject current = null;
 
@@ -19899,8 +19878,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7626:62: (iv_rulerelational_expression= rulerelational_expression EOF )
-            // InternalAnsic.g:7627:2: iv_rulerelational_expression= rulerelational_expression EOF
+            // InternalAnsic.g:7590:62: (iv_rulerelational_expression= rulerelational_expression EOF )
+            // InternalAnsic.g:7591:2: iv_rulerelational_expression= rulerelational_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRelational_expressionRule()); 
@@ -19931,7 +19910,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulerelational_expression"
-    // InternalAnsic.g:7633:1: rulerelational_expression returns [EObject current=null] : ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) ) ;
+    // InternalAnsic.g:7597:1: rulerelational_expression returns [EObject current=null] : ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) ) ;
     public final EObject rulerelational_expression() throws RecognitionException {
         EObject current = null;
 
@@ -19944,17 +19923,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7639:2: ( ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) ) )
-            // InternalAnsic.g:7640:2: ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )
+            // InternalAnsic.g:7603:2: ( ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) ) )
+            // InternalAnsic.g:7604:2: ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )
             {
-            // InternalAnsic.g:7640:2: ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )
-            // InternalAnsic.g:7641:3: ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
+            // InternalAnsic.g:7604:2: ( ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )
+            // InternalAnsic.g:7605:3: ( (lv_shift_expression_0_0= ruleshift_expression ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
             {
-            // InternalAnsic.g:7641:3: ( (lv_shift_expression_0_0= ruleshift_expression ) )
-            // InternalAnsic.g:7642:4: (lv_shift_expression_0_0= ruleshift_expression )
+            // InternalAnsic.g:7605:3: ( (lv_shift_expression_0_0= ruleshift_expression ) )
+            // InternalAnsic.g:7606:4: (lv_shift_expression_0_0= ruleshift_expression )
             {
-            // InternalAnsic.g:7642:4: (lv_shift_expression_0_0= ruleshift_expression )
-            // InternalAnsic.g:7643:5: lv_shift_expression_0_0= ruleshift_expression
+            // InternalAnsic.g:7606:4: (lv_shift_expression_0_0= ruleshift_expression )
+            // InternalAnsic.g:7607:5: lv_shift_expression_0_0= ruleshift_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -19985,11 +19964,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:7660:3: ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
-            // InternalAnsic.g:7661:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
+            // InternalAnsic.g:7624:3: ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
+            // InternalAnsic.g:7625:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
             {
-            // InternalAnsic.g:7661:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
-            // InternalAnsic.g:7662:5: lv_relational_expression_linha_1_0= rulerelational_expression_linha
+            // InternalAnsic.g:7625:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
+            // InternalAnsic.g:7626:5: lv_relational_expression_linha_1_0= rulerelational_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -20045,7 +20024,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulerelational_expression_linha"
-    // InternalAnsic.g:7683:1: entryRulerelational_expression_linha returns [EObject current=null] : iv_rulerelational_expression_linha= rulerelational_expression_linha EOF ;
+    // InternalAnsic.g:7647:1: entryRulerelational_expression_linha returns [EObject current=null] : iv_rulerelational_expression_linha= rulerelational_expression_linha EOF ;
     public final EObject entryRulerelational_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -20053,8 +20032,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7683:68: (iv_rulerelational_expression_linha= rulerelational_expression_linha EOF )
-            // InternalAnsic.g:7684:2: iv_rulerelational_expression_linha= rulerelational_expression_linha EOF
+            // InternalAnsic.g:7647:68: (iv_rulerelational_expression_linha= rulerelational_expression_linha EOF )
+            // InternalAnsic.g:7648:2: iv_rulerelational_expression_linha= rulerelational_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRelational_expression_linhaRule()); 
@@ -20085,82 +20064,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulerelational_expression_linha"
-    // InternalAnsic.g:7690:1: rulerelational_expression_linha returns [EObject current=null] : ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:7654:1: rulerelational_expression_linha returns [EObject current=null] : ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )? ;
     public final EObject rulerelational_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_shift_expression_complement_1_0 = null;
+        EObject lv_shift_expression_complement_0_0 = null;
 
-        EObject lv_relational_expression_linha_2_0 = null;
+        EObject lv_relational_expression_linha_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7696:2: ( ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) ) )? ) )
-            // InternalAnsic.g:7697:2: ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) ) )? )
+            // InternalAnsic.g:7660:2: ( ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )? )
+            // InternalAnsic.g:7661:2: ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )?
             {
-            // InternalAnsic.g:7697:2: ( () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) ) )? )
-            // InternalAnsic.g:7698:3: () ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:7698:3: ()
-            // InternalAnsic.g:7699:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getRelational_expression_linhaAccess().getRelationalExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:7708:3: ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) ) )?
+            // InternalAnsic.g:7661:2: ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )?
             int alt59=2;
             int LA59_0 = input.LA(1);
 
-            if ( ((LA59_0>=84 && LA59_0<=85)) ) {
-                alt59=1;
+            if ( (LA59_0==84) ) {
+                int LA59_1 = input.LA(2);
+
+                if ( (synpred141_InternalAnsic()) ) {
+                    alt59=1;
+                }
+            }
+            else if ( (LA59_0==85) ) {
+                int LA59_2 = input.LA(2);
+
+                if ( (synpred141_InternalAnsic()) ) {
+                    alt59=1;
+                }
             }
             switch (alt59) {
                 case 1 :
-                    // InternalAnsic.g:7709:4: ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) )
+                    // InternalAnsic.g:7662:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
                     {
-                    // InternalAnsic.g:7709:4: ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) )
-                    // InternalAnsic.g:7710:5: (lv_shift_expression_complement_1_0= ruleshift_expression_complement )
+                    // InternalAnsic.g:7662:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) )
+                    // InternalAnsic.g:7663:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
                     {
-                    // InternalAnsic.g:7710:5: (lv_shift_expression_complement_1_0= ruleshift_expression_complement )
-                    // InternalAnsic.g:7711:6: lv_shift_expression_complement_1_0= ruleshift_expression_complement
+                    // InternalAnsic.g:7663:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
+                    // InternalAnsic.g:7664:5: lv_shift_expression_complement_0_0= ruleshift_expression_complement
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_1_0_0());
-                      					
+                      					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0());
+                      				
                     }
                     pushFollow(FOLLOW_33);
-                    lv_shift_expression_complement_1_0=ruleshift_expression_complement();
+                    lv_shift_expression_complement_0_0=ruleshift_expression_complement();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getRelational_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"shift_expression_complement",
-                      							lv_shift_expression_complement_1_0,
-                      							"org.xtext.example.Ansic.shift_expression_complement");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getRelational_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"shift_expression_complement",
+                      						lv_shift_expression_complement_0_0,
+                      						"org.xtext.example.Ansic.shift_expression_complement");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -20168,34 +20137,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:7728:4: ( (lv_relational_expression_linha_2_0= rulerelational_expression_linha ) )
-                    // InternalAnsic.g:7729:5: (lv_relational_expression_linha_2_0= rulerelational_expression_linha )
+                    // InternalAnsic.g:7681:3: ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
+                    // InternalAnsic.g:7682:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
                     {
-                    // InternalAnsic.g:7729:5: (lv_relational_expression_linha_2_0= rulerelational_expression_linha )
-                    // InternalAnsic.g:7730:6: lv_relational_expression_linha_2_0= rulerelational_expression_linha
+                    // InternalAnsic.g:7682:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
+                    // InternalAnsic.g:7683:5: lv_relational_expression_linha_1_0= rulerelational_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_relational_expression_linha_2_0=rulerelational_expression_linha();
+                    lv_relational_expression_linha_1_0=rulerelational_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getRelational_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"relational_expression_linha",
-                      							lv_relational_expression_linha_2_0,
-                      							"org.xtext.example.Ansic.relational_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getRelational_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"relational_expression_linha",
+                      						lv_relational_expression_linha_1_0,
+                      						"org.xtext.example.Ansic.relational_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -20206,9 +20175,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -20234,7 +20200,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleequality_expression"
-    // InternalAnsic.g:7752:1: entryRuleequality_expression returns [EObject current=null] : iv_ruleequality_expression= ruleequality_expression EOF ;
+    // InternalAnsic.g:7704:1: entryRuleequality_expression returns [EObject current=null] : iv_ruleequality_expression= ruleequality_expression EOF ;
     public final EObject entryRuleequality_expression() throws RecognitionException {
         EObject current = null;
 
@@ -20242,8 +20208,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7752:60: (iv_ruleequality_expression= ruleequality_expression EOF )
-            // InternalAnsic.g:7753:2: iv_ruleequality_expression= ruleequality_expression EOF
+            // InternalAnsic.g:7704:60: (iv_ruleequality_expression= ruleequality_expression EOF )
+            // InternalAnsic.g:7705:2: iv_ruleequality_expression= ruleequality_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEquality_expressionRule()); 
@@ -20274,7 +20240,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleequality_expression"
-    // InternalAnsic.g:7759:1: ruleequality_expression returns [EObject current=null] : ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) ) ;
+    // InternalAnsic.g:7711:1: ruleequality_expression returns [EObject current=null] : ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) ) ;
     public final EObject ruleequality_expression() throws RecognitionException {
         EObject current = null;
 
@@ -20287,17 +20253,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7765:2: ( ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) ) )
-            // InternalAnsic.g:7766:2: ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )
+            // InternalAnsic.g:7717:2: ( ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) ) )
+            // InternalAnsic.g:7718:2: ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )
             {
-            // InternalAnsic.g:7766:2: ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )
-            // InternalAnsic.g:7767:3: ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
+            // InternalAnsic.g:7718:2: ( ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )
+            // InternalAnsic.g:7719:3: ( (lv_relational_expression_0_0= rulerelational_expression ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
             {
-            // InternalAnsic.g:7767:3: ( (lv_relational_expression_0_0= rulerelational_expression ) )
-            // InternalAnsic.g:7768:4: (lv_relational_expression_0_0= rulerelational_expression )
+            // InternalAnsic.g:7719:3: ( (lv_relational_expression_0_0= rulerelational_expression ) )
+            // InternalAnsic.g:7720:4: (lv_relational_expression_0_0= rulerelational_expression )
             {
-            // InternalAnsic.g:7768:4: (lv_relational_expression_0_0= rulerelational_expression )
-            // InternalAnsic.g:7769:5: lv_relational_expression_0_0= rulerelational_expression
+            // InternalAnsic.g:7720:4: (lv_relational_expression_0_0= rulerelational_expression )
+            // InternalAnsic.g:7721:5: lv_relational_expression_0_0= rulerelational_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -20328,11 +20294,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:7786:3: ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
-            // InternalAnsic.g:7787:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
+            // InternalAnsic.g:7738:3: ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
+            // InternalAnsic.g:7739:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
             {
-            // InternalAnsic.g:7787:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
-            // InternalAnsic.g:7788:5: lv_equality_expression_linha_1_0= ruleequality_expression_linha
+            // InternalAnsic.g:7739:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
+            // InternalAnsic.g:7740:5: lv_equality_expression_linha_1_0= ruleequality_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -20388,7 +20354,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleequality_expression_linha"
-    // InternalAnsic.g:7809:1: entryRuleequality_expression_linha returns [EObject current=null] : iv_ruleequality_expression_linha= ruleequality_expression_linha EOF ;
+    // InternalAnsic.g:7761:1: entryRuleequality_expression_linha returns [EObject current=null] : iv_ruleequality_expression_linha= ruleequality_expression_linha EOF ;
     public final EObject entryRuleequality_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -20396,8 +20362,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7809:66: (iv_ruleequality_expression_linha= ruleequality_expression_linha EOF )
-            // InternalAnsic.g:7810:2: iv_ruleequality_expression_linha= ruleequality_expression_linha EOF
+            // InternalAnsic.g:7761:66: (iv_ruleequality_expression_linha= ruleequality_expression_linha EOF )
+            // InternalAnsic.g:7762:2: iv_ruleequality_expression_linha= ruleequality_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEquality_expression_linhaRule()); 
@@ -20428,82 +20394,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleequality_expression_linha"
-    // InternalAnsic.g:7816:1: ruleequality_expression_linha returns [EObject current=null] : ( () ( ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:7768:1: ruleequality_expression_linha returns [EObject current=null] : ( ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )? ;
     public final EObject ruleequality_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_equality_expression_complement_1_0 = null;
+        EObject lv_equality_expression_complement_0_0 = null;
 
-        EObject lv_equality_expression_linha_2_0 = null;
+        EObject lv_equality_expression_linha_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:7822:2: ( ( () ( ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) ) )? ) )
-            // InternalAnsic.g:7823:2: ( () ( ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) ) )? )
+            // InternalAnsic.g:7774:2: ( ( ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )? )
+            // InternalAnsic.g:7775:2: ( ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )?
             {
-            // InternalAnsic.g:7823:2: ( () ( ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) ) )? )
-            // InternalAnsic.g:7824:3: () ( ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:7824:3: ()
-            // InternalAnsic.g:7825:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getEquality_expression_linhaAccess().getEqualityExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:7834:3: ( ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) ) )?
+            // InternalAnsic.g:7775:2: ( ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
-            if ( ((LA60_0>=86 && LA60_0<=87)) ) {
-                alt60=1;
+            if ( (LA60_0==86) ) {
+                int LA60_1 = input.LA(2);
+
+                if ( (synpred142_InternalAnsic()) ) {
+                    alt60=1;
+                }
+            }
+            else if ( (LA60_0==87) ) {
+                int LA60_2 = input.LA(2);
+
+                if ( (synpred142_InternalAnsic()) ) {
+                    alt60=1;
+                }
             }
             switch (alt60) {
                 case 1 :
-                    // InternalAnsic.g:7835:4: ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) )
+                    // InternalAnsic.g:7776:3: ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
                     {
-                    // InternalAnsic.g:7835:4: ( (lv_equality_expression_complement_1_0= ruleequality_expression_complement ) )
-                    // InternalAnsic.g:7836:5: (lv_equality_expression_complement_1_0= ruleequality_expression_complement )
+                    // InternalAnsic.g:7776:3: ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) )
+                    // InternalAnsic.g:7777:4: (lv_equality_expression_complement_0_0= ruleequality_expression_complement )
                     {
-                    // InternalAnsic.g:7836:5: (lv_equality_expression_complement_1_0= ruleequality_expression_complement )
-                    // InternalAnsic.g:7837:6: lv_equality_expression_complement_1_0= ruleequality_expression_complement
+                    // InternalAnsic.g:7777:4: (lv_equality_expression_complement_0_0= ruleequality_expression_complement )
+                    // InternalAnsic.g:7778:5: lv_equality_expression_complement_0_0= ruleequality_expression_complement
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getEquality_expression_linhaAccess().getEquality_expression_complementEquality_expression_complementParserRuleCall_1_0_0());
-                      					
+                      					newCompositeNode(grammarAccess.getEquality_expression_linhaAccess().getEquality_expression_complementEquality_expression_complementParserRuleCall_0_0());
+                      				
                     }
                     pushFollow(FOLLOW_34);
-                    lv_equality_expression_complement_1_0=ruleequality_expression_complement();
+                    lv_equality_expression_complement_0_0=ruleequality_expression_complement();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getEquality_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"equality_expression_complement",
-                      							lv_equality_expression_complement_1_0,
-                      							"org.xtext.example.Ansic.equality_expression_complement");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getEquality_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"equality_expression_complement",
+                      						lv_equality_expression_complement_0_0,
+                      						"org.xtext.example.Ansic.equality_expression_complement");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -20511,34 +20467,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:7854:4: ( (lv_equality_expression_linha_2_0= ruleequality_expression_linha ) )
-                    // InternalAnsic.g:7855:5: (lv_equality_expression_linha_2_0= ruleequality_expression_linha )
+                    // InternalAnsic.g:7795:3: ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
+                    // InternalAnsic.g:7796:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
                     {
-                    // InternalAnsic.g:7855:5: (lv_equality_expression_linha_2_0= ruleequality_expression_linha )
-                    // InternalAnsic.g:7856:6: lv_equality_expression_linha_2_0= ruleequality_expression_linha
+                    // InternalAnsic.g:7796:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
+                    // InternalAnsic.g:7797:5: lv_equality_expression_linha_1_0= ruleequality_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getEquality_expression_linhaAccess().getEquality_expression_linhaEquality_expression_linhaParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getEquality_expression_linhaAccess().getEquality_expression_linhaEquality_expression_linhaParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_equality_expression_linha_2_0=ruleequality_expression_linha();
+                    lv_equality_expression_linha_1_0=ruleequality_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getEquality_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"equality_expression_linha",
-                      							lv_equality_expression_linha_2_0,
-                      							"org.xtext.example.Ansic.equality_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getEquality_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"equality_expression_linha",
+                      						lv_equality_expression_linha_1_0,
+                      						"org.xtext.example.Ansic.equality_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -20549,9 +20505,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -20577,7 +20530,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleequality_expression_complement"
-    // InternalAnsic.g:7878:1: entryRuleequality_expression_complement returns [EObject current=null] : iv_ruleequality_expression_complement= ruleequality_expression_complement EOF ;
+    // InternalAnsic.g:7818:1: entryRuleequality_expression_complement returns [EObject current=null] : iv_ruleequality_expression_complement= ruleequality_expression_complement EOF ;
     public final EObject entryRuleequality_expression_complement() throws RecognitionException {
         EObject current = null;
 
@@ -20585,8 +20538,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7878:71: (iv_ruleequality_expression_complement= ruleequality_expression_complement EOF )
-            // InternalAnsic.g:7879:2: iv_ruleequality_expression_complement= ruleequality_expression_complement EOF
+            // InternalAnsic.g:7818:71: (iv_ruleequality_expression_complement= ruleequality_expression_complement EOF )
+            // InternalAnsic.g:7819:2: iv_ruleequality_expression_complement= ruleequality_expression_complement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEquality_expression_complementRule()); 
@@ -20617,7 +20570,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleequality_expression_complement"
-    // InternalAnsic.g:7885:1: ruleequality_expression_complement returns [EObject current=null] : ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) ) ;
+    // InternalAnsic.g:7825:1: ruleequality_expression_complement returns [EObject current=null] : ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) ) ;
     public final EObject ruleequality_expression_complement() throws RecognitionException {
         EObject current = null;
 
@@ -20632,10 +20585,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7891:2: ( ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) ) )
-            // InternalAnsic.g:7892:2: ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) )
+            // InternalAnsic.g:7831:2: ( ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) ) )
+            // InternalAnsic.g:7832:2: ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) )
             {
-            // InternalAnsic.g:7892:2: ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) )
+            // InternalAnsic.g:7832:2: ( (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) ) | (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) ) )
             int alt61=2;
             int LA61_0 = input.LA(1);
 
@@ -20654,10 +20607,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt61) {
                 case 1 :
-                    // InternalAnsic.g:7893:3: (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) )
+                    // InternalAnsic.g:7833:3: (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) )
                     {
-                    // InternalAnsic.g:7893:3: (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) )
-                    // InternalAnsic.g:7894:4: otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) )
+                    // InternalAnsic.g:7833:3: (otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) ) )
+                    // InternalAnsic.g:7834:4: otherlv_0= '==' ( (lv_relational_expression_1_0= rulerelational_expression ) )
                     {
                     otherlv_0=(Token)match(input,86,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20665,11 +20618,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_0, grammarAccess.getEquality_expression_complementAccess().getEqualsSignEqualsSignKeyword_0_0());
                       			
                     }
-                    // InternalAnsic.g:7898:4: ( (lv_relational_expression_1_0= rulerelational_expression ) )
-                    // InternalAnsic.g:7899:5: (lv_relational_expression_1_0= rulerelational_expression )
+                    // InternalAnsic.g:7838:4: ( (lv_relational_expression_1_0= rulerelational_expression ) )
+                    // InternalAnsic.g:7839:5: (lv_relational_expression_1_0= rulerelational_expression )
                     {
-                    // InternalAnsic.g:7899:5: (lv_relational_expression_1_0= rulerelational_expression )
-                    // InternalAnsic.g:7900:6: lv_relational_expression_1_0= rulerelational_expression
+                    // InternalAnsic.g:7839:5: (lv_relational_expression_1_0= rulerelational_expression )
+                    // InternalAnsic.g:7840:6: lv_relational_expression_1_0= rulerelational_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -20707,10 +20660,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:7919:3: (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) )
+                    // InternalAnsic.g:7859:3: (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) )
                     {
-                    // InternalAnsic.g:7919:3: (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) )
-                    // InternalAnsic.g:7920:4: otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) )
+                    // InternalAnsic.g:7859:3: (otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) ) )
+                    // InternalAnsic.g:7860:4: otherlv_2= '!=' ( (lv_relational_expression_3_0= rulerelational_expression ) )
                     {
                     otherlv_2=(Token)match(input,87,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20718,11 +20671,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getEquality_expression_complementAccess().getExclamationMarkEqualsSignKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:7924:4: ( (lv_relational_expression_3_0= rulerelational_expression ) )
-                    // InternalAnsic.g:7925:5: (lv_relational_expression_3_0= rulerelational_expression )
+                    // InternalAnsic.g:7864:4: ( (lv_relational_expression_3_0= rulerelational_expression ) )
+                    // InternalAnsic.g:7865:5: (lv_relational_expression_3_0= rulerelational_expression )
                     {
-                    // InternalAnsic.g:7925:5: (lv_relational_expression_3_0= rulerelational_expression )
-                    // InternalAnsic.g:7926:6: lv_relational_expression_3_0= rulerelational_expression
+                    // InternalAnsic.g:7865:5: (lv_relational_expression_3_0= rulerelational_expression )
+                    // InternalAnsic.g:7866:6: lv_relational_expression_3_0= rulerelational_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -20784,7 +20737,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulestatement"
-    // InternalAnsic.g:7948:1: entryRulestatement returns [EObject current=null] : iv_rulestatement= rulestatement EOF ;
+    // InternalAnsic.g:7888:1: entryRulestatement returns [EObject current=null] : iv_rulestatement= rulestatement EOF ;
     public final EObject entryRulestatement() throws RecognitionException {
         EObject current = null;
 
@@ -20792,8 +20745,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:7948:50: (iv_rulestatement= rulestatement EOF )
-            // InternalAnsic.g:7949:2: iv_rulestatement= rulestatement EOF
+            // InternalAnsic.g:7888:50: (iv_rulestatement= rulestatement EOF )
+            // InternalAnsic.g:7889:2: iv_rulestatement= rulestatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStatementRule()); 
@@ -20824,7 +20777,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulestatement"
-    // InternalAnsic.g:7955:1: rulestatement returns [EObject current=null] : ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) ) ;
+    // InternalAnsic.g:7895:1: rulestatement returns [EObject current=null] : ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) ) ;
     public final EObject rulestatement() throws RecognitionException {
         EObject current = null;
 
@@ -20845,10 +20798,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:7961:2: ( ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) ) )
-            // InternalAnsic.g:7962:2: ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) )
+            // InternalAnsic.g:7901:2: ( ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) ) )
+            // InternalAnsic.g:7902:2: ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) )
             {
-            // InternalAnsic.g:7962:2: ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) )
+            // InternalAnsic.g:7902:2: ( ( (lv_labeled_statement_0_0= rulelabeled_statement ) ) | ( (lv_compound_statement_1_0= rulecompound_statement ) ) | ( (lv_expression_statement_2_0= ruleexpression_statement ) ) | ( (lv_selection_statement_3_0= ruleselection_statement ) ) | ( (lv_iteration_statement_4_0= ruleiteration_statement ) ) | ( (lv_jump_statement_5_0= rulejump_statement ) ) )
             int alt62=6;
             switch ( input.LA(1) ) {
             case RULE_IDZ:
@@ -20933,13 +20886,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt62) {
                 case 1 :
-                    // InternalAnsic.g:7963:3: ( (lv_labeled_statement_0_0= rulelabeled_statement ) )
+                    // InternalAnsic.g:7903:3: ( (lv_labeled_statement_0_0= rulelabeled_statement ) )
                     {
-                    // InternalAnsic.g:7963:3: ( (lv_labeled_statement_0_0= rulelabeled_statement ) )
-                    // InternalAnsic.g:7964:4: (lv_labeled_statement_0_0= rulelabeled_statement )
+                    // InternalAnsic.g:7903:3: ( (lv_labeled_statement_0_0= rulelabeled_statement ) )
+                    // InternalAnsic.g:7904:4: (lv_labeled_statement_0_0= rulelabeled_statement )
                     {
-                    // InternalAnsic.g:7964:4: (lv_labeled_statement_0_0= rulelabeled_statement )
-                    // InternalAnsic.g:7965:5: lv_labeled_statement_0_0= rulelabeled_statement
+                    // InternalAnsic.g:7904:4: (lv_labeled_statement_0_0= rulelabeled_statement )
+                    // InternalAnsic.g:7905:5: lv_labeled_statement_0_0= rulelabeled_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -20974,13 +20927,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:7983:3: ( (lv_compound_statement_1_0= rulecompound_statement ) )
+                    // InternalAnsic.g:7923:3: ( (lv_compound_statement_1_0= rulecompound_statement ) )
                     {
-                    // InternalAnsic.g:7983:3: ( (lv_compound_statement_1_0= rulecompound_statement ) )
-                    // InternalAnsic.g:7984:4: (lv_compound_statement_1_0= rulecompound_statement )
+                    // InternalAnsic.g:7923:3: ( (lv_compound_statement_1_0= rulecompound_statement ) )
+                    // InternalAnsic.g:7924:4: (lv_compound_statement_1_0= rulecompound_statement )
                     {
-                    // InternalAnsic.g:7984:4: (lv_compound_statement_1_0= rulecompound_statement )
-                    // InternalAnsic.g:7985:5: lv_compound_statement_1_0= rulecompound_statement
+                    // InternalAnsic.g:7924:4: (lv_compound_statement_1_0= rulecompound_statement )
+                    // InternalAnsic.g:7925:5: lv_compound_statement_1_0= rulecompound_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21015,13 +20968,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:8003:3: ( (lv_expression_statement_2_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:7943:3: ( (lv_expression_statement_2_0= ruleexpression_statement ) )
                     {
-                    // InternalAnsic.g:8003:3: ( (lv_expression_statement_2_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8004:4: (lv_expression_statement_2_0= ruleexpression_statement )
+                    // InternalAnsic.g:7943:3: ( (lv_expression_statement_2_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:7944:4: (lv_expression_statement_2_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8004:4: (lv_expression_statement_2_0= ruleexpression_statement )
-                    // InternalAnsic.g:8005:5: lv_expression_statement_2_0= ruleexpression_statement
+                    // InternalAnsic.g:7944:4: (lv_expression_statement_2_0= ruleexpression_statement )
+                    // InternalAnsic.g:7945:5: lv_expression_statement_2_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21056,13 +21009,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:8023:3: ( (lv_selection_statement_3_0= ruleselection_statement ) )
+                    // InternalAnsic.g:7963:3: ( (lv_selection_statement_3_0= ruleselection_statement ) )
                     {
-                    // InternalAnsic.g:8023:3: ( (lv_selection_statement_3_0= ruleselection_statement ) )
-                    // InternalAnsic.g:8024:4: (lv_selection_statement_3_0= ruleselection_statement )
+                    // InternalAnsic.g:7963:3: ( (lv_selection_statement_3_0= ruleselection_statement ) )
+                    // InternalAnsic.g:7964:4: (lv_selection_statement_3_0= ruleselection_statement )
                     {
-                    // InternalAnsic.g:8024:4: (lv_selection_statement_3_0= ruleselection_statement )
-                    // InternalAnsic.g:8025:5: lv_selection_statement_3_0= ruleselection_statement
+                    // InternalAnsic.g:7964:4: (lv_selection_statement_3_0= ruleselection_statement )
+                    // InternalAnsic.g:7965:5: lv_selection_statement_3_0= ruleselection_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21097,13 +21050,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalAnsic.g:8043:3: ( (lv_iteration_statement_4_0= ruleiteration_statement ) )
+                    // InternalAnsic.g:7983:3: ( (lv_iteration_statement_4_0= ruleiteration_statement ) )
                     {
-                    // InternalAnsic.g:8043:3: ( (lv_iteration_statement_4_0= ruleiteration_statement ) )
-                    // InternalAnsic.g:8044:4: (lv_iteration_statement_4_0= ruleiteration_statement )
+                    // InternalAnsic.g:7983:3: ( (lv_iteration_statement_4_0= ruleiteration_statement ) )
+                    // InternalAnsic.g:7984:4: (lv_iteration_statement_4_0= ruleiteration_statement )
                     {
-                    // InternalAnsic.g:8044:4: (lv_iteration_statement_4_0= ruleiteration_statement )
-                    // InternalAnsic.g:8045:5: lv_iteration_statement_4_0= ruleiteration_statement
+                    // InternalAnsic.g:7984:4: (lv_iteration_statement_4_0= ruleiteration_statement )
+                    // InternalAnsic.g:7985:5: lv_iteration_statement_4_0= ruleiteration_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21138,13 +21091,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalAnsic.g:8063:3: ( (lv_jump_statement_5_0= rulejump_statement ) )
+                    // InternalAnsic.g:8003:3: ( (lv_jump_statement_5_0= rulejump_statement ) )
                     {
-                    // InternalAnsic.g:8063:3: ( (lv_jump_statement_5_0= rulejump_statement ) )
-                    // InternalAnsic.g:8064:4: (lv_jump_statement_5_0= rulejump_statement )
+                    // InternalAnsic.g:8003:3: ( (lv_jump_statement_5_0= rulejump_statement ) )
+                    // InternalAnsic.g:8004:4: (lv_jump_statement_5_0= rulejump_statement )
                     {
-                    // InternalAnsic.g:8064:4: (lv_jump_statement_5_0= rulejump_statement )
-                    // InternalAnsic.g:8065:5: lv_jump_statement_5_0= rulejump_statement
+                    // InternalAnsic.g:8004:4: (lv_jump_statement_5_0= rulejump_statement )
+                    // InternalAnsic.g:8005:5: lv_jump_statement_5_0= rulejump_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21203,7 +21156,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejump_statement"
-    // InternalAnsic.g:8086:1: entryRulejump_statement returns [EObject current=null] : iv_rulejump_statement= rulejump_statement EOF ;
+    // InternalAnsic.g:8026:1: entryRulejump_statement returns [EObject current=null] : iv_rulejump_statement= rulejump_statement EOF ;
     public final EObject entryRulejump_statement() throws RecognitionException {
         EObject current = null;
 
@@ -21211,8 +21164,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:8086:55: (iv_rulejump_statement= rulejump_statement EOF )
-            // InternalAnsic.g:8087:2: iv_rulejump_statement= rulejump_statement EOF
+            // InternalAnsic.g:8026:55: (iv_rulejump_statement= rulejump_statement EOF )
+            // InternalAnsic.g:8027:2: iv_rulejump_statement= rulejump_statement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJump_statementRule()); 
@@ -21243,7 +21196,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejump_statement"
-    // InternalAnsic.g:8093:1: rulejump_statement returns [EObject current=null] : ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) ) ;
+    // InternalAnsic.g:8033:1: rulejump_statement returns [EObject current=null] : ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) ) ;
     public final EObject rulejump_statement() throws RecognitionException {
         EObject current = null;
 
@@ -21265,10 +21218,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:8099:2: ( ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) ) )
-            // InternalAnsic.g:8100:2: ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) )
+            // InternalAnsic.g:8039:2: ( ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) ) )
+            // InternalAnsic.g:8040:2: ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) )
             {
-            // InternalAnsic.g:8100:2: ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) )
+            // InternalAnsic.g:8040:2: ( (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' ) | (otherlv_3= 'continue' otherlv_4= ';' ) | (otherlv_5= 'break' otherlv_6= ';' ) | (otherlv_7= 'return' otherlv_8= ';' ) | (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' ) )
             int alt63=5;
             switch ( input.LA(1) ) {
             case 88:
@@ -21315,10 +21268,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt63) {
                 case 1 :
-                    // InternalAnsic.g:8101:3: (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' )
+                    // InternalAnsic.g:8041:3: (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' )
                     {
-                    // InternalAnsic.g:8101:3: (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' )
-                    // InternalAnsic.g:8102:4: otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';'
+                    // InternalAnsic.g:8041:3: (otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';' )
+                    // InternalAnsic.g:8042:4: otherlv_0= 'goto' ( (lv_identifier_1_0= RULE_IDZ ) ) otherlv_2= ';'
                     {
                     otherlv_0=(Token)match(input,88,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21326,11 +21279,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_0, grammarAccess.getJump_statementAccess().getGotoKeyword_0_0());
                       			
                     }
-                    // InternalAnsic.g:8106:4: ( (lv_identifier_1_0= RULE_IDZ ) )
-                    // InternalAnsic.g:8107:5: (lv_identifier_1_0= RULE_IDZ )
+                    // InternalAnsic.g:8046:4: ( (lv_identifier_1_0= RULE_IDZ ) )
+                    // InternalAnsic.g:8047:5: (lv_identifier_1_0= RULE_IDZ )
                     {
-                    // InternalAnsic.g:8107:5: (lv_identifier_1_0= RULE_IDZ )
-                    // InternalAnsic.g:8108:6: lv_identifier_1_0= RULE_IDZ
+                    // InternalAnsic.g:8047:5: (lv_identifier_1_0= RULE_IDZ )
+                    // InternalAnsic.g:8048:6: lv_identifier_1_0= RULE_IDZ
                     {
                     lv_identifier_1_0=(Token)match(input,RULE_IDZ,FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21369,10 +21322,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:8130:3: (otherlv_3= 'continue' otherlv_4= ';' )
+                    // InternalAnsic.g:8070:3: (otherlv_3= 'continue' otherlv_4= ';' )
                     {
-                    // InternalAnsic.g:8130:3: (otherlv_3= 'continue' otherlv_4= ';' )
-                    // InternalAnsic.g:8131:4: otherlv_3= 'continue' otherlv_4= ';'
+                    // InternalAnsic.g:8070:3: (otherlv_3= 'continue' otherlv_4= ';' )
+                    // InternalAnsic.g:8071:4: otherlv_3= 'continue' otherlv_4= ';'
                     {
                     otherlv_3=(Token)match(input,89,FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21393,10 +21346,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:8141:3: (otherlv_5= 'break' otherlv_6= ';' )
+                    // InternalAnsic.g:8081:3: (otherlv_5= 'break' otherlv_6= ';' )
                     {
-                    // InternalAnsic.g:8141:3: (otherlv_5= 'break' otherlv_6= ';' )
-                    // InternalAnsic.g:8142:4: otherlv_5= 'break' otherlv_6= ';'
+                    // InternalAnsic.g:8081:3: (otherlv_5= 'break' otherlv_6= ';' )
+                    // InternalAnsic.g:8082:4: otherlv_5= 'break' otherlv_6= ';'
                     {
                     otherlv_5=(Token)match(input,90,FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21417,10 +21370,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:8152:3: (otherlv_7= 'return' otherlv_8= ';' )
+                    // InternalAnsic.g:8092:3: (otherlv_7= 'return' otherlv_8= ';' )
                     {
-                    // InternalAnsic.g:8152:3: (otherlv_7= 'return' otherlv_8= ';' )
-                    // InternalAnsic.g:8153:4: otherlv_7= 'return' otherlv_8= ';'
+                    // InternalAnsic.g:8092:3: (otherlv_7= 'return' otherlv_8= ';' )
+                    // InternalAnsic.g:8093:4: otherlv_7= 'return' otherlv_8= ';'
                     {
                     otherlv_7=(Token)match(input,91,FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21441,10 +21394,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalAnsic.g:8163:3: (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' )
+                    // InternalAnsic.g:8103:3: (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' )
                     {
-                    // InternalAnsic.g:8163:3: (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' )
-                    // InternalAnsic.g:8164:4: otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';'
+                    // InternalAnsic.g:8103:3: (otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';' )
+                    // InternalAnsic.g:8104:4: otherlv_9= 'return' ( (lv_expression_10_0= ruleexpression ) ) otherlv_11= ';'
                     {
                     otherlv_9=(Token)match(input,91,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21452,11 +21405,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_9, grammarAccess.getJump_statementAccess().getReturnKeyword_4_0());
                       			
                     }
-                    // InternalAnsic.g:8168:4: ( (lv_expression_10_0= ruleexpression ) )
-                    // InternalAnsic.g:8169:5: (lv_expression_10_0= ruleexpression )
+                    // InternalAnsic.g:8108:4: ( (lv_expression_10_0= ruleexpression ) )
+                    // InternalAnsic.g:8109:5: (lv_expression_10_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8169:5: (lv_expression_10_0= ruleexpression )
-                    // InternalAnsic.g:8170:6: lv_expression_10_0= ruleexpression
+                    // InternalAnsic.g:8109:5: (lv_expression_10_0= ruleexpression )
+                    // InternalAnsic.g:8110:6: lv_expression_10_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21524,7 +21477,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleiteration_statement"
-    // InternalAnsic.g:8196:1: entryRuleiteration_statement returns [EObject current=null] : iv_ruleiteration_statement= ruleiteration_statement EOF ;
+    // InternalAnsic.g:8136:1: entryRuleiteration_statement returns [EObject current=null] : iv_ruleiteration_statement= ruleiteration_statement EOF ;
     public final EObject entryRuleiteration_statement() throws RecognitionException {
         EObject current = null;
 
@@ -21532,8 +21485,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:8196:60: (iv_ruleiteration_statement= ruleiteration_statement EOF )
-            // InternalAnsic.g:8197:2: iv_ruleiteration_statement= ruleiteration_statement EOF
+            // InternalAnsic.g:8136:60: (iv_ruleiteration_statement= ruleiteration_statement EOF )
+            // InternalAnsic.g:8137:2: iv_ruleiteration_statement= ruleiteration_statement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIteration_statementRule()); 
@@ -21564,7 +21517,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleiteration_statement"
-    // InternalAnsic.g:8203:1: ruleiteration_statement returns [EObject current=null] : ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) ) ;
+    // InternalAnsic.g:8143:1: ruleiteration_statement returns [EObject current=null] : ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) ) ;
     public final EObject ruleiteration_statement() throws RecognitionException {
         EObject current = null;
 
@@ -21629,10 +21582,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:8209:2: ( ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) ) )
-            // InternalAnsic.g:8210:2: ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) )
+            // InternalAnsic.g:8149:2: ( ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) ) )
+            // InternalAnsic.g:8150:2: ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) )
             {
-            // InternalAnsic.g:8210:2: ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) )
+            // InternalAnsic.g:8150:2: ( (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) ) | (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' ) | (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) | (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) | (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) | (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) ) )
             int alt64=6;
             switch ( input.LA(1) ) {
             case 92:
@@ -21680,10 +21633,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt64) {
                 case 1 :
-                    // InternalAnsic.g:8211:3: (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) )
+                    // InternalAnsic.g:8151:3: (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8211:3: (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) )
-                    // InternalAnsic.g:8212:4: otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) )
+                    // InternalAnsic.g:8151:3: (otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) )
+                    // InternalAnsic.g:8152:4: otherlv_0= 'while' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) )
                     {
                     otherlv_0=(Token)match(input,92,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21697,11 +21650,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getIteration_statementAccess().getLeftParenthesisKeyword_0_1());
                       			
                     }
-                    // InternalAnsic.g:8220:4: ( (lv_expression_2_0= ruleexpression ) )
-                    // InternalAnsic.g:8221:5: (lv_expression_2_0= ruleexpression )
+                    // InternalAnsic.g:8160:4: ( (lv_expression_2_0= ruleexpression ) )
+                    // InternalAnsic.g:8161:5: (lv_expression_2_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8221:5: (lv_expression_2_0= ruleexpression )
-                    // InternalAnsic.g:8222:6: lv_expression_2_0= ruleexpression
+                    // InternalAnsic.g:8161:5: (lv_expression_2_0= ruleexpression )
+                    // InternalAnsic.g:8162:6: lv_expression_2_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21738,11 +21691,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getIteration_statementAccess().getRightParenthesisKeyword_0_3());
                       			
                     }
-                    // InternalAnsic.g:8243:4: ( (lv_statement_4_0= rulestatement ) )
-                    // InternalAnsic.g:8244:5: (lv_statement_4_0= rulestatement )
+                    // InternalAnsic.g:8183:4: ( (lv_statement_4_0= rulestatement ) )
+                    // InternalAnsic.g:8184:5: (lv_statement_4_0= rulestatement )
                     {
-                    // InternalAnsic.g:8244:5: (lv_statement_4_0= rulestatement )
-                    // InternalAnsic.g:8245:6: lv_statement_4_0= rulestatement
+                    // InternalAnsic.g:8184:5: (lv_statement_4_0= rulestatement )
+                    // InternalAnsic.g:8185:6: lv_statement_4_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21780,10 +21733,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:8264:3: (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' )
+                    // InternalAnsic.g:8204:3: (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' )
                     {
-                    // InternalAnsic.g:8264:3: (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' )
-                    // InternalAnsic.g:8265:4: otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';'
+                    // InternalAnsic.g:8204:3: (otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';' )
+                    // InternalAnsic.g:8205:4: otherlv_5= 'do' ( (lv_statement_6_0= rulestatement ) ) otherlv_7= 'while' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' otherlv_11= ';'
                     {
                     otherlv_5=(Token)match(input,93,FOLLOW_35); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21791,11 +21744,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_5, grammarAccess.getIteration_statementAccess().getDoKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:8269:4: ( (lv_statement_6_0= rulestatement ) )
-                    // InternalAnsic.g:8270:5: (lv_statement_6_0= rulestatement )
+                    // InternalAnsic.g:8209:4: ( (lv_statement_6_0= rulestatement ) )
+                    // InternalAnsic.g:8210:5: (lv_statement_6_0= rulestatement )
                     {
-                    // InternalAnsic.g:8270:5: (lv_statement_6_0= rulestatement )
-                    // InternalAnsic.g:8271:6: lv_statement_6_0= rulestatement
+                    // InternalAnsic.g:8210:5: (lv_statement_6_0= rulestatement )
+                    // InternalAnsic.g:8211:6: lv_statement_6_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21838,11 +21791,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_8, grammarAccess.getIteration_statementAccess().getLeftParenthesisKeyword_1_3());
                       			
                     }
-                    // InternalAnsic.g:8296:4: ( (lv_expression_9_0= ruleexpression ) )
-                    // InternalAnsic.g:8297:5: (lv_expression_9_0= ruleexpression )
+                    // InternalAnsic.g:8236:4: ( (lv_expression_9_0= ruleexpression ) )
+                    // InternalAnsic.g:8237:5: (lv_expression_9_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8297:5: (lv_expression_9_0= ruleexpression )
-                    // InternalAnsic.g:8298:6: lv_expression_9_0= ruleexpression
+                    // InternalAnsic.g:8237:5: (lv_expression_9_0= ruleexpression )
+                    // InternalAnsic.g:8238:6: lv_expression_9_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21892,10 +21845,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:8325:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
+                    // InternalAnsic.g:8265:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8325:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
-                    // InternalAnsic.g:8326:4: otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) )
+                    // InternalAnsic.g:8265:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
+                    // InternalAnsic.g:8266:4: otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) )
                     {
                     otherlv_12=(Token)match(input,94,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21909,11 +21862,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_13, grammarAccess.getIteration_statementAccess().getLeftParenthesisKeyword_2_1());
                       			
                     }
-                    // InternalAnsic.g:8334:4: ( (lv_expression_statement_14_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8335:5: (lv_expression_statement_14_0= ruleexpression_statement )
+                    // InternalAnsic.g:8274:4: ( (lv_expression_statement_14_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:8275:5: (lv_expression_statement_14_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8335:5: (lv_expression_statement_14_0= ruleexpression_statement )
-                    // InternalAnsic.g:8336:6: lv_expression_statement_14_0= ruleexpression_statement
+                    // InternalAnsic.g:8275:5: (lv_expression_statement_14_0= ruleexpression_statement )
+                    // InternalAnsic.g:8276:6: lv_expression_statement_14_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21944,11 +21897,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:8353:4: ( (lv_expression_statement2_15_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8354:5: (lv_expression_statement2_15_0= ruleexpression_statement )
+                    // InternalAnsic.g:8293:4: ( (lv_expression_statement2_15_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:8294:5: (lv_expression_statement2_15_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8354:5: (lv_expression_statement2_15_0= ruleexpression_statement )
-                    // InternalAnsic.g:8355:6: lv_expression_statement2_15_0= ruleexpression_statement
+                    // InternalAnsic.g:8294:5: (lv_expression_statement2_15_0= ruleexpression_statement )
+                    // InternalAnsic.g:8295:6: lv_expression_statement2_15_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -21985,11 +21938,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_16, grammarAccess.getIteration_statementAccess().getRightParenthesisKeyword_2_4());
                       			
                     }
-                    // InternalAnsic.g:8376:4: ( (lv_statement_17_0= rulestatement ) )
-                    // InternalAnsic.g:8377:5: (lv_statement_17_0= rulestatement )
+                    // InternalAnsic.g:8316:4: ( (lv_statement_17_0= rulestatement ) )
+                    // InternalAnsic.g:8317:5: (lv_statement_17_0= rulestatement )
                     {
-                    // InternalAnsic.g:8377:5: (lv_statement_17_0= rulestatement )
-                    // InternalAnsic.g:8378:6: lv_statement_17_0= rulestatement
+                    // InternalAnsic.g:8317:5: (lv_statement_17_0= rulestatement )
+                    // InternalAnsic.g:8318:6: lv_statement_17_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22027,10 +21980,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:8397:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
+                    // InternalAnsic.g:8337:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8397:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
-                    // InternalAnsic.g:8398:4: otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) )
+                    // InternalAnsic.g:8337:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
+                    // InternalAnsic.g:8338:4: otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) )
                     {
                     otherlv_18=(Token)match(input,94,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22044,11 +21997,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_19, grammarAccess.getIteration_statementAccess().getLeftParenthesisKeyword_3_1());
                       			
                     }
-                    // InternalAnsic.g:8406:4: ( (lv_expression_statement_20_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8407:5: (lv_expression_statement_20_0= ruleexpression_statement )
+                    // InternalAnsic.g:8346:4: ( (lv_expression_statement_20_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:8347:5: (lv_expression_statement_20_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8407:5: (lv_expression_statement_20_0= ruleexpression_statement )
-                    // InternalAnsic.g:8408:6: lv_expression_statement_20_0= ruleexpression_statement
+                    // InternalAnsic.g:8347:5: (lv_expression_statement_20_0= ruleexpression_statement )
+                    // InternalAnsic.g:8348:6: lv_expression_statement_20_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22079,11 +22032,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:8425:4: ( (lv_expression_statement2_21_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8426:5: (lv_expression_statement2_21_0= ruleexpression_statement )
+                    // InternalAnsic.g:8365:4: ( (lv_expression_statement2_21_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:8366:5: (lv_expression_statement2_21_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8426:5: (lv_expression_statement2_21_0= ruleexpression_statement )
-                    // InternalAnsic.g:8427:6: lv_expression_statement2_21_0= ruleexpression_statement
+                    // InternalAnsic.g:8366:5: (lv_expression_statement2_21_0= ruleexpression_statement )
+                    // InternalAnsic.g:8367:6: lv_expression_statement2_21_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22114,11 +22067,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:8444:4: ( (lv_expression_22_0= ruleexpression ) )
-                    // InternalAnsic.g:8445:5: (lv_expression_22_0= ruleexpression )
+                    // InternalAnsic.g:8384:4: ( (lv_expression_22_0= ruleexpression ) )
+                    // InternalAnsic.g:8385:5: (lv_expression_22_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8445:5: (lv_expression_22_0= ruleexpression )
-                    // InternalAnsic.g:8446:6: lv_expression_22_0= ruleexpression
+                    // InternalAnsic.g:8385:5: (lv_expression_22_0= ruleexpression )
+                    // InternalAnsic.g:8386:6: lv_expression_22_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22155,11 +22108,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_23, grammarAccess.getIteration_statementAccess().getRightParenthesisKeyword_3_5());
                       			
                     }
-                    // InternalAnsic.g:8467:4: ( (lv_statement_24_0= rulestatement ) )
-                    // InternalAnsic.g:8468:5: (lv_statement_24_0= rulestatement )
+                    // InternalAnsic.g:8407:4: ( (lv_statement_24_0= rulestatement ) )
+                    // InternalAnsic.g:8408:5: (lv_statement_24_0= rulestatement )
                     {
-                    // InternalAnsic.g:8468:5: (lv_statement_24_0= rulestatement )
-                    // InternalAnsic.g:8469:6: lv_statement_24_0= rulestatement
+                    // InternalAnsic.g:8408:5: (lv_statement_24_0= rulestatement )
+                    // InternalAnsic.g:8409:6: lv_statement_24_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22197,10 +22150,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalAnsic.g:8488:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
+                    // InternalAnsic.g:8428:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8488:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
-                    // InternalAnsic.g:8489:4: otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) )
+                    // InternalAnsic.g:8428:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
+                    // InternalAnsic.g:8429:4: otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) )
                     {
                     otherlv_25=(Token)match(input,94,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22214,11 +22167,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_26, grammarAccess.getIteration_statementAccess().getLeftParenthesisKeyword_4_1());
                       			
                     }
-                    // InternalAnsic.g:8497:4: ( (lv_declaration_27_0= ruledeclaration ) )
-                    // InternalAnsic.g:8498:5: (lv_declaration_27_0= ruledeclaration )
+                    // InternalAnsic.g:8437:4: ( (lv_declaration_27_0= ruledeclaration ) )
+                    // InternalAnsic.g:8438:5: (lv_declaration_27_0= ruledeclaration )
                     {
-                    // InternalAnsic.g:8498:5: (lv_declaration_27_0= ruledeclaration )
-                    // InternalAnsic.g:8499:6: lv_declaration_27_0= ruledeclaration
+                    // InternalAnsic.g:8438:5: (lv_declaration_27_0= ruledeclaration )
+                    // InternalAnsic.g:8439:6: lv_declaration_27_0= ruledeclaration
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22249,11 +22202,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:8516:4: ( (lv_expression_statement_28_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8517:5: (lv_expression_statement_28_0= ruleexpression_statement )
+                    // InternalAnsic.g:8456:4: ( (lv_expression_statement_28_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:8457:5: (lv_expression_statement_28_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8517:5: (lv_expression_statement_28_0= ruleexpression_statement )
-                    // InternalAnsic.g:8518:6: lv_expression_statement_28_0= ruleexpression_statement
+                    // InternalAnsic.g:8457:5: (lv_expression_statement_28_0= ruleexpression_statement )
+                    // InternalAnsic.g:8458:6: lv_expression_statement_28_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22290,11 +22243,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_29, grammarAccess.getIteration_statementAccess().getRightParenthesisKeyword_4_4());
                       			
                     }
-                    // InternalAnsic.g:8539:4: ( (lv_statement_30_0= rulestatement ) )
-                    // InternalAnsic.g:8540:5: (lv_statement_30_0= rulestatement )
+                    // InternalAnsic.g:8479:4: ( (lv_statement_30_0= rulestatement ) )
+                    // InternalAnsic.g:8480:5: (lv_statement_30_0= rulestatement )
                     {
-                    // InternalAnsic.g:8540:5: (lv_statement_30_0= rulestatement )
-                    // InternalAnsic.g:8541:6: lv_statement_30_0= rulestatement
+                    // InternalAnsic.g:8480:5: (lv_statement_30_0= rulestatement )
+                    // InternalAnsic.g:8481:6: lv_statement_30_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22332,10 +22285,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalAnsic.g:8560:3: (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) )
+                    // InternalAnsic.g:8500:3: (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8560:3: (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) )
-                    // InternalAnsic.g:8561:4: otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) )
+                    // InternalAnsic.g:8500:3: (otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) ) )
+                    // InternalAnsic.g:8501:4: otherlv_31= 'for' otherlv_32= '(' ( (lv_declaration_33_0= ruledeclaration ) ) ( (lv_expression_statement_34_0= ruleexpression_statement ) ) ( (lv_expression_35_0= ruleexpression ) ) otherlv_36= ')' ( (lv_statement_37_0= rulestatement ) )
                     {
                     otherlv_31=(Token)match(input,94,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22349,11 +22302,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_32, grammarAccess.getIteration_statementAccess().getLeftParenthesisKeyword_5_1());
                       			
                     }
-                    // InternalAnsic.g:8569:4: ( (lv_declaration_33_0= ruledeclaration ) )
-                    // InternalAnsic.g:8570:5: (lv_declaration_33_0= ruledeclaration )
+                    // InternalAnsic.g:8509:4: ( (lv_declaration_33_0= ruledeclaration ) )
+                    // InternalAnsic.g:8510:5: (lv_declaration_33_0= ruledeclaration )
                     {
-                    // InternalAnsic.g:8570:5: (lv_declaration_33_0= ruledeclaration )
-                    // InternalAnsic.g:8571:6: lv_declaration_33_0= ruledeclaration
+                    // InternalAnsic.g:8510:5: (lv_declaration_33_0= ruledeclaration )
+                    // InternalAnsic.g:8511:6: lv_declaration_33_0= ruledeclaration
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22384,11 +22337,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:8588:4: ( (lv_expression_statement_34_0= ruleexpression_statement ) )
-                    // InternalAnsic.g:8589:5: (lv_expression_statement_34_0= ruleexpression_statement )
+                    // InternalAnsic.g:8528:4: ( (lv_expression_statement_34_0= ruleexpression_statement ) )
+                    // InternalAnsic.g:8529:5: (lv_expression_statement_34_0= ruleexpression_statement )
                     {
-                    // InternalAnsic.g:8589:5: (lv_expression_statement_34_0= ruleexpression_statement )
-                    // InternalAnsic.g:8590:6: lv_expression_statement_34_0= ruleexpression_statement
+                    // InternalAnsic.g:8529:5: (lv_expression_statement_34_0= ruleexpression_statement )
+                    // InternalAnsic.g:8530:6: lv_expression_statement_34_0= ruleexpression_statement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22419,11 +22372,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:8607:4: ( (lv_expression_35_0= ruleexpression ) )
-                    // InternalAnsic.g:8608:5: (lv_expression_35_0= ruleexpression )
+                    // InternalAnsic.g:8547:4: ( (lv_expression_35_0= ruleexpression ) )
+                    // InternalAnsic.g:8548:5: (lv_expression_35_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8608:5: (lv_expression_35_0= ruleexpression )
-                    // InternalAnsic.g:8609:6: lv_expression_35_0= ruleexpression
+                    // InternalAnsic.g:8548:5: (lv_expression_35_0= ruleexpression )
+                    // InternalAnsic.g:8549:6: lv_expression_35_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22460,11 +22413,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_36, grammarAccess.getIteration_statementAccess().getRightParenthesisKeyword_5_5());
                       			
                     }
-                    // InternalAnsic.g:8630:4: ( (lv_statement_37_0= rulestatement ) )
-                    // InternalAnsic.g:8631:5: (lv_statement_37_0= rulestatement )
+                    // InternalAnsic.g:8570:4: ( (lv_statement_37_0= rulestatement ) )
+                    // InternalAnsic.g:8571:5: (lv_statement_37_0= rulestatement )
                     {
-                    // InternalAnsic.g:8631:5: (lv_statement_37_0= rulestatement )
-                    // InternalAnsic.g:8632:6: lv_statement_37_0= rulestatement
+                    // InternalAnsic.g:8571:5: (lv_statement_37_0= rulestatement )
+                    // InternalAnsic.g:8572:6: lv_statement_37_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22526,7 +22479,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleselection_statement"
-    // InternalAnsic.g:8654:1: entryRuleselection_statement returns [EObject current=null] : iv_ruleselection_statement= ruleselection_statement EOF ;
+    // InternalAnsic.g:8594:1: entryRuleselection_statement returns [EObject current=null] : iv_ruleselection_statement= ruleselection_statement EOF ;
     public final EObject entryRuleselection_statement() throws RecognitionException {
         EObject current = null;
 
@@ -22534,8 +22487,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:8654:60: (iv_ruleselection_statement= ruleselection_statement EOF )
-            // InternalAnsic.g:8655:2: iv_ruleselection_statement= ruleselection_statement EOF
+            // InternalAnsic.g:8594:60: (iv_ruleselection_statement= ruleselection_statement EOF )
+            // InternalAnsic.g:8595:2: iv_ruleselection_statement= ruleselection_statement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSelection_statementRule()); 
@@ -22566,7 +22519,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleselection_statement"
-    // InternalAnsic.g:8661:1: ruleselection_statement returns [EObject current=null] : ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) ) ;
+    // InternalAnsic.g:8601:1: ruleselection_statement returns [EObject current=null] : ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) ) ;
     public final EObject ruleselection_statement() throws RecognitionException {
         EObject current = null;
 
@@ -22599,10 +22552,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:8667:2: ( ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) ) )
-            // InternalAnsic.g:8668:2: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) )
+            // InternalAnsic.g:8607:2: ( ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) ) )
+            // InternalAnsic.g:8608:2: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) )
             {
-            // InternalAnsic.g:8668:2: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) )
+            // InternalAnsic.g:8608:2: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) | (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) | (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) ) )
             int alt65=3;
             int LA65_0 = input.LA(1);
 
@@ -22635,10 +22588,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt65) {
                 case 1 :
-                    // InternalAnsic.g:8669:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
+                    // InternalAnsic.g:8609:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8669:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
-                    // InternalAnsic.g:8670:4: otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) )
+                    // InternalAnsic.g:8609:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
+                    // InternalAnsic.g:8610:4: otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) )
                     {
                     otherlv_0=(Token)match(input,95,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22652,11 +22605,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getSelection_statementAccess().getLeftParenthesisKeyword_0_1());
                       			
                     }
-                    // InternalAnsic.g:8678:4: ( (lv_expression_2_0= ruleexpression ) )
-                    // InternalAnsic.g:8679:5: (lv_expression_2_0= ruleexpression )
+                    // InternalAnsic.g:8618:4: ( (lv_expression_2_0= ruleexpression ) )
+                    // InternalAnsic.g:8619:5: (lv_expression_2_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8679:5: (lv_expression_2_0= ruleexpression )
-                    // InternalAnsic.g:8680:6: lv_expression_2_0= ruleexpression
+                    // InternalAnsic.g:8619:5: (lv_expression_2_0= ruleexpression )
+                    // InternalAnsic.g:8620:6: lv_expression_2_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22693,11 +22646,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getSelection_statementAccess().getRightParenthesisKeyword_0_3());
                       			
                     }
-                    // InternalAnsic.g:8701:4: ( (lv_statement_4_0= rulestatement ) )
-                    // InternalAnsic.g:8702:5: (lv_statement_4_0= rulestatement )
+                    // InternalAnsic.g:8641:4: ( (lv_statement_4_0= rulestatement ) )
+                    // InternalAnsic.g:8642:5: (lv_statement_4_0= rulestatement )
                     {
-                    // InternalAnsic.g:8702:5: (lv_statement_4_0= rulestatement )
-                    // InternalAnsic.g:8703:6: lv_statement_4_0= rulestatement
+                    // InternalAnsic.g:8642:5: (lv_statement_4_0= rulestatement )
+                    // InternalAnsic.g:8643:6: lv_statement_4_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22734,11 +22687,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_5, grammarAccess.getSelection_statementAccess().getElseKeyword_0_5());
                       			
                     }
-                    // InternalAnsic.g:8724:4: ( (lv_statement2_6_0= rulestatement ) )
-                    // InternalAnsic.g:8725:5: (lv_statement2_6_0= rulestatement )
+                    // InternalAnsic.g:8664:4: ( (lv_statement2_6_0= rulestatement ) )
+                    // InternalAnsic.g:8665:5: (lv_statement2_6_0= rulestatement )
                     {
-                    // InternalAnsic.g:8725:5: (lv_statement2_6_0= rulestatement )
-                    // InternalAnsic.g:8726:6: lv_statement2_6_0= rulestatement
+                    // InternalAnsic.g:8665:5: (lv_statement2_6_0= rulestatement )
+                    // InternalAnsic.g:8666:6: lv_statement2_6_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22776,10 +22729,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:8745:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
+                    // InternalAnsic.g:8685:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8745:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
-                    // InternalAnsic.g:8746:4: otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) )
+                    // InternalAnsic.g:8685:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
+                    // InternalAnsic.g:8686:4: otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) )
                     {
                     otherlv_7=(Token)match(input,95,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22793,11 +22746,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_8, grammarAccess.getSelection_statementAccess().getLeftParenthesisKeyword_1_1());
                       			
                     }
-                    // InternalAnsic.g:8754:4: ( (lv_expression_9_0= ruleexpression ) )
-                    // InternalAnsic.g:8755:5: (lv_expression_9_0= ruleexpression )
+                    // InternalAnsic.g:8694:4: ( (lv_expression_9_0= ruleexpression ) )
+                    // InternalAnsic.g:8695:5: (lv_expression_9_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8755:5: (lv_expression_9_0= ruleexpression )
-                    // InternalAnsic.g:8756:6: lv_expression_9_0= ruleexpression
+                    // InternalAnsic.g:8695:5: (lv_expression_9_0= ruleexpression )
+                    // InternalAnsic.g:8696:6: lv_expression_9_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22834,11 +22787,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getSelection_statementAccess().getRightParenthesisKeyword_1_3());
                       			
                     }
-                    // InternalAnsic.g:8777:4: ( (lv_statement_11_0= rulestatement ) )
-                    // InternalAnsic.g:8778:5: (lv_statement_11_0= rulestatement )
+                    // InternalAnsic.g:8717:4: ( (lv_statement_11_0= rulestatement ) )
+                    // InternalAnsic.g:8718:5: (lv_statement_11_0= rulestatement )
                     {
-                    // InternalAnsic.g:8778:5: (lv_statement_11_0= rulestatement )
-                    // InternalAnsic.g:8779:6: lv_statement_11_0= rulestatement
+                    // InternalAnsic.g:8718:5: (lv_statement_11_0= rulestatement )
+                    // InternalAnsic.g:8719:6: lv_statement_11_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22876,10 +22829,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:8798:3: (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) )
+                    // InternalAnsic.g:8738:3: (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8798:3: (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) )
-                    // InternalAnsic.g:8799:4: otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) )
+                    // InternalAnsic.g:8738:3: (otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) ) )
+                    // InternalAnsic.g:8739:4: otherlv_12= 'switch' otherlv_13= '(' ( (lv_expression_14_0= ruleexpression ) ) otherlv_15= ')' ( (lv_statement_16_0= rulestatement ) )
                     {
                     otherlv_12=(Token)match(input,97,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22893,11 +22846,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_13, grammarAccess.getSelection_statementAccess().getLeftParenthesisKeyword_2_1());
                       			
                     }
-                    // InternalAnsic.g:8807:4: ( (lv_expression_14_0= ruleexpression ) )
-                    // InternalAnsic.g:8808:5: (lv_expression_14_0= ruleexpression )
+                    // InternalAnsic.g:8747:4: ( (lv_expression_14_0= ruleexpression ) )
+                    // InternalAnsic.g:8748:5: (lv_expression_14_0= ruleexpression )
                     {
-                    // InternalAnsic.g:8808:5: (lv_expression_14_0= ruleexpression )
-                    // InternalAnsic.g:8809:6: lv_expression_14_0= ruleexpression
+                    // InternalAnsic.g:8748:5: (lv_expression_14_0= ruleexpression )
+                    // InternalAnsic.g:8749:6: lv_expression_14_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -22934,11 +22887,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_15, grammarAccess.getSelection_statementAccess().getRightParenthesisKeyword_2_3());
                       			
                     }
-                    // InternalAnsic.g:8830:4: ( (lv_statement_16_0= rulestatement ) )
-                    // InternalAnsic.g:8831:5: (lv_statement_16_0= rulestatement )
+                    // InternalAnsic.g:8770:4: ( (lv_statement_16_0= rulestatement ) )
+                    // InternalAnsic.g:8771:5: (lv_statement_16_0= rulestatement )
                     {
-                    // InternalAnsic.g:8831:5: (lv_statement_16_0= rulestatement )
-                    // InternalAnsic.g:8832:6: lv_statement_16_0= rulestatement
+                    // InternalAnsic.g:8771:5: (lv_statement_16_0= rulestatement )
+                    // InternalAnsic.g:8772:6: lv_statement_16_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23000,7 +22953,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelabeled_statement"
-    // InternalAnsic.g:8854:1: entryRulelabeled_statement returns [EObject current=null] : iv_rulelabeled_statement= rulelabeled_statement EOF ;
+    // InternalAnsic.g:8794:1: entryRulelabeled_statement returns [EObject current=null] : iv_rulelabeled_statement= rulelabeled_statement EOF ;
     public final EObject entryRulelabeled_statement() throws RecognitionException {
         EObject current = null;
 
@@ -23008,8 +22961,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:8854:58: (iv_rulelabeled_statement= rulelabeled_statement EOF )
-            // InternalAnsic.g:8855:2: iv_rulelabeled_statement= rulelabeled_statement EOF
+            // InternalAnsic.g:8794:58: (iv_rulelabeled_statement= rulelabeled_statement EOF )
+            // InternalAnsic.g:8795:2: iv_rulelabeled_statement= rulelabeled_statement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLabeled_statementRule()); 
@@ -23040,7 +22993,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelabeled_statement"
-    // InternalAnsic.g:8861:1: rulelabeled_statement returns [EObject current=null] : ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) ) ;
+    // InternalAnsic.g:8801:1: rulelabeled_statement returns [EObject current=null] : ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) ) ;
     public final EObject rulelabeled_statement() throws RecognitionException {
         EObject current = null;
 
@@ -23063,10 +23016,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:8867:2: ( ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) ) )
-            // InternalAnsic.g:8868:2: ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) )
+            // InternalAnsic.g:8807:2: ( ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) ) )
+            // InternalAnsic.g:8808:2: ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) )
             {
-            // InternalAnsic.g:8868:2: ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) )
+            // InternalAnsic.g:8808:2: ( ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) ) | (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) ) | (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) ) )
             int alt66=3;
             switch ( input.LA(1) ) {
             case RULE_IDZ:
@@ -23094,16 +23047,16 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt66) {
                 case 1 :
-                    // InternalAnsic.g:8869:3: ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) )
+                    // InternalAnsic.g:8809:3: ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8869:3: ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) )
-                    // InternalAnsic.g:8870:4: ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) )
+                    // InternalAnsic.g:8809:3: ( ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) ) )
+                    // InternalAnsic.g:8810:4: ( (lv_identifier_0_0= RULE_IDZ ) ) otherlv_1= ':' ( (lv_statement_2_0= rulestatement ) )
                     {
-                    // InternalAnsic.g:8870:4: ( (lv_identifier_0_0= RULE_IDZ ) )
-                    // InternalAnsic.g:8871:5: (lv_identifier_0_0= RULE_IDZ )
+                    // InternalAnsic.g:8810:4: ( (lv_identifier_0_0= RULE_IDZ ) )
+                    // InternalAnsic.g:8811:5: (lv_identifier_0_0= RULE_IDZ )
                     {
-                    // InternalAnsic.g:8871:5: (lv_identifier_0_0= RULE_IDZ )
-                    // InternalAnsic.g:8872:6: lv_identifier_0_0= RULE_IDZ
+                    // InternalAnsic.g:8811:5: (lv_identifier_0_0= RULE_IDZ )
+                    // InternalAnsic.g:8812:6: lv_identifier_0_0= RULE_IDZ
                     {
                     lv_identifier_0_0=(Token)match(input,RULE_IDZ,FOLLOW_16); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -23135,11 +23088,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getLabeled_statementAccess().getColonKeyword_0_1());
                       			
                     }
-                    // InternalAnsic.g:8892:4: ( (lv_statement_2_0= rulestatement ) )
-                    // InternalAnsic.g:8893:5: (lv_statement_2_0= rulestatement )
+                    // InternalAnsic.g:8832:4: ( (lv_statement_2_0= rulestatement ) )
+                    // InternalAnsic.g:8833:5: (lv_statement_2_0= rulestatement )
                     {
-                    // InternalAnsic.g:8893:5: (lv_statement_2_0= rulestatement )
-                    // InternalAnsic.g:8894:6: lv_statement_2_0= rulestatement
+                    // InternalAnsic.g:8833:5: (lv_statement_2_0= rulestatement )
+                    // InternalAnsic.g:8834:6: lv_statement_2_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23177,10 +23130,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:8913:3: (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) )
+                    // InternalAnsic.g:8853:3: (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8913:3: (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) )
-                    // InternalAnsic.g:8914:4: otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) )
+                    // InternalAnsic.g:8853:3: (otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) ) )
+                    // InternalAnsic.g:8854:4: otherlv_3= 'case' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) otherlv_5= ':' ( (lv_statement_6_0= rulestatement ) )
                     {
                     otherlv_3=(Token)match(input,98,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -23188,11 +23141,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getLabeled_statementAccess().getCaseKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:8918:4: ( (lv_conditional_expression_4_0= ruleconditional_expression ) )
-                    // InternalAnsic.g:8919:5: (lv_conditional_expression_4_0= ruleconditional_expression )
+                    // InternalAnsic.g:8858:4: ( (lv_conditional_expression_4_0= ruleconditional_expression ) )
+                    // InternalAnsic.g:8859:5: (lv_conditional_expression_4_0= ruleconditional_expression )
                     {
-                    // InternalAnsic.g:8919:5: (lv_conditional_expression_4_0= ruleconditional_expression )
-                    // InternalAnsic.g:8920:6: lv_conditional_expression_4_0= ruleconditional_expression
+                    // InternalAnsic.g:8859:5: (lv_conditional_expression_4_0= ruleconditional_expression )
+                    // InternalAnsic.g:8860:6: lv_conditional_expression_4_0= ruleconditional_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23229,11 +23182,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_5, grammarAccess.getLabeled_statementAccess().getColonKeyword_1_2());
                       			
                     }
-                    // InternalAnsic.g:8941:4: ( (lv_statement_6_0= rulestatement ) )
-                    // InternalAnsic.g:8942:5: (lv_statement_6_0= rulestatement )
+                    // InternalAnsic.g:8881:4: ( (lv_statement_6_0= rulestatement ) )
+                    // InternalAnsic.g:8882:5: (lv_statement_6_0= rulestatement )
                     {
-                    // InternalAnsic.g:8942:5: (lv_statement_6_0= rulestatement )
-                    // InternalAnsic.g:8943:6: lv_statement_6_0= rulestatement
+                    // InternalAnsic.g:8882:5: (lv_statement_6_0= rulestatement )
+                    // InternalAnsic.g:8883:6: lv_statement_6_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23271,10 +23224,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:8962:3: (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) )
+                    // InternalAnsic.g:8902:3: (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) )
                     {
-                    // InternalAnsic.g:8962:3: (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) )
-                    // InternalAnsic.g:8963:4: otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) )
+                    // InternalAnsic.g:8902:3: (otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) ) )
+                    // InternalAnsic.g:8903:4: otherlv_7= 'default' otherlv_8= ':' ( (lv_statement_9_0= rulestatement ) )
                     {
                     otherlv_7=(Token)match(input,72,FOLLOW_16); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -23288,11 +23241,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_8, grammarAccess.getLabeled_statementAccess().getColonKeyword_2_1());
                       			
                     }
-                    // InternalAnsic.g:8971:4: ( (lv_statement_9_0= rulestatement ) )
-                    // InternalAnsic.g:8972:5: (lv_statement_9_0= rulestatement )
+                    // InternalAnsic.g:8911:4: ( (lv_statement_9_0= rulestatement ) )
+                    // InternalAnsic.g:8912:5: (lv_statement_9_0= rulestatement )
                     {
-                    // InternalAnsic.g:8972:5: (lv_statement_9_0= rulestatement )
-                    // InternalAnsic.g:8973:6: lv_statement_9_0= rulestatement
+                    // InternalAnsic.g:8912:5: (lv_statement_9_0= rulestatement )
+                    // InternalAnsic.g:8913:6: lv_statement_9_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23354,7 +23307,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulecompound_statement"
-    // InternalAnsic.g:8995:1: entryRulecompound_statement returns [EObject current=null] : iv_rulecompound_statement= rulecompound_statement EOF ;
+    // InternalAnsic.g:8935:1: entryRulecompound_statement returns [EObject current=null] : iv_rulecompound_statement= rulecompound_statement EOF ;
     public final EObject entryRulecompound_statement() throws RecognitionException {
         EObject current = null;
 
@@ -23362,8 +23315,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:8995:59: (iv_rulecompound_statement= rulecompound_statement EOF )
-            // InternalAnsic.g:8996:2: iv_rulecompound_statement= rulecompound_statement EOF
+            // InternalAnsic.g:8935:59: (iv_rulecompound_statement= rulecompound_statement EOF )
+            // InternalAnsic.g:8936:2: iv_rulecompound_statement= rulecompound_statement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCompound_statementRule()); 
@@ -23394,7 +23347,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecompound_statement"
-    // InternalAnsic.g:9002:1: rulecompound_statement returns [EObject current=null] : ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) ) ;
+    // InternalAnsic.g:8942:1: rulecompound_statement returns [EObject current=null] : ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) ) ;
     public final EObject rulecompound_statement() throws RecognitionException {
         EObject current = null;
 
@@ -23409,21 +23362,21 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9008:2: ( ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) ) )
-            // InternalAnsic.g:9009:2: ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) )
+            // InternalAnsic.g:8948:2: ( ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) ) )
+            // InternalAnsic.g:8949:2: ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) )
             {
-            // InternalAnsic.g:9009:2: ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) )
+            // InternalAnsic.g:8949:2: ( (otherlv_0= '{' otherlv_1= '}' ) | (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' ) )
             int alt67=2;
             int LA67_0 = input.LA(1);
 
             if ( (LA67_0==54) ) {
                 int LA67_1 = input.LA(2);
 
-                if ( (LA67_1==55) ) {
-                    alt67=1;
-                }
-                else if ( (LA67_1==RULE_IDZ||(LA67_1>=RULE_INT && LA67_1<=RULE_CHAR)||(LA67_1>=31 && LA67_1<=34)||(LA67_1>=36 && LA67_1<=54)||(LA67_1>=58 && LA67_1<=60)||(LA67_1>=62 && LA67_1<=67)||(LA67_1>=71 && LA67_1<=72)||LA67_1==74||(LA67_1>=76 && LA67_1<=79)||(LA67_1>=82 && LA67_1<=83)||(LA67_1>=88 && LA67_1<=95)||(LA67_1>=97 && LA67_1<=99)||(LA67_1>=115 && LA67_1<=116)) ) {
+                if ( (LA67_1==RULE_IDZ||(LA67_1>=RULE_INT && LA67_1<=RULE_CHAR)||(LA67_1>=31 && LA67_1<=34)||(LA67_1>=36 && LA67_1<=54)||(LA67_1>=58 && LA67_1<=60)||(LA67_1>=62 && LA67_1<=67)||(LA67_1>=71 && LA67_1<=72)||LA67_1==74||(LA67_1>=76 && LA67_1<=79)||(LA67_1>=82 && LA67_1<=83)||(LA67_1>=88 && LA67_1<=95)||(LA67_1>=97 && LA67_1<=99)||(LA67_1>=115 && LA67_1<=116)) ) {
                     alt67=2;
+                }
+                else if ( (LA67_1==55) ) {
+                    alt67=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -23442,10 +23395,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt67) {
                 case 1 :
-                    // InternalAnsic.g:9010:3: (otherlv_0= '{' otherlv_1= '}' )
+                    // InternalAnsic.g:8950:3: (otherlv_0= '{' otherlv_1= '}' )
                     {
-                    // InternalAnsic.g:9010:3: (otherlv_0= '{' otherlv_1= '}' )
-                    // InternalAnsic.g:9011:4: otherlv_0= '{' otherlv_1= '}'
+                    // InternalAnsic.g:8950:3: (otherlv_0= '{' otherlv_1= '}' )
+                    // InternalAnsic.g:8951:4: otherlv_0= '{' otherlv_1= '}'
                     {
                     otherlv_0=(Token)match(input,54,FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -23466,10 +23419,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:9021:3: (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' )
+                    // InternalAnsic.g:8961:3: (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' )
                     {
-                    // InternalAnsic.g:9021:3: (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' )
-                    // InternalAnsic.g:9022:4: otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}'
+                    // InternalAnsic.g:8961:3: (otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}' )
+                    // InternalAnsic.g:8962:4: otherlv_2= '{' ( (lv_block_item_list_3_0= ruleblock_item_list ) ) otherlv_4= '}'
                     {
                     otherlv_2=(Token)match(input,54,FOLLOW_39); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -23477,11 +23430,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getCompound_statementAccess().getLeftCurlyBracketKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:9026:4: ( (lv_block_item_list_3_0= ruleblock_item_list ) )
-                    // InternalAnsic.g:9027:5: (lv_block_item_list_3_0= ruleblock_item_list )
+                    // InternalAnsic.g:8966:4: ( (lv_block_item_list_3_0= ruleblock_item_list ) )
+                    // InternalAnsic.g:8967:5: (lv_block_item_list_3_0= ruleblock_item_list )
                     {
-                    // InternalAnsic.g:9027:5: (lv_block_item_list_3_0= ruleblock_item_list )
-                    // InternalAnsic.g:9028:6: lv_block_item_list_3_0= ruleblock_item_list
+                    // InternalAnsic.g:8967:5: (lv_block_item_list_3_0= ruleblock_item_list )
+                    // InternalAnsic.g:8968:6: lv_block_item_list_3_0= ruleblock_item_list
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23549,7 +23502,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleblock_item_list"
-    // InternalAnsic.g:9054:1: entryRuleblock_item_list returns [EObject current=null] : iv_ruleblock_item_list= ruleblock_item_list EOF ;
+    // InternalAnsic.g:8994:1: entryRuleblock_item_list returns [EObject current=null] : iv_ruleblock_item_list= ruleblock_item_list EOF ;
     public final EObject entryRuleblock_item_list() throws RecognitionException {
         EObject current = null;
 
@@ -23557,8 +23510,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9054:56: (iv_ruleblock_item_list= ruleblock_item_list EOF )
-            // InternalAnsic.g:9055:2: iv_ruleblock_item_list= ruleblock_item_list EOF
+            // InternalAnsic.g:8994:56: (iv_ruleblock_item_list= ruleblock_item_list EOF )
+            // InternalAnsic.g:8995:2: iv_ruleblock_item_list= ruleblock_item_list EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBlock_item_listRule()); 
@@ -23589,7 +23542,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleblock_item_list"
-    // InternalAnsic.g:9061:1: ruleblock_item_list returns [EObject current=null] : ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) ;
+    // InternalAnsic.g:9001:1: ruleblock_item_list returns [EObject current=null] : ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) ;
     public final EObject ruleblock_item_list() throws RecognitionException {
         EObject current = null;
 
@@ -23602,17 +23555,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9067:2: ( ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) )
-            // InternalAnsic.g:9068:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
+            // InternalAnsic.g:9007:2: ( ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) )
+            // InternalAnsic.g:9008:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
             {
-            // InternalAnsic.g:9068:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
-            // InternalAnsic.g:9069:3: ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
+            // InternalAnsic.g:9008:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
+            // InternalAnsic.g:9009:3: ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
             {
-            // InternalAnsic.g:9069:3: ( (lv_block_item_0_0= ruleblock_item ) )
-            // InternalAnsic.g:9070:4: (lv_block_item_0_0= ruleblock_item )
+            // InternalAnsic.g:9009:3: ( (lv_block_item_0_0= ruleblock_item ) )
+            // InternalAnsic.g:9010:4: (lv_block_item_0_0= ruleblock_item )
             {
-            // InternalAnsic.g:9070:4: (lv_block_item_0_0= ruleblock_item )
-            // InternalAnsic.g:9071:5: lv_block_item_0_0= ruleblock_item
+            // InternalAnsic.g:9010:4: (lv_block_item_0_0= ruleblock_item )
+            // InternalAnsic.g:9011:5: lv_block_item_0_0= ruleblock_item
             {
             if ( state.backtracking==0 ) {
 
@@ -23643,7 +23596,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9088:3: ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
+            // InternalAnsic.g:9028:3: ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
             int alt68=2;
             int LA68_0 = input.LA(1);
 
@@ -23652,10 +23605,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt68) {
                 case 1 :
-                    // InternalAnsic.g:9089:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
+                    // InternalAnsic.g:9029:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
                     {
-                    // InternalAnsic.g:9089:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
-                    // InternalAnsic.g:9090:5: lv_block_item_list_linha_1_0= ruleblock_item_list_linha
+                    // InternalAnsic.g:9029:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
+                    // InternalAnsic.g:9030:5: lv_block_item_list_linha_1_0= ruleblock_item_list_linha
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23714,7 +23667,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleblock_item_list_linha"
-    // InternalAnsic.g:9111:1: entryRuleblock_item_list_linha returns [EObject current=null] : iv_ruleblock_item_list_linha= ruleblock_item_list_linha EOF ;
+    // InternalAnsic.g:9051:1: entryRuleblock_item_list_linha returns [EObject current=null] : iv_ruleblock_item_list_linha= ruleblock_item_list_linha EOF ;
     public final EObject entryRuleblock_item_list_linha() throws RecognitionException {
         EObject current = null;
 
@@ -23722,8 +23675,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9111:62: (iv_ruleblock_item_list_linha= ruleblock_item_list_linha EOF )
-            // InternalAnsic.g:9112:2: iv_ruleblock_item_list_linha= ruleblock_item_list_linha EOF
+            // InternalAnsic.g:9051:62: (iv_ruleblock_item_list_linha= ruleblock_item_list_linha EOF )
+            // InternalAnsic.g:9052:2: iv_ruleblock_item_list_linha= ruleblock_item_list_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBlock_item_list_linhaRule()); 
@@ -23754,7 +23707,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleblock_item_list_linha"
-    // InternalAnsic.g:9118:1: ruleblock_item_list_linha returns [EObject current=null] : ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) ;
+    // InternalAnsic.g:9058:1: ruleblock_item_list_linha returns [EObject current=null] : ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) ;
     public final EObject ruleblock_item_list_linha() throws RecognitionException {
         EObject current = null;
 
@@ -23767,17 +23720,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9124:2: ( ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) )
-            // InternalAnsic.g:9125:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
+            // InternalAnsic.g:9064:2: ( ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? ) )
+            // InternalAnsic.g:9065:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
             {
-            // InternalAnsic.g:9125:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
-            // InternalAnsic.g:9126:3: ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
+            // InternalAnsic.g:9065:2: ( ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )? )
+            // InternalAnsic.g:9066:3: ( (lv_block_item_0_0= ruleblock_item ) ) ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
             {
-            // InternalAnsic.g:9126:3: ( (lv_block_item_0_0= ruleblock_item ) )
-            // InternalAnsic.g:9127:4: (lv_block_item_0_0= ruleblock_item )
+            // InternalAnsic.g:9066:3: ( (lv_block_item_0_0= ruleblock_item ) )
+            // InternalAnsic.g:9067:4: (lv_block_item_0_0= ruleblock_item )
             {
-            // InternalAnsic.g:9127:4: (lv_block_item_0_0= ruleblock_item )
-            // InternalAnsic.g:9128:5: lv_block_item_0_0= ruleblock_item
+            // InternalAnsic.g:9067:4: (lv_block_item_0_0= ruleblock_item )
+            // InternalAnsic.g:9068:5: lv_block_item_0_0= ruleblock_item
             {
             if ( state.backtracking==0 ) {
 
@@ -23808,7 +23761,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9145:3: ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
+            // InternalAnsic.g:9085:3: ( (lv_block_item_list_linha_1_0= ruleblock_item_list_linha ) )?
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -23817,10 +23770,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt69) {
                 case 1 :
-                    // InternalAnsic.g:9146:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
+                    // InternalAnsic.g:9086:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
                     {
-                    // InternalAnsic.g:9146:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
-                    // InternalAnsic.g:9147:5: lv_block_item_list_linha_1_0= ruleblock_item_list_linha
+                    // InternalAnsic.g:9086:4: (lv_block_item_list_linha_1_0= ruleblock_item_list_linha )
+                    // InternalAnsic.g:9087:5: lv_block_item_list_linha_1_0= ruleblock_item_list_linha
                     {
                     if ( state.backtracking==0 ) {
 
@@ -23879,7 +23832,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleblock_item"
-    // InternalAnsic.g:9168:1: entryRuleblock_item returns [EObject current=null] : iv_ruleblock_item= ruleblock_item EOF ;
+    // InternalAnsic.g:9108:1: entryRuleblock_item returns [EObject current=null] : iv_ruleblock_item= ruleblock_item EOF ;
     public final EObject entryRuleblock_item() throws RecognitionException {
         EObject current = null;
 
@@ -23887,8 +23840,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9168:51: (iv_ruleblock_item= ruleblock_item EOF )
-            // InternalAnsic.g:9169:2: iv_ruleblock_item= ruleblock_item EOF
+            // InternalAnsic.g:9108:51: (iv_ruleblock_item= ruleblock_item EOF )
+            // InternalAnsic.g:9109:2: iv_ruleblock_item= ruleblock_item EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBlock_itemRule()); 
@@ -23919,7 +23872,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleblock_item"
-    // InternalAnsic.g:9175:1: ruleblock_item returns [EObject current=null] : ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) ) ;
+    // InternalAnsic.g:9115:1: ruleblock_item returns [EObject current=null] : ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) ) ;
     public final EObject ruleblock_item() throws RecognitionException {
         EObject current = null;
 
@@ -23932,10 +23885,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9181:2: ( ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) ) )
-            // InternalAnsic.g:9182:2: ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) )
+            // InternalAnsic.g:9121:2: ( ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) ) )
+            // InternalAnsic.g:9122:2: ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) )
             {
-            // InternalAnsic.g:9182:2: ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) )
+            // InternalAnsic.g:9122:2: ( ( (lv_declaration_0_0= ruledeclaration ) ) | ( (lv_statement_1_0= rulestatement ) ) )
             int alt70=2;
             switch ( input.LA(1) ) {
             case 31:
@@ -24032,13 +23985,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt70) {
                 case 1 :
-                    // InternalAnsic.g:9183:3: ( (lv_declaration_0_0= ruledeclaration ) )
+                    // InternalAnsic.g:9123:3: ( (lv_declaration_0_0= ruledeclaration ) )
                     {
-                    // InternalAnsic.g:9183:3: ( (lv_declaration_0_0= ruledeclaration ) )
-                    // InternalAnsic.g:9184:4: (lv_declaration_0_0= ruledeclaration )
+                    // InternalAnsic.g:9123:3: ( (lv_declaration_0_0= ruledeclaration ) )
+                    // InternalAnsic.g:9124:4: (lv_declaration_0_0= ruledeclaration )
                     {
-                    // InternalAnsic.g:9184:4: (lv_declaration_0_0= ruledeclaration )
-                    // InternalAnsic.g:9185:5: lv_declaration_0_0= ruledeclaration
+                    // InternalAnsic.g:9124:4: (lv_declaration_0_0= ruledeclaration )
+                    // InternalAnsic.g:9125:5: lv_declaration_0_0= ruledeclaration
                     {
                     if ( state.backtracking==0 ) {
 
@@ -24073,13 +24026,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:9203:3: ( (lv_statement_1_0= rulestatement ) )
+                    // InternalAnsic.g:9143:3: ( (lv_statement_1_0= rulestatement ) )
                     {
-                    // InternalAnsic.g:9203:3: ( (lv_statement_1_0= rulestatement ) )
-                    // InternalAnsic.g:9204:4: (lv_statement_1_0= rulestatement )
+                    // InternalAnsic.g:9143:3: ( (lv_statement_1_0= rulestatement ) )
+                    // InternalAnsic.g:9144:4: (lv_statement_1_0= rulestatement )
                     {
-                    // InternalAnsic.g:9204:4: (lv_statement_1_0= rulestatement )
-                    // InternalAnsic.g:9205:5: lv_statement_1_0= rulestatement
+                    // InternalAnsic.g:9144:4: (lv_statement_1_0= rulestatement )
+                    // InternalAnsic.g:9145:5: lv_statement_1_0= rulestatement
                     {
                     if ( state.backtracking==0 ) {
 
@@ -24138,7 +24091,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleexpression_statement"
-    // InternalAnsic.g:9226:1: entryRuleexpression_statement returns [EObject current=null] : iv_ruleexpression_statement= ruleexpression_statement EOF ;
+    // InternalAnsic.g:9166:1: entryRuleexpression_statement returns [EObject current=null] : iv_ruleexpression_statement= ruleexpression_statement EOF ;
     public final EObject entryRuleexpression_statement() throws RecognitionException {
         EObject current = null;
 
@@ -24146,8 +24099,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9226:61: (iv_ruleexpression_statement= ruleexpression_statement EOF )
-            // InternalAnsic.g:9227:2: iv_ruleexpression_statement= ruleexpression_statement EOF
+            // InternalAnsic.g:9166:61: (iv_ruleexpression_statement= ruleexpression_statement EOF )
+            // InternalAnsic.g:9167:2: iv_ruleexpression_statement= ruleexpression_statement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpression_statementRule()); 
@@ -24178,7 +24131,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexpression_statement"
-    // InternalAnsic.g:9233:1: ruleexpression_statement returns [EObject current=null] : (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) ) ;
+    // InternalAnsic.g:9173:1: ruleexpression_statement returns [EObject current=null] : (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) ) ;
     public final EObject ruleexpression_statement() throws RecognitionException {
         EObject current = null;
 
@@ -24191,10 +24144,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9239:2: ( (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) ) )
-            // InternalAnsic.g:9240:2: (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) )
+            // InternalAnsic.g:9179:2: ( (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) ) )
+            // InternalAnsic.g:9180:2: (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) )
             {
-            // InternalAnsic.g:9240:2: (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) )
+            // InternalAnsic.g:9180:2: (otherlv_0= ';' | ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' ) )
             int alt71=2;
             int LA71_0 = input.LA(1);
 
@@ -24213,7 +24166,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt71) {
                 case 1 :
-                    // InternalAnsic.g:9241:3: otherlv_0= ';'
+                    // InternalAnsic.g:9181:3: otherlv_0= ';'
                     {
                     otherlv_0=(Token)match(input,60,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24225,16 +24178,16 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:9246:3: ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' )
+                    // InternalAnsic.g:9186:3: ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' )
                     {
-                    // InternalAnsic.g:9246:3: ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' )
-                    // InternalAnsic.g:9247:4: ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';'
+                    // InternalAnsic.g:9186:3: ( ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';' )
+                    // InternalAnsic.g:9187:4: ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ';'
                     {
-                    // InternalAnsic.g:9247:4: ( (lv_expression_1_0= ruleexpression ) )
-                    // InternalAnsic.g:9248:5: (lv_expression_1_0= ruleexpression )
+                    // InternalAnsic.g:9187:4: ( (lv_expression_1_0= ruleexpression ) )
+                    // InternalAnsic.g:9188:5: (lv_expression_1_0= ruleexpression )
                     {
-                    // InternalAnsic.g:9248:5: (lv_expression_1_0= ruleexpression )
-                    // InternalAnsic.g:9249:6: lv_expression_1_0= ruleexpression
+                    // InternalAnsic.g:9188:5: (lv_expression_1_0= ruleexpression )
+                    // InternalAnsic.g:9189:6: lv_expression_1_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -24302,7 +24255,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleand_expression"
-    // InternalAnsic.g:9275:1: entryRuleand_expression returns [EObject current=null] : iv_ruleand_expression= ruleand_expression EOF ;
+    // InternalAnsic.g:9215:1: entryRuleand_expression returns [EObject current=null] : iv_ruleand_expression= ruleand_expression EOF ;
     public final EObject entryRuleand_expression() throws RecognitionException {
         EObject current = null;
 
@@ -24310,8 +24263,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9275:55: (iv_ruleand_expression= ruleand_expression EOF )
-            // InternalAnsic.g:9276:2: iv_ruleand_expression= ruleand_expression EOF
+            // InternalAnsic.g:9215:55: (iv_ruleand_expression= ruleand_expression EOF )
+            // InternalAnsic.g:9216:2: iv_ruleand_expression= ruleand_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAnd_expressionRule()); 
@@ -24342,7 +24295,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleand_expression"
-    // InternalAnsic.g:9282:1: ruleand_expression returns [EObject current=null] : ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) ) ;
+    // InternalAnsic.g:9222:1: ruleand_expression returns [EObject current=null] : ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) ) ;
     public final EObject ruleand_expression() throws RecognitionException {
         EObject current = null;
 
@@ -24355,17 +24308,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9288:2: ( ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) ) )
-            // InternalAnsic.g:9289:2: ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) )
+            // InternalAnsic.g:9228:2: ( ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) ) )
+            // InternalAnsic.g:9229:2: ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) )
             {
-            // InternalAnsic.g:9289:2: ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) )
-            // InternalAnsic.g:9290:3: ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) )
+            // InternalAnsic.g:9229:2: ( ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) ) )
+            // InternalAnsic.g:9230:3: ( (lv_equality_expression_0_0= ruleequality_expression ) ) ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) )
             {
-            // InternalAnsic.g:9290:3: ( (lv_equality_expression_0_0= ruleequality_expression ) )
-            // InternalAnsic.g:9291:4: (lv_equality_expression_0_0= ruleequality_expression )
+            // InternalAnsic.g:9230:3: ( (lv_equality_expression_0_0= ruleequality_expression ) )
+            // InternalAnsic.g:9231:4: (lv_equality_expression_0_0= ruleequality_expression )
             {
-            // InternalAnsic.g:9291:4: (lv_equality_expression_0_0= ruleequality_expression )
-            // InternalAnsic.g:9292:5: lv_equality_expression_0_0= ruleequality_expression
+            // InternalAnsic.g:9231:4: (lv_equality_expression_0_0= ruleequality_expression )
+            // InternalAnsic.g:9232:5: lv_equality_expression_0_0= ruleequality_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -24396,11 +24349,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9309:3: ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) )
-            // InternalAnsic.g:9310:4: (lv_and_expression_linha_1_0= ruleand_expression_linha )
+            // InternalAnsic.g:9249:3: ( (lv_and_expression_linha_1_0= ruleand_expression_linha ) )
+            // InternalAnsic.g:9250:4: (lv_and_expression_linha_1_0= ruleand_expression_linha )
             {
-            // InternalAnsic.g:9310:4: (lv_and_expression_linha_1_0= ruleand_expression_linha )
-            // InternalAnsic.g:9311:5: lv_and_expression_linha_1_0= ruleand_expression_linha
+            // InternalAnsic.g:9250:4: (lv_and_expression_linha_1_0= ruleand_expression_linha )
+            // InternalAnsic.g:9251:5: lv_and_expression_linha_1_0= ruleand_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -24456,7 +24409,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleand_expression_linha"
-    // InternalAnsic.g:9332:1: entryRuleand_expression_linha returns [EObject current=null] : iv_ruleand_expression_linha= ruleand_expression_linha EOF ;
+    // InternalAnsic.g:9272:1: entryRuleand_expression_linha returns [EObject current=null] : iv_ruleand_expression_linha= ruleand_expression_linha EOF ;
     public final EObject entryRuleand_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -24464,8 +24417,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9332:61: (iv_ruleand_expression_linha= ruleand_expression_linha EOF )
-            // InternalAnsic.g:9333:2: iv_ruleand_expression_linha= ruleand_expression_linha EOF
+            // InternalAnsic.g:9272:61: (iv_ruleand_expression_linha= ruleand_expression_linha EOF )
+            // InternalAnsic.g:9273:2: iv_ruleand_expression_linha= ruleand_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAnd_expression_linhaRule()); 
@@ -24496,89 +24449,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleand_expression_linha"
-    // InternalAnsic.g:9339:1: ruleand_expression_linha returns [EObject current=null] : ( () (otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:9279:1: ruleand_expression_linha returns [EObject current=null] : (otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) ) )? ;
     public final EObject ruleand_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        EObject lv_equality_expression_2_0 = null;
+        Token otherlv_0=null;
+        EObject lv_equality_expression_1_0 = null;
 
-        EObject lv_and_expression_linha_3_0 = null;
+        EObject lv_and_expression_linha_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:9345:2: ( ( () (otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) ) )? ) )
-            // InternalAnsic.g:9346:2: ( () (otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) ) )? )
+            // InternalAnsic.g:9285:2: ( (otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) ) )? )
+            // InternalAnsic.g:9286:2: (otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) ) )?
             {
-            // InternalAnsic.g:9346:2: ( () (otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) ) )? )
-            // InternalAnsic.g:9347:3: () (otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:9347:3: ()
-            // InternalAnsic.g:9348:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getAnd_expression_linhaAccess().getAndExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:9357:3: (otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) ) )?
+            // InternalAnsic.g:9286:2: (otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) ) )?
             int alt72=2;
             int LA72_0 = input.LA(1);
 
             if ( (LA72_0==99) ) {
-                alt72=1;
+                int LA72_1 = input.LA(2);
+
+                if ( (synpred167_InternalAnsic()) ) {
+                    alt72=1;
+                }
             }
             switch (alt72) {
                 case 1 :
-                    // InternalAnsic.g:9358:4: otherlv_1= '&' ( (lv_equality_expression_2_0= ruleequality_expression ) ) ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) )
+                    // InternalAnsic.g:9287:3: otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) )
                     {
-                    otherlv_1=(Token)match(input,99,FOLLOW_8); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,99,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getAnd_expression_linhaAccess().getAmpersandKeyword_1_0());
-                      			
+                      			newLeafNode(otherlv_0, grammarAccess.getAnd_expression_linhaAccess().getAmpersandKeyword_0());
+                      		
                     }
-                    // InternalAnsic.g:9362:4: ( (lv_equality_expression_2_0= ruleequality_expression ) )
-                    // InternalAnsic.g:9363:5: (lv_equality_expression_2_0= ruleequality_expression )
+                    // InternalAnsic.g:9291:3: ( (lv_equality_expression_1_0= ruleequality_expression ) )
+                    // InternalAnsic.g:9292:4: (lv_equality_expression_1_0= ruleequality_expression )
                     {
-                    // InternalAnsic.g:9363:5: (lv_equality_expression_2_0= ruleequality_expression )
-                    // InternalAnsic.g:9364:6: lv_equality_expression_2_0= ruleequality_expression
+                    // InternalAnsic.g:9292:4: (lv_equality_expression_1_0= ruleequality_expression )
+                    // InternalAnsic.g:9293:5: lv_equality_expression_1_0= ruleequality_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getAnd_expression_linhaAccess().getEquality_expressionEquality_expressionParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getAnd_expression_linhaAccess().getEquality_expressionEquality_expressionParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_41);
-                    lv_equality_expression_2_0=ruleequality_expression();
+                    lv_equality_expression_1_0=ruleequality_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getAnd_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"equality_expression",
-                      							lv_equality_expression_2_0,
-                      							"org.xtext.example.Ansic.equality_expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getAnd_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"equality_expression",
+                      						lv_equality_expression_1_0,
+                      						"org.xtext.example.Ansic.equality_expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -24586,34 +24522,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:9381:4: ( (lv_and_expression_linha_3_0= ruleand_expression_linha ) )
-                    // InternalAnsic.g:9382:5: (lv_and_expression_linha_3_0= ruleand_expression_linha )
+                    // InternalAnsic.g:9310:3: ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) )
+                    // InternalAnsic.g:9311:4: (lv_and_expression_linha_2_0= ruleand_expression_linha )
                     {
-                    // InternalAnsic.g:9382:5: (lv_and_expression_linha_3_0= ruleand_expression_linha )
-                    // InternalAnsic.g:9383:6: lv_and_expression_linha_3_0= ruleand_expression_linha
+                    // InternalAnsic.g:9311:4: (lv_and_expression_linha_2_0= ruleand_expression_linha )
+                    // InternalAnsic.g:9312:5: lv_and_expression_linha_2_0= ruleand_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getAnd_expression_linhaAccess().getAnd_expression_linhaAnd_expression_linhaParserRuleCall_1_2_0());
-                      					
+                      					newCompositeNode(grammarAccess.getAnd_expression_linhaAccess().getAnd_expression_linhaAnd_expression_linhaParserRuleCall_2_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_and_expression_linha_3_0=ruleand_expression_linha();
+                    lv_and_expression_linha_2_0=ruleand_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getAnd_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"and_expression_linha",
-                      							lv_and_expression_linha_3_0,
-                      							"org.xtext.example.Ansic.and_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getAnd_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"and_expression_linha",
+                      						lv_and_expression_linha_2_0,
+                      						"org.xtext.example.Ansic.and_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -24624,9 +24560,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -24652,7 +24585,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleexclusive_or_expression"
-    // InternalAnsic.g:9405:1: entryRuleexclusive_or_expression returns [EObject current=null] : iv_ruleexclusive_or_expression= ruleexclusive_or_expression EOF ;
+    // InternalAnsic.g:9333:1: entryRuleexclusive_or_expression returns [EObject current=null] : iv_ruleexclusive_or_expression= ruleexclusive_or_expression EOF ;
     public final EObject entryRuleexclusive_or_expression() throws RecognitionException {
         EObject current = null;
 
@@ -24660,8 +24593,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9405:64: (iv_ruleexclusive_or_expression= ruleexclusive_or_expression EOF )
-            // InternalAnsic.g:9406:2: iv_ruleexclusive_or_expression= ruleexclusive_or_expression EOF
+            // InternalAnsic.g:9333:64: (iv_ruleexclusive_or_expression= ruleexclusive_or_expression EOF )
+            // InternalAnsic.g:9334:2: iv_ruleexclusive_or_expression= ruleexclusive_or_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExclusive_or_expressionRule()); 
@@ -24692,7 +24625,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexclusive_or_expression"
-    // InternalAnsic.g:9412:1: ruleexclusive_or_expression returns [EObject current=null] : ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) ) ;
+    // InternalAnsic.g:9340:1: ruleexclusive_or_expression returns [EObject current=null] : ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) ) ;
     public final EObject ruleexclusive_or_expression() throws RecognitionException {
         EObject current = null;
 
@@ -24705,17 +24638,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9418:2: ( ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) ) )
-            // InternalAnsic.g:9419:2: ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) )
+            // InternalAnsic.g:9346:2: ( ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) ) )
+            // InternalAnsic.g:9347:2: ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) )
             {
-            // InternalAnsic.g:9419:2: ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) )
-            // InternalAnsic.g:9420:3: ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) )
+            // InternalAnsic.g:9347:2: ( ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) ) )
+            // InternalAnsic.g:9348:3: ( (lv_and_expression_0_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) )
             {
-            // InternalAnsic.g:9420:3: ( (lv_and_expression_0_0= ruleand_expression ) )
-            // InternalAnsic.g:9421:4: (lv_and_expression_0_0= ruleand_expression )
+            // InternalAnsic.g:9348:3: ( (lv_and_expression_0_0= ruleand_expression ) )
+            // InternalAnsic.g:9349:4: (lv_and_expression_0_0= ruleand_expression )
             {
-            // InternalAnsic.g:9421:4: (lv_and_expression_0_0= ruleand_expression )
-            // InternalAnsic.g:9422:5: lv_and_expression_0_0= ruleand_expression
+            // InternalAnsic.g:9349:4: (lv_and_expression_0_0= ruleand_expression )
+            // InternalAnsic.g:9350:5: lv_and_expression_0_0= ruleand_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -24746,11 +24679,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9439:3: ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) )
-            // InternalAnsic.g:9440:4: (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha )
+            // InternalAnsic.g:9367:3: ( (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha ) )
+            // InternalAnsic.g:9368:4: (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha )
             {
-            // InternalAnsic.g:9440:4: (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha )
-            // InternalAnsic.g:9441:5: lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha
+            // InternalAnsic.g:9368:4: (lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha )
+            // InternalAnsic.g:9369:5: lv_exclusive_or_expression_linha_1_0= ruleexclusive_or_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -24806,7 +24739,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleexclusive_or_expression_linha"
-    // InternalAnsic.g:9462:1: entryRuleexclusive_or_expression_linha returns [EObject current=null] : iv_ruleexclusive_or_expression_linha= ruleexclusive_or_expression_linha EOF ;
+    // InternalAnsic.g:9390:1: entryRuleexclusive_or_expression_linha returns [EObject current=null] : iv_ruleexclusive_or_expression_linha= ruleexclusive_or_expression_linha EOF ;
     public final EObject entryRuleexclusive_or_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -24814,8 +24747,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9462:70: (iv_ruleexclusive_or_expression_linha= ruleexclusive_or_expression_linha EOF )
-            // InternalAnsic.g:9463:2: iv_ruleexclusive_or_expression_linha= ruleexclusive_or_expression_linha EOF
+            // InternalAnsic.g:9390:70: (iv_ruleexclusive_or_expression_linha= ruleexclusive_or_expression_linha EOF )
+            // InternalAnsic.g:9391:2: iv_ruleexclusive_or_expression_linha= ruleexclusive_or_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExclusive_or_expression_linhaRule()); 
@@ -24846,89 +24779,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexclusive_or_expression_linha"
-    // InternalAnsic.g:9469:1: ruleexclusive_or_expression_linha returns [EObject current=null] : ( () (otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:9397:1: ruleexclusive_or_expression_linha returns [EObject current=null] : (otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) ) )? ;
     public final EObject ruleexclusive_or_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        EObject lv_and_expression_2_0 = null;
+        Token otherlv_0=null;
+        EObject lv_and_expression_1_0 = null;
 
-        EObject lv_exclusive_or_expression_linha_3_0 = null;
+        EObject lv_exclusive_or_expression_linha_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:9475:2: ( ( () (otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) ) )? ) )
-            // InternalAnsic.g:9476:2: ( () (otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) ) )? )
+            // InternalAnsic.g:9403:2: ( (otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) ) )? )
+            // InternalAnsic.g:9404:2: (otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) ) )?
             {
-            // InternalAnsic.g:9476:2: ( () (otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) ) )? )
-            // InternalAnsic.g:9477:3: () (otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:9477:3: ()
-            // InternalAnsic.g:9478:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getExclusive_or_expression_linhaAccess().getExclusiveOrExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:9487:3: (otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) ) )?
+            // InternalAnsic.g:9404:2: (otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) ) )?
             int alt73=2;
             int LA73_0 = input.LA(1);
 
             if ( (LA73_0==100) ) {
-                alt73=1;
+                int LA73_1 = input.LA(2);
+
+                if ( (synpred168_InternalAnsic()) ) {
+                    alt73=1;
+                }
             }
             switch (alt73) {
                 case 1 :
-                    // InternalAnsic.g:9488:4: otherlv_1= '^' ( (lv_and_expression_2_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) )
+                    // InternalAnsic.g:9405:3: otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) )
                     {
-                    otherlv_1=(Token)match(input,100,FOLLOW_8); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,100,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getExclusive_or_expression_linhaAccess().getCircumflexAccentKeyword_1_0());
-                      			
+                      			newLeafNode(otherlv_0, grammarAccess.getExclusive_or_expression_linhaAccess().getCircumflexAccentKeyword_0());
+                      		
                     }
-                    // InternalAnsic.g:9492:4: ( (lv_and_expression_2_0= ruleand_expression ) )
-                    // InternalAnsic.g:9493:5: (lv_and_expression_2_0= ruleand_expression )
+                    // InternalAnsic.g:9409:3: ( (lv_and_expression_1_0= ruleand_expression ) )
+                    // InternalAnsic.g:9410:4: (lv_and_expression_1_0= ruleand_expression )
                     {
-                    // InternalAnsic.g:9493:5: (lv_and_expression_2_0= ruleand_expression )
-                    // InternalAnsic.g:9494:6: lv_and_expression_2_0= ruleand_expression
+                    // InternalAnsic.g:9410:4: (lv_and_expression_1_0= ruleand_expression )
+                    // InternalAnsic.g:9411:5: lv_and_expression_1_0= ruleand_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getExclusive_or_expression_linhaAccess().getAnd_expressionAnd_expressionParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getExclusive_or_expression_linhaAccess().getAnd_expressionAnd_expressionParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_42);
-                    lv_and_expression_2_0=ruleand_expression();
+                    lv_and_expression_1_0=ruleand_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getExclusive_or_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"and_expression",
-                      							lv_and_expression_2_0,
-                      							"org.xtext.example.Ansic.and_expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getExclusive_or_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"and_expression",
+                      						lv_and_expression_1_0,
+                      						"org.xtext.example.Ansic.and_expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -24936,34 +24852,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:9511:4: ( (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha ) )
-                    // InternalAnsic.g:9512:5: (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha )
+                    // InternalAnsic.g:9428:3: ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) )
+                    // InternalAnsic.g:9429:4: (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha )
                     {
-                    // InternalAnsic.g:9512:5: (lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha )
-                    // InternalAnsic.g:9513:6: lv_exclusive_or_expression_linha_3_0= ruleexclusive_or_expression_linha
+                    // InternalAnsic.g:9429:4: (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha )
+                    // InternalAnsic.g:9430:5: lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getExclusive_or_expression_linhaAccess().getExclusive_or_expression_linhaExclusive_or_expression_linhaParserRuleCall_1_2_0());
-                      					
+                      					newCompositeNode(grammarAccess.getExclusive_or_expression_linhaAccess().getExclusive_or_expression_linhaExclusive_or_expression_linhaParserRuleCall_2_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_exclusive_or_expression_linha_3_0=ruleexclusive_or_expression_linha();
+                    lv_exclusive_or_expression_linha_2_0=ruleexclusive_or_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getExclusive_or_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"exclusive_or_expression_linha",
-                      							lv_exclusive_or_expression_linha_3_0,
-                      							"org.xtext.example.Ansic.exclusive_or_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getExclusive_or_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"exclusive_or_expression_linha",
+                      						lv_exclusive_or_expression_linha_2_0,
+                      						"org.xtext.example.Ansic.exclusive_or_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -24974,9 +24890,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -25002,7 +24915,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleinclusive_or_expression"
-    // InternalAnsic.g:9535:1: entryRuleinclusive_or_expression returns [EObject current=null] : iv_ruleinclusive_or_expression= ruleinclusive_or_expression EOF ;
+    // InternalAnsic.g:9451:1: entryRuleinclusive_or_expression returns [EObject current=null] : iv_ruleinclusive_or_expression= ruleinclusive_or_expression EOF ;
     public final EObject entryRuleinclusive_or_expression() throws RecognitionException {
         EObject current = null;
 
@@ -25010,8 +24923,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9535:64: (iv_ruleinclusive_or_expression= ruleinclusive_or_expression EOF )
-            // InternalAnsic.g:9536:2: iv_ruleinclusive_or_expression= ruleinclusive_or_expression EOF
+            // InternalAnsic.g:9451:64: (iv_ruleinclusive_or_expression= ruleinclusive_or_expression EOF )
+            // InternalAnsic.g:9452:2: iv_ruleinclusive_or_expression= ruleinclusive_or_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInclusive_or_expressionRule()); 
@@ -25042,7 +24955,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleinclusive_or_expression"
-    // InternalAnsic.g:9542:1: ruleinclusive_or_expression returns [EObject current=null] : ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) ) ;
+    // InternalAnsic.g:9458:1: ruleinclusive_or_expression returns [EObject current=null] : ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) ) ;
     public final EObject ruleinclusive_or_expression() throws RecognitionException {
         EObject current = null;
 
@@ -25055,17 +24968,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9548:2: ( ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) ) )
-            // InternalAnsic.g:9549:2: ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) )
+            // InternalAnsic.g:9464:2: ( ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) ) )
+            // InternalAnsic.g:9465:2: ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) )
             {
-            // InternalAnsic.g:9549:2: ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) )
-            // InternalAnsic.g:9550:3: ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) )
+            // InternalAnsic.g:9465:2: ( ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) ) )
+            // InternalAnsic.g:9466:3: ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) )
             {
-            // InternalAnsic.g:9550:3: ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) )
-            // InternalAnsic.g:9551:4: (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression )
+            // InternalAnsic.g:9466:3: ( (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression ) )
+            // InternalAnsic.g:9467:4: (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression )
             {
-            // InternalAnsic.g:9551:4: (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression )
-            // InternalAnsic.g:9552:5: lv_exclusive_or_expression_0_0= ruleexclusive_or_expression
+            // InternalAnsic.g:9467:4: (lv_exclusive_or_expression_0_0= ruleexclusive_or_expression )
+            // InternalAnsic.g:9468:5: lv_exclusive_or_expression_0_0= ruleexclusive_or_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -25096,11 +25009,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9569:3: ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) )
-            // InternalAnsic.g:9570:4: (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha )
+            // InternalAnsic.g:9485:3: ( (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha ) )
+            // InternalAnsic.g:9486:4: (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha )
             {
-            // InternalAnsic.g:9570:4: (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha )
-            // InternalAnsic.g:9571:5: lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha
+            // InternalAnsic.g:9486:4: (lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha )
+            // InternalAnsic.g:9487:5: lv_inclusive_or_expression_linha_1_0= ruleinclusive_or_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -25156,7 +25069,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleinclusive_or_expression_linha"
-    // InternalAnsic.g:9592:1: entryRuleinclusive_or_expression_linha returns [EObject current=null] : iv_ruleinclusive_or_expression_linha= ruleinclusive_or_expression_linha EOF ;
+    // InternalAnsic.g:9508:1: entryRuleinclusive_or_expression_linha returns [EObject current=null] : iv_ruleinclusive_or_expression_linha= ruleinclusive_or_expression_linha EOF ;
     public final EObject entryRuleinclusive_or_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -25164,8 +25077,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9592:70: (iv_ruleinclusive_or_expression_linha= ruleinclusive_or_expression_linha EOF )
-            // InternalAnsic.g:9593:2: iv_ruleinclusive_or_expression_linha= ruleinclusive_or_expression_linha EOF
+            // InternalAnsic.g:9508:70: (iv_ruleinclusive_or_expression_linha= ruleinclusive_or_expression_linha EOF )
+            // InternalAnsic.g:9509:2: iv_ruleinclusive_or_expression_linha= ruleinclusive_or_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInclusive_or_expression_linhaRule()); 
@@ -25196,89 +25109,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleinclusive_or_expression_linha"
-    // InternalAnsic.g:9599:1: ruleinclusive_or_expression_linha returns [EObject current=null] : ( () (otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:9515:1: ruleinclusive_or_expression_linha returns [EObject current=null] : (otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) ) )? ;
     public final EObject ruleinclusive_or_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        EObject lv_exclusive_or_expression_2_0 = null;
+        Token otherlv_0=null;
+        EObject lv_exclusive_or_expression_1_0 = null;
 
-        EObject lv_inclusive_or_expression_linha_3_0 = null;
+        EObject lv_inclusive_or_expression_linha_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:9605:2: ( ( () (otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) ) )? ) )
-            // InternalAnsic.g:9606:2: ( () (otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) ) )? )
+            // InternalAnsic.g:9521:2: ( (otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) ) )? )
+            // InternalAnsic.g:9522:2: (otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) ) )?
             {
-            // InternalAnsic.g:9606:2: ( () (otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) ) )? )
-            // InternalAnsic.g:9607:3: () (otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:9607:3: ()
-            // InternalAnsic.g:9608:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getInclusive_or_expression_linhaAccess().getInclusiveOrExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:9617:3: (otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) ) )?
+            // InternalAnsic.g:9522:2: (otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) ) )?
             int alt74=2;
             int LA74_0 = input.LA(1);
 
             if ( (LA74_0==101) ) {
-                alt74=1;
+                int LA74_1 = input.LA(2);
+
+                if ( (synpred169_InternalAnsic()) ) {
+                    alt74=1;
+                }
             }
             switch (alt74) {
                 case 1 :
-                    // InternalAnsic.g:9618:4: otherlv_1= '|' ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) )
+                    // InternalAnsic.g:9523:3: otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) )
                     {
-                    otherlv_1=(Token)match(input,101,FOLLOW_8); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,101,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getInclusive_or_expression_linhaAccess().getVerticalLineKeyword_1_0());
-                      			
+                      			newLeafNode(otherlv_0, grammarAccess.getInclusive_or_expression_linhaAccess().getVerticalLineKeyword_0());
+                      		
                     }
-                    // InternalAnsic.g:9622:4: ( (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression ) )
-                    // InternalAnsic.g:9623:5: (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression )
+                    // InternalAnsic.g:9527:3: ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) )
+                    // InternalAnsic.g:9528:4: (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression )
                     {
-                    // InternalAnsic.g:9623:5: (lv_exclusive_or_expression_2_0= ruleexclusive_or_expression )
-                    // InternalAnsic.g:9624:6: lv_exclusive_or_expression_2_0= ruleexclusive_or_expression
+                    // InternalAnsic.g:9528:4: (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression )
+                    // InternalAnsic.g:9529:5: lv_exclusive_or_expression_1_0= ruleexclusive_or_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getInclusive_or_expression_linhaAccess().getExclusive_or_expressionExclusive_or_expressionParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getInclusive_or_expression_linhaAccess().getExclusive_or_expressionExclusive_or_expressionParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_43);
-                    lv_exclusive_or_expression_2_0=ruleexclusive_or_expression();
+                    lv_exclusive_or_expression_1_0=ruleexclusive_or_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getInclusive_or_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"exclusive_or_expression",
-                      							lv_exclusive_or_expression_2_0,
-                      							"org.xtext.example.Ansic.exclusive_or_expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getInclusive_or_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"exclusive_or_expression",
+                      						lv_exclusive_or_expression_1_0,
+                      						"org.xtext.example.Ansic.exclusive_or_expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -25286,34 +25182,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:9641:4: ( (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha ) )
-                    // InternalAnsic.g:9642:5: (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha )
+                    // InternalAnsic.g:9546:3: ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) )
+                    // InternalAnsic.g:9547:4: (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha )
                     {
-                    // InternalAnsic.g:9642:5: (lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha )
-                    // InternalAnsic.g:9643:6: lv_inclusive_or_expression_linha_3_0= ruleinclusive_or_expression_linha
+                    // InternalAnsic.g:9547:4: (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha )
+                    // InternalAnsic.g:9548:5: lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getInclusive_or_expression_linhaAccess().getInclusive_or_expression_linhaInclusive_or_expression_linhaParserRuleCall_1_2_0());
-                      					
+                      					newCompositeNode(grammarAccess.getInclusive_or_expression_linhaAccess().getInclusive_or_expression_linhaInclusive_or_expression_linhaParserRuleCall_2_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_inclusive_or_expression_linha_3_0=ruleinclusive_or_expression_linha();
+                    lv_inclusive_or_expression_linha_2_0=ruleinclusive_or_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getInclusive_or_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"inclusive_or_expression_linha",
-                      							lv_inclusive_or_expression_linha_3_0,
-                      							"org.xtext.example.Ansic.inclusive_or_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getInclusive_or_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"inclusive_or_expression_linha",
+                      						lv_inclusive_or_expression_linha_2_0,
+                      						"org.xtext.example.Ansic.inclusive_or_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -25324,9 +25220,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -25352,7 +25245,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelogical_and_expression"
-    // InternalAnsic.g:9665:1: entryRulelogical_and_expression returns [EObject current=null] : iv_rulelogical_and_expression= rulelogical_and_expression EOF ;
+    // InternalAnsic.g:9569:1: entryRulelogical_and_expression returns [EObject current=null] : iv_rulelogical_and_expression= rulelogical_and_expression EOF ;
     public final EObject entryRulelogical_and_expression() throws RecognitionException {
         EObject current = null;
 
@@ -25360,8 +25253,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9665:63: (iv_rulelogical_and_expression= rulelogical_and_expression EOF )
-            // InternalAnsic.g:9666:2: iv_rulelogical_and_expression= rulelogical_and_expression EOF
+            // InternalAnsic.g:9569:63: (iv_rulelogical_and_expression= rulelogical_and_expression EOF )
+            // InternalAnsic.g:9570:2: iv_rulelogical_and_expression= rulelogical_and_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLogical_and_expressionRule()); 
@@ -25392,7 +25285,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelogical_and_expression"
-    // InternalAnsic.g:9672:1: rulelogical_and_expression returns [EObject current=null] : ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) ) ;
+    // InternalAnsic.g:9576:1: rulelogical_and_expression returns [EObject current=null] : ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) ) ;
     public final EObject rulelogical_and_expression() throws RecognitionException {
         EObject current = null;
 
@@ -25405,17 +25298,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9678:2: ( ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) ) )
-            // InternalAnsic.g:9679:2: ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) )
+            // InternalAnsic.g:9582:2: ( ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) ) )
+            // InternalAnsic.g:9583:2: ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) )
             {
-            // InternalAnsic.g:9679:2: ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) )
-            // InternalAnsic.g:9680:3: ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) )
+            // InternalAnsic.g:9583:2: ( ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) ) )
+            // InternalAnsic.g:9584:3: ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) )
             {
-            // InternalAnsic.g:9680:3: ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) )
-            // InternalAnsic.g:9681:4: (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression )
+            // InternalAnsic.g:9584:3: ( (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression ) )
+            // InternalAnsic.g:9585:4: (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression )
             {
-            // InternalAnsic.g:9681:4: (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression )
-            // InternalAnsic.g:9682:5: lv_inclusive_or_expression_0_0= ruleinclusive_or_expression
+            // InternalAnsic.g:9585:4: (lv_inclusive_or_expression_0_0= ruleinclusive_or_expression )
+            // InternalAnsic.g:9586:5: lv_inclusive_or_expression_0_0= ruleinclusive_or_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -25446,11 +25339,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9699:3: ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) )
-            // InternalAnsic.g:9700:4: (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha )
+            // InternalAnsic.g:9603:3: ( (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha ) )
+            // InternalAnsic.g:9604:4: (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha )
             {
-            // InternalAnsic.g:9700:4: (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha )
-            // InternalAnsic.g:9701:5: lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha
+            // InternalAnsic.g:9604:4: (lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha )
+            // InternalAnsic.g:9605:5: lv_logical_and_expression_linha_1_0= rulelogical_and_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -25506,7 +25399,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelogical_and_expression_linha"
-    // InternalAnsic.g:9722:1: entryRulelogical_and_expression_linha returns [EObject current=null] : iv_rulelogical_and_expression_linha= rulelogical_and_expression_linha EOF ;
+    // InternalAnsic.g:9626:1: entryRulelogical_and_expression_linha returns [EObject current=null] : iv_rulelogical_and_expression_linha= rulelogical_and_expression_linha EOF ;
     public final EObject entryRulelogical_and_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -25514,8 +25407,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9722:69: (iv_rulelogical_and_expression_linha= rulelogical_and_expression_linha EOF )
-            // InternalAnsic.g:9723:2: iv_rulelogical_and_expression_linha= rulelogical_and_expression_linha EOF
+            // InternalAnsic.g:9626:69: (iv_rulelogical_and_expression_linha= rulelogical_and_expression_linha EOF )
+            // InternalAnsic.g:9627:2: iv_rulelogical_and_expression_linha= rulelogical_and_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLogical_and_expression_linhaRule()); 
@@ -25546,89 +25439,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelogical_and_expression_linha"
-    // InternalAnsic.g:9729:1: rulelogical_and_expression_linha returns [EObject current=null] : ( () (otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:9633:1: rulelogical_and_expression_linha returns [EObject current=null] : (otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) ) )? ;
     public final EObject rulelogical_and_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        EObject lv_inclusive_or_expression_2_0 = null;
+        Token otherlv_0=null;
+        EObject lv_inclusive_or_expression_1_0 = null;
 
-        EObject lv_logical_and_expression_linha_3_0 = null;
+        EObject lv_logical_and_expression_linha_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:9735:2: ( ( () (otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) ) )? ) )
-            // InternalAnsic.g:9736:2: ( () (otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) ) )? )
+            // InternalAnsic.g:9639:2: ( (otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) ) )? )
+            // InternalAnsic.g:9640:2: (otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) ) )?
             {
-            // InternalAnsic.g:9736:2: ( () (otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) ) )? )
-            // InternalAnsic.g:9737:3: () (otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:9737:3: ()
-            // InternalAnsic.g:9738:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getLogical_and_expression_linhaAccess().getLogicalAndExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:9747:3: (otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) ) )?
+            // InternalAnsic.g:9640:2: (otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) ) )?
             int alt75=2;
             int LA75_0 = input.LA(1);
 
             if ( (LA75_0==102) ) {
-                alt75=1;
+                int LA75_1 = input.LA(2);
+
+                if ( (synpred170_InternalAnsic()) ) {
+                    alt75=1;
+                }
             }
             switch (alt75) {
                 case 1 :
-                    // InternalAnsic.g:9748:4: otherlv_1= 'and' ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) )
+                    // InternalAnsic.g:9641:3: otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) )
                     {
-                    otherlv_1=(Token)match(input,102,FOLLOW_8); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,102,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getLogical_and_expression_linhaAccess().getAndKeyword_1_0());
-                      			
+                      			newLeafNode(otherlv_0, grammarAccess.getLogical_and_expression_linhaAccess().getAndKeyword_0());
+                      		
                     }
-                    // InternalAnsic.g:9752:4: ( (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression ) )
-                    // InternalAnsic.g:9753:5: (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression )
+                    // InternalAnsic.g:9645:3: ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) )
+                    // InternalAnsic.g:9646:4: (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression )
                     {
-                    // InternalAnsic.g:9753:5: (lv_inclusive_or_expression_2_0= ruleinclusive_or_expression )
-                    // InternalAnsic.g:9754:6: lv_inclusive_or_expression_2_0= ruleinclusive_or_expression
+                    // InternalAnsic.g:9646:4: (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression )
+                    // InternalAnsic.g:9647:5: lv_inclusive_or_expression_1_0= ruleinclusive_or_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getLogical_and_expression_linhaAccess().getInclusive_or_expressionInclusive_or_expressionParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getLogical_and_expression_linhaAccess().getInclusive_or_expressionInclusive_or_expressionParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_44);
-                    lv_inclusive_or_expression_2_0=ruleinclusive_or_expression();
+                    lv_inclusive_or_expression_1_0=ruleinclusive_or_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getLogical_and_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"inclusive_or_expression",
-                      							lv_inclusive_or_expression_2_0,
-                      							"org.xtext.example.Ansic.inclusive_or_expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getLogical_and_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"inclusive_or_expression",
+                      						lv_inclusive_or_expression_1_0,
+                      						"org.xtext.example.Ansic.inclusive_or_expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -25636,34 +25512,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:9771:4: ( (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha ) )
-                    // InternalAnsic.g:9772:5: (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha )
+                    // InternalAnsic.g:9664:3: ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) )
+                    // InternalAnsic.g:9665:4: (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha )
                     {
-                    // InternalAnsic.g:9772:5: (lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha )
-                    // InternalAnsic.g:9773:6: lv_logical_and_expression_linha_3_0= rulelogical_and_expression_linha
+                    // InternalAnsic.g:9665:4: (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha )
+                    // InternalAnsic.g:9666:5: lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getLogical_and_expression_linhaAccess().getLogical_and_expression_linhaLogical_and_expression_linhaParserRuleCall_1_2_0());
-                      					
+                      					newCompositeNode(grammarAccess.getLogical_and_expression_linhaAccess().getLogical_and_expression_linhaLogical_and_expression_linhaParserRuleCall_2_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_logical_and_expression_linha_3_0=rulelogical_and_expression_linha();
+                    lv_logical_and_expression_linha_2_0=rulelogical_and_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getLogical_and_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"logical_and_expression_linha",
-                      							lv_logical_and_expression_linha_3_0,
-                      							"org.xtext.example.Ansic.logical_and_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getLogical_and_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"logical_and_expression_linha",
+                      						lv_logical_and_expression_linha_2_0,
+                      						"org.xtext.example.Ansic.logical_and_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -25674,9 +25550,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -25702,7 +25575,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelogical_or_expression"
-    // InternalAnsic.g:9795:1: entryRulelogical_or_expression returns [EObject current=null] : iv_rulelogical_or_expression= rulelogical_or_expression EOF ;
+    // InternalAnsic.g:9687:1: entryRulelogical_or_expression returns [EObject current=null] : iv_rulelogical_or_expression= rulelogical_or_expression EOF ;
     public final EObject entryRulelogical_or_expression() throws RecognitionException {
         EObject current = null;
 
@@ -25710,8 +25583,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9795:62: (iv_rulelogical_or_expression= rulelogical_or_expression EOF )
-            // InternalAnsic.g:9796:2: iv_rulelogical_or_expression= rulelogical_or_expression EOF
+            // InternalAnsic.g:9687:62: (iv_rulelogical_or_expression= rulelogical_or_expression EOF )
+            // InternalAnsic.g:9688:2: iv_rulelogical_or_expression= rulelogical_or_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLogical_or_expressionRule()); 
@@ -25742,7 +25615,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelogical_or_expression"
-    // InternalAnsic.g:9802:1: rulelogical_or_expression returns [EObject current=null] : ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) ) ;
+    // InternalAnsic.g:9694:1: rulelogical_or_expression returns [EObject current=null] : ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) ) ;
     public final EObject rulelogical_or_expression() throws RecognitionException {
         EObject current = null;
 
@@ -25755,17 +25628,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9808:2: ( ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) ) )
-            // InternalAnsic.g:9809:2: ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) )
+            // InternalAnsic.g:9700:2: ( ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) ) )
+            // InternalAnsic.g:9701:2: ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) )
             {
-            // InternalAnsic.g:9809:2: ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) )
-            // InternalAnsic.g:9810:3: ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) )
+            // InternalAnsic.g:9701:2: ( ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) ) )
+            // InternalAnsic.g:9702:3: ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) )
             {
-            // InternalAnsic.g:9810:3: ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) )
-            // InternalAnsic.g:9811:4: (lv_logical_and_expression_0_0= rulelogical_and_expression )
+            // InternalAnsic.g:9702:3: ( (lv_logical_and_expression_0_0= rulelogical_and_expression ) )
+            // InternalAnsic.g:9703:4: (lv_logical_and_expression_0_0= rulelogical_and_expression )
             {
-            // InternalAnsic.g:9811:4: (lv_logical_and_expression_0_0= rulelogical_and_expression )
-            // InternalAnsic.g:9812:5: lv_logical_and_expression_0_0= rulelogical_and_expression
+            // InternalAnsic.g:9703:4: (lv_logical_and_expression_0_0= rulelogical_and_expression )
+            // InternalAnsic.g:9704:5: lv_logical_and_expression_0_0= rulelogical_and_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -25796,11 +25669,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9829:3: ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) )
-            // InternalAnsic.g:9830:4: (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha )
+            // InternalAnsic.g:9721:3: ( (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha ) )
+            // InternalAnsic.g:9722:4: (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha )
             {
-            // InternalAnsic.g:9830:4: (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha )
-            // InternalAnsic.g:9831:5: lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha
+            // InternalAnsic.g:9722:4: (lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha )
+            // InternalAnsic.g:9723:5: lv_logical_or_expression_linha_1_0= rulelogical_or_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -25856,7 +25729,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelogical_or_expression_linha"
-    // InternalAnsic.g:9852:1: entryRulelogical_or_expression_linha returns [EObject current=null] : iv_rulelogical_or_expression_linha= rulelogical_or_expression_linha EOF ;
+    // InternalAnsic.g:9744:1: entryRulelogical_or_expression_linha returns [EObject current=null] : iv_rulelogical_or_expression_linha= rulelogical_or_expression_linha EOF ;
     public final EObject entryRulelogical_or_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -25864,8 +25737,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9852:68: (iv_rulelogical_or_expression_linha= rulelogical_or_expression_linha EOF )
-            // InternalAnsic.g:9853:2: iv_rulelogical_or_expression_linha= rulelogical_or_expression_linha EOF
+            // InternalAnsic.g:9744:68: (iv_rulelogical_or_expression_linha= rulelogical_or_expression_linha EOF )
+            // InternalAnsic.g:9745:2: iv_rulelogical_or_expression_linha= rulelogical_or_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLogical_or_expression_linhaRule()); 
@@ -25896,89 +25769,72 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelogical_or_expression_linha"
-    // InternalAnsic.g:9859:1: rulelogical_or_expression_linha returns [EObject current=null] : ( () (otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:9751:1: rulelogical_or_expression_linha returns [EObject current=null] : (otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) ) )? ;
     public final EObject rulelogical_or_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        EObject lv_logical_and_expression_2_0 = null;
+        Token otherlv_0=null;
+        EObject lv_logical_and_expression_1_0 = null;
 
-        EObject lv_logical_or_expression_linha_3_0 = null;
+        EObject lv_logical_or_expression_linha_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:9865:2: ( ( () (otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) ) )? ) )
-            // InternalAnsic.g:9866:2: ( () (otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) ) )? )
+            // InternalAnsic.g:9757:2: ( (otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) ) )? )
+            // InternalAnsic.g:9758:2: (otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) ) )?
             {
-            // InternalAnsic.g:9866:2: ( () (otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) ) )? )
-            // InternalAnsic.g:9867:3: () (otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:9867:3: ()
-            // InternalAnsic.g:9868:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getLogical_or_expression_linhaAccess().getLogicalOrExpressionLinhaActionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:9877:3: (otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) ) )?
+            // InternalAnsic.g:9758:2: (otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) ) )?
             int alt76=2;
             int LA76_0 = input.LA(1);
 
             if ( (LA76_0==103) ) {
-                alt76=1;
+                int LA76_1 = input.LA(2);
+
+                if ( (synpred171_InternalAnsic()) ) {
+                    alt76=1;
+                }
             }
             switch (alt76) {
                 case 1 :
-                    // InternalAnsic.g:9878:4: otherlv_1= 'or' ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) )
+                    // InternalAnsic.g:9759:3: otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) )
                     {
-                    otherlv_1=(Token)match(input,103,FOLLOW_8); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,103,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getLogical_or_expression_linhaAccess().getOrKeyword_1_0());
-                      			
+                      			newLeafNode(otherlv_0, grammarAccess.getLogical_or_expression_linhaAccess().getOrKeyword_0());
+                      		
                     }
-                    // InternalAnsic.g:9882:4: ( (lv_logical_and_expression_2_0= rulelogical_and_expression ) )
-                    // InternalAnsic.g:9883:5: (lv_logical_and_expression_2_0= rulelogical_and_expression )
+                    // InternalAnsic.g:9763:3: ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) )
+                    // InternalAnsic.g:9764:4: (lv_logical_and_expression_1_0= rulelogical_and_expression )
                     {
-                    // InternalAnsic.g:9883:5: (lv_logical_and_expression_2_0= rulelogical_and_expression )
-                    // InternalAnsic.g:9884:6: lv_logical_and_expression_2_0= rulelogical_and_expression
+                    // InternalAnsic.g:9764:4: (lv_logical_and_expression_1_0= rulelogical_and_expression )
+                    // InternalAnsic.g:9765:5: lv_logical_and_expression_1_0= rulelogical_and_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_and_expressionLogical_and_expressionParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_and_expressionLogical_and_expressionParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_45);
-                    lv_logical_and_expression_2_0=rulelogical_and_expression();
+                    lv_logical_and_expression_1_0=rulelogical_and_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getLogical_or_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"logical_and_expression",
-                      							lv_logical_and_expression_2_0,
-                      							"org.xtext.example.Ansic.logical_and_expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getLogical_or_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"logical_and_expression",
+                      						lv_logical_and_expression_1_0,
+                      						"org.xtext.example.Ansic.logical_and_expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -25986,34 +25842,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:9901:4: ( (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha ) )
-                    // InternalAnsic.g:9902:5: (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha )
+                    // InternalAnsic.g:9782:3: ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) )
+                    // InternalAnsic.g:9783:4: (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha )
                     {
-                    // InternalAnsic.g:9902:5: (lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha )
-                    // InternalAnsic.g:9903:6: lv_logical_or_expression_linha_3_0= rulelogical_or_expression_linha
+                    // InternalAnsic.g:9783:4: (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha )
+                    // InternalAnsic.g:9784:5: lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_or_expression_linhaLogical_or_expression_linhaParserRuleCall_1_2_0());
-                      					
+                      					newCompositeNode(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_or_expression_linhaLogical_or_expression_linhaParserRuleCall_2_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_logical_or_expression_linha_3_0=rulelogical_or_expression_linha();
+                    lv_logical_or_expression_linha_2_0=rulelogical_or_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getLogical_or_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"logical_or_expression_linha",
-                      							lv_logical_or_expression_linha_3_0,
-                      							"org.xtext.example.Ansic.logical_or_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getLogical_or_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"logical_or_expression_linha",
+                      						lv_logical_or_expression_linha_2_0,
+                      						"org.xtext.example.Ansic.logical_or_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -26024,9 +25880,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -26052,7 +25905,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconditional_expression"
-    // InternalAnsic.g:9925:1: entryRuleconditional_expression returns [EObject current=null] : iv_ruleconditional_expression= ruleconditional_expression EOF ;
+    // InternalAnsic.g:9805:1: entryRuleconditional_expression returns [EObject current=null] : iv_ruleconditional_expression= ruleconditional_expression EOF ;
     public final EObject entryRuleconditional_expression() throws RecognitionException {
         EObject current = null;
 
@@ -26060,8 +25913,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9925:63: (iv_ruleconditional_expression= ruleconditional_expression EOF )
-            // InternalAnsic.g:9926:2: iv_ruleconditional_expression= ruleconditional_expression EOF
+            // InternalAnsic.g:9805:63: (iv_ruleconditional_expression= ruleconditional_expression EOF )
+            // InternalAnsic.g:9806:2: iv_ruleconditional_expression= ruleconditional_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConditional_expressionRule()); 
@@ -26092,7 +25945,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconditional_expression"
-    // InternalAnsic.g:9932:1: ruleconditional_expression returns [EObject current=null] : ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) ) ;
+    // InternalAnsic.g:9812:1: ruleconditional_expression returns [EObject current=null] : ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) ) ;
     public final EObject ruleconditional_expression() throws RecognitionException {
         EObject current = null;
 
@@ -26105,17 +25958,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:9938:2: ( ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) ) )
-            // InternalAnsic.g:9939:2: ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) )
+            // InternalAnsic.g:9818:2: ( ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) ) )
+            // InternalAnsic.g:9819:2: ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) )
             {
-            // InternalAnsic.g:9939:2: ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) )
-            // InternalAnsic.g:9940:3: ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) )
+            // InternalAnsic.g:9819:2: ( ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) ) )
+            // InternalAnsic.g:9820:3: ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) ) ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) )
             {
-            // InternalAnsic.g:9940:3: ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) )
-            // InternalAnsic.g:9941:4: (lv_logical_or_expression_0_0= rulelogical_or_expression )
+            // InternalAnsic.g:9820:3: ( (lv_logical_or_expression_0_0= rulelogical_or_expression ) )
+            // InternalAnsic.g:9821:4: (lv_logical_or_expression_0_0= rulelogical_or_expression )
             {
-            // InternalAnsic.g:9941:4: (lv_logical_or_expression_0_0= rulelogical_or_expression )
-            // InternalAnsic.g:9942:5: lv_logical_or_expression_0_0= rulelogical_or_expression
+            // InternalAnsic.g:9821:4: (lv_logical_or_expression_0_0= rulelogical_or_expression )
+            // InternalAnsic.g:9822:5: lv_logical_or_expression_0_0= rulelogical_or_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -26146,11 +25999,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:9959:3: ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) )
-            // InternalAnsic.g:9960:4: (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha )
+            // InternalAnsic.g:9839:3: ( (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha ) )
+            // InternalAnsic.g:9840:4: (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha )
             {
-            // InternalAnsic.g:9960:4: (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha )
-            // InternalAnsic.g:9961:5: lv_conditional_expression_linha_1_0= ruleconditional_expression_linha
+            // InternalAnsic.g:9840:4: (lv_conditional_expression_linha_1_0= ruleconditional_expression_linha )
+            // InternalAnsic.g:9841:5: lv_conditional_expression_linha_1_0= ruleconditional_expression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -26206,7 +26059,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconditional_expression_linha"
-    // InternalAnsic.g:9982:1: entryRuleconditional_expression_linha returns [EObject current=null] : iv_ruleconditional_expression_linha= ruleconditional_expression_linha EOF ;
+    // InternalAnsic.g:9862:1: entryRuleconditional_expression_linha returns [EObject current=null] : iv_ruleconditional_expression_linha= ruleconditional_expression_linha EOF ;
     public final EObject entryRuleconditional_expression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -26214,8 +26067,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:9982:69: (iv_ruleconditional_expression_linha= ruleconditional_expression_linha EOF )
-            // InternalAnsic.g:9983:2: iv_ruleconditional_expression_linha= ruleconditional_expression_linha EOF
+            // InternalAnsic.g:9862:69: (iv_ruleconditional_expression_linha= ruleconditional_expression_linha EOF )
+            // InternalAnsic.g:9863:2: iv_ruleconditional_expression_linha= ruleconditional_expression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConditional_expression_linhaRule()); 
@@ -26246,48 +26099,27 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconditional_expression_linha"
-    // InternalAnsic.g:9989:1: ruleconditional_expression_linha returns [EObject current=null] : ( () (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )? ) ;
+    // InternalAnsic.g:9869:1: ruleconditional_expression_linha returns [EObject current=null] : (otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) ) )? ;
     public final EObject ruleconditional_expression_linha() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        EObject lv_expression_2_0 = null;
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        EObject lv_expression_1_0 = null;
 
-        EObject lv_conditional_expression_4_0 = null;
+        EObject lv_conditional_expression_3_0 = null;
 
-        EObject lv_conditional_expression_linha_5_0 = null;
+        EObject lv_conditional_expression_linha_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalAnsic.g:9995:2: ( ( () (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )? ) )
-            // InternalAnsic.g:9996:2: ( () (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )? )
+            // InternalAnsic.g:9875:2: ( (otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) ) )? )
+            // InternalAnsic.g:9876:2: (otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) ) )?
             {
-            // InternalAnsic.g:9996:2: ( () (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )? )
-            // InternalAnsic.g:9997:3: () (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )?
-            {
-            // InternalAnsic.g:9997:3: ()
-            // InternalAnsic.g:9998:4: 
-            {
-            if ( state.backtracking==0 ) {
-
-              				/* */
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				current = forceCreateModelElement(
-              					grammarAccess.getConditional_expression_linhaAccess().getConditionalExpressionLinhaAcctionAction_0(),
-              					current);
-              			
-            }
-
-            }
-
-            // InternalAnsic.g:10007:3: (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )?
+            // InternalAnsic.g:9876:2: (otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) ) )?
             int alt77=2;
             int LA77_0 = input.LA(1);
 
@@ -26300,42 +26132,42 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt77) {
                 case 1 :
-                    // InternalAnsic.g:10008:4: otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) )
+                    // InternalAnsic.g:9877:3: otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) )
                     {
-                    otherlv_1=(Token)match(input,104,FOLLOW_8); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,104,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getConditional_expression_linhaAccess().getQuestionMarkKeyword_1_0());
-                      			
+                      			newLeafNode(otherlv_0, grammarAccess.getConditional_expression_linhaAccess().getQuestionMarkKeyword_0());
+                      		
                     }
-                    // InternalAnsic.g:10012:4: ( (lv_expression_2_0= ruleexpression ) )
-                    // InternalAnsic.g:10013:5: (lv_expression_2_0= ruleexpression )
+                    // InternalAnsic.g:9881:3: ( (lv_expression_1_0= ruleexpression ) )
+                    // InternalAnsic.g:9882:4: (lv_expression_1_0= ruleexpression )
                     {
-                    // InternalAnsic.g:10013:5: (lv_expression_2_0= ruleexpression )
-                    // InternalAnsic.g:10014:6: lv_expression_2_0= ruleexpression
+                    // InternalAnsic.g:9882:4: (lv_expression_1_0= ruleexpression )
+                    // InternalAnsic.g:9883:5: lv_expression_1_0= ruleexpression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getExpressionExpressionParserRuleCall_1_1_0());
-                      					
+                      					newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getExpressionExpressionParserRuleCall_1_0());
+                      				
                     }
                     pushFollow(FOLLOW_16);
-                    lv_expression_2_0=ruleexpression();
+                    lv_expression_1_0=ruleexpression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getConditional_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"expression",
-                      							lv_expression_2_0,
-                      							"org.xtext.example.Ansic.expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getConditional_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"expression",
+                      						lv_expression_1_0,
+                      						"org.xtext.example.Ansic.expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -26343,40 +26175,40 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,61,FOLLOW_8); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,61,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_3, grammarAccess.getConditional_expression_linhaAccess().getColonKeyword_1_2());
-                      			
+                      			newLeafNode(otherlv_2, grammarAccess.getConditional_expression_linhaAccess().getColonKeyword_2());
+                      		
                     }
-                    // InternalAnsic.g:10035:4: ( (lv_conditional_expression_4_0= ruleconditional_expression ) )
-                    // InternalAnsic.g:10036:5: (lv_conditional_expression_4_0= ruleconditional_expression )
+                    // InternalAnsic.g:9904:3: ( (lv_conditional_expression_3_0= ruleconditional_expression ) )
+                    // InternalAnsic.g:9905:4: (lv_conditional_expression_3_0= ruleconditional_expression )
                     {
-                    // InternalAnsic.g:10036:5: (lv_conditional_expression_4_0= ruleconditional_expression )
-                    // InternalAnsic.g:10037:6: lv_conditional_expression_4_0= ruleconditional_expression
+                    // InternalAnsic.g:9905:4: (lv_conditional_expression_3_0= ruleconditional_expression )
+                    // InternalAnsic.g:9906:5: lv_conditional_expression_3_0= ruleconditional_expression
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expressionConditional_expressionParserRuleCall_1_3_0());
-                      					
+                      					newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expressionConditional_expressionParserRuleCall_3_0());
+                      				
                     }
                     pushFollow(FOLLOW_46);
-                    lv_conditional_expression_4_0=ruleconditional_expression();
+                    lv_conditional_expression_3_0=ruleconditional_expression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getConditional_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"conditional_expression",
-                      							lv_conditional_expression_4_0,
-                      							"org.xtext.example.Ansic.conditional_expression");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getConditional_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"conditional_expression",
+                      						lv_conditional_expression_3_0,
+                      						"org.xtext.example.Ansic.conditional_expression");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -26384,34 +26216,34 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:10054:4: ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) )
-                    // InternalAnsic.g:10055:5: (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha )
+                    // InternalAnsic.g:9923:3: ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) )
+                    // InternalAnsic.g:9924:4: (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha )
                     {
-                    // InternalAnsic.g:10055:5: (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha )
-                    // InternalAnsic.g:10056:6: lv_conditional_expression_linha_5_0= ruleconditional_expression_linha
+                    // InternalAnsic.g:9924:4: (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha )
+                    // InternalAnsic.g:9925:5: lv_conditional_expression_linha_4_0= ruleconditional_expression_linha
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_1_4_0());
-                      					
+                      					newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_4_0());
+                      				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_conditional_expression_linha_5_0=ruleconditional_expression_linha();
+                    lv_conditional_expression_linha_4_0=ruleconditional_expression_linha();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      						if (current==null) {
-                      							current = createModelElementForParent(grammarAccess.getConditional_expression_linhaRule());
-                      						}
-                      						set(
-                      							current,
-                      							"conditional_expression_linha",
-                      							lv_conditional_expression_linha_5_0,
-                      							"org.xtext.example.Ansic.conditional_expression_linha");
-                      						afterParserOrEnumRuleCall();
-                      					
+                      					if (current==null) {
+                      						current = createModelElementForParent(grammarAccess.getConditional_expression_linhaRule());
+                      					}
+                      					set(
+                      						current,
+                      						"conditional_expression_linha",
+                      						lv_conditional_expression_linha_4_0,
+                      						"org.xtext.example.Ansic.conditional_expression_linha");
+                      					afterParserOrEnumRuleCall();
+                      				
                     }
 
                     }
@@ -26422,9 +26254,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-
-            }
-
 
             }
 
@@ -26450,7 +26279,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleassignment_expression"
-    // InternalAnsic.g:10078:1: entryRuleassignment_expression returns [EObject current=null] : iv_ruleassignment_expression= ruleassignment_expression EOF ;
+    // InternalAnsic.g:9946:1: entryRuleassignment_expression returns [EObject current=null] : iv_ruleassignment_expression= ruleassignment_expression EOF ;
     public final EObject entryRuleassignment_expression() throws RecognitionException {
         EObject current = null;
 
@@ -26458,8 +26287,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10078:62: (iv_ruleassignment_expression= ruleassignment_expression EOF )
-            // InternalAnsic.g:10079:2: iv_ruleassignment_expression= ruleassignment_expression EOF
+            // InternalAnsic.g:9946:62: (iv_ruleassignment_expression= ruleassignment_expression EOF )
+            // InternalAnsic.g:9947:2: iv_ruleassignment_expression= ruleassignment_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAssignment_expressionRule()); 
@@ -26490,7 +26319,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleassignment_expression"
-    // InternalAnsic.g:10085:1: ruleassignment_expression returns [EObject current=null] : ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) ) ;
+    // InternalAnsic.g:9953:1: ruleassignment_expression returns [EObject current=null] : ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) ) ;
     public final EObject ruleassignment_expression() throws RecognitionException {
         EObject current = null;
 
@@ -26507,21 +26336,21 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10091:2: ( ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) ) )
-            // InternalAnsic.g:10092:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )
+            // InternalAnsic.g:9959:2: ( ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) ) )
+            // InternalAnsic.g:9960:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )
             {
-            // InternalAnsic.g:10092:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )
+            // InternalAnsic.g:9960:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )
             int alt78=2;
             alt78 = dfa78.predict(input);
             switch (alt78) {
                 case 1 :
-                    // InternalAnsic.g:10093:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
+                    // InternalAnsic.g:9961:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
                     {
-                    // InternalAnsic.g:10093:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
-                    // InternalAnsic.g:10094:4: (lv_conditional_expression_0_0= ruleconditional_expression )
+                    // InternalAnsic.g:9961:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
+                    // InternalAnsic.g:9962:4: (lv_conditional_expression_0_0= ruleconditional_expression )
                     {
-                    // InternalAnsic.g:10094:4: (lv_conditional_expression_0_0= ruleconditional_expression )
-                    // InternalAnsic.g:10095:5: lv_conditional_expression_0_0= ruleconditional_expression
+                    // InternalAnsic.g:9962:4: (lv_conditional_expression_0_0= ruleconditional_expression )
+                    // InternalAnsic.g:9963:5: lv_conditional_expression_0_0= ruleconditional_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -26556,16 +26385,16 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10113:3: ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:9981:3: ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
                     {
-                    // InternalAnsic.g:10113:3: ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
-                    // InternalAnsic.g:10114:4: ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:9981:3: ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) )
+                    // InternalAnsic.g:9982:4: ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
                     {
-                    // InternalAnsic.g:10114:4: ( (lv_unary_expression_1_0= ruleunary_expression ) )
-                    // InternalAnsic.g:10115:5: (lv_unary_expression_1_0= ruleunary_expression )
+                    // InternalAnsic.g:9982:4: ( (lv_unary_expression_1_0= ruleunary_expression ) )
+                    // InternalAnsic.g:9983:5: (lv_unary_expression_1_0= ruleunary_expression )
                     {
-                    // InternalAnsic.g:10115:5: (lv_unary_expression_1_0= ruleunary_expression )
-                    // InternalAnsic.g:10116:6: lv_unary_expression_1_0= ruleunary_expression
+                    // InternalAnsic.g:9983:5: (lv_unary_expression_1_0= ruleunary_expression )
+                    // InternalAnsic.g:9984:6: lv_unary_expression_1_0= ruleunary_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -26596,11 +26425,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:10133:4: ( (lv_assignment_operator_2_0= ruleassignment_operator ) )
-                    // InternalAnsic.g:10134:5: (lv_assignment_operator_2_0= ruleassignment_operator )
+                    // InternalAnsic.g:10001:4: ( (lv_assignment_operator_2_0= ruleassignment_operator ) )
+                    // InternalAnsic.g:10002:5: (lv_assignment_operator_2_0= ruleassignment_operator )
                     {
-                    // InternalAnsic.g:10134:5: (lv_assignment_operator_2_0= ruleassignment_operator )
-                    // InternalAnsic.g:10135:6: lv_assignment_operator_2_0= ruleassignment_operator
+                    // InternalAnsic.g:10002:5: (lv_assignment_operator_2_0= ruleassignment_operator )
+                    // InternalAnsic.g:10003:6: lv_assignment_operator_2_0= ruleassignment_operator
                     {
                     if ( state.backtracking==0 ) {
 
@@ -26631,11 +26460,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:10152:4: ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
-                    // InternalAnsic.g:10153:5: (lv_assignment_expression_3_0= ruleassignment_expression )
+                    // InternalAnsic.g:10020:4: ( (lv_assignment_expression_3_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:10021:5: (lv_assignment_expression_3_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:10153:5: (lv_assignment_expression_3_0= ruleassignment_expression )
-                    // InternalAnsic.g:10154:6: lv_assignment_expression_3_0= ruleassignment_expression
+                    // InternalAnsic.g:10021:5: (lv_assignment_expression_3_0= ruleassignment_expression )
+                    // InternalAnsic.g:10022:6: lv_assignment_expression_3_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -26697,7 +26526,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleassignment_operator"
-    // InternalAnsic.g:10176:1: entryRuleassignment_operator returns [String current=null] : iv_ruleassignment_operator= ruleassignment_operator EOF ;
+    // InternalAnsic.g:10044:1: entryRuleassignment_operator returns [String current=null] : iv_ruleassignment_operator= ruleassignment_operator EOF ;
     public final String entryRuleassignment_operator() throws RecognitionException {
         String current = null;
 
@@ -26705,8 +26534,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10176:59: (iv_ruleassignment_operator= ruleassignment_operator EOF )
-            // InternalAnsic.g:10177:2: iv_ruleassignment_operator= ruleassignment_operator EOF
+            // InternalAnsic.g:10044:59: (iv_ruleassignment_operator= ruleassignment_operator EOF )
+            // InternalAnsic.g:10045:2: iv_ruleassignment_operator= ruleassignment_operator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAssignment_operatorRule()); 
@@ -26737,7 +26566,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleassignment_operator"
-    // InternalAnsic.g:10183:1: ruleassignment_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' ) ;
+    // InternalAnsic.g:10051:1: ruleassignment_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' ) ;
     public final AntlrDatatypeRuleToken ruleassignment_operator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -26747,10 +26576,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10189:2: ( (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' ) )
-            // InternalAnsic.g:10190:2: (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' )
+            // InternalAnsic.g:10057:2: ( (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' ) )
+            // InternalAnsic.g:10058:2: (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' )
             {
-            // InternalAnsic.g:10190:2: (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' )
+            // InternalAnsic.g:10058:2: (kw= '=' | kw= '*=' | kw= '/=' | kw= '%=' | kw= '+=' | kw= '-=' | kw= '<<=' | kw= '>>=' | kw= '&=' | kw= '^=' | kw= '|=' )
             int alt79=11;
             switch ( input.LA(1) ) {
             case 57:
@@ -26818,7 +26647,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt79) {
                 case 1 :
-                    // InternalAnsic.g:10191:3: kw= '='
+                    // InternalAnsic.g:10059:3: kw= '='
                     {
                     kw=(Token)match(input,57,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26831,7 +26660,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10197:3: kw= '*='
+                    // InternalAnsic.g:10065:3: kw= '*='
                     {
                     kw=(Token)match(input,105,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26844,7 +26673,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10203:3: kw= '/='
+                    // InternalAnsic.g:10071:3: kw= '/='
                     {
                     kw=(Token)match(input,106,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26857,7 +26686,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10209:3: kw= '%='
+                    // InternalAnsic.g:10077:3: kw= '%='
                     {
                     kw=(Token)match(input,107,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26870,7 +26699,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalAnsic.g:10215:3: kw= '+='
+                    // InternalAnsic.g:10083:3: kw= '+='
                     {
                     kw=(Token)match(input,108,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26883,7 +26712,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalAnsic.g:10221:3: kw= '-='
+                    // InternalAnsic.g:10089:3: kw= '-='
                     {
                     kw=(Token)match(input,109,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26896,7 +26725,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalAnsic.g:10227:3: kw= '<<='
+                    // InternalAnsic.g:10095:3: kw= '<<='
                     {
                     kw=(Token)match(input,110,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26909,7 +26738,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalAnsic.g:10233:3: kw= '>>='
+                    // InternalAnsic.g:10101:3: kw= '>>='
                     {
                     kw=(Token)match(input,111,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26922,7 +26751,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalAnsic.g:10239:3: kw= '&='
+                    // InternalAnsic.g:10107:3: kw= '&='
                     {
                     kw=(Token)match(input,112,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26935,7 +26764,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalAnsic.g:10245:3: kw= '^='
+                    // InternalAnsic.g:10113:3: kw= '^='
                     {
                     kw=(Token)match(input,113,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26948,7 +26777,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalAnsic.g:10251:3: kw= '|='
+                    // InternalAnsic.g:10119:3: kw= '|='
                     {
                     kw=(Token)match(input,114,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -26985,7 +26814,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunary_operator"
-    // InternalAnsic.g:10260:1: entryRuleunary_operator returns [String current=null] : iv_ruleunary_operator= ruleunary_operator EOF ;
+    // InternalAnsic.g:10128:1: entryRuleunary_operator returns [String current=null] : iv_ruleunary_operator= ruleunary_operator EOF ;
     public final String entryRuleunary_operator() throws RecognitionException {
         String current = null;
 
@@ -26993,8 +26822,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10260:54: (iv_ruleunary_operator= ruleunary_operator EOF )
-            // InternalAnsic.g:10261:2: iv_ruleunary_operator= ruleunary_operator EOF
+            // InternalAnsic.g:10128:54: (iv_ruleunary_operator= ruleunary_operator EOF )
+            // InternalAnsic.g:10129:2: iv_ruleunary_operator= ruleunary_operator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnary_operatorRule()); 
@@ -27025,7 +26854,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunary_operator"
-    // InternalAnsic.g:10267:1: ruleunary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' ) ;
+    // InternalAnsic.g:10135:1: ruleunary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' ) ;
     public final AntlrDatatypeRuleToken ruleunary_operator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -27035,10 +26864,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10273:2: ( (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' ) )
-            // InternalAnsic.g:10274:2: (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' )
+            // InternalAnsic.g:10141:2: ( (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' ) )
+            // InternalAnsic.g:10142:2: (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' )
             {
-            // InternalAnsic.g:10274:2: (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' )
+            // InternalAnsic.g:10142:2: (kw= '&' | kw= '*' | kw= '+' | kw= '-' | kw= '~' | kw= '!' )
             int alt80=6;
             switch ( input.LA(1) ) {
             case 99:
@@ -27081,7 +26910,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt80) {
                 case 1 :
-                    // InternalAnsic.g:10275:3: kw= '&'
+                    // InternalAnsic.g:10143:3: kw= '&'
                     {
                     kw=(Token)match(input,99,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27094,7 +26923,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10281:3: kw= '*'
+                    // InternalAnsic.g:10149:3: kw= '*'
                     {
                     kw=(Token)match(input,67,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27107,7 +26936,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10287:3: kw= '+'
+                    // InternalAnsic.g:10155:3: kw= '+'
                     {
                     kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27120,7 +26949,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10293:3: kw= '-'
+                    // InternalAnsic.g:10161:3: kw= '-'
                     {
                     kw=(Token)match(input,83,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27133,7 +26962,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalAnsic.g:10299:3: kw= '~'
+                    // InternalAnsic.g:10167:3: kw= '~'
                     {
                     kw=(Token)match(input,115,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27146,7 +26975,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalAnsic.g:10305:3: kw= '!'
+                    // InternalAnsic.g:10173:3: kw= '!'
                     {
                     kw=(Token)match(input,116,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27183,7 +27012,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuletype_name"
-    // InternalAnsic.g:10314:1: entryRuletype_name returns [EObject current=null] : iv_ruletype_name= ruletype_name EOF ;
+    // InternalAnsic.g:10182:1: entryRuletype_name returns [EObject current=null] : iv_ruletype_name= ruletype_name EOF ;
     public final EObject entryRuletype_name() throws RecognitionException {
         EObject current = null;
 
@@ -27191,8 +27020,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10314:50: (iv_ruletype_name= ruletype_name EOF )
-            // InternalAnsic.g:10315:2: iv_ruletype_name= ruletype_name EOF
+            // InternalAnsic.g:10182:50: (iv_ruletype_name= ruletype_name EOF )
+            // InternalAnsic.g:10183:2: iv_ruletype_name= ruletype_name EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getType_nameRule()); 
@@ -27223,7 +27052,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruletype_name"
-    // InternalAnsic.g:10321:1: ruletype_name returns [EObject current=null] : ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) ) ;
+    // InternalAnsic.g:10189:1: ruletype_name returns [EObject current=null] : ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) ) ;
     public final EObject ruletype_name() throws RecognitionException {
         EObject current = null;
 
@@ -27238,24 +27067,24 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10327:2: ( ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) ) )
-            // InternalAnsic.g:10328:2: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) )
+            // InternalAnsic.g:10195:2: ( ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) ) )
+            // InternalAnsic.g:10196:2: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) )
             {
-            // InternalAnsic.g:10328:2: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) )
+            // InternalAnsic.g:10196:2: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) )
             int alt81=2;
             alt81 = dfa81.predict(input);
             switch (alt81) {
                 case 1 :
-                    // InternalAnsic.g:10329:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
+                    // InternalAnsic.g:10197:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
                     {
-                    // InternalAnsic.g:10329:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
-                    // InternalAnsic.g:10330:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
+                    // InternalAnsic.g:10197:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
+                    // InternalAnsic.g:10198:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
                     {
-                    // InternalAnsic.g:10330:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) )
-                    // InternalAnsic.g:10331:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
+                    // InternalAnsic.g:10198:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) )
+                    // InternalAnsic.g:10199:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
                     {
-                    // InternalAnsic.g:10331:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
-                    // InternalAnsic.g:10332:6: lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list
+                    // InternalAnsic.g:10199:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
+                    // InternalAnsic.g:10200:6: lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27286,11 +27115,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:10349:4: ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
-                    // InternalAnsic.g:10350:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
+                    // InternalAnsic.g:10217:4: ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
+                    // InternalAnsic.g:10218:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
                     {
-                    // InternalAnsic.g:10350:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
-                    // InternalAnsic.g:10351:6: lv_abstract_declarator_1_0= ruleabstract_declarator
+                    // InternalAnsic.g:10218:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
+                    // InternalAnsic.g:10219:6: lv_abstract_declarator_1_0= ruleabstract_declarator
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27328,13 +27157,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10370:3: ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) )
+                    // InternalAnsic.g:10238:3: ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) )
                     {
-                    // InternalAnsic.g:10370:3: ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) )
-                    // InternalAnsic.g:10371:4: (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list )
+                    // InternalAnsic.g:10238:3: ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) )
+                    // InternalAnsic.g:10239:4: (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list )
                     {
-                    // InternalAnsic.g:10371:4: (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list )
-                    // InternalAnsic.g:10372:5: lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list
+                    // InternalAnsic.g:10239:4: (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list )
+                    // InternalAnsic.g:10240:5: lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27393,7 +27222,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleexpression"
-    // InternalAnsic.g:10393:1: entryRuleexpression returns [EObject current=null] : iv_ruleexpression= ruleexpression EOF ;
+    // InternalAnsic.g:10261:1: entryRuleexpression returns [EObject current=null] : iv_ruleexpression= ruleexpression EOF ;
     public final EObject entryRuleexpression() throws RecognitionException {
         EObject current = null;
 
@@ -27401,8 +27230,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10393:51: (iv_ruleexpression= ruleexpression EOF )
-            // InternalAnsic.g:10394:2: iv_ruleexpression= ruleexpression EOF
+            // InternalAnsic.g:10261:51: (iv_ruleexpression= ruleexpression EOF )
+            // InternalAnsic.g:10262:2: iv_ruleexpression= ruleexpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionRule()); 
@@ -27433,7 +27262,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexpression"
-    // InternalAnsic.g:10400:1: ruleexpression returns [EObject current=null] : ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) ) ;
+    // InternalAnsic.g:10268:1: ruleexpression returns [EObject current=null] : ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) ) ;
     public final EObject ruleexpression() throws RecognitionException {
         EObject current = null;
 
@@ -27446,17 +27275,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10406:2: ( ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) ) )
-            // InternalAnsic.g:10407:2: ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) )
+            // InternalAnsic.g:10274:2: ( ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) ) )
+            // InternalAnsic.g:10275:2: ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) )
             {
-            // InternalAnsic.g:10407:2: ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) )
-            // InternalAnsic.g:10408:3: ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) )
+            // InternalAnsic.g:10275:2: ( ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) ) )
+            // InternalAnsic.g:10276:3: ( (lv_assignment_expression_0_0= ruleassignment_expression ) ) ( (lv_expression_linha_1_0= ruleexpression_linha ) )
             {
-            // InternalAnsic.g:10408:3: ( (lv_assignment_expression_0_0= ruleassignment_expression ) )
-            // InternalAnsic.g:10409:4: (lv_assignment_expression_0_0= ruleassignment_expression )
+            // InternalAnsic.g:10276:3: ( (lv_assignment_expression_0_0= ruleassignment_expression ) )
+            // InternalAnsic.g:10277:4: (lv_assignment_expression_0_0= ruleassignment_expression )
             {
-            // InternalAnsic.g:10409:4: (lv_assignment_expression_0_0= ruleassignment_expression )
-            // InternalAnsic.g:10410:5: lv_assignment_expression_0_0= ruleassignment_expression
+            // InternalAnsic.g:10277:4: (lv_assignment_expression_0_0= ruleassignment_expression )
+            // InternalAnsic.g:10278:5: lv_assignment_expression_0_0= ruleassignment_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -27487,11 +27316,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:10427:3: ( (lv_expression_linha_1_0= ruleexpression_linha ) )
-            // InternalAnsic.g:10428:4: (lv_expression_linha_1_0= ruleexpression_linha )
+            // InternalAnsic.g:10295:3: ( (lv_expression_linha_1_0= ruleexpression_linha ) )
+            // InternalAnsic.g:10296:4: (lv_expression_linha_1_0= ruleexpression_linha )
             {
-            // InternalAnsic.g:10428:4: (lv_expression_linha_1_0= ruleexpression_linha )
-            // InternalAnsic.g:10429:5: lv_expression_linha_1_0= ruleexpression_linha
+            // InternalAnsic.g:10296:4: (lv_expression_linha_1_0= ruleexpression_linha )
+            // InternalAnsic.g:10297:5: lv_expression_linha_1_0= ruleexpression_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -27547,7 +27376,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleexpression_linha"
-    // InternalAnsic.g:10450:1: entryRuleexpression_linha returns [EObject current=null] : iv_ruleexpression_linha= ruleexpression_linha EOF ;
+    // InternalAnsic.g:10318:1: entryRuleexpression_linha returns [EObject current=null] : iv_ruleexpression_linha= ruleexpression_linha EOF ;
     public final EObject entryRuleexpression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -27555,8 +27384,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10450:57: (iv_ruleexpression_linha= ruleexpression_linha EOF )
-            // InternalAnsic.g:10451:2: iv_ruleexpression_linha= ruleexpression_linha EOF
+            // InternalAnsic.g:10318:57: (iv_ruleexpression_linha= ruleexpression_linha EOF )
+            // InternalAnsic.g:10319:2: iv_ruleexpression_linha= ruleexpression_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpression_linhaRule()); 
@@ -27587,7 +27416,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleexpression_linha"
-    // InternalAnsic.g:10457:1: ruleexpression_linha returns [EObject current=null] : ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? ) ;
+    // InternalAnsic.g:10325:1: ruleexpression_linha returns [EObject current=null] : ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? ) ;
     public final EObject ruleexpression_linha() throws RecognitionException {
         EObject current = null;
 
@@ -27601,14 +27430,14 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10463:2: ( ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? ) )
-            // InternalAnsic.g:10464:2: ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? )
+            // InternalAnsic.g:10331:2: ( ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? ) )
+            // InternalAnsic.g:10332:2: ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? )
             {
-            // InternalAnsic.g:10464:2: ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? )
-            // InternalAnsic.g:10465:3: () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )?
+            // InternalAnsic.g:10332:2: ( () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )? )
+            // InternalAnsic.g:10333:3: () (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )?
             {
-            // InternalAnsic.g:10465:3: ()
-            // InternalAnsic.g:10466:4: 
+            // InternalAnsic.g:10333:3: ()
+            // InternalAnsic.g:10334:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -27625,7 +27454,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:10475:3: (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )?
+            // InternalAnsic.g:10343:3: (otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) ) )?
             int alt82=2;
             int LA82_0 = input.LA(1);
 
@@ -27634,7 +27463,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt82) {
                 case 1 :
-                    // InternalAnsic.g:10476:4: otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) )
+                    // InternalAnsic.g:10344:4: otherlv_1= ',' ( (lv_assignment_expression_2_0= ruleassignment_expression ) ) ( (lv_expression_linha_3_0= ruleexpression_linha ) )
                     {
                     otherlv_1=(Token)match(input,56,FOLLOW_8); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -27642,11 +27471,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getExpression_linhaAccess().getCommaKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:10480:4: ( (lv_assignment_expression_2_0= ruleassignment_expression ) )
-                    // InternalAnsic.g:10481:5: (lv_assignment_expression_2_0= ruleassignment_expression )
+                    // InternalAnsic.g:10348:4: ( (lv_assignment_expression_2_0= ruleassignment_expression ) )
+                    // InternalAnsic.g:10349:5: (lv_assignment_expression_2_0= ruleassignment_expression )
                     {
-                    // InternalAnsic.g:10481:5: (lv_assignment_expression_2_0= ruleassignment_expression )
-                    // InternalAnsic.g:10482:6: lv_assignment_expression_2_0= ruleassignment_expression
+                    // InternalAnsic.g:10349:5: (lv_assignment_expression_2_0= ruleassignment_expression )
+                    // InternalAnsic.g:10350:6: lv_assignment_expression_2_0= ruleassignment_expression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27677,11 +27506,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:10499:4: ( (lv_expression_linha_3_0= ruleexpression_linha ) )
-                    // InternalAnsic.g:10500:5: (lv_expression_linha_3_0= ruleexpression_linha )
+                    // InternalAnsic.g:10367:4: ( (lv_expression_linha_3_0= ruleexpression_linha ) )
+                    // InternalAnsic.g:10368:5: (lv_expression_linha_3_0= ruleexpression_linha )
                     {
-                    // InternalAnsic.g:10500:5: (lv_expression_linha_3_0= ruleexpression_linha )
-                    // InternalAnsic.g:10501:6: lv_expression_linha_3_0= ruleexpression_linha
+                    // InternalAnsic.g:10368:5: (lv_expression_linha_3_0= ruleexpression_linha )
+                    // InternalAnsic.g:10369:6: lv_expression_linha_3_0= ruleexpression_linha
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27743,7 +27572,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconstant_expression"
-    // InternalAnsic.g:10523:1: entryRuleconstant_expression returns [EObject current=null] : iv_ruleconstant_expression= ruleconstant_expression EOF ;
+    // InternalAnsic.g:10391:1: entryRuleconstant_expression returns [EObject current=null] : iv_ruleconstant_expression= ruleconstant_expression EOF ;
     public final EObject entryRuleconstant_expression() throws RecognitionException {
         EObject current = null;
 
@@ -27751,8 +27580,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10523:60: (iv_ruleconstant_expression= ruleconstant_expression EOF )
-            // InternalAnsic.g:10524:2: iv_ruleconstant_expression= ruleconstant_expression EOF
+            // InternalAnsic.g:10391:60: (iv_ruleconstant_expression= ruleconstant_expression EOF )
+            // InternalAnsic.g:10392:2: iv_ruleconstant_expression= ruleconstant_expression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConstant_expressionRule()); 
@@ -27783,7 +27612,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconstant_expression"
-    // InternalAnsic.g:10530:1: ruleconstant_expression returns [EObject current=null] : ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) ;
+    // InternalAnsic.g:10398:1: ruleconstant_expression returns [EObject current=null] : ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) ;
     public final EObject ruleconstant_expression() throws RecognitionException {
         EObject current = null;
 
@@ -27794,14 +27623,14 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10536:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) )
-            // InternalAnsic.g:10537:2: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
+            // InternalAnsic.g:10404:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) )
+            // InternalAnsic.g:10405:2: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
             {
-            // InternalAnsic.g:10537:2: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
-            // InternalAnsic.g:10538:3: (lv_conditional_expression_0_0= ruleconditional_expression )
+            // InternalAnsic.g:10405:2: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
+            // InternalAnsic.g:10406:3: (lv_conditional_expression_0_0= ruleconditional_expression )
             {
-            // InternalAnsic.g:10538:3: (lv_conditional_expression_0_0= ruleconditional_expression )
-            // InternalAnsic.g:10539:4: lv_conditional_expression_0_0= ruleconditional_expression
+            // InternalAnsic.g:10406:3: (lv_conditional_expression_0_0= ruleconditional_expression )
+            // InternalAnsic.g:10407:4: lv_conditional_expression_0_0= ruleconditional_expression
             {
             if ( state.backtracking==0 ) {
 
@@ -27854,7 +27683,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleinit_declarator_list"
-    // InternalAnsic.g:10559:1: entryRuleinit_declarator_list returns [EObject current=null] : iv_ruleinit_declarator_list= ruleinit_declarator_list EOF ;
+    // InternalAnsic.g:10427:1: entryRuleinit_declarator_list returns [EObject current=null] : iv_ruleinit_declarator_list= ruleinit_declarator_list EOF ;
     public final EObject entryRuleinit_declarator_list() throws RecognitionException {
         EObject current = null;
 
@@ -27862,8 +27691,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10559:61: (iv_ruleinit_declarator_list= ruleinit_declarator_list EOF )
-            // InternalAnsic.g:10560:2: iv_ruleinit_declarator_list= ruleinit_declarator_list EOF
+            // InternalAnsic.g:10427:61: (iv_ruleinit_declarator_list= ruleinit_declarator_list EOF )
+            // InternalAnsic.g:10428:2: iv_ruleinit_declarator_list= ruleinit_declarator_list EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInit_declarator_listRule()); 
@@ -27894,7 +27723,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleinit_declarator_list"
-    // InternalAnsic.g:10566:1: ruleinit_declarator_list returns [EObject current=null] : ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) ) ;
+    // InternalAnsic.g:10434:1: ruleinit_declarator_list returns [EObject current=null] : ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) ) ;
     public final EObject ruleinit_declarator_list() throws RecognitionException {
         EObject current = null;
 
@@ -27907,17 +27736,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10572:2: ( ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) ) )
-            // InternalAnsic.g:10573:2: ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) )
+            // InternalAnsic.g:10440:2: ( ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) ) )
+            // InternalAnsic.g:10441:2: ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) )
             {
-            // InternalAnsic.g:10573:2: ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) )
-            // InternalAnsic.g:10574:3: ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) )
+            // InternalAnsic.g:10441:2: ( ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) ) )
+            // InternalAnsic.g:10442:3: ( (lv_init_declarator_0_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) )
             {
-            // InternalAnsic.g:10574:3: ( (lv_init_declarator_0_0= ruleinit_declarator ) )
-            // InternalAnsic.g:10575:4: (lv_init_declarator_0_0= ruleinit_declarator )
+            // InternalAnsic.g:10442:3: ( (lv_init_declarator_0_0= ruleinit_declarator ) )
+            // InternalAnsic.g:10443:4: (lv_init_declarator_0_0= ruleinit_declarator )
             {
-            // InternalAnsic.g:10575:4: (lv_init_declarator_0_0= ruleinit_declarator )
-            // InternalAnsic.g:10576:5: lv_init_declarator_0_0= ruleinit_declarator
+            // InternalAnsic.g:10443:4: (lv_init_declarator_0_0= ruleinit_declarator )
+            // InternalAnsic.g:10444:5: lv_init_declarator_0_0= ruleinit_declarator
             {
             if ( state.backtracking==0 ) {
 
@@ -27948,11 +27777,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:10593:3: ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) )
-            // InternalAnsic.g:10594:4: (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha )
+            // InternalAnsic.g:10461:3: ( (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha ) )
+            // InternalAnsic.g:10462:4: (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha )
             {
-            // InternalAnsic.g:10594:4: (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha )
-            // InternalAnsic.g:10595:5: lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha
+            // InternalAnsic.g:10462:4: (lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha )
+            // InternalAnsic.g:10463:5: lv_init_declarator_list_linha_1_0= ruleinit_declarator_list_linha
             {
             if ( state.backtracking==0 ) {
 
@@ -28008,7 +27837,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleinit_declarator_list_linha"
-    // InternalAnsic.g:10616:1: entryRuleinit_declarator_list_linha returns [EObject current=null] : iv_ruleinit_declarator_list_linha= ruleinit_declarator_list_linha EOF ;
+    // InternalAnsic.g:10484:1: entryRuleinit_declarator_list_linha returns [EObject current=null] : iv_ruleinit_declarator_list_linha= ruleinit_declarator_list_linha EOF ;
     public final EObject entryRuleinit_declarator_list_linha() throws RecognitionException {
         EObject current = null;
 
@@ -28016,8 +27845,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10616:67: (iv_ruleinit_declarator_list_linha= ruleinit_declarator_list_linha EOF )
-            // InternalAnsic.g:10617:2: iv_ruleinit_declarator_list_linha= ruleinit_declarator_list_linha EOF
+            // InternalAnsic.g:10484:67: (iv_ruleinit_declarator_list_linha= ruleinit_declarator_list_linha EOF )
+            // InternalAnsic.g:10485:2: iv_ruleinit_declarator_list_linha= ruleinit_declarator_list_linha EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInit_declarator_list_linhaRule()); 
@@ -28048,7 +27877,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleinit_declarator_list_linha"
-    // InternalAnsic.g:10623:1: ruleinit_declarator_list_linha returns [EObject current=null] : ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? ) ;
+    // InternalAnsic.g:10491:1: ruleinit_declarator_list_linha returns [EObject current=null] : ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? ) ;
     public final EObject ruleinit_declarator_list_linha() throws RecognitionException {
         EObject current = null;
 
@@ -28062,14 +27891,14 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10629:2: ( ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? ) )
-            // InternalAnsic.g:10630:2: ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? )
+            // InternalAnsic.g:10497:2: ( ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? ) )
+            // InternalAnsic.g:10498:2: ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? )
             {
-            // InternalAnsic.g:10630:2: ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? )
-            // InternalAnsic.g:10631:3: () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )?
+            // InternalAnsic.g:10498:2: ( () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )? )
+            // InternalAnsic.g:10499:3: () (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )?
             {
-            // InternalAnsic.g:10631:3: ()
-            // InternalAnsic.g:10632:4: 
+            // InternalAnsic.g:10499:3: ()
+            // InternalAnsic.g:10500:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -28086,7 +27915,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAnsic.g:10641:3: (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )?
+            // InternalAnsic.g:10509:3: (otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) ) )?
             int alt83=2;
             int LA83_0 = input.LA(1);
 
@@ -28099,7 +27928,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             }
             switch (alt83) {
                 case 1 :
-                    // InternalAnsic.g:10642:4: otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) )
+                    // InternalAnsic.g:10510:4: otherlv_1= ',' ( (lv_init_declarator_2_0= ruleinit_declarator ) ) ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) )
                     {
                     otherlv_1=(Token)match(input,56,FOLLOW_17); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -28107,11 +27936,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getInit_declarator_list_linhaAccess().getCommaKeyword_1_0());
                       			
                     }
-                    // InternalAnsic.g:10646:4: ( (lv_init_declarator_2_0= ruleinit_declarator ) )
-                    // InternalAnsic.g:10647:5: (lv_init_declarator_2_0= ruleinit_declarator )
+                    // InternalAnsic.g:10514:4: ( (lv_init_declarator_2_0= ruleinit_declarator ) )
+                    // InternalAnsic.g:10515:5: (lv_init_declarator_2_0= ruleinit_declarator )
                     {
-                    // InternalAnsic.g:10647:5: (lv_init_declarator_2_0= ruleinit_declarator )
-                    // InternalAnsic.g:10648:6: lv_init_declarator_2_0= ruleinit_declarator
+                    // InternalAnsic.g:10515:5: (lv_init_declarator_2_0= ruleinit_declarator )
+                    // InternalAnsic.g:10516:6: lv_init_declarator_2_0= ruleinit_declarator
                     {
                     if ( state.backtracking==0 ) {
 
@@ -28142,11 +27971,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAnsic.g:10665:4: ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) )
-                    // InternalAnsic.g:10666:5: (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha )
+                    // InternalAnsic.g:10533:4: ( (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha ) )
+                    // InternalAnsic.g:10534:5: (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha )
                     {
-                    // InternalAnsic.g:10666:5: (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha )
-                    // InternalAnsic.g:10667:6: lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha
+                    // InternalAnsic.g:10534:5: (lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha )
+                    // InternalAnsic.g:10535:6: lv_init_declarator_list_linha_3_0= ruleinit_declarator_list_linha
                     {
                     if ( state.backtracking==0 ) {
 
@@ -28208,7 +28037,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleinit_declarator"
-    // InternalAnsic.g:10689:1: entryRuleinit_declarator returns [EObject current=null] : iv_ruleinit_declarator= ruleinit_declarator EOF ;
+    // InternalAnsic.g:10557:1: entryRuleinit_declarator returns [EObject current=null] : iv_ruleinit_declarator= ruleinit_declarator EOF ;
     public final EObject entryRuleinit_declarator() throws RecognitionException {
         EObject current = null;
 
@@ -28216,8 +28045,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10689:56: (iv_ruleinit_declarator= ruleinit_declarator EOF )
-            // InternalAnsic.g:10690:2: iv_ruleinit_declarator= ruleinit_declarator EOF
+            // InternalAnsic.g:10557:56: (iv_ruleinit_declarator= ruleinit_declarator EOF )
+            // InternalAnsic.g:10558:2: iv_ruleinit_declarator= ruleinit_declarator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInit_declaratorRule()); 
@@ -28248,7 +28077,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleinit_declarator"
-    // InternalAnsic.g:10696:1: ruleinit_declarator returns [EObject current=null] : ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) ) ;
+    // InternalAnsic.g:10564:1: ruleinit_declarator returns [EObject current=null] : ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) ) ;
     public final EObject ruleinit_declarator() throws RecognitionException {
         EObject current = null;
 
@@ -28264,10 +28093,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10702:2: ( ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) ) )
-            // InternalAnsic.g:10703:2: ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) )
+            // InternalAnsic.g:10570:2: ( ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) ) )
+            // InternalAnsic.g:10571:2: ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) )
             {
-            // InternalAnsic.g:10703:2: ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) )
+            // InternalAnsic.g:10571:2: ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) | ( (lv_declarator_3_0= ruledeclarator ) ) )
             int alt84=2;
             switch ( input.LA(1) ) {
             case 67:
@@ -28337,16 +28166,16 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt84) {
                 case 1 :
-                    // InternalAnsic.g:10704:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
+                    // InternalAnsic.g:10572:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
                     {
-                    // InternalAnsic.g:10704:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
-                    // InternalAnsic.g:10705:4: ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) )
+                    // InternalAnsic.g:10572:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
+                    // InternalAnsic.g:10573:4: ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) )
                     {
-                    // InternalAnsic.g:10705:4: ( (lv_declarator_0_0= ruledeclarator ) )
-                    // InternalAnsic.g:10706:5: (lv_declarator_0_0= ruledeclarator )
+                    // InternalAnsic.g:10573:4: ( (lv_declarator_0_0= ruledeclarator ) )
+                    // InternalAnsic.g:10574:5: (lv_declarator_0_0= ruledeclarator )
                     {
-                    // InternalAnsic.g:10706:5: (lv_declarator_0_0= ruledeclarator )
-                    // InternalAnsic.g:10707:6: lv_declarator_0_0= ruledeclarator
+                    // InternalAnsic.g:10574:5: (lv_declarator_0_0= ruledeclarator )
+                    // InternalAnsic.g:10575:6: lv_declarator_0_0= ruledeclarator
                     {
                     if ( state.backtracking==0 ) {
 
@@ -28383,11 +28212,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getInit_declaratorAccess().getEqualsSignKeyword_0_1());
                       			
                     }
-                    // InternalAnsic.g:10728:4: ( (lv_initializer_2_0= ruleinitializer ) )
-                    // InternalAnsic.g:10729:5: (lv_initializer_2_0= ruleinitializer )
+                    // InternalAnsic.g:10596:4: ( (lv_initializer_2_0= ruleinitializer ) )
+                    // InternalAnsic.g:10597:5: (lv_initializer_2_0= ruleinitializer )
                     {
-                    // InternalAnsic.g:10729:5: (lv_initializer_2_0= ruleinitializer )
-                    // InternalAnsic.g:10730:6: lv_initializer_2_0= ruleinitializer
+                    // InternalAnsic.g:10597:5: (lv_initializer_2_0= ruleinitializer )
+                    // InternalAnsic.g:10598:6: lv_initializer_2_0= ruleinitializer
                     {
                     if ( state.backtracking==0 ) {
 
@@ -28425,13 +28254,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10749:3: ( (lv_declarator_3_0= ruledeclarator ) )
+                    // InternalAnsic.g:10617:3: ( (lv_declarator_3_0= ruledeclarator ) )
                     {
-                    // InternalAnsic.g:10749:3: ( (lv_declarator_3_0= ruledeclarator ) )
-                    // InternalAnsic.g:10750:4: (lv_declarator_3_0= ruledeclarator )
+                    // InternalAnsic.g:10617:3: ( (lv_declarator_3_0= ruledeclarator ) )
+                    // InternalAnsic.g:10618:4: (lv_declarator_3_0= ruledeclarator )
                     {
-                    // InternalAnsic.g:10750:4: (lv_declarator_3_0= ruledeclarator )
-                    // InternalAnsic.g:10751:5: lv_declarator_3_0= ruledeclarator
+                    // InternalAnsic.g:10618:4: (lv_declarator_3_0= ruledeclarator )
+                    // InternalAnsic.g:10619:5: lv_declarator_3_0= ruledeclarator
                     {
                     if ( state.backtracking==0 ) {
 
@@ -28490,7 +28319,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconstant"
-    // InternalAnsic.g:10772:1: entryRuleconstant returns [EObject current=null] : iv_ruleconstant= ruleconstant EOF ;
+    // InternalAnsic.g:10640:1: entryRuleconstant returns [EObject current=null] : iv_ruleconstant= ruleconstant EOF ;
     public final EObject entryRuleconstant() throws RecognitionException {
         EObject current = null;
 
@@ -28498,8 +28327,8 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalAnsic.g:10772:49: (iv_ruleconstant= ruleconstant EOF )
-            // InternalAnsic.g:10773:2: iv_ruleconstant= ruleconstant EOF
+            // InternalAnsic.g:10640:49: (iv_ruleconstant= ruleconstant EOF )
+            // InternalAnsic.g:10641:2: iv_ruleconstant= ruleconstant EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConstantRule()); 
@@ -28530,7 +28359,7 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconstant"
-    // InternalAnsic.g:10779:1: ruleconstant returns [EObject current=null] : ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) ) ;
+    // InternalAnsic.g:10647:1: ruleconstant returns [EObject current=null] : ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) ) ;
     public final EObject ruleconstant() throws RecognitionException {
         EObject current = null;
 
@@ -28543,10 +28372,10 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAnsic.g:10785:2: ( ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) ) )
-            // InternalAnsic.g:10786:2: ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) )
+            // InternalAnsic.g:10653:2: ( ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) ) )
+            // InternalAnsic.g:10654:2: ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) )
             {
-            // InternalAnsic.g:10786:2: ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) )
+            // InternalAnsic.g:10654:2: ( ( (lv_i_constant_0_0= RULE_INT ) ) | ( (lv_f_constant_1_0= RULE_FLOAT ) ) | ( (lv_char_2_0= RULE_CHAR ) ) | ( (lv_enumz_3_0= 'enum' ) ) )
             int alt85=4;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -28579,13 +28408,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
             switch (alt85) {
                 case 1 :
-                    // InternalAnsic.g:10787:3: ( (lv_i_constant_0_0= RULE_INT ) )
+                    // InternalAnsic.g:10655:3: ( (lv_i_constant_0_0= RULE_INT ) )
                     {
-                    // InternalAnsic.g:10787:3: ( (lv_i_constant_0_0= RULE_INT ) )
-                    // InternalAnsic.g:10788:4: (lv_i_constant_0_0= RULE_INT )
+                    // InternalAnsic.g:10655:3: ( (lv_i_constant_0_0= RULE_INT ) )
+                    // InternalAnsic.g:10656:4: (lv_i_constant_0_0= RULE_INT )
                     {
-                    // InternalAnsic.g:10788:4: (lv_i_constant_0_0= RULE_INT )
-                    // InternalAnsic.g:10789:5: lv_i_constant_0_0= RULE_INT
+                    // InternalAnsic.g:10656:4: (lv_i_constant_0_0= RULE_INT )
+                    // InternalAnsic.g:10657:5: lv_i_constant_0_0= RULE_INT
                     {
                     lv_i_constant_0_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -28615,13 +28444,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10806:3: ( (lv_f_constant_1_0= RULE_FLOAT ) )
+                    // InternalAnsic.g:10674:3: ( (lv_f_constant_1_0= RULE_FLOAT ) )
                     {
-                    // InternalAnsic.g:10806:3: ( (lv_f_constant_1_0= RULE_FLOAT ) )
-                    // InternalAnsic.g:10807:4: (lv_f_constant_1_0= RULE_FLOAT )
+                    // InternalAnsic.g:10674:3: ( (lv_f_constant_1_0= RULE_FLOAT ) )
+                    // InternalAnsic.g:10675:4: (lv_f_constant_1_0= RULE_FLOAT )
                     {
-                    // InternalAnsic.g:10807:4: (lv_f_constant_1_0= RULE_FLOAT )
-                    // InternalAnsic.g:10808:5: lv_f_constant_1_0= RULE_FLOAT
+                    // InternalAnsic.g:10675:4: (lv_f_constant_1_0= RULE_FLOAT )
+                    // InternalAnsic.g:10676:5: lv_f_constant_1_0= RULE_FLOAT
                     {
                     lv_f_constant_1_0=(Token)match(input,RULE_FLOAT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -28651,13 +28480,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10825:3: ( (lv_char_2_0= RULE_CHAR ) )
+                    // InternalAnsic.g:10693:3: ( (lv_char_2_0= RULE_CHAR ) )
                     {
-                    // InternalAnsic.g:10825:3: ( (lv_char_2_0= RULE_CHAR ) )
-                    // InternalAnsic.g:10826:4: (lv_char_2_0= RULE_CHAR )
+                    // InternalAnsic.g:10693:3: ( (lv_char_2_0= RULE_CHAR ) )
+                    // InternalAnsic.g:10694:4: (lv_char_2_0= RULE_CHAR )
                     {
-                    // InternalAnsic.g:10826:4: (lv_char_2_0= RULE_CHAR )
-                    // InternalAnsic.g:10827:5: lv_char_2_0= RULE_CHAR
+                    // InternalAnsic.g:10694:4: (lv_char_2_0= RULE_CHAR )
+                    // InternalAnsic.g:10695:5: lv_char_2_0= RULE_CHAR
                     {
                     lv_char_2_0=(Token)match(input,RULE_CHAR,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -28687,13 +28516,13 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10844:3: ( (lv_enumz_3_0= 'enum' ) )
+                    // InternalAnsic.g:10712:3: ( (lv_enumz_3_0= 'enum' ) )
                     {
-                    // InternalAnsic.g:10844:3: ( (lv_enumz_3_0= 'enum' ) )
-                    // InternalAnsic.g:10845:4: (lv_enumz_3_0= 'enum' )
+                    // InternalAnsic.g:10712:3: ( (lv_enumz_3_0= 'enum' ) )
+                    // InternalAnsic.g:10713:4: (lv_enumz_3_0= 'enum' )
                     {
-                    // InternalAnsic.g:10845:4: (lv_enumz_3_0= 'enum' )
-                    // InternalAnsic.g:10846:5: lv_enumz_3_0= 'enum'
+                    // InternalAnsic.g:10713:4: (lv_enumz_3_0= 'enum' )
+                    // InternalAnsic.g:10714:5: lv_enumz_3_0= 'enum'
                     {
                     lv_enumz_3_0=(Token)match(input,53,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -32175,29 +32004,29 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end synpred133_InternalAnsic
 
-    // $ANTLR start synpred139_InternalAnsic
-    public final void synpred139_InternalAnsic_fragment() throws RecognitionException {   
-        EObject lv_shift_expression_complement_1_0 = null;
+    // $ANTLR start synpred134_InternalAnsic
+    public final void synpred134_InternalAnsic_fragment() throws RecognitionException {   
+        EObject lv_multiplicative_expression_complement_0_0 = null;
 
-        EObject lv_shift_expression_linha_2_0 = null;
+        EObject lv_multiplicative_expression_linha_1_0 = null;
 
 
-        // InternalAnsic.g:7513:4: ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )
-        // InternalAnsic.g:7513:4: ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) )
+        // InternalAnsic.g:7084:3: ( ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) ) )
+        // InternalAnsic.g:7084:3: ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) ) ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) )
         {
-        // InternalAnsic.g:7513:4: ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) )
-        // InternalAnsic.g:7514:5: (lv_shift_expression_complement_1_0= ruleshift_expression_complement )
+        // InternalAnsic.g:7084:3: ( (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement ) )
+        // InternalAnsic.g:7085:4: (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement )
         {
-        // InternalAnsic.g:7514:5: (lv_shift_expression_complement_1_0= ruleshift_expression_complement )
-        // InternalAnsic.g:7515:6: lv_shift_expression_complement_1_0= ruleshift_expression_complement
+        // InternalAnsic.g:7085:4: (lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement )
+        // InternalAnsic.g:7086:5: lv_multiplicative_expression_complement_0_0= rulemultiplicative_expression_complement
         {
         if ( state.backtracking==0 ) {
 
-          						newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_1_0_0());
-          					
+          					newCompositeNode(grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicative_expression_complementMultiplicative_expression_complementParserRuleCall_0_0());
+          				
         }
-        pushFollow(FOLLOW_33);
-        lv_shift_expression_complement_1_0=ruleshift_expression_complement();
+        pushFollow(FOLLOW_31);
+        lv_multiplicative_expression_complement_0_0=rulemultiplicative_expression_complement();
 
         state._fsp--;
         if (state.failed) return ;
@@ -32207,19 +32036,137 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalAnsic.g:7532:4: ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) )
-        // InternalAnsic.g:7533:5: (lv_shift_expression_linha_2_0= ruleshift_expression_linha )
+        // InternalAnsic.g:7103:3: ( (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha ) )
+        // InternalAnsic.g:7104:4: (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha )
         {
-        // InternalAnsic.g:7533:5: (lv_shift_expression_linha_2_0= ruleshift_expression_linha )
-        // InternalAnsic.g:7534:6: lv_shift_expression_linha_2_0= ruleshift_expression_linha
+        // InternalAnsic.g:7104:4: (lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha )
+        // InternalAnsic.g:7105:5: lv_multiplicative_expression_linha_1_0= rulemultiplicative_expression_linha
         {
         if ( state.backtracking==0 ) {
 
-          						newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_linhaShift_expression_linhaParserRuleCall_1_1_0());
-          					
+          					newCompositeNode(grammarAccess.getMultiplicative_expression_linhaAccess().getMultiplicative_expression_linhaMultiplicative_expression_linhaParserRuleCall_1_0());
+          				
         }
         pushFollow(FOLLOW_2);
-        lv_shift_expression_linha_2_0=ruleshift_expression_linha();
+        lv_multiplicative_expression_linha_1_0=rulemultiplicative_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred134_InternalAnsic
+
+    // $ANTLR start synpred137_InternalAnsic
+    public final void synpred137_InternalAnsic_fragment() throws RecognitionException {   
+        EObject lv_additive_expression_complement_0_0 = null;
+
+        EObject lv_additive_expression_linha_1_0 = null;
+
+
+        // InternalAnsic.g:7294:3: ( ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) ) )
+        // InternalAnsic.g:7294:3: ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) ) ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
+        {
+        // InternalAnsic.g:7294:3: ( (lv_additive_expression_complement_0_0= ruleadditive_expression_complement ) )
+        // InternalAnsic.g:7295:4: (lv_additive_expression_complement_0_0= ruleadditive_expression_complement )
+        {
+        // InternalAnsic.g:7295:4: (lv_additive_expression_complement_0_0= ruleadditive_expression_complement )
+        // InternalAnsic.g:7296:5: lv_additive_expression_complement_0_0= ruleadditive_expression_complement
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getAdditive_expression_linhaAccess().getAdditive_expression_complementAdditive_expression_complementParserRuleCall_0_0());
+          				
+        }
+        pushFollow(FOLLOW_32);
+        lv_additive_expression_complement_0_0=ruleadditive_expression_complement();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:7313:3: ( (lv_additive_expression_linha_1_0= ruleadditive_expression_linha ) )
+        // InternalAnsic.g:7314:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
+        {
+        // InternalAnsic.g:7314:4: (lv_additive_expression_linha_1_0= ruleadditive_expression_linha )
+        // InternalAnsic.g:7315:5: lv_additive_expression_linha_1_0= ruleadditive_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getAdditive_expression_linhaAccess().getAdditive_expression_linhaAdditive_expression_linhaParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_additive_expression_linha_1_0=ruleadditive_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred137_InternalAnsic
+
+    // $ANTLR start synpred139_InternalAnsic
+    public final void synpred139_InternalAnsic_fragment() throws RecognitionException {   
+        EObject lv_shift_expression_complement_0_0 = null;
+
+        EObject lv_shift_expression_linha_1_0 = null;
+
+
+        // InternalAnsic.g:7478:3: ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) ) )
+        // InternalAnsic.g:7478:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
+        {
+        // InternalAnsic.g:7478:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) )
+        // InternalAnsic.g:7479:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
+        {
+        // InternalAnsic.g:7479:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
+        // InternalAnsic.g:7480:5: lv_shift_expression_complement_0_0= ruleshift_expression_complement
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0());
+          				
+        }
+        pushFollow(FOLLOW_33);
+        lv_shift_expression_complement_0_0=ruleshift_expression_complement();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:7497:3: ( (lv_shift_expression_linha_1_0= ruleshift_expression_linha ) )
+        // InternalAnsic.g:7498:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
+        {
+        // InternalAnsic.g:7498:4: (lv_shift_expression_linha_1_0= ruleshift_expression_linha )
+        // InternalAnsic.g:7499:5: lv_shift_expression_linha_1_0= ruleshift_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getShift_expression_linhaAccess().getShift_expression_linhaShift_expression_linhaParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_shift_expression_linha_1_0=ruleshift_expression_linha();
 
         state._fsp--;
         if (state.failed) return ;
@@ -32234,6 +32181,124 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end synpred139_InternalAnsic
 
+    // $ANTLR start synpred141_InternalAnsic
+    public final void synpred141_InternalAnsic_fragment() throws RecognitionException {   
+        EObject lv_shift_expression_complement_0_0 = null;
+
+        EObject lv_relational_expression_linha_1_0 = null;
+
+
+        // InternalAnsic.g:7662:3: ( ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) ) )
+        // InternalAnsic.g:7662:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) ) ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
+        {
+        // InternalAnsic.g:7662:3: ( (lv_shift_expression_complement_0_0= ruleshift_expression_complement ) )
+        // InternalAnsic.g:7663:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
+        {
+        // InternalAnsic.g:7663:4: (lv_shift_expression_complement_0_0= ruleshift_expression_complement )
+        // InternalAnsic.g:7664:5: lv_shift_expression_complement_0_0= ruleshift_expression_complement
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0());
+          				
+        }
+        pushFollow(FOLLOW_33);
+        lv_shift_expression_complement_0_0=ruleshift_expression_complement();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:7681:3: ( (lv_relational_expression_linha_1_0= rulerelational_expression_linha ) )
+        // InternalAnsic.g:7682:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
+        {
+        // InternalAnsic.g:7682:4: (lv_relational_expression_linha_1_0= rulerelational_expression_linha )
+        // InternalAnsic.g:7683:5: lv_relational_expression_linha_1_0= rulerelational_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_relational_expression_linha_1_0=rulerelational_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred141_InternalAnsic
+
+    // $ANTLR start synpred142_InternalAnsic
+    public final void synpred142_InternalAnsic_fragment() throws RecognitionException {   
+        EObject lv_equality_expression_complement_0_0 = null;
+
+        EObject lv_equality_expression_linha_1_0 = null;
+
+
+        // InternalAnsic.g:7776:3: ( ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) ) )
+        // InternalAnsic.g:7776:3: ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) ) ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
+        {
+        // InternalAnsic.g:7776:3: ( (lv_equality_expression_complement_0_0= ruleequality_expression_complement ) )
+        // InternalAnsic.g:7777:4: (lv_equality_expression_complement_0_0= ruleequality_expression_complement )
+        {
+        // InternalAnsic.g:7777:4: (lv_equality_expression_complement_0_0= ruleequality_expression_complement )
+        // InternalAnsic.g:7778:5: lv_equality_expression_complement_0_0= ruleequality_expression_complement
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getEquality_expression_linhaAccess().getEquality_expression_complementEquality_expression_complementParserRuleCall_0_0());
+          				
+        }
+        pushFollow(FOLLOW_34);
+        lv_equality_expression_complement_0_0=ruleequality_expression_complement();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:7795:3: ( (lv_equality_expression_linha_1_0= ruleequality_expression_linha ) )
+        // InternalAnsic.g:7796:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
+        {
+        // InternalAnsic.g:7796:4: (lv_equality_expression_linha_1_0= ruleequality_expression_linha )
+        // InternalAnsic.g:7797:5: lv_equality_expression_linha_1_0= ruleequality_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getEquality_expression_linhaAccess().getEquality_expression_linhaEquality_expression_linhaParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_equality_expression_linha_1_0=ruleequality_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred142_InternalAnsic
+
     // $ANTLR start synpred155_InternalAnsic
     public final void synpred155_InternalAnsic_fragment() throws RecognitionException {   
         Token otherlv_12=null;
@@ -32246,19 +32311,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_statement_17_0 = null;
 
 
-        // InternalAnsic.g:8325:3: ( (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) )
-        // InternalAnsic.g:8325:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
+        // InternalAnsic.g:8265:3: ( (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) ) )
+        // InternalAnsic.g:8265:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
         {
-        // InternalAnsic.g:8325:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
-        // InternalAnsic.g:8326:4: otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) )
+        // InternalAnsic.g:8265:3: (otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) ) )
+        // InternalAnsic.g:8266:4: otherlv_12= 'for' otherlv_13= '(' ( (lv_expression_statement_14_0= ruleexpression_statement ) ) ( (lv_expression_statement2_15_0= ruleexpression_statement ) ) otherlv_16= ')' ( (lv_statement_17_0= rulestatement ) )
         {
         otherlv_12=(Token)match(input,94,FOLLOW_5); if (state.failed) return ;
         otherlv_13=(Token)match(input,34,FOLLOW_37); if (state.failed) return ;
-        // InternalAnsic.g:8334:4: ( (lv_expression_statement_14_0= ruleexpression_statement ) )
-        // InternalAnsic.g:8335:5: (lv_expression_statement_14_0= ruleexpression_statement )
+        // InternalAnsic.g:8274:4: ( (lv_expression_statement_14_0= ruleexpression_statement ) )
+        // InternalAnsic.g:8275:5: (lv_expression_statement_14_0= ruleexpression_statement )
         {
-        // InternalAnsic.g:8335:5: (lv_expression_statement_14_0= ruleexpression_statement )
-        // InternalAnsic.g:8336:6: lv_expression_statement_14_0= ruleexpression_statement
+        // InternalAnsic.g:8275:5: (lv_expression_statement_14_0= ruleexpression_statement )
+        // InternalAnsic.g:8276:6: lv_expression_statement_14_0= ruleexpression_statement
         {
         if ( state.backtracking==0 ) {
 
@@ -32276,11 +32341,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalAnsic.g:8353:4: ( (lv_expression_statement2_15_0= ruleexpression_statement ) )
-        // InternalAnsic.g:8354:5: (lv_expression_statement2_15_0= ruleexpression_statement )
+        // InternalAnsic.g:8293:4: ( (lv_expression_statement2_15_0= ruleexpression_statement ) )
+        // InternalAnsic.g:8294:5: (lv_expression_statement2_15_0= ruleexpression_statement )
         {
-        // InternalAnsic.g:8354:5: (lv_expression_statement2_15_0= ruleexpression_statement )
-        // InternalAnsic.g:8355:6: lv_expression_statement2_15_0= ruleexpression_statement
+        // InternalAnsic.g:8294:5: (lv_expression_statement2_15_0= ruleexpression_statement )
+        // InternalAnsic.g:8295:6: lv_expression_statement2_15_0= ruleexpression_statement
         {
         if ( state.backtracking==0 ) {
 
@@ -32299,11 +32364,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_16=(Token)match(input,35,FOLLOW_35); if (state.failed) return ;
-        // InternalAnsic.g:8376:4: ( (lv_statement_17_0= rulestatement ) )
-        // InternalAnsic.g:8377:5: (lv_statement_17_0= rulestatement )
+        // InternalAnsic.g:8316:4: ( (lv_statement_17_0= rulestatement ) )
+        // InternalAnsic.g:8317:5: (lv_statement_17_0= rulestatement )
         {
-        // InternalAnsic.g:8377:5: (lv_statement_17_0= rulestatement )
-        // InternalAnsic.g:8378:6: lv_statement_17_0= rulestatement
+        // InternalAnsic.g:8317:5: (lv_statement_17_0= rulestatement )
+        // InternalAnsic.g:8318:6: lv_statement_17_0= rulestatement
         {
         if ( state.backtracking==0 ) {
 
@@ -32343,19 +32408,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_statement_24_0 = null;
 
 
-        // InternalAnsic.g:8397:3: ( (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) )
-        // InternalAnsic.g:8397:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
+        // InternalAnsic.g:8337:3: ( (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) ) )
+        // InternalAnsic.g:8337:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
         {
-        // InternalAnsic.g:8397:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
-        // InternalAnsic.g:8398:4: otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) )
+        // InternalAnsic.g:8337:3: (otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) ) )
+        // InternalAnsic.g:8338:4: otherlv_18= 'for' otherlv_19= '(' ( (lv_expression_statement_20_0= ruleexpression_statement ) ) ( (lv_expression_statement2_21_0= ruleexpression_statement ) ) ( (lv_expression_22_0= ruleexpression ) ) otherlv_23= ')' ( (lv_statement_24_0= rulestatement ) )
         {
         otherlv_18=(Token)match(input,94,FOLLOW_5); if (state.failed) return ;
         otherlv_19=(Token)match(input,34,FOLLOW_37); if (state.failed) return ;
-        // InternalAnsic.g:8406:4: ( (lv_expression_statement_20_0= ruleexpression_statement ) )
-        // InternalAnsic.g:8407:5: (lv_expression_statement_20_0= ruleexpression_statement )
+        // InternalAnsic.g:8346:4: ( (lv_expression_statement_20_0= ruleexpression_statement ) )
+        // InternalAnsic.g:8347:5: (lv_expression_statement_20_0= ruleexpression_statement )
         {
-        // InternalAnsic.g:8407:5: (lv_expression_statement_20_0= ruleexpression_statement )
-        // InternalAnsic.g:8408:6: lv_expression_statement_20_0= ruleexpression_statement
+        // InternalAnsic.g:8347:5: (lv_expression_statement_20_0= ruleexpression_statement )
+        // InternalAnsic.g:8348:6: lv_expression_statement_20_0= ruleexpression_statement
         {
         if ( state.backtracking==0 ) {
 
@@ -32373,11 +32438,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalAnsic.g:8425:4: ( (lv_expression_statement2_21_0= ruleexpression_statement ) )
-        // InternalAnsic.g:8426:5: (lv_expression_statement2_21_0= ruleexpression_statement )
+        // InternalAnsic.g:8365:4: ( (lv_expression_statement2_21_0= ruleexpression_statement ) )
+        // InternalAnsic.g:8366:5: (lv_expression_statement2_21_0= ruleexpression_statement )
         {
-        // InternalAnsic.g:8426:5: (lv_expression_statement2_21_0= ruleexpression_statement )
-        // InternalAnsic.g:8427:6: lv_expression_statement2_21_0= ruleexpression_statement
+        // InternalAnsic.g:8366:5: (lv_expression_statement2_21_0= ruleexpression_statement )
+        // InternalAnsic.g:8367:6: lv_expression_statement2_21_0= ruleexpression_statement
         {
         if ( state.backtracking==0 ) {
 
@@ -32395,11 +32460,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalAnsic.g:8444:4: ( (lv_expression_22_0= ruleexpression ) )
-        // InternalAnsic.g:8445:5: (lv_expression_22_0= ruleexpression )
+        // InternalAnsic.g:8384:4: ( (lv_expression_22_0= ruleexpression ) )
+        // InternalAnsic.g:8385:5: (lv_expression_22_0= ruleexpression )
         {
-        // InternalAnsic.g:8445:5: (lv_expression_22_0= ruleexpression )
-        // InternalAnsic.g:8446:6: lv_expression_22_0= ruleexpression
+        // InternalAnsic.g:8385:5: (lv_expression_22_0= ruleexpression )
+        // InternalAnsic.g:8386:6: lv_expression_22_0= ruleexpression
         {
         if ( state.backtracking==0 ) {
 
@@ -32418,11 +32483,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_23=(Token)match(input,35,FOLLOW_35); if (state.failed) return ;
-        // InternalAnsic.g:8467:4: ( (lv_statement_24_0= rulestatement ) )
-        // InternalAnsic.g:8468:5: (lv_statement_24_0= rulestatement )
+        // InternalAnsic.g:8407:4: ( (lv_statement_24_0= rulestatement ) )
+        // InternalAnsic.g:8408:5: (lv_statement_24_0= rulestatement )
         {
-        // InternalAnsic.g:8468:5: (lv_statement_24_0= rulestatement )
-        // InternalAnsic.g:8469:6: lv_statement_24_0= rulestatement
+        // InternalAnsic.g:8408:5: (lv_statement_24_0= rulestatement )
+        // InternalAnsic.g:8409:6: lv_statement_24_0= rulestatement
         {
         if ( state.backtracking==0 ) {
 
@@ -32460,19 +32525,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_statement_30_0 = null;
 
 
-        // InternalAnsic.g:8488:3: ( (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) )
-        // InternalAnsic.g:8488:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
+        // InternalAnsic.g:8428:3: ( (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) ) )
+        // InternalAnsic.g:8428:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
         {
-        // InternalAnsic.g:8488:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
-        // InternalAnsic.g:8489:4: otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) )
+        // InternalAnsic.g:8428:3: (otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) ) )
+        // InternalAnsic.g:8429:4: otherlv_25= 'for' otherlv_26= '(' ( (lv_declaration_27_0= ruledeclaration ) ) ( (lv_expression_statement_28_0= ruleexpression_statement ) ) otherlv_29= ')' ( (lv_statement_30_0= rulestatement ) )
         {
         otherlv_25=(Token)match(input,94,FOLLOW_5); if (state.failed) return ;
         otherlv_26=(Token)match(input,34,FOLLOW_3); if (state.failed) return ;
-        // InternalAnsic.g:8497:4: ( (lv_declaration_27_0= ruledeclaration ) )
-        // InternalAnsic.g:8498:5: (lv_declaration_27_0= ruledeclaration )
+        // InternalAnsic.g:8437:4: ( (lv_declaration_27_0= ruledeclaration ) )
+        // InternalAnsic.g:8438:5: (lv_declaration_27_0= ruledeclaration )
         {
-        // InternalAnsic.g:8498:5: (lv_declaration_27_0= ruledeclaration )
-        // InternalAnsic.g:8499:6: lv_declaration_27_0= ruledeclaration
+        // InternalAnsic.g:8438:5: (lv_declaration_27_0= ruledeclaration )
+        // InternalAnsic.g:8439:6: lv_declaration_27_0= ruledeclaration
         {
         if ( state.backtracking==0 ) {
 
@@ -32490,11 +32555,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalAnsic.g:8516:4: ( (lv_expression_statement_28_0= ruleexpression_statement ) )
-        // InternalAnsic.g:8517:5: (lv_expression_statement_28_0= ruleexpression_statement )
+        // InternalAnsic.g:8456:4: ( (lv_expression_statement_28_0= ruleexpression_statement ) )
+        // InternalAnsic.g:8457:5: (lv_expression_statement_28_0= ruleexpression_statement )
         {
-        // InternalAnsic.g:8517:5: (lv_expression_statement_28_0= ruleexpression_statement )
-        // InternalAnsic.g:8518:6: lv_expression_statement_28_0= ruleexpression_statement
+        // InternalAnsic.g:8457:5: (lv_expression_statement_28_0= ruleexpression_statement )
+        // InternalAnsic.g:8458:6: lv_expression_statement_28_0= ruleexpression_statement
         {
         if ( state.backtracking==0 ) {
 
@@ -32513,11 +32578,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_29=(Token)match(input,35,FOLLOW_35); if (state.failed) return ;
-        // InternalAnsic.g:8539:4: ( (lv_statement_30_0= rulestatement ) )
-        // InternalAnsic.g:8540:5: (lv_statement_30_0= rulestatement )
+        // InternalAnsic.g:8479:4: ( (lv_statement_30_0= rulestatement ) )
+        // InternalAnsic.g:8480:5: (lv_statement_30_0= rulestatement )
         {
-        // InternalAnsic.g:8540:5: (lv_statement_30_0= rulestatement )
-        // InternalAnsic.g:8541:6: lv_statement_30_0= rulestatement
+        // InternalAnsic.g:8480:5: (lv_statement_30_0= rulestatement )
+        // InternalAnsic.g:8481:6: lv_statement_30_0= rulestatement
         {
         if ( state.backtracking==0 ) {
 
@@ -32556,19 +32621,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_statement2_6_0 = null;
 
 
-        // InternalAnsic.g:8669:3: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) )
-        // InternalAnsic.g:8669:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
+        // InternalAnsic.g:8609:3: ( (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) ) )
+        // InternalAnsic.g:8609:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
         {
-        // InternalAnsic.g:8669:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
-        // InternalAnsic.g:8670:4: otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) )
+        // InternalAnsic.g:8609:3: (otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) ) )
+        // InternalAnsic.g:8610:4: otherlv_0= 'if' otherlv_1= '(' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ')' ( (lv_statement_4_0= rulestatement ) ) otherlv_5= 'else' ( (lv_statement2_6_0= rulestatement ) )
         {
         otherlv_0=(Token)match(input,95,FOLLOW_5); if (state.failed) return ;
         otherlv_1=(Token)match(input,34,FOLLOW_8); if (state.failed) return ;
-        // InternalAnsic.g:8678:4: ( (lv_expression_2_0= ruleexpression ) )
-        // InternalAnsic.g:8679:5: (lv_expression_2_0= ruleexpression )
+        // InternalAnsic.g:8618:4: ( (lv_expression_2_0= ruleexpression ) )
+        // InternalAnsic.g:8619:5: (lv_expression_2_0= ruleexpression )
         {
-        // InternalAnsic.g:8679:5: (lv_expression_2_0= ruleexpression )
-        // InternalAnsic.g:8680:6: lv_expression_2_0= ruleexpression
+        // InternalAnsic.g:8619:5: (lv_expression_2_0= ruleexpression )
+        // InternalAnsic.g:8620:6: lv_expression_2_0= ruleexpression
         {
         if ( state.backtracking==0 ) {
 
@@ -32587,11 +32652,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_3=(Token)match(input,35,FOLLOW_35); if (state.failed) return ;
-        // InternalAnsic.g:8701:4: ( (lv_statement_4_0= rulestatement ) )
-        // InternalAnsic.g:8702:5: (lv_statement_4_0= rulestatement )
+        // InternalAnsic.g:8641:4: ( (lv_statement_4_0= rulestatement ) )
+        // InternalAnsic.g:8642:5: (lv_statement_4_0= rulestatement )
         {
-        // InternalAnsic.g:8702:5: (lv_statement_4_0= rulestatement )
-        // InternalAnsic.g:8703:6: lv_statement_4_0= rulestatement
+        // InternalAnsic.g:8642:5: (lv_statement_4_0= rulestatement )
+        // InternalAnsic.g:8643:6: lv_statement_4_0= rulestatement
         {
         if ( state.backtracking==0 ) {
 
@@ -32610,11 +32675,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_5=(Token)match(input,96,FOLLOW_35); if (state.failed) return ;
-        // InternalAnsic.g:8724:4: ( (lv_statement2_6_0= rulestatement ) )
-        // InternalAnsic.g:8725:5: (lv_statement2_6_0= rulestatement )
+        // InternalAnsic.g:8664:4: ( (lv_statement2_6_0= rulestatement ) )
+        // InternalAnsic.g:8665:5: (lv_statement2_6_0= rulestatement )
         {
-        // InternalAnsic.g:8725:5: (lv_statement2_6_0= rulestatement )
-        // InternalAnsic.g:8726:6: lv_statement2_6_0= rulestatement
+        // InternalAnsic.g:8665:5: (lv_statement2_6_0= rulestatement )
+        // InternalAnsic.g:8666:6: lv_statement2_6_0= rulestatement
         {
         if ( state.backtracking==0 ) {
 
@@ -32650,19 +32715,19 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_statement_11_0 = null;
 
 
-        // InternalAnsic.g:8745:3: ( (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) )
-        // InternalAnsic.g:8745:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
+        // InternalAnsic.g:8685:3: ( (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) ) )
+        // InternalAnsic.g:8685:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
         {
-        // InternalAnsic.g:8745:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
-        // InternalAnsic.g:8746:4: otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) )
+        // InternalAnsic.g:8685:3: (otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) ) )
+        // InternalAnsic.g:8686:4: otherlv_7= 'if' otherlv_8= '(' ( (lv_expression_9_0= ruleexpression ) ) otherlv_10= ')' ( (lv_statement_11_0= rulestatement ) )
         {
         otherlv_7=(Token)match(input,95,FOLLOW_5); if (state.failed) return ;
         otherlv_8=(Token)match(input,34,FOLLOW_8); if (state.failed) return ;
-        // InternalAnsic.g:8754:4: ( (lv_expression_9_0= ruleexpression ) )
-        // InternalAnsic.g:8755:5: (lv_expression_9_0= ruleexpression )
+        // InternalAnsic.g:8694:4: ( (lv_expression_9_0= ruleexpression ) )
+        // InternalAnsic.g:8695:5: (lv_expression_9_0= ruleexpression )
         {
-        // InternalAnsic.g:8755:5: (lv_expression_9_0= ruleexpression )
-        // InternalAnsic.g:8756:6: lv_expression_9_0= ruleexpression
+        // InternalAnsic.g:8695:5: (lv_expression_9_0= ruleexpression )
+        // InternalAnsic.g:8696:6: lv_expression_9_0= ruleexpression
         {
         if ( state.backtracking==0 ) {
 
@@ -32681,11 +32746,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_10=(Token)match(input,35,FOLLOW_35); if (state.failed) return ;
-        // InternalAnsic.g:8777:4: ( (lv_statement_11_0= rulestatement ) )
-        // InternalAnsic.g:8778:5: (lv_statement_11_0= rulestatement )
+        // InternalAnsic.g:8717:4: ( (lv_statement_11_0= rulestatement ) )
+        // InternalAnsic.g:8718:5: (lv_statement_11_0= rulestatement )
         {
-        // InternalAnsic.g:8778:5: (lv_statement_11_0= rulestatement )
-        // InternalAnsic.g:8779:6: lv_statement_11_0= rulestatement
+        // InternalAnsic.g:8718:5: (lv_statement_11_0= rulestatement )
+        // InternalAnsic.g:8719:6: lv_statement_11_0= rulestatement
         {
         if ( state.backtracking==0 ) {
 
@@ -32711,34 +32776,31 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end synpred159_InternalAnsic
 
-    // $ANTLR start synpred172_InternalAnsic
-    public final void synpred172_InternalAnsic_fragment() throws RecognitionException {   
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        EObject lv_expression_2_0 = null;
+    // $ANTLR start synpred167_InternalAnsic
+    public final void synpred167_InternalAnsic_fragment() throws RecognitionException {   
+        Token otherlv_0=null;
+        EObject lv_equality_expression_1_0 = null;
 
-        EObject lv_conditional_expression_4_0 = null;
-
-        EObject lv_conditional_expression_linha_5_0 = null;
+        EObject lv_and_expression_linha_2_0 = null;
 
 
-        // InternalAnsic.g:10008:4: (otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) ) )
-        // InternalAnsic.g:10008:4: otherlv_1= '?' ( (lv_expression_2_0= ruleexpression ) ) otherlv_3= ':' ( (lv_conditional_expression_4_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) )
+        // InternalAnsic.g:9287:3: (otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) ) )
+        // InternalAnsic.g:9287:3: otherlv_0= '&' ( (lv_equality_expression_1_0= ruleequality_expression ) ) ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) )
         {
-        otherlv_1=(Token)match(input,104,FOLLOW_8); if (state.failed) return ;
-        // InternalAnsic.g:10012:4: ( (lv_expression_2_0= ruleexpression ) )
-        // InternalAnsic.g:10013:5: (lv_expression_2_0= ruleexpression )
+        otherlv_0=(Token)match(input,99,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9291:3: ( (lv_equality_expression_1_0= ruleequality_expression ) )
+        // InternalAnsic.g:9292:4: (lv_equality_expression_1_0= ruleequality_expression )
         {
-        // InternalAnsic.g:10013:5: (lv_expression_2_0= ruleexpression )
-        // InternalAnsic.g:10014:6: lv_expression_2_0= ruleexpression
+        // InternalAnsic.g:9292:4: (lv_equality_expression_1_0= ruleequality_expression )
+        // InternalAnsic.g:9293:5: lv_equality_expression_1_0= ruleequality_expression
         {
         if ( state.backtracking==0 ) {
 
-          						newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getExpressionExpressionParserRuleCall_1_1_0());
-          					
+          					newCompositeNode(grammarAccess.getAnd_expression_linhaAccess().getEquality_expressionEquality_expressionParserRuleCall_1_0());
+          				
         }
-        pushFollow(FOLLOW_16);
-        lv_expression_2_0=ruleexpression();
+        pushFollow(FOLLOW_41);
+        lv_equality_expression_1_0=ruleequality_expression();
 
         state._fsp--;
         if (state.failed) return ;
@@ -32748,42 +32810,350 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_3=(Token)match(input,61,FOLLOW_8); if (state.failed) return ;
-        // InternalAnsic.g:10035:4: ( (lv_conditional_expression_4_0= ruleconditional_expression ) )
-        // InternalAnsic.g:10036:5: (lv_conditional_expression_4_0= ruleconditional_expression )
+        // InternalAnsic.g:9310:3: ( (lv_and_expression_linha_2_0= ruleand_expression_linha ) )
+        // InternalAnsic.g:9311:4: (lv_and_expression_linha_2_0= ruleand_expression_linha )
         {
-        // InternalAnsic.g:10036:5: (lv_conditional_expression_4_0= ruleconditional_expression )
-        // InternalAnsic.g:10037:6: lv_conditional_expression_4_0= ruleconditional_expression
-        {
-        if ( state.backtracking==0 ) {
-
-          						newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expressionConditional_expressionParserRuleCall_1_3_0());
-          					
-        }
-        pushFollow(FOLLOW_46);
-        lv_conditional_expression_4_0=ruleconditional_expression();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-        // InternalAnsic.g:10054:4: ( (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha ) )
-        // InternalAnsic.g:10055:5: (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha )
-        {
-        // InternalAnsic.g:10055:5: (lv_conditional_expression_linha_5_0= ruleconditional_expression_linha )
-        // InternalAnsic.g:10056:6: lv_conditional_expression_linha_5_0= ruleconditional_expression_linha
+        // InternalAnsic.g:9311:4: (lv_and_expression_linha_2_0= ruleand_expression_linha )
+        // InternalAnsic.g:9312:5: lv_and_expression_linha_2_0= ruleand_expression_linha
         {
         if ( state.backtracking==0 ) {
 
-          						newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_1_4_0());
-          					
+          					newCompositeNode(grammarAccess.getAnd_expression_linhaAccess().getAnd_expression_linhaAnd_expression_linhaParserRuleCall_2_0());
+          				
         }
         pushFollow(FOLLOW_2);
-        lv_conditional_expression_linha_5_0=ruleconditional_expression_linha();
+        lv_and_expression_linha_2_0=ruleand_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred167_InternalAnsic
+
+    // $ANTLR start synpred168_InternalAnsic
+    public final void synpred168_InternalAnsic_fragment() throws RecognitionException {   
+        Token otherlv_0=null;
+        EObject lv_and_expression_1_0 = null;
+
+        EObject lv_exclusive_or_expression_linha_2_0 = null;
+
+
+        // InternalAnsic.g:9405:3: (otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) ) )
+        // InternalAnsic.g:9405:3: otherlv_0= '^' ( (lv_and_expression_1_0= ruleand_expression ) ) ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) )
+        {
+        otherlv_0=(Token)match(input,100,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9409:3: ( (lv_and_expression_1_0= ruleand_expression ) )
+        // InternalAnsic.g:9410:4: (lv_and_expression_1_0= ruleand_expression )
+        {
+        // InternalAnsic.g:9410:4: (lv_and_expression_1_0= ruleand_expression )
+        // InternalAnsic.g:9411:5: lv_and_expression_1_0= ruleand_expression
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getExclusive_or_expression_linhaAccess().getAnd_expressionAnd_expressionParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_42);
+        lv_and_expression_1_0=ruleand_expression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:9428:3: ( (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha ) )
+        // InternalAnsic.g:9429:4: (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha )
+        {
+        // InternalAnsic.g:9429:4: (lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha )
+        // InternalAnsic.g:9430:5: lv_exclusive_or_expression_linha_2_0= ruleexclusive_or_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getExclusive_or_expression_linhaAccess().getExclusive_or_expression_linhaExclusive_or_expression_linhaParserRuleCall_2_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_exclusive_or_expression_linha_2_0=ruleexclusive_or_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred168_InternalAnsic
+
+    // $ANTLR start synpred169_InternalAnsic
+    public final void synpred169_InternalAnsic_fragment() throws RecognitionException {   
+        Token otherlv_0=null;
+        EObject lv_exclusive_or_expression_1_0 = null;
+
+        EObject lv_inclusive_or_expression_linha_2_0 = null;
+
+
+        // InternalAnsic.g:9523:3: (otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) ) )
+        // InternalAnsic.g:9523:3: otherlv_0= '|' ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) ) ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) )
+        {
+        otherlv_0=(Token)match(input,101,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9527:3: ( (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression ) )
+        // InternalAnsic.g:9528:4: (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression )
+        {
+        // InternalAnsic.g:9528:4: (lv_exclusive_or_expression_1_0= ruleexclusive_or_expression )
+        // InternalAnsic.g:9529:5: lv_exclusive_or_expression_1_0= ruleexclusive_or_expression
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getInclusive_or_expression_linhaAccess().getExclusive_or_expressionExclusive_or_expressionParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_43);
+        lv_exclusive_or_expression_1_0=ruleexclusive_or_expression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:9546:3: ( (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha ) )
+        // InternalAnsic.g:9547:4: (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha )
+        {
+        // InternalAnsic.g:9547:4: (lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha )
+        // InternalAnsic.g:9548:5: lv_inclusive_or_expression_linha_2_0= ruleinclusive_or_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getInclusive_or_expression_linhaAccess().getInclusive_or_expression_linhaInclusive_or_expression_linhaParserRuleCall_2_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_inclusive_or_expression_linha_2_0=ruleinclusive_or_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred169_InternalAnsic
+
+    // $ANTLR start synpred170_InternalAnsic
+    public final void synpred170_InternalAnsic_fragment() throws RecognitionException {   
+        Token otherlv_0=null;
+        EObject lv_inclusive_or_expression_1_0 = null;
+
+        EObject lv_logical_and_expression_linha_2_0 = null;
+
+
+        // InternalAnsic.g:9641:3: (otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) ) )
+        // InternalAnsic.g:9641:3: otherlv_0= 'and' ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) ) ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) )
+        {
+        otherlv_0=(Token)match(input,102,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9645:3: ( (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression ) )
+        // InternalAnsic.g:9646:4: (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression )
+        {
+        // InternalAnsic.g:9646:4: (lv_inclusive_or_expression_1_0= ruleinclusive_or_expression )
+        // InternalAnsic.g:9647:5: lv_inclusive_or_expression_1_0= ruleinclusive_or_expression
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getLogical_and_expression_linhaAccess().getInclusive_or_expressionInclusive_or_expressionParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_44);
+        lv_inclusive_or_expression_1_0=ruleinclusive_or_expression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:9664:3: ( (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha ) )
+        // InternalAnsic.g:9665:4: (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha )
+        {
+        // InternalAnsic.g:9665:4: (lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha )
+        // InternalAnsic.g:9666:5: lv_logical_and_expression_linha_2_0= rulelogical_and_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getLogical_and_expression_linhaAccess().getLogical_and_expression_linhaLogical_and_expression_linhaParserRuleCall_2_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_logical_and_expression_linha_2_0=rulelogical_and_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred170_InternalAnsic
+
+    // $ANTLR start synpred171_InternalAnsic
+    public final void synpred171_InternalAnsic_fragment() throws RecognitionException {   
+        Token otherlv_0=null;
+        EObject lv_logical_and_expression_1_0 = null;
+
+        EObject lv_logical_or_expression_linha_2_0 = null;
+
+
+        // InternalAnsic.g:9759:3: (otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) ) )
+        // InternalAnsic.g:9759:3: otherlv_0= 'or' ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) ) ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) )
+        {
+        otherlv_0=(Token)match(input,103,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9763:3: ( (lv_logical_and_expression_1_0= rulelogical_and_expression ) )
+        // InternalAnsic.g:9764:4: (lv_logical_and_expression_1_0= rulelogical_and_expression )
+        {
+        // InternalAnsic.g:9764:4: (lv_logical_and_expression_1_0= rulelogical_and_expression )
+        // InternalAnsic.g:9765:5: lv_logical_and_expression_1_0= rulelogical_and_expression
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_and_expressionLogical_and_expressionParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_45);
+        lv_logical_and_expression_1_0=rulelogical_and_expression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:9782:3: ( (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha ) )
+        // InternalAnsic.g:9783:4: (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha )
+        {
+        // InternalAnsic.g:9783:4: (lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha )
+        // InternalAnsic.g:9784:5: lv_logical_or_expression_linha_2_0= rulelogical_or_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_or_expression_linhaLogical_or_expression_linhaParserRuleCall_2_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_logical_or_expression_linha_2_0=rulelogical_or_expression_linha();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred171_InternalAnsic
+
+    // $ANTLR start synpred172_InternalAnsic
+    public final void synpred172_InternalAnsic_fragment() throws RecognitionException {   
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        EObject lv_expression_1_0 = null;
+
+        EObject lv_conditional_expression_3_0 = null;
+
+        EObject lv_conditional_expression_linha_4_0 = null;
+
+
+        // InternalAnsic.g:9877:3: (otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) ) )
+        // InternalAnsic.g:9877:3: otherlv_0= '?' ( (lv_expression_1_0= ruleexpression ) ) otherlv_2= ':' ( (lv_conditional_expression_3_0= ruleconditional_expression ) ) ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) )
+        {
+        otherlv_0=(Token)match(input,104,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9881:3: ( (lv_expression_1_0= ruleexpression ) )
+        // InternalAnsic.g:9882:4: (lv_expression_1_0= ruleexpression )
+        {
+        // InternalAnsic.g:9882:4: (lv_expression_1_0= ruleexpression )
+        // InternalAnsic.g:9883:5: lv_expression_1_0= ruleexpression
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getExpressionExpressionParserRuleCall_1_0());
+          				
+        }
+        pushFollow(FOLLOW_16);
+        lv_expression_1_0=ruleexpression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        otherlv_2=(Token)match(input,61,FOLLOW_8); if (state.failed) return ;
+        // InternalAnsic.g:9904:3: ( (lv_conditional_expression_3_0= ruleconditional_expression ) )
+        // InternalAnsic.g:9905:4: (lv_conditional_expression_3_0= ruleconditional_expression )
+        {
+        // InternalAnsic.g:9905:4: (lv_conditional_expression_3_0= ruleconditional_expression )
+        // InternalAnsic.g:9906:5: lv_conditional_expression_3_0= ruleconditional_expression
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expressionConditional_expressionParserRuleCall_3_0());
+          				
+        }
+        pushFollow(FOLLOW_46);
+        lv_conditional_expression_3_0=ruleconditional_expression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+        // InternalAnsic.g:9923:3: ( (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha ) )
+        // InternalAnsic.g:9924:4: (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha )
+        {
+        // InternalAnsic.g:9924:4: (lv_conditional_expression_linha_4_0= ruleconditional_expression_linha )
+        // InternalAnsic.g:9925:5: lv_conditional_expression_linha_4_0= ruleconditional_expression_linha
+        {
+        if ( state.backtracking==0 ) {
+
+          					newCompositeNode(grammarAccess.getConditional_expression_linhaAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_4_0());
+          				
+        }
+        pushFollow(FOLLOW_2);
+        lv_conditional_expression_linha_4_0=ruleconditional_expression_linha();
 
         state._fsp--;
         if (state.failed) return ;
@@ -32803,14 +33173,14 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_conditional_expression_0_0 = null;
 
 
-        // InternalAnsic.g:10093:3: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) )
-        // InternalAnsic.g:10093:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
+        // InternalAnsic.g:9961:3: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) )
+        // InternalAnsic.g:9961:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
         {
-        // InternalAnsic.g:10093:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
-        // InternalAnsic.g:10094:4: (lv_conditional_expression_0_0= ruleconditional_expression )
+        // InternalAnsic.g:9961:3: ( (lv_conditional_expression_0_0= ruleconditional_expression ) )
+        // InternalAnsic.g:9962:4: (lv_conditional_expression_0_0= ruleconditional_expression )
         {
-        // InternalAnsic.g:10094:4: (lv_conditional_expression_0_0= ruleconditional_expression )
-        // InternalAnsic.g:10095:5: lv_conditional_expression_0_0= ruleconditional_expression
+        // InternalAnsic.g:9962:4: (lv_conditional_expression_0_0= ruleconditional_expression )
+        // InternalAnsic.g:9963:5: lv_conditional_expression_0_0= ruleconditional_expression
         {
         if ( state.backtracking==0 ) {
 
@@ -32840,17 +33210,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_abstract_declarator_1_0 = null;
 
 
-        // InternalAnsic.g:10329:3: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) )
-        // InternalAnsic.g:10329:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
+        // InternalAnsic.g:10197:3: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) )
+        // InternalAnsic.g:10197:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
         {
-        // InternalAnsic.g:10329:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
-        // InternalAnsic.g:10330:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
+        // InternalAnsic.g:10197:3: ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) )
+        // InternalAnsic.g:10198:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
         {
-        // InternalAnsic.g:10330:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) )
-        // InternalAnsic.g:10331:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
+        // InternalAnsic.g:10198:4: ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) )
+        // InternalAnsic.g:10199:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
         {
-        // InternalAnsic.g:10331:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
-        // InternalAnsic.g:10332:6: lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list
+        // InternalAnsic.g:10199:5: (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list )
+        // InternalAnsic.g:10200:6: lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list
         {
         if ( state.backtracking==0 ) {
 
@@ -32868,11 +33238,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalAnsic.g:10349:4: ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
-        // InternalAnsic.g:10350:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
+        // InternalAnsic.g:10217:4: ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) )
+        // InternalAnsic.g:10218:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
         {
-        // InternalAnsic.g:10350:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
-        // InternalAnsic.g:10351:6: lv_abstract_declarator_1_0= ruleabstract_declarator
+        // InternalAnsic.g:10218:5: (lv_abstract_declarator_1_0= ruleabstract_declarator )
+        // InternalAnsic.g:10219:6: lv_abstract_declarator_1_0= ruleabstract_declarator
         {
         if ( state.backtracking==0 ) {
 
@@ -32906,17 +33276,17 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         EObject lv_initializer_2_0 = null;
 
 
-        // InternalAnsic.g:10704:3: ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) )
-        // InternalAnsic.g:10704:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
+        // InternalAnsic.g:10572:3: ( ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) ) )
+        // InternalAnsic.g:10572:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
         {
-        // InternalAnsic.g:10704:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
-        // InternalAnsic.g:10705:4: ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) )
+        // InternalAnsic.g:10572:3: ( ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) ) )
+        // InternalAnsic.g:10573:4: ( (lv_declarator_0_0= ruledeclarator ) ) otherlv_1= '=' ( (lv_initializer_2_0= ruleinitializer ) )
         {
-        // InternalAnsic.g:10705:4: ( (lv_declarator_0_0= ruledeclarator ) )
-        // InternalAnsic.g:10706:5: (lv_declarator_0_0= ruledeclarator )
+        // InternalAnsic.g:10573:4: ( (lv_declarator_0_0= ruledeclarator ) )
+        // InternalAnsic.g:10574:5: (lv_declarator_0_0= ruledeclarator )
         {
-        // InternalAnsic.g:10706:5: (lv_declarator_0_0= ruledeclarator )
-        // InternalAnsic.g:10707:6: lv_declarator_0_0= ruledeclarator
+        // InternalAnsic.g:10574:5: (lv_declarator_0_0= ruledeclarator )
+        // InternalAnsic.g:10575:6: lv_declarator_0_0= ruledeclarator
         {
         if ( state.backtracking==0 ) {
 
@@ -32935,11 +33305,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         }
 
         otherlv_1=(Token)match(input,57,FOLLOW_26); if (state.failed) return ;
-        // InternalAnsic.g:10728:4: ( (lv_initializer_2_0= ruleinitializer ) )
-        // InternalAnsic.g:10729:5: (lv_initializer_2_0= ruleinitializer )
+        // InternalAnsic.g:10596:4: ( (lv_initializer_2_0= ruleinitializer ) )
+        // InternalAnsic.g:10597:5: (lv_initializer_2_0= ruleinitializer )
         {
-        // InternalAnsic.g:10729:5: (lv_initializer_2_0= ruleinitializer )
-        // InternalAnsic.g:10730:6: lv_initializer_2_0= ruleinitializer
+        // InternalAnsic.g:10597:5: (lv_initializer_2_0= ruleinitializer )
+        // InternalAnsic.g:10598:6: lv_initializer_2_0= ruleinitializer
         {
         if ( state.backtracking==0 ) {
 
@@ -33163,6 +33533,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred169_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred169_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred60_InternalAnsic() {
         state.backtracking++;
         int start = input.mark();
@@ -33317,6 +33701,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred171_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred171_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred192_InternalAnsic() {
         state.backtracking++;
         int start = input.mark();
@@ -33420,6 +33818,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         int start = input.mark();
         try {
             synpred113_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred134_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred134_InternalAnsic_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -33541,6 +33953,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred170_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred170_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred103_InternalAnsic() {
         state.backtracking++;
         int start = input.mark();
@@ -33625,6 +34051,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred167_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred167_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred67_InternalAnsic() {
         state.backtracking++;
         int start = input.mark();
@@ -33695,6 +34135,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred137_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred137_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred83_InternalAnsic() {
         state.backtracking++;
         int start = input.mark();
@@ -33742,6 +34196,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         int start = input.mark();
         try {
             synpred41_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred141_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred141_InternalAnsic_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -33961,6 +34429,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred168_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred168_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred32_InternalAnsic() {
         state.backtracking++;
         int start = input.mark();
@@ -34008,6 +34490,20 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
         int start = input.mark();
         try {
             synpred89_InternalAnsic_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred142_InternalAnsic() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred142_InternalAnsic_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -34076,7 +34572,6 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
     protected DFA42 dfa42 = new DFA42(this);
     protected DFA51 dfa51 = new DFA51(this);
     protected DFA52 dfa52 = new DFA52(this);
-    protected DFA57 dfa57 = new DFA57(this);
     protected DFA78 dfa78 = new DFA78(this);
     protected DFA81 dfa81 = new DFA81(this);
     static final String dfa_1s = "\37\uffff";
@@ -38404,102 +38899,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             throw nvae;
         }
     }
-    static final String dfa_79s = "\1\3\22\uffff";
-    static final String dfa_80s = "\1\43\2\0\20\uffff";
-    static final String dfa_81s = "\1\150\2\0\20\uffff";
-    static final String dfa_82s = "\3\uffff\1\2\16\uffff\1\1";
-    static final String dfa_83s = "\1\uffff\1\0\1\1\20\uffff}>";
-    static final String[] dfa_84s = {
-            "\1\3\23\uffff\2\3\3\uffff\2\3\7\uffff\1\3\16\uffff\1\1\1\2\2\3\13\uffff\6\3",
-            "\1\uffff",
-            "\1\uffff",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-    static final short[] dfa_79 = DFA.unpackEncodedString(dfa_79s);
-    static final char[] dfa_80 = DFA.unpackEncodedStringToUnsignedChars(dfa_80s);
-    static final char[] dfa_81 = DFA.unpackEncodedStringToUnsignedChars(dfa_81s);
-    static final short[] dfa_82 = DFA.unpackEncodedString(dfa_82s);
-    static final short[] dfa_83 = DFA.unpackEncodedString(dfa_83s);
-    static final short[][] dfa_84 = unpackEncodedStringArray(dfa_84s);
-
-    class DFA57 extends DFA {
-
-        public DFA57(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 57;
-            this.eot = dfa_73;
-            this.eof = dfa_79;
-            this.min = dfa_80;
-            this.max = dfa_81;
-            this.accept = dfa_82;
-            this.special = dfa_83;
-            this.transition = dfa_84;
-        }
-        public String getDescription() {
-            return "7512:3: ( ( (lv_shift_expression_complement_1_0= ruleshift_expression_complement ) ) ( (lv_shift_expression_linha_2_0= ruleshift_expression_linha ) ) )?";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA57_1 = input.LA(1);
-
-                         
-                        int index57_1 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred139_InternalAnsic()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 3;}
-
-                         
-                        input.seek(index57_1);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA57_2 = input.LA(1);
-
-                         
-                        int index57_2 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred139_InternalAnsic()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 3;}
-
-                         
-                        input.seek(index57_2);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 57, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-    static final String dfa_85s = "\1\4\21\0\2\uffff";
-    static final String dfa_86s = "\1\164\21\0\2\uffff";
-    static final String dfa_87s = "\22\uffff\1\1\1\2";
-    static final String dfa_88s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\2\uffff}>";
-    static final String[] dfa_89s = {
+    static final String dfa_79s = "\1\4\21\0\2\uffff";
+    static final String dfa_80s = "\1\164\21\0\2\uffff";
+    static final String dfa_81s = "\22\uffff\1\1\1\2";
+    static final String dfa_82s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\2\uffff}>";
+    static final String[] dfa_83s = {
             "\1\1\1\uffff\1\2\1\3\1\4\31\uffff\1\6\22\uffff\1\5\15\uffff\1\13\3\uffff\1\7\4\uffff\1\10\1\11\1\20\1\21\2\uffff\1\14\1\15\17\uffff\1\12\17\uffff\1\16\1\17",
             "\1\uffff",
             "\1\uffff",
@@ -38521,11 +38925,11 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             "",
             ""
     };
-    static final char[] dfa_85 = DFA.unpackEncodedStringToUnsignedChars(dfa_85s);
-    static final char[] dfa_86 = DFA.unpackEncodedStringToUnsignedChars(dfa_86s);
-    static final short[] dfa_87 = DFA.unpackEncodedString(dfa_87s);
-    static final short[] dfa_88 = DFA.unpackEncodedString(dfa_88s);
-    static final short[][] dfa_89 = unpackEncodedStringArray(dfa_89s);
+    static final char[] dfa_79 = DFA.unpackEncodedStringToUnsignedChars(dfa_79s);
+    static final char[] dfa_80 = DFA.unpackEncodedStringToUnsignedChars(dfa_80s);
+    static final short[] dfa_81 = DFA.unpackEncodedString(dfa_81s);
+    static final short[] dfa_82 = DFA.unpackEncodedString(dfa_82s);
+    static final short[][] dfa_83 = unpackEncodedStringArray(dfa_83s);
 
     class DFA78 extends DFA {
 
@@ -38534,14 +38938,14 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             this.decisionNumber = 78;
             this.eot = dfa_67;
             this.eof = dfa_67;
-            this.min = dfa_85;
-            this.max = dfa_86;
-            this.accept = dfa_87;
-            this.special = dfa_88;
-            this.transition = dfa_89;
+            this.min = dfa_79;
+            this.max = dfa_80;
+            this.accept = dfa_81;
+            this.special = dfa_82;
+            this.transition = dfa_83;
         }
         public String getDescription() {
-            return "10092:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )";
+            return "9960:2: ( ( (lv_conditional_expression_0_0= ruleconditional_expression ) ) | ( ( (lv_unary_expression_1_0= ruleunary_expression ) ) ( (lv_assignment_operator_2_0= ruleassignment_operator ) ) ( (lv_assignment_expression_3_0= ruleassignment_expression ) ) ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38810,12 +39214,12 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             throw nvae;
         }
     }
-    static final String dfa_90s = "\27\uffff";
-    static final String dfa_91s = "\1\44\24\0\2\uffff";
-    static final String dfa_92s = "\1\73\24\0\2\uffff";
-    static final String dfa_93s = "\25\uffff\1\1\1\2";
-    static final String dfa_94s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\2\uffff}>";
-    static final String[] dfa_95s = {
+    static final String dfa_84s = "\27\uffff";
+    static final String dfa_85s = "\1\44\24\0\2\uffff";
+    static final String dfa_86s = "\1\73\24\0\2\uffff";
+    static final String dfa_87s = "\25\uffff\1\1\1\2";
+    static final String dfa_88s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\2\uffff}>";
+    static final String[] dfa_89s = {
             "\1\22\1\23\1\24\1\15\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\21\1\20\4\uffff\1\16\1\17",
             "\1\uffff",
             "\1\uffff",
@@ -38841,28 +39245,28 @@ public class InternalAnsicParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] dfa_90 = DFA.unpackEncodedString(dfa_90s);
-    static final char[] dfa_91 = DFA.unpackEncodedStringToUnsignedChars(dfa_91s);
-    static final char[] dfa_92 = DFA.unpackEncodedStringToUnsignedChars(dfa_92s);
-    static final short[] dfa_93 = DFA.unpackEncodedString(dfa_93s);
-    static final short[] dfa_94 = DFA.unpackEncodedString(dfa_94s);
-    static final short[][] dfa_95 = unpackEncodedStringArray(dfa_95s);
+    static final short[] dfa_84 = DFA.unpackEncodedString(dfa_84s);
+    static final char[] dfa_85 = DFA.unpackEncodedStringToUnsignedChars(dfa_85s);
+    static final char[] dfa_86 = DFA.unpackEncodedStringToUnsignedChars(dfa_86s);
+    static final short[] dfa_87 = DFA.unpackEncodedString(dfa_87s);
+    static final short[] dfa_88 = DFA.unpackEncodedString(dfa_88s);
+    static final short[][] dfa_89 = unpackEncodedStringArray(dfa_89s);
 
     class DFA81 extends DFA {
 
         public DFA81(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 81;
-            this.eot = dfa_90;
-            this.eof = dfa_90;
-            this.min = dfa_91;
-            this.max = dfa_92;
-            this.accept = dfa_93;
-            this.special = dfa_94;
-            this.transition = dfa_95;
+            this.eot = dfa_84;
+            this.eof = dfa_84;
+            this.min = dfa_85;
+            this.max = dfa_86;
+            this.accept = dfa_87;
+            this.special = dfa_88;
+            this.transition = dfa_89;
         }
         public String getDescription() {
-            return "10328:2: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) )";
+            return "10196:2: ( ( ( (lv_specifier_qualifier_list_0_0= rulespecifier_qualifier_list ) ) ( (lv_abstract_declarator_1_0= ruleabstract_declarator ) ) ) | ( (lv_specifier_qualifier_list_2_0= rulespecifier_qualifier_list ) ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;

@@ -9,6 +9,25 @@ import org.xtext.example.ansic.DomainModel
 import org.xtext.example.ansic.postfix_expression
 import org.xtext.example.ansic.postfix_expression_complement
 import org.xtext.example.ansic.translation_unit
+import org.xtext.example.ansic.unary_expression
+import org.xtext.example.ansic.cast_expression
+import org.xtext.example.ansic.multiplicative_expression
+import org.xtext.example.ansic.multiplicative_expression_linha	
+
+import org.xtext.example.ansic.multiplicative_expression_complement
+import org.xtext.example.ansic.additive_expression
+import org.xtext.example.ansic.additive_expression_linha
+import org.xtext.example.ansic.additive_expression_complement
+import org.xtext.example.ansic.shift_expression
+import org.xtext.example.ansic.shift_expression_linha
+import org.xtext.example.ansic.shift_expression_complement
+import org.xtext.example.ansic.relational_expression
+import org.xtext.example.ansic.relational_expression_linha
+import org.xtext.example.ansic.relational_expression_complement
+import org.xtext.example.ansic.equality_expression
+import org.xtext.example.ansic.equality_expression_linha
+import org.xtext.example.ansic.equality_expression_complement
+import org.xtext.example.ansic.additive_expression
 import org.xtext.example.ansic.PostFixEmpryParams
 import org.xtext.example.ansic.enum_specifier
 import org.xtext.example.ansic.declaration
@@ -31,6 +50,11 @@ class AnsicValidator extends AbstractAnsicValidator {
 	
   public static val INVALID_NAME = 'invalidName'
   private var variables = <String,String>newHashMap();
+  public enum ExpRetType {
+  	NUMERIC,
+  	CHAR,
+  	BOOL
+  }
   public static class Function{
   		public int param_number = 0;
   		public List<String> params_types = new ArrayList<String>();
@@ -76,6 +100,116 @@ class AnsicValidator extends AbstractAnsicValidator {
 					null
 				)
 			}
+		}
+	}
+	
+	def primaryExpFromAssigExp(assignment_expression exp){
+		var ret = exp.conditional_expression.
+		logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+		and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+		multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+		return ret;
+	}
+	def t(){
+		if(true){
+			return 3
+		}else{
+			return "oia"
+		}
+	}
+	
+	def getExpType(assignment_expression exp){
+		var current = exp.conditional_expression;
+		if(current.conditional_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current2 = current.logical_or_expression;
+		if(current2.logical_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current3 = current2.logical_and_expression;
+		if(current3.logical_and_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current4 = current3.inclusive_or_expression;
+		if(current4.inclusive_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current5 = current4.exclusive_or_expression;
+		if(current5.exclusive_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current6 = current5.and_expression;
+		if(current6.and_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current7 = current6.equality_expression;
+		if(current7.equality_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current8 = current7.relational_expression;
+		if(current8.relational_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		return ExpRetType.NUMERIC;
+	}
+	
+	def evaluateExp(primary_expression primatyExp){
+		if(primatyExp.expression == null){
+			if(primatyExp.identifier != null && !primatyExp.identifier.trim().isEmpty()){
+				if(!variables.containsKey(primatyExp.identifier)){
+					error("Variavel não declarada", null);
+					return ExpRetType.NUMERIC;
+				}
+				var varType = variables.get(primatyExp.identifier);
+				if(varType.equals('char')){
+					return ExpRetType.CHAR;
+				}else{
+					return ExpRetType.NUMERIC;
+				}
+			}
+			if(primatyExp.constant.char != null && !primatyExp.constant.char.trim().isEmpty()){
+				return ExpRetType.CHAR;
+			}
+			return ExpRetType.NUMERIC;
+		}else{
+			println("Getting type...");
+			return getExpType(primatyExp.expression.assignment_expression);
+		}
+	}
+	
+	@Check
+	def CheckAdditiveExp(additive_expression addExp){
+		if(addExp.additive_expression_linha != null){
+			var currentExp = addExp.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);
+			if(lType == ExpRetType.BOOL){
+				error("Expressão aditiva pode operar em cima deste tipo", 
+					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
+				);
+			}
+			
+			var rSide = primaryExpFromAssigExp(addExp.additive_expression_linha.additive_expression_complement.assignment_expression);
+			var rType = evaluateExp(rSide);
+			if(rType == ExpRetType.BOOL){
+				error("Expressão aditiva pode operar em cima deste tipo", 
+					AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação",
+					null
+				)
+			}
+//			var continua = addExp.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression.expression.assignment_expression;
+//			var expType2 = getExpType(continua);
+//			
+//			if(expType2 == ExpRetType.BOOL){
+//				error("Expressão aditiva pode operar em cima deste tipo", 
+//					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
+//				);
+//			}
+			//var continuation = addExp.additive_expression_linha.additive_expression_linha;
 		}
 	}
 	

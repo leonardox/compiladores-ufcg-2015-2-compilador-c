@@ -10,33 +10,22 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.xtext.example.ansic.AdditiveExpressionLinhaAction;
-import org.xtext.example.ansic.AndExpressionLinhaAction;
 import org.xtext.example.ansic.AnsicFactory;
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.ArgumentExpressionListLinhaAction;
-import org.xtext.example.ansic.ConditionalExpressionLinhaAcction;
 import org.xtext.example.ansic.DeclarationListLinhaAction;
 import org.xtext.example.ansic.DesignatorListLinhaAction;
 import org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction;
 import org.xtext.example.ansic.DomainModel;
 import org.xtext.example.ansic.EnumeratorListLinhaAction;
-import org.xtext.example.ansic.EqualityExpressionLinhaAction;
-import org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction;
 import org.xtext.example.ansic.ExpressionLinhaAction;
 import org.xtext.example.ansic.GenericAssocListLinhaAction;
 import org.xtext.example.ansic.IdentifierListLinhaAction;
-import org.xtext.example.ansic.InclusiveOrExpressionLinhaAction;
 import org.xtext.example.ansic.InitDecclaratorListLinhaAction;
 import org.xtext.example.ansic.InitializerListLinhaAction;
-import org.xtext.example.ansic.LogicalAndExpressionLinhaAction;
-import org.xtext.example.ansic.LogicalOrExpressionLinhaAction;
-import org.xtext.example.ansic.MultiplicativeExpressionLinhaAction;
 import org.xtext.example.ansic.PlusPlus;
 import org.xtext.example.ansic.PostFixEmpryParams;
 import org.xtext.example.ansic.PostfixExpressionLinhaAction;
-import org.xtext.example.ansic.RelationalExpressionLinhaAction;
-import org.xtext.example.ansic.ShiftExpressionLinhaAction;
 import org.xtext.example.ansic.StructDeclarationListLinhaAction;
 import org.xtext.example.ansic.StructDeclaratorListLinhaAction;
 import org.xtext.example.ansic.StructOrUnionSpecifierComplementAction;
@@ -1057,83 +1046,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * @generated
    */
   private EClass plusPlusEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass multiplicativeExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass additiveExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass shiftExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass relationalExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass equalityExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass andExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass exclusiveOrExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass inclusiveOrExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass logicalAndExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass logicalOrExpressionLinhaActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass conditionalExpressionLinhaAcctionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -3147,6 +3059,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getmultiplicative_expression_linha_Multiplicative_expression_complement()
+  {
+    return (EReference)multiplicative_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmultiplicative_expression_linha_Multiplicative_expression_linha()
+  {
+    return (EReference)multiplicative_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getmultiplicative_expression_complement()
   {
     return multiplicative_expression_complementEClass;
@@ -3157,7 +3089,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getmultiplicative_expression_complement_Cast_expression()
+  public EReference getmultiplicative_expression_complement_Assignment_expression()
   {
     return (EReference)multiplicative_expression_complementEClass.getEStructuralFeatures().get(0);
   }
@@ -3207,6 +3139,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getadditive_expression_linha_Additive_expression_complement()
+  {
+    return (EReference)additive_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getadditive_expression_linha_Additive_expression_linha()
+  {
+    return (EReference)additive_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getadditive_expression_complement()
   {
     return additive_expression_complementEClass;
@@ -3217,7 +3169,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getadditive_expression_complement_Multiplicative_expression()
+  public EReference getadditive_expression_complement_Assignment_expression()
   {
     return (EReference)additive_expression_complementEClass.getEStructuralFeatures().get(0);
   }
@@ -3260,6 +3212,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
   public EClass getshift_expression_linha()
   {
     return shift_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getshift_expression_linha_Shift_expression_complement()
+  {
+    return (EReference)shift_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getshift_expression_linha_Shift_expression_linha()
+  {
+    return (EReference)shift_expression_linhaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3327,6 +3299,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getrelational_expression_linha_Shift_expression_complement()
+  {
+    return (EReference)relational_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getrelational_expression_linha_Relational_expression_linha()
+  {
+    return (EReference)relational_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getrelational_expression_complement()
   {
     return relational_expression_complementEClass;
@@ -3380,6 +3372,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
   public EClass getequality_expression_linha()
   {
     return equality_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getequality_expression_linha_Equality_expression_complement()
+  {
+    return (EReference)equality_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getequality_expression_linha_Equality_expression_linha()
+  {
+    return (EReference)equality_expression_linhaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3817,6 +3829,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getand_expression_linha_Equality_expression()
+  {
+    return (EReference)and_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getand_expression_linha_And_expression_linha()
+  {
+    return (EReference)and_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getexclusive_or_expression()
   {
     return exclusive_or_expressionEClass;
@@ -3850,6 +3882,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
   public EClass getexclusive_or_expression_linha()
   {
     return exclusive_or_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexclusive_or_expression_linha_And_expression()
+  {
+    return (EReference)exclusive_or_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getexclusive_or_expression_linha_Exclusive_or_expression_linha()
+  {
+    return (EReference)exclusive_or_expression_linhaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3897,6 +3949,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getinclusive_or_expression_linha_Exclusive_or_expression()
+  {
+    return (EReference)inclusive_or_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinclusive_or_expression_linha_Inclusive_or_expression_linha()
+  {
+    return (EReference)inclusive_or_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getlogical_and_expression()
   {
     return logical_and_expressionEClass;
@@ -3930,6 +4002,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
   public EClass getlogical_and_expression_linha()
   {
     return logical_and_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_and_expression_linha_Inclusive_or_expression()
+  {
+    return (EReference)logical_and_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_and_expression_linha_Logical_and_expression_linha()
+  {
+    return (EReference)logical_and_expression_linhaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3977,6 +4069,26 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getlogical_or_expression_linha_Logical_and_expression()
+  {
+    return (EReference)logical_or_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlogical_or_expression_linha_Logical_or_expression_linha()
+  {
+    return (EReference)logical_or_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getconditional_expression()
   {
     return conditional_expressionEClass;
@@ -4010,6 +4122,36 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
   public EClass getconditional_expression_linha()
   {
     return conditional_expression_linhaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getconditional_expression_linha_Expression()
+  {
+    return (EReference)conditional_expression_linhaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getconditional_expression_linha_Conditional_expression()
+  {
+    return (EReference)conditional_expression_linhaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getconditional_expression_linha_Conditional_expression_linha()
+  {
+    return (EReference)conditional_expression_linhaEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4757,346 +4899,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMultiplicativeExpressionLinhaAction()
-  {
-    return multiplicativeExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement()
-  {
-    return (EReference)multiplicativeExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha()
-  {
-    return (EReference)multiplicativeExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAdditiveExpressionLinhaAction()
-  {
-    return additiveExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAdditiveExpressionLinhaAction_Additive_expression_complement()
-  {
-    return (EReference)additiveExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAdditiveExpressionLinhaAction_Additive_expression_linha()
-  {
-    return (EReference)additiveExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getShiftExpressionLinhaAction()
-  {
-    return shiftExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getShiftExpressionLinhaAction_Shift_expression_complement()
-  {
-    return (EReference)shiftExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getShiftExpressionLinhaAction_Shift_expression_linha()
-  {
-    return (EReference)shiftExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRelationalExpressionLinhaAction()
-  {
-    return relationalExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRelationalExpressionLinhaAction_Shift_expression_complement()
-  {
-    return (EReference)relationalExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRelationalExpressionLinhaAction_Relational_expression_linha()
-  {
-    return (EReference)relationalExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getEqualityExpressionLinhaAction()
-  {
-    return equalityExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEqualityExpressionLinhaAction_Equality_expression_complement()
-  {
-    return (EReference)equalityExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEqualityExpressionLinhaAction_Equality_expression_linha()
-  {
-    return (EReference)equalityExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAndExpressionLinhaAction()
-  {
-    return andExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAndExpressionLinhaAction_Equality_expression()
-  {
-    return (EReference)andExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAndExpressionLinhaAction_And_expression_linha()
-  {
-    return (EReference)andExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExclusiveOrExpressionLinhaAction()
-  {
-    return exclusiveOrExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExclusiveOrExpressionLinhaAction_And_expression()
-  {
-    return (EReference)exclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha()
-  {
-    return (EReference)exclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getInclusiveOrExpressionLinhaAction()
-  {
-    return inclusiveOrExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInclusiveOrExpressionLinhaAction_Exclusive_or_expression()
-  {
-    return (EReference)inclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha()
-  {
-    return (EReference)inclusiveOrExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLogicalAndExpressionLinhaAction()
-  {
-    return logicalAndExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAndExpressionLinhaAction_Inclusive_or_expression()
-  {
-    return (EReference)logicalAndExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalAndExpressionLinhaAction_Logical_and_expression_linha()
-  {
-    return (EReference)logicalAndExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLogicalOrExpressionLinhaAction()
-  {
-    return logicalOrExpressionLinhaActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalOrExpressionLinhaAction_Logical_and_expression()
-  {
-    return (EReference)logicalOrExpressionLinhaActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalOrExpressionLinhaAction_Logical_or_expression_linha()
-  {
-    return (EReference)logicalOrExpressionLinhaActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getConditionalExpressionLinhaAcction()
-  {
-    return conditionalExpressionLinhaAcctionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getConditionalExpressionLinhaAcction_Expression()
-  {
-    return (EReference)conditionalExpressionLinhaAcctionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getConditionalExpressionLinhaAcction_Conditional_expression()
-  {
-    return (EReference)conditionalExpressionLinhaAcctionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getConditionalExpressionLinhaAcction_Conditional_expression_linha()
-  {
-    return (EReference)conditionalExpressionLinhaAcctionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getExpressionLinhaAction()
   {
     return expressionLinhaActionEClass;
@@ -5441,24 +5243,30 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(multiplicative_expressionEClass, MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA);
 
     multiplicative_expression_linhaEClass = createEClass(MULTIPLICATIVE_EXPRESSION_LINHA);
+    createEReference(multiplicative_expression_linhaEClass, MULTIPLICATIVE_EXPRESSION_LINHA__MULTIPLICATIVE_EXPRESSION_COMPLEMENT);
+    createEReference(multiplicative_expression_linhaEClass, MULTIPLICATIVE_EXPRESSION_LINHA__MULTIPLICATIVE_EXPRESSION_LINHA);
 
     multiplicative_expression_complementEClass = createEClass(MULTIPLICATIVE_EXPRESSION_COMPLEMENT);
-    createEReference(multiplicative_expression_complementEClass, MULTIPLICATIVE_EXPRESSION_COMPLEMENT__CAST_EXPRESSION);
+    createEReference(multiplicative_expression_complementEClass, MULTIPLICATIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION);
 
     additive_expressionEClass = createEClass(ADDITIVE_EXPRESSION);
     createEReference(additive_expressionEClass, ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
     createEReference(additive_expressionEClass, ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
 
     additive_expression_linhaEClass = createEClass(ADDITIVE_EXPRESSION_LINHA);
+    createEReference(additive_expression_linhaEClass, ADDITIVE_EXPRESSION_LINHA__ADDITIVE_EXPRESSION_COMPLEMENT);
+    createEReference(additive_expression_linhaEClass, ADDITIVE_EXPRESSION_LINHA__ADDITIVE_EXPRESSION_LINHA);
 
     additive_expression_complementEClass = createEClass(ADDITIVE_EXPRESSION_COMPLEMENT);
-    createEReference(additive_expression_complementEClass, ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION);
+    createEReference(additive_expression_complementEClass, ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION);
 
     shift_expressionEClass = createEClass(SHIFT_EXPRESSION);
     createEReference(shift_expressionEClass, SHIFT_EXPRESSION__ADDITIVE_EXPRESSION);
     createEReference(shift_expressionEClass, SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA);
 
     shift_expression_linhaEClass = createEClass(SHIFT_EXPRESSION_LINHA);
+    createEReference(shift_expression_linhaEClass, SHIFT_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT);
+    createEReference(shift_expression_linhaEClass, SHIFT_EXPRESSION_LINHA__SHIFT_EXPRESSION_LINHA);
 
     shift_expression_complementEClass = createEClass(SHIFT_EXPRESSION_COMPLEMENT);
     createEReference(shift_expression_complementEClass, SHIFT_EXPRESSION_COMPLEMENT__ADDITIVE_EXPRESSION);
@@ -5468,6 +5276,8 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(relational_expressionEClass, RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA);
 
     relational_expression_linhaEClass = createEClass(RELATIONAL_EXPRESSION_LINHA);
+    createEReference(relational_expression_linhaEClass, RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT);
+    createEReference(relational_expression_linhaEClass, RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA);
 
     relational_expression_complementEClass = createEClass(RELATIONAL_EXPRESSION_COMPLEMENT);
     createEReference(relational_expression_complementEClass, RELATIONAL_EXPRESSION_COMPLEMENT__SHIFT_EXPRESSION);
@@ -5477,6 +5287,8 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(equality_expressionEClass, EQUALITY_EXPRESSION__EQUALITY_EXPRESSION_LINHA);
 
     equality_expression_linhaEClass = createEClass(EQUALITY_EXPRESSION_LINHA);
+    createEReference(equality_expression_linhaEClass, EQUALITY_EXPRESSION_LINHA__EQUALITY_EXPRESSION_COMPLEMENT);
+    createEReference(equality_expression_linhaEClass, EQUALITY_EXPRESSION_LINHA__EQUALITY_EXPRESSION_LINHA);
 
     equality_expression_complementEClass = createEClass(EQUALITY_EXPRESSION_COMPLEMENT);
     createEReference(equality_expression_complementEClass, EQUALITY_EXPRESSION_COMPLEMENT__RELATIONAL_EXPRESSION);
@@ -5533,36 +5345,49 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(and_expressionEClass, AND_EXPRESSION__AND_EXPRESSION_LINHA);
 
     and_expression_linhaEClass = createEClass(AND_EXPRESSION_LINHA);
+    createEReference(and_expression_linhaEClass, AND_EXPRESSION_LINHA__EQUALITY_EXPRESSION);
+    createEReference(and_expression_linhaEClass, AND_EXPRESSION_LINHA__AND_EXPRESSION_LINHA);
 
     exclusive_or_expressionEClass = createEClass(EXCLUSIVE_OR_EXPRESSION);
     createEReference(exclusive_or_expressionEClass, EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION);
     createEReference(exclusive_or_expressionEClass, EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA);
 
     exclusive_or_expression_linhaEClass = createEClass(EXCLUSIVE_OR_EXPRESSION_LINHA);
+    createEReference(exclusive_or_expression_linhaEClass, EXCLUSIVE_OR_EXPRESSION_LINHA__AND_EXPRESSION);
+    createEReference(exclusive_or_expression_linhaEClass, EXCLUSIVE_OR_EXPRESSION_LINHA__EXCLUSIVE_OR_EXPRESSION_LINHA);
 
     inclusive_or_expressionEClass = createEClass(INCLUSIVE_OR_EXPRESSION);
     createEReference(inclusive_or_expressionEClass, INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION);
     createEReference(inclusive_or_expressionEClass, INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA);
 
     inclusive_or_expression_linhaEClass = createEClass(INCLUSIVE_OR_EXPRESSION_LINHA);
+    createEReference(inclusive_or_expression_linhaEClass, INCLUSIVE_OR_EXPRESSION_LINHA__EXCLUSIVE_OR_EXPRESSION);
+    createEReference(inclusive_or_expression_linhaEClass, INCLUSIVE_OR_EXPRESSION_LINHA__INCLUSIVE_OR_EXPRESSION_LINHA);
 
     logical_and_expressionEClass = createEClass(LOGICAL_AND_EXPRESSION);
     createEReference(logical_and_expressionEClass, LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION);
     createEReference(logical_and_expressionEClass, LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA);
 
     logical_and_expression_linhaEClass = createEClass(LOGICAL_AND_EXPRESSION_LINHA);
+    createEReference(logical_and_expression_linhaEClass, LOGICAL_AND_EXPRESSION_LINHA__INCLUSIVE_OR_EXPRESSION);
+    createEReference(logical_and_expression_linhaEClass, LOGICAL_AND_EXPRESSION_LINHA__LOGICAL_AND_EXPRESSION_LINHA);
 
     logical_or_expressionEClass = createEClass(LOGICAL_OR_EXPRESSION);
     createEReference(logical_or_expressionEClass, LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION);
     createEReference(logical_or_expressionEClass, LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA);
 
     logical_or_expression_linhaEClass = createEClass(LOGICAL_OR_EXPRESSION_LINHA);
+    createEReference(logical_or_expression_linhaEClass, LOGICAL_OR_EXPRESSION_LINHA__LOGICAL_AND_EXPRESSION);
+    createEReference(logical_or_expression_linhaEClass, LOGICAL_OR_EXPRESSION_LINHA__LOGICAL_OR_EXPRESSION_LINHA);
 
     conditional_expressionEClass = createEClass(CONDITIONAL_EXPRESSION);
     createEReference(conditional_expressionEClass, CONDITIONAL_EXPRESSION__LOGICAL_OR_EXPRESSION);
     createEReference(conditional_expressionEClass, CONDITIONAL_EXPRESSION__CONDITIONAL_EXPRESSION_LINHA);
 
     conditional_expression_linhaEClass = createEClass(CONDITIONAL_EXPRESSION_LINHA);
+    createEReference(conditional_expression_linhaEClass, CONDITIONAL_EXPRESSION_LINHA__EXPRESSION);
+    createEReference(conditional_expression_linhaEClass, CONDITIONAL_EXPRESSION_LINHA__CONDITIONAL_EXPRESSION);
+    createEReference(conditional_expression_linhaEClass, CONDITIONAL_EXPRESSION_LINHA__CONDITIONAL_EXPRESSION_LINHA);
 
     assignment_expressionEClass = createEClass(ASSIGNMENT_EXPRESSION);
     createEReference(assignment_expressionEClass, ASSIGNMENT_EXPRESSION__CONDITIONAL_EXPRESSION);
@@ -5664,51 +5489,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     plusPlusEClass = createEClass(PLUS_PLUS);
     createEAttribute(plusPlusEClass, PLUS_PLUS__PLUS);
 
-    multiplicativeExpressionLinhaActionEClass = createEClass(MULTIPLICATIVE_EXPRESSION_LINHA_ACTION);
-    createEReference(multiplicativeExpressionLinhaActionEClass, MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_COMPLEMENT);
-    createEReference(multiplicativeExpressionLinhaActionEClass, MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_LINHA);
-
-    additiveExpressionLinhaActionEClass = createEClass(ADDITIVE_EXPRESSION_LINHA_ACTION);
-    createEReference(additiveExpressionLinhaActionEClass, ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_COMPLEMENT);
-    createEReference(additiveExpressionLinhaActionEClass, ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_LINHA);
-
-    shiftExpressionLinhaActionEClass = createEClass(SHIFT_EXPRESSION_LINHA_ACTION);
-    createEReference(shiftExpressionLinhaActionEClass, SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT);
-    createEReference(shiftExpressionLinhaActionEClass, SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_LINHA);
-
-    relationalExpressionLinhaActionEClass = createEClass(RELATIONAL_EXPRESSION_LINHA_ACTION);
-    createEReference(relationalExpressionLinhaActionEClass, RELATIONAL_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT);
-    createEReference(relationalExpressionLinhaActionEClass, RELATIONAL_EXPRESSION_LINHA_ACTION__RELATIONAL_EXPRESSION_LINHA);
-
-    equalityExpressionLinhaActionEClass = createEClass(EQUALITY_EXPRESSION_LINHA_ACTION);
-    createEReference(equalityExpressionLinhaActionEClass, EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_COMPLEMENT);
-    createEReference(equalityExpressionLinhaActionEClass, EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA);
-
-    andExpressionLinhaActionEClass = createEClass(AND_EXPRESSION_LINHA_ACTION);
-    createEReference(andExpressionLinhaActionEClass, AND_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION);
-    createEReference(andExpressionLinhaActionEClass, AND_EXPRESSION_LINHA_ACTION__AND_EXPRESSION_LINHA);
-
-    exclusiveOrExpressionLinhaActionEClass = createEClass(EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION);
-    createEReference(exclusiveOrExpressionLinhaActionEClass, EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__AND_EXPRESSION);
-    createEReference(exclusiveOrExpressionLinhaActionEClass, EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION_LINHA);
-
-    inclusiveOrExpressionLinhaActionEClass = createEClass(INCLUSIVE_OR_EXPRESSION_LINHA_ACTION);
-    createEReference(inclusiveOrExpressionLinhaActionEClass, INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION);
-    createEReference(inclusiveOrExpressionLinhaActionEClass, INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION_LINHA);
-
-    logicalAndExpressionLinhaActionEClass = createEClass(LOGICAL_AND_EXPRESSION_LINHA_ACTION);
-    createEReference(logicalAndExpressionLinhaActionEClass, LOGICAL_AND_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION);
-    createEReference(logicalAndExpressionLinhaActionEClass, LOGICAL_AND_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION_LINHA);
-
-    logicalOrExpressionLinhaActionEClass = createEClass(LOGICAL_OR_EXPRESSION_LINHA_ACTION);
-    createEReference(logicalOrExpressionLinhaActionEClass, LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION);
-    createEReference(logicalOrExpressionLinhaActionEClass, LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_OR_EXPRESSION_LINHA);
-
-    conditionalExpressionLinhaAcctionEClass = createEClass(CONDITIONAL_EXPRESSION_LINHA_ACCTION);
-    createEReference(conditionalExpressionLinhaAcctionEClass, CONDITIONAL_EXPRESSION_LINHA_ACCTION__EXPRESSION);
-    createEReference(conditionalExpressionLinhaAcctionEClass, CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION);
-    createEReference(conditionalExpressionLinhaAcctionEClass, CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION_LINHA);
-
     expressionLinhaActionEClass = createEClass(EXPRESSION_LINHA_ACTION);
     createEReference(expressionLinhaActionEClass, EXPRESSION_LINHA_ACTION__ASSIGNMENT_EXPRESSION);
     createEReference(expressionLinhaActionEClass, EXPRESSION_LINHA_ACTION__EXPRESSION_LINHA);
@@ -5765,17 +5545,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     postFixEmpryParamsEClass.getESuperTypes().add(this.getpostfix_expression_complement());
     argumentExpressionListLinhaActionEClass.getESuperTypes().add(this.getargument_expression_list_linha());
     plusPlusEClass.getESuperTypes().add(this.getunary_expression());
-    multiplicativeExpressionLinhaActionEClass.getESuperTypes().add(this.getmultiplicative_expression_linha());
-    additiveExpressionLinhaActionEClass.getESuperTypes().add(this.getadditive_expression_linha());
-    shiftExpressionLinhaActionEClass.getESuperTypes().add(this.getshift_expression_linha());
-    relationalExpressionLinhaActionEClass.getESuperTypes().add(this.getrelational_expression_linha());
-    equalityExpressionLinhaActionEClass.getESuperTypes().add(this.getequality_expression_linha());
-    andExpressionLinhaActionEClass.getESuperTypes().add(this.getand_expression_linha());
-    exclusiveOrExpressionLinhaActionEClass.getESuperTypes().add(this.getexclusive_or_expression_linha());
-    inclusiveOrExpressionLinhaActionEClass.getESuperTypes().add(this.getinclusive_or_expression_linha());
-    logicalAndExpressionLinhaActionEClass.getESuperTypes().add(this.getlogical_and_expression_linha());
-    logicalOrExpressionLinhaActionEClass.getESuperTypes().add(this.getlogical_or_expression_linha());
-    conditionalExpressionLinhaAcctionEClass.getESuperTypes().add(this.getconditional_expression_linha());
     expressionLinhaActionEClass.getESuperTypes().add(this.getexpression_linha());
     initDecclaratorListLinhaActionEClass.getESuperTypes().add(this.getinit_declarator_list_linha());
 
@@ -6039,24 +5808,30 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getmultiplicative_expression_Multiplicative_expression_linha(), this.getmultiplicative_expression_linha(), null, "multiplicative_expression_linha", null, 0, 1, multiplicative_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplicative_expression_linhaEClass, multiplicative_expression_linha.class, "multiplicative_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getmultiplicative_expression_linha_Multiplicative_expression_complement(), this.getmultiplicative_expression_complement(), null, "multiplicative_expression_complement", null, 0, 1, multiplicative_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmultiplicative_expression_linha_Multiplicative_expression_linha(), this.getmultiplicative_expression_linha(), null, "multiplicative_expression_linha", null, 0, 1, multiplicative_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplicative_expression_complementEClass, multiplicative_expression_complement.class, "multiplicative_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getmultiplicative_expression_complement_Cast_expression(), this.getcast_expression(), null, "cast_expression", null, 0, 1, multiplicative_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmultiplicative_expression_complement_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, multiplicative_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(additive_expressionEClass, additive_expression.class, "additive_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getadditive_expression_Multiplicative_expression(), this.getmultiplicative_expression(), null, "multiplicative_expression", null, 0, 1, additive_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getadditive_expression_Additive_expression_linha(), this.getadditive_expression_linha(), null, "additive_expression_linha", null, 0, 1, additive_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(additive_expression_linhaEClass, additive_expression_linha.class, "additive_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getadditive_expression_linha_Additive_expression_complement(), this.getadditive_expression_complement(), null, "additive_expression_complement", null, 0, 1, additive_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getadditive_expression_linha_Additive_expression_linha(), this.getadditive_expression_linha(), null, "additive_expression_linha", null, 0, 1, additive_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(additive_expression_complementEClass, additive_expression_complement.class, "additive_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getadditive_expression_complement_Multiplicative_expression(), this.getmultiplicative_expression(), null, "multiplicative_expression", null, 0, 1, additive_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getadditive_expression_complement_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, additive_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(shift_expressionEClass, shift_expression.class, "shift_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getshift_expression_Additive_expression(), this.getadditive_expression(), null, "additive_expression", null, 0, 1, shift_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getshift_expression_Shift_expression_linha(), this.getshift_expression_linha(), null, "shift_expression_linha", null, 0, 1, shift_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(shift_expression_linhaEClass, shift_expression_linha.class, "shift_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getshift_expression_linha_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, shift_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getshift_expression_linha_Shift_expression_linha(), this.getshift_expression_linha(), null, "shift_expression_linha", null, 0, 1, shift_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(shift_expression_complementEClass, shift_expression_complement.class, "shift_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getshift_expression_complement_Additive_expression(), this.getadditive_expression(), null, "additive_expression", null, 0, 1, shift_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6066,6 +5841,8 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getrelational_expression_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, relational_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relational_expression_linhaEClass, relational_expression_linha.class, "relational_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getrelational_expression_linha_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, relational_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrelational_expression_linha_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, relational_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relational_expression_complementEClass, relational_expression_complement.class, "relational_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getrelational_expression_complement_Shift_expression(), this.getshift_expression(), null, "shift_expression", null, 0, 1, relational_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6075,6 +5852,8 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getequality_expression_Equality_expression_linha(), this.getequality_expression_linha(), null, "equality_expression_linha", null, 0, 1, equality_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(equality_expression_linhaEClass, equality_expression_linha.class, "equality_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getequality_expression_linha_Equality_expression_complement(), this.getequality_expression_complement(), null, "equality_expression_complement", null, 0, 1, equality_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getequality_expression_linha_Equality_expression_linha(), this.getequality_expression_linha(), null, "equality_expression_linha", null, 0, 1, equality_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(equality_expression_complementEClass, equality_expression_complement.class, "equality_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getequality_expression_complement_Relational_expression(), this.getrelational_expression(), null, "relational_expression", null, 0, 1, equality_expression_complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6131,36 +5910,49 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getand_expression_And_expression_linha(), this.getand_expression_linha(), null, "and_expression_linha", null, 0, 1, and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(and_expression_linhaEClass, and_expression_linha.class, "and_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getand_expression_linha_Equality_expression(), this.getequality_expression(), null, "equality_expression", null, 0, 1, and_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getand_expression_linha_And_expression_linha(), this.getand_expression_linha(), null, "and_expression_linha", null, 0, 1, and_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(exclusive_or_expressionEClass, exclusive_or_expression.class, "exclusive_or_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getexclusive_or_expression_And_expression(), this.getand_expression(), null, "and_expression", null, 0, 1, exclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getexclusive_or_expression_Exclusive_or_expression_linha(), this.getexclusive_or_expression_linha(), null, "exclusive_or_expression_linha", null, 0, 1, exclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(exclusive_or_expression_linhaEClass, exclusive_or_expression_linha.class, "exclusive_or_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getexclusive_or_expression_linha_And_expression(), this.getand_expression(), null, "and_expression", null, 0, 1, exclusive_or_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getexclusive_or_expression_linha_Exclusive_or_expression_linha(), this.getexclusive_or_expression_linha(), null, "exclusive_or_expression_linha", null, 0, 1, exclusive_or_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(inclusive_or_expressionEClass, inclusive_or_expression.class, "inclusive_or_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getinclusive_or_expression_Exclusive_or_expression(), this.getexclusive_or_expression(), null, "exclusive_or_expression", null, 0, 1, inclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinclusive_or_expression_Inclusive_or_expression_linha(), this.getinclusive_or_expression_linha(), null, "inclusive_or_expression_linha", null, 0, 1, inclusive_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(inclusive_or_expression_linhaEClass, inclusive_or_expression_linha.class, "inclusive_or_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinclusive_or_expression_linha_Exclusive_or_expression(), this.getexclusive_or_expression(), null, "exclusive_or_expression", null, 0, 1, inclusive_or_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinclusive_or_expression_linha_Inclusive_or_expression_linha(), this.getinclusive_or_expression_linha(), null, "inclusive_or_expression_linha", null, 0, 1, inclusive_or_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logical_and_expressionEClass, logical_and_expression.class, "logical_and_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getlogical_and_expression_Inclusive_or_expression(), this.getinclusive_or_expression(), null, "inclusive_or_expression", null, 0, 1, logical_and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getlogical_and_expression_Logical_and_expression_linha(), this.getlogical_and_expression_linha(), null, "logical_and_expression_linha", null, 0, 1, logical_and_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logical_and_expression_linhaEClass, logical_and_expression_linha.class, "logical_and_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getlogical_and_expression_linha_Inclusive_or_expression(), this.getinclusive_or_expression(), null, "inclusive_or_expression", null, 0, 1, logical_and_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlogical_and_expression_linha_Logical_and_expression_linha(), this.getlogical_and_expression_linha(), null, "logical_and_expression_linha", null, 0, 1, logical_and_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logical_or_expressionEClass, logical_or_expression.class, "logical_or_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getlogical_or_expression_Logical_and_expression(), this.getlogical_and_expression(), null, "logical_and_expression", null, 0, 1, logical_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getlogical_or_expression_Logical_or_expression_linha(), this.getlogical_or_expression_linha(), null, "logical_or_expression_linha", null, 0, 1, logical_or_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logical_or_expression_linhaEClass, logical_or_expression_linha.class, "logical_or_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getlogical_or_expression_linha_Logical_and_expression(), this.getlogical_and_expression(), null, "logical_and_expression", null, 0, 1, logical_or_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlogical_or_expression_linha_Logical_or_expression_linha(), this.getlogical_or_expression_linha(), null, "logical_or_expression_linha", null, 0, 1, logical_or_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditional_expressionEClass, conditional_expression.class, "conditional_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getconditional_expression_Logical_or_expression(), this.getlogical_or_expression(), null, "logical_or_expression", null, 0, 1, conditional_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getconditional_expression_Conditional_expression_linha(), this.getconditional_expression_linha(), null, "conditional_expression_linha", null, 0, 1, conditional_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditional_expression_linhaEClass, conditional_expression_linha.class, "conditional_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getconditional_expression_linha_Expression(), this.getexpression(), null, "expression", null, 0, 1, conditional_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getconditional_expression_linha_Conditional_expression(), this.getconditional_expression(), null, "conditional_expression", null, 0, 1, conditional_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getconditional_expression_linha_Conditional_expression_linha(), this.getconditional_expression_linha(), null, "conditional_expression_linha", null, 0, 1, conditional_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assignment_expressionEClass, assignment_expression.class, "assignment_expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getassignment_expression_Conditional_expression(), this.getconditional_expression(), null, "conditional_expression", null, 0, 1, assignment_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -6261,51 +6053,6 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
 
     initEClass(plusPlusEClass, PlusPlus.class, "PlusPlus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPlusPlus_Plus(), ecorePackage.getEString(), "plus", null, 0, 1, PlusPlus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(multiplicativeExpressionLinhaActionEClass, MultiplicativeExpressionLinhaAction.class, "MultiplicativeExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement(), this.getmultiplicative_expression_complement(), null, "multiplicative_expression_complement", null, 0, 1, MultiplicativeExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha(), this.getmultiplicative_expression_linha(), null, "multiplicative_expression_linha", null, 0, 1, MultiplicativeExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(additiveExpressionLinhaActionEClass, AdditiveExpressionLinhaAction.class, "AdditiveExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAdditiveExpressionLinhaAction_Additive_expression_complement(), this.getadditive_expression_complement(), null, "additive_expression_complement", null, 0, 1, AdditiveExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAdditiveExpressionLinhaAction_Additive_expression_linha(), this.getadditive_expression_linha(), null, "additive_expression_linha", null, 0, 1, AdditiveExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(shiftExpressionLinhaActionEClass, ShiftExpressionLinhaAction.class, "ShiftExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getShiftExpressionLinhaAction_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, ShiftExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getShiftExpressionLinhaAction_Shift_expression_linha(), this.getshift_expression_linha(), null, "shift_expression_linha", null, 0, 1, ShiftExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(relationalExpressionLinhaActionEClass, RelationalExpressionLinhaAction.class, "RelationalExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRelationalExpressionLinhaAction_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, RelationalExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelationalExpressionLinhaAction_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, RelationalExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(equalityExpressionLinhaActionEClass, EqualityExpressionLinhaAction.class, "EqualityExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEqualityExpressionLinhaAction_Equality_expression_complement(), this.getequality_expression_complement(), null, "equality_expression_complement", null, 0, 1, EqualityExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEqualityExpressionLinhaAction_Equality_expression_linha(), this.getequality_expression_linha(), null, "equality_expression_linha", null, 0, 1, EqualityExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(andExpressionLinhaActionEClass, AndExpressionLinhaAction.class, "AndExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAndExpressionLinhaAction_Equality_expression(), this.getequality_expression(), null, "equality_expression", null, 0, 1, AndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAndExpressionLinhaAction_And_expression_linha(), this.getand_expression_linha(), null, "and_expression_linha", null, 0, 1, AndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(exclusiveOrExpressionLinhaActionEClass, ExclusiveOrExpressionLinhaAction.class, "ExclusiveOrExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExclusiveOrExpressionLinhaAction_And_expression(), this.getand_expression(), null, "and_expression", null, 0, 1, ExclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha(), this.getexclusive_or_expression_linha(), null, "exclusive_or_expression_linha", null, 0, 1, ExclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(inclusiveOrExpressionLinhaActionEClass, InclusiveOrExpressionLinhaAction.class, "InclusiveOrExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInclusiveOrExpressionLinhaAction_Exclusive_or_expression(), this.getexclusive_or_expression(), null, "exclusive_or_expression", null, 0, 1, InclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha(), this.getinclusive_or_expression_linha(), null, "inclusive_or_expression_linha", null, 0, 1, InclusiveOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(logicalAndExpressionLinhaActionEClass, LogicalAndExpressionLinhaAction.class, "LogicalAndExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLogicalAndExpressionLinhaAction_Inclusive_or_expression(), this.getinclusive_or_expression(), null, "inclusive_or_expression", null, 0, 1, LogicalAndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLogicalAndExpressionLinhaAction_Logical_and_expression_linha(), this.getlogical_and_expression_linha(), null, "logical_and_expression_linha", null, 0, 1, LogicalAndExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(logicalOrExpressionLinhaActionEClass, LogicalOrExpressionLinhaAction.class, "LogicalOrExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLogicalOrExpressionLinhaAction_Logical_and_expression(), this.getlogical_and_expression(), null, "logical_and_expression", null, 0, 1, LogicalOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLogicalOrExpressionLinhaAction_Logical_or_expression_linha(), this.getlogical_or_expression_linha(), null, "logical_or_expression_linha", null, 0, 1, LogicalOrExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(conditionalExpressionLinhaAcctionEClass, ConditionalExpressionLinhaAcction.class, "ConditionalExpressionLinhaAcction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConditionalExpressionLinhaAcction_Expression(), this.getexpression(), null, "expression", null, 0, 1, ConditionalExpressionLinhaAcction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConditionalExpressionLinhaAcction_Conditional_expression(), this.getconditional_expression(), null, "conditional_expression", null, 0, 1, ConditionalExpressionLinhaAcction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConditionalExpressionLinhaAcction_Conditional_expression_linha(), this.getconditional_expression_linha(), null, "conditional_expression_linha", null, 0, 1, ConditionalExpressionLinhaAcction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionLinhaActionEClass, ExpressionLinhaAction.class, "ExpressionLinhaAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpressionLinhaAction_Assignment_expression(), this.getassignment_expression(), null, "assignment_expression", null, 0, 1, ExpressionLinhaAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

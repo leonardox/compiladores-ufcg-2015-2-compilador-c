@@ -404,13 +404,13 @@ multiplicative_expression
 	;
 	
 multiplicative_expression_linha:
-	{MultiplicativeExpressionLinhaAction}(multiplicative_expression_complement=multiplicative_expression_complement multiplicative_expression_linha=multiplicative_expression_linha)?
+	(multiplicative_expression_complement=multiplicative_expression_complement multiplicative_expression_linha=multiplicative_expression_linha)?
 ;	
 
 multiplicative_expression_complement
-	:'*' cast_expression=cast_expression
-	|'/' cast_expression=cast_expression
-	|'%' cast_expression=cast_expression
+	:'*' assignment_expression=assignment_expression
+	|'/' assignment_expression=assignment_expression
+	|'%' assignment_expression=assignment_expression
 ;
 
 additive_expression
@@ -418,11 +418,11 @@ additive_expression
 	;
 
 additive_expression_linha
-	:{AdditiveExpressionLinhaAction}(additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?;
+	:(additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?;
 
 additive_expression_complement:
-	'+' multiplicative_expression=multiplicative_expression
-	|'-' multiplicative_expression=multiplicative_expression
+	'+' assignment_expression=assignment_expression
+	|'-' assignment_expression=assignment_expression
 ;
 
 shift_expression
@@ -430,7 +430,7 @@ shift_expression
 	;
 
 shift_expression_linha:
-	{ShiftExpressionLinhaAction}(shift_expression_complement=shift_expression_complement shift_expression_linha=shift_expression_linha)?
+	(shift_expression_complement=shift_expression_complement shift_expression_linha=shift_expression_linha)?
 ;
 
 shift_expression_complement
@@ -443,7 +443,7 @@ relational_expression
 ;
 
 relational_expression_linha
-	:{RelationalExpressionLinhaAction}(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
+	:(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
 ;
 
 relational_expression_complement
@@ -458,7 +458,7 @@ equality_expression
 ;
 
 equality_expression_linha
-	:{EqualityExpressionLinhaAction}(equality_expression_complement=equality_expression_complement equality_expression_linha=equality_expression_linha)?
+	:(equality_expression_complement=equality_expression_complement equality_expression_linha=equality_expression_linha)?
 ;
 
 equality_expression_complement
@@ -538,7 +538,7 @@ and_expression
 ;
 
 and_expression_linha
-	: {AndExpressionLinhaAction}('&' equality_expression=equality_expression and_expression_linha=and_expression_linha)?
+	: ('&' equality_expression=equality_expression and_expression_linha=and_expression_linha)?
 ;
 
 exclusive_or_expression
@@ -546,7 +546,7 @@ exclusive_or_expression
 ;
 
 exclusive_or_expression_linha
-	: {ExclusiveOrExpressionLinhaAction}('^' and_expression=and_expression exclusive_or_expression_linha=exclusive_or_expression_linha)?
+	: ('^' and_expression=and_expression exclusive_or_expression_linha=exclusive_or_expression_linha)?
 ;
 
 inclusive_or_expression
@@ -554,7 +554,7 @@ inclusive_or_expression
 ;
 
 inclusive_or_expression_linha
-	: {InclusiveOrExpressionLinhaAction}('|' exclusive_or_expression=exclusive_or_expression inclusive_or_expression_linha=inclusive_or_expression_linha)?
+	: ('|' exclusive_or_expression=exclusive_or_expression inclusive_or_expression_linha=inclusive_or_expression_linha)?
 ;
 
 logical_and_expression
@@ -562,7 +562,7 @@ logical_and_expression
 ;
 
 logical_and_expression_linha
-	: {LogicalAndExpressionLinhaAction}('and' inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)?
+	: ('and' inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)?
 ;
 
 logical_or_expression
@@ -570,7 +570,7 @@ logical_or_expression
 ;
 	
 logical_or_expression_linha
-	: {LogicalOrExpressionLinhaAction}('or' logical_and_expression=logical_and_expression logical_or_expression_linha=logical_or_expression_linha)?	
+	: ('or' logical_and_expression=logical_and_expression logical_or_expression_linha=logical_or_expression_linha)?	
 ;
 
 conditional_expression
@@ -578,7 +578,7 @@ conditional_expression
 ;
 
 conditional_expression_linha
-	: {ConditionalExpressionLinhaAcction}('?' expression=expression ':' conditional_expression=conditional_expression conditional_expression_linha=conditional_expression_linha)?
+	: ('?' expression=expression ':' conditional_expression=conditional_expression conditional_expression_linha=conditional_expression_linha)?
 ;
 
 assignment_expression

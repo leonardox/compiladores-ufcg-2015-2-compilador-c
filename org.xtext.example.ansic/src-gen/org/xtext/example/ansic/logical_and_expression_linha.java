@@ -10,6 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>logical and expression linha</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.logical_and_expression_linha#getInclusive_or_expression <em>Inclusive or expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.logical_and_expression_linha#getLogical_and_expression_linha <em>Logical and expression linha</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getlogical_and_expression_linha()
  * @model
@@ -17,4 +24,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface logical_and_expression_linha extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Inclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Inclusive or expression</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Inclusive or expression</em>' containment reference.
+   * @see #setInclusive_or_expression(inclusive_or_expression)
+   * @see org.xtext.example.ansic.AnsicPackage#getlogical_and_expression_linha_Inclusive_or_expression()
+   * @model containment="true"
+   * @generated
+   */
+  inclusive_or_expression getInclusive_or_expression();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.logical_and_expression_linha#getInclusive_or_expression <em>Inclusive or expression</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Inclusive or expression</em>' containment reference.
+   * @see #getInclusive_or_expression()
+   * @generated
+   */
+  void setInclusive_or_expression(inclusive_or_expression value);
+
+  /**
+   * Returns the value of the '<em><b>Logical and expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Logical and expression linha</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Logical and expression linha</em>' containment reference.
+   * @see #setLogical_and_expression_linha(logical_and_expression_linha)
+   * @see org.xtext.example.ansic.AnsicPackage#getlogical_and_expression_linha_Logical_and_expression_linha()
+   * @model containment="true"
+   * @generated
+   */
+  logical_and_expression_linha getLogical_and_expression_linha();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.logical_and_expression_linha#getLogical_and_expression_linha <em>Logical and expression linha</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Logical and expression linha</em>' containment reference.
+   * @see #getLogical_and_expression_linha()
+   * @generated
+   */
+  void setLogical_and_expression_linha(logical_and_expression_linha value);
+
 } // logical_and_expression_linha

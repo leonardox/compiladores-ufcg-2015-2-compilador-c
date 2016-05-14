@@ -10,6 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>inclusive or expression linha</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.inclusive_or_expression_linha#getExclusive_or_expression <em>Exclusive or expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.inclusive_or_expression_linha#getInclusive_or_expression_linha <em>Inclusive or expression linha</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getinclusive_or_expression_linha()
  * @model
@@ -17,4 +24,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface inclusive_or_expression_linha extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Exclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Exclusive or expression</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Exclusive or expression</em>' containment reference.
+   * @see #setExclusive_or_expression(exclusive_or_expression)
+   * @see org.xtext.example.ansic.AnsicPackage#getinclusive_or_expression_linha_Exclusive_or_expression()
+   * @model containment="true"
+   * @generated
+   */
+  exclusive_or_expression getExclusive_or_expression();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.inclusive_or_expression_linha#getExclusive_or_expression <em>Exclusive or expression</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Exclusive or expression</em>' containment reference.
+   * @see #getExclusive_or_expression()
+   * @generated
+   */
+  void setExclusive_or_expression(exclusive_or_expression value);
+
+  /**
+   * Returns the value of the '<em><b>Inclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Inclusive or expression linha</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Inclusive or expression linha</em>' containment reference.
+   * @see #setInclusive_or_expression_linha(inclusive_or_expression_linha)
+   * @see org.xtext.example.ansic.AnsicPackage#getinclusive_or_expression_linha_Inclusive_or_expression_linha()
+   * @model containment="true"
+   * @generated
+   */
+  inclusive_or_expression_linha getInclusive_or_expression_linha();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.inclusive_or_expression_linha#getInclusive_or_expression_linha <em>Inclusive or expression linha</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Inclusive or expression linha</em>' containment reference.
+   * @see #getInclusive_or_expression_linha()
+   * @generated
+   */
+  void setInclusive_or_expression_linha(inclusive_or_expression_linha value);
+
 } // inclusive_or_expression_linha

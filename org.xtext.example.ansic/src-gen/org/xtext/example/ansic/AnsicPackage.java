@@ -2483,13 +2483,31 @@ public interface AnsicPackage extends EPackage
   int MULTIPLICATIVE_EXPRESSION_LINHA = 66;
 
   /**
+   * The feature id for the '<em><b>Multiplicative expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA__MULTIPLICATIVE_EXPRESSION_COMPLEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Multiplicative expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATIVE_EXPRESSION_LINHA__MULTIPLICATIVE_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>multiplicative expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.multiplicative_expression_complementImpl <em>multiplicative expression complement</em>}' class.
@@ -2502,13 +2520,13 @@ public interface AnsicPackage extends EPackage
   int MULTIPLICATIVE_EXPRESSION_COMPLEMENT = 67;
 
   /**
-   * The feature id for the '<em><b>Cast expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT__CAST_EXPRESSION = 0;
+  int MULTIPLICATIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION = 0;
 
   /**
    * The number of structural features of the '<em>multiplicative expression complement</em>' class.
@@ -2567,13 +2585,31 @@ public interface AnsicPackage extends EPackage
   int ADDITIVE_EXPRESSION_LINHA = 69;
 
   /**
+   * The feature id for the '<em><b>Additive expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_LINHA__ADDITIVE_EXPRESSION_COMPLEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Additive expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITIVE_EXPRESSION_LINHA__ADDITIVE_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>additive expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.additive_expression_complementImpl <em>additive expression complement</em>}' class.
@@ -2586,13 +2622,13 @@ public interface AnsicPackage extends EPackage
   int ADDITIVE_EXPRESSION_COMPLEMENT = 70;
 
   /**
-   * The feature id for the '<em><b>Multiplicative expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION = 0;
+  int ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION = 0;
 
   /**
    * The number of structural features of the '<em>additive expression complement</em>' class.
@@ -2651,13 +2687,31 @@ public interface AnsicPackage extends EPackage
   int SHIFT_EXPRESSION_LINHA = 72;
 
   /**
+   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Shift expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHIFT_EXPRESSION_LINHA__SHIFT_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>shift expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SHIFT_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int SHIFT_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.shift_expression_complementImpl <em>shift expression complement</em>}' class.
@@ -2735,13 +2789,31 @@ public interface AnsicPackage extends EPackage
   int RELATIONAL_EXPRESSION_LINHA = 75;
 
   /**
+   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Relational expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>relational expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.relational_expression_complementImpl <em>relational expression complement</em>}' class.
@@ -2819,13 +2891,31 @@ public interface AnsicPackage extends EPackage
   int EQUALITY_EXPRESSION_LINHA = 78;
 
   /**
+   * The feature id for the '<em><b>Equality expression complement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_LINHA__EQUALITY_EXPRESSION_COMPLEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Equality expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUALITY_EXPRESSION_LINHA__EQUALITY_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>equality expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.equality_expression_complementImpl <em>equality expression complement</em>}' class.
@@ -3336,13 +3426,31 @@ public interface AnsicPackage extends EPackage
   int AND_EXPRESSION_LINHA = 91;
 
   /**
+   * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_LINHA__EQUALITY_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>And expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION_LINHA__AND_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>and expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int AND_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.exclusive_or_expressionImpl <em>exclusive or expression</em>}' class.
@@ -3392,13 +3500,31 @@ public interface AnsicPackage extends EPackage
   int EXCLUSIVE_OR_EXPRESSION_LINHA = 93;
 
   /**
+   * The feature id for the '<em><b>And expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA__AND_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Exclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXCLUSIVE_OR_EXPRESSION_LINHA__EXCLUSIVE_OR_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>exclusive or expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.inclusive_or_expressionImpl <em>inclusive or expression</em>}' class.
@@ -3448,13 +3574,31 @@ public interface AnsicPackage extends EPackage
   int INCLUSIVE_OR_EXPRESSION_LINHA = 95;
 
   /**
+   * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA__EXCLUSIVE_OR_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Inclusive or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUSIVE_OR_EXPRESSION_LINHA__INCLUSIVE_OR_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>inclusive or expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.logical_and_expressionImpl <em>logical and expression</em>}' class.
@@ -3504,13 +3648,31 @@ public interface AnsicPackage extends EPackage
   int LOGICAL_AND_EXPRESSION_LINHA = 97;
 
   /**
+   * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA__INCLUSIVE_OR_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Logical and expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_AND_EXPRESSION_LINHA__LOGICAL_AND_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>logical and expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.logical_or_expressionImpl <em>logical or expression</em>}' class.
@@ -3560,13 +3722,31 @@ public interface AnsicPackage extends EPackage
   int LOGICAL_OR_EXPRESSION_LINHA = 99;
 
   /**
+   * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA__LOGICAL_AND_EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Logical or expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_OR_EXPRESSION_LINHA__LOGICAL_OR_EXPRESSION_LINHA = 1;
+
+  /**
    * The number of structural features of the '<em>logical or expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.conditional_expressionImpl <em>conditional expression</em>}' class.
@@ -3616,13 +3796,40 @@ public interface AnsicPackage extends EPackage
   int CONDITIONAL_EXPRESSION_LINHA = 101;
 
   /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA__EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA__CONDITIONAL_EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Conditional expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_LINHA__CONDITIONAL_EXPRESSION_LINHA = 2;
+
+  /**
    * The number of structural features of the '<em>conditional expression linha</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT = 0;
+  int CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.assignment_expressionImpl <em>assignment expression</em>}' class.
@@ -4641,422 +4848,6 @@ public interface AnsicPackage extends EPackage
   int PLUS_PLUS_FEATURE_COUNT = UNARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl <em>Multiplicative Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getMultiplicativeExpressionLinhaAction()
-   * @generated
-   */
-  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION = 128;
-
-  /**
-   * The feature id for the '<em><b>Multiplicative expression complement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_COMPLEMENT = MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Multiplicative expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_LINHA = MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Multiplicative Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATIVE_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = MULTIPLICATIVE_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl <em>Additive Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAdditiveExpressionLinhaAction()
-   * @generated
-   */
-  int ADDITIVE_EXPRESSION_LINHA_ACTION = 129;
-
-  /**
-   * The feature id for the '<em><b>Additive expression complement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_COMPLEMENT = ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Additive expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_LINHA = ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Additive Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITIVE_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = ADDITIVE_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl <em>Shift Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getShiftExpressionLinhaAction()
-   * @generated
-   */
-  int SHIFT_EXPRESSION_LINHA_ACTION = 130;
-
-  /**
-   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = SHIFT_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Shift expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_LINHA = SHIFT_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Shift Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SHIFT_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = SHIFT_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl <em>Relational Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getRelationalExpressionLinhaAction()
-   * @generated
-   */
-  int RELATIONAL_EXPRESSION_LINHA_ACTION = 131;
-
-  /**
-   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONAL_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Relational expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONAL_EXPRESSION_LINHA_ACTION__RELATIONAL_EXPRESSION_LINHA = RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Relational Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RELATIONAL_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = RELATIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl <em>Equality Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEqualityExpressionLinhaAction()
-   * @generated
-   */
-  int EQUALITY_EXPRESSION_LINHA_ACTION = 132;
-
-  /**
-   * The feature id for the '<em><b>Equality expression complement</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_COMPLEMENT = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Equality expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Equality Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EQUALITY_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = EQUALITY_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl <em>And Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAndExpressionLinhaAction()
-   * @generated
-   */
-  int AND_EXPRESSION_LINHA_ACTION = 133;
-
-  /**
-   * The feature id for the '<em><b>Equality expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION = AND_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>And expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION_LINHA_ACTION__AND_EXPRESSION_LINHA = AND_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>And Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = AND_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl <em>Exclusive Or Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExclusiveOrExpressionLinhaAction()
-   * @generated
-   */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 134;
-
-  /**
-   * The feature id for the '<em><b>And expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__AND_EXPRESSION = EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Exclusive or expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION_LINHA = EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Exclusive Or Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = EXCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl <em>Inclusive Or Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInclusiveOrExpressionLinhaAction()
-   * @generated
-   */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = 135;
-
-  /**
-   * The feature id for the '<em><b>Exclusive or expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION = INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Inclusive or expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION_LINHA = INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Inclusive Or Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INCLUSIVE_OR_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = INCLUSIVE_OR_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl <em>Logical And Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalAndExpressionLinhaAction()
-   * @generated
-   */
-  int LOGICAL_AND_EXPRESSION_LINHA_ACTION = 136;
-
-  /**
-   * The feature id for the '<em><b>Inclusive or expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_AND_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION = LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Logical and expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_AND_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION_LINHA = LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Logical And Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_AND_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = LOGICAL_AND_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl <em>Logical Or Expression Linha Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalOrExpressionLinhaAction()
-   * @generated
-   */
-  int LOGICAL_OR_EXPRESSION_LINHA_ACTION = 137;
-
-  /**
-   * The feature id for the '<em><b>Logical and expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION = LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Logical or expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_OR_EXPRESSION_LINHA = LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Logical Or Expression Linha Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_OR_EXPRESSION_LINHA_ACTION_FEATURE_COUNT = LOGICAL_OR_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl <em>Conditional Expression Linha Acction</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl
-   * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getConditionalExpressionLinhaAcction()
-   * @generated
-   */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION = 138;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION__EXPRESSION = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Conditional expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Conditional expression linha</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION_LINHA = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Conditional Expression Linha Acction</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITIONAL_EXPRESSION_LINHA_ACCTION_FEATURE_COUNT = CONDITIONAL_EXPRESSION_LINHA_FEATURE_COUNT + 3;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.ExpressionLinhaActionImpl <em>Expression Linha Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5064,7 +4855,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExpressionLinhaAction()
    * @generated
    */
-  int EXPRESSION_LINHA_ACTION = 139;
+  int EXPRESSION_LINHA_ACTION = 128;
 
   /**
    * The feature id for the '<em><b>Assignment expression</b></em>' containment reference.
@@ -5101,7 +4892,7 @@ public interface AnsicPackage extends EPackage
    * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInitDecclaratorListLinhaAction()
    * @generated
    */
-  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 140;
+  int INIT_DECCLARATOR_LIST_LINHA_ACTION = 129;
 
   /**
    * The feature id for the '<em><b>Init declarator</b></em>' containment reference.
@@ -7188,6 +6979,28 @@ public interface AnsicPackage extends EPackage
   EClass getmultiplicative_expression_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression_linha#getMultiplicative_expression_complement <em>Multiplicative expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression complement</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression_linha#getMultiplicative_expression_complement()
+   * @see #getmultiplicative_expression_linha()
+   * @generated
+   */
+  EReference getmultiplicative_expression_linha_Multiplicative_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression_linha#getMultiplicative_expression_linha <em>Multiplicative expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Multiplicative expression linha</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression_linha#getMultiplicative_expression_linha()
+   * @see #getmultiplicative_expression_linha()
+   * @generated
+   */
+  EReference getmultiplicative_expression_linha_Multiplicative_expression_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.multiplicative_expression_complement <em>multiplicative expression complement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7198,15 +7011,15 @@ public interface AnsicPackage extends EPackage
   EClass getmultiplicative_expression_complement();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression_complement#getCast_expression <em>Cast expression</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.multiplicative_expression_complement#getAssignment_expression <em>Assignment expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Cast expression</em>'.
-   * @see org.xtext.example.ansic.multiplicative_expression_complement#getCast_expression()
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.multiplicative_expression_complement#getAssignment_expression()
    * @see #getmultiplicative_expression_complement()
    * @generated
    */
-  EReference getmultiplicative_expression_complement_Cast_expression();
+  EReference getmultiplicative_expression_complement_Assignment_expression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.additive_expression <em>additive expression</em>}'.
@@ -7251,6 +7064,28 @@ public interface AnsicPackage extends EPackage
   EClass getadditive_expression_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression_linha#getAdditive_expression_complement <em>Additive expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression complement</em>'.
+   * @see org.xtext.example.ansic.additive_expression_linha#getAdditive_expression_complement()
+   * @see #getadditive_expression_linha()
+   * @generated
+   */
+  EReference getadditive_expression_linha_Additive_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression_linha#getAdditive_expression_linha <em>Additive expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Additive expression linha</em>'.
+   * @see org.xtext.example.ansic.additive_expression_linha#getAdditive_expression_linha()
+   * @see #getadditive_expression_linha()
+   * @generated
+   */
+  EReference getadditive_expression_linha_Additive_expression_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.additive_expression_complement <em>additive expression complement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7261,15 +7096,15 @@ public interface AnsicPackage extends EPackage
   EClass getadditive_expression_complement();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression_complement#getMultiplicative_expression <em>Multiplicative expression</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.additive_expression_complement#getAssignment_expression <em>Assignment expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Multiplicative expression</em>'.
-   * @see org.xtext.example.ansic.additive_expression_complement#getMultiplicative_expression()
+   * @return the meta object for the containment reference '<em>Assignment expression</em>'.
+   * @see org.xtext.example.ansic.additive_expression_complement#getAssignment_expression()
    * @see #getadditive_expression_complement()
    * @generated
    */
-  EReference getadditive_expression_complement_Multiplicative_expression();
+  EReference getadditive_expression_complement_Assignment_expression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.shift_expression <em>shift expression</em>}'.
@@ -7312,6 +7147,28 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getshift_expression_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.shift_expression_linha#getShift_expression_complement <em>Shift expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
+   * @see org.xtext.example.ansic.shift_expression_linha#getShift_expression_complement()
+   * @see #getshift_expression_linha()
+   * @generated
+   */
+  EReference getshift_expression_linha_Shift_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.shift_expression_linha#getShift_expression_linha <em>Shift expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression linha</em>'.
+   * @see org.xtext.example.ansic.shift_expression_linha#getShift_expression_linha()
+   * @see #getshift_expression_linha()
+   * @generated
+   */
+  EReference getshift_expression_linha_Shift_expression_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.shift_expression_complement <em>shift expression complement</em>}'.
@@ -7377,6 +7234,28 @@ public interface AnsicPackage extends EPackage
   EClass getrelational_expression_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression_linha#getShift_expression_complement <em>Shift expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
+   * @see org.xtext.example.ansic.relational_expression_linha#getShift_expression_complement()
+   * @see #getrelational_expression_linha()
+   * @generated
+   */
+  EReference getrelational_expression_linha_Shift_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression_linha#getRelational_expression_linha <em>Relational expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Relational expression linha</em>'.
+   * @see org.xtext.example.ansic.relational_expression_linha#getRelational_expression_linha()
+   * @see #getrelational_expression_linha()
+   * @generated
+   */
+  EReference getrelational_expression_linha_Relational_expression_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.relational_expression_complement <em>relational expression complement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7438,6 +7317,28 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getequality_expression_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.equality_expression_linha#getEquality_expression_complement <em>Equality expression complement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression complement</em>'.
+   * @see org.xtext.example.ansic.equality_expression_linha#getEquality_expression_complement()
+   * @see #getequality_expression_linha()
+   * @generated
+   */
+  EReference getequality_expression_linha_Equality_expression_complement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.equality_expression_linha#getEquality_expression_linha <em>Equality expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression linha</em>'.
+   * @see org.xtext.example.ansic.equality_expression_linha#getEquality_expression_linha()
+   * @see #getequality_expression_linha()
+   * @generated
+   */
+  EReference getequality_expression_linha_Equality_expression_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.equality_expression_complement <em>equality expression complement</em>}'.
@@ -7900,6 +7801,28 @@ public interface AnsicPackage extends EPackage
   EClass getand_expression_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.and_expression_linha#getEquality_expression <em>Equality expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Equality expression</em>'.
+   * @see org.xtext.example.ansic.and_expression_linha#getEquality_expression()
+   * @see #getand_expression_linha()
+   * @generated
+   */
+  EReference getand_expression_linha_Equality_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.and_expression_linha#getAnd_expression_linha <em>And expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And expression linha</em>'.
+   * @see org.xtext.example.ansic.and_expression_linha#getAnd_expression_linha()
+   * @see #getand_expression_linha()
+   * @generated
+   */
+  EReference getand_expression_linha_And_expression_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.exclusive_or_expression <em>exclusive or expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7940,6 +7863,28 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getexclusive_or_expression_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.exclusive_or_expression_linha#getAnd_expression <em>And expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>And expression</em>'.
+   * @see org.xtext.example.ansic.exclusive_or_expression_linha#getAnd_expression()
+   * @see #getexclusive_or_expression_linha()
+   * @generated
+   */
+  EReference getexclusive_or_expression_linha_And_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.exclusive_or_expression_linha#getExclusive_or_expression_linha <em>Exclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.exclusive_or_expression_linha#getExclusive_or_expression_linha()
+   * @see #getexclusive_or_expression_linha()
+   * @generated
+   */
+  EReference getexclusive_or_expression_linha_Exclusive_or_expression_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.inclusive_or_expression <em>inclusive or expression</em>}'.
@@ -7984,6 +7929,28 @@ public interface AnsicPackage extends EPackage
   EClass getinclusive_or_expression_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.inclusive_or_expression_linha#getExclusive_or_expression <em>Exclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exclusive or expression</em>'.
+   * @see org.xtext.example.ansic.inclusive_or_expression_linha#getExclusive_or_expression()
+   * @see #getinclusive_or_expression_linha()
+   * @generated
+   */
+  EReference getinclusive_or_expression_linha_Exclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.inclusive_or_expression_linha#getInclusive_or_expression_linha <em>Inclusive or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inclusive or expression linha</em>'.
+   * @see org.xtext.example.ansic.inclusive_or_expression_linha#getInclusive_or_expression_linha()
+   * @see #getinclusive_or_expression_linha()
+   * @generated
+   */
+  EReference getinclusive_or_expression_linha_Inclusive_or_expression_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.logical_and_expression <em>logical and expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8024,6 +7991,28 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getlogical_and_expression_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_and_expression_linha#getInclusive_or_expression <em>Inclusive or expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inclusive or expression</em>'.
+   * @see org.xtext.example.ansic.logical_and_expression_linha#getInclusive_or_expression()
+   * @see #getlogical_and_expression_linha()
+   * @generated
+   */
+  EReference getlogical_and_expression_linha_Inclusive_or_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_and_expression_linha#getLogical_and_expression_linha <em>Logical and expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical and expression linha</em>'.
+   * @see org.xtext.example.ansic.logical_and_expression_linha#getLogical_and_expression_linha()
+   * @see #getlogical_and_expression_linha()
+   * @generated
+   */
+  EReference getlogical_and_expression_linha_Logical_and_expression_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.logical_or_expression <em>logical or expression</em>}'.
@@ -8068,6 +8057,28 @@ public interface AnsicPackage extends EPackage
   EClass getlogical_or_expression_linha();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_or_expression_linha#getLogical_and_expression <em>Logical and expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical and expression</em>'.
+   * @see org.xtext.example.ansic.logical_or_expression_linha#getLogical_and_expression()
+   * @see #getlogical_or_expression_linha()
+   * @generated
+   */
+  EReference getlogical_or_expression_linha_Logical_and_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.logical_or_expression_linha#getLogical_or_expression_linha <em>Logical or expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Logical or expression linha</em>'.
+   * @see org.xtext.example.ansic.logical_or_expression_linha#getLogical_or_expression_linha()
+   * @see #getlogical_or_expression_linha()
+   * @generated
+   */
+  EReference getlogical_or_expression_linha_Logical_or_expression_linha();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.conditional_expression <em>conditional expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8108,6 +8119,39 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EClass getconditional_expression_linha();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.conditional_expression_linha#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.ansic.conditional_expression_linha#getExpression()
+   * @see #getconditional_expression_linha()
+   * @generated
+   */
+  EReference getconditional_expression_linha_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.conditional_expression_linha#getConditional_expression <em>Conditional expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
+   * @see org.xtext.example.ansic.conditional_expression_linha#getConditional_expression()
+   * @see #getconditional_expression_linha()
+   * @generated
+   */
+  EReference getconditional_expression_linha_Conditional_expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.conditional_expression_linha#getConditional_expression_linha <em>Conditional expression linha</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Conditional expression linha</em>'.
+   * @see org.xtext.example.ansic.conditional_expression_linha#getConditional_expression_linha()
+   * @see #getconditional_expression_linha()
+   * @generated
+   */
+  EReference getconditional_expression_linha_Conditional_expression_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.assignment_expression <em>assignment expression</em>}'.
@@ -8896,369 +8940,6 @@ public interface AnsicPackage extends EPackage
    * @generated
    */
   EAttribute getPlusPlus_Plus();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction <em>Multiplicative Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Multiplicative Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction
-   * @generated
-   */
-  EClass getMultiplicativeExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_complement <em>Multiplicative expression complement</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Multiplicative expression complement</em>'.
-   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_complement()
-   * @see #getMultiplicativeExpressionLinhaAction()
-   * @generated
-   */
-  EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_linha <em>Multiplicative expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Multiplicative expression linha</em>'.
-   * @see org.xtext.example.ansic.MultiplicativeExpressionLinhaAction#getMultiplicative_expression_linha()
-   * @see #getMultiplicativeExpressionLinhaAction()
-   * @generated
-   */
-  EReference getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction <em>Additive Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Additive Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction
-   * @generated
-   */
-  EClass getAdditiveExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_complement <em>Additive expression complement</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Additive expression complement</em>'.
-   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_complement()
-   * @see #getAdditiveExpressionLinhaAction()
-   * @generated
-   */
-  EReference getAdditiveExpressionLinhaAction_Additive_expression_complement();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_linha <em>Additive expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Additive expression linha</em>'.
-   * @see org.xtext.example.ansic.AdditiveExpressionLinhaAction#getAdditive_expression_linha()
-   * @see #getAdditiveExpressionLinhaAction()
-   * @generated
-   */
-  EReference getAdditiveExpressionLinhaAction_Additive_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction <em>Shift Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Shift Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction
-   * @generated
-   */
-  EClass getShiftExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_complement <em>Shift expression complement</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
-   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_complement()
-   * @see #getShiftExpressionLinhaAction()
-   * @generated
-   */
-  EReference getShiftExpressionLinhaAction_Shift_expression_complement();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_linha <em>Shift expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Shift expression linha</em>'.
-   * @see org.xtext.example.ansic.ShiftExpressionLinhaAction#getShift_expression_linha()
-   * @see #getShiftExpressionLinhaAction()
-   * @generated
-   */
-  EReference getShiftExpressionLinhaAction_Shift_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction <em>Relational Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Relational Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction
-   * @generated
-   */
-  EClass getRelationalExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction#getShift_expression_complement <em>Shift expression complement</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
-   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction#getShift_expression_complement()
-   * @see #getRelationalExpressionLinhaAction()
-   * @generated
-   */
-  EReference getRelationalExpressionLinhaAction_Shift_expression_complement();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.RelationalExpressionLinhaAction#getRelational_expression_linha <em>Relational expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Relational expression linha</em>'.
-   * @see org.xtext.example.ansic.RelationalExpressionLinhaAction#getRelational_expression_linha()
-   * @see #getRelationalExpressionLinhaAction()
-   * @generated
-   */
-  EReference getRelationalExpressionLinhaAction_Relational_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction <em>Equality Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Equality Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction
-   * @generated
-   */
-  EClass getEqualityExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_complement <em>Equality expression complement</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Equality expression complement</em>'.
-   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_complement()
-   * @see #getEqualityExpressionLinhaAction()
-   * @generated
-   */
-  EReference getEqualityExpressionLinhaAction_Equality_expression_complement();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_linha <em>Equality expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Equality expression linha</em>'.
-   * @see org.xtext.example.ansic.EqualityExpressionLinhaAction#getEquality_expression_linha()
-   * @see #getEqualityExpressionLinhaAction()
-   * @generated
-   */
-  EReference getEqualityExpressionLinhaAction_Equality_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.AndExpressionLinhaAction <em>And Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>And Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.AndExpressionLinhaAction
-   * @generated
-   */
-  EClass getAndExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AndExpressionLinhaAction#getEquality_expression <em>Equality expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Equality expression</em>'.
-   * @see org.xtext.example.ansic.AndExpressionLinhaAction#getEquality_expression()
-   * @see #getAndExpressionLinhaAction()
-   * @generated
-   */
-  EReference getAndExpressionLinhaAction_Equality_expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.AndExpressionLinhaAction#getAnd_expression_linha <em>And expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>And expression linha</em>'.
-   * @see org.xtext.example.ansic.AndExpressionLinhaAction#getAnd_expression_linha()
-   * @see #getAndExpressionLinhaAction()
-   * @generated
-   */
-  EReference getAndExpressionLinhaAction_And_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction <em>Exclusive Or Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exclusive Or Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction
-   * @generated
-   */
-  EClass getExclusiveOrExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getAnd_expression <em>And expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>And expression</em>'.
-   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getAnd_expression()
-   * @see #getExclusiveOrExpressionLinhaAction()
-   * @generated
-   */
-  EReference getExclusiveOrExpressionLinhaAction_And_expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getExclusive_or_expression_linha <em>Exclusive or expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exclusive or expression linha</em>'.
-   * @see org.xtext.example.ansic.ExclusiveOrExpressionLinhaAction#getExclusive_or_expression_linha()
-   * @see #getExclusiveOrExpressionLinhaAction()
-   * @generated
-   */
-  EReference getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction <em>Inclusive Or Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Inclusive Or Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction
-   * @generated
-   */
-  EClass getInclusiveOrExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getExclusive_or_expression <em>Exclusive or expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exclusive or expression</em>'.
-   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getExclusive_or_expression()
-   * @see #getInclusiveOrExpressionLinhaAction()
-   * @generated
-   */
-  EReference getInclusiveOrExpressionLinhaAction_Exclusive_or_expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getInclusive_or_expression_linha <em>Inclusive or expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Inclusive or expression linha</em>'.
-   * @see org.xtext.example.ansic.InclusiveOrExpressionLinhaAction#getInclusive_or_expression_linha()
-   * @see #getInclusiveOrExpressionLinhaAction()
-   * @generated
-   */
-  EReference getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction <em>Logical And Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Logical And Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction
-   * @generated
-   */
-  EClass getLogicalAndExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getInclusive_or_expression <em>Inclusive or expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Inclusive or expression</em>'.
-   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getInclusive_or_expression()
-   * @see #getLogicalAndExpressionLinhaAction()
-   * @generated
-   */
-  EReference getLogicalAndExpressionLinhaAction_Inclusive_or_expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getLogical_and_expression_linha <em>Logical and expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Logical and expression linha</em>'.
-   * @see org.xtext.example.ansic.LogicalAndExpressionLinhaAction#getLogical_and_expression_linha()
-   * @see #getLogicalAndExpressionLinhaAction()
-   * @generated
-   */
-  EReference getLogicalAndExpressionLinhaAction_Logical_and_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction <em>Logical Or Expression Linha Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Logical Or Expression Linha Action</em>'.
-   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction
-   * @generated
-   */
-  EClass getLogicalOrExpressionLinhaAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_and_expression <em>Logical and expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Logical and expression</em>'.
-   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_and_expression()
-   * @see #getLogicalOrExpressionLinhaAction()
-   * @generated
-   */
-  EReference getLogicalOrExpressionLinhaAction_Logical_and_expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_or_expression_linha <em>Logical or expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Logical or expression linha</em>'.
-   * @see org.xtext.example.ansic.LogicalOrExpressionLinhaAction#getLogical_or_expression_linha()
-   * @see #getLogicalOrExpressionLinhaAction()
-   * @generated
-   */
-  EReference getLogicalOrExpressionLinhaAction_Logical_or_expression_linha();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction <em>Conditional Expression Linha Acction</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Conditional Expression Linha Acction</em>'.
-   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction
-   * @generated
-   */
-  EClass getConditionalExpressionLinhaAcction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getExpression()
-   * @see #getConditionalExpressionLinhaAcction()
-   * @generated
-   */
-  EReference getConditionalExpressionLinhaAcction_Expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression <em>Conditional expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Conditional expression</em>'.
-   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression()
-   * @see #getConditionalExpressionLinhaAcction()
-   * @generated
-   */
-  EReference getConditionalExpressionLinhaAcction_Conditional_expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression_linha <em>Conditional expression linha</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Conditional expression linha</em>'.
-   * @see org.xtext.example.ansic.ConditionalExpressionLinhaAcction#getConditional_expression_linha()
-   * @see #getConditionalExpressionLinhaAcction()
-   * @generated
-   */
-  EReference getConditionalExpressionLinhaAcction_Conditional_expression_linha();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.ansic.ExpressionLinhaAction <em>Expression Linha Action</em>}'.
@@ -11026,6 +10707,22 @@ public interface AnsicPackage extends EPackage
     EClass MULTIPLICATIVE_EXPRESSION_LINHA = eINSTANCE.getmultiplicative_expression_linha();
 
     /**
+     * The meta object literal for the '<em><b>Multiplicative expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION_LINHA__MULTIPLICATIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getmultiplicative_expression_linha_Multiplicative_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Multiplicative expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATIVE_EXPRESSION_LINHA__MULTIPLICATIVE_EXPRESSION_LINHA = eINSTANCE.getmultiplicative_expression_linha_Multiplicative_expression_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.multiplicative_expression_complementImpl <em>multiplicative expression complement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11036,12 +10733,12 @@ public interface AnsicPackage extends EPackage
     EClass MULTIPLICATIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getmultiplicative_expression_complement();
 
     /**
-     * The meta object literal for the '<em><b>Cast expression</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MULTIPLICATIVE_EXPRESSION_COMPLEMENT__CAST_EXPRESSION = eINSTANCE.getmultiplicative_expression_complement_Cast_expression();
+    EReference MULTIPLICATIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION = eINSTANCE.getmultiplicative_expression_complement_Assignment_expression();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.additive_expressionImpl <em>additive expression</em>}' class.
@@ -11080,6 +10777,22 @@ public interface AnsicPackage extends EPackage
     EClass ADDITIVE_EXPRESSION_LINHA = eINSTANCE.getadditive_expression_linha();
 
     /**
+     * The meta object literal for the '<em><b>Additive expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION_LINHA__ADDITIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getadditive_expression_linha_Additive_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Additive expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITIVE_EXPRESSION_LINHA__ADDITIVE_EXPRESSION_LINHA = eINSTANCE.getadditive_expression_linha_Additive_expression_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.additive_expression_complementImpl <em>additive expression complement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11090,12 +10803,12 @@ public interface AnsicPackage extends EPackage
     EClass ADDITIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getadditive_expression_complement();
 
     /**
-     * The meta object literal for the '<em><b>Multiplicative expression</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Assignment expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION = eINSTANCE.getadditive_expression_complement_Multiplicative_expression();
+    EReference ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION = eINSTANCE.getadditive_expression_complement_Assignment_expression();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.shift_expressionImpl <em>shift expression</em>}' class.
@@ -11132,6 +10845,22 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass SHIFT_EXPRESSION_LINHA = eINSTANCE.getshift_expression_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getshift_expression_linha_Shift_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Shift expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHIFT_EXPRESSION_LINHA__SHIFT_EXPRESSION_LINHA = eINSTANCE.getshift_expression_linha_Shift_expression_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.shift_expression_complementImpl <em>shift expression complement</em>}' class.
@@ -11188,6 +10917,22 @@ public interface AnsicPackage extends EPackage
     EClass RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getrelational_expression_linha();
 
     /**
+     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getrelational_expression_linha_Shift_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Relational expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getrelational_expression_linha_Relational_expression_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.relational_expression_complementImpl <em>relational expression complement</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11240,6 +10985,22 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass EQUALITY_EXPRESSION_LINHA = eINSTANCE.getequality_expression_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression complement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION_LINHA__EQUALITY_EXPRESSION_COMPLEMENT = eINSTANCE.getequality_expression_linha_Equality_expression_complement();
+
+    /**
+     * The meta object literal for the '<em><b>Equality expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUALITY_EXPRESSION_LINHA__EQUALITY_EXPRESSION_LINHA = eINSTANCE.getequality_expression_linha_Equality_expression_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.equality_expression_complementImpl <em>equality expression complement</em>}' class.
@@ -11612,6 +11373,22 @@ public interface AnsicPackage extends EPackage
     EClass AND_EXPRESSION_LINHA = eINSTANCE.getand_expression_linha();
 
     /**
+     * The meta object literal for the '<em><b>Equality expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION_LINHA__EQUALITY_EXPRESSION = eINSTANCE.getand_expression_linha_Equality_expression();
+
+    /**
+     * The meta object literal for the '<em><b>And expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION_LINHA__AND_EXPRESSION_LINHA = eINSTANCE.getand_expression_linha_And_expression_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.exclusive_or_expressionImpl <em>exclusive or expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11646,6 +11423,22 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass EXCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getexclusive_or_expression_linha();
+
+    /**
+     * The meta object literal for the '<em><b>And expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXCLUSIVE_OR_EXPRESSION_LINHA__AND_EXPRESSION = eINSTANCE.getexclusive_or_expression_linha_And_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Exclusive or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXCLUSIVE_OR_EXPRESSION_LINHA__EXCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getexclusive_or_expression_linha_Exclusive_or_expression_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.inclusive_or_expressionImpl <em>inclusive or expression</em>}' class.
@@ -11684,6 +11477,22 @@ public interface AnsicPackage extends EPackage
     EClass INCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getinclusive_or_expression_linha();
 
     /**
+     * The meta object literal for the '<em><b>Exclusive or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INCLUSIVE_OR_EXPRESSION_LINHA__EXCLUSIVE_OR_EXPRESSION = eINSTANCE.getinclusive_or_expression_linha_Exclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusive or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INCLUSIVE_OR_EXPRESSION_LINHA__INCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getinclusive_or_expression_linha_Inclusive_or_expression_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.logical_and_expressionImpl <em>logical and expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11718,6 +11527,22 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass LOGICAL_AND_EXPRESSION_LINHA = eINSTANCE.getlogical_and_expression_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Inclusive or expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_AND_EXPRESSION_LINHA__INCLUSIVE_OR_EXPRESSION = eINSTANCE.getlogical_and_expression_linha_Inclusive_or_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical and expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_AND_EXPRESSION_LINHA__LOGICAL_AND_EXPRESSION_LINHA = eINSTANCE.getlogical_and_expression_linha_Logical_and_expression_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.logical_or_expressionImpl <em>logical or expression</em>}' class.
@@ -11756,6 +11581,22 @@ public interface AnsicPackage extends EPackage
     EClass LOGICAL_OR_EXPRESSION_LINHA = eINSTANCE.getlogical_or_expression_linha();
 
     /**
+     * The meta object literal for the '<em><b>Logical and expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_OR_EXPRESSION_LINHA__LOGICAL_AND_EXPRESSION = eINSTANCE.getlogical_or_expression_linha_Logical_and_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Logical or expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_OR_EXPRESSION_LINHA__LOGICAL_OR_EXPRESSION_LINHA = eINSTANCE.getlogical_or_expression_linha_Logical_or_expression_linha();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.conditional_expressionImpl <em>conditional expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -11790,6 +11631,30 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EClass CONDITIONAL_EXPRESSION_LINHA = eINSTANCE.getconditional_expression_linha();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION_LINHA__EXPRESSION = eINSTANCE.getconditional_expression_linha_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION_LINHA__CONDITIONAL_EXPRESSION = eINSTANCE.getconditional_expression_linha_Conditional_expression();
+
+    /**
+     * The meta object literal for the '<em><b>Conditional expression linha</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION_LINHA__CONDITIONAL_EXPRESSION_LINHA = eINSTANCE.getconditional_expression_linha_Conditional_expression_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.assignment_expressionImpl <em>assignment expression</em>}' class.
@@ -12434,300 +12299,6 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EAttribute PLUS_PLUS__PLUS = eINSTANCE.getPlusPlus_Plus();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl <em>Multiplicative Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.MultiplicativeExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getMultiplicativeExpressionLinhaAction()
-     * @generated
-     */
-    EClass MULTIPLICATIVE_EXPRESSION_LINHA_ACTION = eINSTANCE.getMultiplicativeExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Multiplicative expression complement</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getMultiplicativeExpressionLinhaAction_Multiplicative_expression_complement();
-
-    /**
-     * The meta object literal for the '<em><b>Multiplicative expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MULTIPLICATIVE_EXPRESSION_LINHA_ACTION__MULTIPLICATIVE_EXPRESSION_LINHA = eINSTANCE.getMultiplicativeExpressionLinhaAction_Multiplicative_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl <em>Additive Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.AdditiveExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAdditiveExpressionLinhaAction()
-     * @generated
-     */
-    EClass ADDITIVE_EXPRESSION_LINHA_ACTION = eINSTANCE.getAdditiveExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Additive expression complement</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_COMPLEMENT = eINSTANCE.getAdditiveExpressionLinhaAction_Additive_expression_complement();
-
-    /**
-     * The meta object literal for the '<em><b>Additive expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ADDITIVE_EXPRESSION_LINHA_ACTION__ADDITIVE_EXPRESSION_LINHA = eINSTANCE.getAdditiveExpressionLinhaAction_Additive_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl <em>Shift Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.ShiftExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getShiftExpressionLinhaAction()
-     * @generated
-     */
-    EClass SHIFT_EXPRESSION_LINHA_ACTION = eINSTANCE.getShiftExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getShiftExpressionLinhaAction_Shift_expression_complement();
-
-    /**
-     * The meta object literal for the '<em><b>Shift expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SHIFT_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_LINHA = eINSTANCE.getShiftExpressionLinhaAction_Shift_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl <em>Relational Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.RelationalExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getRelationalExpressionLinhaAction()
-     * @generated
-     */
-    EClass RELATIONAL_EXPRESSION_LINHA_ACTION = eINSTANCE.getRelationalExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RELATIONAL_EXPRESSION_LINHA_ACTION__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getRelationalExpressionLinhaAction_Shift_expression_complement();
-
-    /**
-     * The meta object literal for the '<em><b>Relational expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RELATIONAL_EXPRESSION_LINHA_ACTION__RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getRelationalExpressionLinhaAction_Relational_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl <em>Equality Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.EqualityExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getEqualityExpressionLinhaAction()
-     * @generated
-     */
-    EClass EQUALITY_EXPRESSION_LINHA_ACTION = eINSTANCE.getEqualityExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Equality expression complement</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_COMPLEMENT = eINSTANCE.getEqualityExpressionLinhaAction_Equality_expression_complement();
-
-    /**
-     * The meta object literal for the '<em><b>Equality expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EQUALITY_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION_LINHA = eINSTANCE.getEqualityExpressionLinhaAction_Equality_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl <em>And Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.AndExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getAndExpressionLinhaAction()
-     * @generated
-     */
-    EClass AND_EXPRESSION_LINHA_ACTION = eINSTANCE.getAndExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Equality expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference AND_EXPRESSION_LINHA_ACTION__EQUALITY_EXPRESSION = eINSTANCE.getAndExpressionLinhaAction_Equality_expression();
-
-    /**
-     * The meta object literal for the '<em><b>And expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference AND_EXPRESSION_LINHA_ACTION__AND_EXPRESSION_LINHA = eINSTANCE.getAndExpressionLinhaAction_And_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl <em>Exclusive Or Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.ExclusiveOrExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getExclusiveOrExpressionLinhaAction()
-     * @generated
-     */
-    EClass EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION = eINSTANCE.getExclusiveOrExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>And expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__AND_EXPRESSION = eINSTANCE.getExclusiveOrExpressionLinhaAction_And_expression();
-
-    /**
-     * The meta object literal for the '<em><b>Exclusive or expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getExclusiveOrExpressionLinhaAction_Exclusive_or_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl <em>Inclusive Or Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.InclusiveOrExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getInclusiveOrExpressionLinhaAction()
-     * @generated
-     */
-    EClass INCLUSIVE_OR_EXPRESSION_LINHA_ACTION = eINSTANCE.getInclusiveOrExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Exclusive or expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__EXCLUSIVE_OR_EXPRESSION = eINSTANCE.getInclusiveOrExpressionLinhaAction_Exclusive_or_expression();
-
-    /**
-     * The meta object literal for the '<em><b>Inclusive or expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INCLUSIVE_OR_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION_LINHA = eINSTANCE.getInclusiveOrExpressionLinhaAction_Inclusive_or_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl <em>Logical And Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.LogicalAndExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalAndExpressionLinhaAction()
-     * @generated
-     */
-    EClass LOGICAL_AND_EXPRESSION_LINHA_ACTION = eINSTANCE.getLogicalAndExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Inclusive or expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LOGICAL_AND_EXPRESSION_LINHA_ACTION__INCLUSIVE_OR_EXPRESSION = eINSTANCE.getLogicalAndExpressionLinhaAction_Inclusive_or_expression();
-
-    /**
-     * The meta object literal for the '<em><b>Logical and expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LOGICAL_AND_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION_LINHA = eINSTANCE.getLogicalAndExpressionLinhaAction_Logical_and_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl <em>Logical Or Expression Linha Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.LogicalOrExpressionLinhaActionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getLogicalOrExpressionLinhaAction()
-     * @generated
-     */
-    EClass LOGICAL_OR_EXPRESSION_LINHA_ACTION = eINSTANCE.getLogicalOrExpressionLinhaAction();
-
-    /**
-     * The meta object literal for the '<em><b>Logical and expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_AND_EXPRESSION = eINSTANCE.getLogicalOrExpressionLinhaAction_Logical_and_expression();
-
-    /**
-     * The meta object literal for the '<em><b>Logical or expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LOGICAL_OR_EXPRESSION_LINHA_ACTION__LOGICAL_OR_EXPRESSION_LINHA = eINSTANCE.getLogicalOrExpressionLinhaAction_Logical_or_expression_linha();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl <em>Conditional Expression Linha Acction</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.ansic.impl.ConditionalExpressionLinhaAcctionImpl
-     * @see org.xtext.example.ansic.impl.AnsicPackageImpl#getConditionalExpressionLinhaAcction()
-     * @generated
-     */
-    EClass CONDITIONAL_EXPRESSION_LINHA_ACCTION = eINSTANCE.getConditionalExpressionLinhaAcction();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITIONAL_EXPRESSION_LINHA_ACCTION__EXPRESSION = eINSTANCE.getConditionalExpressionLinhaAcction_Expression();
-
-    /**
-     * The meta object literal for the '<em><b>Conditional expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION = eINSTANCE.getConditionalExpressionLinhaAcction_Conditional_expression();
-
-    /**
-     * The meta object literal for the '<em><b>Conditional expression linha</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITIONAL_EXPRESSION_LINHA_ACCTION__CONDITIONAL_EXPRESSION_LINHA = eINSTANCE.getConditionalExpressionLinhaAcction_Conditional_expression_linha();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.ansic.impl.ExpressionLinhaActionImpl <em>Expression Linha Action</em>}' class.

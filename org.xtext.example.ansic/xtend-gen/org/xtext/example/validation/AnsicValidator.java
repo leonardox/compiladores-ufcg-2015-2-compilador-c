@@ -18,12 +18,16 @@ import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.DomainModel;
 import org.xtext.example.ansic.PostFixEmpryParams;
 import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.additive_expression_complement;
+import org.xtext.example.ansic.additive_expression_linha;
 import org.xtext.example.ansic.and_expression;
+import org.xtext.example.ansic.and_expression_linha;
 import org.xtext.example.ansic.argument_expression_list;
 import org.xtext.example.ansic.assignment_expression;
 import org.xtext.example.ansic.cast_expression;
 import org.xtext.example.ansic.compound_statement;
 import org.xtext.example.ansic.conditional_expression;
+import org.xtext.example.ansic.conditional_expression_linha;
 import org.xtext.example.ansic.constant;
 import org.xtext.example.ansic.declaration;
 import org.xtext.example.ansic.declaration_specifiers;
@@ -33,15 +37,20 @@ import org.xtext.example.ansic.direct_declarator_complemento;
 import org.xtext.example.ansic.direct_declarator_linha;
 import org.xtext.example.ansic.enum_specifier;
 import org.xtext.example.ansic.equality_expression;
+import org.xtext.example.ansic.equality_expression_linha;
 import org.xtext.example.ansic.exclusive_or_expression;
+import org.xtext.example.ansic.exclusive_or_expression_linha;
 import org.xtext.example.ansic.expression;
 import org.xtext.example.ansic.function_definition;
 import org.xtext.example.ansic.inclusive_or_expression;
+import org.xtext.example.ansic.inclusive_or_expression_linha;
 import org.xtext.example.ansic.init_declarator;
 import org.xtext.example.ansic.init_declarator_list;
 import org.xtext.example.ansic.initializer;
 import org.xtext.example.ansic.logical_and_expression;
+import org.xtext.example.ansic.logical_and_expression_linha;
 import org.xtext.example.ansic.logical_or_expression;
+import org.xtext.example.ansic.logical_or_expression_linha;
 import org.xtext.example.ansic.multiplicative_expression;
 import org.xtext.example.ansic.parameter_declaration;
 import org.xtext.example.ansic.parameter_lista;
@@ -51,6 +60,7 @@ import org.xtext.example.ansic.postfix_expression_complement;
 import org.xtext.example.ansic.postfix_expression_linha;
 import org.xtext.example.ansic.primary_expression;
 import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.relational_expression_linha;
 import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.shift_expression;
 import org.xtext.example.ansic.statement;
@@ -65,6 +75,14 @@ import org.xtext.example.validation.AbstractAnsicValidator;
  */
 @SuppressWarnings("all")
 public class AnsicValidator extends AbstractAnsicValidator {
+  public enum ExpRetType {
+    NUMERIC,
+    
+    CHAR,
+    
+    BOOL;
+  }
+  
   public static class Function {
     public int param_number = 0;
     
@@ -181,6 +199,178 @@ public class AnsicValidator extends AbstractAnsicValidator {
       AnsicValidator.Function func = this.functions.get(name);
       if ((func.param_number != 0)) {
         this.error("Numero de parametros incompativeis", 
+          null);
+      }
+    }
+  }
+  
+  public primary_expression primaryExpFromAssigExp(final assignment_expression exp) {
+    conditional_expression _conditional_expression = exp.getConditional_expression();
+    logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
+    logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
+    inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+    exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+    and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+    equality_expression _equality_expression = _and_expression.getEquality_expression();
+    relational_expression _relational_expression = _equality_expression.getRelational_expression();
+    shift_expression _shift_expression = _relational_expression.getShift_expression();
+    additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+    multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+    cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+    unary_expression _unary_expression = _cast_expression.getUnary_expression();
+    postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+    primary_expression ret = _postfix_expression.getPrimary_expression();
+    return ret;
+  }
+  
+  public Object t() {
+    if (true) {
+      return Integer.valueOf(3);
+    } else {
+      return "oia";
+    }
+  }
+  
+  public AnsicValidator.ExpRetType getExpType(final assignment_expression exp) {
+    conditional_expression current = exp.getConditional_expression();
+    conditional_expression_linha _conditional_expression_linha = current.getConditional_expression_linha();
+    boolean _notEquals = (!Objects.equal(_conditional_expression_linha, null));
+    if (_notEquals) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    logical_or_expression current2 = current.getLogical_or_expression();
+    logical_or_expression_linha _logical_or_expression_linha = current2.getLogical_or_expression_linha();
+    boolean _notEquals_1 = (!Objects.equal(_logical_or_expression_linha, null));
+    if (_notEquals_1) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    logical_and_expression current3 = current2.getLogical_and_expression();
+    logical_and_expression_linha _logical_and_expression_linha = current3.getLogical_and_expression_linha();
+    boolean _notEquals_2 = (!Objects.equal(_logical_and_expression_linha, null));
+    if (_notEquals_2) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    inclusive_or_expression current4 = current3.getInclusive_or_expression();
+    inclusive_or_expression_linha _inclusive_or_expression_linha = current4.getInclusive_or_expression_linha();
+    boolean _notEquals_3 = (!Objects.equal(_inclusive_or_expression_linha, null));
+    if (_notEquals_3) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    exclusive_or_expression current5 = current4.getExclusive_or_expression();
+    exclusive_or_expression_linha _exclusive_or_expression_linha = current5.getExclusive_or_expression_linha();
+    boolean _notEquals_4 = (!Objects.equal(_exclusive_or_expression_linha, null));
+    if (_notEquals_4) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    and_expression current6 = current5.getAnd_expression();
+    and_expression_linha _and_expression_linha = current6.getAnd_expression_linha();
+    boolean _notEquals_5 = (!Objects.equal(_and_expression_linha, null));
+    if (_notEquals_5) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    equality_expression current7 = current6.getEquality_expression();
+    equality_expression_linha _equality_expression_linha = current7.getEquality_expression_linha();
+    boolean _notEquals_6 = (!Objects.equal(_equality_expression_linha, null));
+    if (_notEquals_6) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    relational_expression current8 = current7.getRelational_expression();
+    relational_expression_linha _relational_expression_linha = current8.getRelational_expression_linha();
+    boolean _notEquals_7 = (!Objects.equal(_relational_expression_linha, null));
+    if (_notEquals_7) {
+      return AnsicValidator.ExpRetType.BOOL;
+    }
+    return AnsicValidator.ExpRetType.NUMERIC;
+  }
+  
+  public AnsicValidator.ExpRetType evaluateExp(final primary_expression primatyExp) {
+    expression _expression = primatyExp.getExpression();
+    boolean _equals = Objects.equal(_expression, null);
+    if (_equals) {
+      boolean _and = false;
+      String _identifier = primatyExp.getIdentifier();
+      boolean _notEquals = (!Objects.equal(_identifier, null));
+      if (!_notEquals) {
+        _and = false;
+      } else {
+        String _identifier_1 = primatyExp.getIdentifier();
+        String _trim = _identifier_1.trim();
+        boolean _isEmpty = _trim.isEmpty();
+        boolean _not = (!_isEmpty);
+        _and = _not;
+      }
+      if (_and) {
+        String _identifier_2 = primatyExp.getIdentifier();
+        boolean _containsKey = this.variables.containsKey(_identifier_2);
+        boolean _not_1 = (!_containsKey);
+        if (_not_1) {
+          this.error("Variavel não declarada", null);
+          return AnsicValidator.ExpRetType.NUMERIC;
+        }
+        String _identifier_3 = primatyExp.getIdentifier();
+        String varType = this.variables.get(_identifier_3);
+        boolean _equals_1 = varType.equals("char");
+        if (_equals_1) {
+          return AnsicValidator.ExpRetType.CHAR;
+        } else {
+          return AnsicValidator.ExpRetType.NUMERIC;
+        }
+      }
+      boolean _and_1 = false;
+      constant _constant = primatyExp.getConstant();
+      String _char = _constant.getChar();
+      boolean _notEquals_1 = (!Objects.equal(_char, null));
+      if (!_notEquals_1) {
+        _and_1 = false;
+      } else {
+        constant _constant_1 = primatyExp.getConstant();
+        String _char_1 = _constant_1.getChar();
+        String _trim_1 = _char_1.trim();
+        boolean _isEmpty_1 = _trim_1.isEmpty();
+        boolean _not_2 = (!_isEmpty_1);
+        _and_1 = _not_2;
+      }
+      if (_and_1) {
+        return AnsicValidator.ExpRetType.CHAR;
+      }
+      return AnsicValidator.ExpRetType.NUMERIC;
+    } else {
+      InputOutput.<String>println("Getting type...");
+      expression _expression_1 = primatyExp.getExpression();
+      assignment_expression _assignment_expression = _expression_1.getAssignment_expression();
+      return this.getExpType(_assignment_expression);
+    }
+  }
+  
+  @Check
+  public void CheckAdditiveExp(final additive_expression addExp) {
+    additive_expression_linha _additive_expression_linha = addExp.getAdditive_expression_linha();
+    boolean _notEquals = (!Objects.equal(_additive_expression_linha, null));
+    if (_notEquals) {
+      multiplicative_expression _multiplicative_expression = addExp.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _equals = Objects.equal(lType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals) {
+        this.error("Expressão aditiva pode operar em cima deste tipo", 
+          AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
+      }
+      additive_expression_linha _additive_expression_linha_1 = addExp.getAdditive_expression_linha();
+      additive_expression_complement _additive_expression_complement = _additive_expression_linha_1.getAdditive_expression_complement();
+      assignment_expression _assignment_expression = _additive_expression_complement.getAssignment_expression();
+      primary_expression rSide = this.primaryExpFromAssigExp(_assignment_expression);
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _equals_1 = Objects.equal(rType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals_1) {
+        this.error("Expressão aditiva pode operar em cima deste tipo", 
+          AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_1 = (!Objects.equal(rType, lType));
+      if (_notEquals_1) {
+        this.error("Tipos incompativeis na operação", 
           null);
       }
     }

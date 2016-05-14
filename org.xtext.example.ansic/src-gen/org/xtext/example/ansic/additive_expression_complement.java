@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.additive_expression_complement#getMultiplicative_expression <em>Multiplicative expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.additive_expression_complement#getAssignment_expression <em>Assignment expression</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getadditive_expression_complement()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface additive_expression_complement extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Multiplicative expression</b></em>' containment reference.
+   * Returns the value of the '<em><b>Assignment expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Multiplicative expression</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Assignment expression</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Multiplicative expression</em>' containment reference.
-   * @see #setMultiplicative_expression(multiplicative_expression)
-   * @see org.xtext.example.ansic.AnsicPackage#getadditive_expression_complement_Multiplicative_expression()
+   * @return the value of the '<em>Assignment expression</em>' containment reference.
+   * @see #setAssignment_expression(assignment_expression)
+   * @see org.xtext.example.ansic.AnsicPackage#getadditive_expression_complement_Assignment_expression()
    * @model containment="true"
    * @generated
    */
-  multiplicative_expression getMultiplicative_expression();
+  assignment_expression getAssignment_expression();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.ansic.additive_expression_complement#getMultiplicative_expression <em>Multiplicative expression</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.ansic.additive_expression_complement#getAssignment_expression <em>Assignment expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Multiplicative expression</em>' containment reference.
-   * @see #getMultiplicative_expression()
+   * @param value the new value of the '<em>Assignment expression</em>' containment reference.
+   * @see #getAssignment_expression()
    * @generated
    */
-  void setMultiplicative_expression(multiplicative_expression value);
+  void setAssignment_expression(assignment_expression value);
 
 } // additive_expression_complement

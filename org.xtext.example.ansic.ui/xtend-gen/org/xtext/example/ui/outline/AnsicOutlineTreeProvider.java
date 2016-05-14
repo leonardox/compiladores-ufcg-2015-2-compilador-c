@@ -76,6 +76,7 @@ import org.xtext.example.ansic.logical_and_expression;
 import org.xtext.example.ansic.logical_and_expression_linha;
 import org.xtext.example.ansic.logical_or_expression;
 import org.xtext.example.ansic.logical_or_expression_linha;
+import org.xtext.example.ansic.multiplicative_expression;
 import org.xtext.example.ansic.parameter_declaration;
 import org.xtext.example.ansic.parameter_list_linha;
 import org.xtext.example.ansic.parameter_lista;
@@ -138,6 +139,10 @@ public class AnsicOutlineTreeProvider extends DefaultOutlineTreeProvider {
   
   public String _text(final type_qualifier entity) {
     return "type_qualifier";
+  }
+  
+  public String _text(final multiplicative_expression entity) {
+    return "multiplicative_expression";
   }
   
   public String _text(final type_specifier entity) {
