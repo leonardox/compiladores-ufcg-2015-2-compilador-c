@@ -52,6 +52,8 @@ import org.xtext.example.ansic.logical_and_expression_linha;
 import org.xtext.example.ansic.logical_or_expression;
 import org.xtext.example.ansic.logical_or_expression_linha;
 import org.xtext.example.ansic.multiplicative_expression;
+import org.xtext.example.ansic.multiplicative_expression_complement;
+import org.xtext.example.ansic.multiplicative_expression_linha;
 import org.xtext.example.ansic.parameter_declaration;
 import org.xtext.example.ansic.parameter_lista;
 import org.xtext.example.ansic.parameter_type_list;
@@ -63,6 +65,8 @@ import org.xtext.example.ansic.relational_expression;
 import org.xtext.example.ansic.relational_expression_linha;
 import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.shift_expression;
+import org.xtext.example.ansic.shift_expression_complement;
+import org.xtext.example.ansic.shift_expression_linha;
 import org.xtext.example.ansic.statement;
 import org.xtext.example.ansic.type_specifier;
 import org.xtext.example.ansic.unary_expression;
@@ -370,7 +374,79 @@ public class AnsicValidator extends AbstractAnsicValidator {
       }
       boolean _notEquals_1 = (!Objects.equal(rType, lType));
       if (_notEquals_1) {
-        this.error("Tipos incompativeis na operação", 
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckAdditiveExp(final shift_expression shiftExp) {
+    shift_expression_linha _shift_expression_linha = shiftExp.getShift_expression_linha();
+    boolean _notEquals = (!Objects.equal(_shift_expression_linha, null));
+    if (_notEquals) {
+      additive_expression _additive_expression = shiftExp.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _equals = Objects.equal(lType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals) {
+        this.error("Expressão aditiva pode operar em cima deste tipo", 
+          AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
+      }
+      shift_expression_linha _shift_expression_linha_1 = shiftExp.getShift_expression_linha();
+      shift_expression_complement _shift_expression_complement = _shift_expression_linha_1.getShift_expression_complement();
+      additive_expression _additive_expression_1 = _shift_expression_complement.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _equals_1 = Objects.equal(rType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals_1) {
+        this.error("Expressão aditiva pode operar em cima deste tipo", 
+          AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_1 = (!Objects.equal(rType, lType));
+      if (_notEquals_1) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckAdditiveExp(final multiplicative_expression mulExp) {
+    multiplicative_expression_linha _multiplicative_expression_linha = mulExp.getMultiplicative_expression_linha();
+    boolean _notEquals = (!Objects.equal(_multiplicative_expression_linha, null));
+    if (_notEquals) {
+      cast_expression _cast_expression = mulExp.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _equals = Objects.equal(lType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals) {
+        this.error("Expressão multiplicativa não pode operar em cima deste tipo", 
+          AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
+      }
+      multiplicative_expression_linha _multiplicative_expression_linha_1 = mulExp.getMultiplicative_expression_linha();
+      multiplicative_expression_complement _multiplicative_expression_complement = _multiplicative_expression_linha_1.getMultiplicative_expression_complement();
+      assignment_expression _assignment_expression = _multiplicative_expression_complement.getAssignment_expression();
+      primary_expression rSide = this.primaryExpFromAssigExp(_assignment_expression);
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _equals_1 = Objects.equal(rType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals_1) {
+        this.error("Expressão multiplicativa pode operar em cima deste tipo", 
+          AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_1 = (!Objects.equal(rType, lType));
+      if (_notEquals_1) {
+        this.error("Tipos incompativeis na operação multiplicativa", 
           null);
       }
     }

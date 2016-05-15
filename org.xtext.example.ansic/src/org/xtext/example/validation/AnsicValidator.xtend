@@ -197,19 +197,62 @@ class AnsicValidator extends AbstractAnsicValidator {
 				);
 			}
 			if(rType != lType){
-				error("Tipos incompativeis na operação",
+				error("Tipos incompativeis na operação aditiva",
 					null
 				)
 			}
-//			var continua = addExp.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression.expression.assignment_expression;
-//			var expType2 = getExpType(continua);
-//			
-//			if(expType2 == ExpRetType.BOOL){
-//				error("Expressão aditiva pode operar em cima deste tipo", 
-//					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
-//				);
-//			}
-			//var continuation = addExp.additive_expression_linha.additive_expression_linha;
+		}
+	}
+	
+	@Check
+	def CheckAdditiveExp(shift_expression shiftExp){
+		if(shiftExp.shift_expression_linha != null){
+			var currentExp = shiftExp.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);
+			if(lType == ExpRetType.BOOL){
+				error("Expressão aditiva pode operar em cima deste tipo", 
+					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
+				);
+			}
+			
+			var rSide = shiftExp.shift_expression_linha.shift_expression_complement.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType == ExpRetType.BOOL){
+				error("Expressão aditiva pode operar em cima deste tipo", 
+					AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
+		}
+	}
+	
+	@Check
+	def CheckAdditiveExp(multiplicative_expression mulExp){
+		if(mulExp.multiplicative_expression_linha != null){
+			var currentExp = mulExp.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);
+			if(lType == ExpRetType.BOOL){
+				error("Expressão multiplicativa não pode operar em cima deste tipo", 
+					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
+				);
+			}
+			
+			var rSide = primaryExpFromAssigExp(mulExp.multiplicative_expression_linha.multiplicative_expression_complement.assignment_expression);
+			var rType = evaluateExp(rSide);
+			if(rType == ExpRetType.BOOL){
+				error("Expressão multiplicativa pode operar em cima deste tipo", 
+					AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação multiplicativa",
+					null
+				)
+			}
 		}
 	}
 	
