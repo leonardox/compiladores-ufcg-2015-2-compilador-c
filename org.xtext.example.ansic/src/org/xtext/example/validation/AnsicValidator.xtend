@@ -12,6 +12,11 @@ import org.xtext.example.ansic.translation_unit
 import org.xtext.example.ansic.unary_expression
 import org.xtext.example.ansic.cast_expression
 import org.xtext.example.ansic.multiplicative_expression
+import org.xtext.example.ansic.logical_or_expression
+import org.xtext.example.ansic.inclusive_or_expression
+import org.xtext.example.ansic.exclusive_or_expression
+import org.xtext.example.ansic.and_expression
+import org.xtext.example.ansic.logical_and_expression
 import org.xtext.example.ansic.multiplicative_expression_linha	
 
 import org.xtext.example.ansic.multiplicative_expression_complement
@@ -40,6 +45,7 @@ import java.util.List
 import java.util.ArrayList
 import org.xtext.example.ansic.AnsicFactory
 import org.xtext.example.ansic.impl.AnsicFactoryImpl
+import javax.swing.text.Position.Bias
 
 /**
  * This class contains custom validation rules. 
@@ -151,7 +157,19 @@ class AnsicValidator extends AbstractAnsicValidator {
 		if(current8.relational_expression_linha != null){
 			return ExpRetType.BOOL;
 		}
-		return ExpRetType.NUMERIC;
+		var current9 = current8.shift_expression;
+		if(current9.shift_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		var current10 = current9.additive_expression;
+		if(current10.additive_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		var curent11 = current10.multiplicative_expression;
+		if(curent11.multiplicative_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		return null;		
 	}
 	
 	def evaluateExp(primary_expression primatyExp){
@@ -172,9 +190,159 @@ class AnsicValidator extends AbstractAnsicValidator {
 				return ExpRetType.CHAR;
 			}
 			return ExpRetType.NUMERIC;
-		}else{
-			println("Getting type...");
+		}else{			
 			return getExpType(primatyExp.expression.assignment_expression);
+		}
+	}
+	
+	@Check
+	def CheckAndExpExp(and_expression andExp){
+		if(andExp.and_expression_linha != null){
+			var currentExp = andExp.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);			
+			if(lType != ExpRetType.BOOL){
+				error("Expressão E não pode operar em cima deste tipo", 
+					AnsicPackage.Literals.AND_EXPRESSION__EQUALITY_EXPRESSION
+				);
+			}												
+			var rSide = andExp.and_expression_linha.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType != ExpRetType.BOOL){
+				error("Expressão E pode operar em cima deste tipo", 
+					AnsicPackage.Literals.AND_EXPRESSION__AND_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
+		}
+	}
+	
+		@Check
+	def CheckRelationalExp(relational_expression relExp){
+		if(relExp.relational_expression_linha!= null){
+			var currentExp = relExp.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);			
+			if(lType == ExpRetType.BOOL){
+				error("Expressão relacional não pode operar em cima deste tipo", 
+					AnsicPackage.Literals.RELATIONAL_EXPRESSION__SHIFT_EXPRESSION
+				);
+			}												
+			var rSide = relExp.relational_expression_linha.relational_expression_complement.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType == ExpRetType.BOOL){
+				error("Expressão relacional pode operar em cima deste tipo", 
+					AnsicPackage.Literals.RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
+		}
+	}
+
+	@Check
+	def CheckExclusiveOrExp(exclusive_or_expression orExp){
+		if(orExp.exclusive_or_expression_linha != null){
+			var currentExp = orExp.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);			
+			if(lType != ExpRetType.BOOL){
+				error("Expressão ou exclusivo pode operar em cima deste tipo", 
+					AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION
+				);
+			}												
+			var rSide = orExp.exclusive_or_expression_linha.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType != ExpRetType.BOOL){
+				error("Expressão ou exclusivo pode operar em cima deste tipo", 
+					AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
+		}
+	}
+
+	@Check
+	def CheckInclusiveOrExp(inclusive_or_expression orExp){
+		if(orExp.inclusive_or_expression_linha != null){
+			var currentExp = orExp.exclusive_or_expression.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);			
+			if(lType != ExpRetType.BOOL){
+				error("Expressão ou inclusivo pode operar em cima deste tipo", 
+					AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION
+				);
+			}												
+			var rSide = orExp.inclusive_or_expression_linha.exclusive_or_expression.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType != ExpRetType.BOOL){
+				error("Expressão ou inclusivo pode operar em cima deste tipo", 
+					AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
+		}
+	}
+
+	@Check
+	def CheckLogicalAndExp(logical_and_expression andExp){
+		if(andExp.logical_and_expression_linha != null){
+			var currentExp = andExp.inclusive_or_expression.exclusive_or_expression.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);
+			if(lType != ExpRetType.BOOL){
+				error("Expressão E lógico pode operar em cima deste tipo", 
+					AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION
+				);
+			}						
+			var rSide = andExp.logical_and_expression_linha.inclusive_or_expression.exclusive_or_expression.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType != ExpRetType.BOOL){
+				error("Expressão E lógico pode operar em cima deste tipo", 
+					AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
+		}
+	}
+	
+	@Check
+	def CheckLogicalOrExp(logical_or_expression orExp){
+		if(orExp.logical_or_expression_linha != null){
+			var currentExp = orExp.logical_and_expression.inclusive_or_expression.exclusive_or_expression.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var lType = evaluateExp(currentExp);
+			if(lType != ExpRetType.BOOL){
+				error("Expressão ou lógico pode operar em cima deste tipo", 
+					AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION
+				);
+			}
+			
+			var rSide = orExp.logical_or_expression_linha.logical_and_expression.inclusive_or_expression.exclusive_or_expression.and_expression.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rType = evaluateExp(rSide);
+			if(rType != ExpRetType.BOOL){
+				error("Expressão ou lógico pode operar em cima deste tipo", 
+					AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA
+				);
+			}
+			if(rType != lType){
+				error("Tipos incompativeis na operação aditiva",
+					null
+				)
+			}
 		}
 	}
 	
@@ -205,13 +373,13 @@ class AnsicValidator extends AbstractAnsicValidator {
 	}
 	
 	@Check
-	def CheckAdditiveExp(shift_expression shiftExp){
+	def CheckShiftExp(shift_expression shiftExp){
 		if(shiftExp.shift_expression_linha != null){
 			var currentExp = shiftExp.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
 			var lType = evaluateExp(currentExp);
 			if(lType == ExpRetType.BOOL){
 				error("Expressão aditiva pode operar em cima deste tipo", 
-					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
+					AnsicPackage.Literals.SHIFT_EXPRESSION__ADDITIVE_EXPRESSION
 				);
 			}
 			
@@ -219,7 +387,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 			var rType = evaluateExp(rSide);
 			if(rType == ExpRetType.BOOL){
 				error("Expressão aditiva pode operar em cima deste tipo", 
-					AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA
+					AnsicPackage.Literals.SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA
 				);
 			}
 			if(rType != lType){
@@ -231,13 +399,13 @@ class AnsicValidator extends AbstractAnsicValidator {
 	}
 	
 	@Check
-	def CheckAdditiveExp(multiplicative_expression mulExp){
+	def CheckMultiplicativeExp(multiplicative_expression mulExp){
 		if(mulExp.multiplicative_expression_linha != null){
 			var currentExp = mulExp.cast_expression.unary_expression.postfix_expression.primary_expression;
 			var lType = evaluateExp(currentExp);
 			if(lType == ExpRetType.BOOL){
 				error("Expressão multiplicativa não pode operar em cima deste tipo", 
-					AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION
+					AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION
 				);
 			}
 			
@@ -245,7 +413,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 			var rType = evaluateExp(rSide);
 			if(rType == ExpRetType.BOOL){
 				error("Expressão multiplicativa pode operar em cima deste tipo", 
-					AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA
+					AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA
 				);
 			}
 			if(rType != lType){
@@ -266,25 +434,116 @@ class AnsicValidator extends AbstractAnsicValidator {
 			)
 		}else{
 			var func = functions.get(name);
-			println("Checking params for: " + func.name + " With: " + func.param_number + " params.")
+			println("Checking params for: " + func.name + " With: " + func.params_types.size() + " params.")
 			if(func.param_number != call.argument_expression_list.assignment_expressions.size()){
 				error("Numero de parametros incompativeis",
 					AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
 				)
 			}else{
-				for(i : 0 ..<call.argument_expression_list.assignment_expressions.size()){
+				for(var i = 0; i < call.argument_expression_list.assignment_expressions.size(); i++){
+					var arg = call.argument_expression_list.assignment_expressions.get(i);
+					println("Size: " + call.argument_expression_list.assignment_expressions.size());
+					println("For: " + i);
+					var argType = func.params_types.get(i);
+					if(getExpType(arg) != null){
+						println("Is an expression");
+						var expRet = getExpType(arg);
+						if(expRet == ExpRetType.NUMERIC){
+							if(argType == 'bool'){
+								error("Tipo de parametro não compativel",
+									AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
+								)
+							}
+						}else if(expRet == ExpRetType.BOOL){
+							if(argType != 'bool'){
+								error("Tipo de parametro não compativel",
+									AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
+								)
+							}
+						}
+					}else{
+						println("Is an contant or id")
+						var idOrCons = primaryExpFromAssigExp(arg);
+						println("CP1");
+						if(idOrCons.identifier != null && !idOrCons.identifier.trim().isEmpty()){
+							println("CP2");
+							if(variables.containsKey(idOrCons.identifier)){
+								//é UMA VARIAAVEL
+								if(variables.get(idOrCons.identifier) != argType){
+									println("CP3");
+									error("Tipo de parametro não compativel",
+										AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
+									)
+								}
+							}else if( functions.containsKey(idOrCons.identifier)){
+								if(functions.get(idOrCons.identifier).retType != argType){
+									error("Tipo de parametro não compativel",
+										AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
+									)
+								}
+							}
+						}
+						println("CP4");
+						if(idOrCons.constant != null && idOrCons.constant.char != null && argType != 'char'){
+							println("CP5");
+							error("Tipo de parametro não com 	pativel",
+									AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST
+							)
+						}
+						println("CP7");
+						//O argumento é uma contante ou um id
+					}
+					println("End of iteration");
 					//Validating params
 					//call.argument_expression_list.get(i)
 				}
+				println("For ended");
 			}
 		}
 		
 	}
 	
 	@Check
+	def checkPrimaryExpression(primary_expression exp){
+		if(exp.identifier != null && !exp.identifier.trim().isEmpty()){
+			if(!variables.containsKey(exp.identifier) && !functions.containsKey(exp.identifier)){
+				error("Variavel não declarada",
+					AnsicPackage.Literals.PRIMARY_EXPRESSION__IDENTIFIER
+				)
+			}			
+		}
+	}
+	
+	@Check
 	def checkDeclarationTypes(declaration decl){
 		var leftType =  decl.declaration_specifiers.get(0).type_specifier.type_name_str;
 		var id = decl.init_declarator_list.get(0).init_declarator.declarator.direct_declarator.identifier;
+		if(variables.containsKey(id)){
+			error("Variável já declarada", null);
+		}
+		variables.put(id, leftType);	
+		if(getExpType(decl.init_declarator_list.get(0).init_declarator.initializer.assignment_expression) == null){
+			//Se for direto pra um id ou uma consntante...
+		}else{
+			var expType = getExpType(
+			decl.init_declarator_list.get(0).init_declarator.initializer.assignment_expression);
+			if (expType == ExpRetType.NUMERIC) {
+				if (leftType == "bool" || leftType == 'char') {
+					error(
+						"Tipos incompativeis para atribuição",
+						AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST
+					)
+				}
+			} else if (expType == ExpRetType.BOOL) {
+				if (leftType != "bool") {
+					error(
+						"Não é possível atribuir retorno booleano para o tipo declarado",
+						AnsicPackage.Literals.
+							DECLARATION__INIT_DECLARATOR_LIST
+					)
+				}
+			}
+		}
 		var rightType = decl.init_declarator_list.get(0).init_declarator.initializer.assignment_expression.conditional_expression.
 							logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
 							and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
@@ -294,7 +553,24 @@ class AnsicValidator extends AbstractAnsicValidator {
 			//int a = 3;
 			checkDeclarationWithConstant(leftType, rightType);
 		}else if (rightType.identifier != null && !rightType.identifier.trim.isEmpty()){
-			if(variables.containsKey(rightType.identifier)){
+			if((variables.containsKey(rightType.identifier) || functions.containsKey(rightType.identifier)) && getExpType(decl.init_declarator_list.get(0).init_declarator.initializer.assignment_expression) == null){
+				if(variables.containsKey(rightType.identifier)){
+					//Se for um id...
+					var varType = variables.get(rightType.identifier);
+					if(varType != leftType){
+						error("Tipos não compatíveis",
+							AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST
+						)
+					}
+				}else if(functions.containsKey(rightType.identifier)){
+					//Se for uma função
+					var retType = functions.get(rightType.identifier).retType;
+					if(retType != leftType){
+						error("Retorno de função não compativel com tipo de variavel",
+							AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST
+						)
+					}
+				}
 				var rType = variables.get(rightType.identifier);
 				if(leftType == 'enum' && rightType!='enum'){
 					error("A variavel deve ser um enum",
@@ -302,9 +578,6 @@ class AnsicValidator extends AbstractAnsicValidator {
 					)
 				}				
 			}else{
-				error("Variavel não declarada",
-					AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST
-				)
 			}
 			//Validar quando é declaração que inicia com um id
 			// int a = b;
@@ -312,11 +585,8 @@ class AnsicValidator extends AbstractAnsicValidator {
 			//Validar quando é declaração com uma expressão
 			//int a = b+c;
 		}
-		if(variables.containsKey(id)){
-			error("Variável já declarada", null);
-		}else{
-			variables.put(id, leftType);
-		}
+				
+		
 		
 	}
 	
@@ -347,10 +617,31 @@ class AnsicValidator extends AbstractAnsicValidator {
 	@Check
 	def checkAtribType(assignment_expression asexp){		
 		var idLeft = asexp.unary_expression.postfix_expression.primary_expression.identifier;
+		var left_type = variables.get(idLeft);
 		if(!variables.keySet.contains(idLeft)){
 			error('Variavel não declarada',
 				AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
 			);
+		}
+		if(getExpType(asexp) == null){
+			//Se for direto pra um id ou uma consntante...
+		}else{
+			var expType = getExpType(asexp);
+			if (expType == ExpRetType.NUMERIC) {
+				if (left_type == "bool" || left_type == 'char') {
+					error(
+						"Tipos incompativeis para atribuição",
+						null
+					)
+				}
+			} else if (expType == ExpRetType.BOOL) {
+				if (left_type != "bool") {
+					error(
+						"Não é possível atribuir retorno booleano para o tipo declarado",
+						null
+					)
+				}
+			}
 		}
 		var idRight = asexp.assignment_expression.conditional_expression.
 		logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
@@ -360,15 +651,20 @@ class AnsicValidator extends AbstractAnsicValidator {
 			if(idRight.identifier != null && !idRight.identifier.trim().isEmpty()){
 				//Validar quando é uma atribuição com outra variavel
 				// a = b
-				validateActribWithId(idLeft, idRight.identifier);
+				if(variables.containsKey(idRight)){
+					validateActribWithId(idLeft, idRight.identifier);	
+				}else if(functions.containsKey(idRight)){
+					if(functions.get(idRight).retType != left_type){
+						error("Tipo de rtorno não compatível com atribuição",
+							null
+						)
+					}
+				}				
 			}else if(idRight.constant != null){
 				//Validar quando é uma atribuição com uma constante
 				// a = 3;
-				var left_type = variables.get(idLeft);
+				left_type = variables.get(idLeft);
 				checkDeclarationWithConstant(left_type, idRight)
-			}else if(idRight.expression != null){
-				//Validar quando é uma atribuição com expressão
-				// a = b + c
 			}				
 		}			
 		
@@ -430,9 +726,8 @@ class AnsicValidator extends AbstractAnsicValidator {
 	@Check
 	def checkFunctionDefinition(function_definition func_decl){
 		//Não tem parametros
-		var f = new Function();
-		println("Creating function...");
-		if(func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento.parameter_type_list == null){
+		var f = new Function();		
+		if(func_decl.declarator.direct_declarator.direct_declarator_linha.direct_declarator_complemento == null){
 			f.retType = func_decl.declaration_specifiers.get(0).type_specifier.type_name_str;
 			f.name = func_decl.declarator.direct_declarator.identifier.toString();
 			f.param_number = 0;

@@ -405,8 +405,8 @@
         eType="#//relational_expression_linha" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="relational_expression_linha">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="shift_expression_complement"
-        eType="#//shift_expression_complement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relational_expression_complement"
+        eType="#//relational_expression_complement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relational_expression_linha"
         eType="#//relational_expression_linha" containment="true"/>
   </eClassifiers>

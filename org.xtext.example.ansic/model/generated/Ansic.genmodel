@@ -284,7 +284,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression/relational_expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//relational_expression_linha">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_linha/shift_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_linha/relational_expression_complement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_linha/relational_expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//relational_expression_complement">

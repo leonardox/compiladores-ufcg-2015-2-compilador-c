@@ -3299,7 +3299,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getrelational_expression_linha_Shift_expression_complement()
+  public EReference getrelational_expression_linha_Relational_expression_complement()
   {
     return (EReference)relational_expression_linhaEClass.getEStructuralFeatures().get(0);
   }
@@ -5276,7 +5276,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     createEReference(relational_expressionEClass, RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA);
 
     relational_expression_linhaEClass = createEClass(RELATIONAL_EXPRESSION_LINHA);
-    createEReference(relational_expression_linhaEClass, RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT);
+    createEReference(relational_expression_linhaEClass, RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT);
     createEReference(relational_expression_linhaEClass, RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA);
 
     relational_expression_complementEClass = createEClass(RELATIONAL_EXPRESSION_COMPLEMENT);
@@ -5841,7 +5841,7 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
     initEReference(getrelational_expression_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, relational_expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relational_expression_linhaEClass, relational_expression_linha.class, "relational_expression_linha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getrelational_expression_linha_Shift_expression_complement(), this.getshift_expression_complement(), null, "shift_expression_complement", null, 0, 1, relational_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrelational_expression_linha_Relational_expression_complement(), this.getrelational_expression_complement(), null, "relational_expression_complement", null, 0, 1, relational_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getrelational_expression_linha_Relational_expression_linha(), this.getrelational_expression_linha(), null, "relational_expression_linha", null, 0, 1, relational_expression_linha.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relational_expression_complementEClass, relational_expression_complement.class, "relational_expression_complement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

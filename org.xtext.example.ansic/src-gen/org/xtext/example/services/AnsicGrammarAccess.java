@@ -4494,23 +4494,25 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	public class Relational_expression_linhaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.Ansic.relational_expression_linha");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cShift_expression_complementAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cShift_expression_complementShift_expression_complementParserRuleCall_0_0 = (RuleCall)cShift_expression_complementAssignment_0.eContents().get(0);
+		private final Assignment cRelational_expression_complementAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cRelational_expression_complementRelational_expression_complementParserRuleCall_0_0 = (RuleCall)cRelational_expression_complementAssignment_0.eContents().get(0);
 		private final Assignment cRelational_expression_linhaAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_0 = (RuleCall)cRelational_expression_linhaAssignment_1.eContents().get(0);
 		
 		//relational_expression_linha:
-		//	(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?;
+		//	(relational_expression_complement=relational_expression_complement
+		//	relational_expression_linha=relational_expression_linha)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
+		//(relational_expression_complement=relational_expression_complement
+		//relational_expression_linha=relational_expression_linha)?
 		public Group getGroup() { return cGroup; }
 		
-		//shift_expression_complement=shift_expression_complement
-		public Assignment getShift_expression_complementAssignment_0() { return cShift_expression_complementAssignment_0; }
+		//relational_expression_complement=relational_expression_complement
+		public Assignment getRelational_expression_complementAssignment_0() { return cRelational_expression_complementAssignment_0; }
 		
-		//shift_expression_complement
-		public RuleCall getShift_expression_complementShift_expression_complementParserRuleCall_0_0() { return cShift_expression_complementShift_expression_complementParserRuleCall_0_0; }
+		//relational_expression_complement
+		public RuleCall getRelational_expression_complementRelational_expression_complementParserRuleCall_0_0() { return cRelational_expression_complementRelational_expression_complementParserRuleCall_0_0; }
 		
 		//relational_expression_linha=relational_expression_linha
 		public Assignment getRelational_expression_linhaAssignment_1() { return cRelational_expression_linhaAssignment_1; }
@@ -7546,7 +7548,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//relational_expression_linha:
-	//	(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?;
+	//	(relational_expression_complement=relational_expression_complement
+	//	relational_expression_linha=relational_expression_linha)?;
 	public Relational_expression_linhaElements getRelational_expression_linhaAccess() {
 		return pRelational_expression_linha;
 	}

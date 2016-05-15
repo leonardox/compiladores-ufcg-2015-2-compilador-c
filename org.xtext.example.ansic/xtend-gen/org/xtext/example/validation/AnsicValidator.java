@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.validation.Check;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-import org.eclipse.xtext.xbase.lib.ExclusiveRange;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.DomainModel;
@@ -62,6 +61,7 @@ import org.xtext.example.ansic.postfix_expression_complement;
 import org.xtext.example.ansic.postfix_expression_linha;
 import org.xtext.example.ansic.primary_expression;
 import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.relational_expression_complement;
 import org.xtext.example.ansic.relational_expression_linha;
 import org.xtext.example.ansic.selection_statement;
 import org.xtext.example.ansic.shift_expression;
@@ -284,7 +284,25 @@ public class AnsicValidator extends AbstractAnsicValidator {
     if (_notEquals_7) {
       return AnsicValidator.ExpRetType.BOOL;
     }
-    return AnsicValidator.ExpRetType.NUMERIC;
+    shift_expression current9 = current8.getShift_expression();
+    shift_expression_linha _shift_expression_linha = current9.getShift_expression_linha();
+    boolean _notEquals_8 = (!Objects.equal(_shift_expression_linha, null));
+    if (_notEquals_8) {
+      return AnsicValidator.ExpRetType.NUMERIC;
+    }
+    additive_expression current10 = current9.getAdditive_expression();
+    additive_expression_linha _additive_expression_linha = current10.getAdditive_expression_linha();
+    boolean _notEquals_9 = (!Objects.equal(_additive_expression_linha, null));
+    if (_notEquals_9) {
+      return AnsicValidator.ExpRetType.NUMERIC;
+    }
+    multiplicative_expression curent11 = current10.getMultiplicative_expression();
+    multiplicative_expression_linha _multiplicative_expression_linha = curent11.getMultiplicative_expression_linha();
+    boolean _notEquals_10 = (!Objects.equal(_multiplicative_expression_linha, null));
+    if (_notEquals_10) {
+      return AnsicValidator.ExpRetType.NUMERIC;
+    }
+    return null;
   }
   
   public AnsicValidator.ExpRetType evaluateExp(final primary_expression primatyExp) {
@@ -339,10 +357,290 @@ public class AnsicValidator extends AbstractAnsicValidator {
       }
       return AnsicValidator.ExpRetType.NUMERIC;
     } else {
-      InputOutput.<String>println("Getting type...");
       expression _expression_1 = primatyExp.getExpression();
       assignment_expression _assignment_expression = _expression_1.getAssignment_expression();
       return this.getExpType(_assignment_expression);
+    }
+  }
+  
+  @Check
+  public void CheckAndExpExp(final and_expression andExp) {
+    and_expression_linha _and_expression_linha = andExp.getAnd_expression_linha();
+    boolean _notEquals = (!Objects.equal(_and_expression_linha, null));
+    if (_notEquals) {
+      equality_expression _equality_expression = andExp.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _notEquals_1 = (!Objects.equal(lType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_1) {
+        this.error("Expressão E não pode operar em cima deste tipo", 
+          AnsicPackage.Literals.AND_EXPRESSION__EQUALITY_EXPRESSION);
+      }
+      and_expression_linha _and_expression_linha_1 = andExp.getAnd_expression_linha();
+      equality_expression _equality_expression_1 = _and_expression_linha_1.getEquality_expression();
+      relational_expression _relational_expression_1 = _equality_expression_1.getRelational_expression();
+      shift_expression _shift_expression_1 = _relational_expression_1.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _notEquals_2 = (!Objects.equal(rType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_2) {
+        this.error("Expressão E pode operar em cima deste tipo", 
+          AnsicPackage.Literals.AND_EXPRESSION__AND_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_3 = (!Objects.equal(rType, lType));
+      if (_notEquals_3) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckRelationalExp(final relational_expression relExp) {
+    relational_expression_linha _relational_expression_linha = relExp.getRelational_expression_linha();
+    boolean _notEquals = (!Objects.equal(_relational_expression_linha, null));
+    if (_notEquals) {
+      shift_expression _shift_expression = relExp.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _equals = Objects.equal(lType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals) {
+        this.error("Expressão relacional não pode operar em cima deste tipo", 
+          AnsicPackage.Literals.RELATIONAL_EXPRESSION__SHIFT_EXPRESSION);
+      }
+      relational_expression_linha _relational_expression_linha_1 = relExp.getRelational_expression_linha();
+      relational_expression_complement _relational_expression_complement = _relational_expression_linha_1.getRelational_expression_complement();
+      shift_expression _shift_expression_1 = _relational_expression_complement.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _equals_1 = Objects.equal(rType, AnsicValidator.ExpRetType.BOOL);
+      if (_equals_1) {
+        this.error("Expressão relacional pode operar em cima deste tipo", 
+          AnsicPackage.Literals.RELATIONAL_EXPRESSION__RELATIONAL_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_1 = (!Objects.equal(rType, lType));
+      if (_notEquals_1) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckExclusiveOrExp(final exclusive_or_expression orExp) {
+    exclusive_or_expression_linha _exclusive_or_expression_linha = orExp.getExclusive_or_expression_linha();
+    boolean _notEquals = (!Objects.equal(_exclusive_or_expression_linha, null));
+    if (_notEquals) {
+      and_expression _and_expression = orExp.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _notEquals_1 = (!Objects.equal(lType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_1) {
+        this.error("Expressão ou exclusivo pode operar em cima deste tipo", 
+          AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__AND_EXPRESSION);
+      }
+      exclusive_or_expression_linha _exclusive_or_expression_linha_1 = orExp.getExclusive_or_expression_linha();
+      and_expression _and_expression_1 = _exclusive_or_expression_linha_1.getAnd_expression();
+      equality_expression _equality_expression_1 = _and_expression_1.getEquality_expression();
+      relational_expression _relational_expression_1 = _equality_expression_1.getRelational_expression();
+      shift_expression _shift_expression_1 = _relational_expression_1.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _notEquals_2 = (!Objects.equal(rType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_2) {
+        this.error("Expressão ou exclusivo pode operar em cima deste tipo", 
+          AnsicPackage.Literals.EXCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_3 = (!Objects.equal(rType, lType));
+      if (_notEquals_3) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckInclusiveOrExp(final inclusive_or_expression orExp) {
+    inclusive_or_expression_linha _inclusive_or_expression_linha = orExp.getInclusive_or_expression_linha();
+    boolean _notEquals = (!Objects.equal(_inclusive_or_expression_linha, null));
+    if (_notEquals) {
+      exclusive_or_expression _exclusive_or_expression = orExp.getExclusive_or_expression();
+      and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _notEquals_1 = (!Objects.equal(lType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_1) {
+        this.error("Expressão ou inclusivo pode operar em cima deste tipo", 
+          AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__EXCLUSIVE_OR_EXPRESSION);
+      }
+      inclusive_or_expression_linha _inclusive_or_expression_linha_1 = orExp.getInclusive_or_expression_linha();
+      exclusive_or_expression _exclusive_or_expression_1 = _inclusive_or_expression_linha_1.getExclusive_or_expression();
+      and_expression _and_expression_1 = _exclusive_or_expression_1.getAnd_expression();
+      equality_expression _equality_expression_1 = _and_expression_1.getEquality_expression();
+      relational_expression _relational_expression_1 = _equality_expression_1.getRelational_expression();
+      shift_expression _shift_expression_1 = _relational_expression_1.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _notEquals_2 = (!Objects.equal(rType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_2) {
+        this.error("Expressão ou inclusivo pode operar em cima deste tipo", 
+          AnsicPackage.Literals.INCLUSIVE_OR_EXPRESSION__INCLUSIVE_OR_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_3 = (!Objects.equal(rType, lType));
+      if (_notEquals_3) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckLogicalAndExp(final logical_and_expression andExp) {
+    logical_and_expression_linha _logical_and_expression_linha = andExp.getLogical_and_expression_linha();
+    boolean _notEquals = (!Objects.equal(_logical_and_expression_linha, null));
+    if (_notEquals) {
+      inclusive_or_expression _inclusive_or_expression = andExp.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+      and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _notEquals_1 = (!Objects.equal(lType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_1) {
+        this.error("Expressão E lógico pode operar em cima deste tipo", 
+          AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__INCLUSIVE_OR_EXPRESSION);
+      }
+      logical_and_expression_linha _logical_and_expression_linha_1 = andExp.getLogical_and_expression_linha();
+      inclusive_or_expression _inclusive_or_expression_1 = _logical_and_expression_linha_1.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression_1 = _inclusive_or_expression_1.getExclusive_or_expression();
+      and_expression _and_expression_1 = _exclusive_or_expression_1.getAnd_expression();
+      equality_expression _equality_expression_1 = _and_expression_1.getEquality_expression();
+      relational_expression _relational_expression_1 = _equality_expression_1.getRelational_expression();
+      shift_expression _shift_expression_1 = _relational_expression_1.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _notEquals_2 = (!Objects.equal(rType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_2) {
+        this.error("Expressão E lógico pode operar em cima deste tipo", 
+          AnsicPackage.Literals.LOGICAL_AND_EXPRESSION__LOGICAL_AND_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_3 = (!Objects.equal(rType, lType));
+      if (_notEquals_3) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
+    }
+  }
+  
+  @Check
+  public void CheckLogicalOrExp(final logical_or_expression orExp) {
+    logical_or_expression_linha _logical_or_expression_linha = orExp.getLogical_or_expression_linha();
+    boolean _notEquals = (!Objects.equal(_logical_or_expression_linha, null));
+    if (_notEquals) {
+      logical_and_expression _logical_and_expression = orExp.getLogical_and_expression();
+      inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+      and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+      equality_expression _equality_expression = _and_expression.getEquality_expression();
+      relational_expression _relational_expression = _equality_expression.getRelational_expression();
+      shift_expression _shift_expression = _relational_expression.getShift_expression();
+      additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+      cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+      unary_expression _unary_expression = _cast_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression currentExp = _postfix_expression.getPrimary_expression();
+      AnsicValidator.ExpRetType lType = this.evaluateExp(currentExp);
+      boolean _notEquals_1 = (!Objects.equal(lType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_1) {
+        this.error("Expressão ou lógico pode operar em cima deste tipo", 
+          AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_AND_EXPRESSION);
+      }
+      logical_or_expression_linha _logical_or_expression_linha_1 = orExp.getLogical_or_expression_linha();
+      logical_and_expression _logical_and_expression_1 = _logical_or_expression_linha_1.getLogical_and_expression();
+      inclusive_or_expression _inclusive_or_expression_1 = _logical_and_expression_1.getInclusive_or_expression();
+      exclusive_or_expression _exclusive_or_expression_1 = _inclusive_or_expression_1.getExclusive_or_expression();
+      and_expression _and_expression_1 = _exclusive_or_expression_1.getAnd_expression();
+      equality_expression _equality_expression_1 = _and_expression_1.getEquality_expression();
+      relational_expression _relational_expression_1 = _equality_expression_1.getRelational_expression();
+      shift_expression _shift_expression_1 = _relational_expression_1.getShift_expression();
+      additive_expression _additive_expression_1 = _shift_expression_1.getAdditive_expression();
+      multiplicative_expression _multiplicative_expression_1 = _additive_expression_1.getMultiplicative_expression();
+      cast_expression _cast_expression_1 = _multiplicative_expression_1.getCast_expression();
+      unary_expression _unary_expression_1 = _cast_expression_1.getUnary_expression();
+      postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
+      primary_expression rSide = _postfix_expression_1.getPrimary_expression();
+      AnsicValidator.ExpRetType rType = this.evaluateExp(rSide);
+      boolean _notEquals_2 = (!Objects.equal(rType, AnsicValidator.ExpRetType.BOOL));
+      if (_notEquals_2) {
+        this.error("Expressão ou lógico pode operar em cima deste tipo", 
+          AnsicPackage.Literals.LOGICAL_OR_EXPRESSION__LOGICAL_OR_EXPRESSION_LINHA);
+      }
+      boolean _notEquals_3 = (!Objects.equal(rType, lType));
+      if (_notEquals_3) {
+        this.error("Tipos incompativeis na operação aditiva", 
+          null);
+      }
     }
   }
   
@@ -381,7 +679,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
   }
   
   @Check
-  public void CheckAdditiveExp(final shift_expression shiftExp) {
+  public void CheckShiftExp(final shift_expression shiftExp) {
     shift_expression_linha _shift_expression_linha = shiftExp.getShift_expression_linha();
     boolean _notEquals = (!Objects.equal(_shift_expression_linha, null));
     if (_notEquals) {
@@ -395,7 +693,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
       boolean _equals = Objects.equal(lType, AnsicValidator.ExpRetType.BOOL);
       if (_equals) {
         this.error("Expressão aditiva pode operar em cima deste tipo", 
-          AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
+          AnsicPackage.Literals.SHIFT_EXPRESSION__ADDITIVE_EXPRESSION);
       }
       shift_expression_linha _shift_expression_linha_1 = shiftExp.getShift_expression_linha();
       shift_expression_complement _shift_expression_complement = _shift_expression_linha_1.getShift_expression_complement();
@@ -409,7 +707,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
       boolean _equals_1 = Objects.equal(rType, AnsicValidator.ExpRetType.BOOL);
       if (_equals_1) {
         this.error("Expressão aditiva pode operar em cima deste tipo", 
-          AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
+          AnsicPackage.Literals.SHIFT_EXPRESSION__SHIFT_EXPRESSION_LINHA);
       }
       boolean _notEquals_1 = (!Objects.equal(rType, lType));
       if (_notEquals_1) {
@@ -420,7 +718,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
   }
   
   @Check
-  public void CheckAdditiveExp(final multiplicative_expression mulExp) {
+  public void CheckMultiplicativeExp(final multiplicative_expression mulExp) {
     multiplicative_expression_linha _multiplicative_expression_linha = mulExp.getMultiplicative_expression_linha();
     boolean _notEquals = (!Objects.equal(_multiplicative_expression_linha, null));
     if (_notEquals) {
@@ -432,7 +730,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
       boolean _equals = Objects.equal(lType, AnsicValidator.ExpRetType.BOOL);
       if (_equals) {
         this.error("Expressão multiplicativa não pode operar em cima deste tipo", 
-          AnsicPackage.Literals.ADDITIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION);
+          AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__CAST_EXPRESSION);
       }
       multiplicative_expression_linha _multiplicative_expression_linha_1 = mulExp.getMultiplicative_expression_linha();
       multiplicative_expression_complement _multiplicative_expression_complement = _multiplicative_expression_linha_1.getMultiplicative_expression_complement();
@@ -442,7 +740,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
       boolean _equals_1 = Objects.equal(rType, AnsicValidator.ExpRetType.BOOL);
       if (_equals_1) {
         this.error("Expressão multiplicativa pode operar em cima deste tipo", 
-          AnsicPackage.Literals.ADDITIVE_EXPRESSION__ADDITIVE_EXPRESSION_LINHA);
+          AnsicPackage.Literals.MULTIPLICATIVE_EXPRESSION__MULTIPLICATIVE_EXPRESSION_LINHA);
       }
       boolean _notEquals_1 = (!Objects.equal(rType, lType));
       if (_notEquals_1) {
@@ -453,41 +751,195 @@ public class AnsicValidator extends AbstractAnsicValidator {
   }
   
   @Check
-  public void checkFunctionCall(final postfix_expression_complement call) {
-    EObject _eContainer = call.eContainer();
-    EObject _eContainer_1 = _eContainer.eContainer();
-    postfix_expression parent = ((postfix_expression) _eContainer_1);
-    primary_expression _primary_expression = parent.getPrimary_expression();
-    String name = _primary_expression.getIdentifier();
-    boolean _containsKey = this.functions.containsKey(name);
-    boolean _not = (!_containsKey);
-    if (_not) {
-      this.error("Função não definida", 
-        null);
-    } else {
-      AnsicValidator.Function func = this.functions.get(name);
-      InputOutput.<String>println((((("Checking params for: " + func.name) + " With: ") + Integer.valueOf(func.param_number)) + " params."));
-      argument_expression_list _argument_expression_list = call.getArgument_expression_list();
-      EList<assignment_expression> _assignment_expressions = _argument_expression_list.getAssignment_expressions();
-      int _size = _assignment_expressions.size();
-      boolean _notEquals = (func.param_number != _size);
-      if (_notEquals) {
-        this.error("Numero de parametros incompativeis", 
-          AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+  public String checkFunctionCall(final postfix_expression_complement call) {
+    String _xblockexpression = null;
+    {
+      EObject _eContainer = call.eContainer();
+      EObject _eContainer_1 = _eContainer.eContainer();
+      postfix_expression parent = ((postfix_expression) _eContainer_1);
+      primary_expression _primary_expression = parent.getPrimary_expression();
+      String name = _primary_expression.getIdentifier();
+      String _xifexpression = null;
+      boolean _containsKey = this.functions.containsKey(name);
+      boolean _not = (!_containsKey);
+      if (_not) {
+        this.error("Função não definida", 
+          null);
       } else {
-        argument_expression_list _argument_expression_list_1 = call.getArgument_expression_list();
-        EList<assignment_expression> _assignment_expressions_1 = _argument_expression_list_1.getAssignment_expressions();
-        int _size_1 = _assignment_expressions_1.size();
-        ExclusiveRange _doubleDotLessThan = new ExclusiveRange(0, _size_1, true);
-        for (final Integer i : _doubleDotLessThan) {
+        String _xblockexpression_1 = null;
+        {
+          AnsicValidator.Function func = this.functions.get(name);
+          int _size = func.params_types.size();
+          String _plus = ((("Checking params for: " + func.name) + " With: ") + Integer.valueOf(_size));
+          String _plus_1 = (_plus + " params.");
+          InputOutput.<String>println(_plus_1);
+          String _xifexpression_1 = null;
+          argument_expression_list _argument_expression_list = call.getArgument_expression_list();
+          EList<assignment_expression> _assignment_expressions = _argument_expression_list.getAssignment_expressions();
+          int _size_1 = _assignment_expressions.size();
+          boolean _notEquals = (func.param_number != _size_1);
+          if (_notEquals) {
+            this.error("Numero de parametros incompativeis", 
+              AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+          } else {
+            String _xblockexpression_2 = null;
+            {
+              for (int i = 0; (i < call.getArgument_expression_list().getAssignment_expressions().size()); i++) {
+                {
+                  argument_expression_list _argument_expression_list_1 = call.getArgument_expression_list();
+                  EList<assignment_expression> _assignment_expressions_1 = _argument_expression_list_1.getAssignment_expressions();
+                  assignment_expression arg = _assignment_expressions_1.get(i);
+                  argument_expression_list _argument_expression_list_2 = call.getArgument_expression_list();
+                  EList<assignment_expression> _assignment_expressions_2 = _argument_expression_list_2.getAssignment_expressions();
+                  int _size_2 = _assignment_expressions_2.size();
+                  String _plus_2 = ("Size: " + Integer.valueOf(_size_2));
+                  InputOutput.<String>println(_plus_2);
+                  InputOutput.<String>println(("For: " + Integer.valueOf(i)));
+                  String argType = func.params_types.get(i);
+                  AnsicValidator.ExpRetType _expType = this.getExpType(arg);
+                  boolean _notEquals_1 = (!Objects.equal(_expType, null));
+                  if (_notEquals_1) {
+                    InputOutput.<String>println("Is an expression");
+                    AnsicValidator.ExpRetType expRet = this.getExpType(arg);
+                    boolean _equals = Objects.equal(expRet, AnsicValidator.ExpRetType.NUMERIC);
+                    if (_equals) {
+                      boolean _equals_1 = Objects.equal(argType, "bool");
+                      if (_equals_1) {
+                        this.error("Tipo de parametro não compativel", 
+                          AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+                      }
+                    } else {
+                      boolean _equals_2 = Objects.equal(expRet, AnsicValidator.ExpRetType.BOOL);
+                      if (_equals_2) {
+                        boolean _notEquals_2 = (!Objects.equal(argType, "bool"));
+                        if (_notEquals_2) {
+                          this.error("Tipo de parametro não compativel", 
+                            AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+                        }
+                      }
+                    }
+                  } else {
+                    InputOutput.<String>println("Is an contant or id");
+                    primary_expression idOrCons = this.primaryExpFromAssigExp(arg);
+                    InputOutput.<String>println("CP1");
+                    boolean _and = false;
+                    String _identifier = idOrCons.getIdentifier();
+                    boolean _notEquals_3 = (!Objects.equal(_identifier, null));
+                    if (!_notEquals_3) {
+                      _and = false;
+                    } else {
+                      String _identifier_1 = idOrCons.getIdentifier();
+                      String _trim = _identifier_1.trim();
+                      boolean _isEmpty = _trim.isEmpty();
+                      boolean _not_1 = (!_isEmpty);
+                      _and = _not_1;
+                    }
+                    if (_and) {
+                      InputOutput.<String>println("CP2");
+                      String _identifier_2 = idOrCons.getIdentifier();
+                      boolean _containsKey_1 = this.variables.containsKey(_identifier_2);
+                      if (_containsKey_1) {
+                        String _identifier_3 = idOrCons.getIdentifier();
+                        String _get = this.variables.get(_identifier_3);
+                        boolean _notEquals_4 = (!Objects.equal(_get, argType));
+                        if (_notEquals_4) {
+                          InputOutput.<String>println("CP3");
+                          this.error("Tipo de parametro não compativel", 
+                            AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+                        }
+                      } else {
+                        String _identifier_4 = idOrCons.getIdentifier();
+                        boolean _containsKey_2 = this.functions.containsKey(_identifier_4);
+                        if (_containsKey_2) {
+                          String _identifier_5 = idOrCons.getIdentifier();
+                          AnsicValidator.Function _get_1 = this.functions.get(_identifier_5);
+                          boolean _notEquals_5 = (!Objects.equal(_get_1.retType, argType));
+                          if (_notEquals_5) {
+                            this.error("Tipo de parametro não compativel", 
+                              AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+                          }
+                        }
+                      }
+                    }
+                    InputOutput.<String>println("CP4");
+                    boolean _and_1 = false;
+                    boolean _and_2 = false;
+                    constant _constant = idOrCons.getConstant();
+                    boolean _notEquals_6 = (!Objects.equal(_constant, null));
+                    if (!_notEquals_6) {
+                      _and_2 = false;
+                    } else {
+                      constant _constant_1 = idOrCons.getConstant();
+                      String _char = _constant_1.getChar();
+                      boolean _notEquals_7 = (!Objects.equal(_char, null));
+                      _and_2 = _notEquals_7;
+                    }
+                    if (!_and_2) {
+                      _and_1 = false;
+                    } else {
+                      boolean _notEquals_8 = (!Objects.equal(argType, "char"));
+                      _and_1 = _notEquals_8;
+                    }
+                    if (_and_1) {
+                      InputOutput.<String>println("CP5");
+                      this.error("Tipo de parametro não com \tpativel", 
+                        AnsicPackage.Literals.POSTFIX_EXPRESSION_COMPLEMENT__ARGUMENT_EXPRESSION_LIST);
+                    }
+                    InputOutput.<String>println("CP7");
+                  }
+                  InputOutput.<String>println("End of iteration");
+                }
+              }
+              _xblockexpression_2 = InputOutput.<String>println("For ended");
+            }
+            _xifexpression_1 = _xblockexpression_2;
+          }
+          _xblockexpression_1 = _xifexpression_1;
         }
+        _xifexpression = _xblockexpression_1;
+      }
+      _xblockexpression = _xifexpression;
+    }
+    return _xblockexpression;
+  }
+  
+  @Check
+  public void checkPrimaryExpression(final primary_expression exp) {
+    boolean _and = false;
+    String _identifier = exp.getIdentifier();
+    boolean _notEquals = (!Objects.equal(_identifier, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      String _identifier_1 = exp.getIdentifier();
+      String _trim = _identifier_1.trim();
+      boolean _isEmpty = _trim.isEmpty();
+      boolean _not = (!_isEmpty);
+      _and = _not;
+    }
+    if (_and) {
+      boolean _and_1 = false;
+      String _identifier_2 = exp.getIdentifier();
+      boolean _containsKey = this.variables.containsKey(_identifier_2);
+      boolean _not_1 = (!_containsKey);
+      if (!_not_1) {
+        _and_1 = false;
+      } else {
+        String _identifier_3 = exp.getIdentifier();
+        boolean _containsKey_1 = this.functions.containsKey(_identifier_3);
+        boolean _not_2 = (!_containsKey_1);
+        _and_1 = _not_2;
+      }
+      if (_and_1) {
+        this.error("Variavel não declarada", 
+          AnsicPackage.Literals.PRIMARY_EXPRESSION__IDENTIFIER);
       }
     }
   }
   
   @Check
-  public String checkDeclarationTypes(final declaration decl) {
-    String _xblockexpression = null;
+  public Object checkDeclarationTypes(final declaration decl) {
+    Object _xblockexpression = null;
     {
       EList<declaration_specifiers> _declaration_specifiers = decl.getDeclaration_specifiers();
       declaration_specifiers _get = _declaration_specifiers.get(0);
@@ -499,12 +951,59 @@ public class AnsicValidator extends AbstractAnsicValidator {
       declarator _declarator = _init_declarator.getDeclarator();
       direct_declarator _direct_declarator = _declarator.getDirect_declarator();
       String id = _direct_declarator.getIdentifier();
+      boolean _containsKey = this.variables.containsKey(id);
+      if (_containsKey) {
+        this.error("Variável já declarada", null);
+      }
+      this.variables.put(id, leftType);
       EList<init_declarator_list> _init_declarator_list_1 = decl.getInit_declarator_list();
       init_declarator_list _get_2 = _init_declarator_list_1.get(0);
       init_declarator _init_declarator_1 = _get_2.getInit_declarator();
       initializer _initializer = _init_declarator_1.getInitializer();
       assignment_expression _assignment_expression = _initializer.getAssignment_expression();
-      conditional_expression _conditional_expression = _assignment_expression.getConditional_expression();
+      AnsicValidator.ExpRetType _expType = this.getExpType(_assignment_expression);
+      boolean _equals = Objects.equal(_expType, null);
+      if (_equals) {
+      } else {
+        EList<init_declarator_list> _init_declarator_list_2 = decl.getInit_declarator_list();
+        init_declarator_list _get_3 = _init_declarator_list_2.get(0);
+        init_declarator _init_declarator_2 = _get_3.getInit_declarator();
+        initializer _initializer_1 = _init_declarator_2.getInitializer();
+        assignment_expression _assignment_expression_1 = _initializer_1.getAssignment_expression();
+        AnsicValidator.ExpRetType expType = this.getExpType(_assignment_expression_1);
+        boolean _equals_1 = Objects.equal(expType, AnsicValidator.ExpRetType.NUMERIC);
+        if (_equals_1) {
+          boolean _or = false;
+          boolean _equals_2 = Objects.equal(leftType, "bool");
+          if (_equals_2) {
+            _or = true;
+          } else {
+            boolean _equals_3 = Objects.equal(leftType, "char");
+            _or = _equals_3;
+          }
+          if (_or) {
+            this.error(
+              "Tipos incompativeis para atribuição", 
+              AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+          }
+        } else {
+          boolean _equals_4 = Objects.equal(expType, AnsicValidator.ExpRetType.BOOL);
+          if (_equals_4) {
+            boolean _notEquals = (!Objects.equal(leftType, "bool"));
+            if (_notEquals) {
+              this.error(
+                "Não é possível atribuir retorno booleano para o tipo declarado", 
+                AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+            }
+          }
+        }
+      }
+      EList<init_declarator_list> _init_declarator_list_3 = decl.getInit_declarator_list();
+      init_declarator_list _get_4 = _init_declarator_list_3.get(0);
+      init_declarator _init_declarator_3 = _get_4.getInit_declarator();
+      initializer _initializer_2 = _init_declarator_3.getInitializer();
+      assignment_expression _assignment_expression_2 = _initializer_2.getAssignment_expression();
+      conditional_expression _conditional_expression = _assignment_expression_2.getConditional_expression();
       logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
       logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
       inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
@@ -519,15 +1018,17 @@ public class AnsicValidator extends AbstractAnsicValidator {
       unary_expression _unary_expression = _cast_expression.getUnary_expression();
       postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
       primary_expression rightType = _postfix_expression.getPrimary_expression();
+      Object _xifexpression = null;
       constant _constant = rightType.getConstant();
-      boolean _notEquals = (!Objects.equal(_constant, null));
-      if (_notEquals) {
+      boolean _notEquals_1 = (!Objects.equal(_constant, null));
+      if (_notEquals_1) {
         this.checkDeclarationWithConstant(leftType, rightType);
       } else {
+        Object _xifexpression_1 = null;
         boolean _and = false;
         String _identifier = rightType.getIdentifier();
-        boolean _notEquals_1 = (!Objects.equal(_identifier, null));
-        if (!_notEquals_1) {
+        boolean _notEquals_2 = (!Objects.equal(_identifier, null));
+        if (!_notEquals_2) {
           _and = false;
         } else {
           String _identifier_1 = rightType.getIdentifier();
@@ -537,40 +1038,83 @@ public class AnsicValidator extends AbstractAnsicValidator {
           _and = _not;
         }
         if (_and) {
+          Object _xifexpression_2 = null;
+          boolean _and_1 = false;
+          boolean _or_1 = false;
           String _identifier_2 = rightType.getIdentifier();
-          boolean _containsKey = this.variables.containsKey(_identifier_2);
-          if (_containsKey) {
+          boolean _containsKey_1 = this.variables.containsKey(_identifier_2);
+          if (_containsKey_1) {
+            _or_1 = true;
+          } else {
             String _identifier_3 = rightType.getIdentifier();
-            String rType = this.variables.get(_identifier_3);
-            boolean _and_1 = false;
-            boolean _equals = Objects.equal(leftType, "enum");
-            if (!_equals) {
-              _and_1 = false;
+            boolean _containsKey_2 = this.functions.containsKey(_identifier_3);
+            _or_1 = _containsKey_2;
+          }
+          if (!_or_1) {
+            _and_1 = false;
+          } else {
+            EList<init_declarator_list> _init_declarator_list_4 = decl.getInit_declarator_list();
+            init_declarator_list _get_5 = _init_declarator_list_4.get(0);
+            init_declarator _init_declarator_4 = _get_5.getInit_declarator();
+            initializer _initializer_3 = _init_declarator_4.getInitializer();
+            assignment_expression _assignment_expression_3 = _initializer_3.getAssignment_expression();
+            AnsicValidator.ExpRetType _expType_1 = this.getExpType(_assignment_expression_3);
+            boolean _equals_5 = Objects.equal(_expType_1, null);
+            _and_1 = _equals_5;
+          }
+          if (_and_1) {
+            String _identifier_4 = rightType.getIdentifier();
+            boolean _containsKey_3 = this.variables.containsKey(_identifier_4);
+            if (_containsKey_3) {
+              String _identifier_5 = rightType.getIdentifier();
+              String varType = this.variables.get(_identifier_5);
+              boolean _notEquals_3 = (!Objects.equal(varType, leftType));
+              if (_notEquals_3) {
+                this.error("Tipos não compatíveis", 
+                  AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+              }
             } else {
-              boolean _notEquals_2 = (!Objects.equal(rightType, "enum"));
-              _and_1 = _notEquals_2;
+              String _identifier_6 = rightType.getIdentifier();
+              boolean _containsKey_4 = this.functions.containsKey(_identifier_6);
+              if (_containsKey_4) {
+                String _identifier_7 = rightType.getIdentifier();
+                AnsicValidator.Function _get_6 = this.functions.get(_identifier_7);
+                String retType = _get_6.retType;
+                boolean _notEquals_4 = (!Objects.equal(retType, leftType));
+                if (_notEquals_4) {
+                  this.error("Retorno de função não compativel com tipo de variavel", 
+                    AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+                }
+              }
             }
-            if (_and_1) {
+            String _identifier_8 = rightType.getIdentifier();
+            String rType = this.variables.get(_identifier_8);
+            boolean _and_2 = false;
+            boolean _equals_6 = Objects.equal(leftType, "enum");
+            if (!_equals_6) {
+              _and_2 = false;
+            } else {
+              boolean _notEquals_5 = (!Objects.equal(rightType, "enum"));
+              _and_2 = _notEquals_5;
+            }
+            if (_and_2) {
               this.error("A variavel deve ser um enum", 
                 AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
             }
           } else {
-            this.error("Variavel não declarada", 
-              AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
+            _xifexpression_2 = null;
           }
+          _xifexpression_1 = _xifexpression_2;
         } else {
+          Object _xifexpression_3 = null;
           expression _expression = rightType.getExpression();
-          boolean _notEquals_3 = (!Objects.equal(_expression, null));
-          if (_notEquals_3) {
+          boolean _notEquals_6 = (!Objects.equal(_expression, null));
+          if (_notEquals_6) {
+            _xifexpression_3 = null;
           }
+          _xifexpression_1 = _xifexpression_3;
         }
-      }
-      String _xifexpression = null;
-      boolean _containsKey_1 = this.variables.containsKey(id);
-      if (_containsKey_1) {
-        this.error("Variável já declarada", null);
-      } else {
-        _xifexpression = this.variables.put(id, leftType);
+        _xifexpression = _xifexpression_1;
       }
       _xblockexpression = _xifexpression;
     }
@@ -617,12 +1161,45 @@ public class AnsicValidator extends AbstractAnsicValidator {
     postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
     primary_expression _primary_expression = _postfix_expression.getPrimary_expression();
     String idLeft = _primary_expression.getIdentifier();
+    String left_type = this.variables.get(idLeft);
     Set<String> _keySet = this.variables.keySet();
     boolean _contains = _keySet.contains(idLeft);
     boolean _not = (!_contains);
     if (_not) {
       this.error("Variavel não declarada", 
         AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION);
+    }
+    AnsicValidator.ExpRetType _expType = this.getExpType(asexp);
+    boolean _equals = Objects.equal(_expType, null);
+    if (_equals) {
+    } else {
+      AnsicValidator.ExpRetType expType = this.getExpType(asexp);
+      boolean _equals_1 = Objects.equal(expType, AnsicValidator.ExpRetType.NUMERIC);
+      if (_equals_1) {
+        boolean _or = false;
+        boolean _equals_2 = Objects.equal(left_type, "bool");
+        if (_equals_2) {
+          _or = true;
+        } else {
+          boolean _equals_3 = Objects.equal(left_type, "char");
+          _or = _equals_3;
+        }
+        if (_or) {
+          this.error(
+            "Tipos incompativeis para atribuição", 
+            null);
+        }
+      } else {
+        boolean _equals_4 = Objects.equal(expType, AnsicValidator.ExpRetType.BOOL);
+        if (_equals_4) {
+          boolean _notEquals = (!Objects.equal(left_type, "bool"));
+          if (_notEquals) {
+            this.error(
+              "Não é possível atribuir retorno booleano para o tipo declarado", 
+              null);
+          }
+        }
+      }
     }
     assignment_expression _assignment_expression = asexp.getAssignment_expression();
     conditional_expression _conditional_expression = _assignment_expression.getConditional_expression();
@@ -641,12 +1218,12 @@ public class AnsicValidator extends AbstractAnsicValidator {
     postfix_expression _postfix_expression_1 = _unary_expression_1.getPostfix_expression();
     primary_expression idRight = _postfix_expression_1.getPrimary_expression();
     assignment_expression _assignment_expression_1 = asexp.getAssignment_expression();
-    boolean _notEquals = (!Objects.equal(_assignment_expression_1, null));
-    if (_notEquals) {
+    boolean _notEquals_1 = (!Objects.equal(_assignment_expression_1, null));
+    if (_notEquals_1) {
       boolean _and = false;
       String _identifier = idRight.getIdentifier();
-      boolean _notEquals_1 = (!Objects.equal(_identifier, null));
-      if (!_notEquals_1) {
+      boolean _notEquals_2 = (!Objects.equal(_identifier, null));
+      if (!_notEquals_2) {
         _and = false;
       } else {
         String _identifier_1 = idRight.getIdentifier();
@@ -656,19 +1233,28 @@ public class AnsicValidator extends AbstractAnsicValidator {
         _and = _not_1;
       }
       if (_and) {
-        String _identifier_2 = idRight.getIdentifier();
-        this.validateActribWithId(idLeft, _identifier_2);
+        boolean _containsKey = this.variables.containsKey(idRight);
+        if (_containsKey) {
+          String _identifier_2 = idRight.getIdentifier();
+          this.validateActribWithId(idLeft, _identifier_2);
+        } else {
+          boolean _containsKey_1 = this.functions.containsKey(idRight);
+          if (_containsKey_1) {
+            AnsicValidator.Function _get = this.functions.get(idRight);
+            boolean _notEquals_3 = (!Objects.equal(_get.retType, left_type));
+            if (_notEquals_3) {
+              this.error("Tipo de rtorno não compatível com atribuição", 
+                null);
+            }
+          }
+        }
       } else {
         constant _constant = idRight.getConstant();
-        boolean _notEquals_2 = (!Objects.equal(_constant, null));
-        if (_notEquals_2) {
-          String left_type = this.variables.get(idLeft);
+        boolean _notEquals_4 = (!Objects.equal(_constant, null));
+        if (_notEquals_4) {
+          String _get_1 = this.variables.get(idLeft);
+          left_type = _get_1;
           this.checkDeclarationWithConstant(left_type, idRight);
-        } else {
-          expression _expression = idRight.getExpression();
-          boolean _notEquals_3 = (!Objects.equal(_expression, null));
-          if (_notEquals_3) {
-          }
         }
       }
     }
@@ -806,14 +1392,12 @@ public class AnsicValidator extends AbstractAnsicValidator {
     AnsicValidator.Function _xblockexpression = null;
     {
       AnsicValidator.Function f = new AnsicValidator.Function();
-      InputOutput.<String>println("Creating function...");
       AnsicValidator.Function _xifexpression = null;
       declarator _declarator = func_decl.getDeclarator();
       direct_declarator _direct_declarator = _declarator.getDirect_declarator();
       direct_declarator_linha _direct_declarator_linha = _direct_declarator.getDirect_declarator_linha();
       direct_declarator_complemento _direct_declarator_complemento = _direct_declarator_linha.getDirect_declarator_complemento();
-      parameter_type_list _parameter_type_list = _direct_declarator_complemento.getParameter_type_list();
-      boolean _equals = Objects.equal(_parameter_type_list, null);
+      boolean _equals = Objects.equal(_direct_declarator_complemento, null);
       if (_equals) {
         AnsicValidator.Function _xblockexpression_1 = null;
         {
@@ -849,8 +1433,8 @@ public class AnsicValidator extends AbstractAnsicValidator {
           direct_declarator _direct_declarator_2 = _declarator_2.getDirect_declarator();
           direct_declarator_linha _direct_declarator_linha_1 = _direct_declarator_2.getDirect_declarator_linha();
           direct_declarator_complemento _direct_declarator_complemento_1 = _direct_declarator_linha_1.getDirect_declarator_complemento();
-          parameter_type_list _parameter_type_list_1 = _direct_declarator_complemento_1.getParameter_type_list();
-          parameter_lista _parameter_lista = _parameter_type_list_1.getParameter_lista();
+          parameter_type_list _parameter_type_list = _direct_declarator_complemento_1.getParameter_type_list();
+          parameter_lista _parameter_lista = _parameter_type_list.getParameter_lista();
           EList<parameter_declaration> params = _parameter_lista.getParameter_declarations();
           int _size = params.size();
           f.param_number = _size;

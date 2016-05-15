@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.relational_expression_linha#getShift_expression_complement <em>Shift expression complement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.relational_expression_linha#getRelational_expression_complement <em>Relational expression complement</em>}</li>
  *   <li>{@link org.xtext.example.ansic.relational_expression_linha#getRelational_expression_linha <em>Relational expression linha</em>}</li>
  * </ul>
  *
@@ -25,30 +25,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface relational_expression_linha extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Shift expression complement</b></em>' containment reference.
+   * Returns the value of the '<em><b>Relational expression complement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Shift expression complement</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Relational expression complement</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Shift expression complement</em>' containment reference.
-   * @see #setShift_expression_complement(shift_expression_complement)
-   * @see org.xtext.example.ansic.AnsicPackage#getrelational_expression_linha_Shift_expression_complement()
+   * @return the value of the '<em>Relational expression complement</em>' containment reference.
+   * @see #setRelational_expression_complement(relational_expression_complement)
+   * @see org.xtext.example.ansic.AnsicPackage#getrelational_expression_linha_Relational_expression_complement()
    * @model containment="true"
    * @generated
    */
-  shift_expression_complement getShift_expression_complement();
+  relational_expression_complement getRelational_expression_complement();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.ansic.relational_expression_linha#getShift_expression_complement <em>Shift expression complement</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.ansic.relational_expression_linha#getRelational_expression_complement <em>Relational expression complement</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Shift expression complement</em>' containment reference.
-   * @see #getShift_expression_complement()
+   * @param value the new value of the '<em>Relational expression complement</em>' containment reference.
+   * @see #getRelational_expression_complement()
    * @generated
    */
-  void setShift_expression_complement(shift_expression_complement value);
+  void setRelational_expression_complement(relational_expression_complement value);
 
   /**
    * Returns the value of the '<em><b>Relational expression linha</b></em>' containment reference.

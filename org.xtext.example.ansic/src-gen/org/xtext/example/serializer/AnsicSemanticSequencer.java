@@ -1943,17 +1943,17 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     relational_expression_linha returns relational_expression_linha
 	 *
 	 * Constraint:
-	 *     (shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)
+	 *     (relational_expression_complement=relational_expression_complement relational_expression_linha=relational_expression_linha)
 	 */
 	protected void sequence_relational_expression_linha(ISerializationContext context, relational_expression_linha semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT));
 			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0(), semanticObject.getShift_expression_complement());
+		feeder.accept(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_complementRelational_expression_complementParserRuleCall_0_0(), semanticObject.getRelational_expression_complement());
 		feeder.accept(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_0(), semanticObject.getRelational_expression_linha());
 		feeder.finish();
 	}

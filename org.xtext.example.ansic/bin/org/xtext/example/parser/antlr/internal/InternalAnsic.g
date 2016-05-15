@@ -7662,18 +7662,18 @@ rulerelational_expression_linha returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_complementRelational_expression_complementParserRuleCall_0_0());
 				}
-				lv_shift_expression_complement_0_0=ruleshift_expression_complement
+				lv_relational_expression_complement_0_0=rulerelational_expression_complement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRelational_expression_linhaRule());
 					}
 					set(
 						$current,
-						"shift_expression_complement",
-						lv_shift_expression_complement_0_0,
-						"org.xtext.example.Ansic.shift_expression_complement");
+						"relational_expression_complement",
+						lv_relational_expression_complement_0_0,
+						"org.xtext.example.Ansic.relational_expression_complement");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -7698,6 +7698,128 @@ rulerelational_expression_linha returns [EObject current=null]
 			)
 		)
 	)?
+;
+
+// Entry rule entryRulerelational_expression_complement
+entryRulerelational_expression_complement returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRelational_expression_complementRule()); }
+	iv_rulerelational_expression_complement=rulerelational_expression_complement
+	{ $current=$iv_rulerelational_expression_complement.current; }
+	EOF;
+
+// Rule relational_expression_complement
+rulerelational_expression_complement returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			otherlv_0='<'
+			{
+				newLeafNode(otherlv_0, grammarAccess.getRelational_expression_complementAccess().getLessThanSignKeyword_0_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_0_1_0());
+					}
+					lv_shift_expression_1_0=ruleshift_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
+						}
+						set(
+							$current,
+							"shift_expression",
+							lv_shift_expression_1_0,
+							"org.xtext.example.Ansic.shift_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_2='>'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getRelational_expression_complementAccess().getGreaterThanSignKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_1_1_0());
+					}
+					lv_shift_expression_3_0=ruleshift_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
+						}
+						set(
+							$current,
+							"shift_expression",
+							lv_shift_expression_3_0,
+							"org.xtext.example.Ansic.shift_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_4='<='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getRelational_expression_complementAccess().getLessThanSignEqualsSignKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_2_1_0());
+					}
+					lv_shift_expression_5_0=ruleshift_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
+						}
+						set(
+							$current,
+							"shift_expression",
+							lv_shift_expression_5_0,
+							"org.xtext.example.Ansic.shift_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_6='>='
+			{
+				newLeafNode(otherlv_6, grammarAccess.getRelational_expression_complementAccess().getGreaterThanSignEqualsSignKeyword_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_3_1_0());
+					}
+					lv_shift_expression_7_0=ruleshift_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
+						}
+						set(
+							$current,
+							"shift_expression",
+							lv_shift_expression_7_0,
+							"org.xtext.example.Ansic.shift_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+	)
 ;
 
 // Entry rule entryRuleequality_expression

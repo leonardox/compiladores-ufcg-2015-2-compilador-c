@@ -2789,13 +2789,13 @@ public interface AnsicPackage extends EPackage
   int RELATIONAL_EXPRESSION_LINHA = 75;
 
   /**
-   * The feature id for the '<em><b>Shift expression complement</b></em>' containment reference.
+   * The feature id for the '<em><b>Relational expression complement</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT = 0;
+  int RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT = 0;
 
   /**
    * The feature id for the '<em><b>Relational expression linha</b></em>' containment reference.
@@ -7234,15 +7234,15 @@ public interface AnsicPackage extends EPackage
   EClass getrelational_expression_linha();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression_linha#getShift_expression_complement <em>Shift expression complement</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression_linha#getRelational_expression_complement <em>Relational expression complement</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Shift expression complement</em>'.
-   * @see org.xtext.example.ansic.relational_expression_linha#getShift_expression_complement()
+   * @return the meta object for the containment reference '<em>Relational expression complement</em>'.
+   * @see org.xtext.example.ansic.relational_expression_linha#getRelational_expression_complement()
    * @see #getrelational_expression_linha()
    * @generated
    */
-  EReference getrelational_expression_linha_Shift_expression_complement();
+  EReference getrelational_expression_linha_Relational_expression_complement();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.relational_expression_linha#getRelational_expression_linha <em>Relational expression linha</em>}'.
@@ -10917,12 +10917,12 @@ public interface AnsicPackage extends EPackage
     EClass RELATIONAL_EXPRESSION_LINHA = eINSTANCE.getrelational_expression_linha();
 
     /**
-     * The meta object literal for the '<em><b>Shift expression complement</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Relational expression complement</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT = eINSTANCE.getrelational_expression_linha_Shift_expression_complement();
+    EReference RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT = eINSTANCE.getrelational_expression_linha_Relational_expression_complement();
 
     /**
      * The meta object literal for the '<em><b>Relational expression linha</b></em>' containment reference feature.

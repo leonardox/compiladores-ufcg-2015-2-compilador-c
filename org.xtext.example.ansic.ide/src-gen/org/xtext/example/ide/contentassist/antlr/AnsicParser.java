@@ -557,7 +557,7 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getShift_expression_complementAccess().getAdditive_expressionAssignment_1_1(), "rule__Shift_expression_complement__Additive_expressionAssignment_1_1");
 					put(grammarAccess.getRelational_expressionAccess().getShift_expressionAssignment_0(), "rule__Relational_expression__Shift_expressionAssignment_0");
 					put(grammarAccess.getRelational_expressionAccess().getRelational_expression_linhaAssignment_1(), "rule__Relational_expression__Relational_expression_linhaAssignment_1");
-					put(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementAssignment_0(), "rule__Relational_expression_linha__Shift_expression_complementAssignment_0");
+					put(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_complementAssignment_0(), "rule__Relational_expression_linha__Relational_expression_complementAssignment_0");
 					put(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_linhaAssignment_1(), "rule__Relational_expression_linha__Relational_expression_linhaAssignment_1");
 					put(grammarAccess.getRelational_expression_complementAccess().getShift_expressionAssignment_0_1(), "rule__Relational_expression_complement__Shift_expressionAssignment_0_1");
 					put(grammarAccess.getRelational_expression_complementAccess().getShift_expressionAssignment_1_1(), "rule__Relational_expression_complement__Shift_expressionAssignment_1_1");
