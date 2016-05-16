@@ -191,6 +191,115 @@ public class AnsicValidator extends AbstractAnsicValidator {
   }
   
   @Check
+  public void validateFunctionReturn(final jump_statement ret) {
+    expression _expression = ret.getExpression();
+    boolean _notEquals = (!Objects.equal(_expression, null));
+    if (_notEquals) {
+      EObject current = ret.eContainer();
+      while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
+        EObject _eContainer = current.eContainer();
+        current = _eContainer;
+      }
+      if ((current instanceof function_definition)) {
+        function_definition func = ((function_definition) current);
+        EList<declaration_specifiers> _declaration_specifiers = func.getDeclaration_specifiers();
+        declaration_specifiers _get = _declaration_specifiers.get(0);
+        type_specifier _type_specifier = _get.getType_specifier();
+        String argType = _type_specifier.getType_name_str();
+        boolean _notEquals_1 = (!Objects.equal(argType, "void"));
+        if (_notEquals_1) {
+          expression _expression_1 = ret.getExpression();
+          assignment_expression arg = _expression_1.getAssignment_expression();
+          AnsicValidator.ExpRetType _expType = this.getExpType(arg);
+          boolean _notEquals_2 = (!Objects.equal(_expType, null));
+          if (_notEquals_2) {
+            AnsicValidator.ExpRetType expRet = this.getExpType(arg);
+            boolean _equals = Objects.equal(expRet, AnsicValidator.ExpRetType.NUMERIC);
+            if (_equals) {
+              boolean _equals_1 = Objects.equal(argType, "bool");
+              if (_equals_1) {
+                this.error("Tipo de parametro não compativel", 
+                  null);
+              }
+            } else {
+              boolean _equals_2 = Objects.equal(expRet, AnsicValidator.ExpRetType.BOOL);
+              if (_equals_2) {
+                boolean _notEquals_3 = (!Objects.equal(argType, "bool"));
+                if (_notEquals_3) {
+                  this.error("Tipo de parametro não compativel", 
+                    null);
+                }
+              }
+            }
+          } else {
+            InputOutput.<String>println("Is an contant or id");
+            primary_expression idOrCons = this.primaryExpFromAssigExp(arg);
+            boolean _and = false;
+            String _identifier = idOrCons.getIdentifier();
+            boolean _notEquals_4 = (!Objects.equal(_identifier, null));
+            if (!_notEquals_4) {
+              _and = false;
+            } else {
+              String _identifier_1 = idOrCons.getIdentifier();
+              String _trim = _identifier_1.trim();
+              boolean _isEmpty = _trim.isEmpty();
+              boolean _not = (!_isEmpty);
+              _and = _not;
+            }
+            if (_and) {
+              String _identifier_2 = idOrCons.getIdentifier();
+              boolean _containsKey = this.variables.containsKey(_identifier_2);
+              if (_containsKey) {
+                String _identifier_3 = idOrCons.getIdentifier();
+                String _get_1 = this.variables.get(_identifier_3);
+                boolean _notEquals_5 = (!Objects.equal(_get_1, argType));
+                if (_notEquals_5) {
+                  this.error("Retorno não compatível", 
+                    null);
+                }
+              } else {
+                String _identifier_4 = idOrCons.getIdentifier();
+                boolean _containsKey_1 = this.functions.containsKey(_identifier_4);
+                if (_containsKey_1) {
+                  String _identifier_5 = idOrCons.getIdentifier();
+                  AnsicValidator.Function _get_2 = this.functions.get(_identifier_5);
+                  boolean _notEquals_6 = (!Objects.equal(_get_2.retType, argType));
+                  if (_notEquals_6) {
+                    this.error("Retorno não compatíve", 
+                      null);
+                  }
+                }
+              }
+            }
+            boolean _and_1 = false;
+            boolean _and_2 = false;
+            constant _constant = idOrCons.getConstant();
+            boolean _notEquals_7 = (!Objects.equal(_constant, null));
+            if (!_notEquals_7) {
+              _and_2 = false;
+            } else {
+              constant _constant_1 = idOrCons.getConstant();
+              String _char = _constant_1.getChar();
+              boolean _notEquals_8 = (!Objects.equal(_char, null));
+              _and_2 = _notEquals_8;
+            }
+            if (!_and_2) {
+              _and_1 = false;
+            } else {
+              boolean _notEquals_9 = (!Objects.equal(argType, "char"));
+              _and_1 = _notEquals_9;
+            }
+            if (_and_1) {
+              this.error("Retorno não compatíve", 
+                null);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @Check
   public void checkForEmptyParamFunc(final PostFixEmpryParams call) {
     EObject _eContainer = call.eContainer();
     EObject _eContainer_1 = _eContainer.eContainer();

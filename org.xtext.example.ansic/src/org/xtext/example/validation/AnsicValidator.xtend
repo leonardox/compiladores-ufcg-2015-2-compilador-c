@@ -12,6 +12,8 @@ import org.xtext.example.ansic.translation_unit
 import org.xtext.example.ansic.unary_expression
 import org.xtext.example.ansic.cast_expression
 import org.xtext.example.ansic.block_item_list
+import org.xtext.example.ansic.jump_statement
+
 import org.xtext.example.ansic.block_item_list_linha
 import org.xtext.example.ansic.multiplicative_expression
 import org.xtext.example.ansic.logical_or_expression
@@ -90,6 +92,64 @@ class AnsicValidator extends AbstractAnsicValidator {
 							error('Esse tipo não recebe valores numéricos com ponto flutuante', 
 					AnsicPackage.Literals.DECLARATION__INIT_DECLARATOR_LIST);
 			}
+		}
+	}
+	
+	@Check
+	def validateFunctionReturn(jump_statement ret){
+		if(ret.expression != null){
+			var current = ret.eContainer();
+            while(current != null && !(current instanceof function_definition)){
+                current = current.eContainer();
+            }
+            if(current instanceof function_definition){
+                var func = current as function_definition;
+                var argType = func.declaration_specifiers.get(0).type_specifier.type_name_str;
+                if(argType != "void"){
+                	var arg = ret.expression.assignment_expression;
+                	if(getExpType(arg) != null){
+						var expRet = getExpType(arg);
+						if(expRet == ExpRetType.NUMERIC){
+							if(argType == 'bool'){
+								error("Tipo de parametro não compativel",
+									null
+								)
+							}
+						}else if(expRet == ExpRetType.BOOL){
+							if(argType != 'bool'){
+								error("Tipo de parametro não compativel",
+									null
+								)
+							}
+						}
+					}else{
+						println("Is an contant or id")
+						var idOrCons = primaryExpFromAssigExp(arg);
+						if(idOrCons.identifier != null && !idOrCons.identifier.trim().isEmpty()){
+							if(variables.containsKey(idOrCons.identifier)){
+								//é UMA VARIAAVEL
+								if(variables.get(idOrCons.identifier) != argType){
+									error("Retorno não compatível",
+										null
+									)
+								}
+							}else if( functions.containsKey(idOrCons.identifier)){
+								if(functions.get(idOrCons.identifier).retType != argType){
+									error("Retorno não compatíve",
+										null
+									)
+								}
+							}
+						}
+						if(idOrCons.constant != null && idOrCons.constant.char != null && argType != 'char'){
+							error("Retorno não compatíve",
+									null
+							)
+						}
+						//O argumento é uma contante ou um id
+					}
+                }
+            }
 		}
 	}
 	
