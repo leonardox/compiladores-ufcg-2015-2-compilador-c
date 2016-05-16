@@ -23,6 +23,9 @@ import org.xtext.example.ansic.and_expression;
 import org.xtext.example.ansic.and_expression_linha;
 import org.xtext.example.ansic.argument_expression_list;
 import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.block_item_list;
+import org.xtext.example.ansic.block_item_list_linha;
 import org.xtext.example.ansic.cast_expression;
 import org.xtext.example.ansic.compound_statement;
 import org.xtext.example.ansic.conditional_expression;
@@ -46,6 +49,7 @@ import org.xtext.example.ansic.inclusive_or_expression_linha;
 import org.xtext.example.ansic.init_declarator;
 import org.xtext.example.ansic.init_declarator_list;
 import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.jump_statement;
 import org.xtext.example.ansic.logical_and_expression;
 import org.xtext.example.ansic.logical_and_expression_linha;
 import org.xtext.example.ansic.logical_or_expression;
@@ -302,6 +306,111 @@ public class AnsicValidator extends AbstractAnsicValidator {
       return AnsicValidator.ExpRetType.NUMERIC;
     }
     return null;
+  }
+  
+  @Check
+  public void checkBlockItemList(final block_item_list item) {
+    EList<block_item_list_linha> _block_item_list_linha = item.getBlock_item_list_linha();
+    boolean _isEmpty = _block_item_list_linha.isEmpty();
+    if (_isEmpty) {
+      EObject current = item.eContainer();
+      while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
+        EObject _eContainer = current.eContainer();
+        current = _eContainer;
+      }
+      if ((current instanceof function_definition)) {
+        InputOutput.<String>println("Achou funcao2...");
+        function_definition func = ((function_definition) current);
+        EList<declaration_specifiers> _declaration_specifiers = func.getDeclaration_specifiers();
+        declaration_specifiers _get = _declaration_specifiers.get(0);
+        type_specifier _type_specifier = _get.getType_specifier();
+        String retType = _type_specifier.getType_name_str();
+        boolean _notEquals = (!Objects.equal(retType, "void"));
+        if (_notEquals) {
+          boolean _or = false;
+          boolean _or_1 = false;
+          block_item _block_item = item.getBlock_item();
+          statement _statement = _block_item.getStatement();
+          boolean _equals = Objects.equal(_statement, null);
+          if (_equals) {
+            _or_1 = true;
+          } else {
+            block_item _block_item_1 = item.getBlock_item();
+            statement _statement_1 = _block_item_1.getStatement();
+            jump_statement _jump_statement = _statement_1.getJump_statement();
+            boolean _equals_1 = Objects.equal(_jump_statement, null);
+            _or_1 = _equals_1;
+          }
+          if (_or_1) {
+            _or = true;
+          } else {
+            block_item _block_item_2 = item.getBlock_item();
+            statement _statement_2 = _block_item_2.getStatement();
+            jump_statement _jump_statement_1 = _statement_2.getJump_statement();
+            expression _expression = _jump_statement_1.getExpression();
+            boolean _equals_2 = Objects.equal(_expression, null);
+            _or = _equals_2;
+          }
+          if (_or) {
+            this.error("Falta o return", null);
+          }
+        }
+      }
+    }
+  }
+  
+  @Check
+  public void checkBlockItemListLinha(final block_item_list_linha item) {
+    InputOutput.<String>println("Sem instancia...");
+    EList<block_item_list_linha> _block_item_list_linha = item.getBlock_item_list_linha();
+    boolean _isEmpty = _block_item_list_linha.isEmpty();
+    if (_isEmpty) {
+      InputOutput.<String>println("Iniciando checagem...");
+      EObject current = item.eContainer();
+      while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
+        EObject _eContainer = current.eContainer();
+        current = _eContainer;
+      }
+      InputOutput.<String>println("Achou funcao...");
+      if ((current instanceof function_definition)) {
+        InputOutput.<String>println("Achou funcao2...");
+        function_definition func = ((function_definition) current);
+        EList<declaration_specifiers> _declaration_specifiers = func.getDeclaration_specifiers();
+        declaration_specifiers _get = _declaration_specifiers.get(0);
+        type_specifier _type_specifier = _get.getType_specifier();
+        String retType = _type_specifier.getType_name_str();
+        boolean _notEquals = (!Objects.equal(retType, "void"));
+        if (_notEquals) {
+          boolean _or = false;
+          boolean _or_1 = false;
+          block_item _block_item = item.getBlock_item();
+          statement _statement = _block_item.getStatement();
+          boolean _equals = Objects.equal(_statement, null);
+          if (_equals) {
+            _or_1 = true;
+          } else {
+            block_item _block_item_1 = item.getBlock_item();
+            statement _statement_1 = _block_item_1.getStatement();
+            jump_statement _jump_statement = _statement_1.getJump_statement();
+            boolean _equals_1 = Objects.equal(_jump_statement, null);
+            _or_1 = _equals_1;
+          }
+          if (_or_1) {
+            _or = true;
+          } else {
+            block_item _block_item_2 = item.getBlock_item();
+            statement _statement_2 = _block_item_2.getStatement();
+            jump_statement _jump_statement_1 = _statement_2.getJump_statement();
+            expression _expression = _jump_statement_1.getExpression();
+            boolean _equals_2 = Objects.equal(_expression, null);
+            _or = _equals_2;
+          }
+          if (_or) {
+            this.error("Falta o return", null);
+          }
+        }
+      }
+    }
   }
   
   public AnsicValidator.ExpRetType evaluateExp(final primary_expression primatyExp) {

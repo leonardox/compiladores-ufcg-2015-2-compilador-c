@@ -11,6 +11,8 @@ import org.xtext.example.ansic.postfix_expression_complement
 import org.xtext.example.ansic.translation_unit
 import org.xtext.example.ansic.unary_expression
 import org.xtext.example.ansic.cast_expression
+import org.xtext.example.ansic.block_item_list
+import org.xtext.example.ansic.block_item_list_linha
 import org.xtext.example.ansic.multiplicative_expression
 import org.xtext.example.ansic.logical_or_expression
 import org.xtext.example.ansic.inclusive_or_expression
@@ -171,6 +173,56 @@ class AnsicValidator extends AbstractAnsicValidator {
 		}
 		return null;		
 	}
+	
+	    @Check
+    def checkBlockItemList(block_item_list item){
+        if(item.block_item_list_linha.isEmpty()){
+            //função de uma linha
+            //Final na função
+            var current = item.eContainer();
+            while(current != null && !(current instanceof function_definition)){
+                current = current.eContainer();
+            }
+            if(current instanceof function_definition){
+                println("Achou funcao2...");
+                var func = current as function_definition;
+                var retType = func.declaration_specifiers.get(0).type_specifier.type_name_str;
+                if(retType != "void"){
+                    if(item.block_item.statement == null || item.block_item.statement.jump_statement == null
+                        || item.block_item.statement.jump_statement.expression == null
+                    ){
+                        error("Falta o return", null);
+                    }
+                }
+            }
+        }    
+    }
+    
+    @Check
+    def checkBlockItemListLinha(block_item_list_linha item){
+        println("Sem instancia...");
+        if(item.block_item_list_linha.isEmpty()){
+            println("Iniciando checagem...");
+            var current = item.eContainer();
+            while(current != null && !(current instanceof function_definition)){
+                current = current.eContainer();
+            }
+            println("Achou funcao...");
+            if(current instanceof function_definition){
+                println("Achou funcao2...");
+                var func = current as function_definition;
+                var retType = func.declaration_specifiers.get(0).type_specifier.type_name_str;
+                if(retType != "void"){
+                    if(item.block_item.statement == null || item.block_item.statement.jump_statement == null
+                        || item.block_item.statement.jump_statement.expression == null
+                    ){
+                        error("Falta o return", null);
+                    }
+                }
+            }
+            //Final na função
+        }    
+    }
 	
 	def evaluateExp(primary_expression primatyExp){
 		if(primatyExp.expression == null){
