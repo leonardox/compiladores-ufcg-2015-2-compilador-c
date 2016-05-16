@@ -227,10 +227,10 @@ class AnsicValidator extends AbstractAnsicValidator {
 			var lType = evaluateExp(currentExp);			
 			if(lType == ExpRetType.BOOL){
 				error("Expressão relacional não pode operar em cima deste tipo", 
-					AnsicPackage.Literals.RELATIONAL_EXPRESSION__SHIFT_EXPRESSION
+					null
 				);
 			}												
-			var rSide = relExp.relational_expression_linha.relational_expression_complement.shift_expression.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+			var rSide = relExp.relational_expression_linha.shift_expression_complement.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
 			var rType = evaluateExp(rSide);
 			if(rType == ExpRetType.BOOL){
 				error("Expressão relacional pode operar em cima deste tipo", 
@@ -357,7 +357,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 				);
 			}
 			
-			var rSide = primaryExpFromAssigExp(addExp.additive_expression_linha.additive_expression_complement.assignment_expression);
+			var rSide = addExp.additive_expression_linha.additive_expression_complement.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
 			var rType = evaluateExp(rSide);
 			if(rType == ExpRetType.BOOL){
 				error("Expressão aditiva pode operar em cima deste tipo", 
@@ -409,7 +409,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 				);
 			}
 			
-			var rSide = primaryExpFromAssigExp(mulExp.multiplicative_expression_linha.multiplicative_expression_complement.assignment_expression);
+			var rSide = mulExp.multiplicative_expression_linha.multiplicative_expression_complement.cast_expression.unary_expression.postfix_expression.primary_expression;
 			var rType = evaluateExp(rSide);
 			if(rType == ExpRetType.BOOL){
 				error("Expressão multiplicativa pode operar em cima deste tipo", 

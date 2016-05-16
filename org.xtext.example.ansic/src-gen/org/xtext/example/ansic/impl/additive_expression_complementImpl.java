@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
 import org.xtext.example.ansic.additive_expression_complement;
-import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.multiplicative_expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.xtext.example.ansic.assignment_expression;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.impl.additive_expression_complementImpl#getAssignment_expression <em>Assignment expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.additive_expression_complementImpl#getMultiplicative_expression <em>Multiplicative expression</em>}</li>
  * </ul>
  *
  * @generated
@@ -32,14 +32,14 @@ import org.xtext.example.ansic.assignment_expression;
 public class additive_expression_complementImpl extends MinimalEObjectImpl.Container implements additive_expression_complement
 {
   /**
-   * The cached value of the '{@link #getAssignment_expression() <em>Assignment expression</em>}' containment reference.
+   * The cached value of the '{@link #getMultiplicative_expression() <em>Multiplicative expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAssignment_expression()
+   * @see #getMultiplicative_expression()
    * @generated
    * @ordered
    */
-  protected assignment_expression assignment_expression;
+  protected multiplicative_expression multiplicative_expression;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,9 +67,9 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
    * <!-- end-user-doc -->
    * @generated
    */
-  public assignment_expression getAssignment_expression()
+  public multiplicative_expression getMultiplicative_expression()
   {
-    return assignment_expression;
+    return multiplicative_expression;
   }
 
   /**
@@ -77,13 +77,13 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAssignment_expression(assignment_expression newAssignment_expression, NotificationChain msgs)
+  public NotificationChain basicSetMultiplicative_expression(multiplicative_expression newMultiplicative_expression, NotificationChain msgs)
   {
-    assignment_expression oldAssignment_expression = assignment_expression;
-    assignment_expression = newAssignment_expression;
+    multiplicative_expression oldMultiplicative_expression = multiplicative_expression;
+    multiplicative_expression = newMultiplicative_expression;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION, oldAssignment_expression, newAssignment_expression);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION, oldMultiplicative_expression, newMultiplicative_expression);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -94,20 +94,20 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAssignment_expression(assignment_expression newAssignment_expression)
+  public void setMultiplicative_expression(multiplicative_expression newMultiplicative_expression)
   {
-    if (newAssignment_expression != assignment_expression)
+    if (newMultiplicative_expression != multiplicative_expression)
     {
       NotificationChain msgs = null;
-      if (assignment_expression != null)
-        msgs = ((InternalEObject)assignment_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION, null, msgs);
-      if (newAssignment_expression != null)
-        msgs = ((InternalEObject)newAssignment_expression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION, null, msgs);
-      msgs = basicSetAssignment_expression(newAssignment_expression, msgs);
+      if (multiplicative_expression != null)
+        msgs = ((InternalEObject)multiplicative_expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION, null, msgs);
+      if (newMultiplicative_expression != null)
+        msgs = ((InternalEObject)newMultiplicative_expression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION, null, msgs);
+      msgs = basicSetMultiplicative_expression(newMultiplicative_expression, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION, newAssignment_expression, newAssignment_expression));
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION, newMultiplicative_expression, newMultiplicative_expression));
   }
 
   /**
@@ -120,8 +120,8 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
   {
     switch (featureID)
     {
-      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION:
-        return basicSetAssignment_expression(null, msgs);
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION:
+        return basicSetMultiplicative_expression(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -136,8 +136,8 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
   {
     switch (featureID)
     {
-      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION:
-        return getAssignment_expression();
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION:
+        return getMultiplicative_expression();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,8 +152,8 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
   {
     switch (featureID)
     {
-      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION:
-        setAssignment_expression((assignment_expression)newValue);
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION:
+        setMultiplicative_expression((multiplicative_expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,8 +169,8 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
   {
     switch (featureID)
     {
-      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION:
-        setAssignment_expression((assignment_expression)null);
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION:
+        setMultiplicative_expression((multiplicative_expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -186,8 +186,8 @@ public class additive_expression_complementImpl extends MinimalEObjectImpl.Conta
   {
     switch (featureID)
     {
-      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__ASSIGNMENT_EXPRESSION:
-        return assignment_expression != null;
+      case AnsicPackage.ADDITIVE_EXPRESSION_COMPLEMENT__MULTIPLICATIVE_EXPRESSION:
+        return multiplicative_expression != null;
     }
     return super.eIsSet(featureID);
   }

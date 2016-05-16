@@ -193,7 +193,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
       case AnsicPackage.POST_FIX_EMPRY_PARAMS: return createPostFixEmpryParams();
       case AnsicPackage.ARGUMENT_EXPRESSION_LIST_LINHA_ACTION: return createArgumentExpressionListLinhaAction();
       case AnsicPackage.PLUS_PLUS: return createPlusPlus();
-      case AnsicPackage.EXPRESSION_LINHA_ACTION: return createExpressionLinhaAction();
       case AnsicPackage.INIT_DECCLARATOR_LIST_LINHA_ACTION: return createInitDecclaratorListLinhaAction();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -1606,17 +1605,6 @@ public class AnsicFactoryImpl extends EFactoryImpl implements AnsicFactory
   {
     PlusPlusImpl plusPlus = new PlusPlusImpl();
     return plusPlus;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ExpressionLinhaAction createExpressionLinhaAction()
-  {
-    ExpressionLinhaActionImpl expressionLinhaAction = new ExpressionLinhaActionImpl();
-    return expressionLinhaAction;
   }
 
   /**

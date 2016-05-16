@@ -363,8 +363,8 @@
         eType="#//multiplicative_expression_linha" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="multiplicative_expression_complement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment_expression"
-        eType="#//assignment_expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cast_expression" eType="#//cast_expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="additive_expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicative_expression"
@@ -379,8 +379,8 @@
         eType="#//additive_expression_linha" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="additive_expression_complement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment_expression"
-        eType="#//assignment_expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicative_expression"
+        eType="#//multiplicative_expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="shift_expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="additive_expression" eType="#//additive_expression"
@@ -405,8 +405,8 @@
         eType="#//relational_expression_linha" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="relational_expression_linha">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relational_expression_complement"
-        eType="#//relational_expression_complement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shift_expression_complement"
+        eType="#//shift_expression_complement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relational_expression_linha"
         eType="#//relational_expression_linha" containment="true"/>
   </eClassifiers>
@@ -599,7 +599,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression_linha" eType="#//expression_linha"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="expression_linha"/>
+  <eClassifiers xsi:type="ecore:EClass" name="expression_linha">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment_expression"
+        eType="#//assignment_expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression_linha" eType="#//expression_linha"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="constant_expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditional_expression"
         eType="#//conditional_expression" containment="true"/>
@@ -713,12 +718,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlusPlus" eSuperTypes="#//unary_expression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="plus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpressionLinhaAction" eSuperTypes="#//expression_linha">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment_expression"
-        eType="#//assignment_expression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression_linha" eType="#//expression_linha"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InitDecclaratorListLinhaAction" eSuperTypes="#//init_declarator_list_linha">
     <eStructuralFeatures xsi:type="ecore:EReference" name="init_declarator" eType="#//init_declarator"

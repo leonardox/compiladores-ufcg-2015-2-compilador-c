@@ -10,6 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>expression linha</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.ansic.expression_linha#getAssignment_expression <em>Assignment expression</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.expression_linha#getExpression_linha <em>Expression linha</em>}</li>
+ * </ul>
  *
  * @see org.xtext.example.ansic.AnsicPackage#getexpression_linha()
  * @model
@@ -17,4 +24,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface expression_linha extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Assignment expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Assignment expression</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Assignment expression</em>' containment reference.
+   * @see #setAssignment_expression(assignment_expression)
+   * @see org.xtext.example.ansic.AnsicPackage#getexpression_linha_Assignment_expression()
+   * @model containment="true"
+   * @generated
+   */
+  assignment_expression getAssignment_expression();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.expression_linha#getAssignment_expression <em>Assignment expression</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Assignment expression</em>' containment reference.
+   * @see #getAssignment_expression()
+   * @generated
+   */
+  void setAssignment_expression(assignment_expression value);
+
+  /**
+   * Returns the value of the '<em><b>Expression linha</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Expression linha</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Expression linha</em>' containment reference.
+   * @see #setExpression_linha(expression_linha)
+   * @see org.xtext.example.ansic.AnsicPackage#getexpression_linha_Expression_linha()
+   * @model containment="true"
+   * @generated
+   */
+  expression_linha getExpression_linha();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.expression_linha#getExpression_linha <em>Expression linha</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Expression linha</em>' containment reference.
+   * @see #getExpression_linha()
+   * @generated
+   */
+  void setExpression_linha(expression_linha value);
+
 } // expression_linha

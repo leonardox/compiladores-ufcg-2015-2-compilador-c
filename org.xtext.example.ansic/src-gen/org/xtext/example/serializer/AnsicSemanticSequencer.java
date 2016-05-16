@@ -21,7 +21,6 @@ import org.xtext.example.ansic.DesignatorListLinhaAction;
 import org.xtext.example.ansic.DirectAbstractDeclarratorLinhaAction;
 import org.xtext.example.ansic.DomainModel;
 import org.xtext.example.ansic.EnumeratorListLinhaAction;
-import org.xtext.example.ansic.ExpressionLinhaAction;
 import org.xtext.example.ansic.GenericAssocListLinhaAction;
 import org.xtext.example.ansic.IdentifierListLinhaAction;
 import org.xtext.example.ansic.InitDecclaratorListLinhaAction;
@@ -75,6 +74,7 @@ import org.xtext.example.ansic.equality_expression_linha;
 import org.xtext.example.ansic.exclusive_or_expression;
 import org.xtext.example.ansic.exclusive_or_expression_linha;
 import org.xtext.example.ansic.expression;
+import org.xtext.example.ansic.expression_linha;
 import org.xtext.example.ansic.expression_statement;
 import org.xtext.example.ansic.external_declaration;
 import org.xtext.example.ansic.function_definition;
@@ -162,9 +162,6 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case AnsicPackage.ENUMERATOR_LIST_LINHA_ACTION:
 				sequence_enumerator_list_linha(context, (EnumeratorListLinhaAction) semanticObject); 
-				return; 
-			case AnsicPackage.EXPRESSION_LINHA_ACTION:
-				sequence_expression_linha(context, (ExpressionLinhaAction) semanticObject); 
 				return; 
 			case AnsicPackage.GENERIC_ASSOC_LIST_LINHA_ACTION:
 				sequence_generic_assoc_list_linha(context, (GenericAssocListLinhaAction) semanticObject); 
@@ -324,6 +321,9 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case AnsicPackage.EXPRESSION:
 				sequence_expression(context, (expression) semanticObject); 
+				return; 
+			case AnsicPackage.EXPRESSION_LINHA:
+				sequence_expression_linha(context, (expression_linha) semanticObject); 
 				return; 
 			case AnsicPackage.EXPRESSION_STATEMENT:
 				sequence_expression_statement(context, (expression_statement) semanticObject); 
@@ -556,7 +556,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     additive_expression_complement returns additive_expression_complement
 	 *
 	 * Constraint:
-	 *     (assignment_expression=assignment_expression | assignment_expression=assignment_expression)
+	 *     (multiplicative_expression=multiplicative_expression | multiplicative_expression=multiplicative_expression)
 	 */
 	protected void sequence_additive_expression_complement(ISerializationContext context, additive_expression_complement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1083,7 +1083,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     direct_declarator returns direct_declarator
 	 *
 	 * Constraint:
-	 *     ((identifier=IDz direct_declarator_linha=direct_declarator_linha) | (declarator=declarator direct_declarator_linha=direct_declarator_linha))
+	 *     ((identifier=IDz direct_declarator_linha=direct_declarator_linha?) | (declarator=declarator direct_declarator_linha=direct_declarator_linha?))
 	 */
 	protected void sequence_direct_declarator(ISerializationContext context, direct_declarator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1095,19 +1095,10 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     direct_declarator_linha returns direct_declarator_linha
 	 *
 	 * Constraint:
-	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)
+	 *     (direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha?)
 	 */
 	protected void sequence_direct_declarator_linha(ISerializationContext context, direct_declarator_linha semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_COMPLEMENTO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_COMPLEMENTO));
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_LINHA) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.DIRECT_DECLARATOR_LINHA__DIRECT_DECLARATOR_LINHA));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDirect_declarator_linhaAccess().getDirect_declarator_complementoDirect_declarator_complementoParserRuleCall_0_0(), semanticObject.getDirect_declarator_complemento());
-		feeder.accept(grammarAccess.getDirect_declarator_linhaAccess().getDirect_declarator_linhaDirect_declarator_linhaParserRuleCall_1_0(), semanticObject.getDirect_declarator_linha());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1197,7 +1188,14 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     equality_expression_complement returns equality_expression_complement
 	 *
 	 * Constraint:
-	 *     (relational_expression=relational_expression | relational_expression=relational_expression)
+	 *     (
+	 *         relational_expression=relational_expression | 
+	 *         relational_expression=relational_expression | 
+	 *         relational_expression=relational_expression | 
+	 *         relational_expression=relational_expression | 
+	 *         relational_expression=relational_expression | 
+	 *         relational_expression=relational_expression
+	 *     )
 	 */
 	protected void sequence_equality_expression_complement(ISerializationContext context, equality_expression_complement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1311,13 +1309,22 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     expression_linha returns ExpressionLinhaAction
+	 *     expression_linha returns expression_linha
 	 *
 	 * Constraint:
-	 *     (assignment_expression=assignment_expression expression_linha=expression_linha)?
+	 *     (assignment_expression=assignment_expression expression_linha=expression_linha)
 	 */
-	protected void sequence_expression_linha(ISerializationContext context, ExpressionLinhaAction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_expression_linha(ISerializationContext context, expression_linha semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXPRESSION_LINHA__ASSIGNMENT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXPRESSION_LINHA__ASSIGNMENT_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.EXPRESSION_LINHA__EXPRESSION_LINHA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.EXPRESSION_LINHA__EXPRESSION_LINHA));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpression_linhaAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_0(), semanticObject.getAssignment_expression());
+		feeder.accept(grammarAccess.getExpression_linhaAccess().getExpression_linhaExpression_linhaParserRuleCall_2_0(), semanticObject.getExpression_linha());
+		feeder.finish();
 	}
 	
 	
@@ -1726,7 +1733,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     multiplicative_expression_complement returns multiplicative_expression_complement
 	 *
 	 * Constraint:
-	 *     (assignment_expression=assignment_expression | assignment_expression=assignment_expression | assignment_expression=assignment_expression)
+	 *     (cast_expression=cast_expression | cast_expression=cast_expression | cast_expression=cast_expression)
 	 */
 	protected void sequence_multiplicative_expression_complement(ISerializationContext context, multiplicative_expression_complement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1943,17 +1950,17 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     relational_expression_linha returns relational_expression_linha
 	 *
 	 * Constraint:
-	 *     (relational_expression_complement=relational_expression_complement relational_expression_linha=relational_expression_linha)
+	 *     (shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)
 	 */
 	protected void sequence_relational_expression_linha(ISerializationContext context, relational_expression_linha semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT));
+			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT));
 			if (transientValues.isValueTransient(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AnsicPackage.Literals.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_complementRelational_expression_complementParserRuleCall_0_0(), semanticObject.getRelational_expression_complement());
+		feeder.accept(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0(), semanticObject.getShift_expression_complement());
 		feeder.accept(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_linhaRelational_expression_linhaParserRuleCall_1_0(), semanticObject.getRelational_expression_linha());
 		feeder.finish();
 	}

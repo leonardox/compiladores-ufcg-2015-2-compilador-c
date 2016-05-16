@@ -987,14 +987,6 @@ public class AnsicSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AnsicPackage.EXPRESSION_LINHA_ACTION:
-      {
-        ExpressionLinhaAction expressionLinhaAction = (ExpressionLinhaAction)theEObject;
-        T result = caseExpressionLinhaAction(expressionLinhaAction);
-        if (result == null) result = caseexpression_linha(expressionLinhaAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case AnsicPackage.INIT_DECCLARATOR_LIST_LINHA_ACTION:
       {
         InitDecclaratorListLinhaAction initDecclaratorListLinhaAction = (InitDecclaratorListLinhaAction)theEObject;
@@ -3051,22 +3043,6 @@ public class AnsicSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePlusPlus(PlusPlus object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Expression Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Expression Linha Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExpressionLinhaAction(ExpressionLinhaAction object)
   {
     return null;
   }

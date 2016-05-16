@@ -3145,7 +3145,7 @@ ruledirect_declarator returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
+			)?
 		)
 		    |
 		(
@@ -3194,7 +3194,7 @@ ruledirect_declarator returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
+			)?
 		)
 	)
 ;
@@ -3252,8 +3252,8 @@ ruledirect_declarator_linha returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
-	)?
+		)?
+	)
 ;
 
 // Entry rule entryRuledirect_declarator_complemento
@@ -7146,18 +7146,18 @@ rulemultiplicative_expression_complement returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_1_0());
+						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getCast_expressionCast_expressionParserRuleCall_0_1_0());
 					}
-					lv_assignment_expression_1_0=ruleassignment_expression
+					lv_cast_expression_1_0=rulecast_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMultiplicative_expression_complementRule());
 						}
 						set(
 							$current,
-							"assignment_expression",
-							lv_assignment_expression_1_0,
-							"org.xtext.example.Ansic.assignment_expression");
+							"cast_expression",
+							lv_cast_expression_1_0,
+							"org.xtext.example.Ansic.cast_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -7172,18 +7172,18 @@ rulemultiplicative_expression_complement returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_1_0());
+						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getCast_expressionCast_expressionParserRuleCall_1_1_0());
 					}
-					lv_assignment_expression_3_0=ruleassignment_expression
+					lv_cast_expression_3_0=rulecast_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMultiplicative_expression_complementRule());
 						}
 						set(
 							$current,
-							"assignment_expression",
-							lv_assignment_expression_3_0,
-							"org.xtext.example.Ansic.assignment_expression");
+							"cast_expression",
+							lv_cast_expression_3_0,
+							"org.xtext.example.Ansic.cast_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -7198,18 +7198,18 @@ rulemultiplicative_expression_complement returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getMultiplicative_expression_complementAccess().getCast_expressionCast_expressionParserRuleCall_2_1_0());
 					}
-					lv_assignment_expression_5_0=ruleassignment_expression
+					lv_cast_expression_5_0=rulecast_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMultiplicative_expression_complementRule());
 						}
 						set(
 							$current,
-							"assignment_expression",
-							lv_assignment_expression_5_0,
-							"org.xtext.example.Ansic.assignment_expression");
+							"cast_expression",
+							lv_cast_expression_5_0,
+							"org.xtext.example.Ansic.cast_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -7356,18 +7356,18 @@ ruleadditive_expression_complement returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_1_0());
+						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getMultiplicative_expressionMultiplicative_expressionParserRuleCall_0_1_0());
 					}
-					lv_assignment_expression_1_0=ruleassignment_expression
+					lv_multiplicative_expression_1_0=rulemultiplicative_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getAdditive_expression_complementRule());
 						}
 						set(
 							$current,
-							"assignment_expression",
-							lv_assignment_expression_1_0,
-							"org.xtext.example.Ansic.assignment_expression");
+							"multiplicative_expression",
+							lv_multiplicative_expression_1_0,
+							"org.xtext.example.Ansic.multiplicative_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -7382,18 +7382,18 @@ ruleadditive_expression_complement returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_1_0());
+						newCompositeNode(grammarAccess.getAdditive_expression_complementAccess().getMultiplicative_expressionMultiplicative_expressionParserRuleCall_1_1_0());
 					}
-					lv_assignment_expression_3_0=ruleassignment_expression
+					lv_multiplicative_expression_3_0=rulemultiplicative_expression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getAdditive_expression_complementRule());
 						}
 						set(
 							$current,
-							"assignment_expression",
-							lv_assignment_expression_3_0,
-							"org.xtext.example.Ansic.assignment_expression");
+							"multiplicative_expression",
+							lv_multiplicative_expression_3_0,
+							"org.xtext.example.Ansic.multiplicative_expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -7662,18 +7662,18 @@ rulerelational_expression_linha returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getRelational_expression_complementRelational_expression_complementParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getRelational_expression_linhaAccess().getShift_expression_complementShift_expression_complementParserRuleCall_0_0());
 				}
-				lv_relational_expression_complement_0_0=rulerelational_expression_complement
+				lv_shift_expression_complement_0_0=ruleshift_expression_complement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRelational_expression_linhaRule());
 					}
 					set(
 						$current,
-						"relational_expression_complement",
-						lv_relational_expression_complement_0_0,
-						"org.xtext.example.Ansic.relational_expression_complement");
+						"shift_expression_complement",
+						lv_shift_expression_complement_0_0,
+						"org.xtext.example.Ansic.shift_expression_complement");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -7698,128 +7698,6 @@ rulerelational_expression_linha returns [EObject current=null]
 			)
 		)
 	)?
-;
-
-// Entry rule entryRulerelational_expression_complement
-entryRulerelational_expression_complement returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRelational_expression_complementRule()); }
-	iv_rulerelational_expression_complement=rulerelational_expression_complement
-	{ $current=$iv_rulerelational_expression_complement.current; }
-	EOF;
-
-// Rule relational_expression_complement
-rulerelational_expression_complement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			otherlv_0='<'
-			{
-				newLeafNode(otherlv_0, grammarAccess.getRelational_expression_complementAccess().getLessThanSignKeyword_0_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_0_1_0());
-					}
-					lv_shift_expression_1_0=ruleshift_expression
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
-						}
-						set(
-							$current,
-							"shift_expression",
-							lv_shift_expression_1_0,
-							"org.xtext.example.Ansic.shift_expression");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)
-		    |
-		(
-			otherlv_2='>'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getRelational_expression_complementAccess().getGreaterThanSignKeyword_1_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_1_1_0());
-					}
-					lv_shift_expression_3_0=ruleshift_expression
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
-						}
-						set(
-							$current,
-							"shift_expression",
-							lv_shift_expression_3_0,
-							"org.xtext.example.Ansic.shift_expression");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)
-		    |
-		(
-			otherlv_4='<='
-			{
-				newLeafNode(otherlv_4, grammarAccess.getRelational_expression_complementAccess().getLessThanSignEqualsSignKeyword_2_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_2_1_0());
-					}
-					lv_shift_expression_5_0=ruleshift_expression
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
-						}
-						set(
-							$current,
-							"shift_expression",
-							lv_shift_expression_5_0,
-							"org.xtext.example.Ansic.shift_expression");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)
-		    |
-		(
-			otherlv_6='>='
-			{
-				newLeafNode(otherlv_6, grammarAccess.getRelational_expression_complementAccess().getGreaterThanSignEqualsSignKeyword_3_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getRelational_expression_complementAccess().getShift_expressionShift_expressionParserRuleCall_3_1_0());
-					}
-					lv_shift_expression_7_0=ruleshift_expression
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getRelational_expression_complementRule());
-						}
-						set(
-							$current,
-							"shift_expression",
-							lv_shift_expression_7_0,
-							"org.xtext.example.Ansic.shift_expression");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)
-	)
 ;
 
 // Entry rule entryRuleequality_expression
@@ -7979,9 +7857,9 @@ ruleequality_expression_complement returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_2='!='
+			otherlv_2='<'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getEquality_expression_complementAccess().getExclamationMarkEqualsSignKeyword_1_0());
+				newLeafNode(otherlv_2, grammarAccess.getEquality_expression_complementAccess().getLessThanSignKeyword_1_0());
 			}
 			(
 				(
@@ -7997,6 +7875,110 @@ ruleequality_expression_complement returns [EObject current=null]
 							$current,
 							"relational_expression",
 							lv_relational_expression_3_0,
+							"org.xtext.example.Ansic.relational_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_4='>'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getEquality_expression_complementAccess().getGreaterThanSignKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getEquality_expression_complementAccess().getRelational_expressionRelational_expressionParserRuleCall_2_1_0());
+					}
+					lv_relational_expression_5_0=rulerelational_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEquality_expression_complementRule());
+						}
+						set(
+							$current,
+							"relational_expression",
+							lv_relational_expression_5_0,
+							"org.xtext.example.Ansic.relational_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_6='<='
+			{
+				newLeafNode(otherlv_6, grammarAccess.getEquality_expression_complementAccess().getLessThanSignEqualsSignKeyword_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getEquality_expression_complementAccess().getRelational_expressionRelational_expressionParserRuleCall_3_1_0());
+					}
+					lv_relational_expression_7_0=rulerelational_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEquality_expression_complementRule());
+						}
+						set(
+							$current,
+							"relational_expression",
+							lv_relational_expression_7_0,
+							"org.xtext.example.Ansic.relational_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_8='>='
+			{
+				newLeafNode(otherlv_8, grammarAccess.getEquality_expression_complementAccess().getGreaterThanSignEqualsSignKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getEquality_expression_complementAccess().getRelational_expressionRelational_expressionParserRuleCall_4_1_0());
+					}
+					lv_relational_expression_9_0=rulerelational_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEquality_expression_complementRule());
+						}
+						set(
+							$current,
+							"relational_expression",
+							lv_relational_expression_9_0,
+							"org.xtext.example.Ansic.relational_expression");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			otherlv_10='!='
+			{
+				newLeafNode(otherlv_10, grammarAccess.getEquality_expression_complementAccess().getExclamationMarkEqualsSignKeyword_5_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getEquality_expression_complementAccess().getRelational_expressionRelational_expressionParserRuleCall_5_1_0());
+					}
+					lv_relational_expression_11_0=rulerelational_expression
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getEquality_expression_complementRule());
+						}
+						set(
+							$current,
+							"relational_expression",
+							lv_relational_expression_11_0,
 							"org.xtext.example.Ansic.relational_expression");
 						afterParserOrEnumRuleCall();
 					}
@@ -10452,61 +10434,49 @@ ruleexpression_linha returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0=','
+		{
+			newLeafNode(otherlv_0, grammarAccess.getExpression_linhaAccess().getCommaKeyword_0());
+		}
 		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getExpression_linhaAccess().getExpressionLinhaActionAction_0(),
-					$current);
-			}
+			(
+				{
+					newCompositeNode(grammarAccess.getExpression_linhaAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_0());
+				}
+				lv_assignment_expression_1_0=ruleassignment_expression
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getExpression_linhaRule());
+					}
+					set(
+						$current,
+						"assignment_expression",
+						lv_assignment_expression_1_0,
+						"org.xtext.example.Ansic.assignment_expression");
+					afterParserOrEnumRuleCall();
+				}
+			)
 		)
 		(
-			otherlv_1=','
-			{
-				newLeafNode(otherlv_1, grammarAccess.getExpression_linhaAccess().getCommaKeyword_1_0());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getExpression_linhaAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_1_0());
+				{
+					newCompositeNode(grammarAccess.getExpression_linhaAccess().getExpression_linhaExpression_linhaParserRuleCall_2_0());
+				}
+				lv_expression_linha_2_0=ruleexpression_linha
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getExpression_linhaRule());
 					}
-					lv_assignment_expression_2_0=ruleassignment_expression
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getExpression_linhaRule());
-						}
-						set(
-							$current,
-							"assignment_expression",
-							lv_assignment_expression_2_0,
-							"org.xtext.example.Ansic.assignment_expression");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"expression_linha",
+						lv_expression_linha_2_0,
+						"org.xtext.example.Ansic.expression_linha");
+					afterParserOrEnumRuleCall();
+				}
 			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getExpression_linhaAccess().getExpression_linhaExpression_linhaParserRuleCall_1_2_0());
-					}
-					lv_expression_linha_3_0=ruleexpression_linha
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getExpression_linhaRule());
-						}
-						set(
-							$current,
-							"expression_linha",
-							lv_expression_linha_3_0,
-							"org.xtext.example.Ansic.expression_linha");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-	)
+		)
+	)?
 ;
 
 // Entry rule entryRuleconstant_expression

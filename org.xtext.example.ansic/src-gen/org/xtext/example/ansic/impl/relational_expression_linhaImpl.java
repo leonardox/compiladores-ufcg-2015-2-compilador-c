@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.ansic.AnsicPackage;
-import org.xtext.example.ansic.relational_expression_complement;
 import org.xtext.example.ansic.relational_expression_linha;
+import org.xtext.example.ansic.shift_expression_complement;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.xtext.example.ansic.relational_expression_linha;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.ansic.impl.relational_expression_linhaImpl#getRelational_expression_complement <em>Relational expression complement</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.relational_expression_linhaImpl#getShift_expression_complement <em>Shift expression complement</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.relational_expression_linhaImpl#getRelational_expression_linha <em>Relational expression linha</em>}</li>
  * </ul>
  *
@@ -33,14 +33,14 @@ import org.xtext.example.ansic.relational_expression_linha;
 public class relational_expression_linhaImpl extends MinimalEObjectImpl.Container implements relational_expression_linha
 {
   /**
-   * The cached value of the '{@link #getRelational_expression_complement() <em>Relational expression complement</em>}' containment reference.
+   * The cached value of the '{@link #getShift_expression_complement() <em>Shift expression complement</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRelational_expression_complement()
+   * @see #getShift_expression_complement()
    * @generated
    * @ordered
    */
-  protected relational_expression_complement relational_expression_complement;
+  protected shift_expression_complement shift_expression_complement;
 
   /**
    * The cached value of the '{@link #getRelational_expression_linha() <em>Relational expression linha</em>}' containment reference.
@@ -78,9 +78,9 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
    * <!-- end-user-doc -->
    * @generated
    */
-  public relational_expression_complement getRelational_expression_complement()
+  public shift_expression_complement getShift_expression_complement()
   {
-    return relational_expression_complement;
+    return shift_expression_complement;
   }
 
   /**
@@ -88,13 +88,13 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRelational_expression_complement(relational_expression_complement newRelational_expression_complement, NotificationChain msgs)
+  public NotificationChain basicSetShift_expression_complement(shift_expression_complement newShift_expression_complement, NotificationChain msgs)
   {
-    relational_expression_complement oldRelational_expression_complement = relational_expression_complement;
-    relational_expression_complement = newRelational_expression_complement;
+    shift_expression_complement oldShift_expression_complement = shift_expression_complement;
+    shift_expression_complement = newShift_expression_complement;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT, oldRelational_expression_complement, newRelational_expression_complement);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT, oldShift_expression_complement, newShift_expression_complement);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -105,20 +105,20 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRelational_expression_complement(relational_expression_complement newRelational_expression_complement)
+  public void setShift_expression_complement(shift_expression_complement newShift_expression_complement)
   {
-    if (newRelational_expression_complement != relational_expression_complement)
+    if (newShift_expression_complement != shift_expression_complement)
     {
       NotificationChain msgs = null;
-      if (relational_expression_complement != null)
-        msgs = ((InternalEObject)relational_expression_complement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT, null, msgs);
-      if (newRelational_expression_complement != null)
-        msgs = ((InternalEObject)newRelational_expression_complement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT, null, msgs);
-      msgs = basicSetRelational_expression_complement(newRelational_expression_complement, msgs);
+      if (shift_expression_complement != null)
+        msgs = ((InternalEObject)shift_expression_complement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT, null, msgs);
+      if (newShift_expression_complement != null)
+        msgs = ((InternalEObject)newShift_expression_complement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT, null, msgs);
+      msgs = basicSetShift_expression_complement(newShift_expression_complement, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT, newRelational_expression_complement, newRelational_expression_complement));
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT, newShift_expression_complement, newShift_expression_complement));
   }
 
   /**
@@ -179,8 +179,8 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT:
-        return basicSetRelational_expression_complement(null, msgs);
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT:
+        return basicSetShift_expression_complement(null, msgs);
       case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA:
         return basicSetRelational_expression_linha(null, msgs);
     }
@@ -197,8 +197,8 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT:
-        return getRelational_expression_complement();
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT:
+        return getShift_expression_complement();
       case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA:
         return getRelational_expression_linha();
     }
@@ -215,8 +215,8 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT:
-        setRelational_expression_complement((relational_expression_complement)newValue);
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT:
+        setShift_expression_complement((shift_expression_complement)newValue);
         return;
       case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA:
         setRelational_expression_linha((relational_expression_linha)newValue);
@@ -235,8 +235,8 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT:
-        setRelational_expression_complement((relational_expression_complement)null);
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT:
+        setShift_expression_complement((shift_expression_complement)null);
         return;
       case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA:
         setRelational_expression_linha((relational_expression_linha)null);
@@ -255,8 +255,8 @@ public class relational_expression_linhaImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_COMPLEMENT:
-        return relational_expression_complement != null;
+      case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__SHIFT_EXPRESSION_COMPLEMENT:
+        return shift_expression_complement != null;
       case AnsicPackage.RELATIONAL_EXPRESSION_LINHA__RELATIONAL_EXPRESSION_LINHA:
         return relational_expression_linha != null;
     }

@@ -1176,15 +1176,6 @@ public interface AnsicFactory extends EFactory
   PlusPlus createPlusPlus();
 
   /**
-   * Returns a new object of class '<em>Expression Linha Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression Linha Action</em>'.
-   * @generated
-   */
-  ExpressionLinhaAction createExpressionLinhaAction();
-
-  /**
    * Returns a new object of class '<em>Init Decclarator List Linha Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

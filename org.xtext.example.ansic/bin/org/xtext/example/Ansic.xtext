@@ -188,12 +188,12 @@ type_qualifier_list_linha
 ;
 
 direct_declarator
-	: identifier=IDz direct_declarator_linha=direct_declarator_linha
-	| '(' declarator=declarator ')' direct_declarator_linha=direct_declarator_linha
+	: identifier=IDz (direct_declarator_linha=direct_declarator_linha)?
+	| '(' declarator=declarator ')' (direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_linha
-	:(direct_declarator_complemento=direct_declarator_complemento direct_declarator_linha=direct_declarator_linha)?
+	:direct_declarator_complemento=direct_declarator_complemento (direct_declarator_linha=direct_declarator_linha)?
 ;
 
 direct_declarator_complemento
@@ -222,6 +222,7 @@ parameter_lista
 parameter_list_linha
 	: (',' parameter_declaration=parameter_declaration parameter_list_linha+=parameter_list_linha)?
 ;
+
 
 parameter_declaration
 	: declaration_specifiers=declaration_specifiers declarator=declarator
@@ -380,6 +381,7 @@ argument_expression_list
 	: assignment_expressions+=assignment_expression (',' assignment_expressions+=assignment_expression)*
 	;
 
+
 argument_expression_list_linha:
 	{ArgumentExpressionListLinhaAction}(',' assignment_expression=assignment_expression argument_expression_list_linha=argument_expression_list_linha)?
 ;
@@ -408,9 +410,9 @@ multiplicative_expression_linha:
 ;	
 
 multiplicative_expression_complement
-	:'*' assignment_expression=assignment_expression
-	|'/' assignment_expression=assignment_expression
-	|'%' assignment_expression=assignment_expression
+	:'*' cast_expression=cast_expression
+	|'/' cast_expression=cast_expression
+	|'%' cast_expression=cast_expression
 ;
 
 additive_expression
@@ -421,8 +423,8 @@ additive_expression_linha
 	:(additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?;
 
 additive_expression_complement:
-	'+' assignment_expression=assignment_expression
-	|'-' assignment_expression=assignment_expression
+	'+' multiplicative_expression=multiplicative_expression
+	|'-' multiplicative_expression=multiplicative_expression
 ;
 
 shift_expression
@@ -443,7 +445,7 @@ relational_expression
 ;
 
 relational_expression_linha
-	:(relational_expression_complement=relational_expression_complement relational_expression_linha=relational_expression_linha)?
+	:(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
 ;
 
 relational_expression_complement
@@ -463,6 +465,10 @@ equality_expression_linha
 
 equality_expression_complement
 	: '==' relational_expression=relational_expression
+	|'<' relational_expression=relational_expression
+	| '>' relational_expression=relational_expression
+	| '<=' relational_expression=relational_expression
+	| '>=' relational_expression=relational_expression
 	| '!=' relational_expression=relational_expression	
 ;
 
@@ -562,7 +568,7 @@ logical_and_expression
 ;
 
 logical_and_expression_linha
-	: ('and' inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)?
+	:('and' inclusive_or_expression=inclusive_or_expression logical_and_expression_linha=logical_and_expression_linha)?
 ;
 
 logical_or_expression
@@ -578,7 +584,7 @@ conditional_expression
 ;
 
 conditional_expression_linha
-	: ('?' expression=expression ':' conditional_expression=conditional_expression conditional_expression_linha=conditional_expression_linha)?
+	:('?' expression=expression ':' conditional_expression=conditional_expression conditional_expression_linha=conditional_expression_linha)?
 ;
 
 assignment_expression
@@ -622,7 +628,7 @@ expression
 	: assignment_expression=assignment_expression expression_linha=expression_linha
 ;
 expression_linha:
-	{ExpressionLinhaAction}(',' assignment_expression=assignment_expression expression_linha=expression_linha)?
+	(',' assignment_expression=assignment_expression expression_linha=expression_linha)?
 ;
 
 constant_expression
@@ -655,9 +661,9 @@ constant
 	| enumz='enum'	/* after it has been defined as such */
 	;
 
-
 terminal IDz : ('a'..'z'|'A'..'Z'|'_')+;
 terminal CHAR: '\''.'\'';
+
 terminal FLOAT:
 	('0'..'9')+ '.' ('0'..'9')*
 ;

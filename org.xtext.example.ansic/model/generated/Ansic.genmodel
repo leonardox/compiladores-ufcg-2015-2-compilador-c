@@ -255,7 +255,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//multiplicative_expression_linha/multiplicative_expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//multiplicative_expression_complement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//multiplicative_expression_complement/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//multiplicative_expression_complement/cast_expression"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//additive_expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression/multiplicative_expression"/>
@@ -266,7 +266,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression_linha/additive_expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//additive_expression_complement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression_complement/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//additive_expression_complement/multiplicative_expression"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//shift_expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//shift_expression/additive_expression"/>
@@ -284,7 +284,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression/relational_expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//relational_expression_linha">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_linha/relational_expression_complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_linha/shift_expression_complement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//relational_expression_linha/relational_expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//relational_expression_complement">
@@ -412,7 +412,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression/assignment_expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression/expression_linha"/>
     </genClasses>
-    <genClasses ecoreClass="Ansic.ecore#//expression_linha"/>
+    <genClasses ecoreClass="Ansic.ecore#//expression_linha">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression_linha/assignment_expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//expression_linha/expression_linha"/>
+    </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//constant_expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//constant_expression/conditional_expression"/>
     </genClasses>
@@ -493,10 +496,6 @@
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//PlusPlus">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//PlusPlus/plus"/>
-    </genClasses>
-    <genClasses ecoreClass="Ansic.ecore#//ExpressionLinhaAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ExpressionLinhaAction/assignment_expression"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//ExpressionLinhaAction/expression_linha"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//InitDecclaratorListLinhaAction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//InitDecclaratorListLinhaAction/init_declarator"/>
