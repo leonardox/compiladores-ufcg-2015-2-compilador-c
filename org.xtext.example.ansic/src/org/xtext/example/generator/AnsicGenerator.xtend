@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import org.xtext.example.ansic.DomainModel
+import org.xtext.example.ansic.statement
 import org.xtext.example.ansic.function_definition
 import org.xtext.example.ansic.assignment_expression
 import org.xtext.example.ansic.block_item
@@ -27,7 +27,10 @@ class AnsicGenerator extends AbstractGenerator {
 	var out = "";
 	var currentLine = 0;
 	private var declarations = <String,String>newHashMap();
+	private var cases = <String,String>newHashMap();
 	private var currentFunc = "";
+	private var onFirstCase = true;
+	private var caseNumber = 0;
 	def getNextLine(){
 		currentLine +=8;
 		return currentLine+": ";
@@ -56,12 +59,20 @@ class AnsicGenerator extends AbstractGenerator {
 		for(var i =0; i< keys.size(); i++){
 			out = out.replace(keys.get(i), declarations.get(keys.get(i)));
 		}
+		var keys2 = cases.keySet();
+		for(var i =0; i< keys2.size(); i++){
+			out = out.replace(keys2.get(i), cases.get(keys2.get(i)));
+		}
 		out += "----------------------END----------------------------" + "\n";
 		out += "\n";
 		println("ENTROOOOOOOOOOOOOOOOOO");
-		var printer = new PrintWriter("/home/axius/runtime-EclipseApplication/teste/"+"outz"+currentLine+".c");
-		printer.println(out);
-		printer.close();
+		try {
+			var printer = new PrintWriter("/home/axius/runtime-EclipseApplication/teste/"+"outz"+currentLine+".c");
+			printer.println(out);
+			printer.close();
+		} catch (Exception exception) {
+			
+		}		
 		fsa.deleteFile("out" + currentLine+ '.o');
 		fsa.generateFile("out" + currentLine+ '.o', out);
 		
@@ -76,8 +87,35 @@ class AnsicGenerator extends AbstractGenerator {
 	}
 	def compileBlock(block_item b){
 		try {
+			if(b.statement != null && b.statement.labeled_statement != null){				
+				if(b.statement.labeled_statement.conditional_expression != null){
+					//Eh um case!
+					if(onFirstCase){
+					//Checa se nao goto Next case
+					out += getNextLine() + "BEQ " + "#CASE_"+1+  "\n";
+					onFirstCase = false;
+					}else{
+						//Final de outro case
+						//Desloque imediatamente para default
+						out += getNextLine() + "BR " + "#DEFAULT"+  "\n";
+						caseNumber++;
+						cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
+						//Checa se nao goto Next case
+						out += getNextLine() + "BEQ " + "#CASE_"+(caseNumber+1)+ "\n";
+						
+					}
+				}else{
+					//Eh um default
+					cases.put("#DEFAULT", (currentLine+8)+"");
+					caseNumber++;
+					cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
+				}
+				if(b.statement.labeled_statement.statement != null){
+					checkForStatement(b.statement.labeled_statement.statement);
+				}					
+			}
 			if(b.statement != null){
-				checkForStatement(b)	
+				checkForStatement(b.statement)	
 			}else if(b.declaration != null){
 				checkForDeclaration(b);
 			}
@@ -98,12 +136,12 @@ class AnsicGenerator extends AbstractGenerator {
 		//Gerar codigo para switch aqui...
 	}
 	
-	def checkForStatement(block_item b) {
-		if(b.statement.selection_statement != null){
+	def checkForStatement(statement s) {
+		if(s.selection_statement != null){
 			//É um switch
-			gerarCodigoParaSwitch(b.statement.selection_statement)
+			gerarCodigoParaSwitch(s.selection_statement)
 		}
-		generateForDecl(b);
+		generateForDecl(s);
 	}
 	
 	def generateToAssig(String id, assignment_expression asexp){
@@ -137,10 +175,10 @@ class AnsicGenerator extends AbstractGenerator {
 			}
 	}
 	
-	def generateForDecl(block_item b) {
-		if(b.statement.expression_statement.expression.assignment_expression.unary_expression == null){
+	def generateForDecl(statement s) {
+		if(s.expression_statement.expression.assignment_expression.unary_expression == null){
 			//direct method call?
-			var primex = primaryExpFromAssigExp(b.statement.expression_statement.expression.assignment_expression);
+			var primex = primaryExpFromAssigExp(s.expression_statement.expression.assignment_expression);
 			if(primex != null && primex.identifier != null && !primex.identifier.isEmpty){
 				if(declarations.keySet.contains("#F_CALL_"+primex.identifier)){
 						//É uma chamada a função
@@ -151,11 +189,11 @@ class AnsicGenerator extends AbstractGenerator {
 				}
 			}
 		}
-		var prim = b.statement.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
+		var prim = s.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
 		if(prim.identifier != null && !prim.identifier.isEmpty()){
 			
 			var id = prim.identifier;
-			generateToAssig(id,b.statement.expression_statement.expression.assignment_expression.assignment_expression);			
+			generateToAssig(id,s.expression_statement.expression.assignment_expression.assignment_expression);			
 			//Checar que não tem lado direito, tipo a= b e não pode ser a = b+c
 				
 		}

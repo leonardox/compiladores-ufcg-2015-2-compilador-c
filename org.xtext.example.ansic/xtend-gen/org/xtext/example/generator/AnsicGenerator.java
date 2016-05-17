@@ -46,6 +46,7 @@ import org.xtext.example.ansic.inclusive_or_expression_linha;
 import org.xtext.example.ansic.init_declarator;
 import org.xtext.example.ansic.init_declarator_list;
 import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.labeled_statement;
 import org.xtext.example.ansic.logical_and_expression;
 import org.xtext.example.ansic.logical_and_expression_linha;
 import org.xtext.example.ansic.logical_or_expression;
@@ -76,7 +77,13 @@ public class AnsicGenerator extends AbstractGenerator {
   
   private HashMap<String, String> declarations = CollectionLiterals.<String, String>newHashMap();
   
+  private HashMap<String, String> cases = CollectionLiterals.<String, String>newHashMap();
+  
   private String currentFunc = "";
+  
+  private boolean onFirstCase = true;
+  
+  private int caseNumber = 0;
   
   public String getNextLine() {
     int _currentLine = this.currentLine;
@@ -88,62 +95,76 @@ public class AnsicGenerator extends AbstractGenerator {
   
   @Override
   public void doGenerate(final Resource res, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
-    try {
-      TreeIterator<EObject> _allContents = res.getAllContents();
-      Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-      Iterable<block_item> _filter = Iterables.<block_item>filter(_iterable, block_item.class);
-      for (final block_item t : _filter) {
-        {
-          EObject current = t.eContainer();
-          while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
-            EObject _eContainer = current.eContainer();
-            current = _eContainer;
-          }
-          if ((current instanceof function_definition)) {
-            function_definition func = ((function_definition) current);
-            declarator _declarator = func.getDeclarator();
-            direct_declarator _direct_declarator = _declarator.getDirect_declarator();
-            String _identifier = _direct_declarator.getIdentifier();
-            String fName = _identifier.toString();
-            boolean _equals = this.currentFunc.equals(fName);
-            boolean _not = (!_equals);
-            if (_not) {
-              String _out = this.out;
-              this.out = (_out + ((("//" + fName) + " code.") + "\n"));
-              this.currentFunc = fName;
-              String _plus = (Integer.valueOf((this.currentLine + 8)) + "");
-              this.declarations.put(("#F_CALL_" + fName), _plus);
-            }
-          }
-          this.compileBlock(t);
+    TreeIterator<EObject> _allContents = res.getAllContents();
+    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
+    Iterable<block_item> _filter = Iterables.<block_item>filter(_iterable, block_item.class);
+    for (final block_item t : _filter) {
+      {
+        EObject current = t.eContainer();
+        while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
+          EObject _eContainer = current.eContainer();
+          current = _eContainer;
         }
+        if ((current instanceof function_definition)) {
+          function_definition func = ((function_definition) current);
+          declarator _declarator = func.getDeclarator();
+          direct_declarator _direct_declarator = _declarator.getDirect_declarator();
+          String _identifier = _direct_declarator.getIdentifier();
+          String fName = _identifier.toString();
+          boolean _equals = this.currentFunc.equals(fName);
+          boolean _not = (!_equals);
+          if (_not) {
+            String _out = this.out;
+            this.out = (_out + ((("//" + fName) + " code.") + "\n"));
+            this.currentFunc = fName;
+            String _plus = (Integer.valueOf((this.currentLine + 8)) + "");
+            this.declarations.put(("#F_CALL_" + fName), _plus);
+          }
+        }
+        this.compileBlock(t);
       }
-      Date _date = new Date();
-      long ts = _date.getTime();
-      Set<String> keys = this.declarations.keySet();
-      for (int i = 0; (i < keys.size()); i++) {
-        final Set<String> _converted_keys = (Set<String>)keys;
-        CharSequence _get = ((CharSequence[])Conversions.unwrapArray(_converted_keys, CharSequence.class))[i];
-        final Set<String> _converted_keys_1 = (Set<String>)keys;
-        Object _get_1 = ((Object[])Conversions.unwrapArray(_converted_keys_1, Object.class))[i];
-        String _get_2 = this.declarations.get(_get_1);
-        String _replace = this.out.replace(_get, _get_2);
-        this.out = _replace;
-      }
-      String _out = this.out;
-      this.out = (_out + ("----------------------END----------------------------" + "\n"));
-      String _out_1 = this.out;
-      this.out = (_out_1 + "\n");
-      InputOutput.<String>println("ENTROOOOOOOOOOOOOOOOOO");
+    }
+    Date _date = new Date();
+    long ts = _date.getTime();
+    Set<String> keys = this.declarations.keySet();
+    for (int i = 0; (i < keys.size()); i++) {
+      final Set<String> _converted_keys = (Set<String>)keys;
+      CharSequence _get = ((CharSequence[])Conversions.unwrapArray(_converted_keys, CharSequence.class))[i];
+      final Set<String> _converted_keys_1 = (Set<String>)keys;
+      Object _get_1 = ((Object[])Conversions.unwrapArray(_converted_keys_1, Object.class))[i];
+      String _get_2 = this.declarations.get(_get_1);
+      String _replace = this.out.replace(_get, _get_2);
+      this.out = _replace;
+    }
+    Set<String> keys2 = this.cases.keySet();
+    for (int i = 0; (i < keys2.size()); i++) {
+      final Set<String> _converted_keys2 = (Set<String>)keys2;
+      CharSequence _get = ((CharSequence[])Conversions.unwrapArray(_converted_keys2, CharSequence.class))[i];
+      final Set<String> _converted_keys2_1 = (Set<String>)keys2;
+      Object _get_1 = ((Object[])Conversions.unwrapArray(_converted_keys2_1, Object.class))[i];
+      String _get_2 = this.cases.get(_get_1);
+      String _replace = this.out.replace(_get, _get_2);
+      this.out = _replace;
+    }
+    String _out = this.out;
+    this.out = (_out + ("----------------------END----------------------------" + "\n"));
+    String _out_1 = this.out;
+    this.out = (_out_1 + "\n");
+    InputOutput.<String>println("ENTROOOOOOOOOOOOOOOOOO");
+    try {
       PrintWriter printer = new PrintWriter(((("/home/axius/runtime-EclipseApplication/teste/" + "outz") + Integer.valueOf(this.currentLine)) + ".c"));
       printer.println(this.out);
       printer.close();
-      fsa.deleteFile((("out" + Integer.valueOf(this.currentLine)) + ".o"));
-      fsa.generateFile((("out" + Integer.valueOf(this.currentLine)) + ".o"), this.out);
-      this.out = "";
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
+    } catch (final Throwable _t) {
+      if (_t instanceof Exception) {
+        final Exception exception = (Exception)_t;
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
     }
+    fsa.deleteFile((("out" + Integer.valueOf(this.currentLine)) + ".o"));
+    fsa.generateFile((("out" + Integer.valueOf(this.currentLine)) + ".o"), this.out);
+    this.out = "";
   }
   
   public primary_expression primaryExpFromAssigExp(final assignment_expression exp) {
@@ -168,21 +189,88 @@ public class AnsicGenerator extends AbstractGenerator {
   public String compileBlock(final block_item b) {
     String _xtrycatchfinallyexpression = null;
     try {
-      String _xifexpression = null;
-      statement _statement = b.getStatement();
-      boolean _notEquals = (!Objects.equal(_statement, null));
-      if (_notEquals) {
-        _xifexpression = this.checkForStatement(b);
-      } else {
-        String _xifexpression_1 = null;
-        declaration _declaration = b.getDeclaration();
-        boolean _notEquals_1 = (!Objects.equal(_declaration, null));
-        if (_notEquals_1) {
-          _xifexpression_1 = this.checkForDeclaration(b);
+      String _xblockexpression = null;
+      {
+        boolean _and = false;
+        statement _statement = b.getStatement();
+        boolean _notEquals = (!Objects.equal(_statement, null));
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          statement _statement_1 = b.getStatement();
+          labeled_statement _labeled_statement = _statement_1.getLabeled_statement();
+          boolean _notEquals_1 = (!Objects.equal(_labeled_statement, null));
+          _and = _notEquals_1;
         }
-        _xifexpression = _xifexpression_1;
+        if (_and) {
+          statement _statement_2 = b.getStatement();
+          labeled_statement _labeled_statement_1 = _statement_2.getLabeled_statement();
+          conditional_expression _conditional_expression = _labeled_statement_1.getConditional_expression();
+          boolean _notEquals_2 = (!Objects.equal(_conditional_expression, null));
+          if (_notEquals_2) {
+            if (this.onFirstCase) {
+              String _out = this.out;
+              String _nextLine = this.getNextLine();
+              String _plus = (_nextLine + "BEQ ");
+              String _plus_1 = (_plus + "#CASE_");
+              String _plus_2 = (_plus_1 + Integer.valueOf(1));
+              String _plus_3 = (_plus_2 + "\n");
+              this.out = (_out + _plus_3);
+              this.onFirstCase = false;
+            } else {
+              String _out_1 = this.out;
+              String _nextLine_1 = this.getNextLine();
+              String _plus_4 = (_nextLine_1 + "BR ");
+              String _plus_5 = (_plus_4 + "#DEFAULT");
+              String _plus_6 = (_plus_5 + "\n");
+              this.out = (_out_1 + _plus_6);
+              this.caseNumber++;
+              String _plus_7 = (Integer.valueOf((this.currentLine + 8)) + "");
+              this.cases.put(("#CASE_" + Integer.valueOf(this.caseNumber)), _plus_7);
+              String _out_2 = this.out;
+              String _nextLine_2 = this.getNextLine();
+              String _plus_8 = (_nextLine_2 + "BEQ ");
+              String _plus_9 = (_plus_8 + "#CASE_");
+              String _plus_10 = (_plus_9 + Integer.valueOf((this.caseNumber + 1)));
+              String _plus_11 = (_plus_10 + "\n");
+              this.out = (_out_2 + _plus_11);
+            }
+          } else {
+            String _plus_12 = (Integer.valueOf((this.currentLine + 8)) + "");
+            this.cases.put("#DEFAULT", _plus_12);
+            this.caseNumber++;
+            String _plus_13 = (Integer.valueOf((this.currentLine + 8)) + "");
+            this.cases.put(("#CASE_" + Integer.valueOf(this.caseNumber)), _plus_13);
+          }
+          statement _statement_3 = b.getStatement();
+          labeled_statement _labeled_statement_2 = _statement_3.getLabeled_statement();
+          statement _statement_4 = _labeled_statement_2.getStatement();
+          boolean _notEquals_3 = (!Objects.equal(_statement_4, null));
+          if (_notEquals_3) {
+            statement _statement_5 = b.getStatement();
+            labeled_statement _labeled_statement_3 = _statement_5.getLabeled_statement();
+            statement _statement_6 = _labeled_statement_3.getStatement();
+            this.checkForStatement(_statement_6);
+          }
+        }
+        String _xifexpression = null;
+        statement _statement_7 = b.getStatement();
+        boolean _notEquals_4 = (!Objects.equal(_statement_7, null));
+        if (_notEquals_4) {
+          statement _statement_8 = b.getStatement();
+          _xifexpression = this.checkForStatement(_statement_8);
+        } else {
+          String _xifexpression_1 = null;
+          declaration _declaration = b.getDeclaration();
+          boolean _notEquals_5 = (!Objects.equal(_declaration, null));
+          if (_notEquals_5) {
+            _xifexpression_1 = this.checkForDeclaration(b);
+          }
+          _xifexpression = _xifexpression_1;
+        }
+        _xblockexpression = _xifexpression;
       }
-      _xtrycatchfinallyexpression = _xifexpression;
+      _xtrycatchfinallyexpression = _xblockexpression;
     } catch (final Throwable _t) {
       if (_t instanceof Exception) {
         final Exception exception = (Exception)_t;
@@ -219,18 +307,16 @@ public class AnsicGenerator extends AbstractGenerator {
     return null;
   }
   
-  public String checkForStatement(final block_item b) {
+  public String checkForStatement(final statement s) {
     String _xblockexpression = null;
     {
-      statement _statement = b.getStatement();
-      selection_statement _selection_statement = _statement.getSelection_statement();
+      selection_statement _selection_statement = s.getSelection_statement();
       boolean _notEquals = (!Objects.equal(_selection_statement, null));
       if (_notEquals) {
-        statement _statement_1 = b.getStatement();
-        selection_statement _selection_statement_1 = _statement_1.getSelection_statement();
+        selection_statement _selection_statement_1 = s.getSelection_statement();
         this.gerarCodigoParaSwitch(_selection_statement_1);
       }
-      _xblockexpression = this.generateForDecl(b);
+      _xblockexpression = this.generateForDecl(s);
     }
     return _xblockexpression;
   }
@@ -409,18 +495,16 @@ public class AnsicGenerator extends AbstractGenerator {
     return _xifexpression;
   }
   
-  public String generateForDecl(final block_item b) {
+  public String generateForDecl(final statement s) {
     String _xblockexpression = null;
     {
-      statement _statement = b.getStatement();
-      expression_statement _expression_statement = _statement.getExpression_statement();
+      expression_statement _expression_statement = s.getExpression_statement();
       expression _expression = _expression_statement.getExpression();
       assignment_expression _assignment_expression = _expression.getAssignment_expression();
       unary_expression _unary_expression = _assignment_expression.getUnary_expression();
       boolean _equals = Objects.equal(_unary_expression, null);
       if (_equals) {
-        statement _statement_1 = b.getStatement();
-        expression_statement _expression_statement_1 = _statement_1.getExpression_statement();
+        expression_statement _expression_statement_1 = s.getExpression_statement();
         expression _expression_1 = _expression_statement_1.getExpression();
         assignment_expression _assignment_expression_1 = _expression_1.getAssignment_expression();
         primary_expression primex = this.primaryExpFromAssigExp(_assignment_expression_1);
@@ -490,8 +574,7 @@ public class AnsicGenerator extends AbstractGenerator {
           }
         }
       }
-      statement _statement_2 = b.getStatement();
-      expression_statement _expression_statement_2 = _statement_2.getExpression_statement();
+      expression_statement _expression_statement_2 = s.getExpression_statement();
       expression _expression_2 = _expression_statement_2.getExpression();
       assignment_expression _assignment_expression_2 = _expression_2.getAssignment_expression();
       unary_expression _unary_expression_1 = _assignment_expression_2.getUnary_expression();
@@ -513,8 +596,7 @@ public class AnsicGenerator extends AbstractGenerator {
         String _xblockexpression_1 = null;
         {
           String id = prim.getIdentifier();
-          statement _statement_3 = b.getStatement();
-          expression_statement _expression_statement_3 = _statement_3.getExpression_statement();
+          expression_statement _expression_statement_3 = s.getExpression_statement();
           expression _expression_3 = _expression_statement_3.getExpression();
           assignment_expression _assignment_expression_3 = _expression_3.getAssignment_expression();
           assignment_expression _assignment_expression_4 = _assignment_expression_3.getAssignment_expression();
