@@ -209,10 +209,10 @@ public class AnsicValidator extends AbstractAnsicValidator {
         if (_notEquals_1) {
           expression _expression_1 = ret.getExpression();
           assignment_expression arg = _expression_1.getAssignment_expression();
-          AnsicValidator.ExpRetType _expType = this.getExpType(arg);
+          AnsicValidator.ExpRetType _expType = AnsicValidator.getExpType(arg);
           boolean _notEquals_2 = (!Objects.equal(_expType, null));
           if (_notEquals_2) {
-            AnsicValidator.ExpRetType expRet = this.getExpType(arg);
+            AnsicValidator.ExpRetType expRet = AnsicValidator.getExpType(arg);
             boolean _equals = Objects.equal(expRet, AnsicValidator.ExpRetType.NUMERIC);
             if (_equals) {
               boolean _equals_1 = Objects.equal(argType, "bool");
@@ -346,7 +346,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
     }
   }
   
-  public AnsicValidator.ExpRetType getExpType(final assignment_expression exp) {
+  public static AnsicValidator.ExpRetType getExpType(final assignment_expression exp) {
     conditional_expression current = exp.getConditional_expression();
     conditional_expression_linha _conditional_expression_linha = current.getConditional_expression_linha();
     boolean _notEquals = (!Objects.equal(_conditional_expression_linha, null));
@@ -575,7 +575,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
     } else {
       expression _expression_1 = primatyExp.getExpression();
       assignment_expression _assignment_expression = _expression_1.getAssignment_expression();
-      return this.getExpType(_assignment_expression);
+      return AnsicValidator.getExpType(_assignment_expression);
     }
   }
   
@@ -1016,11 +1016,11 @@ public class AnsicValidator extends AbstractAnsicValidator {
                   InputOutput.<String>println(_plus_2);
                   InputOutput.<String>println(("For: " + Integer.valueOf(i)));
                   String argType = func.params_types.get(i);
-                  AnsicValidator.ExpRetType _expType = this.getExpType(arg);
+                  AnsicValidator.ExpRetType _expType = AnsicValidator.getExpType(arg);
                   boolean _notEquals_1 = (!Objects.equal(_expType, null));
                   if (_notEquals_1) {
                     InputOutput.<String>println("Is an expression");
-                    AnsicValidator.ExpRetType expRet = this.getExpType(arg);
+                    AnsicValidator.ExpRetType expRet = AnsicValidator.getExpType(arg);
                     boolean _equals = Objects.equal(expRet, AnsicValidator.ExpRetType.NUMERIC);
                     if (_equals) {
                       boolean _equals_1 = Objects.equal(argType, "bool");
@@ -1181,7 +1181,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
       init_declarator _init_declarator_1 = _get_2.getInit_declarator();
       initializer _initializer = _init_declarator_1.getInitializer();
       assignment_expression _assignment_expression = _initializer.getAssignment_expression();
-      AnsicValidator.ExpRetType _expType = this.getExpType(_assignment_expression);
+      AnsicValidator.ExpRetType _expType = AnsicValidator.getExpType(_assignment_expression);
       boolean _equals = Objects.equal(_expType, null);
       if (_equals) {
       } else {
@@ -1190,7 +1190,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
         init_declarator _init_declarator_2 = _get_3.getInit_declarator();
         initializer _initializer_1 = _init_declarator_2.getInitializer();
         assignment_expression _assignment_expression_1 = _initializer_1.getAssignment_expression();
-        AnsicValidator.ExpRetType expType = this.getExpType(_assignment_expression_1);
+        AnsicValidator.ExpRetType expType = AnsicValidator.getExpType(_assignment_expression_1);
         boolean _equals_1 = Objects.equal(expType, AnsicValidator.ExpRetType.NUMERIC);
         if (_equals_1) {
           boolean _or = false;
@@ -1278,7 +1278,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
             init_declarator _init_declarator_4 = _get_5.getInit_declarator();
             initializer _initializer_3 = _init_declarator_4.getInitializer();
             assignment_expression _assignment_expression_3 = _initializer_3.getAssignment_expression();
-            AnsicValidator.ExpRetType _expType_1 = this.getExpType(_assignment_expression_3);
+            AnsicValidator.ExpRetType _expType_1 = AnsicValidator.getExpType(_assignment_expression_3);
             boolean _equals_5 = Objects.equal(_expType_1, null);
             _and_1 = _equals_5;
           }
@@ -1396,14 +1396,14 @@ public class AnsicValidator extends AbstractAnsicValidator {
       _and = false;
     } else {
       assignment_expression _assignment_expression_1 = asexp.getAssignment_expression();
-      AnsicValidator.ExpRetType _expType = this.getExpType(_assignment_expression_1);
+      AnsicValidator.ExpRetType _expType = AnsicValidator.getExpType(_assignment_expression_1);
       boolean _notEquals_1 = (!Objects.equal(_expType, null));
       _and = _notEquals_1;
     }
     if (_and) {
       assignment_expression arg = asexp.getAssignment_expression();
       InputOutput.<String>println("Is an expressionz");
-      AnsicValidator.ExpRetType expRet = this.getExpType(arg);
+      AnsicValidator.ExpRetType expRet = AnsicValidator.getExpType(arg);
       boolean _equals = Objects.equal(expRet, AnsicValidator.ExpRetType.NUMERIC);
       if (_equals) {
         boolean _equals_1 = Objects.equal(argType, "bool");

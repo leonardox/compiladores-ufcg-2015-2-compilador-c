@@ -186,7 +186,7 @@ class AnsicValidator extends AbstractAnsicValidator {
 		}
 	}
 	
-	def getExpType(assignment_expression exp){
+	def static getExpType(assignment_expression exp){
 		var current = exp.conditional_expression;
 		if(current.conditional_expression_linha != null){
 			return ExpRetType.BOOL;

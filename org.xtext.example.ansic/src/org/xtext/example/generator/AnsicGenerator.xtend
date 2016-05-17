@@ -3,14 +3,19 @@
  */
 package org.xtext.example.generator
 
+import java.util.Date
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.example.ansic.DomainModel
-import org.xtext.example.ansic.selection_statement
+import org.xtext.example.ansic.function_definition
 import org.xtext.example.ansic.assignment_expression
 import org.xtext.example.ansic.block_item
+import org.xtext.example.ansic.selection_statement
+import org.xtext.example.validation.AnsicValidator
+import org.xtext.example.validation.AnsicValidator.ExpRetType
+import java.io.PrintWriter
 
 /**
  * Generates code from your model files on save.
@@ -20,13 +25,47 @@ import org.xtext.example.ansic.block_item
 class AnsicGenerator extends AbstractGenerator {
 
 	var out = "";
+	var currentLine = 0;
+	private var declarations = <String,String>newHashMap();
+	private var currentFunc = "";
+	def getNextLine(){
+		currentLine +=8;
+		return currentLine+": ";
+	}
+	var calls = 0;
 	override void doGenerate(Resource res, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		
 		for (t : res.allContents.toIterable.filter(typeof(block_item))){
+				var current = t.eContainer();
+	            while(current != null && !(current instanceof function_definition)){
+	                current = current.eContainer();
+	            }
+	            if(current instanceof function_definition){
+	            	var func = current as function_definition;
+	            	var fName = func.declarator.direct_declarator.identifier.toString();
+	            	if(!currentFunc.equals(fName)){
+	            		out += "//" + fName + " code." + "\n";
+	            		currentFunc = fName;
+	            		declarations.put("#F_CALL_" +fName, (currentLine+8)+"");
+	            	}
+	            }
 				compileBlock(t);
-		}		
-		fsa.deleteFile("out.c");
-		fsa.generateFile("out.c", out);
+		}
+		var ts = new Date().time;
+		var keys = declarations.keySet();
+		for(var i =0; i< keys.size(); i++){
+			out = out.replace(keys.get(i), declarations.get(keys.get(i)));
+		}
+		out += "----------------------END----------------------------" + "\n";
+		out += "\n";
+		println("ENTROOOOOOOOOOOOOOOOOO");
+		var printer = new PrintWriter("/home/axius/runtime-EclipseApplication/teste/"+"outz"+currentLine+".c");
+		printer.println(out);
+		printer.close();
+		fsa.deleteFile("out" + currentLine+ '.o');
+		fsa.generateFile("out" + currentLine+ '.o', out);
+		
+		out = "";		
 	}
 	def primaryExpFromAssigExp(assignment_expression exp){
 		var ret = exp.conditional_expression.
@@ -51,7 +90,8 @@ class AnsicGenerator extends AbstractGenerator {
 	
 	def checkForDeclaration(block_item b) {
 		//Tratar quando for uma declaração
-		var declId = b.declaration.init_declarator_list.get(0).init_declarator.declarator.direct_declarator;
+		var id = b.declaration.init_declarator_list.get(0).init_declarator.declarator.direct_declarator.identifier;
+		generateToAssig(id, b.declaration.init_declarator_list.get(0).init_declarator.initializer.assignment_expression);
 	}
 	
 	def gerarCodigoParaSwitch(selection_statement jump){
@@ -63,28 +103,112 @@ class AnsicGenerator extends AbstractGenerator {
 			//É um switch
 			gerarCodigoParaSwitch(b.statement.selection_statement)
 		}
-		var prim = b.statement.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
-			if(prim.identifier != null && !prim.identifier.isEmpty()){
-			var id = prim.identifier;
-			var rightSide = primaryExpFromAssigExp(b.statement.expression_statement.expression.assignment_expression.assignment_expression);
-			if(rightSide.constant != null){
-				//É uma atribuição com uma contante
-				if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
-					out += "ST " + id + ", #" + rightSide.constant.f_constant.toString() + "\n";	
-				}else if(rightSide.constant.char == null || rightSide.constant.char.isEmpty()){
-					out += "ST " + id + ", #" + rightSide.constant.i_constant.toString() + "\n";
-				}				
+		generateForDecl(b);
+	}
+	
+	def generateToAssig(String id, assignment_expression asexp){
+		if(AnsicValidator.getExpType(asexp) == null){
+				var rightSide = primaryExpFromAssigExp(asexp);
+				if(rightSide.constant != null){
+				//É uma atribuição com uma contante: x=a;
+					if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
+						out += getNextLine() +"ST " + id + ", #" + rightSide.constant.f_constant.toString() + "\n";	
+					}else if(rightSide.constant.char == null || rightSide.constant.char.isEmpty()){
+						out += getNextLine() +"ST " + id + ", #" + rightSide.constant.i_constant.toString() + "\n";
+					}				
+				}
+				if(rightSide.identifier != null && !rightSide.identifier.isEmpty()){
+					//É uma atribuição com um ID
+					if(declarations.keySet.contains("#F_CALL_"+rightSide.identifier)){
+						//É uma chamada a função
+						out += getNextLine() + "ADD " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+						out += getNextLine() + "ST " + "*SP" + ", " +  "#" + (currentLine+16) +  "\n";
+						out += getNextLine() + "BR " + "#F_CALL_"+rightSide.identifier+  "\n";
+						out += getNextLine() + "SUB " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+						out += getNextLine() + "LD " + "R0" + ", " + "SP*" +  "\n";
+						out += getNextLine() + "ST " + id + ", R0" + "\n";						
+					}else{
+						out += getNextLine() + "LD " + "R0" + ", " + rightSide.identifier + "\n";
+						out += getNextLine() + "ST " + id + ", R0" + "\n";	
+					}				
+				}
+			}else{
+				//Tratar quando é x = x+a ou x=x+2
 			}
-			if(rightSide.identifier != null && !rightSide.identifier.isEmpty()){
-				//É uma atribuição com um ID
-				out += "LD " + "R0" + ", " + rightSide.identifier + "\n";
-				out += "ST " + id + ", R0" + "\n";
-			}			
+	}
+	
+	def generateForDecl(block_item b) {
+		if(b.statement.expression_statement.expression.assignment_expression.unary_expression == null){
+			//direct method call?
+			var primex = primaryExpFromAssigExp(b.statement.expression_statement.expression.assignment_expression);
+			if(primex != null && primex.identifier != null && !primex.identifier.isEmpty){
+				if(declarations.keySet.contains("#F_CALL_"+primex.identifier)){
+						//É uma chamada a função
+						out += getNextLine() + "ADD " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+						out += getNextLine() + "ST " + "*SP" + ", " +  "#" + (currentLine+16) +  "\n";
+						out += getNextLine() + "BR " + "#F_CALL_"+primex.identifier+  "\n";
+						out += getNextLine() + "SUB " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";					
+				}
+			}
+		}
+		var prim = b.statement.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
+		if(prim.identifier != null && !prim.identifier.isEmpty()){
+			
+			var id = prim.identifier;
+			generateToAssig(id,b.statement.expression_statement.expression.assignment_expression.assignment_expression);			
+			//Checar que não tem lado direito, tipo a= b e não pode ser a = b+c
+				
 		}
 	}	
 //	def CharSequence compile(block_item item){
 //		 item.statement.expression_statement.expression.assignment_expression.compile();
 //	}
 	
-	
+	def static getExpType(assignment_expression exp){
+		var current = exp.conditional_expression;
+		if(current.conditional_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current2 = current.logical_or_expression;
+		if(current2.logical_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current3 = current2.logical_and_expression;
+		if(current3.logical_and_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current4 = current3.inclusive_or_expression;
+		if(current4.inclusive_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current5 = current4.exclusive_or_expression;
+		if(current5.exclusive_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current6 = current5.and_expression;
+		if(current6.and_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current7 = current6.equality_expression;
+		if(current7.equality_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current8 = current7.relational_expression;
+		if(current8.relational_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current9 = current8.shift_expression;
+		if(current9.shift_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		var current10 = current9.additive_expression;
+		if(current10.additive_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		var curent11 = current10.multiplicative_expression;
+		if(curent11.multiplicative_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		return null;		
+	}
 }
