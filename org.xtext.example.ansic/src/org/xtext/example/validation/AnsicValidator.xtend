@@ -729,62 +729,55 @@ class AnsicValidator extends AbstractAnsicValidator {
 	@Check
 	def checkAtribType(assignment_expression asexp){		
 		var idLeft = asexp.unary_expression.postfix_expression.primary_expression.identifier;
-		var left_type = variables.get(idLeft);
+		var argType = variables.get(idLeft);
 		if(!variables.keySet.contains(idLeft)){
 			error('Variavel não declarada',
 				AnsicPackage.Literals.ASSIGNMENT_EXPRESSION__UNARY_EXPRESSION
 			);
 		}
-		if(getExpType(asexp) == null){
-			//Se for direto pra um id ou uma consntante...
-		}else{
-			var expType = getExpType(asexp);
-			if (expType == ExpRetType.NUMERIC) {
-				if (left_type == "bool" || left_type == 'char') {
-					error(
-						"Tipos incompativeis para atribuição",
+		if(asexp.assignment_expression != null && getExpType(asexp.assignment_expression) != null){
+			var arg = asexp.assignment_expression;
+			println("Is an expressionz");
+			var expRet = getExpType(arg);
+			if(expRet == ExpRetType.NUMERIC){
+				if(argType == 'bool'){
+					error("Variavel não compativel com este tipo",
 						null
 					)
 				}
-			} else if (expType == ExpRetType.BOOL) {
-				if (left_type != "bool") {
-					error(
-						"Não é possível atribuir retorno booleano para o tipo declarado",
+			}else if(expRet == ExpRetType.BOOL){
+				if(argType != 'bool'){
+					error("Tipo de parametro não compativel",
 						null
 					)
 				}
 			}
-		}
-		var idRight = asexp.assignment_expression.conditional_expression.
-		logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
-		and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
-		multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
-		if(asexp.assignment_expression != null){
-			if(idRight.identifier != null && !idRight.identifier.trim().isEmpty()){
-				//Validar quando é uma atribuição com outra variavel
-				// a = b
-				if(variables.containsKey(idRight)){
-					validateActribWithId(idLeft, idRight.identifier);	
-				}else if(functions.containsKey(idRight)){
-					if(functions.get(idRight).retType != left_type){
-						error("Tipo de rtorno não compatível com atribuição",
+		}else{
+			println("Eh um id oyu consz")
+			var idOrCons = primaryExpFromAssigExp(asexp.assignment_expression);
+			if(idOrCons.identifier != null && !idOrCons.identifier.trim().isEmpty()){
+				if(variables.containsKey(idOrCons.identifier)){
+					//é UMA VARIAAVEL
+					if(variables.get(idOrCons.identifier) != argType){						
+						error("Variavel não compativel com este tipo",
 							null
 						)
 					}
-				}				
-			}else if(idRight.constant != null){
-				//Validar quando é uma atribuição com uma constante
-				// a = 3;
-				left_type = variables.get(idLeft);
-				checkDeclarationWithConstant(left_type, idRight)
-			}				
-		}			
-		
-		var mthodCall = asexp.assignment_expression.conditional_expression.
-					logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
-					and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
-					multiplicative_expression.cast_expression.unary_expression.postfix_expression.postfix_expression_linha	;
-		
+				}else if( functions.containsKey(idOrCons.identifier)){
+					if(functions.get(idOrCons.identifier).retType != argType){
+						error("Variavel não compativel com este tipo",
+							null
+						)
+					}
+				}
+			}			
+			if(idOrCons.constant != null && idOrCons.constant.char != null && argType != 'char'){				
+				error("Variavel não compativel com este tipo",
+						null
+				)
+			}		
+			//O argumento é uma contante ou um id
+		}
 	}
 	
 	def validateAlarg(String tr, String tl){
