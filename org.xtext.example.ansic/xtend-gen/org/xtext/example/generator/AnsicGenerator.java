@@ -5,6 +5,7 @@ package org.xtext.example.generator;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -13,12 +14,31 @@ import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.and_expression;
 import org.xtext.example.ansic.assignment_expression;
 import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.cast_expression;
+import org.xtext.example.ansic.conditional_expression;
+import org.xtext.example.ansic.constant;
+import org.xtext.example.ansic.declaration;
+import org.xtext.example.ansic.declarator;
+import org.xtext.example.ansic.direct_declarator;
+import org.xtext.example.ansic.equality_expression;
+import org.xtext.example.ansic.exclusive_or_expression;
 import org.xtext.example.ansic.expression;
 import org.xtext.example.ansic.expression_statement;
+import org.xtext.example.ansic.inclusive_or_expression;
+import org.xtext.example.ansic.init_declarator;
+import org.xtext.example.ansic.init_declarator_list;
+import org.xtext.example.ansic.logical_and_expression;
+import org.xtext.example.ansic.logical_or_expression;
+import org.xtext.example.ansic.multiplicative_expression;
 import org.xtext.example.ansic.postfix_expression;
 import org.xtext.example.ansic.primary_expression;
+import org.xtext.example.ansic.relational_expression;
+import org.xtext.example.ansic.selection_statement;
+import org.xtext.example.ansic.shift_expression;
 import org.xtext.example.ansic.statement;
 import org.xtext.example.ansic.unary_expression;
 
@@ -39,43 +59,45 @@ public class AnsicGenerator extends AbstractGenerator {
     for (final block_item t : _filter) {
       this.compileBlock(t);
     }
-    fsa.generateFile("out.txt", this.out);
+    fsa.deleteFile("out.c");
+    fsa.generateFile("out.c", this.out);
+  }
+  
+  public primary_expression primaryExpFromAssigExp(final assignment_expression exp) {
+    conditional_expression _conditional_expression = exp.getConditional_expression();
+    logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
+    logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
+    inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+    exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+    and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+    equality_expression _equality_expression = _and_expression.getEquality_expression();
+    relational_expression _relational_expression = _equality_expression.getRelational_expression();
+    shift_expression _shift_expression = _relational_expression.getShift_expression();
+    additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+    multiplicative_expression _multiplicative_expression = _additive_expression.getMultiplicative_expression();
+    cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+    unary_expression _unary_expression = _cast_expression.getUnary_expression();
+    postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+    primary_expression ret = _postfix_expression.getPrimary_expression();
+    return ret;
   }
   
   public String compileBlock(final block_item b) {
     String _xtrycatchfinallyexpression = null;
     try {
-      String _xblockexpression = null;
-      {
-        statement _statement = b.getStatement();
-        expression_statement _expression_statement = _statement.getExpression_statement();
-        expression _expression = _expression_statement.getExpression();
-        assignment_expression _assignment_expression = _expression.getAssignment_expression();
-        unary_expression _unary_expression = _assignment_expression.getUnary_expression();
-        postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
-        primary_expression prim = _postfix_expression.getPrimary_expression();
-        String _xifexpression = null;
-        boolean _and = false;
-        String _identifier = prim.getIdentifier();
-        boolean _notEquals = (!Objects.equal(_identifier, null));
-        if (!_notEquals) {
-          _and = false;
-        } else {
-          String _identifier_1 = prim.getIdentifier();
-          boolean _isEmpty = _identifier_1.isEmpty();
-          boolean _not = (!_isEmpty);
-          _and = _not;
+      String _xifexpression = null;
+      statement _statement = b.getStatement();
+      boolean _notEquals = (!Objects.equal(_statement, null));
+      if (_notEquals) {
+        _xifexpression = this.checkForStatement(b);
+      } else {
+        declaration _declaration = b.getDeclaration();
+        boolean _notEquals_1 = (!Objects.equal(_declaration, null));
+        if (_notEquals_1) {
+          this.checkForDeclaration(b);
         }
-        if (_and) {
-          String _out = this.out;
-          String _identifier_2 = prim.getIdentifier();
-          String _plus = ("ST " + _identifier_2);
-          String _plus_1 = (_plus + ", R0 \n");
-          _xifexpression = this.out = (_out + _plus_1);
-        }
-        _xblockexpression = _xifexpression;
       }
-      _xtrycatchfinallyexpression = _xblockexpression;
+      _xtrycatchfinallyexpression = _xifexpression;
     } catch (final Throwable _t) {
       if (_t instanceof Exception) {
         final Exception exception = (Exception)_t;
@@ -85,5 +107,140 @@ public class AnsicGenerator extends AbstractGenerator {
       }
     }
     return _xtrycatchfinallyexpression;
+  }
+  
+  public void checkForDeclaration(final block_item b) {
+    declaration _declaration = b.getDeclaration();
+    EList<init_declarator_list> _init_declarator_list = _declaration.getInit_declarator_list();
+    init_declarator_list _get = _init_declarator_list.get(0);
+    init_declarator _init_declarator = _get.getInit_declarator();
+    declarator _declarator = _init_declarator.getDeclarator();
+    direct_declarator declId = _declarator.getDirect_declarator();
+  }
+  
+  public Object gerarCodigoParaSwitch(final selection_statement jump) {
+    return null;
+  }
+  
+  public String checkForStatement(final block_item b) {
+    String _xblockexpression = null;
+    {
+      statement _statement = b.getStatement();
+      selection_statement _selection_statement = _statement.getSelection_statement();
+      boolean _notEquals = (!Objects.equal(_selection_statement, null));
+      if (_notEquals) {
+        statement _statement_1 = b.getStatement();
+        selection_statement _selection_statement_1 = _statement_1.getSelection_statement();
+        this.gerarCodigoParaSwitch(_selection_statement_1);
+      }
+      statement _statement_2 = b.getStatement();
+      expression_statement _expression_statement = _statement_2.getExpression_statement();
+      expression _expression = _expression_statement.getExpression();
+      assignment_expression _assignment_expression = _expression.getAssignment_expression();
+      unary_expression _unary_expression = _assignment_expression.getUnary_expression();
+      postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+      primary_expression prim = _postfix_expression.getPrimary_expression();
+      String _xifexpression = null;
+      boolean _and = false;
+      String _identifier = prim.getIdentifier();
+      boolean _notEquals_1 = (!Objects.equal(_identifier, null));
+      if (!_notEquals_1) {
+        _and = false;
+      } else {
+        String _identifier_1 = prim.getIdentifier();
+        boolean _isEmpty = _identifier_1.isEmpty();
+        boolean _not = (!_isEmpty);
+        _and = _not;
+      }
+      if (_and) {
+        String _xblockexpression_1 = null;
+        {
+          String id = prim.getIdentifier();
+          statement _statement_3 = b.getStatement();
+          expression_statement _expression_statement_1 = _statement_3.getExpression_statement();
+          expression _expression_1 = _expression_statement_1.getExpression();
+          assignment_expression _assignment_expression_1 = _expression_1.getAssignment_expression();
+          assignment_expression _assignment_expression_2 = _assignment_expression_1.getAssignment_expression();
+          primary_expression rightSide = this.primaryExpFromAssigExp(_assignment_expression_2);
+          constant _constant = rightSide.getConstant();
+          boolean _notEquals_2 = (!Objects.equal(_constant, null));
+          if (_notEquals_2) {
+            boolean _and_1 = false;
+            constant _constant_1 = rightSide.getConstant();
+            String _f_constant = _constant_1.getF_constant();
+            boolean _notEquals_3 = (!Objects.equal(_f_constant, null));
+            if (!_notEquals_3) {
+              _and_1 = false;
+            } else {
+              constant _constant_2 = rightSide.getConstant();
+              String _f_constant_1 = _constant_2.getF_constant();
+              boolean _isEmpty_1 = _f_constant_1.isEmpty();
+              boolean _not_1 = (!_isEmpty_1);
+              _and_1 = _not_1;
+            }
+            if (_and_1) {
+              String _out = this.out;
+              constant _constant_3 = rightSide.getConstant();
+              String _f_constant_2 = _constant_3.getF_constant();
+              String _string = _f_constant_2.toString();
+              String _plus = ((("ST " + id) + ", #") + _string);
+              String _plus_1 = (_plus + "\n");
+              this.out = (_out + _plus_1);
+            } else {
+              boolean _or = false;
+              constant _constant_4 = rightSide.getConstant();
+              String _char = _constant_4.getChar();
+              boolean _equals = Objects.equal(_char, null);
+              if (_equals) {
+                _or = true;
+              } else {
+                constant _constant_5 = rightSide.getConstant();
+                String _char_1 = _constant_5.getChar();
+                boolean _isEmpty_2 = _char_1.isEmpty();
+                _or = _isEmpty_2;
+              }
+              if (_or) {
+                String _out_1 = this.out;
+                constant _constant_6 = rightSide.getConstant();
+                int _i_constant = _constant_6.getI_constant();
+                String _string_1 = Integer.valueOf(_i_constant).toString();
+                String _plus_2 = ((("ST " + id) + ", #") + _string_1);
+                String _plus_3 = (_plus_2 + "\n");
+                this.out = (_out_1 + _plus_3);
+              }
+            }
+          }
+          String _xifexpression_1 = null;
+          boolean _and_2 = false;
+          String _identifier_2 = rightSide.getIdentifier();
+          boolean _notEquals_4 = (!Objects.equal(_identifier_2, null));
+          if (!_notEquals_4) {
+            _and_2 = false;
+          } else {
+            String _identifier_3 = rightSide.getIdentifier();
+            boolean _isEmpty_3 = _identifier_3.isEmpty();
+            boolean _not_2 = (!_isEmpty_3);
+            _and_2 = _not_2;
+          }
+          if (_and_2) {
+            String _xblockexpression_2 = null;
+            {
+              String _out_2 = this.out;
+              String _identifier_4 = rightSide.getIdentifier();
+              String _plus_4 = ((("LD " + "R0") + ", ") + _identifier_4);
+              String _plus_5 = (_plus_4 + "\n");
+              this.out = (_out_2 + _plus_5);
+              String _out_3 = this.out;
+              _xblockexpression_2 = this.out = (_out_3 + ((("ST " + id) + ", R0") + "\n"));
+            }
+            _xifexpression_1 = _xblockexpression_2;
+          }
+          _xblockexpression_1 = _xifexpression_1;
+        }
+        _xifexpression = _xblockexpression_1;
+      }
+      _xblockexpression = _xifexpression;
+    }
+    return _xblockexpression;
   }
 }

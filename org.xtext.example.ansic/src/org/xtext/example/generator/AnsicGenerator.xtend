@@ -8,7 +8,10 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.example.ansic.DomainModel
+import org.xtext.example.ansic.selection_statement
+import org.xtext.example.ansic.assignment_expression
 import org.xtext.example.ansic.block_item
+
 /**
  * Generates code from your model files on save.
  * 
@@ -21,21 +24,63 @@ class AnsicGenerator extends AbstractGenerator {
 		
 		for (t : res.allContents.toIterable.filter(typeof(block_item))){
 				compileBlock(t);
-		}
-		fsa.generateFile("out.txt", out);
-		
+		}		
+		fsa.deleteFile("out.c");
+		fsa.generateFile("out.c", out);
 	}
-	
+	def primaryExpFromAssigExp(assignment_expression exp){
+		var ret = exp.conditional_expression.
+		logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+		and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+		multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+		return ret;
+	}
 	def compileBlock(block_item b){
 		try {
-			var prim = b.statement.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
-			if(prim.identifier != null && !prim.identifier.isEmpty()){
-				out += "ST " + prim.identifier + ", R0 \n"
-			}	
+			if(b.statement != null){
+				checkForStatement(b)	
+			}else if(b.declaration != null){
+				checkForDeclaration(b);
+			}
+			
 		} catch (Exception exception) {
 			
 		}
 			
+	}
+	
+	def checkForDeclaration(block_item b) {
+		//Tratar quando for uma declaração
+		var declId = b.declaration.init_declarator_list.get(0).init_declarator.declarator.direct_declarator;
+	}
+	
+	def gerarCodigoParaSwitch(selection_statement jump){
+		//Gerar codigo para switch aqui...
+	}
+	
+	def checkForStatement(block_item b) {
+		if(b.statement.selection_statement != null){
+			//É um switch
+			gerarCodigoParaSwitch(b.statement.selection_statement)
+		}
+		var prim = b.statement.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
+			if(prim.identifier != null && !prim.identifier.isEmpty()){
+			var id = prim.identifier;
+			var rightSide = primaryExpFromAssigExp(b.statement.expression_statement.expression.assignment_expression.assignment_expression);
+			if(rightSide.constant != null){
+				//É uma atribuição com uma contante
+				if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
+					out += "ST " + id + ", #" + rightSide.constant.f_constant.toString() + "\n";	
+				}else if(rightSide.constant.char == null || rightSide.constant.char.isEmpty()){
+					out += "ST " + id + ", #" + rightSide.constant.i_constant.toString() + "\n";
+				}				
+			}
+			if(rightSide.identifier != null && !rightSide.identifier.isEmpty()){
+				//É uma atribuição com um ID
+				out += "LD " + "R0" + ", " + rightSide.identifier + "\n";
+				out += "ST " + id + ", R0" + "\n";
+			}			
+		}
 	}	
 //	def CharSequence compile(block_item item){
 //		 item.statement.expression_statement.expression.assignment_expression.compile();
