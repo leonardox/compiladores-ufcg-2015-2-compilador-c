@@ -3,10 +3,24 @@
  */
 package org.xtext.example.generator;
 
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.ansic.assignment_expression;
+import org.xtext.example.ansic.block_item;
+import org.xtext.example.ansic.expression;
+import org.xtext.example.ansic.expression_statement;
+import org.xtext.example.ansic.postfix_expression;
+import org.xtext.example.ansic.primary_expression;
+import org.xtext.example.ansic.statement;
+import org.xtext.example.ansic.unary_expression;
 
 /**
  * Generates code from your model files on save.
@@ -15,7 +29,61 @@ import org.eclipse.xtext.generator.IGeneratorContext;
  */
 @SuppressWarnings("all")
 public class AnsicGenerator extends AbstractGenerator {
+  private String out = "";
+  
   @Override
-  public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+  public void doGenerate(final Resource res, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    TreeIterator<EObject> _allContents = res.getAllContents();
+    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
+    Iterable<block_item> _filter = Iterables.<block_item>filter(_iterable, block_item.class);
+    for (final block_item t : _filter) {
+      this.compileBlock(t);
+    }
+    fsa.generateFile("out.txt", this.out);
+  }
+  
+  public String compileBlock(final block_item b) {
+    String _xtrycatchfinallyexpression = null;
+    try {
+      String _xblockexpression = null;
+      {
+        statement _statement = b.getStatement();
+        expression_statement _expression_statement = _statement.getExpression_statement();
+        expression _expression = _expression_statement.getExpression();
+        assignment_expression _assignment_expression = _expression.getAssignment_expression();
+        unary_expression _unary_expression = _assignment_expression.getUnary_expression();
+        postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+        primary_expression prim = _postfix_expression.getPrimary_expression();
+        String _xifexpression = null;
+        boolean _and = false;
+        String _identifier = prim.getIdentifier();
+        boolean _notEquals = (!Objects.equal(_identifier, null));
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          String _identifier_1 = prim.getIdentifier();
+          boolean _isEmpty = _identifier_1.isEmpty();
+          boolean _not = (!_isEmpty);
+          _and = _not;
+        }
+        if (_and) {
+          String _out = this.out;
+          String _identifier_2 = prim.getIdentifier();
+          String _plus = ("ST " + _identifier_2);
+          String _plus_1 = (_plus + ", R0 \n");
+          _xifexpression = this.out = (_out + _plus_1);
+        }
+        _xblockexpression = _xifexpression;
+      }
+      _xtrycatchfinallyexpression = _xblockexpression;
+    } catch (final Throwable _t) {
+      if (_t instanceof Exception) {
+        final Exception exception = (Exception)_t;
+        _xtrycatchfinallyexpression = null;
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
+    }
+    return _xtrycatchfinallyexpression;
   }
 }

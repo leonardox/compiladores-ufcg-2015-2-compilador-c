@@ -7,7 +7,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-
+import org.xtext.example.ansic.DomainModel
+import org.xtext.example.ansic.block_item
 /**
  * Generates code from your model files on save.
  * 
@@ -15,11 +16,30 @@ import org.eclipse.xtext.generator.IGeneratorContext
  */
 class AnsicGenerator extends AbstractGenerator {
 
-	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+	var out = "";
+	override void doGenerate(Resource res, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		
+		for (t : res.allContents.toIterable.filter(typeof(block_item))){
+				compileBlock(t);
+		}
+		fsa.generateFile("out.txt", out);
+		
 	}
+	
+	def compileBlock(block_item b){
+		try {
+			var prim = b.statement.expression_statement.expression.assignment_expression.unary_expression.postfix_expression.primary_expression
+			if(prim.identifier != null && !prim.identifier.isEmpty()){
+				out += "ST " + prim.identifier + ", R0 \n"
+			}	
+		} catch (Exception exception) {
+			
+		}
+			
+	}	
+//	def CharSequence compile(block_item item){
+//		 item.statement.expression_statement.expression.assignment_expression.compile();
+//	}
+	
+	
 }
