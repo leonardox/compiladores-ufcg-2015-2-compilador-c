@@ -37,6 +37,7 @@ class AnsicGenerator extends AbstractGenerator {
 	private var m_insideSwitch = false;
 	private var currentReg = 0;
 	private var firstFun = true;
+	private var lastIsBreak = false;
 	def getNextLine(){
 		currentLine +=8;
 		return currentLine+": ";
@@ -170,12 +171,13 @@ class AnsicGenerator extends AbstractGenerator {
 					}else{
 						//Final de outro case
 						//Desloque imediatamente para default
-						out += getNextLine() + "BR " + "#DEFAULT"+  "\n";
-						caseNumber++;
+						if(lastIsBreak){
+							out += getNextLine() + "BR " + "#DEFAULT"+  "\n";							
+							//Checa se nao goto Next case							
+						}
 						cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
-						//Checa se nao goto Next case
+						caseNumber++;
 						out += getNextLine() + "BEQ " + "#CASE_"+(caseNumber+1)+ "\n";
-						
 					}
 				}else{
 					//Eh um default
@@ -188,7 +190,12 @@ class AnsicGenerator extends AbstractGenerator {
 				}					
 			}
 			if(b.statement != null){
-				checkForStatement(b.statement)	
+				if(b.statement.jump_statement != null){
+					lastIsBreak = true;
+				}else{
+					lastIsBreak = false;
+				}
+				checkForStatement(b.statement);	
 			}else if(b.declaration != null){
 				checkForDeclaration(b);
 			}

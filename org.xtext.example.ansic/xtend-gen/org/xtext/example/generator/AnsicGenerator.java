@@ -47,6 +47,7 @@ import org.xtext.example.ansic.inclusive_or_expression_linha;
 import org.xtext.example.ansic.init_declarator;
 import org.xtext.example.ansic.init_declarator_list;
 import org.xtext.example.ansic.initializer;
+import org.xtext.example.ansic.jump_statement;
 import org.xtext.example.ansic.labeled_statement;
 import org.xtext.example.ansic.logical_and_expression;
 import org.xtext.example.ansic.logical_and_expression_linha;
@@ -93,6 +94,8 @@ public class AnsicGenerator extends AbstractGenerator {
   private int currentReg = 0;
   
   private boolean firstFun = true;
+  
+  private boolean lastIsBreak = false;
   
   public String getNextLine() {
     int _currentLine = this.currentLine;
@@ -344,15 +347,17 @@ public class AnsicGenerator extends AbstractGenerator {
               this.out = (_out + _plus_3);
               this.onFirstCase = false;
             } else {
-              String _out_1 = this.out;
-              String _nextLine_1 = this.getNextLine();
-              String _plus_4 = (_nextLine_1 + "BR ");
-              String _plus_5 = (_plus_4 + "#DEFAULT");
-              String _plus_6 = (_plus_5 + "\n");
-              this.out = (_out_1 + _plus_6);
-              this.caseNumber++;
+              if (this.lastIsBreak) {
+                String _out_1 = this.out;
+                String _nextLine_1 = this.getNextLine();
+                String _plus_4 = (_nextLine_1 + "BR ");
+                String _plus_5 = (_plus_4 + "#DEFAULT");
+                String _plus_6 = (_plus_5 + "\n");
+                this.out = (_out_1 + _plus_6);
+              }
               String _plus_7 = (Integer.valueOf((this.currentLine + 8)) + "");
               this.cases.put(("#CASE_" + Integer.valueOf(this.caseNumber)), _plus_7);
+              this.caseNumber++;
               String _out_2 = this.out;
               String _nextLine_2 = this.getNextLine();
               String _plus_8 = (_nextLine_2 + "BEQ ");
@@ -383,8 +388,20 @@ public class AnsicGenerator extends AbstractGenerator {
         statement _statement_7 = b.getStatement();
         boolean _notEquals_4 = (!Objects.equal(_statement_7, null));
         if (_notEquals_4) {
-          statement _statement_8 = b.getStatement();
-          _xifexpression = this.checkForStatement(_statement_8);
+          String _xblockexpression_1 = null;
+          {
+            statement _statement_8 = b.getStatement();
+            jump_statement _jump_statement = _statement_8.getJump_statement();
+            boolean _notEquals_5 = (!Objects.equal(_jump_statement, null));
+            if (_notEquals_5) {
+              this.lastIsBreak = true;
+            } else {
+              this.lastIsBreak = false;
+            }
+            statement _statement_9 = b.getStatement();
+            _xblockexpression_1 = this.checkForStatement(_statement_9);
+          }
+          _xifexpression = _xblockexpression_1;
         } else {
           String _xifexpression_1 = null;
           declaration _declaration = b.getDeclaration();
