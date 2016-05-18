@@ -583,6 +583,9 @@ public class AnsicParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatementAccess().getIteration_statementAssignment_4(), "rule__Statement__Iteration_statementAssignment_4");
 					put(grammarAccess.getStatementAccess().getJump_statementAssignment_5(), "rule__Statement__Jump_statementAssignment_5");
 					put(grammarAccess.getJump_statementAccess().getIdentifierAssignment_0_1(), "rule__Jump_statement__IdentifierAssignment_0_1");
+					put(grammarAccess.getJump_statementAccess().getBreakAssignment_2_0(), "rule__Jump_statement__BreakAssignment_2_0");
+					put(grammarAccess.getJump_statementAccess().getReturn_vazioAssignment_3_0(), "rule__Jump_statement__Return_vazioAssignment_3_0");
+					put(grammarAccess.getJump_statementAccess().getReturnAssignment_4_0(), "rule__Jump_statement__ReturnAssignment_4_0");
 					put(grammarAccess.getJump_statementAccess().getExpressionAssignment_4_1(), "rule__Jump_statement__ExpressionAssignment_4_1");
 					put(grammarAccess.getIteration_statementAccess().getExpressionAssignment_0_2(), "rule__Iteration_statement__ExpressionAssignment_0_2");
 					put(grammarAccess.getIteration_statementAccess().getStatementAssignment_0_4(), "rule__Iteration_statement__StatementAssignment_0_4");

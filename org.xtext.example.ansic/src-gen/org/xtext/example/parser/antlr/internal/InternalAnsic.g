@@ -8183,10 +8183,20 @@ rulejump_statement returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_5='break'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getJump_statementAccess().getBreakKeyword_2_0());
-			}
+			(
+				(
+					lv_break_5_0='break'
+					{
+						newLeafNode(lv_break_5_0, grammarAccess.getJump_statementAccess().getBreakBreakKeyword_2_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJump_statementRule());
+						}
+						setWithLastConsumed($current, "break", lv_break_5_0, "break");
+					}
+				)
+			)
 			otherlv_6=';'
 			{
 				newLeafNode(otherlv_6, grammarAccess.getJump_statementAccess().getSemicolonKeyword_2_1());
@@ -8194,10 +8204,20 @@ rulejump_statement returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_7='return'
-			{
-				newLeafNode(otherlv_7, grammarAccess.getJump_statementAccess().getReturnKeyword_3_0());
-			}
+			(
+				(
+					lv_return_vazio_7_0='return'
+					{
+						newLeafNode(lv_return_vazio_7_0, grammarAccess.getJump_statementAccess().getReturn_vazioReturnKeyword_3_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJump_statementRule());
+						}
+						setWithLastConsumed($current, "return_vazio", lv_return_vazio_7_0, "return");
+					}
+				)
+			)
 			otherlv_8=';'
 			{
 				newLeafNode(otherlv_8, grammarAccess.getJump_statementAccess().getSemicolonKeyword_3_1());
@@ -8205,10 +8225,20 @@ rulejump_statement returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_9='return'
-			{
-				newLeafNode(otherlv_9, grammarAccess.getJump_statementAccess().getReturnKeyword_4_0());
-			}
+			(
+				(
+					lv_return_9_0='return'
+					{
+						newLeafNode(lv_return_9_0, grammarAccess.getJump_statementAccess().getReturnReturnKeyword_4_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getJump_statementRule());
+						}
+						setWithLastConsumed($current, "return", lv_return_9_0, "return");
+					}
+				)
+			)
 			(
 				(
 					{

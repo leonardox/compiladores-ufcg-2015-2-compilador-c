@@ -311,6 +311,9 @@
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//jump_statement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//jump_statement/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//jump_statement/break"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//jump_statement/return_vazio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ansic.ecore#//jump_statement/return"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ansic.ecore#//jump_statement/expression"/>
     </genClasses>
     <genClasses ecoreClass="Ansic.ecore#//iteration_statement">

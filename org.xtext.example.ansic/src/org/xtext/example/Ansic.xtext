@@ -485,9 +485,9 @@ statement
 jump_statement
 	: 'goto' identifier=IDz ';'
 	| 'continue' ';'
-	| 'break' ';'
-	| 'return' ';'
-	| 'return' expression=expression ';'
+	| break='break' ';'
+	| return_vazio='return' ';'
+	| return='return' expression=expression ';'
 ;
 
 

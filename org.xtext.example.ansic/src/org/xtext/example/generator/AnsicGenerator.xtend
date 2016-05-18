@@ -3,20 +3,21 @@
  */
 package org.xtext.example.generator
 
+import java.io.PrintWriter
 import java.util.Date
+import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import org.xtext.example.ansic.statement
-import org.xtext.example.ansic.function_definition
+import org.eclipse.xtext.parser.packrat.tokens.AssignmentToken.End
 import org.xtext.example.ansic.assignment_expression
 import org.xtext.example.ansic.block_item
+import org.xtext.example.ansic.function_definition
 import org.xtext.example.ansic.selection_statement
+import org.xtext.example.ansic.statement
 import org.xtext.example.validation.AnsicValidator
 import org.xtext.example.validation.AnsicValidator.ExpRetType
-import java.io.PrintWriter
-import org.eclipse.xtext.parser.packrat.tokens.AssignmentToken.End
 
 /**
  * Generates code from your model files on save.
@@ -32,27 +33,29 @@ class AnsicGenerator extends AbstractGenerator {
 	private var currentFunc = "";
 	private var onFirstCase = true;
 	private var caseNumber = 0;
+	private var passedSwitch = false;
+	private var m_insideSwitch = false;
+	private var currentReg = 0;
+	private var firstFun = true;
 	def getNextLine(){
 		currentLine +=8;
 		return currentLine+": ";
+	}
+	def getNextReg(){
+		currentReg++;
+		return "R"+currentReg;
+	}
+	def getReg(){
+		return "R"+currentReg;
 	}
 	var calls = 0;
 	override void doGenerate(Resource res, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		
 		for (t : res.allContents.toIterable.filter(typeof(block_item))){
 				var current = t.eContainer();
-	            while(current != null && !(current instanceof function_definition)){
-	                current = current.eContainer();
-	            }
-	            if(current instanceof function_definition){
-	            	var func = current as function_definition;
-	            	var fName = func.declarator.direct_declarator.identifier.toString();
-	            	if(!currentFunc.equals(fName)){
-	            		out += "//" + fName + " code." + "\n";
-	            		currentFunc = fName;
-	            		declarations.put("#F_CALL_" +fName, (currentLine+8)+"");
-	            	}
-	            }
+	            checkFunctionChange(current);	            
+	            current = t.eContainer();
+	            checkSwitchEnd(current)            
 				compileBlock(t);
 		}
 		var ts = new Date().time;
@@ -77,7 +80,76 @@ class AnsicGenerator extends AbstractGenerator {
 		fsa.deleteFile("out" + currentLine+ '.o');
 		fsa.generateFile("out" + currentLine+ '.o', out);
 		
-		out = "";		
+		out = "";
+		currentLine = 0;
+		declarations = <String,String>newHashMap();
+		cases = <String,String>newHashMap();
+		currentFunc = "";
+		onFirstCase = true;
+		caseNumber = 0;
+		passedSwitch = false;
+		m_insideSwitch = false;
+		currentReg = 0;
+	}
+	
+	def checkSwitchEnd(EObject currentz) {
+		var current = currentz;
+		while(current != null && !(current instanceof selection_statement)){
+            current = current.eContainer();
+        }
+        var insideSwitch = current instanceof selection_statement;
+        //Primeira vez que entrou no switch
+        if(passedSwitch){
+        	//Se ja passou por algum switch
+        	if(m_insideSwitch && !insideSwitch){
+        		//Tava dentro do switch (m_insideSwitch) agora nao esotu mais!
+        		//Se não tiver nenhum default, volte para ca!!
+        		passedSwitch = false;
+        		m_insideSwitch = false;
+        		if(!cases.containsKey("#DEFAULT")){
+        			cases.put("#DEFAULT", (currentLine+8)+"");
+        			caseNumber++;
+					cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
+        		}
+        	}
+        }
+        if(insideSwitch){
+        	//out += "BLOCO DE SWITCH \n \n";
+        	if(!m_insideSwitch){
+        		//Se nao tava dentro de um switch, agora eu to
+        		m_insideSwitch = true;
+        		passedSwitch = true;
+        	}
+        }
+        if(current instanceof function_definition){
+        	var func = current as function_definition;
+        	var fName = func.declarator.direct_declarator.identifier.toString();
+        	if(!currentFunc.equals(fName)){
+        		out += "//" + fName + " code." + "\n";
+        		currentFunc = fName;
+        		declarations.put("#F_CALL_" +fName, (currentLine+8)+"");
+        	}
+        }
+	}
+	
+	def checkFunctionChange(EObject currentz) {
+		var current = currentz;
+		while(current != null && !(current instanceof function_definition)){
+            current = current.eContainer();
+        }
+        if(current instanceof function_definition){
+        	var func = current as function_definition;
+        	var fName = func.declarator.direct_declarator.identifier.toString();
+        	if(!currentFunc.equals(fName)){
+        		if(!firstFun){
+        			out+= "BR *0(SP) \n";
+        		}
+        		firstFun = false;
+        		out += "//" + fName + " code." + "\n";
+        		currentFunc = fName;
+        		declarations.put("#F_CALL_" +fName, (currentLine+8)+"");
+        	}
+        }
 	}
 	def primaryExpFromAssigExp(assignment_expression exp){
 		var ret = exp.conditional_expression.
@@ -165,11 +237,11 @@ class AnsicGenerator extends AbstractGenerator {
 						out += getNextLine() + "ST " + "*SP" + ", " +  "#" + (currentLine+16) +  "\n";
 						out += getNextLine() + "BR " + "#F_CALL_"+rightSide.identifier+  "\n";
 						out += getNextLine() + "SUB " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
-						out += getNextLine() + "LD " + "R0" + ", " + "SP*" +  "\n";
-						out += getNextLine() + "ST " + id + ", R0" + "\n";						
-					}else{
-						out += getNextLine() + "LD " + "R0" + ", " + rightSide.identifier + "\n";
-						out += getNextLine() + "ST " + id + ", R0" + "\n";	
+						out += getNextLine() + "LD " + nextReg + ", " + "SP*" +  "\n";
+						out += getNextLine() + "ST " + id + ", " + getReg + "\n";						
+					}else{						
+						out += getNextLine() + "LD " + nextReg + ", " + rightSide.identifier + "\n";
+						out += getNextLine() + "ST " + id + ", "+ getReg + "\n";	
 					}				
 				}
 			}else{
@@ -180,15 +252,16 @@ class AnsicGenerator extends AbstractGenerator {
 				.relational_expression.shift_expression.additive_expression.additive_expression_linha
 				.additive_expression_complement.multiplicative_expression.cast_expression.unary_expression
 				.postfix_expression.primary_expression
-				out += getNextLine() + "LD R0, " + firstOperator  + "\n";
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
 				if(secondOperator.identifier == null){
-					out += getNextLine()+ "ADD R0, RO, #" + secondOperator.constant.i_constant + "\n";	
+					out += getNextLine()+ "ADD "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
 				}else{
-					out += getNextLine() + "LD R1, " + secondOperator.identifier + "\n";
-					out += getNextLine() + "ADD RO, R0, R1 \n";
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "ADD "+storeReg+", "+storeReg+", "+reg+" \n";
 				}
 				
-				out += getNextLine() + "ST " + id + ", RO \n";
+				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
 			}
 	}
 	

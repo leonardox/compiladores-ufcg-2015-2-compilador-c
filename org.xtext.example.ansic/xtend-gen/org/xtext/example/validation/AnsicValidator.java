@@ -422,7 +422,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
     boolean _isEmpty = _block_item_list_linha.isEmpty();
     if (_isEmpty) {
       EObject current = item.eContainer();
-      while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
+      while (((!Objects.equal(current, null)) && (!((current instanceof function_definition) || (current instanceof selection_statement))))) {
         EObject _eContainer = current.eContainer();
         current = _eContainer;
       }
@@ -475,7 +475,7 @@ public class AnsicValidator extends AbstractAnsicValidator {
     if (_isEmpty) {
       InputOutput.<String>println("Iniciando checagem...");
       EObject current = item.eContainer();
-      while (((!Objects.equal(current, null)) && (!(current instanceof function_definition)))) {
+      while (((!Objects.equal(current, null)) && (!((current instanceof function_definition) || (current instanceof selection_statement))))) {
         EObject _eContainer = current.eContainer();
         current = _eContainer;
       }

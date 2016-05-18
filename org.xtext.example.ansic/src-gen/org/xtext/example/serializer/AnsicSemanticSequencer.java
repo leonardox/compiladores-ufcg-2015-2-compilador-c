@@ -1625,7 +1625,7 @@ public class AnsicSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     jump_statement returns jump_statement
 	 *
 	 * Constraint:
-	 *     (identifier=IDz | expression=expression)
+	 *     (identifier=IDz | break='break' | return_vazio='return' | (return='return' expression=expression))
 	 */
 	protected void sequence_jump_statement(ISerializationContext context, jump_statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

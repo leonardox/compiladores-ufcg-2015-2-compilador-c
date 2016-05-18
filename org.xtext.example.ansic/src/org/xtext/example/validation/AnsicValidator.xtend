@@ -240,7 +240,7 @@ class AnsicValidator extends AbstractAnsicValidator {
             //função de uma linha
             //Final na função
             var current = item.eContainer();
-            while(current != null && !(current instanceof function_definition)){
+            while(current != null && !(current instanceof function_definition || current instanceof selection_statement)){
                 current = current.eContainer();
             }
             if(current instanceof function_definition){
@@ -264,7 +264,7 @@ class AnsicValidator extends AbstractAnsicValidator {
         if(item.block_item_list_linha.isEmpty()){
             println("Iniciando checagem...");
             var current = item.eContainer();
-            while(current != null && !(current instanceof function_definition)){
+            while(current != null && !(current instanceof function_definition || current instanceof selection_statement)){
                 current = current.eContainer();
             }
             println("Achou funcao...");
@@ -273,8 +273,8 @@ class AnsicValidator extends AbstractAnsicValidator {
                 var func = current as function_definition;
                 var retType = func.declaration_specifiers.get(0).type_specifier.type_name_str;
                 if(retType != "void"){
-                    if(item.block_item.statement == null || item.block_item.statement.jump_statement == null
-                        || item.block_item.statement.jump_statement.expression == null
+                    if((item.block_item.statement == null || item.block_item.statement.jump_statement == null
+                        || item.block_item.statement.jump_statement.expression == null)
                     ){
                         error("Falta o return", null);
                     }

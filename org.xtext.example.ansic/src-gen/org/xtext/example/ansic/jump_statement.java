@@ -15,6 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.ansic.jump_statement#getIdentifier <em>Identifier</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.jump_statement#getBreak <em>Break</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.jump_statement#getReturn_vazio <em>Return vazio</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.jump_statement#getReturn <em>Return</em>}</li>
  *   <li>{@link org.xtext.example.ansic.jump_statement#getExpression <em>Expression</em>}</li>
  * </ul>
  *
@@ -49,6 +52,84 @@ public interface jump_statement extends EObject
    * @generated
    */
   void setIdentifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Break</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Break</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Break</em>' attribute.
+   * @see #setBreak(String)
+   * @see org.xtext.example.ansic.AnsicPackage#getjump_statement_Break()
+   * @model
+   * @generated
+   */
+  String getBreak();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.jump_statement#getBreak <em>Break</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Break</em>' attribute.
+   * @see #getBreak()
+   * @generated
+   */
+  void setBreak(String value);
+
+  /**
+   * Returns the value of the '<em><b>Return vazio</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Return vazio</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Return vazio</em>' attribute.
+   * @see #setReturn_vazio(String)
+   * @see org.xtext.example.ansic.AnsicPackage#getjump_statement_Return_vazio()
+   * @model
+   * @generated
+   */
+  String getReturn_vazio();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.jump_statement#getReturn_vazio <em>Return vazio</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Return vazio</em>' attribute.
+   * @see #getReturn_vazio()
+   * @generated
+   */
+  void setReturn_vazio(String value);
+
+  /**
+   * Returns the value of the '<em><b>Return</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Return</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Return</em>' attribute.
+   * @see #setReturn(String)
+   * @see org.xtext.example.ansic.AnsicPackage#getjump_statement_Return()
+   * @model
+   * @generated
+   */
+  String getReturn();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.ansic.jump_statement#getReturn <em>Return</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Return</em>' attribute.
+   * @see #getReturn()
+   * @generated
+   */
+  void setReturn(String value);
 
   /**
    * Returns the value of the '<em><b>Expression</b></em>' containment reference.

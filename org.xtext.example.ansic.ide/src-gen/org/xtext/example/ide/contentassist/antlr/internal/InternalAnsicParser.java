@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING_LITERAL", "RULE_IDZ", "RULE_INT", "RULE_FLOAT", "RULE_CHAR", "RULE_O", "RULE_D", "RULE_NZ", "RULE_L", "RULE_A", "RULE_H", "RULE_HP", "RULE_E", "RULE_P", "RULE_FS", "RULE_ES", "RULE_IS", "RULE_CP", "RULE_SP", "RULE_WS", "RULE_I_CONSTANT", "RULE_F_CONSTANT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'inline'", "'_Noreturn'", "'struct'", "'union'", "'typedef'", "'extern'", "'static'", "'_Thread_local'", "'auto'", "'register'", "'*'", "'++'", "'--'", "';'", "'='", "'*='", "'/='", "'%='", "'+='", "'-='", "'<<='", "'>>='", "'&='", "'^='", "'|='", "'&'", "'+'", "'-'", "'~'", "'!'", "'_Alignas'", "'('", "')'", "'enum'", "'{'", "'}'", "','", "'_Atomic'", "':'", "'['", "']'", "'...'", "'.'", "'_Static_assert'", "'->'", "'sizeof'", "'_Alignof'", "'/'", "'%'", "'<<'", "'>>'", "'=='", "'<'", "'>'", "'<='", "'>='", "'!='", "'goto'", "'continue'", "'break'", "'return'", "'while'", "'do'", "'for'", "'if'", "'else'", "'switch'", "'case'", "'default'", "'^'", "'|'", "'and'", "'or'", "'?'", "'const'", "'restrict'", "'volatile'", "'void'", "'char'", "'short'", "'int'", "'long'", "'float'", "'double'", "'signed'", "'unsigned'", "'bool'", "'_Complex'", "'_Imaginary'", "'_Generic'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING_LITERAL", "RULE_IDZ", "RULE_INT", "RULE_FLOAT", "RULE_CHAR", "RULE_O", "RULE_D", "RULE_NZ", "RULE_L", "RULE_A", "RULE_H", "RULE_HP", "RULE_E", "RULE_P", "RULE_FS", "RULE_ES", "RULE_IS", "RULE_CP", "RULE_SP", "RULE_WS", "RULE_I_CONSTANT", "RULE_F_CONSTANT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'inline'", "'_Noreturn'", "'struct'", "'union'", "'typedef'", "'extern'", "'static'", "'_Thread_local'", "'auto'", "'register'", "'*'", "'++'", "'--'", "';'", "'='", "'*='", "'/='", "'%='", "'+='", "'-='", "'<<='", "'>>='", "'&='", "'^='", "'|='", "'&'", "'+'", "'-'", "'~'", "'!'", "'_Alignas'", "'('", "')'", "'enum'", "'{'", "'}'", "','", "'_Atomic'", "':'", "'['", "']'", "'...'", "'.'", "'_Static_assert'", "'->'", "'sizeof'", "'_Alignof'", "'/'", "'%'", "'<<'", "'>>'", "'=='", "'<'", "'>'", "'<='", "'>='", "'!='", "'goto'", "'continue'", "'while'", "'do'", "'for'", "'if'", "'else'", "'switch'", "'case'", "'default'", "'^'", "'|'", "'and'", "'or'", "'?'", "'const'", "'restrict'", "'volatile'", "'void'", "'char'", "'short'", "'int'", "'long'", "'float'", "'double'", "'signed'", "'unsigned'", "'bool'", "'_Complex'", "'_Imaginary'", "'_Generic'", "'break'", "'return'"
     };
     public static final int RULE_A=13;
     public static final int T__50=50;
@@ -8296,7 +8296,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==100) ) {
+            if ( (LA8_0==98) ) {
                 alt8=1;
             }
             switch (alt8) {
@@ -8477,7 +8477,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==101) ) {
+            if ( (LA9_0==99) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -8658,7 +8658,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==102) ) {
+            if ( (LA10_0==100) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -8839,7 +8839,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==103) ) {
+            if ( (LA11_0==101) ) {
                 alt11=1;
             }
             switch (alt11) {
@@ -9020,7 +9020,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==104) ) {
+            if ( (LA12_0==102) ) {
                 int LA12_1 = input.LA(2);
 
                 if ( (synpred12_InternalAnsic()) ) {
@@ -10516,6 +10516,8 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                     case 34:
                     case 35:
                     case 68:
+                    case 103:
+                    case 104:
                     case 105:
                     case 106:
                     case 107:
@@ -10529,8 +10531,6 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                     case 115:
                     case 116:
                     case 117:
-                    case 118:
-                    case 119:
                         {
                         alt17=1;
                         }
@@ -10542,7 +10542,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                         if ( (LA17_4==RULE_IDZ||LA17_4==65) ) {
                             alt17=1;
                         }
-                        else if ( ((LA17_4>=41 && LA17_4<=43)||(LA17_4>=56 && LA17_4<=58)||(LA17_4>=62 && LA17_4<=63)||LA17_4==70||LA17_4==73||LA17_4==75||(LA17_4>=78 && LA17_4<=87)||(LA17_4>=100 && LA17_4<=104)) ) {
+                        else if ( ((LA17_4>=41 && LA17_4<=43)||(LA17_4>=56 && LA17_4<=58)||(LA17_4>=62 && LA17_4<=63)||LA17_4==70||LA17_4==73||LA17_4==75||(LA17_4>=78 && LA17_4<=87)||(LA17_4>=98 && LA17_4<=102)) ) {
                             alt17=2;
                         }
                         else {
@@ -10569,7 +10569,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                     case 62:
                     case 76:
                     case 77:
-                    case 120:
+                    case 118:
                         {
                         alt17=2;
                         }
@@ -10684,17 +10684,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             // InternalAnsic.g:3039:1: ( ( ( rule__Type_qualifier__NamezAssignment_0 ) ) | ( ( rule__Type_qualifier__NamezAssignment_1 ) ) | ( ( rule__Type_qualifier__NamezAssignment_2 ) ) | ( ( rule__Type_qualifier__NamezAssignment_3 ) ) )
             int alt18=4;
             switch ( input.LA(1) ) {
-            case 105:
+            case 103:
                 {
                 alt18=1;
                 }
                 break;
-            case 106:
+            case 104:
                 {
                 alt18=2;
                 }
                 break;
-            case 107:
+            case 105:
                 {
                 alt18=3;
                 }
@@ -10856,62 +10856,62 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             // InternalAnsic.g:3072:1: ( ( ( rule__Type_specifier__Type_name_strAssignment_0 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_1 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_2 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_3 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_4 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_5 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_6 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_7 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_8 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_9 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_10 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_11 ) ) | ( ( rule__Type_specifier__Atomic_type_specifierAssignment_12 ) ) | ( ( rule__Type_specifier__Struct_or_union_specifierAssignment_13 ) ) | ( ( rule__Type_specifier__Enum_specifierAssignment_14 ) ) | ( ( rule__Type_specifier__Type_name_strAssignment_15 ) ) )
             int alt19=16;
             switch ( input.LA(1) ) {
-            case 108:
+            case 106:
                 {
                 alt19=1;
                 }
                 break;
-            case 109:
+            case 107:
                 {
                 alt19=2;
                 }
                 break;
-            case 110:
+            case 108:
                 {
                 alt19=3;
                 }
                 break;
-            case 111:
+            case 109:
                 {
                 alt19=4;
                 }
                 break;
-            case 112:
+            case 110:
                 {
                 alt19=5;
                 }
                 break;
-            case 113:
+            case 111:
                 {
                 alt19=6;
                 }
                 break;
-            case 114:
+            case 112:
                 {
                 alt19=7;
                 }
                 break;
-            case 115:
+            case 113:
                 {
                 alt19=8;
                 }
                 break;
-            case 116:
+            case 114:
                 {
                 alt19=9;
                 }
                 break;
-            case 117:
+            case 115:
                 {
                 alt19=10;
                 }
                 break;
-            case 118:
+            case 116:
                 {
                 alt19=11;
                 }
                 break;
-            case 119:
+            case 117:
                 {
                 alt19=12;
                 }
@@ -11759,11 +11759,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( (LA22_0==33) ) {
                 int LA22_1 = input.LA(2);
 
-                if ( (LA22_1==RULE_IDZ) ) {
-                    alt22=2;
-                }
-                else if ( (LA22_1==65) ) {
+                if ( (LA22_1==65) ) {
                     alt22=1;
+                }
+                else if ( (LA22_1==RULE_IDZ) ) {
+                    alt22=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -14671,7 +14671,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 alt40=3;
                 }
                 break;
-            case 120:
+            case 118:
                 {
                 alt40=4;
                 }
@@ -14829,10 +14829,10 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt41=2;
             int LA41_0 = input.LA(1);
 
-            if ( ((LA41_0>=33 && LA41_0<=35)||LA41_0==64||LA41_0==68||(LA41_0>=105 && LA41_0<=119)) ) {
+            if ( ((LA41_0>=33 && LA41_0<=35)||LA41_0==64||LA41_0==68||(LA41_0>=103 && LA41_0<=117)) ) {
                 alt41=1;
             }
-            else if ( (LA41_0==99) ) {
+            else if ( (LA41_0==97) ) {
                 alt41=2;
             }
             else {
@@ -15047,7 +15047,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( (LA43_0==70||LA43_0==73) ) {
                 alt43=1;
             }
-            else if ( ((LA43_0>=RULE_IDZ && LA43_0<=RULE_CHAR)||(LA43_0>=41 && LA43_0<=43)||(LA43_0>=56 && LA43_0<=60)||LA43_0==62||(LA43_0>=64 && LA43_0<=65)||(LA43_0>=76 && LA43_0<=77)||LA43_0==120) ) {
+            else if ( ((LA43_0>=RULE_IDZ && LA43_0<=RULE_CHAR)||(LA43_0>=41 && LA43_0<=43)||(LA43_0>=56 && LA43_0<=60)||LA43_0==62||(LA43_0>=64 && LA43_0<=65)||(LA43_0>=76 && LA43_0<=77)||LA43_0==118) ) {
                 alt43=2;
             }
             else {
@@ -15147,11 +15147,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( (LA44_0==67) ) {
                 int LA44_1 = input.LA(2);
 
-                if ( (LA44_1==70||LA44_1==73) ) {
-                    alt44=1;
-                }
-                else if ( ((LA44_1>=RULE_IDZ && LA44_1<=RULE_CHAR)||(LA44_1>=41 && LA44_1<=43)||(LA44_1>=56 && LA44_1<=60)||LA44_1==62||(LA44_1>=64 && LA44_1<=65)||(LA44_1>=76 && LA44_1<=77)||LA44_1==120) ) {
+                if ( ((LA44_1>=RULE_IDZ && LA44_1<=RULE_CHAR)||(LA44_1>=41 && LA44_1<=43)||(LA44_1>=56 && LA44_1<=60)||LA44_1==62||(LA44_1>=64 && LA44_1<=65)||(LA44_1>=76 && LA44_1<=77)||LA44_1==118) ) {
                     alt44=2;
+                }
+                else if ( (LA44_1==70||LA44_1==73) ) {
+                    alt44=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -15363,11 +15363,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 {
                 int LA46_2 = input.LA(2);
 
-                if ( (LA46_2==63) ) {
-                    alt46=2;
-                }
-                else if ( ((LA46_2>=RULE_IDZ && LA46_2<=RULE_CHAR)||(LA46_2>=41 && LA46_2<=43)||(LA46_2>=56 && LA46_2<=60)||LA46_2==62||LA46_2==64||(LA46_2>=76 && LA46_2<=77)||LA46_2==120) ) {
+                if ( ((LA46_2>=RULE_IDZ && LA46_2<=RULE_CHAR)||(LA46_2>=41 && LA46_2<=43)||(LA46_2>=56 && LA46_2<=60)||LA46_2==62||LA46_2==64||(LA46_2>=76 && LA46_2<=77)||LA46_2==118) ) {
                     alt46=3;
+                }
+                else if ( (LA46_2==63) ) {
+                    alt46=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -16516,7 +16516,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 {
                 int LA53_1 = input.LA(2);
 
-                if ( ((LA53_1>=41 && LA53_1<=58)||LA53_1==62||LA53_1==67||LA53_1==70||LA53_1==73||LA53_1==75||(LA53_1>=78 && LA53_1<=87)||(LA53_1>=100 && LA53_1<=104)) ) {
+                if ( ((LA53_1>=41 && LA53_1<=58)||LA53_1==62||LA53_1==67||LA53_1==70||LA53_1==73||LA53_1==75||(LA53_1>=78 && LA53_1<=87)||(LA53_1>=98 && LA53_1<=102)) ) {
                     alt53=3;
                 }
                 else if ( (LA53_1==69) ) {
@@ -16531,8 +16531,8 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 98:
-            case 99:
+            case 96:
+            case 97:
                 {
                 alt53=1;
                 }
@@ -16558,28 +16558,28 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             case 64:
             case 76:
             case 77:
-            case 120:
+            case 118:
                 {
                 alt53=3;
                 }
                 break;
+            case 93:
             case 95:
-            case 97:
                 {
                 alt53=4;
                 }
                 break;
+            case 90:
+            case 91:
             case 92:
-            case 93:
-            case 94:
                 {
                 alt53=5;
                 }
                 break;
             case 88:
             case 89:
-            case 90:
-            case 91:
+            case 119:
+            case 120:
                 {
                 alt53=6;
                 }
@@ -16804,16 +16804,16 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 alt54=2;
                 }
                 break;
-            case 90:
+            case 119:
                 {
                 alt54=3;
                 }
                 break;
-            case 91:
+            case 120:
                 {
                 int LA54_4 = input.LA(2);
 
-                if ( ((LA54_4>=RULE_IDZ && LA54_4<=RULE_CHAR)||(LA54_4>=41 && LA54_4<=43)||(LA54_4>=56 && LA54_4<=60)||LA54_4==62||LA54_4==64||(LA54_4>=76 && LA54_4<=77)||LA54_4==120) ) {
+                if ( ((LA54_4>=RULE_IDZ && LA54_4<=RULE_CHAR)||(LA54_4>=41 && LA54_4<=43)||(LA54_4>=56 && LA54_4<=60)||LA54_4==62||LA54_4==64||(LA54_4>=76 && LA54_4<=77)||LA54_4==118) ) {
                     alt54=5;
                 }
                 else if ( (LA54_4==44) ) {
@@ -17009,17 +17009,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             // InternalAnsic.g:4326:1: ( ( ( rule__Iteration_statement__Group_0__0 ) ) | ( ( rule__Iteration_statement__Group_1__0 ) ) | ( ( rule__Iteration_statement__Group_2__0 ) ) | ( ( rule__Iteration_statement__Group_3__0 ) ) | ( ( rule__Iteration_statement__Group_4__0 ) ) | ( ( rule__Iteration_statement__Group_5__0 ) ) )
             int alt55=6;
             switch ( input.LA(1) ) {
-            case 92:
+            case 90:
                 {
                 alt55=1;
                 }
                 break;
-            case 93:
+            case 91:
                 {
                 alt55=2;
                 }
                 break;
-            case 94:
+            case 92:
                 {
                 int LA55_3 = input.LA(2);
 
@@ -17255,7 +17255,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt56=3;
             int LA56_0 = input.LA(1);
 
-            if ( (LA56_0==95) ) {
+            if ( (LA56_0==93) ) {
                 int LA56_1 = input.LA(2);
 
                 if ( (synpred153_InternalAnsic()) ) {
@@ -17272,7 +17272,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                     throw nvae;
                 }
             }
-            else if ( (LA56_0==97) ) {
+            else if ( (LA56_0==95) ) {
                 alt56=3;
             }
             else {
@@ -17402,12 +17402,12 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 alt57=1;
                 }
                 break;
-            case 98:
+            case 96:
                 {
                 alt57=2;
                 }
                 break;
-            case 99:
+            case 97:
                 {
                 alt57=3;
                 }
@@ -17539,11 +17539,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( (LA58_0==65) ) {
                 int LA58_1 = input.LA(2);
 
-                if ( (LA58_1==66) ) {
-                    alt58=1;
-                }
-                else if ( ((LA58_1>=RULE_IDZ && LA58_1<=RULE_CHAR)||(LA58_1>=31 && LA58_1<=44)||(LA58_1>=56 && LA58_1<=62)||(LA58_1>=64 && LA58_1<=65)||LA58_1==68||LA58_1==74||(LA58_1>=76 && LA58_1<=77)||(LA58_1>=88 && LA58_1<=95)||(LA58_1>=97 && LA58_1<=99)||(LA58_1>=105 && LA58_1<=120)) ) {
+                if ( ((LA58_1>=RULE_IDZ && LA58_1<=RULE_CHAR)||(LA58_1>=31 && LA58_1<=44)||(LA58_1>=56 && LA58_1<=62)||(LA58_1>=64 && LA58_1<=65)||LA58_1==68||LA58_1==74||(LA58_1>=76 && LA58_1<=77)||(LA58_1>=88 && LA58_1<=93)||(LA58_1>=95 && LA58_1<=97)||(LA58_1>=103 && LA58_1<=120)) ) {
                     alt58=2;
+                }
+                else if ( (LA58_1==66) ) {
+                    alt58=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -17659,6 +17659,8 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             case 61:
             case 68:
             case 74:
+            case 103:
+            case 104:
             case 105:
             case 106:
             case 107:
@@ -17672,8 +17674,6 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             case 115:
             case 116:
             case 117:
-            case 118:
-            case 119:
                 {
                 alt59=1;
                 }
@@ -17685,7 +17685,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 if ( (LA59_2==RULE_IDZ||LA59_2==65) ) {
                     alt59=1;
                 }
-                else if ( ((LA59_2>=41 && LA59_2<=58)||LA59_2==62||LA59_2==67||LA59_2==70||LA59_2==73||LA59_2==75||(LA59_2>=78 && LA59_2<=87)||(LA59_2>=100 && LA59_2<=104)) ) {
+                else if ( ((LA59_2>=41 && LA59_2<=58)||LA59_2==62||LA59_2==67||LA59_2==70||LA59_2==73||LA59_2==75||(LA59_2>=78 && LA59_2<=87)||(LA59_2>=98 && LA59_2<=102)) ) {
                     alt59=2;
                 }
                 else {
@@ -17720,11 +17720,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             case 91:
             case 92:
             case 93:
-            case 94:
             case 95:
+            case 96:
             case 97:
-            case 98:
-            case 99:
+            case 118:
+            case 119:
             case 120:
                 {
                 alt59=2;
@@ -17828,7 +17828,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( (LA60_0==44) ) {
                 alt60=1;
             }
-            else if ( ((LA60_0>=RULE_IDZ && LA60_0<=RULE_CHAR)||(LA60_0>=41 && LA60_0<=43)||(LA60_0>=56 && LA60_0<=60)||LA60_0==62||LA60_0==64||(LA60_0>=76 && LA60_0<=77)||LA60_0==120) ) {
+            else if ( ((LA60_0>=RULE_IDZ && LA60_0<=RULE_CHAR)||(LA60_0>=41 && LA60_0<=43)||(LA60_0>=56 && LA60_0<=60)||LA60_0==62||LA60_0==64||(LA60_0>=76 && LA60_0<=77)||LA60_0==118) ) {
                 alt60=2;
             }
             else {
@@ -24832,7 +24832,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt69=2;
             int LA69_0 = input.LA(1);
 
-            if ( ((LA69_0>=33 && LA69_0<=35)||LA69_0==64||LA69_0==68||LA69_0==74||(LA69_0>=105 && LA69_0<=119)) ) {
+            if ( ((LA69_0>=33 && LA69_0<=35)||LA69_0==64||LA69_0==68||LA69_0==74||(LA69_0>=103 && LA69_0<=117)) ) {
                 alt69=1;
             }
             switch (alt69) {
@@ -28155,7 +28155,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt71=2;
             int LA71_0 = input.LA(1);
 
-            if ( ((LA71_0>=31 && LA71_0<=40)||LA71_0==61||LA71_0==64||LA71_0==68||LA71_0==74||(LA71_0>=105 && LA71_0<=119)) ) {
+            if ( ((LA71_0>=31 && LA71_0<=40)||LA71_0==61||LA71_0==64||LA71_0==68||LA71_0==74||(LA71_0>=103 && LA71_0<=117)) ) {
                 alt71=1;
             }
             switch (alt71) {
@@ -29426,7 +29426,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt72=2;
             int LA72_0 = input.LA(1);
 
-            if ( (LA72_0==68||(LA72_0>=105 && LA72_0<=107)) ) {
+            if ( (LA72_0==68||(LA72_0>=103 && LA72_0<=105)) ) {
                 alt72=1;
             }
             switch (alt72) {
@@ -34039,7 +34039,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
                 if ( (LA76_0==67) ) {
                     int LA76_2 = input.LA(2);
 
-                    if ( ((LA76_2>=31 && LA76_2<=40)||LA76_2==61||LA76_2==64||LA76_2==68||(LA76_2>=105 && LA76_2<=119)) ) {
+                    if ( ((LA76_2>=31 && LA76_2<=40)||LA76_2==61||LA76_2==64||LA76_2==68||(LA76_2>=103 && LA76_2<=117)) ) {
                         alt76=1;
                     }
 
@@ -42545,7 +42545,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt79=2;
             int LA79_0 = input.LA(1);
 
-            if ( ((LA79_0>=31 && LA79_0<=40)||LA79_0==61||LA79_0==64||LA79_0==68||LA79_0==74||(LA79_0>=105 && LA79_0<=119)) ) {
+            if ( ((LA79_0>=31 && LA79_0<=40)||LA79_0==61||LA79_0==64||LA79_0==68||LA79_0==74||(LA79_0>=103 && LA79_0<=117)) ) {
                 alt79=1;
             }
             switch (alt79) {
@@ -56672,24 +56672,34 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Jump_statement__Group_2__0__Impl"
-    // InternalAnsic.g:16997:1: rule__Jump_statement__Group_2__0__Impl : ( 'break' ) ;
+    // InternalAnsic.g:16997:1: rule__Jump_statement__Group_2__0__Impl : ( ( rule__Jump_statement__BreakAssignment_2_0 ) ) ;
     public final void rule__Jump_statement__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:17001:1: ( ( 'break' ) )
-            // InternalAnsic.g:17002:1: ( 'break' )
+            // InternalAnsic.g:17001:1: ( ( ( rule__Jump_statement__BreakAssignment_2_0 ) ) )
+            // InternalAnsic.g:17002:1: ( ( rule__Jump_statement__BreakAssignment_2_0 ) )
             {
-            // InternalAnsic.g:17002:1: ( 'break' )
-            // InternalAnsic.g:17003:2: 'break'
+            // InternalAnsic.g:17002:1: ( ( rule__Jump_statement__BreakAssignment_2_0 ) )
+            // InternalAnsic.g:17003:2: ( rule__Jump_statement__BreakAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getJump_statementAccess().getBreakKeyword_2_0()); 
+               before(grammarAccess.getJump_statementAccess().getBreakAssignment_2_0()); 
             }
-            match(input,90,FOLLOW_2); if (state.failed) return ;
+            // InternalAnsic.g:17004:2: ( rule__Jump_statement__BreakAssignment_2_0 )
+            // InternalAnsic.g:17004:3: rule__Jump_statement__BreakAssignment_2_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Jump_statement__BreakAssignment_2_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getJump_statementAccess().getBreakKeyword_2_0()); 
+               after(grammarAccess.getJump_statementAccess().getBreakAssignment_2_0()); 
             }
 
             }
@@ -56825,24 +56835,34 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Jump_statement__Group_3__0__Impl"
-    // InternalAnsic.g:17051:1: rule__Jump_statement__Group_3__0__Impl : ( 'return' ) ;
+    // InternalAnsic.g:17051:1: rule__Jump_statement__Group_3__0__Impl : ( ( rule__Jump_statement__Return_vazioAssignment_3_0 ) ) ;
     public final void rule__Jump_statement__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:17055:1: ( ( 'return' ) )
-            // InternalAnsic.g:17056:1: ( 'return' )
+            // InternalAnsic.g:17055:1: ( ( ( rule__Jump_statement__Return_vazioAssignment_3_0 ) ) )
+            // InternalAnsic.g:17056:1: ( ( rule__Jump_statement__Return_vazioAssignment_3_0 ) )
             {
-            // InternalAnsic.g:17056:1: ( 'return' )
-            // InternalAnsic.g:17057:2: 'return'
+            // InternalAnsic.g:17056:1: ( ( rule__Jump_statement__Return_vazioAssignment_3_0 ) )
+            // InternalAnsic.g:17057:2: ( rule__Jump_statement__Return_vazioAssignment_3_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getJump_statementAccess().getReturnKeyword_3_0()); 
+               before(grammarAccess.getJump_statementAccess().getReturn_vazioAssignment_3_0()); 
             }
-            match(input,91,FOLLOW_2); if (state.failed) return ;
+            // InternalAnsic.g:17058:2: ( rule__Jump_statement__Return_vazioAssignment_3_0 )
+            // InternalAnsic.g:17058:3: rule__Jump_statement__Return_vazioAssignment_3_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Jump_statement__Return_vazioAssignment_3_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getJump_statementAccess().getReturnKeyword_3_0()); 
+               after(grammarAccess.getJump_statementAccess().getReturn_vazioAssignment_3_0()); 
             }
 
             }
@@ -56978,24 +56998,34 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Jump_statement__Group_4__0__Impl"
-    // InternalAnsic.g:17105:1: rule__Jump_statement__Group_4__0__Impl : ( 'return' ) ;
+    // InternalAnsic.g:17105:1: rule__Jump_statement__Group_4__0__Impl : ( ( rule__Jump_statement__ReturnAssignment_4_0 ) ) ;
     public final void rule__Jump_statement__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:17109:1: ( ( 'return' ) )
-            // InternalAnsic.g:17110:1: ( 'return' )
+            // InternalAnsic.g:17109:1: ( ( ( rule__Jump_statement__ReturnAssignment_4_0 ) ) )
+            // InternalAnsic.g:17110:1: ( ( rule__Jump_statement__ReturnAssignment_4_0 ) )
             {
-            // InternalAnsic.g:17110:1: ( 'return' )
-            // InternalAnsic.g:17111:2: 'return'
+            // InternalAnsic.g:17110:1: ( ( rule__Jump_statement__ReturnAssignment_4_0 ) )
+            // InternalAnsic.g:17111:2: ( rule__Jump_statement__ReturnAssignment_4_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getJump_statementAccess().getReturnKeyword_4_0()); 
+               before(grammarAccess.getJump_statementAccess().getReturnAssignment_4_0()); 
             }
-            match(input,91,FOLLOW_2); if (state.failed) return ;
+            // InternalAnsic.g:17112:2: ( rule__Jump_statement__ReturnAssignment_4_0 )
+            // InternalAnsic.g:17112:3: rule__Jump_statement__ReturnAssignment_4_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Jump_statement__ReturnAssignment_4_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getJump_statementAccess().getReturnKeyword_4_0()); 
+               after(grammarAccess.getJump_statementAccess().getReturnAssignment_4_0()); 
             }
 
             }
@@ -57235,7 +57265,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getWhileKeyword_0_0()); 
             }
-            match(input,92,FOLLOW_2); if (state.failed) return ;
+            match(input,90,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getWhileKeyword_0_0()); 
             }
@@ -57645,7 +57675,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getDoKeyword_1_0()); 
             }
-            match(input,93,FOLLOW_2); if (state.failed) return ;
+            match(input,91,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getDoKeyword_1_0()); 
             }
@@ -57813,7 +57843,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getWhileKeyword_1_2()); 
             }
-            match(input,92,FOLLOW_2); if (state.failed) return ;
+            match(input,90,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getWhileKeyword_1_2()); 
             }
@@ -58213,7 +58243,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getForKeyword_2_0()); 
             }
-            match(input,94,FOLLOW_2); if (state.failed) return ;
+            match(input,92,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getForKeyword_2_0()); 
             }
@@ -58712,7 +58742,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getForKeyword_3_0()); 
             }
-            match(input,94,FOLLOW_2); if (state.failed) return ;
+            match(input,92,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getForKeyword_3_0()); 
             }
@@ -59300,7 +59330,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getForKeyword_4_0()); 
             }
-            match(input,94,FOLLOW_2); if (state.failed) return ;
+            match(input,92,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getForKeyword_4_0()); 
             }
@@ -59799,7 +59829,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getForKeyword_5_0()); 
             }
-            match(input,94,FOLLOW_2); if (state.failed) return ;
+            match(input,92,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIteration_statementAccess().getForKeyword_5_0()); 
             }
@@ -60387,7 +60417,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getIfKeyword_0_0()); 
             }
-            match(input,95,FOLLOW_2); if (state.failed) return ;
+            match(input,93,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelection_statementAccess().getIfKeyword_0_0()); 
             }
@@ -60802,7 +60832,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getElseKeyword_0_5()); 
             }
-            match(input,96,FOLLOW_2); if (state.failed) return ;
+            match(input,94,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelection_statementAccess().getElseKeyword_0_5()); 
             }
@@ -60965,7 +60995,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getIfKeyword_1_0()); 
             }
-            match(input,95,FOLLOW_2); if (state.failed) return ;
+            match(input,93,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelection_statementAccess().getIfKeyword_1_0()); 
             }
@@ -61375,7 +61405,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getSwitchKeyword_2_0()); 
             }
-            match(input,97,FOLLOW_2); if (state.failed) return ;
+            match(input,95,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelection_statementAccess().getSwitchKeyword_2_0()); 
             }
@@ -62037,7 +62067,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getCaseKeyword_1_0()); 
             }
-            match(input,98,FOLLOW_2); if (state.failed) return ;
+            match(input,96,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLabeled_statementAccess().getCaseKeyword_1_0()); 
             }
@@ -62368,7 +62398,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getDefaultKeyword_2_0()); 
             }
-            match(input,99,FOLLOW_2); if (state.failed) return ;
+            match(input,97,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLabeled_statementAccess().getDefaultKeyword_2_0()); 
             }
@@ -63093,7 +63123,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt85=2;
             int LA85_0 = input.LA(1);
 
-            if ( ((LA85_0>=RULE_IDZ && LA85_0<=RULE_CHAR)||(LA85_0>=31 && LA85_0<=44)||(LA85_0>=56 && LA85_0<=62)||(LA85_0>=64 && LA85_0<=65)||LA85_0==68||LA85_0==74||(LA85_0>=76 && LA85_0<=77)||(LA85_0>=88 && LA85_0<=95)||(LA85_0>=97 && LA85_0<=99)||(LA85_0>=105 && LA85_0<=120)) ) {
+            if ( ((LA85_0>=RULE_IDZ && LA85_0<=RULE_CHAR)||(LA85_0>=31 && LA85_0<=44)||(LA85_0>=56 && LA85_0<=62)||(LA85_0>=64 && LA85_0<=65)||LA85_0==68||LA85_0==74||(LA85_0>=76 && LA85_0<=77)||(LA85_0>=88 && LA85_0<=93)||(LA85_0>=95 && LA85_0<=97)||(LA85_0>=103 && LA85_0<=120)) ) {
                 alt85=1;
             }
             switch (alt85) {
@@ -63277,7 +63307,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             int alt86=2;
             int LA86_0 = input.LA(1);
 
-            if ( ((LA86_0>=RULE_IDZ && LA86_0<=RULE_CHAR)||(LA86_0>=31 && LA86_0<=44)||(LA86_0>=56 && LA86_0<=62)||(LA86_0>=64 && LA86_0<=65)||LA86_0==68||LA86_0==74||(LA86_0>=76 && LA86_0<=77)||(LA86_0>=88 && LA86_0<=95)||(LA86_0>=97 && LA86_0<=99)||(LA86_0>=105 && LA86_0<=120)) ) {
+            if ( ((LA86_0>=RULE_IDZ && LA86_0<=RULE_CHAR)||(LA86_0>=31 && LA86_0<=44)||(LA86_0>=56 && LA86_0<=62)||(LA86_0>=64 && LA86_0<=65)||LA86_0==68||LA86_0==74||(LA86_0>=76 && LA86_0<=77)||(LA86_0>=88 && LA86_0<=93)||(LA86_0>=95 && LA86_0<=97)||(LA86_0>=103 && LA86_0<=120)) ) {
                 alt86=1;
             }
             switch (alt86) {
@@ -64134,7 +64164,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExclusive_or_expression_linhaAccess().getCircumflexAccentKeyword_0()); 
             }
-            match(input,100,FOLLOW_2); if (state.failed) return ;
+            match(input,98,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExclusive_or_expression_linhaAccess().getCircumflexAccentKeyword_0()); 
             }
@@ -64559,7 +64589,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInclusive_or_expression_linhaAccess().getVerticalLineKeyword_0()); 
             }
-            match(input,101,FOLLOW_2); if (state.failed) return ;
+            match(input,99,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInclusive_or_expression_linhaAccess().getVerticalLineKeyword_0()); 
             }
@@ -64984,7 +65014,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_and_expression_linhaAccess().getAndKeyword_0()); 
             }
-            match(input,102,FOLLOW_2); if (state.failed) return ;
+            match(input,100,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLogical_and_expression_linhaAccess().getAndKeyword_0()); 
             }
@@ -65409,7 +65439,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_or_expression_linhaAccess().getOrKeyword_0()); 
             }
-            match(input,103,FOLLOW_2); if (state.failed) return ;
+            match(input,101,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLogical_or_expression_linhaAccess().getOrKeyword_0()); 
             }
@@ -65834,7 +65864,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditional_expression_linhaAccess().getQuestionMarkKeyword_0()); 
             }
-            match(input,104,FOLLOW_2); if (state.failed) return ;
+            match(input,102,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConditional_expression_linhaAccess().getQuestionMarkKeyword_0()); 
             }
@@ -68927,7 +68957,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_qualifierAccess().getNamezConstKeyword_0_0()); 
             }
-            match(input,105,FOLLOW_2); if (state.failed) return ;
+            match(input,103,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_qualifierAccess().getNamezConstKeyword_0_0()); 
             }
@@ -68980,7 +69010,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_qualifierAccess().getNamezRestrictKeyword_1_0()); 
             }
-            match(input,106,FOLLOW_2); if (state.failed) return ;
+            match(input,104,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_qualifierAccess().getNamezRestrictKeyword_1_0()); 
             }
@@ -69033,7 +69063,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_qualifierAccess().getNamezVolatileKeyword_2_0()); 
             }
-            match(input,107,FOLLOW_2); if (state.failed) return ;
+            match(input,105,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_qualifierAccess().getNamezVolatileKeyword_2_0()); 
             }
@@ -69139,7 +69169,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strVoidKeyword_0_0()); 
             }
-            match(input,108,FOLLOW_2); if (state.failed) return ;
+            match(input,106,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strVoidKeyword_0_0()); 
             }
@@ -69192,7 +69222,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strCharKeyword_1_0()); 
             }
-            match(input,109,FOLLOW_2); if (state.failed) return ;
+            match(input,107,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strCharKeyword_1_0()); 
             }
@@ -69245,7 +69275,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strShortKeyword_2_0()); 
             }
-            match(input,110,FOLLOW_2); if (state.failed) return ;
+            match(input,108,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strShortKeyword_2_0()); 
             }
@@ -69298,7 +69328,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strIntKeyword_3_0()); 
             }
-            match(input,111,FOLLOW_2); if (state.failed) return ;
+            match(input,109,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strIntKeyword_3_0()); 
             }
@@ -69351,7 +69381,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strLongKeyword_4_0()); 
             }
-            match(input,112,FOLLOW_2); if (state.failed) return ;
+            match(input,110,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strLongKeyword_4_0()); 
             }
@@ -69404,7 +69434,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strFloatKeyword_5_0()); 
             }
-            match(input,113,FOLLOW_2); if (state.failed) return ;
+            match(input,111,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strFloatKeyword_5_0()); 
             }
@@ -69457,7 +69487,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strDoubleKeyword_6_0()); 
             }
-            match(input,114,FOLLOW_2); if (state.failed) return ;
+            match(input,112,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strDoubleKeyword_6_0()); 
             }
@@ -69510,7 +69540,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strSignedKeyword_7_0()); 
             }
-            match(input,115,FOLLOW_2); if (state.failed) return ;
+            match(input,113,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strSignedKeyword_7_0()); 
             }
@@ -69563,7 +69593,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strUnsignedKeyword_8_0()); 
             }
-            match(input,116,FOLLOW_2); if (state.failed) return ;
+            match(input,114,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strUnsignedKeyword_8_0()); 
             }
@@ -69616,7 +69646,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_strBoolKeyword_9_0()); 
             }
-            match(input,117,FOLLOW_2); if (state.failed) return ;
+            match(input,115,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_strBoolKeyword_9_0()); 
             }
@@ -69669,7 +69699,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_str_ComplexKeyword_10_0()); 
             }
-            match(input,118,FOLLOW_2); if (state.failed) return ;
+            match(input,116,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_str_ComplexKeyword_10_0()); 
             }
@@ -69722,7 +69752,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_specifierAccess().getType_name_str_ImaginaryKeyword_11_0()); 
             }
-            match(input,119,FOLLOW_2); if (state.failed) return ;
+            match(input,117,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getType_specifierAccess().getType_name_str_ImaginaryKeyword_11_0()); 
             }
@@ -76182,7 +76212,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGeneric_selectionAccess().get_generic_GenericKeyword_0_0()); 
             }
-            match(input,120,FOLLOW_2); if (state.failed) return ;
+            match(input,118,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGeneric_selectionAccess().get_generic_GenericKeyword_0_0()); 
             }
@@ -76595,7 +76625,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGeneric_associationAccess().getDefaultDefaultKeyword_1_0_0()); 
             }
-            match(input,99,FOLLOW_2); if (state.failed) return ;
+            match(input,97,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGeneric_associationAccess().getDefaultDefaultKeyword_1_0_0()); 
             }
@@ -80443,18 +80473,177 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Jump_statement__IdentifierAssignment_0_1"
 
 
+    // $ANTLR start "rule__Jump_statement__BreakAssignment_2_0"
+    // InternalAnsic.g:24850:1: rule__Jump_statement__BreakAssignment_2_0 : ( ( 'break' ) ) ;
+    public final void rule__Jump_statement__BreakAssignment_2_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalAnsic.g:24854:1: ( ( ( 'break' ) ) )
+            // InternalAnsic.g:24855:2: ( ( 'break' ) )
+            {
+            // InternalAnsic.g:24855:2: ( ( 'break' ) )
+            // InternalAnsic.g:24856:3: ( 'break' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJump_statementAccess().getBreakBreakKeyword_2_0_0()); 
+            }
+            // InternalAnsic.g:24857:3: ( 'break' )
+            // InternalAnsic.g:24858:4: 'break'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJump_statementAccess().getBreakBreakKeyword_2_0_0()); 
+            }
+            match(input,119,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getJump_statementAccess().getBreakBreakKeyword_2_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getJump_statementAccess().getBreakBreakKeyword_2_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Jump_statement__BreakAssignment_2_0"
+
+
+    // $ANTLR start "rule__Jump_statement__Return_vazioAssignment_3_0"
+    // InternalAnsic.g:24869:1: rule__Jump_statement__Return_vazioAssignment_3_0 : ( ( 'return' ) ) ;
+    public final void rule__Jump_statement__Return_vazioAssignment_3_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalAnsic.g:24873:1: ( ( ( 'return' ) ) )
+            // InternalAnsic.g:24874:2: ( ( 'return' ) )
+            {
+            // InternalAnsic.g:24874:2: ( ( 'return' ) )
+            // InternalAnsic.g:24875:3: ( 'return' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJump_statementAccess().getReturn_vazioReturnKeyword_3_0_0()); 
+            }
+            // InternalAnsic.g:24876:3: ( 'return' )
+            // InternalAnsic.g:24877:4: 'return'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJump_statementAccess().getReturn_vazioReturnKeyword_3_0_0()); 
+            }
+            match(input,120,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getJump_statementAccess().getReturn_vazioReturnKeyword_3_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getJump_statementAccess().getReturn_vazioReturnKeyword_3_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Jump_statement__Return_vazioAssignment_3_0"
+
+
+    // $ANTLR start "rule__Jump_statement__ReturnAssignment_4_0"
+    // InternalAnsic.g:24888:1: rule__Jump_statement__ReturnAssignment_4_0 : ( ( 'return' ) ) ;
+    public final void rule__Jump_statement__ReturnAssignment_4_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalAnsic.g:24892:1: ( ( ( 'return' ) ) )
+            // InternalAnsic.g:24893:2: ( ( 'return' ) )
+            {
+            // InternalAnsic.g:24893:2: ( ( 'return' ) )
+            // InternalAnsic.g:24894:3: ( 'return' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJump_statementAccess().getReturnReturnKeyword_4_0_0()); 
+            }
+            // InternalAnsic.g:24895:3: ( 'return' )
+            // InternalAnsic.g:24896:4: 'return'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJump_statementAccess().getReturnReturnKeyword_4_0_0()); 
+            }
+            match(input,120,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getJump_statementAccess().getReturnReturnKeyword_4_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getJump_statementAccess().getReturnReturnKeyword_4_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Jump_statement__ReturnAssignment_4_0"
+
+
     // $ANTLR start "rule__Jump_statement__ExpressionAssignment_4_1"
-    // InternalAnsic.g:24850:1: rule__Jump_statement__ExpressionAssignment_4_1 : ( ruleexpression ) ;
+    // InternalAnsic.g:24907:1: rule__Jump_statement__ExpressionAssignment_4_1 : ( ruleexpression ) ;
     public final void rule__Jump_statement__ExpressionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24854:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:24855:2: ( ruleexpression )
+            // InternalAnsic.g:24911:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:24912:2: ( ruleexpression )
             {
-            // InternalAnsic.g:24855:2: ( ruleexpression )
-            // InternalAnsic.g:24856:3: ruleexpression
+            // InternalAnsic.g:24912:2: ( ruleexpression )
+            // InternalAnsic.g:24913:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJump_statementAccess().getExpressionExpressionParserRuleCall_4_1_0()); 
@@ -80489,17 +80678,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__ExpressionAssignment_0_2"
-    // InternalAnsic.g:24865:1: rule__Iteration_statement__ExpressionAssignment_0_2 : ( ruleexpression ) ;
+    // InternalAnsic.g:24922:1: rule__Iteration_statement__ExpressionAssignment_0_2 : ( ruleexpression ) ;
     public final void rule__Iteration_statement__ExpressionAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24869:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:24870:2: ( ruleexpression )
+            // InternalAnsic.g:24926:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:24927:2: ( ruleexpression )
             {
-            // InternalAnsic.g:24870:2: ( ruleexpression )
-            // InternalAnsic.g:24871:3: ruleexpression
+            // InternalAnsic.g:24927:2: ( ruleexpression )
+            // InternalAnsic.g:24928:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpressionExpressionParserRuleCall_0_2_0()); 
@@ -80534,17 +80723,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__StatementAssignment_0_4"
-    // InternalAnsic.g:24880:1: rule__Iteration_statement__StatementAssignment_0_4 : ( rulestatement ) ;
+    // InternalAnsic.g:24937:1: rule__Iteration_statement__StatementAssignment_0_4 : ( rulestatement ) ;
     public final void rule__Iteration_statement__StatementAssignment_0_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24884:1: ( ( rulestatement ) )
-            // InternalAnsic.g:24885:2: ( rulestatement )
+            // InternalAnsic.g:24941:1: ( ( rulestatement ) )
+            // InternalAnsic.g:24942:2: ( rulestatement )
             {
-            // InternalAnsic.g:24885:2: ( rulestatement )
-            // InternalAnsic.g:24886:3: rulestatement
+            // InternalAnsic.g:24942:2: ( rulestatement )
+            // InternalAnsic.g:24943:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getStatementStatementParserRuleCall_0_4_0()); 
@@ -80579,17 +80768,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__StatementAssignment_1_1"
-    // InternalAnsic.g:24895:1: rule__Iteration_statement__StatementAssignment_1_1 : ( rulestatement ) ;
+    // InternalAnsic.g:24952:1: rule__Iteration_statement__StatementAssignment_1_1 : ( rulestatement ) ;
     public final void rule__Iteration_statement__StatementAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24899:1: ( ( rulestatement ) )
-            // InternalAnsic.g:24900:2: ( rulestatement )
+            // InternalAnsic.g:24956:1: ( ( rulestatement ) )
+            // InternalAnsic.g:24957:2: ( rulestatement )
             {
-            // InternalAnsic.g:24900:2: ( rulestatement )
-            // InternalAnsic.g:24901:3: rulestatement
+            // InternalAnsic.g:24957:2: ( rulestatement )
+            // InternalAnsic.g:24958:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getStatementStatementParserRuleCall_1_1_0()); 
@@ -80624,17 +80813,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__ExpressionAssignment_1_4"
-    // InternalAnsic.g:24910:1: rule__Iteration_statement__ExpressionAssignment_1_4 : ( ruleexpression ) ;
+    // InternalAnsic.g:24967:1: rule__Iteration_statement__ExpressionAssignment_1_4 : ( ruleexpression ) ;
     public final void rule__Iteration_statement__ExpressionAssignment_1_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24914:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:24915:2: ( ruleexpression )
+            // InternalAnsic.g:24971:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:24972:2: ( ruleexpression )
             {
-            // InternalAnsic.g:24915:2: ( ruleexpression )
-            // InternalAnsic.g:24916:3: ruleexpression
+            // InternalAnsic.g:24972:2: ( ruleexpression )
+            // InternalAnsic.g:24973:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpressionExpressionParserRuleCall_1_4_0()); 
@@ -80669,17 +80858,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__Expression_statementAssignment_2_2"
-    // InternalAnsic.g:24925:1: rule__Iteration_statement__Expression_statementAssignment_2_2 : ( ruleexpression_statement ) ;
+    // InternalAnsic.g:24982:1: rule__Iteration_statement__Expression_statementAssignment_2_2 : ( ruleexpression_statement ) ;
     public final void rule__Iteration_statement__Expression_statementAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24929:1: ( ( ruleexpression_statement ) )
-            // InternalAnsic.g:24930:2: ( ruleexpression_statement )
+            // InternalAnsic.g:24986:1: ( ( ruleexpression_statement ) )
+            // InternalAnsic.g:24987:2: ( ruleexpression_statement )
             {
-            // InternalAnsic.g:24930:2: ( ruleexpression_statement )
-            // InternalAnsic.g:24931:3: ruleexpression_statement
+            // InternalAnsic.g:24987:2: ( ruleexpression_statement )
+            // InternalAnsic.g:24988:3: ruleexpression_statement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpression_statementExpression_statementParserRuleCall_2_2_0()); 
@@ -80714,17 +80903,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__Expression_statement2Assignment_2_3"
-    // InternalAnsic.g:24940:1: rule__Iteration_statement__Expression_statement2Assignment_2_3 : ( ruleexpression_statement ) ;
+    // InternalAnsic.g:24997:1: rule__Iteration_statement__Expression_statement2Assignment_2_3 : ( ruleexpression_statement ) ;
     public final void rule__Iteration_statement__Expression_statement2Assignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24944:1: ( ( ruleexpression_statement ) )
-            // InternalAnsic.g:24945:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25001:1: ( ( ruleexpression_statement ) )
+            // InternalAnsic.g:25002:2: ( ruleexpression_statement )
             {
-            // InternalAnsic.g:24945:2: ( ruleexpression_statement )
-            // InternalAnsic.g:24946:3: ruleexpression_statement
+            // InternalAnsic.g:25002:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25003:3: ruleexpression_statement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpression_statement2Expression_statementParserRuleCall_2_3_0()); 
@@ -80759,17 +80948,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__StatementAssignment_2_5"
-    // InternalAnsic.g:24955:1: rule__Iteration_statement__StatementAssignment_2_5 : ( rulestatement ) ;
+    // InternalAnsic.g:25012:1: rule__Iteration_statement__StatementAssignment_2_5 : ( rulestatement ) ;
     public final void rule__Iteration_statement__StatementAssignment_2_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24959:1: ( ( rulestatement ) )
-            // InternalAnsic.g:24960:2: ( rulestatement )
+            // InternalAnsic.g:25016:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25017:2: ( rulestatement )
             {
-            // InternalAnsic.g:24960:2: ( rulestatement )
-            // InternalAnsic.g:24961:3: rulestatement
+            // InternalAnsic.g:25017:2: ( rulestatement )
+            // InternalAnsic.g:25018:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getStatementStatementParserRuleCall_2_5_0()); 
@@ -80804,17 +80993,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__Expression_statementAssignment_3_2"
-    // InternalAnsic.g:24970:1: rule__Iteration_statement__Expression_statementAssignment_3_2 : ( ruleexpression_statement ) ;
+    // InternalAnsic.g:25027:1: rule__Iteration_statement__Expression_statementAssignment_3_2 : ( ruleexpression_statement ) ;
     public final void rule__Iteration_statement__Expression_statementAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24974:1: ( ( ruleexpression_statement ) )
-            // InternalAnsic.g:24975:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25031:1: ( ( ruleexpression_statement ) )
+            // InternalAnsic.g:25032:2: ( ruleexpression_statement )
             {
-            // InternalAnsic.g:24975:2: ( ruleexpression_statement )
-            // InternalAnsic.g:24976:3: ruleexpression_statement
+            // InternalAnsic.g:25032:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25033:3: ruleexpression_statement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpression_statementExpression_statementParserRuleCall_3_2_0()); 
@@ -80849,17 +81038,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__Expression_statement2Assignment_3_3"
-    // InternalAnsic.g:24985:1: rule__Iteration_statement__Expression_statement2Assignment_3_3 : ( ruleexpression_statement ) ;
+    // InternalAnsic.g:25042:1: rule__Iteration_statement__Expression_statement2Assignment_3_3 : ( ruleexpression_statement ) ;
     public final void rule__Iteration_statement__Expression_statement2Assignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:24989:1: ( ( ruleexpression_statement ) )
-            // InternalAnsic.g:24990:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25046:1: ( ( ruleexpression_statement ) )
+            // InternalAnsic.g:25047:2: ( ruleexpression_statement )
             {
-            // InternalAnsic.g:24990:2: ( ruleexpression_statement )
-            // InternalAnsic.g:24991:3: ruleexpression_statement
+            // InternalAnsic.g:25047:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25048:3: ruleexpression_statement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpression_statement2Expression_statementParserRuleCall_3_3_0()); 
@@ -80894,17 +81083,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__ExpressionAssignment_3_4"
-    // InternalAnsic.g:25000:1: rule__Iteration_statement__ExpressionAssignment_3_4 : ( ruleexpression ) ;
+    // InternalAnsic.g:25057:1: rule__Iteration_statement__ExpressionAssignment_3_4 : ( ruleexpression ) ;
     public final void rule__Iteration_statement__ExpressionAssignment_3_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25004:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25005:2: ( ruleexpression )
+            // InternalAnsic.g:25061:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25062:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25005:2: ( ruleexpression )
-            // InternalAnsic.g:25006:3: ruleexpression
+            // InternalAnsic.g:25062:2: ( ruleexpression )
+            // InternalAnsic.g:25063:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpressionExpressionParserRuleCall_3_4_0()); 
@@ -80939,17 +81128,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__StatementAssignment_3_6"
-    // InternalAnsic.g:25015:1: rule__Iteration_statement__StatementAssignment_3_6 : ( rulestatement ) ;
+    // InternalAnsic.g:25072:1: rule__Iteration_statement__StatementAssignment_3_6 : ( rulestatement ) ;
     public final void rule__Iteration_statement__StatementAssignment_3_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25019:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25020:2: ( rulestatement )
+            // InternalAnsic.g:25076:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25077:2: ( rulestatement )
             {
-            // InternalAnsic.g:25020:2: ( rulestatement )
-            // InternalAnsic.g:25021:3: rulestatement
+            // InternalAnsic.g:25077:2: ( rulestatement )
+            // InternalAnsic.g:25078:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getStatementStatementParserRuleCall_3_6_0()); 
@@ -80984,17 +81173,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__DeclarationAssignment_4_2"
-    // InternalAnsic.g:25030:1: rule__Iteration_statement__DeclarationAssignment_4_2 : ( ruledeclaration ) ;
+    // InternalAnsic.g:25087:1: rule__Iteration_statement__DeclarationAssignment_4_2 : ( ruledeclaration ) ;
     public final void rule__Iteration_statement__DeclarationAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25034:1: ( ( ruledeclaration ) )
-            // InternalAnsic.g:25035:2: ( ruledeclaration )
+            // InternalAnsic.g:25091:1: ( ( ruledeclaration ) )
+            // InternalAnsic.g:25092:2: ( ruledeclaration )
             {
-            // InternalAnsic.g:25035:2: ( ruledeclaration )
-            // InternalAnsic.g:25036:3: ruledeclaration
+            // InternalAnsic.g:25092:2: ( ruledeclaration )
+            // InternalAnsic.g:25093:3: ruledeclaration
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getDeclarationDeclarationParserRuleCall_4_2_0()); 
@@ -81029,17 +81218,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__Expression_statementAssignment_4_3"
-    // InternalAnsic.g:25045:1: rule__Iteration_statement__Expression_statementAssignment_4_3 : ( ruleexpression_statement ) ;
+    // InternalAnsic.g:25102:1: rule__Iteration_statement__Expression_statementAssignment_4_3 : ( ruleexpression_statement ) ;
     public final void rule__Iteration_statement__Expression_statementAssignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25049:1: ( ( ruleexpression_statement ) )
-            // InternalAnsic.g:25050:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25106:1: ( ( ruleexpression_statement ) )
+            // InternalAnsic.g:25107:2: ( ruleexpression_statement )
             {
-            // InternalAnsic.g:25050:2: ( ruleexpression_statement )
-            // InternalAnsic.g:25051:3: ruleexpression_statement
+            // InternalAnsic.g:25107:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25108:3: ruleexpression_statement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpression_statementExpression_statementParserRuleCall_4_3_0()); 
@@ -81074,17 +81263,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__StatementAssignment_4_5"
-    // InternalAnsic.g:25060:1: rule__Iteration_statement__StatementAssignment_4_5 : ( rulestatement ) ;
+    // InternalAnsic.g:25117:1: rule__Iteration_statement__StatementAssignment_4_5 : ( rulestatement ) ;
     public final void rule__Iteration_statement__StatementAssignment_4_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25064:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25065:2: ( rulestatement )
+            // InternalAnsic.g:25121:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25122:2: ( rulestatement )
             {
-            // InternalAnsic.g:25065:2: ( rulestatement )
-            // InternalAnsic.g:25066:3: rulestatement
+            // InternalAnsic.g:25122:2: ( rulestatement )
+            // InternalAnsic.g:25123:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getStatementStatementParserRuleCall_4_5_0()); 
@@ -81119,17 +81308,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__DeclarationAssignment_5_2"
-    // InternalAnsic.g:25075:1: rule__Iteration_statement__DeclarationAssignment_5_2 : ( ruledeclaration ) ;
+    // InternalAnsic.g:25132:1: rule__Iteration_statement__DeclarationAssignment_5_2 : ( ruledeclaration ) ;
     public final void rule__Iteration_statement__DeclarationAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25079:1: ( ( ruledeclaration ) )
-            // InternalAnsic.g:25080:2: ( ruledeclaration )
+            // InternalAnsic.g:25136:1: ( ( ruledeclaration ) )
+            // InternalAnsic.g:25137:2: ( ruledeclaration )
             {
-            // InternalAnsic.g:25080:2: ( ruledeclaration )
-            // InternalAnsic.g:25081:3: ruledeclaration
+            // InternalAnsic.g:25137:2: ( ruledeclaration )
+            // InternalAnsic.g:25138:3: ruledeclaration
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getDeclarationDeclarationParserRuleCall_5_2_0()); 
@@ -81164,17 +81353,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__Expression_statementAssignment_5_3"
-    // InternalAnsic.g:25090:1: rule__Iteration_statement__Expression_statementAssignment_5_3 : ( ruleexpression_statement ) ;
+    // InternalAnsic.g:25147:1: rule__Iteration_statement__Expression_statementAssignment_5_3 : ( ruleexpression_statement ) ;
     public final void rule__Iteration_statement__Expression_statementAssignment_5_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25094:1: ( ( ruleexpression_statement ) )
-            // InternalAnsic.g:25095:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25151:1: ( ( ruleexpression_statement ) )
+            // InternalAnsic.g:25152:2: ( ruleexpression_statement )
             {
-            // InternalAnsic.g:25095:2: ( ruleexpression_statement )
-            // InternalAnsic.g:25096:3: ruleexpression_statement
+            // InternalAnsic.g:25152:2: ( ruleexpression_statement )
+            // InternalAnsic.g:25153:3: ruleexpression_statement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpression_statementExpression_statementParserRuleCall_5_3_0()); 
@@ -81209,17 +81398,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__ExpressionAssignment_5_4"
-    // InternalAnsic.g:25105:1: rule__Iteration_statement__ExpressionAssignment_5_4 : ( ruleexpression ) ;
+    // InternalAnsic.g:25162:1: rule__Iteration_statement__ExpressionAssignment_5_4 : ( ruleexpression ) ;
     public final void rule__Iteration_statement__ExpressionAssignment_5_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25109:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25110:2: ( ruleexpression )
+            // InternalAnsic.g:25166:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25167:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25110:2: ( ruleexpression )
-            // InternalAnsic.g:25111:3: ruleexpression
+            // InternalAnsic.g:25167:2: ( ruleexpression )
+            // InternalAnsic.g:25168:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getExpressionExpressionParserRuleCall_5_4_0()); 
@@ -81254,17 +81443,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Iteration_statement__StatementAssignment_5_6"
-    // InternalAnsic.g:25120:1: rule__Iteration_statement__StatementAssignment_5_6 : ( rulestatement ) ;
+    // InternalAnsic.g:25177:1: rule__Iteration_statement__StatementAssignment_5_6 : ( rulestatement ) ;
     public final void rule__Iteration_statement__StatementAssignment_5_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25124:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25125:2: ( rulestatement )
+            // InternalAnsic.g:25181:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25182:2: ( rulestatement )
             {
-            // InternalAnsic.g:25125:2: ( rulestatement )
-            // InternalAnsic.g:25126:3: rulestatement
+            // InternalAnsic.g:25182:2: ( rulestatement )
+            // InternalAnsic.g:25183:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIteration_statementAccess().getStatementStatementParserRuleCall_5_6_0()); 
@@ -81299,17 +81488,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__ExpressionAssignment_0_2"
-    // InternalAnsic.g:25135:1: rule__Selection_statement__ExpressionAssignment_0_2 : ( ruleexpression ) ;
+    // InternalAnsic.g:25192:1: rule__Selection_statement__ExpressionAssignment_0_2 : ( ruleexpression ) ;
     public final void rule__Selection_statement__ExpressionAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25139:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25140:2: ( ruleexpression )
+            // InternalAnsic.g:25196:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25197:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25140:2: ( ruleexpression )
-            // InternalAnsic.g:25141:3: ruleexpression
+            // InternalAnsic.g:25197:2: ( ruleexpression )
+            // InternalAnsic.g:25198:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getExpressionExpressionParserRuleCall_0_2_0()); 
@@ -81344,17 +81533,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__StatementAssignment_0_4"
-    // InternalAnsic.g:25150:1: rule__Selection_statement__StatementAssignment_0_4 : ( rulestatement ) ;
+    // InternalAnsic.g:25207:1: rule__Selection_statement__StatementAssignment_0_4 : ( rulestatement ) ;
     public final void rule__Selection_statement__StatementAssignment_0_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25154:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25155:2: ( rulestatement )
+            // InternalAnsic.g:25211:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25212:2: ( rulestatement )
             {
-            // InternalAnsic.g:25155:2: ( rulestatement )
-            // InternalAnsic.g:25156:3: rulestatement
+            // InternalAnsic.g:25212:2: ( rulestatement )
+            // InternalAnsic.g:25213:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getStatementStatementParserRuleCall_0_4_0()); 
@@ -81389,17 +81578,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__Statement2Assignment_0_6"
-    // InternalAnsic.g:25165:1: rule__Selection_statement__Statement2Assignment_0_6 : ( rulestatement ) ;
+    // InternalAnsic.g:25222:1: rule__Selection_statement__Statement2Assignment_0_6 : ( rulestatement ) ;
     public final void rule__Selection_statement__Statement2Assignment_0_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25169:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25170:2: ( rulestatement )
+            // InternalAnsic.g:25226:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25227:2: ( rulestatement )
             {
-            // InternalAnsic.g:25170:2: ( rulestatement )
-            // InternalAnsic.g:25171:3: rulestatement
+            // InternalAnsic.g:25227:2: ( rulestatement )
+            // InternalAnsic.g:25228:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getStatement2StatementParserRuleCall_0_6_0()); 
@@ -81434,17 +81623,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__ExpressionAssignment_1_2"
-    // InternalAnsic.g:25180:1: rule__Selection_statement__ExpressionAssignment_1_2 : ( ruleexpression ) ;
+    // InternalAnsic.g:25237:1: rule__Selection_statement__ExpressionAssignment_1_2 : ( ruleexpression ) ;
     public final void rule__Selection_statement__ExpressionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25184:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25185:2: ( ruleexpression )
+            // InternalAnsic.g:25241:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25242:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25185:2: ( ruleexpression )
-            // InternalAnsic.g:25186:3: ruleexpression
+            // InternalAnsic.g:25242:2: ( ruleexpression )
+            // InternalAnsic.g:25243:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getExpressionExpressionParserRuleCall_1_2_0()); 
@@ -81479,17 +81668,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__StatementAssignment_1_4"
-    // InternalAnsic.g:25195:1: rule__Selection_statement__StatementAssignment_1_4 : ( rulestatement ) ;
+    // InternalAnsic.g:25252:1: rule__Selection_statement__StatementAssignment_1_4 : ( rulestatement ) ;
     public final void rule__Selection_statement__StatementAssignment_1_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25199:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25200:2: ( rulestatement )
+            // InternalAnsic.g:25256:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25257:2: ( rulestatement )
             {
-            // InternalAnsic.g:25200:2: ( rulestatement )
-            // InternalAnsic.g:25201:3: rulestatement
+            // InternalAnsic.g:25257:2: ( rulestatement )
+            // InternalAnsic.g:25258:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getStatementStatementParserRuleCall_1_4_0()); 
@@ -81524,17 +81713,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__ExpressionAssignment_2_2"
-    // InternalAnsic.g:25210:1: rule__Selection_statement__ExpressionAssignment_2_2 : ( ruleexpression ) ;
+    // InternalAnsic.g:25267:1: rule__Selection_statement__ExpressionAssignment_2_2 : ( ruleexpression ) ;
     public final void rule__Selection_statement__ExpressionAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25214:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25215:2: ( ruleexpression )
+            // InternalAnsic.g:25271:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25272:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25215:2: ( ruleexpression )
-            // InternalAnsic.g:25216:3: ruleexpression
+            // InternalAnsic.g:25272:2: ( ruleexpression )
+            // InternalAnsic.g:25273:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getExpressionExpressionParserRuleCall_2_2_0()); 
@@ -81569,17 +81758,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Selection_statement__StatementAssignment_2_4"
-    // InternalAnsic.g:25225:1: rule__Selection_statement__StatementAssignment_2_4 : ( rulestatement ) ;
+    // InternalAnsic.g:25282:1: rule__Selection_statement__StatementAssignment_2_4 : ( rulestatement ) ;
     public final void rule__Selection_statement__StatementAssignment_2_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25229:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25230:2: ( rulestatement )
+            // InternalAnsic.g:25286:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25287:2: ( rulestatement )
             {
-            // InternalAnsic.g:25230:2: ( rulestatement )
-            // InternalAnsic.g:25231:3: rulestatement
+            // InternalAnsic.g:25287:2: ( rulestatement )
+            // InternalAnsic.g:25288:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelection_statementAccess().getStatementStatementParserRuleCall_2_4_0()); 
@@ -81614,17 +81803,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Labeled_statement__IdentifierAssignment_0_0"
-    // InternalAnsic.g:25240:1: rule__Labeled_statement__IdentifierAssignment_0_0 : ( RULE_IDZ ) ;
+    // InternalAnsic.g:25297:1: rule__Labeled_statement__IdentifierAssignment_0_0 : ( RULE_IDZ ) ;
     public final void rule__Labeled_statement__IdentifierAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25244:1: ( ( RULE_IDZ ) )
-            // InternalAnsic.g:25245:2: ( RULE_IDZ )
+            // InternalAnsic.g:25301:1: ( ( RULE_IDZ ) )
+            // InternalAnsic.g:25302:2: ( RULE_IDZ )
             {
-            // InternalAnsic.g:25245:2: ( RULE_IDZ )
-            // InternalAnsic.g:25246:3: RULE_IDZ
+            // InternalAnsic.g:25302:2: ( RULE_IDZ )
+            // InternalAnsic.g:25303:3: RULE_IDZ
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getIdentifierIDzTerminalRuleCall_0_0_0()); 
@@ -81655,17 +81844,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Labeled_statement__StatementAssignment_0_2"
-    // InternalAnsic.g:25255:1: rule__Labeled_statement__StatementAssignment_0_2 : ( rulestatement ) ;
+    // InternalAnsic.g:25312:1: rule__Labeled_statement__StatementAssignment_0_2 : ( rulestatement ) ;
     public final void rule__Labeled_statement__StatementAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25259:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25260:2: ( rulestatement )
+            // InternalAnsic.g:25316:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25317:2: ( rulestatement )
             {
-            // InternalAnsic.g:25260:2: ( rulestatement )
-            // InternalAnsic.g:25261:3: rulestatement
+            // InternalAnsic.g:25317:2: ( rulestatement )
+            // InternalAnsic.g:25318:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getStatementStatementParserRuleCall_0_2_0()); 
@@ -81700,17 +81889,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Labeled_statement__Conditional_expressionAssignment_1_1"
-    // InternalAnsic.g:25270:1: rule__Labeled_statement__Conditional_expressionAssignment_1_1 : ( ruleconditional_expression ) ;
+    // InternalAnsic.g:25327:1: rule__Labeled_statement__Conditional_expressionAssignment_1_1 : ( ruleconditional_expression ) ;
     public final void rule__Labeled_statement__Conditional_expressionAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25274:1: ( ( ruleconditional_expression ) )
-            // InternalAnsic.g:25275:2: ( ruleconditional_expression )
+            // InternalAnsic.g:25331:1: ( ( ruleconditional_expression ) )
+            // InternalAnsic.g:25332:2: ( ruleconditional_expression )
             {
-            // InternalAnsic.g:25275:2: ( ruleconditional_expression )
-            // InternalAnsic.g:25276:3: ruleconditional_expression
+            // InternalAnsic.g:25332:2: ( ruleconditional_expression )
+            // InternalAnsic.g:25333:3: ruleconditional_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getConditional_expressionConditional_expressionParserRuleCall_1_1_0()); 
@@ -81745,17 +81934,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Labeled_statement__StatementAssignment_1_3"
-    // InternalAnsic.g:25285:1: rule__Labeled_statement__StatementAssignment_1_3 : ( rulestatement ) ;
+    // InternalAnsic.g:25342:1: rule__Labeled_statement__StatementAssignment_1_3 : ( rulestatement ) ;
     public final void rule__Labeled_statement__StatementAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25289:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25290:2: ( rulestatement )
+            // InternalAnsic.g:25346:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25347:2: ( rulestatement )
             {
-            // InternalAnsic.g:25290:2: ( rulestatement )
-            // InternalAnsic.g:25291:3: rulestatement
+            // InternalAnsic.g:25347:2: ( rulestatement )
+            // InternalAnsic.g:25348:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getStatementStatementParserRuleCall_1_3_0()); 
@@ -81790,17 +81979,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Labeled_statement__StatementAssignment_2_2"
-    // InternalAnsic.g:25300:1: rule__Labeled_statement__StatementAssignment_2_2 : ( rulestatement ) ;
+    // InternalAnsic.g:25357:1: rule__Labeled_statement__StatementAssignment_2_2 : ( rulestatement ) ;
     public final void rule__Labeled_statement__StatementAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25304:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25305:2: ( rulestatement )
+            // InternalAnsic.g:25361:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25362:2: ( rulestatement )
             {
-            // InternalAnsic.g:25305:2: ( rulestatement )
-            // InternalAnsic.g:25306:3: rulestatement
+            // InternalAnsic.g:25362:2: ( rulestatement )
+            // InternalAnsic.g:25363:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabeled_statementAccess().getStatementStatementParserRuleCall_2_2_0()); 
@@ -81835,17 +82024,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Compound_statement__Block_item_listAssignment_1_1"
-    // InternalAnsic.g:25315:1: rule__Compound_statement__Block_item_listAssignment_1_1 : ( ruleblock_item_list ) ;
+    // InternalAnsic.g:25372:1: rule__Compound_statement__Block_item_listAssignment_1_1 : ( ruleblock_item_list ) ;
     public final void rule__Compound_statement__Block_item_listAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25319:1: ( ( ruleblock_item_list ) )
-            // InternalAnsic.g:25320:2: ( ruleblock_item_list )
+            // InternalAnsic.g:25376:1: ( ( ruleblock_item_list ) )
+            // InternalAnsic.g:25377:2: ( ruleblock_item_list )
             {
-            // InternalAnsic.g:25320:2: ( ruleblock_item_list )
-            // InternalAnsic.g:25321:3: ruleblock_item_list
+            // InternalAnsic.g:25377:2: ( ruleblock_item_list )
+            // InternalAnsic.g:25378:3: ruleblock_item_list
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompound_statementAccess().getBlock_item_listBlock_item_listParserRuleCall_1_1_0()); 
@@ -81880,17 +82069,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Block_item_list__Block_itemAssignment_0"
-    // InternalAnsic.g:25330:1: rule__Block_item_list__Block_itemAssignment_0 : ( ruleblock_item ) ;
+    // InternalAnsic.g:25387:1: rule__Block_item_list__Block_itemAssignment_0 : ( ruleblock_item ) ;
     public final void rule__Block_item_list__Block_itemAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25334:1: ( ( ruleblock_item ) )
-            // InternalAnsic.g:25335:2: ( ruleblock_item )
+            // InternalAnsic.g:25391:1: ( ( ruleblock_item ) )
+            // InternalAnsic.g:25392:2: ( ruleblock_item )
             {
-            // InternalAnsic.g:25335:2: ( ruleblock_item )
-            // InternalAnsic.g:25336:3: ruleblock_item
+            // InternalAnsic.g:25392:2: ( ruleblock_item )
+            // InternalAnsic.g:25393:3: ruleblock_item
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlock_item_listAccess().getBlock_itemBlock_itemParserRuleCall_0_0()); 
@@ -81925,17 +82114,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Block_item_list__Block_item_list_linhaAssignment_1"
-    // InternalAnsic.g:25345:1: rule__Block_item_list__Block_item_list_linhaAssignment_1 : ( ruleblock_item_list_linha ) ;
+    // InternalAnsic.g:25402:1: rule__Block_item_list__Block_item_list_linhaAssignment_1 : ( ruleblock_item_list_linha ) ;
     public final void rule__Block_item_list__Block_item_list_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25349:1: ( ( ruleblock_item_list_linha ) )
-            // InternalAnsic.g:25350:2: ( ruleblock_item_list_linha )
+            // InternalAnsic.g:25406:1: ( ( ruleblock_item_list_linha ) )
+            // InternalAnsic.g:25407:2: ( ruleblock_item_list_linha )
             {
-            // InternalAnsic.g:25350:2: ( ruleblock_item_list_linha )
-            // InternalAnsic.g:25351:3: ruleblock_item_list_linha
+            // InternalAnsic.g:25407:2: ( ruleblock_item_list_linha )
+            // InternalAnsic.g:25408:3: ruleblock_item_list_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlock_item_listAccess().getBlock_item_list_linhaBlock_item_list_linhaParserRuleCall_1_0()); 
@@ -81970,17 +82159,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Block_item_list_linha__Block_itemAssignment_0"
-    // InternalAnsic.g:25360:1: rule__Block_item_list_linha__Block_itemAssignment_0 : ( ruleblock_item ) ;
+    // InternalAnsic.g:25417:1: rule__Block_item_list_linha__Block_itemAssignment_0 : ( ruleblock_item ) ;
     public final void rule__Block_item_list_linha__Block_itemAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25364:1: ( ( ruleblock_item ) )
-            // InternalAnsic.g:25365:2: ( ruleblock_item )
+            // InternalAnsic.g:25421:1: ( ( ruleblock_item ) )
+            // InternalAnsic.g:25422:2: ( ruleblock_item )
             {
-            // InternalAnsic.g:25365:2: ( ruleblock_item )
-            // InternalAnsic.g:25366:3: ruleblock_item
+            // InternalAnsic.g:25422:2: ( ruleblock_item )
+            // InternalAnsic.g:25423:3: ruleblock_item
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlock_item_list_linhaAccess().getBlock_itemBlock_itemParserRuleCall_0_0()); 
@@ -82015,17 +82204,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Block_item_list_linha__Block_item_list_linhaAssignment_1"
-    // InternalAnsic.g:25375:1: rule__Block_item_list_linha__Block_item_list_linhaAssignment_1 : ( ruleblock_item_list_linha ) ;
+    // InternalAnsic.g:25432:1: rule__Block_item_list_linha__Block_item_list_linhaAssignment_1 : ( ruleblock_item_list_linha ) ;
     public final void rule__Block_item_list_linha__Block_item_list_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25379:1: ( ( ruleblock_item_list_linha ) )
-            // InternalAnsic.g:25380:2: ( ruleblock_item_list_linha )
+            // InternalAnsic.g:25436:1: ( ( ruleblock_item_list_linha ) )
+            // InternalAnsic.g:25437:2: ( ruleblock_item_list_linha )
             {
-            // InternalAnsic.g:25380:2: ( ruleblock_item_list_linha )
-            // InternalAnsic.g:25381:3: ruleblock_item_list_linha
+            // InternalAnsic.g:25437:2: ( ruleblock_item_list_linha )
+            // InternalAnsic.g:25438:3: ruleblock_item_list_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlock_item_list_linhaAccess().getBlock_item_list_linhaBlock_item_list_linhaParserRuleCall_1_0()); 
@@ -82060,17 +82249,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Block_item__DeclarationAssignment_0"
-    // InternalAnsic.g:25390:1: rule__Block_item__DeclarationAssignment_0 : ( ruledeclaration ) ;
+    // InternalAnsic.g:25447:1: rule__Block_item__DeclarationAssignment_0 : ( ruledeclaration ) ;
     public final void rule__Block_item__DeclarationAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25394:1: ( ( ruledeclaration ) )
-            // InternalAnsic.g:25395:2: ( ruledeclaration )
+            // InternalAnsic.g:25451:1: ( ( ruledeclaration ) )
+            // InternalAnsic.g:25452:2: ( ruledeclaration )
             {
-            // InternalAnsic.g:25395:2: ( ruledeclaration )
-            // InternalAnsic.g:25396:3: ruledeclaration
+            // InternalAnsic.g:25452:2: ( ruledeclaration )
+            // InternalAnsic.g:25453:3: ruledeclaration
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlock_itemAccess().getDeclarationDeclarationParserRuleCall_0_0()); 
@@ -82105,17 +82294,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Block_item__StatementAssignment_1"
-    // InternalAnsic.g:25405:1: rule__Block_item__StatementAssignment_1 : ( rulestatement ) ;
+    // InternalAnsic.g:25462:1: rule__Block_item__StatementAssignment_1 : ( rulestatement ) ;
     public final void rule__Block_item__StatementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25409:1: ( ( rulestatement ) )
-            // InternalAnsic.g:25410:2: ( rulestatement )
+            // InternalAnsic.g:25466:1: ( ( rulestatement ) )
+            // InternalAnsic.g:25467:2: ( rulestatement )
             {
-            // InternalAnsic.g:25410:2: ( rulestatement )
-            // InternalAnsic.g:25411:3: rulestatement
+            // InternalAnsic.g:25467:2: ( rulestatement )
+            // InternalAnsic.g:25468:3: rulestatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlock_itemAccess().getStatementStatementParserRuleCall_1_0()); 
@@ -82150,17 +82339,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression_statement__ExpressionAssignment_1_0"
-    // InternalAnsic.g:25420:1: rule__Expression_statement__ExpressionAssignment_1_0 : ( ruleexpression ) ;
+    // InternalAnsic.g:25477:1: rule__Expression_statement__ExpressionAssignment_1_0 : ( ruleexpression ) ;
     public final void rule__Expression_statement__ExpressionAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25424:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25425:2: ( ruleexpression )
+            // InternalAnsic.g:25481:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25482:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25425:2: ( ruleexpression )
-            // InternalAnsic.g:25426:3: ruleexpression
+            // InternalAnsic.g:25482:2: ( ruleexpression )
+            // InternalAnsic.g:25483:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_statementAccess().getExpressionExpressionParserRuleCall_1_0_0()); 
@@ -82195,17 +82384,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expression__Equality_expressionAssignment_0"
-    // InternalAnsic.g:25435:1: rule__And_expression__Equality_expressionAssignment_0 : ( ruleequality_expression ) ;
+    // InternalAnsic.g:25492:1: rule__And_expression__Equality_expressionAssignment_0 : ( ruleequality_expression ) ;
     public final void rule__And_expression__Equality_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25439:1: ( ( ruleequality_expression ) )
-            // InternalAnsic.g:25440:2: ( ruleequality_expression )
+            // InternalAnsic.g:25496:1: ( ( ruleequality_expression ) )
+            // InternalAnsic.g:25497:2: ( ruleequality_expression )
             {
-            // InternalAnsic.g:25440:2: ( ruleequality_expression )
-            // InternalAnsic.g:25441:3: ruleequality_expression
+            // InternalAnsic.g:25497:2: ( ruleequality_expression )
+            // InternalAnsic.g:25498:3: ruleequality_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_expressionAccess().getEquality_expressionEquality_expressionParserRuleCall_0_0()); 
@@ -82240,17 +82429,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expression__And_expression_linhaAssignment_1"
-    // InternalAnsic.g:25450:1: rule__And_expression__And_expression_linhaAssignment_1 : ( ruleand_expression_linha ) ;
+    // InternalAnsic.g:25507:1: rule__And_expression__And_expression_linhaAssignment_1 : ( ruleand_expression_linha ) ;
     public final void rule__And_expression__And_expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25454:1: ( ( ruleand_expression_linha ) )
-            // InternalAnsic.g:25455:2: ( ruleand_expression_linha )
+            // InternalAnsic.g:25511:1: ( ( ruleand_expression_linha ) )
+            // InternalAnsic.g:25512:2: ( ruleand_expression_linha )
             {
-            // InternalAnsic.g:25455:2: ( ruleand_expression_linha )
-            // InternalAnsic.g:25456:3: ruleand_expression_linha
+            // InternalAnsic.g:25512:2: ( ruleand_expression_linha )
+            // InternalAnsic.g:25513:3: ruleand_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_expressionAccess().getAnd_expression_linhaAnd_expression_linhaParserRuleCall_1_0()); 
@@ -82285,17 +82474,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expression_linha__Equality_expressionAssignment_1"
-    // InternalAnsic.g:25465:1: rule__And_expression_linha__Equality_expressionAssignment_1 : ( ruleequality_expression ) ;
+    // InternalAnsic.g:25522:1: rule__And_expression_linha__Equality_expressionAssignment_1 : ( ruleequality_expression ) ;
     public final void rule__And_expression_linha__Equality_expressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25469:1: ( ( ruleequality_expression ) )
-            // InternalAnsic.g:25470:2: ( ruleequality_expression )
+            // InternalAnsic.g:25526:1: ( ( ruleequality_expression ) )
+            // InternalAnsic.g:25527:2: ( ruleequality_expression )
             {
-            // InternalAnsic.g:25470:2: ( ruleequality_expression )
-            // InternalAnsic.g:25471:3: ruleequality_expression
+            // InternalAnsic.g:25527:2: ( ruleequality_expression )
+            // InternalAnsic.g:25528:3: ruleequality_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_expression_linhaAccess().getEquality_expressionEquality_expressionParserRuleCall_1_0()); 
@@ -82330,17 +82519,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expression_linha__And_expression_linhaAssignment_2"
-    // InternalAnsic.g:25480:1: rule__And_expression_linha__And_expression_linhaAssignment_2 : ( ruleand_expression_linha ) ;
+    // InternalAnsic.g:25537:1: rule__And_expression_linha__And_expression_linhaAssignment_2 : ( ruleand_expression_linha ) ;
     public final void rule__And_expression_linha__And_expression_linhaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25484:1: ( ( ruleand_expression_linha ) )
-            // InternalAnsic.g:25485:2: ( ruleand_expression_linha )
+            // InternalAnsic.g:25541:1: ( ( ruleand_expression_linha ) )
+            // InternalAnsic.g:25542:2: ( ruleand_expression_linha )
             {
-            // InternalAnsic.g:25485:2: ( ruleand_expression_linha )
-            // InternalAnsic.g:25486:3: ruleand_expression_linha
+            // InternalAnsic.g:25542:2: ( ruleand_expression_linha )
+            // InternalAnsic.g:25543:3: ruleand_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_expression_linhaAccess().getAnd_expression_linhaAnd_expression_linhaParserRuleCall_2_0()); 
@@ -82375,17 +82564,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exclusive_or_expression__And_expressionAssignment_0"
-    // InternalAnsic.g:25495:1: rule__Exclusive_or_expression__And_expressionAssignment_0 : ( ruleand_expression ) ;
+    // InternalAnsic.g:25552:1: rule__Exclusive_or_expression__And_expressionAssignment_0 : ( ruleand_expression ) ;
     public final void rule__Exclusive_or_expression__And_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25499:1: ( ( ruleand_expression ) )
-            // InternalAnsic.g:25500:2: ( ruleand_expression )
+            // InternalAnsic.g:25556:1: ( ( ruleand_expression ) )
+            // InternalAnsic.g:25557:2: ( ruleand_expression )
             {
-            // InternalAnsic.g:25500:2: ( ruleand_expression )
-            // InternalAnsic.g:25501:3: ruleand_expression
+            // InternalAnsic.g:25557:2: ( ruleand_expression )
+            // InternalAnsic.g:25558:3: ruleand_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExclusive_or_expressionAccess().getAnd_expressionAnd_expressionParserRuleCall_0_0()); 
@@ -82420,17 +82609,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exclusive_or_expression__Exclusive_or_expression_linhaAssignment_1"
-    // InternalAnsic.g:25510:1: rule__Exclusive_or_expression__Exclusive_or_expression_linhaAssignment_1 : ( ruleexclusive_or_expression_linha ) ;
+    // InternalAnsic.g:25567:1: rule__Exclusive_or_expression__Exclusive_or_expression_linhaAssignment_1 : ( ruleexclusive_or_expression_linha ) ;
     public final void rule__Exclusive_or_expression__Exclusive_or_expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25514:1: ( ( ruleexclusive_or_expression_linha ) )
-            // InternalAnsic.g:25515:2: ( ruleexclusive_or_expression_linha )
+            // InternalAnsic.g:25571:1: ( ( ruleexclusive_or_expression_linha ) )
+            // InternalAnsic.g:25572:2: ( ruleexclusive_or_expression_linha )
             {
-            // InternalAnsic.g:25515:2: ( ruleexclusive_or_expression_linha )
-            // InternalAnsic.g:25516:3: ruleexclusive_or_expression_linha
+            // InternalAnsic.g:25572:2: ( ruleexclusive_or_expression_linha )
+            // InternalAnsic.g:25573:3: ruleexclusive_or_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExclusive_or_expressionAccess().getExclusive_or_expression_linhaExclusive_or_expression_linhaParserRuleCall_1_0()); 
@@ -82465,17 +82654,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exclusive_or_expression_linha__And_expressionAssignment_1"
-    // InternalAnsic.g:25525:1: rule__Exclusive_or_expression_linha__And_expressionAssignment_1 : ( ruleand_expression ) ;
+    // InternalAnsic.g:25582:1: rule__Exclusive_or_expression_linha__And_expressionAssignment_1 : ( ruleand_expression ) ;
     public final void rule__Exclusive_or_expression_linha__And_expressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25529:1: ( ( ruleand_expression ) )
-            // InternalAnsic.g:25530:2: ( ruleand_expression )
+            // InternalAnsic.g:25586:1: ( ( ruleand_expression ) )
+            // InternalAnsic.g:25587:2: ( ruleand_expression )
             {
-            // InternalAnsic.g:25530:2: ( ruleand_expression )
-            // InternalAnsic.g:25531:3: ruleand_expression
+            // InternalAnsic.g:25587:2: ( ruleand_expression )
+            // InternalAnsic.g:25588:3: ruleand_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExclusive_or_expression_linhaAccess().getAnd_expressionAnd_expressionParserRuleCall_1_0()); 
@@ -82510,17 +82699,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exclusive_or_expression_linha__Exclusive_or_expression_linhaAssignment_2"
-    // InternalAnsic.g:25540:1: rule__Exclusive_or_expression_linha__Exclusive_or_expression_linhaAssignment_2 : ( ruleexclusive_or_expression_linha ) ;
+    // InternalAnsic.g:25597:1: rule__Exclusive_or_expression_linha__Exclusive_or_expression_linhaAssignment_2 : ( ruleexclusive_or_expression_linha ) ;
     public final void rule__Exclusive_or_expression_linha__Exclusive_or_expression_linhaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25544:1: ( ( ruleexclusive_or_expression_linha ) )
-            // InternalAnsic.g:25545:2: ( ruleexclusive_or_expression_linha )
+            // InternalAnsic.g:25601:1: ( ( ruleexclusive_or_expression_linha ) )
+            // InternalAnsic.g:25602:2: ( ruleexclusive_or_expression_linha )
             {
-            // InternalAnsic.g:25545:2: ( ruleexclusive_or_expression_linha )
-            // InternalAnsic.g:25546:3: ruleexclusive_or_expression_linha
+            // InternalAnsic.g:25602:2: ( ruleexclusive_or_expression_linha )
+            // InternalAnsic.g:25603:3: ruleexclusive_or_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExclusive_or_expression_linhaAccess().getExclusive_or_expression_linhaExclusive_or_expression_linhaParserRuleCall_2_0()); 
@@ -82555,17 +82744,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Inclusive_or_expression__Exclusive_or_expressionAssignment_0"
-    // InternalAnsic.g:25555:1: rule__Inclusive_or_expression__Exclusive_or_expressionAssignment_0 : ( ruleexclusive_or_expression ) ;
+    // InternalAnsic.g:25612:1: rule__Inclusive_or_expression__Exclusive_or_expressionAssignment_0 : ( ruleexclusive_or_expression ) ;
     public final void rule__Inclusive_or_expression__Exclusive_or_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25559:1: ( ( ruleexclusive_or_expression ) )
-            // InternalAnsic.g:25560:2: ( ruleexclusive_or_expression )
+            // InternalAnsic.g:25616:1: ( ( ruleexclusive_or_expression ) )
+            // InternalAnsic.g:25617:2: ( ruleexclusive_or_expression )
             {
-            // InternalAnsic.g:25560:2: ( ruleexclusive_or_expression )
-            // InternalAnsic.g:25561:3: ruleexclusive_or_expression
+            // InternalAnsic.g:25617:2: ( ruleexclusive_or_expression )
+            // InternalAnsic.g:25618:3: ruleexclusive_or_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInclusive_or_expressionAccess().getExclusive_or_expressionExclusive_or_expressionParserRuleCall_0_0()); 
@@ -82600,17 +82789,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Inclusive_or_expression__Inclusive_or_expression_linhaAssignment_1"
-    // InternalAnsic.g:25570:1: rule__Inclusive_or_expression__Inclusive_or_expression_linhaAssignment_1 : ( ruleinclusive_or_expression_linha ) ;
+    // InternalAnsic.g:25627:1: rule__Inclusive_or_expression__Inclusive_or_expression_linhaAssignment_1 : ( ruleinclusive_or_expression_linha ) ;
     public final void rule__Inclusive_or_expression__Inclusive_or_expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25574:1: ( ( ruleinclusive_or_expression_linha ) )
-            // InternalAnsic.g:25575:2: ( ruleinclusive_or_expression_linha )
+            // InternalAnsic.g:25631:1: ( ( ruleinclusive_or_expression_linha ) )
+            // InternalAnsic.g:25632:2: ( ruleinclusive_or_expression_linha )
             {
-            // InternalAnsic.g:25575:2: ( ruleinclusive_or_expression_linha )
-            // InternalAnsic.g:25576:3: ruleinclusive_or_expression_linha
+            // InternalAnsic.g:25632:2: ( ruleinclusive_or_expression_linha )
+            // InternalAnsic.g:25633:3: ruleinclusive_or_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInclusive_or_expressionAccess().getInclusive_or_expression_linhaInclusive_or_expression_linhaParserRuleCall_1_0()); 
@@ -82645,17 +82834,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Inclusive_or_expression_linha__Exclusive_or_expressionAssignment_1"
-    // InternalAnsic.g:25585:1: rule__Inclusive_or_expression_linha__Exclusive_or_expressionAssignment_1 : ( ruleexclusive_or_expression ) ;
+    // InternalAnsic.g:25642:1: rule__Inclusive_or_expression_linha__Exclusive_or_expressionAssignment_1 : ( ruleexclusive_or_expression ) ;
     public final void rule__Inclusive_or_expression_linha__Exclusive_or_expressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25589:1: ( ( ruleexclusive_or_expression ) )
-            // InternalAnsic.g:25590:2: ( ruleexclusive_or_expression )
+            // InternalAnsic.g:25646:1: ( ( ruleexclusive_or_expression ) )
+            // InternalAnsic.g:25647:2: ( ruleexclusive_or_expression )
             {
-            // InternalAnsic.g:25590:2: ( ruleexclusive_or_expression )
-            // InternalAnsic.g:25591:3: ruleexclusive_or_expression
+            // InternalAnsic.g:25647:2: ( ruleexclusive_or_expression )
+            // InternalAnsic.g:25648:3: ruleexclusive_or_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInclusive_or_expression_linhaAccess().getExclusive_or_expressionExclusive_or_expressionParserRuleCall_1_0()); 
@@ -82690,17 +82879,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Inclusive_or_expression_linha__Inclusive_or_expression_linhaAssignment_2"
-    // InternalAnsic.g:25600:1: rule__Inclusive_or_expression_linha__Inclusive_or_expression_linhaAssignment_2 : ( ruleinclusive_or_expression_linha ) ;
+    // InternalAnsic.g:25657:1: rule__Inclusive_or_expression_linha__Inclusive_or_expression_linhaAssignment_2 : ( ruleinclusive_or_expression_linha ) ;
     public final void rule__Inclusive_or_expression_linha__Inclusive_or_expression_linhaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25604:1: ( ( ruleinclusive_or_expression_linha ) )
-            // InternalAnsic.g:25605:2: ( ruleinclusive_or_expression_linha )
+            // InternalAnsic.g:25661:1: ( ( ruleinclusive_or_expression_linha ) )
+            // InternalAnsic.g:25662:2: ( ruleinclusive_or_expression_linha )
             {
-            // InternalAnsic.g:25605:2: ( ruleinclusive_or_expression_linha )
-            // InternalAnsic.g:25606:3: ruleinclusive_or_expression_linha
+            // InternalAnsic.g:25662:2: ( ruleinclusive_or_expression_linha )
+            // InternalAnsic.g:25663:3: ruleinclusive_or_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInclusive_or_expression_linhaAccess().getInclusive_or_expression_linhaInclusive_or_expression_linhaParserRuleCall_2_0()); 
@@ -82735,17 +82924,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_and_expression__Inclusive_or_expressionAssignment_0"
-    // InternalAnsic.g:25615:1: rule__Logical_and_expression__Inclusive_or_expressionAssignment_0 : ( ruleinclusive_or_expression ) ;
+    // InternalAnsic.g:25672:1: rule__Logical_and_expression__Inclusive_or_expressionAssignment_0 : ( ruleinclusive_or_expression ) ;
     public final void rule__Logical_and_expression__Inclusive_or_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25619:1: ( ( ruleinclusive_or_expression ) )
-            // InternalAnsic.g:25620:2: ( ruleinclusive_or_expression )
+            // InternalAnsic.g:25676:1: ( ( ruleinclusive_or_expression ) )
+            // InternalAnsic.g:25677:2: ( ruleinclusive_or_expression )
             {
-            // InternalAnsic.g:25620:2: ( ruleinclusive_or_expression )
-            // InternalAnsic.g:25621:3: ruleinclusive_or_expression
+            // InternalAnsic.g:25677:2: ( ruleinclusive_or_expression )
+            // InternalAnsic.g:25678:3: ruleinclusive_or_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_and_expressionAccess().getInclusive_or_expressionInclusive_or_expressionParserRuleCall_0_0()); 
@@ -82780,17 +82969,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_and_expression__Logical_and_expression_linhaAssignment_1"
-    // InternalAnsic.g:25630:1: rule__Logical_and_expression__Logical_and_expression_linhaAssignment_1 : ( rulelogical_and_expression_linha ) ;
+    // InternalAnsic.g:25687:1: rule__Logical_and_expression__Logical_and_expression_linhaAssignment_1 : ( rulelogical_and_expression_linha ) ;
     public final void rule__Logical_and_expression__Logical_and_expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25634:1: ( ( rulelogical_and_expression_linha ) )
-            // InternalAnsic.g:25635:2: ( rulelogical_and_expression_linha )
+            // InternalAnsic.g:25691:1: ( ( rulelogical_and_expression_linha ) )
+            // InternalAnsic.g:25692:2: ( rulelogical_and_expression_linha )
             {
-            // InternalAnsic.g:25635:2: ( rulelogical_and_expression_linha )
-            // InternalAnsic.g:25636:3: rulelogical_and_expression_linha
+            // InternalAnsic.g:25692:2: ( rulelogical_and_expression_linha )
+            // InternalAnsic.g:25693:3: rulelogical_and_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_and_expressionAccess().getLogical_and_expression_linhaLogical_and_expression_linhaParserRuleCall_1_0()); 
@@ -82825,17 +83014,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_and_expression_linha__Inclusive_or_expressionAssignment_1"
-    // InternalAnsic.g:25645:1: rule__Logical_and_expression_linha__Inclusive_or_expressionAssignment_1 : ( ruleinclusive_or_expression ) ;
+    // InternalAnsic.g:25702:1: rule__Logical_and_expression_linha__Inclusive_or_expressionAssignment_1 : ( ruleinclusive_or_expression ) ;
     public final void rule__Logical_and_expression_linha__Inclusive_or_expressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25649:1: ( ( ruleinclusive_or_expression ) )
-            // InternalAnsic.g:25650:2: ( ruleinclusive_or_expression )
+            // InternalAnsic.g:25706:1: ( ( ruleinclusive_or_expression ) )
+            // InternalAnsic.g:25707:2: ( ruleinclusive_or_expression )
             {
-            // InternalAnsic.g:25650:2: ( ruleinclusive_or_expression )
-            // InternalAnsic.g:25651:3: ruleinclusive_or_expression
+            // InternalAnsic.g:25707:2: ( ruleinclusive_or_expression )
+            // InternalAnsic.g:25708:3: ruleinclusive_or_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_and_expression_linhaAccess().getInclusive_or_expressionInclusive_or_expressionParserRuleCall_1_0()); 
@@ -82870,17 +83059,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_and_expression_linha__Logical_and_expression_linhaAssignment_2"
-    // InternalAnsic.g:25660:1: rule__Logical_and_expression_linha__Logical_and_expression_linhaAssignment_2 : ( rulelogical_and_expression_linha ) ;
+    // InternalAnsic.g:25717:1: rule__Logical_and_expression_linha__Logical_and_expression_linhaAssignment_2 : ( rulelogical_and_expression_linha ) ;
     public final void rule__Logical_and_expression_linha__Logical_and_expression_linhaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25664:1: ( ( rulelogical_and_expression_linha ) )
-            // InternalAnsic.g:25665:2: ( rulelogical_and_expression_linha )
+            // InternalAnsic.g:25721:1: ( ( rulelogical_and_expression_linha ) )
+            // InternalAnsic.g:25722:2: ( rulelogical_and_expression_linha )
             {
-            // InternalAnsic.g:25665:2: ( rulelogical_and_expression_linha )
-            // InternalAnsic.g:25666:3: rulelogical_and_expression_linha
+            // InternalAnsic.g:25722:2: ( rulelogical_and_expression_linha )
+            // InternalAnsic.g:25723:3: rulelogical_and_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_and_expression_linhaAccess().getLogical_and_expression_linhaLogical_and_expression_linhaParserRuleCall_2_0()); 
@@ -82915,17 +83104,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_or_expression__Logical_and_expressionAssignment_0"
-    // InternalAnsic.g:25675:1: rule__Logical_or_expression__Logical_and_expressionAssignment_0 : ( rulelogical_and_expression ) ;
+    // InternalAnsic.g:25732:1: rule__Logical_or_expression__Logical_and_expressionAssignment_0 : ( rulelogical_and_expression ) ;
     public final void rule__Logical_or_expression__Logical_and_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25679:1: ( ( rulelogical_and_expression ) )
-            // InternalAnsic.g:25680:2: ( rulelogical_and_expression )
+            // InternalAnsic.g:25736:1: ( ( rulelogical_and_expression ) )
+            // InternalAnsic.g:25737:2: ( rulelogical_and_expression )
             {
-            // InternalAnsic.g:25680:2: ( rulelogical_and_expression )
-            // InternalAnsic.g:25681:3: rulelogical_and_expression
+            // InternalAnsic.g:25737:2: ( rulelogical_and_expression )
+            // InternalAnsic.g:25738:3: rulelogical_and_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_or_expressionAccess().getLogical_and_expressionLogical_and_expressionParserRuleCall_0_0()); 
@@ -82960,17 +83149,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_or_expression__Logical_or_expression_linhaAssignment_1"
-    // InternalAnsic.g:25690:1: rule__Logical_or_expression__Logical_or_expression_linhaAssignment_1 : ( rulelogical_or_expression_linha ) ;
+    // InternalAnsic.g:25747:1: rule__Logical_or_expression__Logical_or_expression_linhaAssignment_1 : ( rulelogical_or_expression_linha ) ;
     public final void rule__Logical_or_expression__Logical_or_expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25694:1: ( ( rulelogical_or_expression_linha ) )
-            // InternalAnsic.g:25695:2: ( rulelogical_or_expression_linha )
+            // InternalAnsic.g:25751:1: ( ( rulelogical_or_expression_linha ) )
+            // InternalAnsic.g:25752:2: ( rulelogical_or_expression_linha )
             {
-            // InternalAnsic.g:25695:2: ( rulelogical_or_expression_linha )
-            // InternalAnsic.g:25696:3: rulelogical_or_expression_linha
+            // InternalAnsic.g:25752:2: ( rulelogical_or_expression_linha )
+            // InternalAnsic.g:25753:3: rulelogical_or_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_or_expressionAccess().getLogical_or_expression_linhaLogical_or_expression_linhaParserRuleCall_1_0()); 
@@ -83005,17 +83194,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_or_expression_linha__Logical_and_expressionAssignment_1"
-    // InternalAnsic.g:25705:1: rule__Logical_or_expression_linha__Logical_and_expressionAssignment_1 : ( rulelogical_and_expression ) ;
+    // InternalAnsic.g:25762:1: rule__Logical_or_expression_linha__Logical_and_expressionAssignment_1 : ( rulelogical_and_expression ) ;
     public final void rule__Logical_or_expression_linha__Logical_and_expressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25709:1: ( ( rulelogical_and_expression ) )
-            // InternalAnsic.g:25710:2: ( rulelogical_and_expression )
+            // InternalAnsic.g:25766:1: ( ( rulelogical_and_expression ) )
+            // InternalAnsic.g:25767:2: ( rulelogical_and_expression )
             {
-            // InternalAnsic.g:25710:2: ( rulelogical_and_expression )
-            // InternalAnsic.g:25711:3: rulelogical_and_expression
+            // InternalAnsic.g:25767:2: ( rulelogical_and_expression )
+            // InternalAnsic.g:25768:3: rulelogical_and_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_and_expressionLogical_and_expressionParserRuleCall_1_0()); 
@@ -83050,17 +83239,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Logical_or_expression_linha__Logical_or_expression_linhaAssignment_2"
-    // InternalAnsic.g:25720:1: rule__Logical_or_expression_linha__Logical_or_expression_linhaAssignment_2 : ( rulelogical_or_expression_linha ) ;
+    // InternalAnsic.g:25777:1: rule__Logical_or_expression_linha__Logical_or_expression_linhaAssignment_2 : ( rulelogical_or_expression_linha ) ;
     public final void rule__Logical_or_expression_linha__Logical_or_expression_linhaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25724:1: ( ( rulelogical_or_expression_linha ) )
-            // InternalAnsic.g:25725:2: ( rulelogical_or_expression_linha )
+            // InternalAnsic.g:25781:1: ( ( rulelogical_or_expression_linha ) )
+            // InternalAnsic.g:25782:2: ( rulelogical_or_expression_linha )
             {
-            // InternalAnsic.g:25725:2: ( rulelogical_or_expression_linha )
-            // InternalAnsic.g:25726:3: rulelogical_or_expression_linha
+            // InternalAnsic.g:25782:2: ( rulelogical_or_expression_linha )
+            // InternalAnsic.g:25783:3: rulelogical_or_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLogical_or_expression_linhaAccess().getLogical_or_expression_linhaLogical_or_expression_linhaParserRuleCall_2_0()); 
@@ -83095,17 +83284,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditional_expression__Logical_or_expressionAssignment_0"
-    // InternalAnsic.g:25735:1: rule__Conditional_expression__Logical_or_expressionAssignment_0 : ( rulelogical_or_expression ) ;
+    // InternalAnsic.g:25792:1: rule__Conditional_expression__Logical_or_expressionAssignment_0 : ( rulelogical_or_expression ) ;
     public final void rule__Conditional_expression__Logical_or_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25739:1: ( ( rulelogical_or_expression ) )
-            // InternalAnsic.g:25740:2: ( rulelogical_or_expression )
+            // InternalAnsic.g:25796:1: ( ( rulelogical_or_expression ) )
+            // InternalAnsic.g:25797:2: ( rulelogical_or_expression )
             {
-            // InternalAnsic.g:25740:2: ( rulelogical_or_expression )
-            // InternalAnsic.g:25741:3: rulelogical_or_expression
+            // InternalAnsic.g:25797:2: ( rulelogical_or_expression )
+            // InternalAnsic.g:25798:3: rulelogical_or_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditional_expressionAccess().getLogical_or_expressionLogical_or_expressionParserRuleCall_0_0()); 
@@ -83140,17 +83329,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditional_expression__Conditional_expression_linhaAssignment_1"
-    // InternalAnsic.g:25750:1: rule__Conditional_expression__Conditional_expression_linhaAssignment_1 : ( ruleconditional_expression_linha ) ;
+    // InternalAnsic.g:25807:1: rule__Conditional_expression__Conditional_expression_linhaAssignment_1 : ( ruleconditional_expression_linha ) ;
     public final void rule__Conditional_expression__Conditional_expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25754:1: ( ( ruleconditional_expression_linha ) )
-            // InternalAnsic.g:25755:2: ( ruleconditional_expression_linha )
+            // InternalAnsic.g:25811:1: ( ( ruleconditional_expression_linha ) )
+            // InternalAnsic.g:25812:2: ( ruleconditional_expression_linha )
             {
-            // InternalAnsic.g:25755:2: ( ruleconditional_expression_linha )
-            // InternalAnsic.g:25756:3: ruleconditional_expression_linha
+            // InternalAnsic.g:25812:2: ( ruleconditional_expression_linha )
+            // InternalAnsic.g:25813:3: ruleconditional_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditional_expressionAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_1_0()); 
@@ -83185,17 +83374,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditional_expression_linha__ExpressionAssignment_1"
-    // InternalAnsic.g:25765:1: rule__Conditional_expression_linha__ExpressionAssignment_1 : ( ruleexpression ) ;
+    // InternalAnsic.g:25822:1: rule__Conditional_expression_linha__ExpressionAssignment_1 : ( ruleexpression ) ;
     public final void rule__Conditional_expression_linha__ExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25769:1: ( ( ruleexpression ) )
-            // InternalAnsic.g:25770:2: ( ruleexpression )
+            // InternalAnsic.g:25826:1: ( ( ruleexpression ) )
+            // InternalAnsic.g:25827:2: ( ruleexpression )
             {
-            // InternalAnsic.g:25770:2: ( ruleexpression )
-            // InternalAnsic.g:25771:3: ruleexpression
+            // InternalAnsic.g:25827:2: ( ruleexpression )
+            // InternalAnsic.g:25828:3: ruleexpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditional_expression_linhaAccess().getExpressionExpressionParserRuleCall_1_0()); 
@@ -83230,17 +83419,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditional_expression_linha__Conditional_expressionAssignment_3"
-    // InternalAnsic.g:25780:1: rule__Conditional_expression_linha__Conditional_expressionAssignment_3 : ( ruleconditional_expression ) ;
+    // InternalAnsic.g:25837:1: rule__Conditional_expression_linha__Conditional_expressionAssignment_3 : ( ruleconditional_expression ) ;
     public final void rule__Conditional_expression_linha__Conditional_expressionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25784:1: ( ( ruleconditional_expression ) )
-            // InternalAnsic.g:25785:2: ( ruleconditional_expression )
+            // InternalAnsic.g:25841:1: ( ( ruleconditional_expression ) )
+            // InternalAnsic.g:25842:2: ( ruleconditional_expression )
             {
-            // InternalAnsic.g:25785:2: ( ruleconditional_expression )
-            // InternalAnsic.g:25786:3: ruleconditional_expression
+            // InternalAnsic.g:25842:2: ( ruleconditional_expression )
+            // InternalAnsic.g:25843:3: ruleconditional_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditional_expression_linhaAccess().getConditional_expressionConditional_expressionParserRuleCall_3_0()); 
@@ -83275,17 +83464,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Conditional_expression_linha__Conditional_expression_linhaAssignment_4"
-    // InternalAnsic.g:25795:1: rule__Conditional_expression_linha__Conditional_expression_linhaAssignment_4 : ( ruleconditional_expression_linha ) ;
+    // InternalAnsic.g:25852:1: rule__Conditional_expression_linha__Conditional_expression_linhaAssignment_4 : ( ruleconditional_expression_linha ) ;
     public final void rule__Conditional_expression_linha__Conditional_expression_linhaAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25799:1: ( ( ruleconditional_expression_linha ) )
-            // InternalAnsic.g:25800:2: ( ruleconditional_expression_linha )
+            // InternalAnsic.g:25856:1: ( ( ruleconditional_expression_linha ) )
+            // InternalAnsic.g:25857:2: ( ruleconditional_expression_linha )
             {
-            // InternalAnsic.g:25800:2: ( ruleconditional_expression_linha )
-            // InternalAnsic.g:25801:3: ruleconditional_expression_linha
+            // InternalAnsic.g:25857:2: ( ruleconditional_expression_linha )
+            // InternalAnsic.g:25858:3: ruleconditional_expression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditional_expression_linhaAccess().getConditional_expression_linhaConditional_expression_linhaParserRuleCall_4_0()); 
@@ -83320,17 +83509,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment_expression__Conditional_expressionAssignment_0"
-    // InternalAnsic.g:25810:1: rule__Assignment_expression__Conditional_expressionAssignment_0 : ( ruleconditional_expression ) ;
+    // InternalAnsic.g:25867:1: rule__Assignment_expression__Conditional_expressionAssignment_0 : ( ruleconditional_expression ) ;
     public final void rule__Assignment_expression__Conditional_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25814:1: ( ( ruleconditional_expression ) )
-            // InternalAnsic.g:25815:2: ( ruleconditional_expression )
+            // InternalAnsic.g:25871:1: ( ( ruleconditional_expression ) )
+            // InternalAnsic.g:25872:2: ( ruleconditional_expression )
             {
-            // InternalAnsic.g:25815:2: ( ruleconditional_expression )
-            // InternalAnsic.g:25816:3: ruleconditional_expression
+            // InternalAnsic.g:25872:2: ( ruleconditional_expression )
+            // InternalAnsic.g:25873:3: ruleconditional_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignment_expressionAccess().getConditional_expressionConditional_expressionParserRuleCall_0_0()); 
@@ -83365,17 +83554,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment_expression__Unary_expressionAssignment_1_0"
-    // InternalAnsic.g:25825:1: rule__Assignment_expression__Unary_expressionAssignment_1_0 : ( ruleunary_expression ) ;
+    // InternalAnsic.g:25882:1: rule__Assignment_expression__Unary_expressionAssignment_1_0 : ( ruleunary_expression ) ;
     public final void rule__Assignment_expression__Unary_expressionAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25829:1: ( ( ruleunary_expression ) )
-            // InternalAnsic.g:25830:2: ( ruleunary_expression )
+            // InternalAnsic.g:25886:1: ( ( ruleunary_expression ) )
+            // InternalAnsic.g:25887:2: ( ruleunary_expression )
             {
-            // InternalAnsic.g:25830:2: ( ruleunary_expression )
-            // InternalAnsic.g:25831:3: ruleunary_expression
+            // InternalAnsic.g:25887:2: ( ruleunary_expression )
+            // InternalAnsic.g:25888:3: ruleunary_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignment_expressionAccess().getUnary_expressionUnary_expressionParserRuleCall_1_0_0()); 
@@ -83410,17 +83599,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment_expression__Assignment_operatorAssignment_1_1"
-    // InternalAnsic.g:25840:1: rule__Assignment_expression__Assignment_operatorAssignment_1_1 : ( ruleassignment_operator ) ;
+    // InternalAnsic.g:25897:1: rule__Assignment_expression__Assignment_operatorAssignment_1_1 : ( ruleassignment_operator ) ;
     public final void rule__Assignment_expression__Assignment_operatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25844:1: ( ( ruleassignment_operator ) )
-            // InternalAnsic.g:25845:2: ( ruleassignment_operator )
+            // InternalAnsic.g:25901:1: ( ( ruleassignment_operator ) )
+            // InternalAnsic.g:25902:2: ( ruleassignment_operator )
             {
-            // InternalAnsic.g:25845:2: ( ruleassignment_operator )
-            // InternalAnsic.g:25846:3: ruleassignment_operator
+            // InternalAnsic.g:25902:2: ( ruleassignment_operator )
+            // InternalAnsic.g:25903:3: ruleassignment_operator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignment_expressionAccess().getAssignment_operatorAssignment_operatorParserRuleCall_1_1_0()); 
@@ -83455,17 +83644,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment_expression__Assignment_expressionAssignment_1_2"
-    // InternalAnsic.g:25855:1: rule__Assignment_expression__Assignment_expressionAssignment_1_2 : ( ruleassignment_expression ) ;
+    // InternalAnsic.g:25912:1: rule__Assignment_expression__Assignment_expressionAssignment_1_2 : ( ruleassignment_expression ) ;
     public final void rule__Assignment_expression__Assignment_expressionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25859:1: ( ( ruleassignment_expression ) )
-            // InternalAnsic.g:25860:2: ( ruleassignment_expression )
+            // InternalAnsic.g:25916:1: ( ( ruleassignment_expression ) )
+            // InternalAnsic.g:25917:2: ( ruleassignment_expression )
             {
-            // InternalAnsic.g:25860:2: ( ruleassignment_expression )
-            // InternalAnsic.g:25861:3: ruleassignment_expression
+            // InternalAnsic.g:25917:2: ( ruleassignment_expression )
+            // InternalAnsic.g:25918:3: ruleassignment_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignment_expressionAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_2_0()); 
@@ -83500,17 +83689,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Type_name__Specifier_qualifier_listAssignment_0_0"
-    // InternalAnsic.g:25870:1: rule__Type_name__Specifier_qualifier_listAssignment_0_0 : ( rulespecifier_qualifier_list ) ;
+    // InternalAnsic.g:25927:1: rule__Type_name__Specifier_qualifier_listAssignment_0_0 : ( rulespecifier_qualifier_list ) ;
     public final void rule__Type_name__Specifier_qualifier_listAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25874:1: ( ( rulespecifier_qualifier_list ) )
-            // InternalAnsic.g:25875:2: ( rulespecifier_qualifier_list )
+            // InternalAnsic.g:25931:1: ( ( rulespecifier_qualifier_list ) )
+            // InternalAnsic.g:25932:2: ( rulespecifier_qualifier_list )
             {
-            // InternalAnsic.g:25875:2: ( rulespecifier_qualifier_list )
-            // InternalAnsic.g:25876:3: rulespecifier_qualifier_list
+            // InternalAnsic.g:25932:2: ( rulespecifier_qualifier_list )
+            // InternalAnsic.g:25933:3: rulespecifier_qualifier_list
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_nameAccess().getSpecifier_qualifier_listSpecifier_qualifier_listParserRuleCall_0_0_0()); 
@@ -83545,17 +83734,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Type_name__Abstract_declaratorAssignment_0_1"
-    // InternalAnsic.g:25885:1: rule__Type_name__Abstract_declaratorAssignment_0_1 : ( ruleabstract_declarator ) ;
+    // InternalAnsic.g:25942:1: rule__Type_name__Abstract_declaratorAssignment_0_1 : ( ruleabstract_declarator ) ;
     public final void rule__Type_name__Abstract_declaratorAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25889:1: ( ( ruleabstract_declarator ) )
-            // InternalAnsic.g:25890:2: ( ruleabstract_declarator )
+            // InternalAnsic.g:25946:1: ( ( ruleabstract_declarator ) )
+            // InternalAnsic.g:25947:2: ( ruleabstract_declarator )
             {
-            // InternalAnsic.g:25890:2: ( ruleabstract_declarator )
-            // InternalAnsic.g:25891:3: ruleabstract_declarator
+            // InternalAnsic.g:25947:2: ( ruleabstract_declarator )
+            // InternalAnsic.g:25948:3: ruleabstract_declarator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_nameAccess().getAbstract_declaratorAbstract_declaratorParserRuleCall_0_1_0()); 
@@ -83590,17 +83779,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Type_name__Specifier_qualifier_listAssignment_1"
-    // InternalAnsic.g:25900:1: rule__Type_name__Specifier_qualifier_listAssignment_1 : ( rulespecifier_qualifier_list ) ;
+    // InternalAnsic.g:25957:1: rule__Type_name__Specifier_qualifier_listAssignment_1 : ( rulespecifier_qualifier_list ) ;
     public final void rule__Type_name__Specifier_qualifier_listAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25904:1: ( ( rulespecifier_qualifier_list ) )
-            // InternalAnsic.g:25905:2: ( rulespecifier_qualifier_list )
+            // InternalAnsic.g:25961:1: ( ( rulespecifier_qualifier_list ) )
+            // InternalAnsic.g:25962:2: ( rulespecifier_qualifier_list )
             {
-            // InternalAnsic.g:25905:2: ( rulespecifier_qualifier_list )
-            // InternalAnsic.g:25906:3: rulespecifier_qualifier_list
+            // InternalAnsic.g:25962:2: ( rulespecifier_qualifier_list )
+            // InternalAnsic.g:25963:3: rulespecifier_qualifier_list
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getType_nameAccess().getSpecifier_qualifier_listSpecifier_qualifier_listParserRuleCall_1_0()); 
@@ -83635,17 +83824,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Assignment_expressionAssignment_0"
-    // InternalAnsic.g:25915:1: rule__Expression__Assignment_expressionAssignment_0 : ( ruleassignment_expression ) ;
+    // InternalAnsic.g:25972:1: rule__Expression__Assignment_expressionAssignment_0 : ( ruleassignment_expression ) ;
     public final void rule__Expression__Assignment_expressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25919:1: ( ( ruleassignment_expression ) )
-            // InternalAnsic.g:25920:2: ( ruleassignment_expression )
+            // InternalAnsic.g:25976:1: ( ( ruleassignment_expression ) )
+            // InternalAnsic.g:25977:2: ( ruleassignment_expression )
             {
-            // InternalAnsic.g:25920:2: ( ruleassignment_expression )
-            // InternalAnsic.g:25921:3: ruleassignment_expression
+            // InternalAnsic.g:25977:2: ( ruleassignment_expression )
+            // InternalAnsic.g:25978:3: ruleassignment_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getAssignment_expressionAssignment_expressionParserRuleCall_0_0()); 
@@ -83680,17 +83869,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Expression_linhaAssignment_1"
-    // InternalAnsic.g:25930:1: rule__Expression__Expression_linhaAssignment_1 : ( ruleexpression_linha ) ;
+    // InternalAnsic.g:25987:1: rule__Expression__Expression_linhaAssignment_1 : ( ruleexpression_linha ) ;
     public final void rule__Expression__Expression_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25934:1: ( ( ruleexpression_linha ) )
-            // InternalAnsic.g:25935:2: ( ruleexpression_linha )
+            // InternalAnsic.g:25991:1: ( ( ruleexpression_linha ) )
+            // InternalAnsic.g:25992:2: ( ruleexpression_linha )
             {
-            // InternalAnsic.g:25935:2: ( ruleexpression_linha )
-            // InternalAnsic.g:25936:3: ruleexpression_linha
+            // InternalAnsic.g:25992:2: ( ruleexpression_linha )
+            // InternalAnsic.g:25993:3: ruleexpression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getExpression_linhaExpression_linhaParserRuleCall_1_0()); 
@@ -83725,17 +83914,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression_linha__Assignment_expressionAssignment_1"
-    // InternalAnsic.g:25945:1: rule__Expression_linha__Assignment_expressionAssignment_1 : ( ruleassignment_expression ) ;
+    // InternalAnsic.g:26002:1: rule__Expression_linha__Assignment_expressionAssignment_1 : ( ruleassignment_expression ) ;
     public final void rule__Expression_linha__Assignment_expressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25949:1: ( ( ruleassignment_expression ) )
-            // InternalAnsic.g:25950:2: ( ruleassignment_expression )
+            // InternalAnsic.g:26006:1: ( ( ruleassignment_expression ) )
+            // InternalAnsic.g:26007:2: ( ruleassignment_expression )
             {
-            // InternalAnsic.g:25950:2: ( ruleassignment_expression )
-            // InternalAnsic.g:25951:3: ruleassignment_expression
+            // InternalAnsic.g:26007:2: ( ruleassignment_expression )
+            // InternalAnsic.g:26008:3: ruleassignment_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_linhaAccess().getAssignment_expressionAssignment_expressionParserRuleCall_1_0()); 
@@ -83770,17 +83959,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression_linha__Expression_linhaAssignment_2"
-    // InternalAnsic.g:25960:1: rule__Expression_linha__Expression_linhaAssignment_2 : ( ruleexpression_linha ) ;
+    // InternalAnsic.g:26017:1: rule__Expression_linha__Expression_linhaAssignment_2 : ( ruleexpression_linha ) ;
     public final void rule__Expression_linha__Expression_linhaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25964:1: ( ( ruleexpression_linha ) )
-            // InternalAnsic.g:25965:2: ( ruleexpression_linha )
+            // InternalAnsic.g:26021:1: ( ( ruleexpression_linha ) )
+            // InternalAnsic.g:26022:2: ( ruleexpression_linha )
             {
-            // InternalAnsic.g:25965:2: ( ruleexpression_linha )
-            // InternalAnsic.g:25966:3: ruleexpression_linha
+            // InternalAnsic.g:26022:2: ( ruleexpression_linha )
+            // InternalAnsic.g:26023:3: ruleexpression_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpression_linhaAccess().getExpression_linhaExpression_linhaParserRuleCall_2_0()); 
@@ -83815,17 +84004,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constant_expression__Conditional_expressionAssignment"
-    // InternalAnsic.g:25975:1: rule__Constant_expression__Conditional_expressionAssignment : ( ruleconditional_expression ) ;
+    // InternalAnsic.g:26032:1: rule__Constant_expression__Conditional_expressionAssignment : ( ruleconditional_expression ) ;
     public final void rule__Constant_expression__Conditional_expressionAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25979:1: ( ( ruleconditional_expression ) )
-            // InternalAnsic.g:25980:2: ( ruleconditional_expression )
+            // InternalAnsic.g:26036:1: ( ( ruleconditional_expression ) )
+            // InternalAnsic.g:26037:2: ( ruleconditional_expression )
             {
-            // InternalAnsic.g:25980:2: ( ruleconditional_expression )
-            // InternalAnsic.g:25981:3: ruleconditional_expression
+            // InternalAnsic.g:26037:2: ( ruleconditional_expression )
+            // InternalAnsic.g:26038:3: ruleconditional_expression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstant_expressionAccess().getConditional_expressionConditional_expressionParserRuleCall_0()); 
@@ -83860,17 +84049,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator_list__Init_declaratorAssignment_0"
-    // InternalAnsic.g:25990:1: rule__Init_declarator_list__Init_declaratorAssignment_0 : ( ruleinit_declarator ) ;
+    // InternalAnsic.g:26047:1: rule__Init_declarator_list__Init_declaratorAssignment_0 : ( ruleinit_declarator ) ;
     public final void rule__Init_declarator_list__Init_declaratorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:25994:1: ( ( ruleinit_declarator ) )
-            // InternalAnsic.g:25995:2: ( ruleinit_declarator )
+            // InternalAnsic.g:26051:1: ( ( ruleinit_declarator ) )
+            // InternalAnsic.g:26052:2: ( ruleinit_declarator )
             {
-            // InternalAnsic.g:25995:2: ( ruleinit_declarator )
-            // InternalAnsic.g:25996:3: ruleinit_declarator
+            // InternalAnsic.g:26052:2: ( ruleinit_declarator )
+            // InternalAnsic.g:26053:3: ruleinit_declarator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declarator_listAccess().getInit_declaratorInit_declaratorParserRuleCall_0_0()); 
@@ -83905,17 +84094,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator_list__Init_declarator_list_linhaAssignment_1"
-    // InternalAnsic.g:26005:1: rule__Init_declarator_list__Init_declarator_list_linhaAssignment_1 : ( ruleinit_declarator_list_linha ) ;
+    // InternalAnsic.g:26062:1: rule__Init_declarator_list__Init_declarator_list_linhaAssignment_1 : ( ruleinit_declarator_list_linha ) ;
     public final void rule__Init_declarator_list__Init_declarator_list_linhaAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26009:1: ( ( ruleinit_declarator_list_linha ) )
-            // InternalAnsic.g:26010:2: ( ruleinit_declarator_list_linha )
+            // InternalAnsic.g:26066:1: ( ( ruleinit_declarator_list_linha ) )
+            // InternalAnsic.g:26067:2: ( ruleinit_declarator_list_linha )
             {
-            // InternalAnsic.g:26010:2: ( ruleinit_declarator_list_linha )
-            // InternalAnsic.g:26011:3: ruleinit_declarator_list_linha
+            // InternalAnsic.g:26067:2: ( ruleinit_declarator_list_linha )
+            // InternalAnsic.g:26068:3: ruleinit_declarator_list_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declarator_listAccess().getInit_declarator_list_linhaInit_declarator_list_linhaParserRuleCall_1_0()); 
@@ -83950,17 +84139,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator_list_linha__Init_declaratorAssignment_1_1"
-    // InternalAnsic.g:26020:1: rule__Init_declarator_list_linha__Init_declaratorAssignment_1_1 : ( ruleinit_declarator ) ;
+    // InternalAnsic.g:26077:1: rule__Init_declarator_list_linha__Init_declaratorAssignment_1_1 : ( ruleinit_declarator ) ;
     public final void rule__Init_declarator_list_linha__Init_declaratorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26024:1: ( ( ruleinit_declarator ) )
-            // InternalAnsic.g:26025:2: ( ruleinit_declarator )
+            // InternalAnsic.g:26081:1: ( ( ruleinit_declarator ) )
+            // InternalAnsic.g:26082:2: ( ruleinit_declarator )
             {
-            // InternalAnsic.g:26025:2: ( ruleinit_declarator )
-            // InternalAnsic.g:26026:3: ruleinit_declarator
+            // InternalAnsic.g:26082:2: ( ruleinit_declarator )
+            // InternalAnsic.g:26083:3: ruleinit_declarator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declarator_list_linhaAccess().getInit_declaratorInit_declaratorParserRuleCall_1_1_0()); 
@@ -83995,17 +84184,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator_list_linha__Init_declarator_list_linhaAssignment_1_2"
-    // InternalAnsic.g:26035:1: rule__Init_declarator_list_linha__Init_declarator_list_linhaAssignment_1_2 : ( ruleinit_declarator_list_linha ) ;
+    // InternalAnsic.g:26092:1: rule__Init_declarator_list_linha__Init_declarator_list_linhaAssignment_1_2 : ( ruleinit_declarator_list_linha ) ;
     public final void rule__Init_declarator_list_linha__Init_declarator_list_linhaAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26039:1: ( ( ruleinit_declarator_list_linha ) )
-            // InternalAnsic.g:26040:2: ( ruleinit_declarator_list_linha )
+            // InternalAnsic.g:26096:1: ( ( ruleinit_declarator_list_linha ) )
+            // InternalAnsic.g:26097:2: ( ruleinit_declarator_list_linha )
             {
-            // InternalAnsic.g:26040:2: ( ruleinit_declarator_list_linha )
-            // InternalAnsic.g:26041:3: ruleinit_declarator_list_linha
+            // InternalAnsic.g:26097:2: ( ruleinit_declarator_list_linha )
+            // InternalAnsic.g:26098:3: ruleinit_declarator_list_linha
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declarator_list_linhaAccess().getInit_declarator_list_linhaInit_declarator_list_linhaParserRuleCall_1_2_0()); 
@@ -84040,17 +84229,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator__DeclaratorAssignment_0_0"
-    // InternalAnsic.g:26050:1: rule__Init_declarator__DeclaratorAssignment_0_0 : ( ruledeclarator ) ;
+    // InternalAnsic.g:26107:1: rule__Init_declarator__DeclaratorAssignment_0_0 : ( ruledeclarator ) ;
     public final void rule__Init_declarator__DeclaratorAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26054:1: ( ( ruledeclarator ) )
-            // InternalAnsic.g:26055:2: ( ruledeclarator )
+            // InternalAnsic.g:26111:1: ( ( ruledeclarator ) )
+            // InternalAnsic.g:26112:2: ( ruledeclarator )
             {
-            // InternalAnsic.g:26055:2: ( ruledeclarator )
-            // InternalAnsic.g:26056:3: ruledeclarator
+            // InternalAnsic.g:26112:2: ( ruledeclarator )
+            // InternalAnsic.g:26113:3: ruledeclarator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declaratorAccess().getDeclaratorDeclaratorParserRuleCall_0_0_0()); 
@@ -84085,17 +84274,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator__InitializerAssignment_0_2"
-    // InternalAnsic.g:26065:1: rule__Init_declarator__InitializerAssignment_0_2 : ( ruleinitializer ) ;
+    // InternalAnsic.g:26122:1: rule__Init_declarator__InitializerAssignment_0_2 : ( ruleinitializer ) ;
     public final void rule__Init_declarator__InitializerAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26069:1: ( ( ruleinitializer ) )
-            // InternalAnsic.g:26070:2: ( ruleinitializer )
+            // InternalAnsic.g:26126:1: ( ( ruleinitializer ) )
+            // InternalAnsic.g:26127:2: ( ruleinitializer )
             {
-            // InternalAnsic.g:26070:2: ( ruleinitializer )
-            // InternalAnsic.g:26071:3: ruleinitializer
+            // InternalAnsic.g:26127:2: ( ruleinitializer )
+            // InternalAnsic.g:26128:3: ruleinitializer
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declaratorAccess().getInitializerInitializerParserRuleCall_0_2_0()); 
@@ -84130,17 +84319,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Init_declarator__DeclaratorAssignment_1"
-    // InternalAnsic.g:26080:1: rule__Init_declarator__DeclaratorAssignment_1 : ( ruledeclarator ) ;
+    // InternalAnsic.g:26137:1: rule__Init_declarator__DeclaratorAssignment_1 : ( ruledeclarator ) ;
     public final void rule__Init_declarator__DeclaratorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26084:1: ( ( ruledeclarator ) )
-            // InternalAnsic.g:26085:2: ( ruledeclarator )
+            // InternalAnsic.g:26141:1: ( ( ruledeclarator ) )
+            // InternalAnsic.g:26142:2: ( ruledeclarator )
             {
-            // InternalAnsic.g:26085:2: ( ruledeclarator )
-            // InternalAnsic.g:26086:3: ruledeclarator
+            // InternalAnsic.g:26142:2: ( ruledeclarator )
+            // InternalAnsic.g:26143:3: ruledeclarator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInit_declaratorAccess().getDeclaratorDeclaratorParserRuleCall_1_0()); 
@@ -84175,17 +84364,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constant__I_constantAssignment_0"
-    // InternalAnsic.g:26095:1: rule__Constant__I_constantAssignment_0 : ( RULE_INT ) ;
+    // InternalAnsic.g:26152:1: rule__Constant__I_constantAssignment_0 : ( RULE_INT ) ;
     public final void rule__Constant__I_constantAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26099:1: ( ( RULE_INT ) )
-            // InternalAnsic.g:26100:2: ( RULE_INT )
+            // InternalAnsic.g:26156:1: ( ( RULE_INT ) )
+            // InternalAnsic.g:26157:2: ( RULE_INT )
             {
-            // InternalAnsic.g:26100:2: ( RULE_INT )
-            // InternalAnsic.g:26101:3: RULE_INT
+            // InternalAnsic.g:26157:2: ( RULE_INT )
+            // InternalAnsic.g:26158:3: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantAccess().getI_constantINTTerminalRuleCall_0_0()); 
@@ -84216,17 +84405,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constant__F_constantAssignment_1"
-    // InternalAnsic.g:26110:1: rule__Constant__F_constantAssignment_1 : ( RULE_FLOAT ) ;
+    // InternalAnsic.g:26167:1: rule__Constant__F_constantAssignment_1 : ( RULE_FLOAT ) ;
     public final void rule__Constant__F_constantAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26114:1: ( ( RULE_FLOAT ) )
-            // InternalAnsic.g:26115:2: ( RULE_FLOAT )
+            // InternalAnsic.g:26171:1: ( ( RULE_FLOAT ) )
+            // InternalAnsic.g:26172:2: ( RULE_FLOAT )
             {
-            // InternalAnsic.g:26115:2: ( RULE_FLOAT )
-            // InternalAnsic.g:26116:3: RULE_FLOAT
+            // InternalAnsic.g:26172:2: ( RULE_FLOAT )
+            // InternalAnsic.g:26173:3: RULE_FLOAT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantAccess().getF_constantFLOATTerminalRuleCall_1_0()); 
@@ -84257,17 +84446,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constant__CharAssignment_2"
-    // InternalAnsic.g:26125:1: rule__Constant__CharAssignment_2 : ( RULE_CHAR ) ;
+    // InternalAnsic.g:26182:1: rule__Constant__CharAssignment_2 : ( RULE_CHAR ) ;
     public final void rule__Constant__CharAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26129:1: ( ( RULE_CHAR ) )
-            // InternalAnsic.g:26130:2: ( RULE_CHAR )
+            // InternalAnsic.g:26186:1: ( ( RULE_CHAR ) )
+            // InternalAnsic.g:26187:2: ( RULE_CHAR )
             {
-            // InternalAnsic.g:26130:2: ( RULE_CHAR )
-            // InternalAnsic.g:26131:3: RULE_CHAR
+            // InternalAnsic.g:26187:2: ( RULE_CHAR )
+            // InternalAnsic.g:26188:3: RULE_CHAR
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantAccess().getCharCHARTerminalRuleCall_2_0()); 
@@ -84298,23 +84487,23 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constant__EnumzAssignment_3"
-    // InternalAnsic.g:26140:1: rule__Constant__EnumzAssignment_3 : ( ( 'enum' ) ) ;
+    // InternalAnsic.g:26197:1: rule__Constant__EnumzAssignment_3 : ( ( 'enum' ) ) ;
     public final void rule__Constant__EnumzAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAnsic.g:26144:1: ( ( ( 'enum' ) ) )
-            // InternalAnsic.g:26145:2: ( ( 'enum' ) )
+            // InternalAnsic.g:26201:1: ( ( ( 'enum' ) ) )
+            // InternalAnsic.g:26202:2: ( ( 'enum' ) )
             {
-            // InternalAnsic.g:26145:2: ( ( 'enum' ) )
-            // InternalAnsic.g:26146:3: ( 'enum' )
+            // InternalAnsic.g:26202:2: ( ( 'enum' ) )
+            // InternalAnsic.g:26203:3: ( 'enum' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantAccess().getEnumzEnumKeyword_3_0()); 
             }
-            // InternalAnsic.g:26147:3: ( 'enum' )
-            // InternalAnsic.g:26148:4: 'enum'
+            // InternalAnsic.g:26204:3: ( 'enum' )
+            // InternalAnsic.g:26205:4: 'enum'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantAccess().getEnumzEnumKeyword_3_0()); 
@@ -87776,11 +87965,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     static final String dfa_1s = "\27\uffff";
     static final String dfa_2s = "\1\3\26\uffff";
     static final String dfa_3s = "\1\54\2\0\24\uffff";
-    static final String dfa_4s = "\1\150\2\0\24\uffff";
+    static final String dfa_4s = "\1\146\2\0\24\uffff";
     static final String dfa_5s = "\3\uffff\1\2\22\uffff\1\1";
     static final String dfa_6s = "\1\uffff\1\0\1\1\24\uffff}>";
     static final String[] dfa_7s = {
-            "\1\3\13\uffff\1\3\6\uffff\1\3\2\uffff\2\3\1\uffff\1\3\1\uffff\1\3\10\uffff\1\1\1\2\6\3\14\uffff\5\3",
+            "\1\3\13\uffff\1\3\6\uffff\1\3\2\uffff\2\3\1\uffff\1\3\1\uffff\1\3\10\uffff\1\1\1\2\6\3\12\uffff\5\3",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -87873,11 +88062,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_8s = "\37\uffff";
     static final String dfa_9s = "\1\37\34\0\2\uffff";
-    static final String dfa_10s = "\1\167\34\0\2\uffff";
+    static final String dfa_10s = "\1\165\34\0\2\uffff";
     static final String dfa_11s = "\35\uffff\1\2\1\1";
     static final String dfa_12s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\2\uffff}>";
     static final String[] dfa_13s = {
-            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\5\uffff\1\35\36\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
+            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\5\uffff\1\35\34\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -88367,11 +88556,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_14s = "\47\uffff";
     static final String dfa_15s = "\1\37\34\0\12\uffff";
-    static final String dfa_16s = "\1\167\34\0\12\uffff";
+    static final String dfa_16s = "\1\165\34\0\12\uffff";
     static final String dfa_17s = "\35\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12";
     static final String dfa_18s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\12\uffff}>";
     static final String[] dfa_19s = {
-            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\44\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
+            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\42\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -88877,11 +89066,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_20s = "\30\uffff";
     static final String dfa_21s = "\1\41\24\0\3\uffff";
-    static final String dfa_22s = "\1\167\24\0\3\uffff";
+    static final String dfa_22s = "\1\165\24\0\3\uffff";
     static final String dfa_23s = "\25\uffff\1\3\1\1\1\2";
     static final String dfa_24s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\3\uffff}>";
     static final String[] dfa_25s = {
-            "\1\16\1\17\1\21\34\uffff\1\20\3\uffff\1\15\5\uffff\1\25\36\uffff\1\22\1\23\1\24\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
+            "\1\16\1\17\1\21\34\uffff\1\20\3\uffff\1\15\5\uffff\1\25\34\uffff\1\22\1\23\1\24\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -89244,11 +89433,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_26s = "\31\uffff";
     static final String dfa_27s = "\1\41\24\0\4\uffff";
-    static final String dfa_28s = "\1\167\24\0\4\uffff";
+    static final String dfa_28s = "\1\165\24\0\4\uffff";
     static final String dfa_29s = "\25\uffff\1\1\1\2\1\3\1\4";
     static final String dfa_30s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\4\uffff}>";
     static final String[] dfa_31s = {
-            "\1\16\1\17\1\21\34\uffff\1\20\3\uffff\1\15\44\uffff\1\22\1\23\1\24\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
+            "\1\16\1\17\1\21\34\uffff\1\20\3\uffff\1\15\42\uffff\1\22\1\23\1\24\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -89616,11 +89805,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_32s = "\40\uffff";
     static final String dfa_33s = "\1\37\34\0\3\uffff";
-    static final String dfa_34s = "\1\167\34\0\3\uffff";
+    static final String dfa_34s = "\1\165\34\0\3\uffff";
     static final String dfa_35s = "\35\uffff\1\3\1\1\1\2";
     static final String dfa_36s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\3\uffff}>";
     static final String[] dfa_37s = {
-            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\5\uffff\1\35\36\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
+            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\5\uffff\1\35\34\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -90111,7 +90300,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_38s = "\35\uffff\1\1\1\2";
     static final String[] dfa_39s = {
-            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\44\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
+            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\42\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -91149,7 +91338,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_46s = "\35\uffff\1\1\1\2\1\3";
     static final String[] dfa_47s = {
-            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\44\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
+            "\1\32\1\33\1\24\1\25\1\1\1\2\1\3\1\4\1\5\1\6\24\uffff\1\34\2\uffff\1\26\3\uffff\1\23\42\uffff\1\27\1\30\1\31\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -91792,11 +91981,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_54s = "\25\uffff";
     static final String dfa_55s = "\1\5\1\0\23\uffff";
-    static final String dfa_56s = "\1\170\1\0\23\uffff";
+    static final String dfa_56s = "\1\166\1\0\23\uffff";
     static final String dfa_57s = "\2\uffff\1\3\20\uffff\1\1\1\2";
     static final String dfa_58s = "\1\uffff\1\0\23\uffff}>";
     static final String[] dfa_59s = {
-            "\4\2\40\uffff\3\2\14\uffff\5\2\1\uffff\1\2\1\uffff\1\2\1\1\12\uffff\2\2\52\uffff\1\2",
+            "\4\2\40\uffff\3\2\14\uffff\5\2\1\uffff\1\2\1\uffff\1\2\1\1\12\uffff\2\2\50\uffff\1\2",
             "\1\uffff",
             "",
             "",
@@ -91969,11 +92158,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_66s = "\12\uffff";
     static final String dfa_67s = "\1\5\5\uffff\1\0\3\uffff";
-    static final String dfa_68s = "\1\170\5\uffff\1\0\3\uffff";
+    static final String dfa_68s = "\1\166\5\uffff\1\0\3\uffff";
     static final String dfa_69s = "\1\uffff\1\1\6\uffff\1\2\1\3";
     static final String dfa_70s = "\6\uffff\1\0\3\uffff}>";
     static final String[] dfa_71s = {
-            "\4\1\65\uffff\1\6\1\uffff\1\1\67\uffff\1\1",
+            "\4\1\65\uffff\1\6\1\uffff\1\1\65\uffff\1\1",
             "",
             "",
             "",
@@ -92039,11 +92228,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_72s = "\24\uffff";
     static final String dfa_73s = "\1\5\17\uffff\1\0\3\uffff";
-    static final String dfa_74s = "\1\170\17\uffff\1\0\3\uffff";
+    static final String dfa_74s = "\1\166\17\uffff\1\0\3\uffff";
     static final String dfa_75s = "\1\uffff\1\1\6\uffff\1\2\1\3\1\4\6\uffff\1\7\1\5\1\6";
     static final String dfa_76s = "\20\uffff\1\0\3\uffff}>";
     static final String[] dfa_77s = {
-            "\4\1\40\uffff\1\12\1\10\1\11\14\uffff\5\12\1\uffff\1\1\1\uffff\1\1\13\uffff\1\20\1\21\52\uffff\1\1",
+            "\4\1\40\uffff\1\12\1\10\1\11\14\uffff\5\12\1\uffff\1\1\1\uffff\1\1\13\uffff\1\20\1\21\50\uffff\1\1",
             "",
             "",
             "",
@@ -92117,11 +92306,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     }
     static final String dfa_78s = "\23\uffff";
     static final String dfa_79s = "\1\5\5\uffff\1\0\14\uffff";
-    static final String dfa_80s = "\1\170\5\uffff\1\0\14\uffff";
+    static final String dfa_80s = "\1\166\5\uffff\1\0\14\uffff";
     static final String dfa_81s = "\1\uffff\1\1\20\uffff\1\2";
     static final String dfa_82s = "\6\uffff\1\0\14\uffff}>";
     static final String[] dfa_83s = {
-            "\4\1\40\uffff\3\1\14\uffff\5\1\1\uffff\1\6\1\uffff\1\1\13\uffff\2\1\52\uffff\1\1",
+            "\4\1\40\uffff\3\1\14\uffff\5\1\1\uffff\1\6\1\uffff\1\1\13\uffff\2\1\50\uffff\1\1",
             "",
             "",
             "",
@@ -92193,11 +92382,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
         }
     }
     static final String dfa_84s = "\1\5\21\0\2\uffff";
-    static final String dfa_85s = "\1\170\21\0\2\uffff";
+    static final String dfa_85s = "\1\166\21\0\2\uffff";
     static final String dfa_86s = "\22\uffff\1\1\1\2";
     static final String dfa_87s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\2\uffff}>";
     static final String[] dfa_88s = {
-            "\1\1\1\2\1\3\1\4\40\uffff\1\13\1\10\1\11\14\uffff\1\12\1\14\1\15\1\16\1\17\1\uffff\1\6\1\uffff\1\5\13\uffff\1\20\1\21\52\uffff\1\7",
+            "\1\1\1\2\1\3\1\4\40\uffff\1\13\1\10\1\11\14\uffff\1\12\1\14\1\15\1\16\1\17\1\uffff\1\6\1\uffff\1\5\13\uffff\1\20\1\21\50\uffff\1\7",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -92508,11 +92697,11 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
         }
     }
     static final String dfa_89s = "\1\41\24\0\2\uffff";
-    static final String dfa_90s = "\1\167\24\0\2\uffff";
+    static final String dfa_90s = "\1\165\24\0\2\uffff";
     static final String dfa_91s = "\25\uffff\1\1\1\2";
     static final String dfa_92s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\2\uffff}>";
     static final String[] dfa_93s = {
-            "\1\16\1\17\1\21\34\uffff\1\20\3\uffff\1\15\44\uffff\1\22\1\23\1\24\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
+            "\1\16\1\17\1\21\34\uffff\1\20\3\uffff\1\15\42\uffff\1\22\1\23\1\24\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -92874,12 +93063,12 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x200001FF80000000L,0x00FFFE0000000411L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x200001FF80000000L,0x00FFFE0000000011L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x200001FF80000000L,0x003FFF8000000411L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x200001FF80000000L,0x003FFF8000000011L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000E00000000L,0x00FFFE0000000011L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000E00000000L,0x003FFF8000000011L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x5F000E00000001E0L,0x0100000000003001L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x5F000E00000001E0L,0x0040000000003001L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
@@ -92889,7 +93078,7 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x4000020000000020L,0x0000000000000020L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x4000020000000020L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000000L,0x00000E0000000010L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000000L,0x0000038000000010L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000020000000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x4000000000000000L,0x0000000000000040L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
@@ -92897,8 +93086,8 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x4000020000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x5F000E00000001E0L,0x0100000000003243L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000E00000000L,0x00FFFE0800000011L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x5F000E00000001E0L,0x0040000000003243L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000E00000000L,0x003FFF8200000011L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x40000C0000000000L,0x0000000000000A40L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000240L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000010L});
@@ -92907,17 +93096,17 @@ public class InternalAnsicParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0600000000000000L});
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000000000L,0x0000000000030000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000000000000L,0x0000000000FC0000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x5F001E00000001E0L,0x0100000EFF003003L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x0000000010000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x5F001E00000001E0L,0x0100000000003001L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x7F001FFF800001E0L,0x01FFFE0EFF003413L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x5F001E00000001E0L,0x01C00003BF003003L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x5F001E00000001E0L,0x0040000000003001L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x7F001FFF800001E0L,0x01FFFF83BF003413L});
     public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000000400000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
     public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x00FFE00000000000L});
 
 }

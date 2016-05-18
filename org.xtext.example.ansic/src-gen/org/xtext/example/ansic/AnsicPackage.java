@@ -3038,13 +3038,40 @@ public interface AnsicPackage extends EPackage
   int JUMP_STATEMENT__IDENTIFIER = 0;
 
   /**
+   * The feature id for the '<em><b>Break</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_STATEMENT__BREAK = 1;
+
+  /**
+   * The feature id for the '<em><b>Return vazio</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_STATEMENT__RETURN_VAZIO = 2;
+
+  /**
+   * The feature id for the '<em><b>Return</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JUMP_STATEMENT__RETURN = 3;
+
+  /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JUMP_STATEMENT__EXPRESSION = 1;
+  int JUMP_STATEMENT__EXPRESSION = 4;
 
   /**
    * The number of structural features of the '<em>jump statement</em>' class.
@@ -3053,7 +3080,7 @@ public interface AnsicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JUMP_STATEMENT_FEATURE_COUNT = 2;
+  int JUMP_STATEMENT_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.ansic.impl.iteration_statementImpl <em>iteration statement</em>}' class.
@@ -7440,6 +7467,39 @@ public interface AnsicPackage extends EPackage
   EAttribute getjump_statement_Identifier();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.jump_statement#getBreak <em>Break</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Break</em>'.
+   * @see org.xtext.example.ansic.jump_statement#getBreak()
+   * @see #getjump_statement()
+   * @generated
+   */
+  EAttribute getjump_statement_Break();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.jump_statement#getReturn_vazio <em>Return vazio</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Return vazio</em>'.
+   * @see org.xtext.example.ansic.jump_statement#getReturn_vazio()
+   * @see #getjump_statement()
+   * @generated
+   */
+  EAttribute getjump_statement_Return_vazio();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.ansic.jump_statement#getReturn <em>Return</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Return</em>'.
+   * @see org.xtext.example.ansic.jump_statement#getReturn()
+   * @see #getjump_statement()
+   * @generated
+   */
+  EAttribute getjump_statement_Return();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.ansic.jump_statement#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11066,6 +11126,30 @@ public interface AnsicPackage extends EPackage
      * @generated
      */
     EAttribute JUMP_STATEMENT__IDENTIFIER = eINSTANCE.getjump_statement_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Break</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JUMP_STATEMENT__BREAK = eINSTANCE.getjump_statement_Break();
+
+    /**
+     * The meta object literal for the '<em><b>Return vazio</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JUMP_STATEMENT__RETURN_VAZIO = eINSTANCE.getjump_statement_Return_vazio();
+
+    /**
+     * The meta object literal for the '<em><b>Return</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JUMP_STATEMENT__RETURN = eINSTANCE.getjump_statement_Return();
 
     /**
      * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.

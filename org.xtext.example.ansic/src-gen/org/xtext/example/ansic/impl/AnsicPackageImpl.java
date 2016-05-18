@@ -3501,9 +3501,39 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getjump_statement_Break()
+  {
+    return (EAttribute)jump_statementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getjump_statement_Return_vazio()
+  {
+    return (EAttribute)jump_statementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getjump_statement_Return()
+  {
+    return (EAttribute)jump_statementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getjump_statement_Expression()
   {
-    return (EReference)jump_statementEClass.getEStructuralFeatures().get(1);
+    return (EReference)jump_statementEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -5285,6 +5315,9 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
 
     jump_statementEClass = createEClass(JUMP_STATEMENT);
     createEAttribute(jump_statementEClass, JUMP_STATEMENT__IDENTIFIER);
+    createEAttribute(jump_statementEClass, JUMP_STATEMENT__BREAK);
+    createEAttribute(jump_statementEClass, JUMP_STATEMENT__RETURN_VAZIO);
+    createEAttribute(jump_statementEClass, JUMP_STATEMENT__RETURN);
     createEReference(jump_statementEClass, JUMP_STATEMENT__EXPRESSION);
 
     iteration_statementEClass = createEClass(ITERATION_STATEMENT);
@@ -5847,6 +5880,9 @@ public class AnsicPackageImpl extends EPackageImpl implements AnsicPackage
 
     initEClass(jump_statementEClass, jump_statement.class, "jump_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getjump_statement_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getjump_statement_Break(), ecorePackage.getEString(), "break", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getjump_statement_Return_vazio(), ecorePackage.getEString(), "return_vazio", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getjump_statement_Return(), ecorePackage.getEString(), "return", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getjump_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, jump_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(iteration_statementEClass, iteration_statement.class, "iteration_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -2015,10 +2015,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_IDZ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10821:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' )+ )
-            // InternalAnsic.g:10821:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )+
+            // InternalAnsic.g:10851:10: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' )+ )
+            // InternalAnsic.g:10851:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )+
             {
-            // InternalAnsic.g:10821:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )+
+            // InternalAnsic.g:10851:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )+
             int cnt1=0;
             loop1:
             do {
@@ -2072,8 +2072,8 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10823:11: ( '\\'' . '\\'' )
-            // InternalAnsic.g:10823:13: '\\'' . '\\''
+            // InternalAnsic.g:10853:11: ( '\\'' . '\\'' )
+            // InternalAnsic.g:10853:13: '\\'' . '\\''
             {
             match('\''); 
             matchAny(); 
@@ -2094,10 +2094,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10825:12: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* )
-            // InternalAnsic.g:10825:14: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+            // InternalAnsic.g:10855:12: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* )
+            // InternalAnsic.g:10855:14: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
             {
-            // InternalAnsic.g:10825:14: ( '0' .. '9' )+
+            // InternalAnsic.g:10855:14: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -2111,7 +2111,7 @@ public class InternalAnsicLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalAnsic.g:10825:15: '0' .. '9'
+            	    // InternalAnsic.g:10855:15: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2128,7 +2128,7 @@ public class InternalAnsicLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // InternalAnsic.g:10825:30: ( '0' .. '9' )*
+            // InternalAnsic.g:10855:30: ( '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -2141,7 +2141,7 @@ public class InternalAnsicLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalAnsic.g:10825:31: '0' .. '9'
+            	    // InternalAnsic.g:10855:31: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2167,8 +2167,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_O"
     public final void mRULE_O() throws RecognitionException {
         try {
-            // InternalAnsic.g:10827:17: ( '0' .. '7' )
-            // InternalAnsic.g:10827:19: '0' .. '7'
+            // InternalAnsic.g:10857:17: ( '0' .. '7' )
+            // InternalAnsic.g:10857:19: '0' .. '7'
             {
             matchRange('0','7'); 
 
@@ -2183,8 +2183,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_D"
     public final void mRULE_D() throws RecognitionException {
         try {
-            // InternalAnsic.g:10829:17: ( '0' .. '9' )
-            // InternalAnsic.g:10829:19: '0' .. '9'
+            // InternalAnsic.g:10859:17: ( '0' .. '9' )
+            // InternalAnsic.g:10859:19: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -2199,8 +2199,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_NZ"
     public final void mRULE_NZ() throws RecognitionException {
         try {
-            // InternalAnsic.g:10831:18: ( '1' .. '9' )
-            // InternalAnsic.g:10831:20: '1' .. '9'
+            // InternalAnsic.g:10861:18: ( '1' .. '9' )
+            // InternalAnsic.g:10861:20: '1' .. '9'
             {
             matchRange('1','9'); 
 
@@ -2217,8 +2217,8 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_L;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10833:8: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) )
-            // InternalAnsic.g:10833:10: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )
+            // InternalAnsic.g:10863:8: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) )
+            // InternalAnsic.g:10863:10: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -2243,10 +2243,10 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_A"
     public final void mRULE_A() throws RecognitionException {
         try {
-            // InternalAnsic.g:10835:17: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' '..' '9' ) )
-            // InternalAnsic.g:10835:19: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' '..' '9' )
+            // InternalAnsic.g:10865:17: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' '..' '9' ) )
+            // InternalAnsic.g:10865:19: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' '..' '9' )
             {
-            // InternalAnsic.g:10835:19: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' '..' '9' )
+            // InternalAnsic.g:10865:19: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' '..' '9' )
             int alt4=4;
             switch ( input.LA(1) ) {
             case 'a':
@@ -2328,28 +2328,28 @@ public class InternalAnsicLexer extends Lexer {
 
             switch (alt4) {
                 case 1 :
-                    // InternalAnsic.g:10835:20: 'a' .. 'z'
+                    // InternalAnsic.g:10865:20: 'a' .. 'z'
                     {
                     matchRange('a','z'); 
 
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10835:29: 'A' .. 'Z'
+                    // InternalAnsic.g:10865:29: 'A' .. 'Z'
                     {
                     matchRange('A','Z'); 
 
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10835:38: '_'
+                    // InternalAnsic.g:10865:38: '_'
                     {
                     match('_'); 
 
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10835:42: '0' '..' '9'
+                    // InternalAnsic.g:10865:42: '0' '..' '9'
                     {
                     match('0'); 
                     match(".."); 
@@ -2373,10 +2373,10 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_H"
     public final void mRULE_H() throws RecognitionException {
         try {
-            // InternalAnsic.g:10837:17: ( ( 'a' .. 'f' | 'A' .. 'F' | '0' '..' '9' ) )
-            // InternalAnsic.g:10837:19: ( 'a' .. 'f' | 'A' .. 'F' | '0' '..' '9' )
+            // InternalAnsic.g:10867:17: ( ( 'a' .. 'f' | 'A' .. 'F' | '0' '..' '9' ) )
+            // InternalAnsic.g:10867:19: ( 'a' .. 'f' | 'A' .. 'F' | '0' '..' '9' )
             {
-            // InternalAnsic.g:10837:19: ( 'a' .. 'f' | 'A' .. 'F' | '0' '..' '9' )
+            // InternalAnsic.g:10867:19: ( 'a' .. 'f' | 'A' .. 'F' | '0' '..' '9' )
             int alt5=3;
             switch ( input.LA(1) ) {
             case 'a':
@@ -2413,21 +2413,21 @@ public class InternalAnsicLexer extends Lexer {
 
             switch (alt5) {
                 case 1 :
-                    // InternalAnsic.g:10837:20: 'a' .. 'f'
+                    // InternalAnsic.g:10867:20: 'a' .. 'f'
                     {
                     matchRange('a','f'); 
 
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10837:29: 'A' .. 'F'
+                    // InternalAnsic.g:10867:29: 'A' .. 'F'
                     {
                     matchRange('A','F'); 
 
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10837:38: '0' '..' '9'
+                    // InternalAnsic.g:10867:38: '0' '..' '9'
                     {
                     match('0'); 
                     match(".."); 
@@ -2451,8 +2451,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_HP"
     public final void mRULE_HP() throws RecognitionException {
         try {
-            // InternalAnsic.g:10839:18: ( '0' ( 'x' | 'X' ) )
-            // InternalAnsic.g:10839:20: '0' ( 'x' | 'X' )
+            // InternalAnsic.g:10869:18: ( '0' ( 'x' | 'X' ) )
+            // InternalAnsic.g:10869:20: '0' ( 'x' | 'X' )
             {
             match('0'); 
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
@@ -2476,8 +2476,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_E"
     public final void mRULE_E() throws RecognitionException {
         try {
-            // InternalAnsic.g:10841:17: ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_D '+' )
-            // InternalAnsic.g:10841:19: ( 'E' | 'e' ) ( '+' | '-' )? RULE_D '+'
+            // InternalAnsic.g:10871:17: ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_D '+' )
+            // InternalAnsic.g:10871:19: ( 'E' | 'e' ) ( '+' | '-' )? RULE_D '+'
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -2488,7 +2488,7 @@ public class InternalAnsicLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalAnsic.g:10841:29: ( '+' | '-' )?
+            // InternalAnsic.g:10871:29: ( '+' | '-' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2528,8 +2528,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_P"
     public final void mRULE_P() throws RecognitionException {
         try {
-            // InternalAnsic.g:10843:17: ( ( 'P' | 'p' ) ( '+' | '-' )? '{' RULE_D '}' '+' )
-            // InternalAnsic.g:10843:19: ( 'P' | 'p' ) ( '+' | '-' )? '{' RULE_D '}' '+'
+            // InternalAnsic.g:10873:17: ( ( 'P' | 'p' ) ( '+' | '-' )? '{' RULE_D '}' '+' )
+            // InternalAnsic.g:10873:19: ( 'P' | 'p' ) ( '+' | '-' )? '{' RULE_D '}' '+'
             {
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
@@ -2540,7 +2540,7 @@ public class InternalAnsicLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalAnsic.g:10843:29: ( '+' | '-' )?
+            // InternalAnsic.g:10873:29: ( '+' | '-' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2582,8 +2582,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_FS"
     public final void mRULE_FS() throws RecognitionException {
         try {
-            // InternalAnsic.g:10845:18: ( ( 'f' | 'F' | 'l' | 'L' ) )
-            // InternalAnsic.g:10845:20: ( 'f' | 'F' | 'l' | 'L' )
+            // InternalAnsic.g:10875:18: ( ( 'f' | 'F' | 'l' | 'L' ) )
+            // InternalAnsic.g:10875:20: ( 'f' | 'F' | 'l' | 'L' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='L'||input.LA(1)=='f'||input.LA(1)=='l' ) {
                 input.consume();
@@ -2606,8 +2606,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_ES"
     public final void mRULE_ES() throws RecognitionException {
         try {
-            // InternalAnsic.g:10847:18: ( RULE_A )
-            // InternalAnsic.g:10847:20: RULE_A
+            // InternalAnsic.g:10877:18: ( RULE_A )
+            // InternalAnsic.g:10877:20: RULE_A
             {
             mRULE_A(); 
 
@@ -2622,10 +2622,10 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_IS"
     public final void mRULE_IS() throws RecognitionException {
         try {
-            // InternalAnsic.g:10849:18: ( ( ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )? | ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )? ) )
-            // InternalAnsic.g:10849:20: ( ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )? | ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )? )
+            // InternalAnsic.g:10879:18: ( ( ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )? | ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )? ) )
+            // InternalAnsic.g:10879:20: ( ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )? | ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )? )
             {
-            // InternalAnsic.g:10849:20: ( ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )? | ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )? )
+            // InternalAnsic.g:10879:20: ( ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )? | ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )? )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2643,7 +2643,7 @@ public class InternalAnsicLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalAnsic.g:10849:21: ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )?
+                    // InternalAnsic.g:10879:21: ( 'u' | 'U' ) ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )?
                     {
                     if ( input.LA(1)=='U'||input.LA(1)=='u' ) {
                         input.consume();
@@ -2654,7 +2654,7 @@ public class InternalAnsicLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // InternalAnsic.g:10849:31: ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )?
+                    // InternalAnsic.g:10879:31: ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )?
                     int alt8=5;
                     int LA8_0 = input.LA(1);
 
@@ -2674,21 +2674,21 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // InternalAnsic.g:10849:32: 'l'
+                            // InternalAnsic.g:10879:32: 'l'
                             {
                             match('l'); 
 
                             }
                             break;
                         case 2 :
-                            // InternalAnsic.g:10849:36: 'L'
+                            // InternalAnsic.g:10879:36: 'L'
                             {
                             match('L'); 
 
                             }
                             break;
                         case 3 :
-                            // InternalAnsic.g:10849:40: 'l' 'l'
+                            // InternalAnsic.g:10879:40: 'l' 'l'
                             {
                             match('l'); 
                             match('l'); 
@@ -2696,7 +2696,7 @@ public class InternalAnsicLexer extends Lexer {
                             }
                             break;
                         case 4 :
-                            // InternalAnsic.g:10849:48: 'L' 'L'
+                            // InternalAnsic.g:10879:48: 'L' 'L'
                             {
                             match('L'); 
                             match('L'); 
@@ -2710,9 +2710,9 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10849:58: ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )?
+                    // InternalAnsic.g:10879:58: ( 'l' | 'L' | 'l' 'l' | 'L' 'L' ) ( 'u' | 'U' )?
                     {
-                    // InternalAnsic.g:10849:58: ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )
+                    // InternalAnsic.g:10879:58: ( 'l' | 'L' | 'l' 'l' | 'L' 'L' )
                     int alt9=4;
                     int LA9_0 = input.LA(1);
 
@@ -2742,21 +2742,21 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalAnsic.g:10849:59: 'l'
+                            // InternalAnsic.g:10879:59: 'l'
                             {
                             match('l'); 
 
                             }
                             break;
                         case 2 :
-                            // InternalAnsic.g:10849:63: 'L'
+                            // InternalAnsic.g:10879:63: 'L'
                             {
                             match('L'); 
 
                             }
                             break;
                         case 3 :
-                            // InternalAnsic.g:10849:67: 'l' 'l'
+                            // InternalAnsic.g:10879:67: 'l' 'l'
                             {
                             match('l'); 
                             match('l'); 
@@ -2764,7 +2764,7 @@ public class InternalAnsicLexer extends Lexer {
                             }
                             break;
                         case 4 :
-                            // InternalAnsic.g:10849:75: 'L' 'L'
+                            // InternalAnsic.g:10879:75: 'L' 'L'
                             {
                             match('L'); 
                             match('L'); 
@@ -2774,7 +2774,7 @@ public class InternalAnsicLexer extends Lexer {
 
                     }
 
-                    // InternalAnsic.g:10849:84: ( 'u' | 'U' )?
+                    // InternalAnsic.g:10879:84: ( 'u' | 'U' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -2818,8 +2818,8 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_CP"
     public final void mRULE_CP() throws RecognitionException {
         try {
-            // InternalAnsic.g:10851:18: ( ( 'u' | 'U' | 'L' ) )
-            // InternalAnsic.g:10851:20: ( 'u' | 'U' | 'L' )
+            // InternalAnsic.g:10881:18: ( ( 'u' | 'U' | 'L' ) )
+            // InternalAnsic.g:10881:20: ( 'u' | 'U' | 'L' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='U'||input.LA(1)=='u' ) {
                 input.consume();
@@ -2842,10 +2842,10 @@ public class InternalAnsicLexer extends Lexer {
     // $ANTLR start "RULE_SP"
     public final void mRULE_SP() throws RecognitionException {
         try {
-            // InternalAnsic.g:10853:18: ( ( 'u' '8' | 'u' | 'U' | 'L' ) )
-            // InternalAnsic.g:10853:20: ( 'u' '8' | 'u' | 'U' | 'L' )
+            // InternalAnsic.g:10883:18: ( ( 'u' '8' | 'u' | 'U' | 'L' ) )
+            // InternalAnsic.g:10883:20: ( 'u' '8' | 'u' | 'U' | 'L' )
             {
-            // InternalAnsic.g:10853:20: ( 'u' '8' | 'u' | 'U' | 'L' )
+            // InternalAnsic.g:10883:20: ( 'u' '8' | 'u' | 'U' | 'L' )
             int alt12=4;
             switch ( input.LA(1) ) {
             case 'u':
@@ -2878,7 +2878,7 @@ public class InternalAnsicLexer extends Lexer {
 
             switch (alt12) {
                 case 1 :
-                    // InternalAnsic.g:10853:21: 'u' '8'
+                    // InternalAnsic.g:10883:21: 'u' '8'
                     {
                     match('u'); 
                     match('8'); 
@@ -2886,21 +2886,21 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10853:29: 'u'
+                    // InternalAnsic.g:10883:29: 'u'
                     {
                     match('u'); 
 
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10853:33: 'U'
+                    // InternalAnsic.g:10883:33: 'U'
                     {
                     match('U'); 
 
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10853:37: 'L'
+                    // InternalAnsic.g:10883:37: 'L'
                     {
                     match('L'); 
 
@@ -2923,10 +2923,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10855:9: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+ )
-            // InternalAnsic.g:10855:11: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
+            // InternalAnsic.g:10885:9: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+ )
+            // InternalAnsic.g:10885:11: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
             {
-            // InternalAnsic.g:10855:11: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
+            // InternalAnsic.g:10885:11: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
             int cnt13=0;
             loop13:
             do {
@@ -2980,10 +2980,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_I_CONSTANT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10857:17: ( ( RULE_HP RULE_H '+' ( RULE_IS )? | RULE_NZ RULE_D '*' ( RULE_IS )? | '0' RULE_O '*' ( RULE_IS )? | ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\'' ) )
-            // InternalAnsic.g:10857:19: ( RULE_HP RULE_H '+' ( RULE_IS )? | RULE_NZ RULE_D '*' ( RULE_IS )? | '0' RULE_O '*' ( RULE_IS )? | ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\'' )
+            // InternalAnsic.g:10887:17: ( ( RULE_HP RULE_H '+' ( RULE_IS )? | RULE_NZ RULE_D '*' ( RULE_IS )? | '0' RULE_O '*' ( RULE_IS )? | ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\'' ) )
+            // InternalAnsic.g:10887:19: ( RULE_HP RULE_H '+' ( RULE_IS )? | RULE_NZ RULE_D '*' ( RULE_IS )? | '0' RULE_O '*' ( RULE_IS )? | ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\'' )
             {
-            // InternalAnsic.g:10857:19: ( RULE_HP RULE_H '+' ( RULE_IS )? | RULE_NZ RULE_D '*' ( RULE_IS )? | '0' RULE_O '*' ( RULE_IS )? | ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\'' )
+            // InternalAnsic.g:10887:19: ( RULE_HP RULE_H '+' ( RULE_IS )? | RULE_NZ RULE_D '*' ( RULE_IS )? | '0' RULE_O '*' ( RULE_IS )? | ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\'' )
             int alt19=4;
             switch ( input.LA(1) ) {
             case '0':
@@ -3034,12 +3034,12 @@ public class InternalAnsicLexer extends Lexer {
 
             switch (alt19) {
                 case 1 :
-                    // InternalAnsic.g:10857:20: RULE_HP RULE_H '+' ( RULE_IS )?
+                    // InternalAnsic.g:10887:20: RULE_HP RULE_H '+' ( RULE_IS )?
                     {
                     mRULE_HP(); 
                     mRULE_H(); 
                     match('+'); 
-                    // InternalAnsic.g:10857:39: ( RULE_IS )?
+                    // InternalAnsic.g:10887:39: ( RULE_IS )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -3048,7 +3048,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // InternalAnsic.g:10857:39: RULE_IS
+                            // InternalAnsic.g:10887:39: RULE_IS
                             {
                             mRULE_IS(); 
 
@@ -3061,12 +3061,12 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10857:48: RULE_NZ RULE_D '*' ( RULE_IS )?
+                    // InternalAnsic.g:10887:48: RULE_NZ RULE_D '*' ( RULE_IS )?
                     {
                     mRULE_NZ(); 
                     mRULE_D(); 
                     match('*'); 
-                    // InternalAnsic.g:10857:67: ( RULE_IS )?
+                    // InternalAnsic.g:10887:67: ( RULE_IS )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -3075,7 +3075,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt15) {
                         case 1 :
-                            // InternalAnsic.g:10857:67: RULE_IS
+                            // InternalAnsic.g:10887:67: RULE_IS
                             {
                             mRULE_IS(); 
 
@@ -3088,12 +3088,12 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10857:76: '0' RULE_O '*' ( RULE_IS )?
+                    // InternalAnsic.g:10887:76: '0' RULE_O '*' ( RULE_IS )?
                     {
                     match('0'); 
                     mRULE_O(); 
                     match('*'); 
-                    // InternalAnsic.g:10857:91: ( RULE_IS )?
+                    // InternalAnsic.g:10887:91: ( RULE_IS )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -3102,7 +3102,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // InternalAnsic.g:10857:91: RULE_IS
+                            // InternalAnsic.g:10887:91: RULE_IS
                             {
                             mRULE_IS(); 
 
@@ -3115,9 +3115,9 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10857:100: ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\''
+                    // InternalAnsic.g:10887:100: ( RULE_CP )? '\\'' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+ '\\''
                     {
-                    // InternalAnsic.g:10857:100: ( RULE_CP )?
+                    // InternalAnsic.g:10887:100: ( RULE_CP )?
                     int alt17=2;
                     int LA17_0 = input.LA(1);
 
@@ -3126,7 +3126,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt17) {
                         case 1 :
-                            // InternalAnsic.g:10857:100: RULE_CP
+                            // InternalAnsic.g:10887:100: RULE_CP
                             {
                             mRULE_CP(); 
 
@@ -3136,7 +3136,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
 
                     match('\''); 
-                    // InternalAnsic.g:10857:114: ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+
+                    // InternalAnsic.g:10887:114: ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )+
                     int cnt18=0;
                     loop18:
                     do {
@@ -3223,7 +3223,7 @@ public class InternalAnsicLexer extends Lexer {
 
                         switch (alt18) {
                     	case 1 :
-                    	    // InternalAnsic.g:10857:115: ( '^' | '\\'' | '\\\\' | '\\n' )
+                    	    // InternalAnsic.g:10887:115: ( '^' | '\\'' | '\\\\' | '\\n' )
                     	    {
                     	    if ( input.LA(1)=='\n'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='^' ) {
                     	        input.consume();
@@ -3238,7 +3238,7 @@ public class InternalAnsicLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalAnsic.g:10857:136: RULE_ES
+                    	    // InternalAnsic.g:10887:136: RULE_ES
                     	    {
                     	    mRULE_ES(); 
 
@@ -3277,20 +3277,20 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_F_CONSTANT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10859:17: ( ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? ) )
-            // InternalAnsic.g:10859:19: ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? )
+            // InternalAnsic.g:10889:17: ( ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? ) )
+            // InternalAnsic.g:10889:19: ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? )
             {
-            // InternalAnsic.g:10859:19: ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? )
+            // InternalAnsic.g:10889:19: ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? )
             int alt28=5;
             alt28 = dfa28.predict(input);
             switch (alt28) {
                 case 1 :
-                    // InternalAnsic.g:10859:20: RULE_D '+' RULE_E ( RULE_FS )?
+                    // InternalAnsic.g:10889:20: RULE_D '+' RULE_E ( RULE_FS )?
                     {
                     mRULE_D(); 
                     match('+'); 
                     mRULE_E(); 
-                    // InternalAnsic.g:10859:38: ( RULE_FS )?
+                    // InternalAnsic.g:10889:38: ( RULE_FS )?
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
@@ -3299,7 +3299,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt20) {
                         case 1 :
-                            // InternalAnsic.g:10859:38: RULE_FS
+                            // InternalAnsic.g:10889:38: RULE_FS
                             {
                             mRULE_FS(); 
 
@@ -3312,14 +3312,14 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10859:47: RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )?
+                    // InternalAnsic.g:10889:47: RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )?
                     {
                     mRULE_D(); 
                     match('*'); 
                     match('.'); 
                     mRULE_D(); 
                     match('+'); 
-                    // InternalAnsic.g:10859:73: ( RULE_E )?
+                    // InternalAnsic.g:10889:73: ( RULE_E )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
@@ -3328,7 +3328,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt21) {
                         case 1 :
-                            // InternalAnsic.g:10859:73: RULE_E
+                            // InternalAnsic.g:10889:73: RULE_E
                             {
                             mRULE_E(); 
 
@@ -3337,7 +3337,7 @@ public class InternalAnsicLexer extends Lexer {
 
                     }
 
-                    // InternalAnsic.g:10859:81: ( RULE_FS )?
+                    // InternalAnsic.g:10889:81: ( RULE_FS )?
                     int alt22=2;
                     int LA22_0 = input.LA(1);
 
@@ -3346,7 +3346,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt22) {
                         case 1 :
-                            // InternalAnsic.g:10859:81: RULE_FS
+                            // InternalAnsic.g:10889:81: RULE_FS
                             {
                             mRULE_FS(); 
 
@@ -3359,12 +3359,12 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalAnsic.g:10859:90: RULE_D '+' '.' ( RULE_E )? ( RULE_FS )?
+                    // InternalAnsic.g:10889:90: RULE_D '+' '.' ( RULE_E )? ( RULE_FS )?
                     {
                     mRULE_D(); 
                     match('+'); 
                     match('.'); 
-                    // InternalAnsic.g:10859:105: ( RULE_E )?
+                    // InternalAnsic.g:10889:105: ( RULE_E )?
                     int alt23=2;
                     int LA23_0 = input.LA(1);
 
@@ -3373,7 +3373,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt23) {
                         case 1 :
-                            // InternalAnsic.g:10859:105: RULE_E
+                            // InternalAnsic.g:10889:105: RULE_E
                             {
                             mRULE_E(); 
 
@@ -3382,7 +3382,7 @@ public class InternalAnsicLexer extends Lexer {
 
                     }
 
-                    // InternalAnsic.g:10859:113: ( RULE_FS )?
+                    // InternalAnsic.g:10889:113: ( RULE_FS )?
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
@@ -3391,7 +3391,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt24) {
                         case 1 :
-                            // InternalAnsic.g:10859:113: RULE_FS
+                            // InternalAnsic.g:10889:113: RULE_FS
                             {
                             mRULE_FS(); 
 
@@ -3404,13 +3404,13 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // InternalAnsic.g:10859:122: RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )?
+                    // InternalAnsic.g:10889:122: RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )?
                     {
                     mRULE_HP(); 
                     mRULE_H(); 
                     match('+'); 
                     mRULE_P(); 
-                    // InternalAnsic.g:10859:148: ( RULE_FS )?
+                    // InternalAnsic.g:10889:148: ( RULE_FS )?
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
@@ -3419,7 +3419,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt25) {
                         case 1 :
-                            // InternalAnsic.g:10859:148: RULE_FS
+                            // InternalAnsic.g:10889:148: RULE_FS
                             {
                             mRULE_FS(); 
 
@@ -3435,7 +3435,7 @@ public class InternalAnsicLexer extends Lexer {
                     mRULE_H(); 
                     match('+'); 
                     mRULE_P(); 
-                    // InternalAnsic.g:10859:198: ( RULE_FS )?
+                    // InternalAnsic.g:10889:198: ( RULE_FS )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -3444,7 +3444,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt26) {
                         case 1 :
-                            // InternalAnsic.g:10859:198: RULE_FS
+                            // InternalAnsic.g:10889:198: RULE_FS
                             {
                             mRULE_FS(); 
 
@@ -3457,14 +3457,14 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // InternalAnsic.g:10859:207: RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )?
+                    // InternalAnsic.g:10889:207: RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )?
                     {
                     mRULE_HP(); 
                     mRULE_H(); 
                     match('+'); 
                     match('.'); 
                     mRULE_P(); 
-                    // InternalAnsic.g:10859:237: ( RULE_FS )?
+                    // InternalAnsic.g:10889:237: ( RULE_FS )?
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
@@ -3473,7 +3473,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt27) {
                         case 1 :
-                            // InternalAnsic.g:10859:237: RULE_FS
+                            // InternalAnsic.g:10889:237: RULE_FS
                             {
                             mRULE_FS(); 
 
@@ -3504,10 +3504,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10861:21: ( ( ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )* )+ )
-            // InternalAnsic.g:10861:23: ( ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )* )+
+            // InternalAnsic.g:10891:21: ( ( ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )* )+ )
+            // InternalAnsic.g:10891:23: ( ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )* )+
             {
-            // InternalAnsic.g:10861:23: ( ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )* )+
+            // InternalAnsic.g:10891:23: ( ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )* )+
             int cnt32=0;
             loop32:
             do {
@@ -3521,9 +3521,9 @@ public class InternalAnsicLexer extends Lexer {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalAnsic.g:10861:24: ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )*
+            	    // InternalAnsic.g:10891:24: ( RULE_SP )? '\"' ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )* '\"' ( RULE_WS )*
             	    {
-            	    // InternalAnsic.g:10861:24: ( RULE_SP )?
+            	    // InternalAnsic.g:10891:24: ( RULE_SP )?
             	    int alt29=2;
             	    int LA29_0 = input.LA(1);
 
@@ -3532,7 +3532,7 @@ public class InternalAnsicLexer extends Lexer {
             	    }
             	    switch (alt29) {
             	        case 1 :
-            	            // InternalAnsic.g:10861:24: RULE_SP
+            	            // InternalAnsic.g:10891:24: RULE_SP
             	            {
             	            mRULE_SP(); 
 
@@ -3542,7 +3542,7 @@ public class InternalAnsicLexer extends Lexer {
             	    }
 
             	    match('\"'); 
-            	    // InternalAnsic.g:10861:37: ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )*
+            	    // InternalAnsic.g:10891:37: ( ( '^' | '\\'' | '\\\\' | '\\n' ) | RULE_ES )*
             	    loop30:
             	    do {
             	        int alt30=3;
@@ -3558,7 +3558,7 @@ public class InternalAnsicLexer extends Lexer {
 
             	        switch (alt30) {
             	    	case 1 :
-            	    	    // InternalAnsic.g:10861:38: ( '^' | '\\'' | '\\\\' | '\\n' )
+            	    	    // InternalAnsic.g:10891:38: ( '^' | '\\'' | '\\\\' | '\\n' )
             	    	    {
             	    	    if ( input.LA(1)=='\n'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='^' ) {
             	    	        input.consume();
@@ -3573,7 +3573,7 @@ public class InternalAnsicLexer extends Lexer {
             	    	    }
             	    	    break;
             	    	case 2 :
-            	    	    // InternalAnsic.g:10861:59: RULE_ES
+            	    	    // InternalAnsic.g:10891:59: RULE_ES
             	    	    {
             	    	    mRULE_ES(); 
 
@@ -3586,7 +3586,7 @@ public class InternalAnsicLexer extends Lexer {
             	    } while (true);
 
             	    match('\"'); 
-            	    // InternalAnsic.g:10861:73: ( RULE_WS )*
+            	    // InternalAnsic.g:10891:73: ( RULE_WS )*
             	    loop31:
             	    do {
             	        int alt31=2;
@@ -3599,7 +3599,7 @@ public class InternalAnsicLexer extends Lexer {
 
             	        switch (alt31) {
             	    	case 1 :
-            	    	    // InternalAnsic.g:10861:73: RULE_WS
+            	    	    // InternalAnsic.g:10891:73: RULE_WS
             	    	    {
             	    	    mRULE_WS(); 
 
@@ -3640,10 +3640,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10863:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalAnsic.g:10863:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalAnsic.g:10893:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalAnsic.g:10893:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalAnsic.g:10863:11: ( '^' )?
+            // InternalAnsic.g:10893:11: ( '^' )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -3652,7 +3652,7 @@ public class InternalAnsicLexer extends Lexer {
             }
             switch (alt33) {
                 case 1 :
-                    // InternalAnsic.g:10863:11: '^'
+                    // InternalAnsic.g:10893:11: '^'
                     {
                     match('^'); 
 
@@ -3670,7 +3670,7 @@ public class InternalAnsicLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalAnsic.g:10863:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalAnsic.g:10893:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop34:
             do {
                 int alt34=2;
@@ -3719,10 +3719,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10865:10: ( ( '0' .. '9' )+ )
-            // InternalAnsic.g:10865:12: ( '0' .. '9' )+
+            // InternalAnsic.g:10895:10: ( ( '0' .. '9' )+ )
+            // InternalAnsic.g:10895:12: ( '0' .. '9' )+
             {
-            // InternalAnsic.g:10865:12: ( '0' .. '9' )+
+            // InternalAnsic.g:10895:12: ( '0' .. '9' )+
             int cnt35=0;
             loop35:
             do {
@@ -3736,7 +3736,7 @@ public class InternalAnsicLexer extends Lexer {
 
                 switch (alt35) {
             	case 1 :
-            	    // InternalAnsic.g:10865:13: '0' .. '9'
+            	    // InternalAnsic.g:10895:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3768,10 +3768,10 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10867:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalAnsic.g:10867:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalAnsic.g:10897:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalAnsic.g:10897:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalAnsic.g:10867:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalAnsic.g:10897:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -3789,10 +3789,10 @@ public class InternalAnsicLexer extends Lexer {
             }
             switch (alt38) {
                 case 1 :
-                    // InternalAnsic.g:10867:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalAnsic.g:10897:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalAnsic.g:10867:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalAnsic.g:10897:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop36:
                     do {
                         int alt36=3;
@@ -3808,7 +3808,7 @@ public class InternalAnsicLexer extends Lexer {
 
                         switch (alt36) {
                     	case 1 :
-                    	    // InternalAnsic.g:10867:21: '\\\\' .
+                    	    // InternalAnsic.g:10897:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3816,7 +3816,7 @@ public class InternalAnsicLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalAnsic.g:10867:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalAnsic.g:10897:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3841,10 +3841,10 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalAnsic.g:10867:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalAnsic.g:10897:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalAnsic.g:10867:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalAnsic.g:10897:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop37:
                     do {
                         int alt37=3;
@@ -3860,7 +3860,7 @@ public class InternalAnsicLexer extends Lexer {
 
                         switch (alt37) {
                     	case 1 :
-                    	    // InternalAnsic.g:10867:54: '\\\\' .
+                    	    // InternalAnsic.g:10897:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3868,7 +3868,7 @@ public class InternalAnsicLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalAnsic.g:10867:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalAnsic.g:10897:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3911,12 +3911,12 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10869:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalAnsic.g:10869:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalAnsic.g:10899:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalAnsic.g:10899:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalAnsic.g:10869:24: ( options {greedy=false; } : . )*
+            // InternalAnsic.g:10899:24: ( options {greedy=false; } : . )*
             loop39:
             do {
                 int alt39=2;
@@ -3941,7 +3941,7 @@ public class InternalAnsicLexer extends Lexer {
 
                 switch (alt39) {
             	case 1 :
-            	    // InternalAnsic.g:10869:52: .
+            	    // InternalAnsic.g:10899:52: .
             	    {
             	    matchAny(); 
 
@@ -3971,12 +3971,12 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10871:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalAnsic.g:10871:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalAnsic.g:10901:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalAnsic.g:10901:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalAnsic.g:10871:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalAnsic.g:10901:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop40:
             do {
                 int alt40=2;
@@ -3989,7 +3989,7 @@ public class InternalAnsicLexer extends Lexer {
 
                 switch (alt40) {
             	case 1 :
-            	    // InternalAnsic.g:10871:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalAnsic.g:10901:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4009,7 +4009,7 @@ public class InternalAnsicLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalAnsic.g:10871:40: ( ( '\\r' )? '\\n' )?
+            // InternalAnsic.g:10901:40: ( ( '\\r' )? '\\n' )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -4018,9 +4018,9 @@ public class InternalAnsicLexer extends Lexer {
             }
             switch (alt42) {
                 case 1 :
-                    // InternalAnsic.g:10871:41: ( '\\r' )? '\\n'
+                    // InternalAnsic.g:10901:41: ( '\\r' )? '\\n'
                     {
-                    // InternalAnsic.g:10871:41: ( '\\r' )?
+                    // InternalAnsic.g:10901:41: ( '\\r' )?
                     int alt41=2;
                     int LA41_0 = input.LA(1);
 
@@ -4029,7 +4029,7 @@ public class InternalAnsicLexer extends Lexer {
                     }
                     switch (alt41) {
                         case 1 :
-                            // InternalAnsic.g:10871:41: '\\r'
+                            // InternalAnsic.g:10901:41: '\\r'
                             {
                             match('\r'); 
 
@@ -4061,8 +4061,8 @@ public class InternalAnsicLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalAnsic.g:10873:16: ( . )
-            // InternalAnsic.g:10873:18: .
+            // InternalAnsic.g:10903:16: ( . )
+            // InternalAnsic.g:10903:18: .
             {
             matchAny(); 
 
@@ -4879,7 +4879,7 @@ public class InternalAnsicLexer extends Lexer {
             this.transition = DFA28_transition;
         }
         public String getDescription() {
-            return "10859:19: ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? )";
+            return "10889:19: ( RULE_D '+' RULE_E ( RULE_FS )? | RULE_D '*' '.' RULE_D '+' ( RULE_E )? ( RULE_FS )? | RULE_D '+' '.' ( RULE_E )? ( RULE_FS )? | RULE_HP RULE_H '+' RULE_P ( RULE_FS )? RULE_HP RULE_H '*' '.' RULE_H '+' RULE_P ( RULE_FS )? | RULE_HP RULE_H '+' '.' RULE_P ( RULE_FS )? )";
         }
     }
     static final String DFA43_eotS =

@@ -25,6 +25,9 @@ import org.xtext.example.ansic.jump_statement;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.ansic.impl.jump_statementImpl#getIdentifier <em>Identifier</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.jump_statementImpl#getBreak <em>Break</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.jump_statementImpl#getReturn_vazio <em>Return vazio</em>}</li>
+ *   <li>{@link org.xtext.example.ansic.impl.jump_statementImpl#getReturn <em>Return</em>}</li>
  *   <li>{@link org.xtext.example.ansic.impl.jump_statementImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  *
@@ -51,6 +54,66 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected String identifier = IDENTIFIER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getBreak() <em>Break</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBreak()
+   * @generated
+   * @ordered
+   */
+  protected static final String BREAK_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getBreak() <em>Break</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBreak()
+   * @generated
+   * @ordered
+   */
+  protected String break_ = BREAK_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getReturn_vazio() <em>Return vazio</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReturn_vazio()
+   * @generated
+   * @ordered
+   */
+  protected static final String RETURN_VAZIO_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getReturn_vazio() <em>Return vazio</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReturn_vazio()
+   * @generated
+   * @ordered
+   */
+  protected String return_vazio = RETURN_VAZIO_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getReturn() <em>Return</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReturn()
+   * @generated
+   * @ordered
+   */
+  protected static final String RETURN_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getReturn() <em>Return</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReturn()
+   * @generated
+   * @ordered
+   */
+  protected String return_ = RETURN_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
@@ -104,6 +167,75 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
     identifier = newIdentifier;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.JUMP_STATEMENT__IDENTIFIER, oldIdentifier, identifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getBreak()
+  {
+    return break_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBreak(String newBreak)
+  {
+    String oldBreak = break_;
+    break_ = newBreak;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.JUMP_STATEMENT__BREAK, oldBreak, break_));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getReturn_vazio()
+  {
+    return return_vazio;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReturn_vazio(String newReturn_vazio)
+  {
+    String oldReturn_vazio = return_vazio;
+    return_vazio = newReturn_vazio;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.JUMP_STATEMENT__RETURN_VAZIO, oldReturn_vazio, return_vazio));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getReturn()
+  {
+    return return_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReturn(String newReturn)
+  {
+    String oldReturn = return_;
+    return_ = newReturn;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AnsicPackage.JUMP_STATEMENT__RETURN, oldReturn, return_));
   }
 
   /**
@@ -182,6 +314,12 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
     {
       case AnsicPackage.JUMP_STATEMENT__IDENTIFIER:
         return getIdentifier();
+      case AnsicPackage.JUMP_STATEMENT__BREAK:
+        return getBreak();
+      case AnsicPackage.JUMP_STATEMENT__RETURN_VAZIO:
+        return getReturn_vazio();
+      case AnsicPackage.JUMP_STATEMENT__RETURN:
+        return getReturn();
       case AnsicPackage.JUMP_STATEMENT__EXPRESSION:
         return getExpression();
     }
@@ -200,6 +338,15 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
     {
       case AnsicPackage.JUMP_STATEMENT__IDENTIFIER:
         setIdentifier((String)newValue);
+        return;
+      case AnsicPackage.JUMP_STATEMENT__BREAK:
+        setBreak((String)newValue);
+        return;
+      case AnsicPackage.JUMP_STATEMENT__RETURN_VAZIO:
+        setReturn_vazio((String)newValue);
+        return;
+      case AnsicPackage.JUMP_STATEMENT__RETURN:
+        setReturn((String)newValue);
         return;
       case AnsicPackage.JUMP_STATEMENT__EXPRESSION:
         setExpression((expression)newValue);
@@ -221,6 +368,15 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
       case AnsicPackage.JUMP_STATEMENT__IDENTIFIER:
         setIdentifier(IDENTIFIER_EDEFAULT);
         return;
+      case AnsicPackage.JUMP_STATEMENT__BREAK:
+        setBreak(BREAK_EDEFAULT);
+        return;
+      case AnsicPackage.JUMP_STATEMENT__RETURN_VAZIO:
+        setReturn_vazio(RETURN_VAZIO_EDEFAULT);
+        return;
+      case AnsicPackage.JUMP_STATEMENT__RETURN:
+        setReturn(RETURN_EDEFAULT);
+        return;
       case AnsicPackage.JUMP_STATEMENT__EXPRESSION:
         setExpression((expression)null);
         return;
@@ -240,6 +396,12 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
     {
       case AnsicPackage.JUMP_STATEMENT__IDENTIFIER:
         return IDENTIFIER_EDEFAULT == null ? identifier != null : !IDENTIFIER_EDEFAULT.equals(identifier);
+      case AnsicPackage.JUMP_STATEMENT__BREAK:
+        return BREAK_EDEFAULT == null ? break_ != null : !BREAK_EDEFAULT.equals(break_);
+      case AnsicPackage.JUMP_STATEMENT__RETURN_VAZIO:
+        return RETURN_VAZIO_EDEFAULT == null ? return_vazio != null : !RETURN_VAZIO_EDEFAULT.equals(return_vazio);
+      case AnsicPackage.JUMP_STATEMENT__RETURN:
+        return RETURN_EDEFAULT == null ? return_ != null : !RETURN_EDEFAULT.equals(return_);
       case AnsicPackage.JUMP_STATEMENT__EXPRESSION:
         return expression != null;
     }
@@ -259,6 +421,12 @@ public class jump_statementImpl extends MinimalEObjectImpl.Container implements 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (identifier: ");
     result.append(identifier);
+    result.append(", break: ");
+    result.append(break_);
+    result.append(", return_vazio: ");
+    result.append(return_vazio);
+    result.append(", return: ");
+    result.append(return_);
     result.append(')');
     return result.toString();
   }

@@ -4841,13 +4841,16 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cContinueKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cBreakKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cBreakAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cBreakBreakKeyword_2_0_0 = (Keyword)cBreakAssignment_2_0.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cReturnKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cReturn_vazioAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final Keyword cReturn_vazioReturnKeyword_3_0_0 = (Keyword)cReturn_vazioAssignment_3_0.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
-		private final Keyword cReturnKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cReturnAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
+		private final Keyword cReturnReturnKeyword_4_0_0 = (Keyword)cReturnAssignment_4_0.eContents().get(0);
 		private final Assignment cExpressionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cExpressionExpressionParserRuleCall_4_1_0 = (RuleCall)cExpressionAssignment_4_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
@@ -4855,12 +4858,13 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//jump_statement:
 		//	'goto' identifier=IDz ';'
 		//	| 'continue' ';'
-		//	| 'break' ';'
-		//	| 'return' ';'
-		//	| 'return' expression=expression ';';
+		//	| break='break' ';'
+		//	| return_vazio='return' ';'
+		//	| return='return' expression=expression ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'goto' identifier=IDz ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression=expression ';'
+		//'goto' identifier=IDz ';' | 'continue' ';' | break='break' ';' | return_vazio='return' ';' | return='return'
+		//expression=expression ';'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'goto' identifier=IDz ';'
@@ -4887,29 +4891,38 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_1_1() { return cSemicolonKeyword_1_1; }
 		
-		//'break' ';'
+		//break='break' ';'
 		public Group getGroup_2() { return cGroup_2; }
 		
+		//break='break'
+		public Assignment getBreakAssignment_2_0() { return cBreakAssignment_2_0; }
+		
 		//'break'
-		public Keyword getBreakKeyword_2_0() { return cBreakKeyword_2_0; }
+		public Keyword getBreakBreakKeyword_2_0_0() { return cBreakBreakKeyword_2_0_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_2_1() { return cSemicolonKeyword_2_1; }
 		
-		//'return' ';'
+		//return_vazio='return' ';'
 		public Group getGroup_3() { return cGroup_3; }
 		
+		//return_vazio='return'
+		public Assignment getReturn_vazioAssignment_3_0() { return cReturn_vazioAssignment_3_0; }
+		
 		//'return'
-		public Keyword getReturnKeyword_3_0() { return cReturnKeyword_3_0; }
+		public Keyword getReturn_vazioReturnKeyword_3_0_0() { return cReturn_vazioReturnKeyword_3_0_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_3_1() { return cSemicolonKeyword_3_1; }
 		
-		//'return' expression=expression ';'
+		//return='return' expression=expression ';'
 		public Group getGroup_4() { return cGroup_4; }
 		
+		//return='return'
+		public Assignment getReturnAssignment_4_0() { return cReturnAssignment_4_0; }
+		
 		//'return'
-		public Keyword getReturnKeyword_4_0() { return cReturnKeyword_4_0; }
+		public Keyword getReturnReturnKeyword_4_0_0() { return cReturnReturnKeyword_4_0_0; }
 		
 		//expression=expression
 		public Assignment getExpressionAssignment_4_1() { return cExpressionAssignment_4_1; }
@@ -4991,8 +5004,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
 		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')'
 		//	statement=statement
-		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement
-		//	expression=expression ')' statement=statement
+		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression
+		//	')' statement=statement
 		//	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
 		//	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')'
 		//	statement=statement;
@@ -7682,9 +7695,9 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//jump_statement:
 	//	'goto' identifier=IDz ';'
 	//	| 'continue' ';'
-	//	| 'break' ';'
-	//	| 'return' ';'
-	//	| 'return' expression=expression ';';
+	//	| break='break' ';'
+	//	| return_vazio='return' ';'
+	//	| return='return' expression=expression ';';
 	public Jump_statementElements getJump_statementAccess() {
 		return pJump_statement;
 	}
@@ -7698,8 +7711,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
 	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')'
 	//	statement=statement
-	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement
-	//	expression=expression ')' statement=statement
+	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression
+	//	')' statement=statement
 	//	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
 	//	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')'
 	//	statement=statement;
@@ -8194,7 +8207,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}
