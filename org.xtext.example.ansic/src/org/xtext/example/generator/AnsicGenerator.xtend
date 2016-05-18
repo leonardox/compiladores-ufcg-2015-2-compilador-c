@@ -182,7 +182,7 @@ class AnsicGenerator extends AbstractGenerator {
 				.postfix_expression.primary_expression
 				out += getNextLine() + "LD R0, " + firstOperator  + "\n";
 				if(secondOperator.identifier == null){
-					out += "ADD R0, RO, #" + secondOperator.constant.i_constant + "\n";	
+					out += getNextLine()+ "ADD R0, RO, #" + secondOperator.constant.i_constant + "\n";	
 				}else{
 					out += getNextLine() + "LD R1, " + secondOperator.identifier + "\n";
 					out += getNextLine() + "ADD RO, R0, R1 \n";

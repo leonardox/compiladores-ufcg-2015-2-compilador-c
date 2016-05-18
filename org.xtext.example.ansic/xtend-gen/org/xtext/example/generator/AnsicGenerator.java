@@ -524,30 +524,32 @@ public class AnsicGenerator extends AbstractGenerator {
           boolean _equals_1 = Objects.equal(_identifier, null);
           if (_equals_1) {
             String _out_1 = this.out;
+            String _nextLine_1 = this.getNextLine();
+            String _plus_3 = (_nextLine_1 + "ADD R0, RO, #");
             constant _constant = secondOperator.getConstant();
             int _i_constant = _constant.getI_constant();
-            String _plus_3 = ("ADD R0, RO, #" + Integer.valueOf(_i_constant));
-            String _plus_4 = (_plus_3 + "\n");
-            this.out = (_out_1 + _plus_4);
+            String _plus_4 = (_plus_3 + Integer.valueOf(_i_constant));
+            String _plus_5 = (_plus_4 + "\n");
+            this.out = (_out_1 + _plus_5);
           } else {
             String _out_2 = this.out;
-            String _nextLine_1 = this.getNextLine();
-            String _plus_5 = (_nextLine_1 + "LD R1, ");
-            String _identifier_1 = secondOperator.getIdentifier();
-            String _plus_6 = (_plus_5 + _identifier_1);
-            String _plus_7 = (_plus_6 + "\n");
-            this.out = (_out_2 + _plus_7);
-            String _out_3 = this.out;
             String _nextLine_2 = this.getNextLine();
-            String _plus_8 = (_nextLine_2 + "ADD RO, R0, R1 \n");
-            this.out = (_out_3 + _plus_8);
+            String _plus_6 = (_nextLine_2 + "LD R1, ");
+            String _identifier_1 = secondOperator.getIdentifier();
+            String _plus_7 = (_plus_6 + _identifier_1);
+            String _plus_8 = (_plus_7 + "\n");
+            this.out = (_out_2 + _plus_8);
+            String _out_3 = this.out;
+            String _nextLine_3 = this.getNextLine();
+            String _plus_9 = (_nextLine_3 + "ADD RO, R0, R1 \n");
+            this.out = (_out_3 + _plus_9);
           }
           String _out_4 = this.out;
-          String _nextLine_3 = this.getNextLine();
-          String _plus_9 = (_nextLine_3 + "ST ");
-          String _plus_10 = (_plus_9 + id);
-          String _plus_11 = (_plus_10 + ", RO \n");
-          _xblockexpression_2 = this.out = (_out_4 + _plus_11);
+          String _nextLine_4 = this.getNextLine();
+          String _plus_10 = (_nextLine_4 + "ST ");
+          String _plus_11 = (_plus_10 + id);
+          String _plus_12 = (_plus_11 + ", RO \n");
+          _xblockexpression_2 = this.out = (_out_4 + _plus_12);
         }
         _xifexpression = _xblockexpression_2;
       }
