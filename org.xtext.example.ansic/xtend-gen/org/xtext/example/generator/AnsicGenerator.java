@@ -22,6 +22,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.xtext.example.ansic.additive_expression;
+import org.xtext.example.ansic.additive_expression_complement;
 import org.xtext.example.ansic.additive_expression_linha;
 import org.xtext.example.ansic.and_expression;
 import org.xtext.example.ansic.and_expression_linha;
@@ -322,177 +323,237 @@ public class AnsicGenerator extends AbstractGenerator {
   }
   
   public String generateToAssig(final String id, final assignment_expression asexp) {
-    String _xifexpression = null;
-    AnsicValidator.ExpRetType _expType = AnsicValidator.getExpType(asexp);
-    boolean _equals = Objects.equal(_expType, null);
-    if (_equals) {
-      String _xblockexpression = null;
-      {
-        primary_expression rightSide = this.primaryExpFromAssigExp(asexp);
-        constant _constant = rightSide.getConstant();
-        boolean _notEquals = (!Objects.equal(_constant, null));
-        if (_notEquals) {
-          boolean _and = false;
-          constant _constant_1 = rightSide.getConstant();
-          String _f_constant = _constant_1.getF_constant();
-          boolean _notEquals_1 = (!Objects.equal(_f_constant, null));
-          if (!_notEquals_1) {
-            _and = false;
-          } else {
-            constant _constant_2 = rightSide.getConstant();
-            String _f_constant_1 = _constant_2.getF_constant();
-            boolean _isEmpty = _f_constant_1.isEmpty();
-            boolean _not = (!_isEmpty);
-            _and = _not;
-          }
-          if (_and) {
-            String _out = this.out;
-            String _nextLine = this.getNextLine();
-            String _plus = (_nextLine + "ST ");
-            String _plus_1 = (_plus + id);
-            String _plus_2 = (_plus_1 + ", #");
-            constant _constant_3 = rightSide.getConstant();
-            String _f_constant_2 = _constant_3.getF_constant();
-            String _string = _f_constant_2.toString();
-            String _plus_3 = (_plus_2 + _string);
-            String _plus_4 = (_plus_3 + "\n");
-            this.out = (_out + _plus_4);
-          } else {
-            boolean _or = false;
-            constant _constant_4 = rightSide.getConstant();
-            String _char = _constant_4.getChar();
-            boolean _equals_1 = Objects.equal(_char, null);
-            if (_equals_1) {
-              _or = true;
+    String _xblockexpression = null;
+    {
+      primary_expression rightSide = this.primaryExpFromAssigExp(asexp);
+      String _xifexpression = null;
+      AnsicValidator.ExpRetType _expType = AnsicValidator.getExpType(asexp);
+      boolean _equals = Objects.equal(_expType, null);
+      if (_equals) {
+        String _xblockexpression_1 = null;
+        {
+          constant _constant = rightSide.getConstant();
+          boolean _notEquals = (!Objects.equal(_constant, null));
+          if (_notEquals) {
+            boolean _and = false;
+            constant _constant_1 = rightSide.getConstant();
+            String _f_constant = _constant_1.getF_constant();
+            boolean _notEquals_1 = (!Objects.equal(_f_constant, null));
+            if (!_notEquals_1) {
+              _and = false;
             } else {
-              constant _constant_5 = rightSide.getConstant();
-              String _char_1 = _constant_5.getChar();
-              boolean _isEmpty_1 = _char_1.isEmpty();
-              _or = _isEmpty_1;
+              constant _constant_2 = rightSide.getConstant();
+              String _f_constant_1 = _constant_2.getF_constant();
+              boolean _isEmpty = _f_constant_1.isEmpty();
+              boolean _not = (!_isEmpty);
+              _and = _not;
             }
-            if (_or) {
-              String _out_1 = this.out;
-              String _nextLine_1 = this.getNextLine();
-              String _plus_5 = (_nextLine_1 + "ST ");
-              String _plus_6 = (_plus_5 + id);
-              String _plus_7 = (_plus_6 + ", #");
-              constant _constant_6 = rightSide.getConstant();
-              int _i_constant = _constant_6.getI_constant();
-              String _string_1 = Integer.valueOf(_i_constant).toString();
-              String _plus_8 = (_plus_7 + _string_1);
-              String _plus_9 = (_plus_8 + "\n");
-              this.out = (_out_1 + _plus_9);
+            if (_and) {
+              String _out = this.out;
+              String _nextLine = this.getNextLine();
+              String _plus = (_nextLine + "ST ");
+              String _plus_1 = (_plus + id);
+              String _plus_2 = (_plus_1 + ", #");
+              constant _constant_3 = rightSide.getConstant();
+              String _f_constant_2 = _constant_3.getF_constant();
+              String _string = _f_constant_2.toString();
+              String _plus_3 = (_plus_2 + _string);
+              String _plus_4 = (_plus_3 + "\n");
+              this.out = (_out + _plus_4);
+            } else {
+              boolean _or = false;
+              constant _constant_4 = rightSide.getConstant();
+              String _char = _constant_4.getChar();
+              boolean _equals_1 = Objects.equal(_char, null);
+              if (_equals_1) {
+                _or = true;
+              } else {
+                constant _constant_5 = rightSide.getConstant();
+                String _char_1 = _constant_5.getChar();
+                boolean _isEmpty_1 = _char_1.isEmpty();
+                _or = _isEmpty_1;
+              }
+              if (_or) {
+                String _out_1 = this.out;
+                String _nextLine_1 = this.getNextLine();
+                String _plus_5 = (_nextLine_1 + "ST ");
+                String _plus_6 = (_plus_5 + id);
+                String _plus_7 = (_plus_6 + ", #");
+                constant _constant_6 = rightSide.getConstant();
+                int _i_constant = _constant_6.getI_constant();
+                String _string_1 = Integer.valueOf(_i_constant).toString();
+                String _plus_8 = (_plus_7 + _string_1);
+                String _plus_9 = (_plus_8 + "\n");
+                this.out = (_out_1 + _plus_9);
+              }
             }
           }
-        }
-        String _xifexpression_1 = null;
-        boolean _and_1 = false;
-        String _identifier = rightSide.getIdentifier();
-        boolean _notEquals_2 = (!Objects.equal(_identifier, null));
-        if (!_notEquals_2) {
-          _and_1 = false;
-        } else {
-          String _identifier_1 = rightSide.getIdentifier();
-          boolean _isEmpty_2 = _identifier_1.isEmpty();
-          boolean _not_1 = (!_isEmpty_2);
-          _and_1 = _not_1;
-        }
-        if (_and_1) {
-          String _xifexpression_2 = null;
-          Set<String> _keySet = this.declarations.keySet();
-          String _identifier_2 = rightSide.getIdentifier();
-          String _plus_10 = ("#F_CALL_" + _identifier_2);
-          boolean _contains = _keySet.contains(_plus_10);
-          if (_contains) {
-            String _xblockexpression_1 = null;
-            {
-              String _out_2 = this.out;
-              String _nextLine_2 = this.getNextLine();
-              String _plus_11 = (_nextLine_2 + "ADD ");
-              String _plus_12 = (_plus_11 + "SP");
-              String _plus_13 = (_plus_12 + ", ");
-              String _plus_14 = (_plus_13 + "SP");
-              String _plus_15 = (_plus_14 + ", #");
-              String _plus_16 = (_plus_15 + this.currentFunc);
-              String _plus_17 = (_plus_16 + "size");
-              String _plus_18 = (_plus_17 + "\n");
-              this.out = (_out_2 + _plus_18);
-              String _out_3 = this.out;
-              String _nextLine_3 = this.getNextLine();
-              String _plus_19 = (_nextLine_3 + "ST ");
-              String _plus_20 = (_plus_19 + "*SP");
-              String _plus_21 = (_plus_20 + ", ");
-              String _plus_22 = (_plus_21 + "#");
-              String _plus_23 = (_plus_22 + Integer.valueOf((this.currentLine + 16)));
-              String _plus_24 = (_plus_23 + "\n");
-              this.out = (_out_3 + _plus_24);
-              String _out_4 = this.out;
-              String _nextLine_4 = this.getNextLine();
-              String _plus_25 = (_nextLine_4 + "BR ");
-              String _plus_26 = (_plus_25 + "#F_CALL_");
-              String _identifier_3 = rightSide.getIdentifier();
-              String _plus_27 = (_plus_26 + _identifier_3);
-              String _plus_28 = (_plus_27 + "\n");
-              this.out = (_out_4 + _plus_28);
-              String _out_5 = this.out;
-              String _nextLine_5 = this.getNextLine();
-              String _plus_29 = (_nextLine_5 + "SUB ");
-              String _plus_30 = (_plus_29 + "SP");
-              String _plus_31 = (_plus_30 + ", ");
-              String _plus_32 = (_plus_31 + "SP");
-              String _plus_33 = (_plus_32 + ", #");
-              String _plus_34 = (_plus_33 + this.currentFunc);
-              String _plus_35 = (_plus_34 + "size");
-              String _plus_36 = (_plus_35 + "\n");
-              this.out = (_out_5 + _plus_36);
-              String _out_6 = this.out;
-              String _nextLine_6 = this.getNextLine();
-              String _plus_37 = (_nextLine_6 + "LD ");
-              String _plus_38 = (_plus_37 + "R0");
-              String _plus_39 = (_plus_38 + ", ");
-              String _plus_40 = (_plus_39 + "SP*");
-              String _plus_41 = (_plus_40 + "\n");
-              this.out = (_out_6 + _plus_41);
-              String _out_7 = this.out;
-              String _nextLine_7 = this.getNextLine();
-              String _plus_42 = (_nextLine_7 + "ST ");
-              String _plus_43 = (_plus_42 + id);
-              String _plus_44 = (_plus_43 + ", R0");
-              String _plus_45 = (_plus_44 + "\n");
-              _xblockexpression_1 = this.out = (_out_7 + _plus_45);
-            }
-            _xifexpression_2 = _xblockexpression_1;
+          String _xifexpression_1 = null;
+          boolean _and_1 = false;
+          String _identifier = rightSide.getIdentifier();
+          boolean _notEquals_2 = (!Objects.equal(_identifier, null));
+          if (!_notEquals_2) {
+            _and_1 = false;
           } else {
-            String _xblockexpression_2 = null;
-            {
-              String _out_2 = this.out;
-              String _nextLine_2 = this.getNextLine();
-              String _plus_11 = (_nextLine_2 + "LD ");
-              String _plus_12 = (_plus_11 + "R0");
-              String _plus_13 = (_plus_12 + ", ");
-              String _identifier_3 = rightSide.getIdentifier();
-              String _plus_14 = (_plus_13 + _identifier_3);
-              String _plus_15 = (_plus_14 + "\n");
-              this.out = (_out_2 + _plus_15);
-              String _out_3 = this.out;
-              String _nextLine_3 = this.getNextLine();
-              String _plus_16 = (_nextLine_3 + "ST ");
-              String _plus_17 = (_plus_16 + id);
-              String _plus_18 = (_plus_17 + ", R0");
-              String _plus_19 = (_plus_18 + "\n");
-              _xblockexpression_2 = this.out = (_out_3 + _plus_19);
-            }
-            _xifexpression_2 = _xblockexpression_2;
+            String _identifier_1 = rightSide.getIdentifier();
+            boolean _isEmpty_2 = _identifier_1.isEmpty();
+            boolean _not_1 = (!_isEmpty_2);
+            _and_1 = _not_1;
           }
-          _xifexpression_1 = _xifexpression_2;
+          if (_and_1) {
+            String _xifexpression_2 = null;
+            Set<String> _keySet = this.declarations.keySet();
+            String _identifier_2 = rightSide.getIdentifier();
+            String _plus_10 = ("#F_CALL_" + _identifier_2);
+            boolean _contains = _keySet.contains(_plus_10);
+            if (_contains) {
+              String _xblockexpression_2 = null;
+              {
+                String _out_2 = this.out;
+                String _nextLine_2 = this.getNextLine();
+                String _plus_11 = (_nextLine_2 + "ADD ");
+                String _plus_12 = (_plus_11 + "SP");
+                String _plus_13 = (_plus_12 + ", ");
+                String _plus_14 = (_plus_13 + "SP");
+                String _plus_15 = (_plus_14 + ", #");
+                String _plus_16 = (_plus_15 + this.currentFunc);
+                String _plus_17 = (_plus_16 + "size");
+                String _plus_18 = (_plus_17 + "\n");
+                this.out = (_out_2 + _plus_18);
+                String _out_3 = this.out;
+                String _nextLine_3 = this.getNextLine();
+                String _plus_19 = (_nextLine_3 + "ST ");
+                String _plus_20 = (_plus_19 + "*SP");
+                String _plus_21 = (_plus_20 + ", ");
+                String _plus_22 = (_plus_21 + "#");
+                String _plus_23 = (_plus_22 + Integer.valueOf((this.currentLine + 16)));
+                String _plus_24 = (_plus_23 + "\n");
+                this.out = (_out_3 + _plus_24);
+                String _out_4 = this.out;
+                String _nextLine_4 = this.getNextLine();
+                String _plus_25 = (_nextLine_4 + "BR ");
+                String _plus_26 = (_plus_25 + "#F_CALL_");
+                String _identifier_3 = rightSide.getIdentifier();
+                String _plus_27 = (_plus_26 + _identifier_3);
+                String _plus_28 = (_plus_27 + "\n");
+                this.out = (_out_4 + _plus_28);
+                String _out_5 = this.out;
+                String _nextLine_5 = this.getNextLine();
+                String _plus_29 = (_nextLine_5 + "SUB ");
+                String _plus_30 = (_plus_29 + "SP");
+                String _plus_31 = (_plus_30 + ", ");
+                String _plus_32 = (_plus_31 + "SP");
+                String _plus_33 = (_plus_32 + ", #");
+                String _plus_34 = (_plus_33 + this.currentFunc);
+                String _plus_35 = (_plus_34 + "size");
+                String _plus_36 = (_plus_35 + "\n");
+                this.out = (_out_5 + _plus_36);
+                String _out_6 = this.out;
+                String _nextLine_6 = this.getNextLine();
+                String _plus_37 = (_nextLine_6 + "LD ");
+                String _plus_38 = (_plus_37 + "R0");
+                String _plus_39 = (_plus_38 + ", ");
+                String _plus_40 = (_plus_39 + "SP*");
+                String _plus_41 = (_plus_40 + "\n");
+                this.out = (_out_6 + _plus_41);
+                String _out_7 = this.out;
+                String _nextLine_7 = this.getNextLine();
+                String _plus_42 = (_nextLine_7 + "ST ");
+                String _plus_43 = (_plus_42 + id);
+                String _plus_44 = (_plus_43 + ", R0");
+                String _plus_45 = (_plus_44 + "\n");
+                _xblockexpression_2 = this.out = (_out_7 + _plus_45);
+              }
+              _xifexpression_2 = _xblockexpression_2;
+            } else {
+              String _xblockexpression_3 = null;
+              {
+                String _out_2 = this.out;
+                String _nextLine_2 = this.getNextLine();
+                String _plus_11 = (_nextLine_2 + "LD ");
+                String _plus_12 = (_plus_11 + "R0");
+                String _plus_13 = (_plus_12 + ", ");
+                String _identifier_3 = rightSide.getIdentifier();
+                String _plus_14 = (_plus_13 + _identifier_3);
+                String _plus_15 = (_plus_14 + "\n");
+                this.out = (_out_2 + _plus_15);
+                String _out_3 = this.out;
+                String _nextLine_3 = this.getNextLine();
+                String _plus_16 = (_nextLine_3 + "ST ");
+                String _plus_17 = (_plus_16 + id);
+                String _plus_18 = (_plus_17 + ", R0");
+                String _plus_19 = (_plus_18 + "\n");
+                _xblockexpression_3 = this.out = (_out_3 + _plus_19);
+              }
+              _xifexpression_2 = _xblockexpression_3;
+            }
+            _xifexpression_1 = _xifexpression_2;
+          }
+          _xblockexpression_1 = _xifexpression_1;
         }
-        _xblockexpression = _xifexpression_1;
+        _xifexpression = _xblockexpression_1;
+      } else {
+        String _xblockexpression_2 = null;
+        {
+          primary_expression _primaryExpFromAssigExp = this.primaryExpFromAssigExp(asexp);
+          String firstOperator = _primaryExpFromAssigExp.getIdentifier();
+          conditional_expression _conditional_expression = asexp.getConditional_expression();
+          logical_or_expression _logical_or_expression = _conditional_expression.getLogical_or_expression();
+          logical_and_expression _logical_and_expression = _logical_or_expression.getLogical_and_expression();
+          inclusive_or_expression _inclusive_or_expression = _logical_and_expression.getInclusive_or_expression();
+          exclusive_or_expression _exclusive_or_expression = _inclusive_or_expression.getExclusive_or_expression();
+          and_expression _and_expression = _exclusive_or_expression.getAnd_expression();
+          equality_expression _equality_expression = _and_expression.getEquality_expression();
+          relational_expression _relational_expression = _equality_expression.getRelational_expression();
+          shift_expression _shift_expression = _relational_expression.getShift_expression();
+          additive_expression _additive_expression = _shift_expression.getAdditive_expression();
+          additive_expression_linha _additive_expression_linha = _additive_expression.getAdditive_expression_linha();
+          additive_expression_complement _additive_expression_complement = _additive_expression_linha.getAdditive_expression_complement();
+          multiplicative_expression _multiplicative_expression = _additive_expression_complement.getMultiplicative_expression();
+          cast_expression _cast_expression = _multiplicative_expression.getCast_expression();
+          unary_expression _unary_expression = _cast_expression.getUnary_expression();
+          postfix_expression _postfix_expression = _unary_expression.getPostfix_expression();
+          primary_expression secondOperator = _postfix_expression.getPrimary_expression();
+          String _out = this.out;
+          String _nextLine = this.getNextLine();
+          String _plus = (_nextLine + "LD R0, ");
+          String _plus_1 = (_plus + firstOperator);
+          String _plus_2 = (_plus_1 + "\n");
+          this.out = (_out + _plus_2);
+          String _identifier = secondOperator.getIdentifier();
+          boolean _equals_1 = Objects.equal(_identifier, null);
+          if (_equals_1) {
+            String _out_1 = this.out;
+            constant _constant = secondOperator.getConstant();
+            int _i_constant = _constant.getI_constant();
+            String _plus_3 = ("ADD R0, RO, #" + Integer.valueOf(_i_constant));
+            String _plus_4 = (_plus_3 + "\n");
+            this.out = (_out_1 + _plus_4);
+          } else {
+            String _out_2 = this.out;
+            String _nextLine_1 = this.getNextLine();
+            String _plus_5 = (_nextLine_1 + "LD R1, ");
+            String _identifier_1 = secondOperator.getIdentifier();
+            String _plus_6 = (_plus_5 + _identifier_1);
+            String _plus_7 = (_plus_6 + "\n");
+            this.out = (_out_2 + _plus_7);
+            String _out_3 = this.out;
+            String _nextLine_2 = this.getNextLine();
+            String _plus_8 = (_nextLine_2 + "ADD RO, R0, R1 \n");
+            this.out = (_out_3 + _plus_8);
+          }
+          String _out_4 = this.out;
+          String _nextLine_3 = this.getNextLine();
+          String _plus_9 = (_nextLine_3 + "ST ");
+          String _plus_10 = (_plus_9 + id);
+          String _plus_11 = (_plus_10 + ", RO \n");
+          _xblockexpression_2 = this.out = (_out_4 + _plus_11);
+        }
+        _xifexpression = _xblockexpression_2;
       }
-      _xifexpression = _xblockexpression;
-    } else {
-      _xifexpression = null;
+      _xblockexpression = _xifexpression;
     }
-    return _xifexpression;
+    return _xblockexpression;
   }
   
   public String generateForDecl(final statement s) {

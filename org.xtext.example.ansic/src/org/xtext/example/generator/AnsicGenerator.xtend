@@ -16,6 +16,7 @@ import org.xtext.example.ansic.selection_statement
 import org.xtext.example.validation.AnsicValidator
 import org.xtext.example.validation.AnsicValidator.ExpRetType
 import java.io.PrintWriter
+import org.eclipse.xtext.parser.packrat.tokens.AssignmentToken.End
 
 /**
  * Generates code from your model files on save.
@@ -145,8 +146,9 @@ class AnsicGenerator extends AbstractGenerator {
 	}
 	
 	def generateToAssig(String id, assignment_expression asexp){
+		var rightSide = primaryExpFromAssigExp(asexp);
 		if(AnsicValidator.getExpType(asexp) == null){
-				var rightSide = primaryExpFromAssigExp(asexp);
+				
 				if(rightSide.constant != null){
 				//É uma atribuição com uma contante: x=a;
 					if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
@@ -172,6 +174,21 @@ class AnsicGenerator extends AbstractGenerator {
 				}
 			}else{
 				//Tratar quando é x = x+a ou x=x+2
+				var firstOperator = primaryExpFromAssigExp(asexp).identifier
+				var secondOperator = asexp.conditional_expression.logical_or_expression.logical_and_expression
+				.inclusive_or_expression.exclusive_or_expression.and_expression.equality_expression
+				.relational_expression.shift_expression.additive_expression.additive_expression_linha
+				.additive_expression_complement.multiplicative_expression.cast_expression.unary_expression
+				.postfix_expression.primary_expression
+				out += getNextLine() + "LD R0, " + firstOperator  + "\n";
+				if(secondOperator.identifier == null){
+					out += "ADD R0, RO, #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD R1, " + secondOperator.identifier + "\n";
+					out += getNextLine() + "ADD RO, R0, R1 \n";
+				}
+				
+				out += getNextLine() + "ST " + id + ", RO \n";
 			}
 	}
 	

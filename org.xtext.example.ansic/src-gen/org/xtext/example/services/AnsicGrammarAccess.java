@@ -4991,8 +4991,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 		//	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
 		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')'
 		//	statement=statement
-		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression
-		//	')' statement=statement
+		//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement
+		//	expression=expression ')' statement=statement
 		//	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
 		//	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')'
 		//	statement=statement;
@@ -7698,8 +7698,8 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	//	| 'do' statement=statement 'while' '(' expression=expression ')' ';'
 	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement ')'
 	//	statement=statement
-	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement expression=expression
-	//	')' statement=statement
+	//	| 'for' '(' expression_statement=expression_statement expression_statement2=expression_statement
+	//	expression=expression ')' statement=statement
 	//	| 'for' '(' declaration=declaration expression_statement=expression_statement ')' statement=statement
 	//	| 'for' '(' declaration=declaration expression_statement=expression_statement expression=expression ')'
 	//	statement=statement;
@@ -8194,8 +8194,7 @@ public class AnsicGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' |
-	//	"'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	}
