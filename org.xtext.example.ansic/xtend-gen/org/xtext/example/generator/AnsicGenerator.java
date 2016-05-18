@@ -207,9 +207,9 @@ public class AnsicGenerator extends AbstractGenerator {
           if (_not) {
             String _plus = (Integer.valueOf((this.currentLine + 8)) + "");
             this.cases.put("#DEFAULT", _plus);
-            this.caseNumber++;
             String _plus_1 = (Integer.valueOf((this.currentLine + 8)) + "");
             this.cases.put(("#CASE_" + Integer.valueOf(this.caseNumber)), _plus_1);
+            this.caseNumber++;
           }
         }
       }
@@ -274,13 +274,9 @@ public class AnsicGenerator extends AbstractGenerator {
           if (_not) {
             String _xblockexpression_2 = null;
             {
-              if ((!this.firstFun)) {
-                String _out = this.out;
-                this.out = (_out + "BR *0(SP) \n");
-              }
               this.firstFun = false;
-              String _out_1 = this.out;
-              this.out = (_out_1 + ((("//" + fName) + " code.") + "\n"));
+              String _out = this.out;
+              this.out = (_out + ((("//" + fName) + " code.") + "\n"));
               this.currentFunc = fName;
               String _plus = (Integer.valueOf((this.currentLine + 8)) + "");
               _xblockexpression_2 = this.declarations.put(("#F_CALL_" + fName), _plus);
@@ -342,7 +338,7 @@ public class AnsicGenerator extends AbstractGenerator {
               String _nextLine = this.getNextLine();
               String _plus = (_nextLine + "BEQ ");
               String _plus_1 = (_plus + "#CASE_");
-              String _plus_2 = (_plus_1 + Integer.valueOf(1));
+              String _plus_2 = (_plus_1 + Integer.valueOf(this.caseNumber));
               String _plus_3 = (_plus_2 + "\n");
               this.out = (_out + _plus_3);
               this.onFirstCase = false;
@@ -357,7 +353,6 @@ public class AnsicGenerator extends AbstractGenerator {
               }
               String _plus_7 = (Integer.valueOf((this.currentLine + 8)) + "");
               this.cases.put(("#CASE_" + Integer.valueOf(this.caseNumber)), _plus_7);
-              this.caseNumber++;
               String _out_2 = this.out;
               String _nextLine_2 = this.getNextLine();
               String _plus_8 = (_nextLine_2 + "BEQ ");
@@ -365,13 +360,14 @@ public class AnsicGenerator extends AbstractGenerator {
               String _plus_10 = (_plus_9 + Integer.valueOf((this.caseNumber + 1)));
               String _plus_11 = (_plus_10 + "\n");
               this.out = (_out_2 + _plus_11);
+              this.caseNumber++;
             }
           } else {
             String _plus_12 = (Integer.valueOf((this.currentLine + 8)) + "");
             this.cases.put("#DEFAULT", _plus_12);
-            this.caseNumber++;
             String _plus_13 = (Integer.valueOf((this.currentLine + 8)) + "");
             this.cases.put(("#CASE_" + Integer.valueOf(this.caseNumber)), _plus_13);
+            this.caseNumber++;
           }
           statement _statement_3 = b.getStatement();
           labeled_statement _labeled_statement_2 = _statement_3.getLabeled_statement();

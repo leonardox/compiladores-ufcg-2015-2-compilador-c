@@ -67,6 +67,7 @@ class AnsicGenerator extends AbstractGenerator {
 		var keys2 = cases.keySet();
 		for(var i =0; i< keys2.size(); i++){
 			out = out.replace(keys2.get(i), cases.get(keys2.get(i)));
+			//out += keys2.get(i) + " : " + cases.get(keys2.get(i)) + "\n";
 		}
 		out += "----------------------END----------------------------" + "\n";
 		out += "\n";
@@ -108,9 +109,9 @@ class AnsicGenerator extends AbstractGenerator {
         		passedSwitch = false;
         		m_insideSwitch = false;
         		if(!cases.containsKey("#DEFAULT")){
-        			cases.put("#DEFAULT", (currentLine+8)+"");
-        			caseNumber++;
+        			cases.put("#DEFAULT", (currentLine+8)+"");        			
 					cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
+					caseNumber++;
         		}
         	}
         }
@@ -142,9 +143,6 @@ class AnsicGenerator extends AbstractGenerator {
         	var func = current as function_definition;
         	var fName = func.declarator.direct_declarator.identifier.toString();
         	if(!currentFunc.equals(fName)){
-        		if(!firstFun){
-        			out+= "BR *0(SP) \n";
-        		}
         		firstFun = false;
         		out += "//" + fName + " code." + "\n";
         		currentFunc = fName;
@@ -166,8 +164,8 @@ class AnsicGenerator extends AbstractGenerator {
 					//Eh um case!
 					if(onFirstCase){
 					//Checa se nao goto Next case
-					out += getNextLine() + "BEQ " + "#CASE_"+1+  "\n";
-					onFirstCase = false;
+						out += getNextLine() + "BEQ " + "#CASE_"+caseNumber+  "\n";
+						onFirstCase = false;
 					}else{
 						//Final de outro case
 						//Desloque imediatamente para default
@@ -176,14 +174,14 @@ class AnsicGenerator extends AbstractGenerator {
 							//Checa se nao goto Next case							
 						}
 						cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
-						caseNumber++;
 						out += getNextLine() + "BEQ " + "#CASE_"+(caseNumber+1)+ "\n";
+						caseNumber++;						
 					}
 				}else{
 					//Eh um default
-					cases.put("#DEFAULT", (currentLine+8)+"");
-					caseNumber++;
+					cases.put("#DEFAULT", (currentLine+8)+"");					
 					cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
+					caseNumber++;									
 				}
 				if(b.statement.labeled_statement.statement != null){
 					checkForStatement(b.statement.labeled_statement.statement);
