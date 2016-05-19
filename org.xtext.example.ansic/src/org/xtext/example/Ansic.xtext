@@ -423,8 +423,8 @@ additive_expression_linha
 	:(additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?;
 
 additive_expression_complement:
-	'+' multiplicative_expression=multiplicative_expression
-	|'-' multiplicative_expression=multiplicative_expression
+	  mais='+' multiplicative_expression=multiplicative_expression
+	| menos='-' multiplicative_expression=multiplicative_expression
 ;
 
 shift_expression

@@ -225,6 +225,8 @@ class AnsicValidator extends AbstractAnsicValidator {
 		}
 		var current10 = current9.additive_expression;
 		if(current10.additive_expression_linha != null){
+			println("MAIS1: " + current10.additive_expression_linha.additive_expression_complement.mais);
+			println("MENOS1: " + current10.additive_expression_linha.additive_expression_complement.menos);
 			return ExpRetType.NUMERIC;
 		}
 		var curent11 = current10.multiplicative_expression;

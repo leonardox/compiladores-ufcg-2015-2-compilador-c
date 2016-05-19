@@ -251,22 +251,7 @@ class AnsicGenerator extends AbstractGenerator {
 				}
 			}else{
 				//Tratar quando é x = x+a ou x=x+2
-				var firstOperator = primaryExpFromAssigExp(asexp).identifier
-				var secondOperator = asexp.conditional_expression.logical_or_expression.logical_and_expression
-				.inclusive_or_expression.exclusive_or_expression.and_expression.equality_expression
-				.relational_expression.shift_expression.additive_expression.additive_expression_linha
-				.additive_expression_complement.multiplicative_expression.cast_expression.unary_expression
-				.postfix_expression.primary_expression
-				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
-				var storeReg = reg;
-				if(secondOperator.identifier == null){
-					out += getNextLine()+ "ADD "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
-				}else{
-					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
-					out += getNextLine() + "ADD "+storeReg+", "+storeReg+", "+reg+" \n";
-				}
-				
-				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
+				generateCodeToExp(asexp, id);
 			}
 	}
 	
@@ -297,6 +282,81 @@ class AnsicGenerator extends AbstractGenerator {
 //		 item.statement.expression_statement.expression.assignment_expression.compile();
 //	}
 	
+	
+	def generateCodeToExp(assignment_expression exp, String id){
+		var firstOperator = primaryExpFromAssigExp(exp).identifier
+		var current = exp.conditional_expression;
+		if(current.conditional_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current2 = current.logical_or_expression;
+		if(current2.logical_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current3 = current2.logical_and_expression;
+		if(current3.logical_and_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current4 = current3.inclusive_or_expression;
+		if(current4.inclusive_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current5 = current4.exclusive_or_expression;
+		if(current5.exclusive_or_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current6 = current5.and_expression;
+		if(current6.and_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current7 = current6.equality_expression;
+		if(current7.equality_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current8 = current7.relational_expression;
+		if(current8.relational_expression_linha != null){
+			return ExpRetType.BOOL;
+		}
+		var current9 = current8.shift_expression;
+		if(current9.shift_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		var current10 = current9.additive_expression;
+		if(current10.additive_expression_linha != null){
+			var secondOperator = current10.additive_expression_linha.additive_expression_complement.multiplicative_expression.cast_expression.unary_expression
+				.postfix_expression.primary_expression;
+			if(current10.additive_expression_linha.additive_expression_complement.mais != null){
+				//Eh mais
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				if(secondOperator.identifier == null){
+					out += getNextLine()+ "ADD "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "ADD "+storeReg+", "+storeReg+", "+reg+" \n";
+				}
+				
+				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
+			}else{
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				if(secondOperator.identifier == null){
+					out += getNextLine()+ "SUB "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "SUB "+storeReg+", "+storeReg+", "+reg+" \n";
+				}
+				
+				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
+			}
+			return ExpRetType.NUMERIC;
+		}
+		var curent11 = current10.multiplicative_expression;
+		if(curent11.multiplicative_expression_linha != null){
+			return ExpRetType.NUMERIC;
+		}
+		return null;		
+	}
 	def static getExpType(assignment_expression exp){
 		var current = exp.conditional_expression;
 		if(current.conditional_expression_linha != null){
