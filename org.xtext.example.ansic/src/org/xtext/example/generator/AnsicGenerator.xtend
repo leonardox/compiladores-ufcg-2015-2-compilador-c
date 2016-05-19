@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.xtext.example.ansic.conditional_expression
 import org.eclipse.xtext.parser.packrat.tokens.AssignmentToken.End
 import org.xtext.example.ansic.assignment_expression
 import org.xtext.example.ansic.block_item
@@ -18,6 +19,7 @@ import org.xtext.example.ansic.selection_statement
 import org.xtext.example.ansic.statement
 import org.xtext.example.validation.AnsicValidator
 import org.xtext.example.validation.AnsicValidator.ExpRetType
+import java.util.Stack
 
 /**
  * Generates code from your model files on save.
@@ -30,6 +32,7 @@ class AnsicGenerator extends AbstractGenerator {
 	var currentLine = 0;
 	private var declarations = <String,String>newHashMap();
 	private var cases = <String,String>newHashMap();
+	private var switchExp = new Stack<String>();
 	private var currentFunc = "";
 	private var onFirstCase = true;
 	private var caseNumber = 0;
@@ -69,6 +72,7 @@ class AnsicGenerator extends AbstractGenerator {
 			out = out.replace(keys2.get(i), cases.get(keys2.get(i)));
 			//out += keys2.get(i) + " : " + cases.get(keys2.get(i)) + "\n";
 		}
+		out += "BR *0(SP)\n";
 		out += "----------------------END----------------------------" + "\n";
 		out += "\n";
 		println("ENTROOOOOOOOOOOOOOOOOO");
@@ -143,6 +147,9 @@ class AnsicGenerator extends AbstractGenerator {
         	var func = current as function_definition;
         	var fName = func.declarator.direct_declarator.identifier.toString();
         	if(!currentFunc.equals(fName)){
+        		if(!currentFunc.isEmpty){
+        			out += "BR *0(SP)\n";
+        		}
         		firstFun = false;
         		out += "//" + fName + " code." + "\n";
         		currentFunc = fName;
@@ -162,20 +169,57 @@ class AnsicGenerator extends AbstractGenerator {
 			if(b.statement != null && b.statement.labeled_statement != null){				
 				if(b.statement.labeled_statement.conditional_expression != null){
 					//Eh um case!
-					if(onFirstCase){
-					//Checa se nao goto Next case
-						out += getNextLine() + "BEQ " + "#CASE_"+caseNumber+  "\n";
-						onFirstCase = false;
-					}else{
-						//Final de outro case
-						//Desloque imediatamente para default
+					if(!onFirstCase) {
+						cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
+						caseNumber++;
 						if(lastIsBreak){
 							out += getNextLine() + "BR " + "#DEFAULT"+  "\n";							
 							//Checa se nao goto Next case							
+						}		
+					}
+					var condexp = b.statement.labeled_statement.conditional_expression;
+					var registradorComExpressaoDoCase = "";
+					if(getExpType(condexp) == null){
+						//É uma ID ou contante
+						var rightSide = condexp.
+							logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+							and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+							multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression;
+						if(rightSide.constant != null){
+							//É uma atribuição com uma contante: x=a;
+							if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
+									out += getNextLine() + "LD " + nextReg + ", #" + rightSide.constant.f_constant + "\n";							
+							}else if(rightSide.constant.char == null || rightSide.constant.char.isEmpty()){
+									out += getNextLine() + "LD " + nextReg + ", #" + rightSide.constant.i_constant + "\n";
+							}								
+						}else if(declarations.keySet.contains("#F_CALL_"+rightSide.identifier)){
+							//É uma chamada a função
+							out += getNextLine() + "ADD " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+							out += getNextLine() + "ST " + "*SP" + ", " +  "#" + (currentLine+16) +  "\n";
+							out += getNextLine() + "BR " + "#F_CALL_"+rightSide.identifier+  "\n";
+							out += getNextLine() + "SUB " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+							out += getNextLine() + "LD " + nextReg + ", " + "SP*" +  "\n";					
+						}else{
+							out += getNextLine() + "LD " + nextReg + ", " + rightSide.identifier + "\n";
 						}
-						cases.put("#CASE_"+caseNumber, (currentLine+8)+"");
-						out += getNextLine() + "BEQ " + "#CASE_"+(caseNumber+1)+ "\n";
-						caseNumber++;						
+						registradorComExpressaoDoCase = "R"+currentReg;
+					}else{
+						//É uma expressão
+						var firstOp = condexp.
+							logical_or_expression.logical_and_expression.inclusive_or_expression.exclusive_or_expression.
+							and_expression.equality_expression.relational_expression.shift_expression.additive_expression.
+							multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression.identifier;
+						registradorComExpressaoDoCase = generateCodeToExp(condexp, firstOp);
+					}
+					if(onFirstCase){
+					//Checa se nao goto Next case
+						out += getNextLine() + "BNE " +registradorComExpressaoDoCase + ", " + switchExp.firstElement + " #CASE_"+caseNumber+  "\n";
+						onFirstCase = false;
+						//caseNumber++;
+					}else{
+						//Final de outro case
+						//Desloque imediatamente para default				
+						out += getNextLine() + "BNE " +registradorComExpressaoDoCase + ", " + switchExp.firstElement + " #CASE_"+caseNumber+  "\n";												
 					}
 				}else{
 					//Eh um default
@@ -212,6 +256,39 @@ class AnsicGenerator extends AbstractGenerator {
 	
 	def gerarCodigoParaSwitch(selection_statement jump){
 		//Gerar codigo para switch aqui...
+		//Checa se é expressão
+		//switchExp.push(jump.expression.assignment_expression);
+		if(getExpType(jump.expression.assignment_expression.conditional_expression) == null){
+			//Tratar quando é ID ou constante
+			var rightSide = primaryExpFromAssigExp(jump.expression.assignment_expression);
+			if(rightSide.constant != null){
+				//É uma atribuição com uma contante: x=a;
+					if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
+							out += getNextLine() + "LD " + nextReg + ", #" + rightSide.constant.f_constant + "\n";							
+					}else if(rightSide.constant.char == null || rightSide.constant.char.isEmpty()){
+							out += getNextLine() + "LD " + nextReg + ", #" + rightSide.constant.i_constant + "\n";
+					}								
+			}
+				if(rightSide.identifier != null && !rightSide.identifier.isEmpty()){
+					//É uma atribuição com um ID
+					if(declarations.keySet.contains("#F_CALL_"+rightSide.identifier)){
+						//É uma chamada a função
+						out += getNextLine() + "ADD " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+						out += getNextLine() + "ST " + "*SP" + ", " +  "#" + (currentLine+16) +  "\n";
+						out += getNextLine() + "BR " + "#F_CALL_"+rightSide.identifier+  "\n";
+						out += getNextLine() + "SUB " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
+						out += getNextLine() + "LD " + nextReg + ", " + "SP*" +  "\n";					
+					}else{
+						out += getNextLine() + "LD " + nextReg + ", " + rightSide.identifier + "\n";
+					}				
+				}
+				switchExp.push("R"+currentReg);	
+		}else{
+			//Tratar quando é uma expressão
+			//Crivar nova variavel e colocar na pilha
+			var regComExpressãoDoSwitch = generateCodeToExp(jump.expression.assignment_expression.conditional_expression, primaryExpFromAssigExp(jump.expression.assignment_expression).identifier);
+			switchExp.push(regComExpressãoDoSwitch);
+		}
 	}
 	
 	def checkForStatement(statement s) {
@@ -224,8 +301,7 @@ class AnsicGenerator extends AbstractGenerator {
 	
 	def generateToAssig(String id, assignment_expression asexp){
 		var rightSide = primaryExpFromAssigExp(asexp);
-		if(AnsicValidator.getExpType(asexp) == null){
-				
+		if(getExpType(asexp.conditional_expression) == null){
 				if(rightSide.constant != null){
 				//É uma atribuição com uma contante: x=a;
 					if(rightSide.constant.f_constant != null && !rightSide.constant.f_constant.isEmpty()){
@@ -244,14 +320,15 @@ class AnsicGenerator extends AbstractGenerator {
 						out += getNextLine() + "SUB " + "SP" + ", " + "SP" +", #" + currentFunc+"size"+  "\n";
 						out += getNextLine() + "LD " + nextReg + ", " + "SP*" +  "\n";
 						out += getNextLine() + "ST " + id + ", " + getReg + "\n";						
-					}else{						
+					}else{
 						out += getNextLine() + "LD " + nextReg + ", " + rightSide.identifier + "\n";
 						out += getNextLine() + "ST " + id + ", "+ getReg + "\n";	
 					}				
 				}
 			}else{
 				//Tratar quando é x = x+a ou x=x+2
-				generateCodeToExp(asexp, id);
+				var storeReg  = generateCodeToExp(asexp.conditional_expression, primaryExpFromAssigExp(asexp).identifier);
+				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
 			}
 	}
 	
@@ -283,43 +360,130 @@ class AnsicGenerator extends AbstractGenerator {
 //	}
 	
 	
-	def generateCodeToExp(assignment_expression exp, String id){
-		var firstOperator = primaryExpFromAssigExp(exp).identifier
-		var current = exp.conditional_expression;
-		if(current.conditional_expression_linha != null){
-			return ExpRetType.BOOL;
-		}
+	def generateCodeToExp(conditional_expression current, String firstOperator){
+		//var firstOperator = primaryExpFromAssigExp(exp).identifier
 		var current2 = current.logical_or_expression;
 		if(current2.logical_or_expression_linha != null){
-			return ExpRetType.BOOL;
+			var secondOperator = current2.logical_or_expression_linha.logical_and_expression.inclusive_or_expression.exclusive_or_expression
+								.and_expression.equality_expression.relational_expression.shift_expression.additive_expression
+								.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression
+			out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+			var storeReg = reg;
+			out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+			out += getNextLine() + "OR "+storeReg+", "+storeReg+", "+reg+" \n";
+			return storeReg;		
 		}
 		var current3 = current2.logical_and_expression;
 		if(current3.logical_and_expression_linha != null){
-			return ExpRetType.BOOL;
+			var secondOperator = current3.logical_and_expression_linha.inclusive_or_expression.exclusive_or_expression.and_expression
+								.equality_expression.relational_expression.shift_expression.additive_expression.multiplicative_expression
+								.cast_expression.unary_expression.postfix_expression.primary_expression
+			out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+			var storeReg = reg;
+			out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+			out += getNextLine() + "AND "+storeReg+", "+storeReg+", "+reg+" \n";
+			return storeReg;		
 		}
 		var current4 = current3.inclusive_or_expression;
 		if(current4.inclusive_or_expression_linha != null){
-			return ExpRetType.BOOL;
+			//FALTA
+			return "";
 		}
 		var current5 = current4.exclusive_or_expression;
 		if(current5.exclusive_or_expression_linha != null){
-			return ExpRetType.BOOL;
+			var secondOperator = current5.exclusive_or_expression_linha.and_expression.equality_expression.relational_expression.shift_expression
+								.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression
+								.primary_expression
+			out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+			var storeReg = reg;
+			out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+			out += getNextLine() + "XOR "+storeReg+", "+storeReg+", "+reg+" \n";
+			return storeReg;
 		}
 		var current6 = current5.and_expression;
 		if(current6.and_expression_linha != null){
-			return ExpRetType.BOOL;
+			//FALTA
+			return "";
 		}
 		var current7 = current6.equality_expression;
 		if(current7.equality_expression_linha != null){
-			return ExpRetType.BOOL;
+			var secondOperator = current7.equality_expression_linha.equality_expression_complement.relational_expression.shift_expression
+								.additive_expression.multiplicative_expression.cast_expression.unary_expression.postfix_expression.primary_expression
+			if (current7.equality_expression_linha.equality_expression_complement.igual != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+				out += getNextLine() + "SEQ "+storeReg+", "+storeReg+", "+reg+" \n";
+				return storeReg;			
+			}
+			else if (current7.equality_expression_linha.equality_expression_complement.menor != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+				out += getNextLine() + "SLT "+storeReg+", "+storeReg+", "+reg+" \n";
+				return storeReg;			
+			}
+			else if (current7.equality_expression_linha.equality_expression_complement.maior != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+				out += getNextLine() + "SGT "+storeReg+", "+storeReg+", "+reg+" \n";
+				return storeReg;			
+			}
+			else if (current7.equality_expression_linha.equality_expression_complement.menor_igual != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+				out += getNextLine() + "SLE "+storeReg+", "+storeReg+", "+reg+" \n";
+				return storeReg;			
+			}	
+			else if (current7.equality_expression_linha.equality_expression_complement.maior_igual != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+				out += getNextLine() + "SGE "+storeReg+", "+storeReg+", "+reg+" \n";
+				return storeReg;			
+			}
+			else {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+				out += getNextLine() + "SNE "+storeReg+", "+storeReg+", "+reg+" \n";
+				return storeReg;			
+			}			
 		}
 		var current8 = current7.relational_expression;
 		if(current8.relational_expression_linha != null){
-			return ExpRetType.BOOL;
+			return "";
 		}
 		var current9 = current8.shift_expression;
 		if(current9.shift_expression_linha != null){
-			return ExpRetType.NUMERIC;
+			var secondOperator = current9.shift_expression_linha.shift_expression_complement.additive_expression.multiplicative_expression
+								.cast_expression.unary_expression.postfix_expression.primary_expression
+			if (current9.shift_expression_linha.shift_expression_complement.sleft != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				if(secondOperator.identifier == null){
+					out += getNextLine()+ "SLL "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "SLL "+storeReg+", "+storeReg+", "+reg+" \n";
+				}
+				
+				return storeReg;
+			}
+			else {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				if(secondOperator.identifier == null){
+					out += getNextLine()+ "SRL "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "SRL "+storeReg+", "+storeReg+", "+reg+" \n";
+				}
+				
+				return storeReg;
+			}			
 		}
 		var current10 = current9.additive_expression;
 		if(current10.additive_expression_linha != null){
@@ -335,8 +499,8 @@ class AnsicGenerator extends AbstractGenerator {
 					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
 					out += getNextLine() + "ADD "+storeReg+", "+storeReg+", "+reg+" \n";
 				}
-				
-				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
+								
+				return storeReg;
 			}else{
 				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
 				var storeReg = reg;
@@ -347,21 +511,43 @@ class AnsicGenerator extends AbstractGenerator {
 					out += getNextLine() + "SUB "+storeReg+", "+storeReg+", "+reg+" \n";
 				}
 				
-				out += getNextLine() + "ST " + id + ", "+storeReg+" \n";
+				return storeReg;
 			}
-			return ExpRetType.NUMERIC;
 		}
-		var curent11 = current10.multiplicative_expression;
-		if(curent11.multiplicative_expression_linha != null){
-			return ExpRetType.NUMERIC;
+		var current11 = current10.multiplicative_expression;
+		if(current11.multiplicative_expression_linha != null){
+			var secondOperator = current11.multiplicative_expression_linha.multiplicative_expression_complement.cast_expression
+								.unary_expression.postfix_expression.primary_expression;
+			if (current11.multiplicative_expression_linha.multiplicative_expression_complement.multiplica != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				if(secondOperator.identifier == null){
+					out += getNextLine()+ "MUL "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "MUL "+storeReg+", "+storeReg+", "+reg+" \n";
+				}
+				return storeReg;
+			}
+			else if (current11.multiplicative_expression_linha.multiplicative_expression_complement.divide != null) {
+				out += getNextLine() + "LD "+ nextReg +", " + firstOperator  + "\n";
+				var storeReg = reg;
+				if(secondOperator.identifier == null){
+					out += getNextLine()+ "DIV "+ reg +", "+ reg +", #" + secondOperator.constant.i_constant + "\n";	
+				}else{
+					out += getNextLine() + "LD "+nextReg+", " + secondOperator.identifier + "\n";
+					out += getNextLine() + "DIV "+storeReg+", "+storeReg+", "+reg+" \n";
+				}
+				return storeReg;
+			}
+			else {
+				//Modulo
+			}
+			return "";
 		}
 		return null;		
 	}
-	def static getExpType(assignment_expression exp){
-		var current = exp.conditional_expression;
-		if(current.conditional_expression_linha != null){
-			return ExpRetType.BOOL;
-		}
+	def static getExpType(conditional_expression current){
 		var current2 = current.logical_or_expression;
 		if(current2.logical_or_expression_linha != null){
 			return ExpRetType.BOOL;

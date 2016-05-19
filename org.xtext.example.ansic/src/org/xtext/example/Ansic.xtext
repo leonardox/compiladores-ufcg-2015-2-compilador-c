@@ -445,7 +445,7 @@ relational_expression
 ;
 
 relational_expression_linha
-	:(relational_expression_complement=relational_expression_complement relational_expression_linha=relational_expression_linha)?
+	:(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
 ;
 
 relational_expression_complement
