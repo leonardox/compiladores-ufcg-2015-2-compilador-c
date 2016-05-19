@@ -410,9 +410,9 @@ multiplicative_expression_linha:
 ;	
 
 multiplicative_expression_complement
-	:'*' cast_expression=cast_expression
-	|'/' cast_expression=cast_expression
-	|'%' cast_expression=cast_expression
+	:multiplica='*' cast_expression=cast_expression
+	|divide='/' cast_expression=cast_expression
+	|modulo='%' cast_expression=cast_expression
 ;
 
 additive_expression
@@ -423,8 +423,8 @@ additive_expression_linha
 	:(additive_expression_complement=additive_expression_complement additive_expression_linha=additive_expression_linha)?;
 
 additive_expression_complement:
-	  mais='+' multiplicative_expression=multiplicative_expression
-	| menos='-' multiplicative_expression=multiplicative_expression
+	mais='+' multiplicative_expression=multiplicative_expression
+	|menos='-' multiplicative_expression=multiplicative_expression
 ;
 
 shift_expression
@@ -436,8 +436,8 @@ shift_expression_linha:
 ;
 
 shift_expression_complement
-	: '<<' additive_expression=additive_expression
-	| '>>' additive_expression=additive_expression
+	: sleft='<<' additive_expression=additive_expression
+	| sright='>>' additive_expression=additive_expression
 ;
 
 relational_expression
@@ -445,14 +445,14 @@ relational_expression
 ;
 
 relational_expression_linha
-	:(shift_expression_complement=shift_expression_complement relational_expression_linha=relational_expression_linha)?
+	:(relational_expression_complement=relational_expression_complement relational_expression_linha=relational_expression_linha)?
 ;
 
 relational_expression_complement
-	: '<' shift_expression=shift_expression
-	| '>' shift_expression=shift_expression
-	| '<=' shift_expression=shift_expression
-	| '>=' shift_expression=shift_expression
+	: menor='<' shift_expression=shift_expression
+	| maior='>' shift_expression=shift_expression
+	| menor_igual='<=' shift_expression=shift_expression
+	| maior_igual='>=' shift_expression=shift_expression
 ;
 
 equality_expression
@@ -464,12 +464,12 @@ equality_expression_linha
 ;
 
 equality_expression_complement
-	: '==' relational_expression=relational_expression
-	|'<' relational_expression=relational_expression
-	| '>' relational_expression=relational_expression
-	| '<=' relational_expression=relational_expression
-	| '>=' relational_expression=relational_expression
-	| '!=' relational_expression=relational_expression	
+	: igual='==' relational_expression=relational_expression
+	|menor='<' relational_expression=relational_expression
+	| maior='>' relational_expression=relational_expression
+	| menor_igual='<=' relational_expression=relational_expression
+	| maior_igual='>=' relational_expression=relational_expression
+	| n_igual='!=' relational_expression=relational_expression	
 ;
 
 statement
