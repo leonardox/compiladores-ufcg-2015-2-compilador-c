@@ -848,6 +848,8 @@ class AnsicValidator extends AbstractAnsicValidator {
 			for(var i = 0; i< f.param_number; i++){
 				var decl = params.get(i);
 				f.params_types.add(decl.declaration_specifiers.type_specifier.type_name_str);
+				
+				variables.put(decl.declarator.direct_declarator.identifier, decl.declaration_specifiers.type_specifier.type_name_str);
 			}
 			println("Inserting function... " + f.name + "with " + f.param_number + " params");
 			functions.put(f.name, f);

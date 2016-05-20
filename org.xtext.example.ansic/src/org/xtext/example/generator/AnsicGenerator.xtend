@@ -72,7 +72,7 @@ class AnsicGenerator extends AbstractGenerator {
 			out = out.replace(keys2.get(i), cases.get(keys2.get(i)));
 			//out += keys2.get(i) + " : " + cases.get(keys2.get(i)) + "\n";
 		}
-		out += "BR *0(SP)\n";
+		out += getNextLine() + "BR *0(SP)\n";
 		out += "----------------------END----------------------------" + "\n";
 		out += "\n";
 		println("ENTROOOOOOOOOOOOOOOOOO");
@@ -148,7 +148,7 @@ class AnsicGenerator extends AbstractGenerator {
         	var fName = func.declarator.direct_declarator.identifier.toString();
         	if(!currentFunc.equals(fName)){
         		if(!currentFunc.isEmpty){
-        			out += "BR *0(SP)\n";
+        			out += getNextLine() + "BR *0(SP)\n";
         		}
         		firstFun = false;
         		out += "//" + fName + " code." + "\n";
